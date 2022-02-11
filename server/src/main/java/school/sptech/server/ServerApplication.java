@@ -1,4 +1,4 @@
-package br.com.sptech.server;
+package school.sptech.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
