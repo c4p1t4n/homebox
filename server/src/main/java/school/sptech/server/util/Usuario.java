@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class CriacaoUsuario {
+public class Usuario {
 
     public static String getToken() {
         String caracteres = "qwertyuiopasdfghjklçzxcvbnm1234567890".repeat(3);
