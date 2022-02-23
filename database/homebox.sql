@@ -1,6 +1,8 @@
-DROP IF EXISTS DATABASE homebox;
+DROP DATABASE IF EXISTS homebox;
 
 CREATE DATABASE IF NOT EXISTS homebox;
+
+USE homebox;
 
 CREATE TABLE staff (
     id_staff int PRIMARY KEY AUTO_INCREMENT,
@@ -26,10 +28,7 @@ CREATE TABLE usuario (
     senha CHAR(32) NOT NULL,
     cpf CHAR(11) NOT NULL,
     token CHAR(16) NOT NULL,
-    tipo CHECK(
-        tipo = 'prestador'
-        OR tipo = 'cliente'
-    ) NOT NULL,
+    tipo ENUM('prestador', 'cliente') NOT NULL,
     foto VARCHAR(250) NOT NULL
 );
 
@@ -43,10 +42,7 @@ CREATE TABLE usuario_notificacao (
     fk_notificacao int NOT NULL,
     fk_usuario int NOT NULL,
     data_notificacao DATETIME NOT NULL,
-    lido CHECK(
-        lido = 's'
-        OR lido = 'n'
-    ) NOT NULL,
+    lido ENUM('s', 'n') NOT NULL,
     FOREIGN KEY(fk_notificacao) REFERENCES notificacao(id_notificacao),
     FOREIGN KEY(fk_usuario) REFERENCES usuario(id_usuario),
     PRIMARY KEY(fk_notificacao, fk_usuario)
@@ -55,16 +51,13 @@ CREATE TABLE usuario_notificacao (
 CREATE TABLE msg (
     id_msg int PRIMARY KEY AUTO_INCREMENT,
     mensagem TEXT NOT NULL,
-    automatico CHECK(
-        automatico = 's'
-        OR automatico = 'n'
-    ) NOT NULL,
+    automatico ENUM('s', 'n') NOT NULL,
     fk_usuario int NOT NULL,
     FOREIGN KEY(fk_usuario) REFERENCES usuario(id_usuario)
 );
 
 CREATE TABLE midia_msg (
-    fk_msg int PRIMARY KEY AUTO_INCREMENT,
+    fk_msg int,
     fk_midia int NOT NULL,
     FOREIGN KEY(fk_midia) REFERENCES midia(id_midia),
     FOREIGN KEY(fk_msg) REFERENCES msg(id_msg),
@@ -81,10 +74,7 @@ CREATE TABLE msg_chat (
     fk_chat int NOT NULL,
     mensagem TEXT NOT NULL,
     data_envio DATETIME NOT NULL,
-    lido CHECK(
-        lido = 's'
-        OR lido = 'n'
-    ) NOT NULL,
+    lido ENUM('s', 'n') NOT NULL,
     FOREIGN KEY(fk_msg) REFERENCES msg(id_msg),
     FOREIGN KEY(fk_chat) REFERENCES chat(id_chat),
     PRIMARY KEY(fk_msg, fk_chat)
@@ -132,23 +122,21 @@ CREATE TABLE servico (
 
 CREATE TABLE tag_servico (
     fk_tag int,
-    fk_servico int,
-    FOREIGN KEY (fk_servico) REFERENCES servico(id_servico),
+    fk_usuario int,
+    fk_categoria int,
+    FOREIGN KEY (fk_usuario) REFERENCES servico(fk_usuario),
+    FOREIGN KEY (fk_categoria) REFERENCES servico(fk_categoria),
     FOREIGN KEY (fk_tag) REFERENCES tag(id_tag),
-    PRIMARY KEY (fk_tag, fk_servico)
+    PRIMARY KEY (fk_tag, fk_usuario, fk_categoria)
 );
 
 CREATE TABLE servico_prestado (
     id_servico_prestado int PRIMARY KEY AUTO_INCREMENT,
-    fk_cliente int,
-    fk_prestador int,
-    fk_categoria int,
+    fk_cliente int NOT NULL,
+    fk_prestador int NOT NULL,
+    fk_categoria int NOT NULL,
     data_servico DATETIME NOT NULL,
-    status_servico CHECK(
-        status_servico = 'agendado'
-        OR status_servico = 'executado'
-        OR status_servico = 'cancelado'
-    ),
+    status_servico ENUM('agendado', 'executado', 'cancelado') NOT NULL,
     FOREIGN KEY (fk_categoria) REFERENCES servico(fk_categoria),
     FOREIGN KEY (fk_cliente) REFERENCES usuario(id_usuario),
     FOREIGN KEY (fk_prestador) REFERENCES servico(fk_usuario)
@@ -156,10 +144,7 @@ CREATE TABLE servico_prestado (
 
 CREATE TABLE avaliacao (
     fk_servico_prestado int,
-    valor int CHECK(
-        valor <= 5
-        AND valor >= 1
-    ),
+    valor int NOT NULL,
     descricao TEXT,
     FOREIGN KEY (fk_servico_prestado) REFERENCES servico_prestado(id_servico_prestado),
     PRIMARY KEY (fk_servico_prestado)
