@@ -8,7 +8,7 @@ CREATE TABLE staff (
     id_staff int PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    senha CHAR(32) NOT NULL
+    senha CHAR(64) NOT NULL
 );
 
 CREATE TABLE tag (
@@ -25,7 +25,7 @@ CREATE TABLE usuario (
     id_usuario int PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    senha CHAR(32) NOT NULL,
+    senha CHAR(64) NOT NULL,
     cpf CHAR(11) NOT NULL,
     token CHAR(16) NOT NULL,
     tipo ENUM('prestador', 'cliente') NOT NULL,
@@ -157,29 +157,29 @@ VALUES
         NULL,
         'Ana Freitas',
         'ana.freitas@sptech.school',
-        MD5("ExSenha1")
+        SHA2("ExSenha1", 256)
     ),
     (
         NULL,
         'Eduardo Dantas',
         'eduardo.oliveira@sptech.school',
-        MD5("ExSenha1")
+        SHA2("ExSenha1", 256)
     ),
     (
         NULL,
         'Leo Igor',
         'leo.oliveira@sptech.school',
-        MD5("ExSenha1")
+        SHA2("ExSenha1", 256)
     ),
     (
         NULL,
         'Nikolas Virionis',
         'nikolas.virionis@sptech.school',
-        MD5("ExSenha1")
+        SHA2("ExSenha1", 256)
     ),
     (
         NULL,
         'Rodrigo Garcez',
         'rodrigo.hermann@sptech.school',
-        MD5("ExSenha1")
+        SHA2("ExSenha1", 256)
     );
