@@ -42,9 +42,7 @@ CREATE TABLE usuario (
     senha CHAR(64) NOT NULL,
     cpf CHAR(11) NOT NULL,
     token CHAR(16) NOT NULL,
-    tipo VARCHAR(9) CHECK(
-        cargo IN ('admin', 'gestor', 'analista')
-    ) NOT NULL,
+    tipo VARCHAR(9) CHECK(tipo IN ('prestador', 'cliente')) NOT NULL,
     foto VARCHAR(250) NOT NULL
 );
 
@@ -153,7 +151,13 @@ CREATE TABLE agendamento (
     fk_categoria int NOT NULL,
     data_servico DATETIME NOT NULL,
     status_servico VARCHAR(9) CHECK(
-        status_servico IN ('agendado', 'executado', 'cancelado')
+        status_servico IN (
+            'agendado',
+            'executado',
+            'cancelado-prestador',
+            'cancelado-cliente',
+            'nao-sucedida'
+        )
     ) NOT NULL,
     FOREIGN KEY (fk_categoria) REFERENCES servico(fk_categoria),
     FOREIGN KEY (fk_cliente) REFERENCES usuario(id_usuario),

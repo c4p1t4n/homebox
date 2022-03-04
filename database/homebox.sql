@@ -136,7 +136,13 @@ CREATE TABLE agendamento (
     fk_prestador int NOT NULL,
     fk_categoria int NOT NULL,
     data_servico DATETIME NOT NULL,
-    status_servico ENUM('agendado', 'executado', 'cancelado') NOT NULL,
+    status_servico ENUM(
+        'agendado',
+        'executado',
+        'cancelado-prestador',
+        'cancelado-cliente',
+        'nao-sucedida'
+    ) NOT NULL,
     FOREIGN KEY (fk_categoria) REFERENCES servico(fk_categoria),
     FOREIGN KEY (fk_cliente) REFERENCES usuario(id_usuario),
     FOREIGN KEY (fk_prestador) REFERENCES servico(fk_usuario)
