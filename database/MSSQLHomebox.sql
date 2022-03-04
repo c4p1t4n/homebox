@@ -16,7 +16,6 @@
 -- DROP TABLE [midia];
 -- DROP TABLE [tag];
 -- DROP TABLE [staff];
-
 CREATE TABLE staff (
     id_staff int PRIMARY KEY IDENTITY(1, 1),
     nome VARCHAR(100) NOT NULL,
@@ -165,6 +164,17 @@ CREATE TABLE avaliacao (
     descricao TEXT,
     FOREIGN KEY (fk_servico_prestado) REFERENCES servico_prestado(id_servico_prestado),
     PRIMARY KEY (fk_servico_prestado)
+);
+
+CREATE TABLE pesquisa (
+    id_pesquisa int PRIMARY KEY IDENTITY(1, 1),
+    valor VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE pesquisa_usuario (
+    fk_pesquisa int,
+    fk_usuario int,
+    data_pesquisa DATETIME NOT NULL
 );
 
 INSERT INTO

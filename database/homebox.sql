@@ -150,6 +150,17 @@ CREATE TABLE avaliacao (
     PRIMARY KEY (fk_servico_prestado)
 );
 
+CREATE TABLE pesquisa (
+    id_pesquisa int PRIMARY KEY AUTO_INCREMENT,
+    valor VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE pesquisa_usuario (
+    fk_pesquisa int,
+    fk_usuario int,
+    data_pesquisa DATETIME NOT NULL
+);
+
 INSERT INTO
     staff
 VALUES
