@@ -1,5 +1,7 @@
+-- DROP TABLE [pesquisa_usuario];
+-- DROP TABLE [pesquisa];
 -- DROP TABLE [avaliacao];
--- DROP TABLE [servico_prestado];
+-- DROP TABLE [agendamento];
 -- DROP TABLE [tag_servico];
 -- DROP TABLE [servico];
 -- DROP TABLE [tag_usuario];
@@ -144,8 +146,8 @@ CREATE TABLE tag_servico (
     PRIMARY KEY (fk_tag, fk_usuario, fk_categoria)
 );
 
-CREATE TABLE servico_prestado (
-    id_servico_prestado int PRIMARY KEY IDENTITY(1, 1),
+CREATE TABLE agendamento (
+    id_agendamento int PRIMARY KEY IDENTITY(1, 1),
     fk_cliente int NOT NULL,
     fk_prestador int NOT NULL,
     fk_categoria int NOT NULL,
@@ -159,11 +161,11 @@ CREATE TABLE servico_prestado (
 );
 
 CREATE TABLE avaliacao (
-    fk_servico_prestado int,
+    fk_agendamento int,
     valor int NOT NULL,
     descricao TEXT,
-    FOREIGN KEY (fk_servico_prestado) REFERENCES servico_prestado(id_servico_prestado),
-    PRIMARY KEY (fk_servico_prestado)
+    FOREIGN KEY (fk_agendamento) REFERENCES agendamento(id_agendamento),
+    PRIMARY KEY (fk_agendamento)
 );
 
 CREATE TABLE pesquisa (
