@@ -43,7 +43,8 @@ CREATE TABLE usuario (
     cpf CHAR(11) NOT NULL,
     token CHAR(16) NOT NULL,
     tipo VARCHAR(9) CHECK(tipo IN ('prestador', 'cliente')) NOT NULL,
-    foto VARCHAR(250) NOT NULL
+    foto VARCHAR(250) NOT NULL,
+    cep CHAR(8) NOT NULL
 );
 
 CREATE TABLE notificacao (
