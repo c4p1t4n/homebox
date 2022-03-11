@@ -1,4 +1,4 @@
-DROP USER IF EXISTS 'homebox' @'localhost';
+-- DROP USER IF EXISTS 'homebox' @'localhost';
 
 DROP USER IF EXISTS 'homebox' @'%';
 
