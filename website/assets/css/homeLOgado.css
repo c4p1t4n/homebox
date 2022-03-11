@@ -1,0 +1,21 @@
+#logoff {
+    display: flex;
+    width: 24%;
+}
+#logoff img{
+    height: 40px;
+    margin-left: 10%;
+}
+
+#logoff h1{
+    align-self: center;
+}
+
+.inLogoff{
+    position: absolute;
+    top: 60px;
+    right: 84px;
+    background: #0000002b;
+    padding: 1%;
+    display: none;
+}
