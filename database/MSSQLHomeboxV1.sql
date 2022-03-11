@@ -69,7 +69,8 @@ CREATE TABLE agendamento (
             'executado',
             'cancelado-prestador',
             'cancelado-cliente',
-            'nao-sucedida'
+            'nao-sucedido',
+            'avaliado'
         )
     ) NOT NULL,
     FOREIGN KEY (fk_categoria) REFERENCES servico(fk_categoria),
@@ -77,12 +78,21 @@ CREATE TABLE agendamento (
     FOREIGN KEY (fk_prestador) REFERENCES servico(fk_usuario)
 );
 
-CREATE TABLE avaliacao (
+CREATE TABLE servico_prestado (
     fk_agendamento int,
-    valor int NOT NULL,
-    descricao TEXT,
+    preco DECIMAL(7, 2) NOT NULL,
+    descricao TEXT NOT NULL,
+    data_servico DATETIME NOT NULL,
     FOREIGN KEY (fk_agendamento) REFERENCES agendamento(id_agendamento),
     PRIMARY KEY (fk_agendamento)
+);
+
+CREATE TABLE avaliacao (
+    fk_servico_prestado int,
+    valor int NOT NULL,
+    descricao TEXT NOT NULL,
+    FOREIGN KEY (fk_servico_prestado) REFERENCES servico_prestado(fk_agendamento),
+    PRIMARY KEY (fk_servico_prestado)
 );
 
 INSERT INTO
