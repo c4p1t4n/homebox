@@ -11,7 +11,7 @@
         <img class="logo_homebox" src="assets/img/homebox-logo.png" alt="">
     </div>
     <div class="div_login">
-            <form class="login" id="form_login" method="post" onsubmit="return entrar()">
+            <form class="login" id="form_login">
                 <p class="login_titulo">Login</p>
                 <div class="email_senha">
                     <label>E-mail:</label>
@@ -28,8 +28,8 @@
             </form>
         </div>
         <div class="div_button">
-            <button onsubmit="return entrar()" id="btn_entrar" value="Cadastrar">Entrar</button><br>
-            <p><a href="cadastro1.html">Ou cadastre-se aqui</a></p>
+            <button onclick="return signIn()">Entrar</button><br>
+            <p><a href="cadastro.html">Ou cadastre-se aqui</a></p>
         </div>          
 </body>
 </html>
