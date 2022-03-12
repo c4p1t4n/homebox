@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <title>Homebox</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/css/carrosel.css">
+        <link rel="shortcut icon" href="./assets/img/logo-com-fundo.png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <link rel="stylesheet" href="./assets/css/homeLOgado.css">
+        <link rel="stylesheet" href="./assets/css/home.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script defer src="./assets/js/homeLogado.js"></script>
+    </head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <a href="./index.html"><img src="./assets/img/logo.png" alt="logo"></a>
+                <div id="logoff">
+                    <h1>Olá, Rodrigo</h1>
+                    <img onclick="openLogoff()" src="./assets/img/logoPerfil.png" alt="">
+                    <div id="inLogoff" class="inLogoff">
+                        <a onclick="logoff()" href="./index.html">
+                            <h1>Logout</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="top">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="./assets/img/slide4.jpg" alt="Foto 1" style="width:100%;">
+                </div>
+
+                <div class="item">
+                    <img src="./assets/img/slide2.png" alt="Foto 2" style="width:100%;">
+                </div>
+
+                <div class="item">
+                    <img src="./assets/img/slide3.jpeg" alt="Foto 3" style="width:100%;">
+                </div>
+            </div>
+
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <!-- <div class="container">
+            <div class="div-mvv">
+                <div class="mvv">
+                    <div class="mvv-divs">
+                        <img src="./assets/img/missao.svg" alt="">
+                        <h1>Missão</h1>
+                        <p>Existimos para simplificar a vida do cidadão comum</p>
+                    </div>
+                    <div style="background-color: #174574; color: white;" class="mvv-divs">
+                        <img src="./assets/img/visao.png" alt="">
+                        <h1>Visão</h1>
+                        <p>Ser a maior plataforma dedicada à prestação de serviços residenciais do Brasil </p>
+                    </div>
+                    <div class="mvv-divs">
+                        <img src="./assets/img/valores.svg" alt="">
+                        <h1>Valores</h1>
+                        <p>Comprometimento, foco no cliente, inovação, colaboração, diversidade </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="funcionamento">
+        <div class="container">
+            <h3 class="txt-banner">Contratar serviços na <p>Homebox é facil!</p>
+            </h3>
+            <h2>1. COMECE POR AQUI</h2>
+            <div class="funcionamento-div">
+                <div class="txt-funcionamento">
+                    <h1>Como Funciona ?</h1>
+                    
+                </div>
+                <div class="txt-funcionamento">
+                    <a href="./login.html">
+                        <div class="busque-por-servico">Busque por um serviço</div>
+                    </a>
+                    <h3>OU</h3>
+                    <a href="./login.html">
+                        <div class="busque-por-servico">Acesse nosso catálogo</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="funcionamento-2">
+        <div class="container">
+            <h1>2. ESCOLHA UM PROFISSIONAL</h1>
+            <div class="funcionamento2-div">
+                <div class="img-funcionamento2">
+                    <img src="./assets/img/img-funcionamento2.png" alt="">
+                </div>
+                <div class="txt-funcionamento2">
+                    <h1>Nossos profissionais são de confiança e você tem o poder de escolher qual mais te agrada </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="funcionamento-3">
+        <div class="container">
+            <h1>3. DEPOIS DE SER ATENDIDO, NÃO SE ESQUEÇA DE DEIXAR SUA AVALIAÇÃO</h1>
+            <div class="funcionamento3-div">
+                <div class="txt-funcionamento3">
+                    <h1>As avaliações nos ajudam a recomendar os melhores prestadores e manter a qualidade dos serviços
+                        prestados </h1>
+                    </div>
+                    <div class="img-funcionamento3">
+                    <img src="./assets/img/funcionamento3.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="sobre">
+                <h1>Sobre</h1>
+                <h3>Homebox é uma empresa especializada em conectar prestadores de serviços residenciais com pessoas que
+                    buscam esses serviços residenciais</h3>
+            </div>
+        </div>
+        <div class="desenvolvedores">
+            <h1>Desenvolvedores</h1>
+            <div class="pic-ctn">
+                <div class="img">
+                    <img src="./assets/img/rodrigo.jpeg" alt="Rodrigo" class="pic">
+                    Rodrigo
+                </div>
+                <div class="img">
+                    <img src="./assets/img/ana.jpg" alt="Ana" class="pic">
+                    Ana Freitas
+                </div>
+                <div class="img">
+                    <img src="./assets/img/leoIgor.jpg" alt="Léo Igor" class="pic">
+                    Léo Igor
+                </div>
+                <div class="img">
+                    <img src="./assets/img/nikolas.jpg" alt="Nikolas" class="pic">
+                    Nikolas
+                </div>
+                <div class="img">
+                    <img src="./assets/img/nikolas.jpg" alt="Eduardo Dantas" class="pic">
+                    Eduardo Dantas
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="div-contato">
+                <div class="sociais">
+                    <img id="logoContato" src="/assets/img/logo.png" alt="">
+                    <h2>Nossas redes sociais:</h2>
+                    <div class="img-sociais">
+                        <a href=""><img src="./assets/img/linkedin.png" alt=""></a>
+                        <a href=""><img src="./assets/img/instagram.png" alt=""></a>
+                        <a href=""><img src="./assets/img/facebook.png" alt=""></a>
+                        <a href=""><img src="./assets/img/twiter.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="endereco">
+                    <h1>Endereço</h1>
+                    <h2>Rua Haddock Lobo, 595 Cerqueira César, São Paulo SP, 01414-001</h2>
+                    <h1>Telefone</h1>
+                    <h2>+55 3099-8855</h2>
+                </div>
+            </div>
+        </div>
+    </footer> -->
+</body>
+
+</html>
