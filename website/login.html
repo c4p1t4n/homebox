@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Login</title>
+</head>
+<body class="login_body">
+    <div class="homebox_logo">
+        <img class="logo_homebox" src="assets/img/homebox-logo.png" alt="">
+    </div>
+    <div class="div_login">
+            <form class="login" id="form_login">
+                <p class="login_titulo">Login</p>
+                <div class="email_senha">
+                    <label>E-mail:</label>
+                    <input name="email" type="text" required>
+                    <label>Senha:</label>
+                    <input name="senha" type="password" required>
+                    <p>OU</p>
+                    <div class="img_container">
+                        <img class="logo" src="assets/img/google.png" alt="">
+                        <img class="logo" src="assets/img/facebook1.png" alt="">
+                        <img class="logo" src="assets/img/twitter.png" alt="">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="div_button">
+            <button onclick="return signIn()">Entrar</button><br>
+            <p><a href="cadastro.html">Ou cadastre-se aqui</a></p>
+        </div>          
+</body>
+</html>
