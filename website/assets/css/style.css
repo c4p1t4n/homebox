@@ -61,7 +61,8 @@
     font-size: 21px;
 }
 
-.login label, .login input {
+.login label,
+.login input {
     width: 90%;
     height: 12%;
     left: 122px;
@@ -89,39 +90,39 @@
 
 }
 
-.img_container{
+.img_container {
     margin-left: 17%;
 }
-  
+
 div .logo {
     width: 13.5%;
     border-radius: 5px;
     padding-right: 17%;
-  }
+}
 
 
 .conteudo_login {
     width: 100%;
-}  
+}
 
 
 .homebox_logo {
-    float:right;
+    float: right;
     margin: 30px;
 }
 
 .logo_homebox {
-    float:right;
+    float: right;
     width: 70%;
     /* margin: 100px;
     padding: 0; */
 }
 
 .div_button {
-    float:right;
-    margin-top:23%;
-    margin-right:5%;
-    margin-left:8%;
+    float: right;
+    margin-top: 23%;
+    margin-right: 5%;
+    margin-left: 8%;
 }
 
 
@@ -132,7 +133,7 @@ div .logo {
     width: 70%;
     margin-left: 20%;
     margin-right: 20%;
-    border-radius: 10px; 
+    border-radius: 10px;
 
     color: white;
     font-size: 27px;
@@ -174,7 +175,7 @@ div .logo {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
     position: absolute;
     width: 40%;
-    height: 92%;
+    height: 100%;
     left: 30%;
     top: 5%;
     background: rgba(255, 255, 255, 0.74);
@@ -219,7 +220,8 @@ div .logo {
     font-size: 21px;
 }
 
-.cadastro label, .cadastro input {
+.cadastro label,
+.cadastro input {
     width: 90%;
     height: 12%;
     left: 122px;
@@ -246,36 +248,36 @@ div .logo {
     margin-bottom: 12%;
 }
 
-.img_container{
+.img_container {
     margin-left: 17%;
 }
-  
+
 div .logo {
     width: 13.5%;
     border-radius: 5px;
     padding-right: 17%;
-  }
+}
 
 
 .conteudo_cadastro {
     width: 100%;
-}  
+}
 
 .homebox_logo {
-    float:right;
+    float: right;
     margin: 30px;
 }
 
 .logo_homebox {
-    float:right;
+    float: right;
     width: 70%;
 }
 
 .div_button {
-    float:right;
-    margin-top:23%;
-    margin-right:5%;
-    margin-left:8%;
+    float: right;
+    margin-top: 23%;
+    margin-right: 5%;
+    margin-left: 8%;
 }
 
 
@@ -286,7 +288,7 @@ div .logo {
     width: 70%;
     margin-left: 20%;
     margin-right: 20%;
-    border-radius: 10px; 
+    border-radius: 10px;
 
     color: white;
     font-size: 27px;
