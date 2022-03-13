@@ -24,7 +24,7 @@ public class UserController {
     private UserPrestadorRepository bancoPrestador;
 
 
-    @PostMapping("/Cliente")
+    @PostMapping("/cliente")
     public String cadastrarUsuarioCliente(@RequestBody UserCliente novoUsuario){
 
         try {
@@ -48,7 +48,7 @@ public class UserController {
     }
 
 
-    @PostMapping("/Prestador")
+    @PostMapping("/prestador")
     public String cadastrarUsuarioPrestador(@RequestBody UserPrestador novoUsuario){
         try {
 
@@ -66,7 +66,7 @@ public class UserController {
     }
 
 
-    @GetMapping("/Prestador")
+    @GetMapping("/prestador")
     public List<UserPrestador> getUsuarioPrestador(){
         return bancoPrestador.findAll();
     }
