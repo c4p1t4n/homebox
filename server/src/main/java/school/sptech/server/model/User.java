@@ -1,47 +1,56 @@
 package school.sptech.server.model;
 
-
 import javax.persistence.*;
 
-@MappedSuperclass
-public abstract   class User {
+import school.sptech.server.util.ILogin;
 
-    @Column(name="nome")
+@MappedSuperclass
+public abstract class User implements ILogin {
+
+    @Column(name = "nome")
     private String nome;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id_usuario")
+    @Column(name = "id_usuario")
     private Integer id;
 
-    @Column(name="email")
+    @Column(name = "email")
     private String email;
-    @Column(name="senha")
+    @Column(name = "senha")
     private String senha;
 
-    @Column(name="cpf")
+    @Column(name = "cpf")
     private String cpf;
 
-    @Column(name="token")
+    @Column(name = "token")
     private String token;
 
-    @Column(name="tipo")
-    private String tipoCliente;
+    @Column(name = "tipo")
+    private String tipo;
 
-    @Column(name="foto")
-    private  String foto;
+    @Column(name = "foto")
+    private String foto;
+
+    @Column(name = "cep")
+    private String cep;
+
+    public String getCep() {
+        return cep;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
 
     @Transient
     private Boolean autenticado;
 
-    public User(){
-
+    public User() {
 
     }
 
-
-    public abstract String login(String user,String password);
-
-    public User(Integer id, String nome, String email, String senha, String cpf, String token, String tipoCliente, String foto) {
+    public User(Integer id, String nome, String email, String senha, String cpf, String token, String tipo,
+            String foto, String cep) {
     }
 
     public Integer getId() {
@@ -108,12 +117,12 @@ public abstract   class User {
         this.token = token;
     }
 
-    public String getTipoCliente() {
-        return tipoCliente;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setTipoCliente(String tipoCliente) {
-        this.tipoCliente = tipoCliente;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
     public String getFoto() {
@@ -123,7 +132,5 @@ public abstract   class User {
     public void setFoto(String foto) {
         this.foto = foto;
     }
-
-
 
 }

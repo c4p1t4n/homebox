@@ -20,10 +20,10 @@ public class ServerErrorController implements ErrorController {
             Integer statusCode = Integer.valueOf(status.toString());
 
             if (statusCode == HttpStatus.NOT_FOUND.value()) {
-                return "error/error-404.html";
+                return "error/404.html";
             }
             if (statusCode == HttpStatus.INTERNAL_SERVER_ERROR.value()) {
-                return "error/error-500.html";
+                return "error/500.html";
             }
         }
         return "error/error.html";

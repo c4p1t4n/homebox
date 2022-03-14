@@ -5,16 +5,14 @@ import school.sptech.server.model.UserCliente;
 
 import java.util.List;
 
-public interface UserClientRepository extends CrudRepository<UserCliente,Integer> {
+public interface UserClientRepository extends CrudRepository<UserCliente, Integer> {
 
-        List<UserCliente> findAll();
+    List<UserCliente> findAll();
 
-        UserCliente findByid(int id);
+    UserCliente findByid(int id);
 
-        void delete (UserCliente usuario);
+    void delete(UserCliente usuario);
 
-        UserCliente save(UserCliente usuario);
-
-
+    UserCliente save(UserCliente usuario);
 
 }

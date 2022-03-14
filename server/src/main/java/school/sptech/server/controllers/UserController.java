@@ -1,6 +1,5 @@
 package school.sptech.server.controllers;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import school.sptech.server.model.User;
@@ -13,48 +12,41 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/usuario")
+@RequestMapping("/usuarios")
 public class UserController {
-
 
     @Autowired
     private UserClientRepository bancoCliente;
-    List<User> users =new ArrayList<>();
+    List<User> users = new ArrayList<>();
     @Autowired
     private UserPrestadorRepository bancoPrestador;
 
-
     @PostMapping("/cliente")
-    public String cadastrarUsuarioCliente(@RequestBody UserCliente novoUsuario){
+    public String cadastrarUsuarioCliente(@RequestBody UserCliente novoUsuario) {
 
-        try {
-
-            if(novoUsuario.getTipoCliente().equals("cliente")){
-                bancoCliente.save((UserCliente) novoUsuario);
-            }else{
-                return "Usuario invalido";
-            }
-            novoUsuario.setAutenticado(Boolean.FALSE);
-            users.add(novoUsuario);
-            return "Usuario cadastrado com sucesso";
-        } catch (NullPointerException npe) {
-            return "erro 405";
+        if (novoUsuario.getTipo().equals("cliente")) {
+            bancoCliente.save((UserCliente) novoUsuario);
+        } else {
+            return "Usuario invalido";
         }
+        novoUsuario.setAutenticado(Boolean.FALSE);
+        users.add(novoUsuario);
+        return "Usuario cadastrado com sucesso";
+
     }
 
-    @GetMapping()
-    public List<UserCliente> getUsuarioCliente(){
-       return bancoCliente.findAll();
+    @GetMapping("/cliente")
+    public List<UserCliente> getUsuarioCliente() {
+        return bancoCliente.findAll();
     }
-
 
     @PostMapping("/prestador")
-    public String cadastrarUsuarioPrestador(@RequestBody UserPrestador novoUsuario){
+    public String cadastrarUsuarioPrestador(@RequestBody UserPrestador novoUsuario) {
         try {
 
-            if(novoUsuario.getTipoCliente().equals("prestador")){
+            if (novoUsuario.getTipo().equals("prestador")) {
                 bancoPrestador.save(novoUsuario);
-            }else{
+            } else {
                 return "Usuario invalido";
             }
             novoUsuario.setAutenticado(Boolean.FALSE);
@@ -65,42 +57,40 @@ public class UserController {
         }
     }
 
-
     @GetMapping("/prestador")
-    public List<UserPrestador> getUsuarioPrestador(){
+    public List<UserPrestador> getUsuarioPrestador() {
         return bancoPrestador.findAll();
     }
 
+    @GetMapping()
+    public List<User> getUsuario() {
+        return users;
+        // return bancoPrestador.findAll();
+    }
+
     @GetMapping("/login/{userLogin}/{userPassword}")
-    public String getLoginUser(@PathVariable String userLogin,@PathVariable String userPassword){
-        for(User user:users){
-           return  user.login(userLogin,userPassword);
+    public String getLoginUser(@PathVariable String userLogin, @PathVariable String userPassword) {
+        for (User user : users) {
+            return user.login(userLogin, userPassword);
         }
         return "Usuario não encontrado";
     }
+
     @GetMapping("/logoff/{userLogin}")
-    public  String logoffUser(@PathVariable String userLogin){
+    public String logoffUser(@PathVariable String userLogin) {
         String stringReturn = "usuario nao existe";
-        for(User user:users){
-            if(user.getEmail().equals(userLogin) & user.getAutenticado().equals(Boolean.TRUE)){
-                stringReturn = String.format("Usuario %s deslogado",user.getNome());
+        for (User user : users) {
+            if (user.getEmail().equals(userLogin) & user.getAutenticado().equals(Boolean.TRUE)) {
+                stringReturn = String.format("Usuario %s deslogado", user.getNome());
+                user.setAutenticado(Boolean.FALSE);
                 return stringReturn;
             }
-            if(user.getEmail().equals(userLogin) & user.getAutenticado().equals(Boolean.FALSE)){
-                stringReturn = String.format("Usuario %s não esta logado",user.getNome());
+            if (user.getEmail().equals(userLogin) & user.getAutenticado().equals(Boolean.FALSE)) {
+                stringReturn = String.format("Usuario %s não esta logado", user.getNome());
                 return stringReturn;
             }
         }
-        return  stringReturn;
+        return stringReturn;
     }
-
-
-
-
-
-
-
-
-
 
 }

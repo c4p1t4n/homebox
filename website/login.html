@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/img/homebox-logo.png">
+    <link rel="shortcut icon" href="./assets/img/icon/homebox-logo.png">
 
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Login</title>
@@ -12,16 +12,16 @@
 
 <body class="login_body">
     <div class="homebox_logo">
-        <a href="./index.html"><img class="logo_homebox" src="assets/img/homebox-logo.png" alt=""></a>
+        <a href="./index.html"><img class="logo_homebox" src="assets/img/icon/homebox-logo.png" alt=""></a>
     </div>
     <div class="div_login">
         <form class="login" id="form_login">
             <p class="login_titulo">Login</p>
             <div class="email_senha">
                 <label>E-mail:</label>
-                <input name="email" type="text" required>
+                <input email name="email" type="text" required>
                 <label>Senha:</label>
-                <input name="senha" type="password" required>
+                <input senha name="senha" type="password" required>
                 <p>OU</p>
                 <div class="img_container">
                     <img class="logo" src="assets/img/google.png" alt="">
@@ -32,9 +32,11 @@
         </form>
     </div>
     <div class="div_button">
-        <button onclick="return signIn()">Entrar</button><br>
+        <button btnLogin>Entrar</button><br>
         <p><a href="cadastro.html">Ou cadastre-se aqui</a></p>
     </div>
 </body>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/login.js"></script>
 
 </html>
