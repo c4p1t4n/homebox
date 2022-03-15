@@ -1,4 +1,4 @@
-package school.sptech.server.util;
+package school.sptech.server.service;
 
 import java.util.Arrays;
 import java.util.Collections;
