@@ -1,8 +1,8 @@
 package school.sptech.server.model;
 
-import school.sptech.server.util.ILogin;
-
 import javax.persistence.*;
+
+import school.sptech.server.service.ILogin;
 
 @Entity
 @Table(name = "staff")
@@ -53,13 +53,8 @@ public class Staff implements ILogin {
     }
 
     @Override
-    public String login(String username, String password) {
-        String stringReturn = "Email e/ou senha incorreta";
-        if (getSenha().equals(password) && getEmail().equals(username)) {
-            stringReturn = String.format("Staff logado com sucesso");
-            return stringReturn;
-        }
-        return stringReturn;
+    public Boolean login(String username, String password) {
+        return getSenha().equals(password) && getEmail().equals(username);
     }
 
 }

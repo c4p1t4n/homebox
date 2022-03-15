@@ -10,15 +10,12 @@ public class UserPrestador extends User {
     }
 
     @Override
-    public String login(String user, String password) {
-        String stringReturn = "Email e/ou senha incorreta";
-        if (getSenha().equals(password) & getEmail().equals(user)) {
-
+    public Boolean login(String user, String password) {
+        Boolean autenticacao = getSenha().equals(password) & getEmail().equals(user);
+        if (autenticacao) {
             setAutenticado(Boolean.TRUE);
-            stringReturn = String.format("Usuario Prestador logado com sucesso");
-            return stringReturn;
         }
-        return stringReturn;
+        return autenticacao;
     }
 
     public UserPrestador(Integer id, String nome, String email, String senha, String cpf, String token,
