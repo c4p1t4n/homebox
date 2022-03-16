@@ -1,6 +1,7 @@
 package school.sptech.server.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import school.sptech.server.model.Staff;
 import school.sptech.server.repository.StaffRepository;
@@ -23,25 +24,27 @@ public class StaffController {
     }
 
     @PostMapping()
-    public String cadastrarStaff(@RequestBody Staff novoStaff) {
+    public ResponseEntity cadastrarStaff(@RequestBody Staff novoStaff) {
 
         try {
-
             bancoStaff.save((Staff) novoStaff);
             staff.add(novoStaff);
-            return "Usuario cadastrado com sucesso";
+            return ResponseEntity.status(200).build();
         } catch (NullPointerException npe) {
-            return "erro 405";
+            return ResponseEntity.status(400).build();
         }
     }
 
     @GetMapping("/login/{userStaffLogin}/{userPassword}")
-    public String getLoginUser(@PathVariable String userLogin, @PathVariable String userPassword) {
+    public ResponseEntity getLoginUser(@PathVariable String userLogin, @PathVariable String userPassword) {
         for (Staff userStaff : staff) {
-            return userStaff.login(userLogin, userPassword);
+            if (userStaff.login(userLogin, userPassword)) {
+                return ResponseEntity.status(200).build();
+            } else {
+                return ResponseEntity.status(403).build();
+            }
         }
-        return "Staff não encontrado";
+        return ResponseEntity.status(401).build();
     }
-
 
 }

@@ -2,7 +2,7 @@ package school.sptech.server.model;
 
 import javax.persistence.*;
 
-import school.sptech.server.util.ILogin;
+import school.sptech.server.service.ILogin;
 
 @MappedSuperclass
 public abstract class User implements ILogin {
