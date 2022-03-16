@@ -19,8 +19,9 @@ public class StaffController {
     List<Staff> staff = new ArrayList<>();
 
     @GetMapping()
-    public List<Staff> getStaff() {
-        return staff;
+    public ResponseEntity<List<Staff>> getStaff() {
+        List<Staff> users = bancoStaff.findAll();
+        return !users.isEmpty() ? ResponseEntity.status(200).body(users) : ResponseEntity.status(204).build();
     }
 
     @PostMapping()
