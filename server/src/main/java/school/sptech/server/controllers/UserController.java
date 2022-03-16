@@ -93,7 +93,7 @@ public class UserController {
                 return ResponseEntity.status(403).build();
             }
         }
-        return ResponseEntity.status(401).build();
+        return ResponseEntity.status(400).build();
     }
 
 }
