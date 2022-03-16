@@ -39,6 +39,11 @@ header {
     color: black;
     font-weight: lighter;
     letter-spacing: 4px;
+    text-decoration: none;
+}
+
+.header-top a {
+    text-decoration: none;
 }
 
 .mvv {
@@ -67,7 +72,9 @@ header {
 .mvv-divs img {
     height: 128px;
 }
-.mvv-divs p{}
+
+.mvv-divs p {}
+
 .funcionamento {
     background-color: #0c263f31;
     padding: 40px;
@@ -111,6 +118,7 @@ header {
 
 .txt-funcionamento h3 {
     font-size: x-large;
+    margin: 5%;
 }
 
 .txt-banner p {
@@ -215,6 +223,7 @@ footer {
     align-items: center;
     justify-content: center;
     text-align: -webkit-center;
+    font-family: Poppins;
 }
 
 .desenvolvedores h1 {
@@ -239,6 +248,11 @@ footer {
 .desenvolvedores .img-sociais img {
     margin: 1%;
 
+}
+
+.desenvolvedores p {
+    font-family: Poppins;
+    font-size: 25px;
 }
 
 .div-contato {

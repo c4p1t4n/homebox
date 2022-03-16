@@ -20,7 +20,7 @@
     height: 92%;
     left: 6%;
     top: 5%;
-    background: rgba(255, 255, 255, 0.74);
+    background: rgba(255, 255, 255, 0.85);
     border-radius: 30px;
 }
 
@@ -164,10 +164,10 @@ div .logo {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
     position: absolute;
     width: 40%;
-    height: 122%;
+    height: 152%;
     left: 30%;
     top: 5%;
-    background: rgba(255, 255, 255, 0.74);
+    background: rgba(255, 255, 255, 0.85);
     border-radius: 30px;
 }
 
@@ -178,7 +178,7 @@ div .logo {
     height: 100%;
     left: 30%;
     top: 5%;
-    background: rgba(255, 255, 255, 0.74);
+    background: rgba(255, 255, 255, 0.85);
     border-radius: 30px;
 }
 
