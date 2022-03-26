@@ -1,18 +1,8 @@
 package school.sptech.server.repository;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import school.sptech.server.model.UserCliente;
 
-import java.util.List;
-
-public interface UserClientRepository extends CrudRepository<UserCliente, Integer> {
-
-    List<UserCliente> findAll();
-
-    UserCliente findByid(int id);
-
-    void delete(UserCliente usuario);
-
-    UserCliente save(UserCliente usuario);
+public interface UserClientRepository extends JpaRepository<UserCliente, Integer> {
 
 }

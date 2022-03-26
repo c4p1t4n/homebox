@@ -1,17 +1,8 @@
 package school.sptech.server.repository;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import school.sptech.server.model.UserPrestador;
 
-import java.util.List;
-
-public interface UserPrestadorRepository extends CrudRepository<UserPrestador, Integer> {
-    List<UserPrestador> findAll();
-
-    UserPrestador findByid(int id);
-
-    void delete(UserPrestador usuario);
-
-    UserPrestador save(UserPrestador usuario);
+public interface UserPrestadorRepository extends JpaRepository<UserPrestador, Integer> {
 
 }

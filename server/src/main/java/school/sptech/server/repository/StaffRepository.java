@@ -1,18 +1,8 @@
 package school.sptech.server.repository;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import school.sptech.server.model.Staff;
 
-import java.util.List;
-
-public interface StaffRepository extends CrudRepository<Staff, Integer> {
-
-    List<Staff> findAll();
-
-    Staff findByid(int id);
-
-    void delete(Staff usuario);
-
-    Staff save(Staff usuario);
+public interface StaffRepository extends JpaRepository<Staff, Integer> {
 
 }
