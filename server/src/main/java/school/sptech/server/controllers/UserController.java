@@ -76,8 +76,11 @@ public class UserController {
     @GetMapping("/login/{userLogin}/{userPassword}")
     public ResponseEntity getLoginUser(@PathVariable String userLogin, @PathVariable String userPassword) {
         for (User user : users) {
-            user.login(userLogin, userPassword);
-            return ResponseEntity.status(200).build();
+            if (user.getEmail().equals(userLogin) && user.getSenha().equals(userPassword)) {
+                user.login(userLogin, userPassword);
+                return ResponseEntity.status(200).build();
+            }
+
         }
         return ResponseEntity.status(401).build();
     }
