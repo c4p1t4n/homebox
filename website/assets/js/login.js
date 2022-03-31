@@ -1,6 +1,6 @@
 const email = document.querySelector("[email]");
-const senha = document.querySelector("[senha]");
+const password = document.querySelector("[password]");
 
-const btnLogin = document.querySelector("[btnLogin]");
+const loginBtn = document.querySelector("[loginBtn]");
 
-btnLogin.addEventListener("click", e => {});
+loginBtn.addEventListener("click", e => {});

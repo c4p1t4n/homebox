@@ -15,21 +15,21 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class StaffController {
 
     @Autowired
-    private StaffRepository bancoStaff;
+    private StaffRepository dbRepositoryStaff;
     List<Staff> staff = new ArrayList<>();
 
     @GetMapping()
     public ResponseEntity<List<Staff>> getStaff() {
-        List<Staff> users = bancoStaff.findAll();
+        List<Staff> users = dbRepositoryStaff.findAll();
         return !users.isEmpty() ? ResponseEntity.status(200).body(users) : ResponseEntity.status(204).build();
     }
 
     @PostMapping()
-    public ResponseEntity cadastrarStaff(@RequestBody Staff novoStaff) {
+    public ResponseEntity cadastrarStaff(@RequestBody Staff newStaff) {
 
         try {
-            bancoStaff.save((Staff) novoStaff);
-            staff.add(novoStaff);
+            dbRepositoryStaff.save((Staff) newStaff);
+            staff.add(newStaff);
             return ResponseEntity.status(200).build();
         } catch (NullPointerException npe) {
             return ResponseEntity.status(400).build();

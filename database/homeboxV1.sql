@@ -6,89 +6,89 @@ USE homebox;
 
 CREATE TABLE staff (
     id_staff int PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(100) NOT NULL,
+    "name" VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    senha CHAR(64) NOT NULL
+    "password" CHAR(64) NOT NULL
 );
 
-CREATE TABLE usuario (
-    id_usuario int PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(100) NOT NULL,
+CREATE TABLE "user" (
+    id_user int PRIMARY KEY AUTO_INCREMENT,
+    "name" VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    senha CHAR(64) NOT NULL,
+    "password" CHAR(64) NOT NULL,
     cpf CHAR(11) NOT NULL,
     token CHAR(16) NOT NULL,
-    tipo ENUM('prestador', 'cliente') NOT NULL,
-    foto VARCHAR(250) NOT NULL,
+    "type" ENUM('worker', 'customer') NOT NULL,
+    picture VARCHAR(250) NOT NULL,
     cep CHAR(8) NOT NULL
 );
 
-CREATE TABLE notificacao (
-    id_notificacao int PRIMARY KEY AUTO_INCREMENT,
-    titulo VARCHAR(100) NOT NULL,
-    mensagem TEXT NOT NULL
+CREATE TABLE "notification" (
+    id_notification int PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(100) NOT NULL,
+    "message" TEXT NOT NULL
 );
 
-CREATE TABLE usuario_notificacao (
-    fk_notificacao int NOT NULL,
-    fk_usuario int NOT NULL,
-    data_notificacao DATETIME NOT NULL,
-    lido ENUM('s', 'n') NOT NULL,
-    FOREIGN KEY(fk_notificacao) REFERENCES notificacao(id_notificacao),
-    FOREIGN KEY(fk_usuario) REFERENCES usuario(id_usuario),
-    PRIMARY KEY(fk_notificacao, fk_usuario)
+CREATE TABLE user_has_notification (
+    fk_notification int NOT NULL,
+    fk_user int NOT NULL,
+    notification_date DATETIME NOT NULL,
+    "read" ENUM('y', 'n') NOT NULL,
+    FOREIGN KEY(fk_notification) REFERENCES "notification"(id_notification),
+    FOREIGN KEY(fk_user) REFERENCES "user"(id_user),
+    PRIMARY KEY(fk_notification, fk_user)
 );
 
-CREATE TABLE categoria (
-    id_categoria int PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(50) NOT NULL
+CREATE TABLE category (
+    id_category int PRIMARY KEY AUTO_INCREMENT,
+    "name" VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE servico (
-    fk_usuario int,
-    fk_categoria int,
-    nome VARCHAR(100) NOT NULL,
-    descricao TEXT,
-    preco_referencia DECIMAL(7, 2),
-    FOREIGN KEY (fk_categoria) REFERENCES categoria(id_categoria),
-    FOREIGN KEY (fk_usuario) REFERENCES usuario(id_usuario),
-    PRIMARY KEY (fk_usuario, fk_categoria)
+CREATE TABLE service (
+    fk_user int,
+    fk_category int,
+    "name" VARCHAR(100) NOT NULL,
+    "description" TEXT,
+    reference_price DECIMAL(7, 2),
+    FOREIGN KEY (fk_category) REFERENCES category(id_category),
+    FOREIGN KEY (fk_user) REFERENCES "user"(id_user),
+    PRIMARY KEY (fk_user, fk_category)
 );
 
-CREATE TABLE agendamento (
-    id_agendamento int PRIMARY KEY AUTO_INCREMENT,
-    fk_cliente int NOT NULL,
-    fk_prestador int NOT NULL,
-    fk_categoria int NOT NULL,
-    data_servico DATETIME NOT NULL,
-    status_servico ENUM(
-        'agendado',
-        'executado',
-        'cancelado-prestador',
-        'cancelado-cliente',
-        'nao-sucedido',
-        'avaliado'
+CREATE TABLE scheduling (
+    id_scheduling int PRIMARY KEY AUTO_INCREMENT,
+    fk_customer int NOT NULL,
+    fk_worker int NOT NULL,
+    fk_category int NOT NULL,
+    service_date DATETIME NOT NULL,
+    service_status ENUM(
+        'scheduled',
+        'done',
+        'worker-cancelled',
+        'client-cancelled',
+        'not-executed',
+        'rated'
     ) NOT NULL,
-    FOREIGN KEY (fk_categoria) REFERENCES servico(fk_categoria),
-    FOREIGN KEY (fk_cliente) REFERENCES usuario(id_usuario),
-    FOREIGN KEY (fk_prestador) REFERENCES servico(fk_usuario)
+    FOREIGN KEY (fk_category) REFERENCES service(fk_category),
+    FOREIGN KEY (fk_customer) REFERENCES "user"(id_user),
+    FOREIGN KEY (fk_worker) REFERENCES service(fk_user)
 );
 
-CREATE TABLE servico_prestado (
-    fk_agendamento int,
-    preco DECIMAL(7, 2) NOT NULL,
-    descricao TEXT NOT NULL,
-    data_servico DATETIME NOT NULL,
-    FOREIGN KEY (fk_agendamento) REFERENCES agendamento(id_agendamento),
-    PRIMARY KEY (fk_agendamento)
+CREATE TABLE accomplished_service (
+    fk_scheduling int,
+    price DECIMAL(7, 2) NOT NULL,
+    "description" TEXT NOT NULL,
+    service_date DATETIME NOT NULL,
+    FOREIGN KEY (fk_scheduling) REFERENCES scheduling(id_scheduling),
+    PRIMARY KEY (fk_scheduling)
 );
 
-CREATE TABLE avaliacao (
-    fk_servico_prestado int,
-    valor int NOT NULL,
-    descricao TEXT NOT NULL,
-    FOREIGN KEY (fk_servico_prestado) REFERENCES servico_prestado(fk_agendamento),
-    PRIMARY KEY (fk_servico_prestado)
+CREATE TABLE rating (
+    fk_accomplished_service int,
+    rating int NOT NULL,
+    "description" TEXT NOT NULL,
+    FOREIGN KEY (fk_accomplished_service) REFERENCES accomplished_service(fk_scheduling),
+    PRIMARY KEY (fk_accomplished_service)
 );
 
 INSERT INTO

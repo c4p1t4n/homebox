@@ -73,27 +73,28 @@ header {
     height: 128px;
 }
 
-.mvv-divs p {}
+.mvv-divs p {
+}
 
-.funcionamento {
+.operation {
     background-color: #0c263f31;
     padding: 40px;
     margin-top: 25%;
 }
 
-.funcionamento h1 {
+.operation h1 {
     font-size: -webkit-xxx-large;
     color: #174574;
 }
 
-.funcionamento h2 {
+.operation h2 {
     text-align: end;
     margin-right: 20%;
     font-weight: 500;
     color: black;
 }
 
-.funcionamento-div {
+.operation-div {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -109,14 +110,13 @@ header {
     letter-spacing: 5px;
 }
 
-.txt-funcionamento {
+.txt-operation {
     text-align: center;
     width: 40%;
     align-self: center;
-
 }
 
-.txt-funcionamento h3 {
+.txt-operation h3 {
     font-size: x-large;
     margin: 5%;
 }
@@ -125,50 +125,49 @@ header {
     color: #174574;
 }
 
-
-.busque-por-servico {
+.service-search {
     padding: 2%;
     background: rgba(10, 57, 105, 0.13);
     border-radius: 30px;
     color: #174574;
 }
 
-.funcionamento-2 {
+.operation-2 {
     padding: 3%;
 }
 
-.funcionamento2-div {
+.operation2-div {
     display: flex;
     margin: 3%;
     width: 100%;
     justify-content: space-between;
 }
 
-.txt-funcionamento2 {
+.txt-operation2 {
     width: 40%;
     align-items: center;
     display: flex;
 }
 
-.funcionamento-3 {
+.operation-3 {
     margin: 5% 0% 5% 0%;
 }
 
-.funcionamento-3 h1 {
+.operation-3 h1 {
     text-align: end;
     text-align: center;
-    color: #0A3969;
+    color: #0a3969;
     margin-bottom: 10%;
 }
 
-.funcionamento3-div {
+.operation3-div {
     display: flex;
     margin: 3%;
     width: 100%;
     justify-content: space-between;
 }
 
-.txt-funcionamento3 h1 {
+.txt-operation3 h1 {
     width: 60%;
     align-items: center;
     display: flex;
@@ -177,11 +176,11 @@ header {
     color: black;
 }
 
-.img-funcionamento3 {
+.img-operation3 {
     margin-right: 10%;
 }
 
-.img-funcionamento3 img {
+.img-operation3 img {
     width: 70%;
 }
 
@@ -189,14 +188,14 @@ footer {
     background: rgba(52, 89, 134, 0.52);
 }
 
-.sobre {
+.about {
     text-align: end;
     float: right;
     width: 70%;
 }
 
-.sobre h1 {
-    color: #0A3969;
+.about h1 {
+    color: #0a3969;
     font-family: Poppins;
     font-style: normal;
     font-weight: bold;
@@ -205,7 +204,7 @@ footer {
     margin-top: 5%;
 }
 
-.sobre h3 {
+.about h3 {
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
@@ -215,7 +214,7 @@ footer {
     color: black;
 }
 
-.desenvolvedores {
+.dev-team {
     width: 100%;
     padding: 2%;
     display: flex;
@@ -226,8 +225,8 @@ footer {
     font-family: Poppins;
 }
 
-.desenvolvedores h1 {
-    color: #0A3969;
+.dev-team h1 {
+    color: #0a3969;
     font-family: Poppins;
     font-style: normal;
     font-weight: bold;
@@ -236,7 +235,7 @@ footer {
     margin-top: 8%;
 }
 
-.desenvolvedores h3 {
+.dev-team h3 {
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
@@ -245,17 +244,16 @@ footer {
     color: black;
 }
 
-.desenvolvedores .img-sociais img {
+.dev-team .img-social-media img {
     margin: 1%;
-
 }
 
-.desenvolvedores p {
+.dev-team p {
     font-family: Poppins;
     font-size: 25px;
 }
 
-.div-contato {
+.contact-div {
     display: flex;
     border-top: solid black 1px;
     padding: 4%;
@@ -265,22 +263,22 @@ footer {
     width: 100%;
 }
 
-.sociais {
+.social-media {
     text-align: center;
 }
 
-.sociais img {
+.social-media img {
     width: 10%;
     margin: 2%;
 }
 
-#logoContato {
+#contactLogo {
     width: 50%;
     align-self: center;
 }
 
-.sociais,
-.endereco {
+.social-media,
+.address {
     width: 40%;
     height: 300px;
     display: flex;
@@ -288,6 +286,6 @@ footer {
     flex-direction: column;
 }
 
-.endereco h1 {
+.address h1 {
     font-weight: bold;
 }

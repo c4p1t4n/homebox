@@ -7,17 +7,17 @@ import school.sptech.server.service.ILogin;
 @MappedSuperclass
 public abstract class User implements ILogin {
 
-    @Column(name = "nome")
-    private String nome;
+    @Column(name = "name")
+    private String name;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_usuario")
+    @Column(name = "id_user")
     private Integer id;
 
     @Column(name = "email")
     private String email;
-    @Column(name = "senha")
-    private String senha;
+    @Column(name = "password")
+    private String password;
 
     @Column(name = "cpf")
     private String cpf;
@@ -25,11 +25,11 @@ public abstract class User implements ILogin {
     @Column(name = "token")
     private String token;
 
-    @Column(name = "tipo")
-    private String tipo;
+    @Column(name = "type")
+    private String type;
 
-    @Column(name = "foto")
-    private String foto;
+    @Column(name = "picture")
+    private String picture;
 
     @Column(name = "cep")
     private String cep;
@@ -43,14 +43,14 @@ public abstract class User implements ILogin {
     }
 
     @Transient
-    private Boolean autenticado;
+    private Boolean authenticated;
 
     public User() {
 
     }
 
-    public User(Integer id, String nome, String email, String senha, String cpf, String token, String tipo,
-            String foto, String cep) {
+    public User(Integer id, String name, String email, String password, String cpf, String token, String type,
+            String picture, String cep) {
     }
 
     public Integer getId() {
@@ -61,28 +61,28 @@ public abstract class User implements ILogin {
         this.id = id;
     }
 
-    public Boolean getAutenticado() {
-        return autenticado;
+    public Boolean getAuthenticated() {
+        return authenticated;
     }
 
-    public void setAutenticado(Boolean autenticado) {
-        this.autenticado = autenticado;
+    public void setAuthenticated(Boolean authenticated) {
+        this.authenticated = authenticated;
     }
 
-    public Integer getId_usuario() {
+    public Integer getId_user() {
         return id;
     }
 
-    public void setId_usuario(Integer id_usuario) {
-        this.id = id_usuario;
+    public void setId_user(Integer id_user) {
+        this.id = id_user;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
@@ -93,12 +93,12 @@ public abstract class User implements ILogin {
         this.email = email;
     }
 
-    public String getSenha() {
-        return senha;
+    public String getPassword() {
+        return password;
     }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getCpf() {
@@ -117,20 +117,20 @@ public abstract class User implements ILogin {
         this.token = token;
     }
 
-    public String getTipo() {
-        return tipo;
+    public String getType() {
+        return type;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public String getFoto() {
-        return foto;
+    public String getPicture() {
+        return picture;
     }
 
-    public void setFoto(String foto) {
-        this.foto = foto;
+    public void setPicture(String picture) {
+        this.picture = picture;
     }
 
 }

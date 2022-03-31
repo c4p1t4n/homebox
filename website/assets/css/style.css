@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 700;
 }
 
@@ -30,10 +30,9 @@
     position: absolute;
     width: 60%;
     height: 60%;
-
 }
 
-.login_titulo {
+.login_title {
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -44,10 +43,10 @@
     font-weight: bold;
     font-size: 52px;
     line-height: 40px;
-    color: #0A3969;
+    color: #0a3969;
 }
 
-.email_senha {
+.email_password {
     position: absolute;
     width: 100%;
     height: 70%;
@@ -82,12 +81,11 @@
     border-radius: 30px;
 }
 
-.email_senha p {
+.email_password p {
     margin-left: 45%;
     font-size: 20px;
     margin-right: 50%;
     margin-bottom: 12%;
-
 }
 
 .img_container {
@@ -100,11 +98,9 @@ div .logo {
     padding-right: 17%;
 }
 
-
 .conteudo_login {
     width: 100%;
 }
-
 
 .homebox_logo {
     float: right;
@@ -125,11 +121,10 @@ div .logo {
     margin-left: 8%;
 }
 
-
 .div_button button {
     border: none;
     cursor: pointer;
-    background-color: #0A3969;
+    background-color: #0a3969;
     width: 70%;
     margin-left: 20%;
     margin-right: 20%;
@@ -151,17 +146,16 @@ div .logo {
 
 /* Fim página de Login */
 
-
 /* Início página de Cadastro */
 
-.cadastro_body {
+.register_body {
     background-image: url("../img/painting.jpg");
     background-size: cover;
     height: 162%;
     background-repeat: no-repeat;
 }
 
-.div_cadastro {
+.div_register {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
     position: absolute;
     width: 40%;
@@ -172,7 +166,7 @@ div .logo {
     border-radius: 30px;
 }
 
-.div_cadastro_2 {
+.div_register_2 {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
     position: absolute;
     width: 40%;
@@ -183,7 +177,7 @@ div .logo {
     border-radius: 30px;
 }
 
-.cadastro {
+.register {
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -193,7 +187,7 @@ div .logo {
     top: 5%; */
 }
 
-.cadastro_titulo {
+.register_title {
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -204,10 +198,10 @@ div .logo {
     font-weight: bold;
     font-size: 48px;
     line-height: 40px;
-    color: #0A3969;
+    color: #0a3969;
 }
 
-.conteudo_cadastro {
+.conteudo_register {
     position: absolute;
     width: 100%;
     height: 70%;
@@ -216,13 +210,13 @@ div .logo {
     top: 35%;
 }
 
-.cadastro label {
+.register label {
     color: black;
     font-size: 21px;
 }
 
-.cadastro label,
-.cadastro input {
+.register label,
+.register input {
     width: 90%;
     height: 12%;
     left: 122px;
@@ -230,7 +224,7 @@ div .logo {
     border-radius: 30px;
 }
 
-.cadastro input {
+.register input {
     border: none;
     margin-top: 10px;
     margin-bottom: 30px;
@@ -242,7 +236,7 @@ div .logo {
     border-radius: 30px;
 }
 
-.conteudo_cadastro p {
+.conteudo_register p {
     margin-left: 45%;
     font-size: 20px;
     margin-right: 50%;
@@ -259,8 +253,7 @@ div .logo {
     padding-right: 17%;
 }
 
-
-.conteudo_cadastro {
+.conteudo_register {
     width: 100%;
 }
 
@@ -281,11 +274,10 @@ div .logo {
     margin-left: 8%;
 }
 
-
-.conteudo_cadastro button {
+.conteudo_register button {
     border: none;
     cursor: pointer;
-    background-color: #0A3969;
+    background-color: #0a3969;
     width: 70%;
     margin-left: 20%;
     margin-right: 20%;
