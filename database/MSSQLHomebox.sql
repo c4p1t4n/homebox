@@ -1,197 +1,198 @@
--- DROP TABLE [pesquisa_usuario];
+-- DROP TABLE [pesquisa_user];
 -- DROP TABLE [pesquisa];
 -- DROP TABLE [avaliacao];
 -- DROP TABLE [agendamento];
 -- DROP TABLE [tag_servico];
 -- DROP TABLE [servico];
--- DROP TABLE [tag_usuario];
+-- DROP TABLE [tag_user];
 -- DROP TABLE [tag_categoria];
 -- DROP TABLE [categoria];
--- DROP TABLE [chat_usuario];
+-- DROP TABLE [chat_user];
 -- DROP TABLE [msg_chat];
 -- DROP TABLE [chat];
 -- DROP TABLE [midia_msg];
 -- DROP TABLE [msg];
--- DROP TABLE [usuario_notificacao];
+-- DROP TABLE [user_notificacao];
 -- DROP TABLE [notificacao];
--- DROP TABLE [usuario];
+-- DROP TABLE [user];
 -- DROP TABLE [midia];
 -- DROP TABLE [tag];
--- DROP TABLE [staff];
+-- DROP TABLE [staff];DROP DATABASE IF EXISTS homebox;
 CREATE TABLE staff (
     id_staff int PRIMARY KEY IDENTITY(1, 1),
-    nome VARCHAR(100) NOT NULL,
+    name VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    senha CHAR(64) NOT NULL
+    PASSWORD CHAR(64) NOT NULL
 );
 
 CREATE TABLE tag (
     id_tag int PRIMARY KEY IDENTITY(1, 1),
-    nome VARCHAR(100) NOT NULL
+    name VARCHAR(100) NOT NULL
 );
 
-CREATE TABLE midia (
-    id_midia int PRIMARY KEY IDENTITY(1, 1),
-    nome VARCHAR(100) NOT NULL
+CREATE TABLE media (
+    id_media int PRIMARY KEY IDENTITY(1, 1),
+    TYPE varchar(7) CHECK(TYPE IN ("picture", "video", "audio")) NOT NULL,
+    path varchar(250)
 );
 
-CREATE TABLE usuario (
-    id_usuario int PRIMARY KEY IDENTITY(1, 1),
-    nome VARCHAR(100) NOT NULL,
+CREATE TABLE "user" (
+    id_user int PRIMARY KEY IDENTITY(1, 1),
+    name VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    senha CHAR(64) NOT NULL,
+    PASSWORD CHAR(64) NOT NULL,
     cpf CHAR(11) NOT NULL,
     token CHAR(16) NOT NULL,
-    tipo VARCHAR(9) CHECK(tipo IN ('prestador', 'cliente')) NOT NULL,
-    foto VARCHAR(250) NOT NULL,
+    TYPE varchar(8) CHECK(TYPE IN ("worker", "customer")) NOT NULL,
+    picture VARCHAR(250) NOT NULL,
     cep CHAR(8) NOT NULL
 );
 
-CREATE TABLE notificacao (
-    id_notificacao int PRIMARY KEY IDENTITY(1, 1),
-    titulo VARCHAR(100) NOT NULL,
-    mensagem TEXT NOT NULL
+CREATE TABLE notification_alert (
+    id_notification int PRIMARY KEY IDENTITY(1, 1),
+    title VARCHAR(100) NOT NULL,
+    message TEXT NOT NULL
 );
 
-CREATE TABLE usuario_notificacao (
-    fk_notificacao int NOT NULL,
-    fk_usuario int NOT NULL,
-    data_notificacao DATETIME NOT NULL,
-    lido CHAR(1) CHECK(lido IN ('s', 'n')) NOT NULL,
-    FOREIGN KEY(fk_notificacao) REFERENCES notificacao(id_notificacao),
-    FOREIGN KEY(fk_usuario) REFERENCES usuario(id_usuario),
-    PRIMARY KEY(fk_notificacao, fk_usuario)
+CREATE TABLE user_has_notification_alert (
+    fk_notification int NOT NULL,
+    fk_user int NOT NULL,
+    notification_date DATETIME NOT NULL,
+    seen CHAR(1) CHECK(seen IN ("y", "n")) NOT NULL,
+    FOREIGN KEY(fk_notification) REFERENCES notification_alert(id_notification),
+    FOREIGN KEY(fk_user) REFERENCES "user"(id_user),
+    PRIMARY KEY(fk_notification, fk_user)
 );
 
 CREATE TABLE msg (
     id_msg int PRIMARY KEY IDENTITY(1, 1),
-    mensagem TEXT NOT NULL,
-    automatico CHAR(1) CHECK(lido IN ('s', 'n')) NOT NULL,
-    fk_usuario int NOT NULL,
-    FOREIGN KEY(fk_usuario) REFERENCES usuario(id_usuario)
+    message TEXT NOT NULL,
+    automatic CHAR(1) CHECK(automatic IN ("y", "n")) NOT NULL,
+    fk_user int NOT NULL,
+    FOREIGN KEY(fk_user) REFERENCES "user"(id_user)
 );
 
-CREATE TABLE midia_msg (
+CREATE TABLE msg_has_media (
     fk_msg int,
-    fk_midia int NOT NULL,
-    FOREIGN KEY(fk_midia) REFERENCES midia(id_midia),
+    fk_media int NOT NULL,
+    FOREIGN KEY(fk_media) REFERENCES media(id_media),
     FOREIGN KEY(fk_msg) REFERENCES msg(id_msg),
-    PRIMARY KEY(fk_msg, fk_midia)
+    PRIMARY KEY(fk_msg, fk_media)
 );
 
 CREATE TABLE chat (
     id_chat int PRIMARY KEY IDENTITY(1, 1),
-    data_abertura DATETIME NOT NULL
+    opening_date DATETIME NOT NULL
 );
 
-CREATE TABLE msg_chat (
+CREATE TABLE chat_has_msg (
     fk_msg int NOT NULL,
     fk_chat int NOT NULL,
-    mensagem TEXT NOT NULL,
-    data_envio DATETIME NOT NULL,
-    lido CHAR(1) CHECK(lido IN ('s', 'n')) NOT NULL,
+    message TEXT NOT NULL,
+    send_date DATETIME NOT NULL,
+    seen CHAR(1) CHECK(seen IN ("y", "n")) NOT NULL,
     FOREIGN KEY(fk_msg) REFERENCES msg(id_msg),
     FOREIGN KEY(fk_chat) REFERENCES chat(id_chat),
     PRIMARY KEY(fk_msg, fk_chat)
 );
 
-CREATE TABLE chat_usuario (
+CREATE TABLE chat_has_user (
     fk_chat int NOT NULL,
-    fk_usuario int NOT NULL,
+    fk_user int NOT NULL,
     FOREIGN KEY(fk_chat) REFERENCES chat(id_chat),
-    FOREIGN KEY(fk_usuario) REFERENCES usuario(id_usuario),
-    PRIMARY KEY(fk_usuario, fk_chat)
+    FOREIGN KEY(fk_user) REFERENCES "user"(id_user),
+    PRIMARY KEY(fk_user, fk_chat)
 );
 
-CREATE TABLE categoria (
-    id_categoria int PRIMARY KEY IDENTITY(1, 1),
-    nome VARCHAR(50) NOT NULL
+CREATE TABLE category (
+    id_category int PRIMARY KEY IDENTITY(1, 1),
+    name VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE tag_categoria (
+CREATE TABLE category_has_tag (
     fk_tag int,
-    fk_categoria int,
-    FOREIGN KEY (fk_categoria) REFERENCES categoria(id_categoria),
+    fk_category int,
+    FOREIGN KEY (fk_category) REFERENCES category(id_category),
     FOREIGN KEY (fk_tag) REFERENCES tag(id_tag),
-    PRIMARY KEY (fk_tag, fk_categoria)
+    PRIMARY KEY (fk_tag, fk_category)
 );
 
-CREATE TABLE tag_usuario (
+CREATE TABLE user_has_tag (
     fk_tag int,
-    fk_usuario int,
-    FOREIGN KEY (fk_usuario) REFERENCES usuario(id_usuario),
+    fk_user int,
+    FOREIGN KEY (fk_user) REFERENCES "user"(id_user),
     FOREIGN KEY (fk_tag) REFERENCES tag(id_tag),
-    PRIMARY KEY (fk_tag, fk_usuario)
+    PRIMARY KEY (fk_tag, fk_user)
 );
 
-CREATE TABLE servico (
-    fk_usuario int,
-    fk_categoria int,
-    nome VARCHAR(100) NOT NULL,
-    descricao TEXT,
-    preco_referencia DECIMAL(7, 2),
-    FOREIGN KEY (fk_categoria) REFERENCES categoria(id_categoria),
-    FOREIGN KEY (fk_usuario) REFERENCES usuario(id_usuario),
-    PRIMARY KEY (fk_usuario, fk_categoria)
+CREATE TABLE service (
+    fk_user int,
+    fk_category int,
+    name VARCHAR(100) NOT NULL,
+    description TEXT,
+    reference_price DECIMAL(7, 2),
+    FOREIGN KEY (fk_category) REFERENCES category(id_category),
+    FOREIGN KEY (fk_user) REFERENCES "user"(id_user),
+    PRIMARY KEY (fk_user, fk_category)
 );
 
-CREATE TABLE tag_servico (
+CREATE TABLE service_has_tag (
     fk_tag int,
-    fk_usuario int,
-    fk_categoria int,
-    FOREIGN KEY (fk_usuario) REFERENCES servico(fk_usuario),
-    FOREIGN KEY (fk_categoria) REFERENCES servico(fk_categoria),
+    fk_user int,
+    fk_category int,
+    FOREIGN KEY (fk_user) REFERENCES service(fk_user),
+    FOREIGN KEY (fk_category) REFERENCES service(fk_category),
     FOREIGN KEY (fk_tag) REFERENCES tag(id_tag),
-    PRIMARY KEY (fk_tag, fk_usuario, fk_categoria)
+    PRIMARY KEY (fk_tag, fk_user, fk_category)
 );
 
-CREATE TABLE agendamento (
-    id_agendamento int PRIMARY KEY IDENTITY(1, 1),
-    fk_cliente int NOT NULL,
-    fk_prestador int NOT NULL,
-    fk_categoria int NOT NULL,
-    data_servico DATETIME NOT NULL,
-    status_servico VARCHAR(9) CHECK(
-        status_servico IN (
-            'agendado',
-            'executado',
-            'cancelado-prestador',
-            'cancelado-cliente',
-            'nao-sucedido',
-            'avaliado'
+CREATE TABLE scheduling (
+    id_scheduling int PRIMARY KEY IDENTITY(1, 1),
+    fk_customer int NOT NULL,
+    fk_worker int NOT NULL,
+    fk_category int NOT NULL,
+    service_date DATETIME NOT NULL,
+    service_status VARCHAR(16) CHECK(
+        service_status IN(
+            "scheduled",
+            "done",
+            "worker-cancelled",
+            "client-cancelled",
+            "not-executed",
+            "rated"
         )
     ) NOT NULL,
-    FOREIGN KEY (fk_categoria) REFERENCES servico(fk_categoria),
-    FOREIGN KEY (fk_cliente) REFERENCES usuario(id_usuario),
-    FOREIGN KEY (fk_prestador) REFERENCES servico(fk_usuario)
+    FOREIGN KEY (fk_category) REFERENCES service(fk_category),
+    FOREIGN KEY (fk_customer) REFERENCES "user"(id_user),
+    FOREIGN KEY (fk_worker) REFERENCES service(fk_user)
 );
 
-CREATE TABLE servico_prestado (
-    fk_agendamento int,
-    preco DECIMAL(7, 2) NOT NULL,
-    descricao TEXT NOT NULL,
-    data_servico DATETIME NOT NULL,
-    FOREIGN KEY (fk_agendamento) REFERENCES agendamento(id_agendamento),
-    PRIMARY KEY (fk_agendamento)
+CREATE TABLE accomplished_service (
+    fk_scheduling int,
+    price DECIMAL(7, 2) NOT NULL,
+    description TEXT NOT NULL,
+    service_date DATETIME NOT NULL,
+    FOREIGN KEY (fk_scheduling) REFERENCES scheduling(id_scheduling),
+    PRIMARY KEY (fk_scheduling)
 );
 
-CREATE TABLE avaliacao (
-    fk_servico_prestado int,
-    valor int NOT NULL,
-    descricao TEXT NOT NULL,
-    FOREIGN KEY (fk_servico_prestado) REFERENCES servico_prestado(fk_agendamento),
-    PRIMARY KEY (fk_servico_prestado)
+CREATE TABLE rating (
+    fk_accomplished_service int,
+    rating int NOT NULL,
+    description TEXT NOT NULL,
+    FOREIGN KEY (fk_accomplished_service) REFERENCES accomplished_service(fk_scheduling),
+    PRIMARY KEY (fk_accomplished_service)
 );
 
-CREATE TABLE pesquisa (
-    id_pesquisa int PRIMARY KEY IDENTITY(1, 1),
-    valor VARCHAR(100) NOT NULL
+CREATE TABLE search (
+    id_search int PRIMARY KEY IDENTITY(1, 1),
+    value VARCHAR(100) NOT NULL
 );
 
-CREATE TABLE pesquisa_usuario (
-    fk_pesquisa int,
-    fk_usuario int,
-    data_pesquisa DATETIME NOT NULL
+CREATE TABLE search_user (
+    fk_search int,
+    fk_user int,
+    search_date DATETIME NOT NULL
 );
 
 INSERT INTO
