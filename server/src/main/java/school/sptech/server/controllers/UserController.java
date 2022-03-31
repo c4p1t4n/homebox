@@ -4,79 +4,81 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import school.sptech.server.model.User;
-import school.sptech.server.model.UserCliente;
-import school.sptech.server.model.UserPrestador;
-import school.sptech.server.repository.UserClientRepository;
-import school.sptech.server.repository.UserPrestadorRepository;
+import school.sptech.server.model.UserCustomer;
+import school.sptech.server.model.UserWorker;
+import school.sptech.server.repository.UserCustomerRepository;
+import school.sptech.server.repository.UserWorkerRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/usuarios")
+@RequestMapping("/users")
 public class UserController {
 
     @Autowired
-    private UserClientRepository bancoCliente;
+    private UserCustomerRepository dbRepositoryCustomer;
     List<User> users = new ArrayList<>();
     @Autowired
-    private UserPrestadorRepository bancoPrestador;
+    private UserWorkerRepository dbRepositoryWorker;
 
-    @PostMapping("/cliente")
-    public ResponseEntity cadastrarUsuarioCliente(@RequestBody UserCliente novoUsuario) {
+    @PostMapping("/customer")
+    public ResponseEntity cadastrarUserCustomer(@RequestBody UserCustomer newUser) {
 
-        if (novoUsuario.getTipo().equals("cliente")) {
-            bancoCliente.save((UserCliente) novoUsuario);
+        if (newUser.getType().equals("customer")) {
+            dbRepositoryCustomer.save((UserCustomer) newUser);
         } else {
             return ResponseEntity.status(403).build();
         }
-        novoUsuario.setAutenticado(Boolean.FALSE);
-        users.add(novoUsuario);
+        newUser.setAuthenticated(Boolean.FALSE);
+        users.add(newUser);
         return ResponseEntity.status(201).build();
 
     }
 
-    @GetMapping("/cliente")
-    public ResponseEntity<List<UserCliente>> getUsuarioCliente() {
-        List<UserCliente> users = bancoCliente.findAll().stream().filter(user -> user.getTipo().equals("cliente"))
+    @GetMapping("/customer")
+    public ResponseEntity<List<UserCustomer>> getUserCustomer() {
+        List<UserCustomer> users = dbRepositoryCustomer.findAll().stream()
+                .filter(user -> user.getType().equals("customer"))
                 .collect(Collectors.toList());
         return !users.isEmpty() ? ResponseEntity.status(200).body(users) : ResponseEntity.status(204).build();
     }
 
-    @PostMapping("/prestador")
-    public ResponseEntity cadastrarUsuarioPrestador(@RequestBody UserPrestador novoUsuario) {
+    @PostMapping("/worker")
+    public ResponseEntity cadastrarUserWorker(@RequestBody UserWorker newUser) {
         try {
 
-            if (novoUsuario.getTipo().equals("prestador")) {
-                bancoPrestador.save(novoUsuario);
+            if (newUser.getType().equals("worker")) {
+                dbRepositoryWorker.save(newUser);
             } else {
                 return ResponseEntity.status(403).build();
             }
-            novoUsuario.setAutenticado(Boolean.FALSE);
-            users.add(novoUsuario);
+            newUser.setAuthenticated(Boolean.FALSE);
+            users.add(newUser);
             return ResponseEntity.status(201).build();
         } catch (NullPointerException npe) {
             return ResponseEntity.status(400).build();
         }
     }
 
-    @GetMapping("/prestador")
-    public ResponseEntity<List<UserPrestador>> getUsuarioPrestador() {
-        List<UserPrestador> users = bancoPrestador.findAll().stream().filter(user -> user.getTipo().equals("prestador"))
+    @GetMapping("/worker")
+    public ResponseEntity<List<UserWorker>> getUserWorker() {
+        List<UserWorker> users = dbRepositoryWorker.findAll().stream()
+                .filter(user -> user.getType().equals("worker"))
                 .collect(Collectors.toList());
         return !users.isEmpty() ? ResponseEntity.status(200).body(users) : ResponseEntity.status(204).build();
     }
 
     @GetMapping()
-    public ResponseEntity<List<User>> getUsuario() {
+    public ResponseEntity<List<User>> getUser() {
         return !users.isEmpty() ? ResponseEntity.status(200).body(users) : ResponseEntity.status(204).build();
     }
 
     @GetMapping("/login/{userLogin}/{userPassword}")
     public ResponseEntity getLoginUser(@PathVariable String userLogin, @PathVariable String userPassword) {
         for (User user : users) {
-            if (user.getEmail().equals(userLogin) && user.getSenha().equals(userPassword)) {
+            if (user.getEmail().equals(userLogin) && user.getPassword().equals(userPassword)) {
                 user.login(userLogin, userPassword);
                 return ResponseEntity.status(200).build();
             }
@@ -88,11 +90,11 @@ public class UserController {
     @GetMapping("/logoff/{userLogin}")
     public ResponseEntity logoffUser(@PathVariable String userLogin) {
         for (User user : users) {
-            if (user.getEmail().equals(userLogin) & user.getAutenticado().equals(Boolean.TRUE)) {
-                user.setAutenticado(Boolean.FALSE);
+            if (user.getEmail().equals(userLogin) & user.getAuthenticated().equals(Boolean.TRUE)) {
+                user.setAuthenticated(Boolean.FALSE);
                 return ResponseEntity.status(200).build();
             }
-            if (user.getEmail().equals(userLogin) & user.getAutenticado().equals(Boolean.FALSE)) {
+            if (user.getEmail().equals(userLogin) & user.getAuthenticated().equals(Boolean.FALSE)) {
                 return ResponseEntity.status(403).build();
             }
         }

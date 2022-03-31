@@ -8,8 +8,8 @@ import school.sptech.server.service.ILogin;
 @Table(name = "staff")
 public class Staff implements ILogin {
 
-    @Column(name = "nome")
-    private String nome;
+    @Column(name = "name")
+    private String name;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_staff")
@@ -17,15 +17,15 @@ public class Staff implements ILogin {
 
     @Column(name = "email")
     private String email;
-    @Column(name = "senha")
-    private String senha;
+    @Column(name = "password")
+    private String password;
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Integer getId() {
@@ -44,17 +44,17 @@ public class Staff implements ILogin {
         this.email = email;
     }
 
-    public String getSenha() {
-        return senha;
+    public String getPassword() {
+        return password;
     }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
     public Boolean login(String username, String password) {
-        return getSenha().equals(password) && getEmail().equals(username);
+        return getPassword().equals(password) && getEmail().equals(username);
     }
 
 }
