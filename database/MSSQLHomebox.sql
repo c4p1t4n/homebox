@@ -192,7 +192,19 @@ CREATE TABLE search (
 CREATE TABLE search_user (
     fk_search int,
     fk_user int,
-    search_date DATETIME NOT NULL
+    search_date DATETIME NOT NULL,
+    FOREIGN KEY (fk_search) REFERENCES search(id_search),
+    FOREIGN KEY (fk_user) REFERENCES "user"(id_user),
+    PRIMARY KEY (fk_search, fk_user)
+);
+
+CREATE TABLE interest_access (
+    fk_user int,
+    fk_tag int,
+    access_date DATETIME NOT NULL,
+    FOREIGN KEY (fk_user) REFERENCES "user"(id_user),
+    FOREIGN KEY (fk_tag) REFERENCES tag(id_tag),
+    PRIMARY KEY (fk_user, fk_tag)
 );
 
 INSERT INTO
