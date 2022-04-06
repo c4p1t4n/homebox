@@ -65,7 +65,7 @@ CREATE TABLE scheduling (
         'scheduled',
         'done',
         'worker-cancelled',
-        'client-cancelled',
+        'customer-cancelled',
         'not-executed',
         'rated'
     ) NOT NULL,
