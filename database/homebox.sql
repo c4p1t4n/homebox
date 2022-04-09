@@ -34,18 +34,18 @@ CREATE TABLE user (
     cep CHAR(8) NOT NULL
 );
 
-CREATE TABLE notification_alert (
+CREATE TABLE notification (
     id_notification int PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(100) NOT NULL,
     message TEXT NOT NULL
 );
 
-CREATE TABLE user_has_notification_alert (
+CREATE TABLE user_has_notification (
     fk_notification int NOT NULL,
     fk_user int NOT NULL,
     notification_date DATETIME NOT NULL,
     seen ENUM("y", "n") NOT NULL,
-    FOREIGN KEY(fk_notification) REFERENCES notification_alert(id_notification),
+    FOREIGN KEY(fk_notification) REFERENCES notification(id_notification),
     FOREIGN KEY(fk_user) REFERENCES user(id_user),
     PRIMARY KEY(fk_notification, fk_user)
 );
