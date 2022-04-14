@@ -24,7 +24,7 @@ public class UserController {
     private UserWorkerRepository dbRepositoryWorker;
 
     @PostMapping("/customer")
-    public ResponseEntity cadastrarUserCustomer(@RequestBody UserCustomer newUser) {
+    public ResponseEntity registerUserCustomer(@RequestBody UserCustomer newUser) {
 
         if (newUser.getType().equals("customer")) {
             dbRepositoryCustomer.save((UserCustomer) newUser);
@@ -46,7 +46,7 @@ public class UserController {
     }
 
     @PostMapping("/worker")
-    public ResponseEntity cadastrarUserWorker(@RequestBody UserWorker newUser) {
+    public ResponseEntity registerUserWorker(@RequestBody UserWorker newUser) {
         try {
 
             if (newUser.getType().equals("worker")) {
