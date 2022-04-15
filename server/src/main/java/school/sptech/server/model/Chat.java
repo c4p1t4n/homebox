@@ -10,18 +10,19 @@ public class Chat {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_chat;
+    @Column(name = "id_chat")
+    private Integer idChat;
 
     @PastOrPresent
     @Column(name = "opening_date")
     private LocalDate openingDate;
 
-    public Integer getId_chat() {
-        return id_chat;
+    public Integer getIdChat() {
+        return idChat;
     }
 
-    public void setId_chat(Integer id_chat) {
-        this.id_chat = id_chat;
+    public void setIdChat(Integer idChat) {
+        this.idChat = idChat;
     }
 
     public LocalDate getOpeningDate() {
