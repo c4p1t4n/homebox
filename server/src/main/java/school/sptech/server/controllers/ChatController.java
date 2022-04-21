@@ -53,10 +53,12 @@ public class ChatController {
         }
     }
 
-/*    @GetMapping("/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity getChat(@RequestParam int id){
-        List<Chat> list = chat.
+        List<Chat> list = dbRepositoryChat.chat(id);
+                
+        return ResponseEntity.status(200).body(list);
     }
-*/
+
 
 }
