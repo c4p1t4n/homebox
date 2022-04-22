@@ -5,187 +5,288 @@ body {
     font-size: small;
 }
 
-header {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    height: 80px;
-    margin-top: 1%;
+p {
+    margin: 0;
 }
 
 .container {
-    width: 95%;
+    width: 90%;
     margin: auto;
 }
 
-.header-top {
-    display: flex;
-    justify-content: space-between;
+.headerDiv {
     width: 100%;
-    align-items: center;
-}
-
-.header-top img {
-    height: 70px;
-    margin-top: 4%;
-    image-rendering: -webkit-optimize-contrast;
-    margin-right: 2%;
-}
-
-.header-top h1 {
-    border-bottom: solid 0.5px;
-    align-self: baseline;
-    font-size: x-large;
-    color: black;
-    font-weight: lighter;
-    letter-spacing: 4px;
-    text-decoration: none;
-}
-
-.header-top a {
-    text-decoration: none;
-}
-
-.mvv {
     display: flex;
-    width: 85%;
-    top: 540px;
-    position: absolute;
     justify-content: space-between;
-    height: 500px;
+    align-items: center;
+    font-size: 20px;
 }
 
-.mvv .mvv-divs {
-    width: 320px;
-    height: 400px;
-    background-color: white;
-    box-shadow: 10px 10px 5px 10px rgba(0, 0, 0, 0.27);
-    border-radius: 20px;
-    padding: 2%;
-    flex-direction: column;
+.headerDiv img {
+    height: 140px;
+    border-radius: 257px;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.headerText {
     display: flex;
+    justify-content: space-between;
+    width: 450px;
+    color: #0A3969;
     align-items: center;
+
+    color: #0A3969;
+}
+
+.headerText a {
+    text-decoration: none;
+    color: #0A3969;
+
+}
+
+.headerText a {
+    border: solid #0A3969;
+    padding: 1%;
+    border-radius: 5px;
+    background-color: #0A3969;
+}
+
+.headerText a:hover {
+    text-decoration: revert;
+}
+
+.headerBanner {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.headerBanner .pesquisa img {
+    height: 38px;
+    margin-left: 2%;
+}
+
+.headerBanner .pesquisa {
+    padding: 1%;
+    border: solid 1px;
+    border-radius: 10px;
+    width: 600px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.headerBanner .pesquisa input {
+    width: 60%;
+    height: 40px;
+    font-size: 24px;
+    border: none;
+}
+
+.headerBanner .pesquisa>input:focus {
+    outline: none;
+}
+
+.headerBanner .pesquisa button {
+    font-size: 32px;
+    color: white;
+    background-color: #0A3969;
+    border-radius: 5px;
+    margin-right: 1%;
+}
+
+.headerBanner .pesquisa button:hover {
+    background-color: #0a3a69c7;
+}
+
+.headerh1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 370px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headerBanner h1 {
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 70px;
+    letter-spacing: 2px;
     text-align: center;
+    margin-top: 8%;
+
+    color: #000000;
+
+}
+
+.headerh1 p {
+    color: #0A3969;
+}
+
+.headerBanner img {
+    height: 670px;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.category {
+    position: relative;
+    bottom: 86px;
+}
+
+.category h3 {
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.div-category {
+    border: #0A3969 solid;
+    border-radius: 15px;
+    padding: 1%;
+    display: flex;
     justify-content: space-around;
 }
 
-.mvv-divs img {
-    height: 128px;
-}
-
-.mvv-divs p {
-}
-
-.operation {
-    background-color: #0c263f31;
-    padding: 40px;
-    margin-top: 25%;
-}
-
-.operation h1 {
-    font-size: -webkit-xxx-large;
-    color: #174574;
-}
-
-.operation h2 {
-    text-align: end;
-    margin-right: 20%;
-    font-weight: 500;
-    color: black;
-}
-
-.operation-div {
+.card-category {
+    height: 180px;
+    text-align: center;
+    font-size: 21px;
     display: flex;
-    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    justify-content: space-around;
+}
+
+.card-category img {
+    height: 90px;
+}
+
+.card-category:hover {
+    color: #0A3969;
+    border-bottom: solid;
+
+}
+
+.how-it-works {
+    display: flex;
     justify-content: space-between;
-    margin: 2%;
-    font-size: xx-large;
-    font-weight: 900;
 }
 
-.txt-banner {
+.div-how-it-works h1 {
     text-align: center;
-    font-size: xx-large;
-    padding: 5%;
-    letter-spacing: 5px;
-}
 
-.txt-operation {
-    text-align: center;
-    width: 40%;
-    align-self: center;
-}
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 10%;
 
-.txt-operation h3 {
-    font-size: x-large;
-    margin: 5%;
-}
-
-.txt-banner p {
     color: #174574;
+
 }
 
-.service-search {
-    padding: 2%;
+.div-start-here {
+    text-align: center;
+    color: #0A3969;
+    height: 605px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 32px;
+    margin-left: 0%;
+}
+
+.div-start-here h1 {
+    font-weight: bold;
+    font-size: 40px;
+    margin-top: revert;
+    margin-bottom: 20%;
+}
+
+.div-start-here button {
+    font-size: 32px;
     background: rgba(10, 57, 105, 0.13);
     border-radius: 30px;
-    color: #174574;
+    width: 635px;
+    height: 110px;
+    margin: 2%;
+    border: none;
 }
 
-.operation-2 {
-    padding: 3%;
+.div-start-here button:hover {
+    text-decoration: underline;
 }
 
-.operation2-div {
+
+.how-it-works2 {
     display: flex;
-    margin: 3%;
-    width: 100%;
-    justify-content: space-between;
+    margin-top: 10%;
+    margin-bottom: 20%;
 }
 
-.txt-operation2 {
-    width: 40%;
-    align-items: center;
+.professional-choice {
     display: flex;
-}
-
-.operation-3 {
-    margin: 5% 0% 5% 0%;
-}
-
-.operation-3 h1 {
-    text-align: end;
-    text-align: center;
-    color: #0a3969;
-    margin-bottom: 10%;
-}
-
-.operation3-div {
-    display: flex;
-    margin: 3%;
-    width: 100%;
-    justify-content: space-between;
-}
-
-.txt-operation3 h1 {
-    width: 60%;
-    align-items: center;
-    display: flex;
-    float: none;
-    text-align: center;
-    color: black;
-}
-
-.img-operation3 {
-    margin-right: 10%;
-}
-
-.img-operation3 img {
+    flex-direction: column;
     width: 70%;
 }
 
+.professional-choice h1 {
+    color: #0A3969;
+    font-weight: bold;
+
+    margin-bottom: 20%;
+
+}
+
+.professional-choice p {
+    width: 70%;
+    font-size: 36px;
+}
+
+.card-jose {
+    align-self: flex-end;
+}
+
+.card-jose img {
+    height: 220px;
+}
+
+.assessment {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20%;
+}
+
+.assessment h1 {
+    color: #0A3969;
+    font-weight: bold;
+    margin-bottom: 15%;
+}
+
+.div-assessment {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 32px;
+    text-align: start;
+}
+
+.div-assessment p {
+    width: 60%;
+}
+
+.div-assessment img {
+    height: 150px;
+}
+
 footer {
-    background: rgba(52, 89, 134, 0.52);
+    background: rgba(10, 57, 105, 0.13);
 }
 
 .about {
@@ -273,7 +374,7 @@ footer {
 }
 
 #contactLogo {
-    width: 50%;
+    width: 40%;
     align-self: center;
 }
 

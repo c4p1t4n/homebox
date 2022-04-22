@@ -7,13 +7,13 @@ import school.sptech.server.service.ILogin;
 @MappedSuperclass
 public abstract class User implements ILogin {
 
-    @Column(name = "name")
-    private String name;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_user")
     private Integer id;
 
+    @Column(name = "name")
+    private String name;
     @Column(name = "email")
     private String email;
     @Column(name = "password")
