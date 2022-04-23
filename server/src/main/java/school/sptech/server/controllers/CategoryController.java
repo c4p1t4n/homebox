@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import school.sptech.server.model.Category;
+import school.sptech.server.model.Notification;
 import school.sptech.server.repository.CategoryRepository;
 
 
@@ -17,6 +18,17 @@ public class CategoryController {
 
     @Autowired
     private CategoryRepository dbRepositoryCategory;
+
+    @GetMapping
+    public ResponseEntity<List<Category>> getCategories() {
+        List<Category> categoryList = dbRepositoryCategory.findAll();
+
+        if (categoryList.isEmpty()) {
+            return ResponseEntity.status(204).build();
+        }
+
+        return ResponseEntity.status(200).body(categoryList);
+    }
 
     @GetMapping("/report")
     public ResponseEntity getReport() {
