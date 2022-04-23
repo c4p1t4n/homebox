@@ -88,7 +88,6 @@ CREATE TABLE chat (
 CREATE TABLE chat_has_msg (
     fk_msg int NOT NULL,
     fk_chat int NOT NULL,
-    message TEXT NOT NULL,
     send_date DATETIME NOT NULL,
     seen CHAR(1) CHECK(seen IN ("y", "n")) NOT NULL,
     FOREIGN KEY(fk_msg) REFERENCES msg(id_msg),

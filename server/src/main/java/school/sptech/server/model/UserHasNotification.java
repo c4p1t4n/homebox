@@ -3,6 +3,7 @@ package school.sptech.server.model;
 import java.time.LocalDate;
 
 import javax.persistence.*;
+import javax.validation.constraints.PastOrPresent;
 
 import school.sptech.server.service.UserHasNotificationId;
 
@@ -18,6 +19,7 @@ public class UserHasNotification {
     @Column(name = "fk_notification")
     private Integer fkNotification;
 
+    @PastOrPresent
     @Column(name = "notification_date")
     private LocalDate notificationDate;
 
