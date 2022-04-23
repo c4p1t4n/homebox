@@ -223,3 +223,27 @@ VALUES
         "rodrigo.hermann@sptech.school",
         SHA2("ExSenha1", 256)
     );
+
+INSERT INTO
+    category
+VALUES
+    (
+        NULL,
+        "Encanamento"
+    ),
+    (
+        NULL,
+        "Elétrica"
+    ),
+    (
+        NULL,
+        "Montagem de móveis"
+    ),
+    (
+        NULL,
+        "Pintura"
+    ),
+    (
+        NULL,
+        "Limpeza"
+    );
