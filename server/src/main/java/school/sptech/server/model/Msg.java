@@ -1,29 +1,41 @@
 package school.sptech.server.model;
 
-
 import javax.persistence.*;
-import javax.validation.constraints.Max;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
 @Table(name = "msg")
-public class Message {
+public class Msg {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_msg")
     private Integer idMsg;
 
+    @Column(name = "message")
     private String message;
 
-    private char automatic;
+    @Column(name = "automatic")
+    private Character automatic;
 
     @Column(name = "fk_user")
-    private int fkUser;
+    private Integer fkUser;
 
-    public Message(Integer idMsg, String message, char automatic, int fkUser) {
+    public Msg(Integer idMsg, String message, Character automatic, Integer fkUser) {
         this.idMsg = idMsg;
         this.message = message;
         this.automatic = automatic;
         this.fkUser = fkUser;
+    }
+
+    @JsonCreator
+    public Msg(@JsonProperty("message") String message, @JsonProperty("fkUser") Integer fkUser) {
+        this.message = message;
+        this.fkUser = fkUser;
+    }
+
+    public Msg() {
     }
 
     public Integer getIdMsg() {
@@ -42,19 +54,19 @@ public class Message {
         this.message = message;
     }
 
-    public char getAutomatic() {
+    public Character getAutomatic() {
         return automatic;
     }
 
-    public void setAutomatic(char automatic) {
+    public void setAutomatic(Character automatic) {
         this.automatic = automatic;
     }
 
-    public int getFkUser() {
+    public Integer getFkUser() {
         return fkUser;
     }
 
-    public void setFkUser(int fkUser) {
+    public void setFkUser(Integer fkUser) {
         this.fkUser = fkUser;
     }
 }
