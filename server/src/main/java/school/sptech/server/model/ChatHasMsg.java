@@ -1,11 +1,10 @@
 package school.sptech.server.model;
 
-import org.springframework.data.annotation.Id;
 import school.sptech.server.service.ChatHasMsgId;
-import school.sptech.server.service.UserChatId;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
 import javax.validation.constraints.PastOrPresent;
@@ -15,6 +14,7 @@ import java.time.LocalDate;
 @Table(name = "chat_has_msg")
 @IdClass(ChatHasMsgId.class)
 public class ChatHasMsg {
+
     @Id
     @Column(name = "fk_msg")
     private Integer fkMsg;
@@ -27,13 +27,17 @@ public class ChatHasMsg {
     @Column(name = "send_date")
     private LocalDate sendDate;
 
-    private char seen;
+    @Column(name = "seen")
+    private Character seen;
 
-    public ChatHasMsg(Integer fkMsg, Integer fkChat, LocalDate sendDate, char seen) {
+    public ChatHasMsg(Integer fkMsg, Integer fkChat, LocalDate sendDate, Character seen) {
         this.fkMsg = fkMsg;
         this.fkChat = fkChat;
         this.sendDate = sendDate;
         this.seen = seen;
+    }
+
+    public ChatHasMsg() {
     }
 
     public Integer getFkMsg() {
@@ -60,11 +64,11 @@ public class ChatHasMsg {
         this.sendDate = sendDate;
     }
 
-    public char getRead() {
+    public Character getSeen() {
         return seen;
     }
 
-    public void setRead(char read) {
+    public void setSeen(Character seen) {
         this.seen = seen;
     }
 }

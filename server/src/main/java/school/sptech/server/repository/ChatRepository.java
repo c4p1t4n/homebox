@@ -3,26 +3,11 @@ package school.sptech.server.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import school.sptech.server.model.Chat;
-import school.sptech.server.model.Staff;
+import school.sptech.server.response.ChatJoinUserHasChat;
 
-import java.time.LocalDate;
 import java.util.List;
 
 public interface ChatRepository extends JpaRepository<Chat, Integer> {
-    @Query("")
-    List<Chat> chat(int id);
+    @Query("select new school.sptech.server.response.ChatJoinUserHasChat(c.idChat, c.openingDate, uhc.fkUser) from Chat c join  UserHasChat uhc on c.idChat = uhc.fkChat where uhc.fkUser = ?1")
+    List<ChatJoinUserHasChat> findChatsPerUser(Integer idUser);
 }
-
-/*
-* select user.name, chat_has_msg.send_date, msg.menssage
-* from chatJoin as(
-*   select * from chat join user_chat
-*                       on chat.id_chat = user_chat.fk_chat
-*                       and fk_user = {}
-* )
-* join user_chat on chatJoin.id = user_chat.fk_chat
-* join user on user.id_user = user_chat.fk_user
-* join chat_has_msg on  chatJoin.id = chat_has_msg.fk_chat
-* join msg on msg.id_msg = chat_has_msg
-* oredr by chat_has_msg.send_date
-* */

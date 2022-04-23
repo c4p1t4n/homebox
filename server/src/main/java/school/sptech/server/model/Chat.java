@@ -17,6 +17,18 @@ public class Chat {
     @Column(name = "opening_date")
     private LocalDate openingDate;
 
+    public Chat(@PastOrPresent LocalDate openingDate) {
+        this.openingDate = openingDate;
+    }
+
+    public Chat(Integer idChat, @PastOrPresent LocalDate openingDate) {
+        this.idChat = idChat;
+        this.openingDate = openingDate;
+    }
+
+    public Chat() {
+    }
+
     public Integer getIdChat() {
         return idChat;
     }

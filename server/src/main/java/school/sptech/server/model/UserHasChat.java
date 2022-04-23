@@ -1,17 +1,17 @@
 package school.sptech.server.model;
 
-import org.springframework.data.annotation.Id;
 import school.sptech.server.service.UserChatId;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "user_chat")
+@Table(name = "user_has_chat")
 @IdClass(UserChatId.class)
-public class UserChat {
+public class UserHasChat {
     @Id
     @Column(name = "fk_user")
     private Integer fkUser;
@@ -20,9 +20,12 @@ public class UserChat {
     @Column(name = "fk_chat")
     private Integer fkChat;
 
-    public UserChat(Integer fkUser, Integer fkChat) {
+    public UserHasChat(Integer fkUser, Integer fkChat) {
         this.fkUser = fkUser;
         this.fkChat = fkChat;
+    }
+
+    public UserHasChat() {
     }
 
     public Integer getFkUser() {
