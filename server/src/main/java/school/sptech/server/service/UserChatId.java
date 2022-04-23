@@ -1,14 +1,13 @@
 package school.sptech.server.service;
 
-import org.springframework.data.annotation.Id;
-
-import javax.persistence.Column;
 import java.io.Serializable;
-import java.util.Objects;
 
 public class UserChatId implements Serializable {
     private Integer fkUser;
-    Integer fkChat;
+    private Integer fkChat;
+
+    public UserChatId() {
+    }
 
     public UserChatId(Integer fkUser, Integer fkChat) {
         this.fkUser = fkUser;

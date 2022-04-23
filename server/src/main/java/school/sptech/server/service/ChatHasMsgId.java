@@ -6,18 +6,20 @@ public class ChatHasMsgId implements Serializable {
     private Integer fkMsg;
     private Integer fkChat;
 
+    public ChatHasMsgId() {
+    }
 
-    public ChatHasMsgId(Integer fkmsg, Integer fkChat) {
-        this.fkMsg = fkmsg;
+    public ChatHasMsgId(Integer fkMsg, Integer fkChat) {
+        this.fkMsg = fkMsg;
         this.fkChat = fkChat;
     }
 
-    public Integer getFkmsg() {
+    public Integer getFkMsg() {
         return fkMsg;
     }
 
-    public void setFkmsg(Integer fkmsg) {
-        this.fkMsg = fkmsg;
+    public void setFkMsg(Integer fkMsg) {
+        this.fkMsg = fkMsg;
     }
 
     public Integer getFkChat() {
@@ -36,7 +38,6 @@ public class ChatHasMsgId implements Serializable {
         result = prime * result + ((fkMsg == null) ? 0 : fkMsg.hashCode());
         return result;
     }
-
 
     @Override
     public boolean equals(Object obj) {
