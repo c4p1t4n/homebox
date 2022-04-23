@@ -1,5 +1,6 @@
-package school.sptech.server;
+package school.sptech.server.csv;
 
+import school.sptech.server.service.ListObj;
 import school.sptech.server.model.Category;
 
 public class CategoryTest {

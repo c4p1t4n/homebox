@@ -1,4 +1,4 @@
-package school.sptech.server;
+package school.sptech.server.service;
 
 public class ListObj<T>{
 
