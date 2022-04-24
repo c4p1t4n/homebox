@@ -8,13 +8,13 @@ public class UserWorkerTest {
 
         ListObj<UserWorker> userWorkerList = new ListObj(5);
         UserWorker user1 = new UserWorker(1, "José Silva", "jose@gmail.com", "senhaExemplo1",
-                                          "00011122233", "tokenExemplo1", "Worker", "foto.png",
+                                          "00011122233", "tokenExemplo1", "worker", "foto.png",
                                           "1234567");
-        UserWorker user2 = new UserWorker(2, "Lara Alves", "larissa@gmail.com", "senhaExemplo2",
-                                          "00011122244", "tokenExemplo2", "Worker", "foto.png",
+        UserWorker user2 = new UserWorker(2, "Lara Alves", "lara@gmail.com", "senhaExemplo2",
+                                          "00011122244", "tokenExemplo2", "worker", "foto.png",
                                           "1234577");
         UserWorker user3 = new UserWorker(3, "Felipe Abreu", "felipe@gmail.com", "senhaExemplo3",
-                                          "00011122244", "tokenExemplo3", "Worker", "foto.png",
+                                          "00011122244", "tokenExemplo3", "worker", "foto.png",
                                           "1234588");
 
         userWorkerList.add(user1);

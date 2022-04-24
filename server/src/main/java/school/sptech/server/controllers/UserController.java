@@ -3,6 +3,7 @@ package school.sptech.server.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import school.sptech.server.model.Category;
 import school.sptech.server.model.User;
 import school.sptech.server.model.UserCustomer;
 import school.sptech.server.model.UserWorker;
@@ -101,4 +102,21 @@ public class UserController {
         return ResponseEntity.status(400).build();
     }
 
+    @GetMapping("worker/report")
+    public ResponseEntity getReport() {
+        String report = "";
+
+        List<UserWorker> list = dbRepositoryWorker.findAll();
+        for(var user : list) {
+            report += user.getId_user()+","+user.getName()+","+user.getEmail()+","+user.getPassword()+","+user.getCpf()+
+                    ","+user.getToken()+","+user.getType()+","+user.getPicture()+","+user.getCep()+"\r\n";
+        }
+
+        return ResponseEntity
+                .status(200)
+                .header("content-type", "text/csv")
+                //.header("content-length", "9999999999")
+                .header("content-disposition", "filename=\"userWorker.csv\"")
+                .body(report);
+    }
 }
