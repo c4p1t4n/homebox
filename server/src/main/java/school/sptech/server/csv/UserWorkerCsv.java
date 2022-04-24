@@ -1,7 +1,7 @@
 package school.sptech.server.csv;
 
+import school.sptech.server.model.UserWorker;
 import school.sptech.server.service.ListObj;
-import school.sptech.server.model.Category;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -12,9 +12,9 @@ import java.util.FormatterClosedException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-public class CsvFile {
+public class UserWorkerCsv {
 
-        public static void recordCsvFile(ListObj<Category> list, String fileName){
+        public static void recordCsvFile(ListObj<UserWorker> list, String fileName){
             FileWriter file = null;
             Formatter output = null;
             Boolean doesntWork = false;
@@ -31,8 +31,14 @@ public class CsvFile {
 
             try {
                 for (int i = 0; i < list.getSize(); i++) {
-                    Category categ = list.getElement(i);
-                    output.format("%d;%s\n", categ.getIdCategory(), categ.getName());
+                    UserWorker user = list.getElement(i);
+                    output.format("%d;%s;%s;%s;%s;%s;%s;%s;%s\n",
+                                 user.getId_user(), user.getName(), user.getEmail(),
+                                 user.getPassword(), user.getCpf(), user. getToken(),
+                            user.getType(), user.getPicture(), user.getCep());
+//                        public UserWorker(Integer id, String name, String email, String password, String cpf, String token,
+//                            String type, String picture, String cep) {
+//                        super(id, name, email, password, cpf, token, type, picture, cep);
                 }
             }
             catch (FormatterClosedException error){
@@ -70,11 +76,20 @@ public class CsvFile {
             }
 
             try {
-                System.out.printf("%3s %-14s\n", "ID", "NOME");
+                System.out.printf("%5s %-14s %-20s %-14s %-14s %-14s %-10s %-14s %-14s\n",
+                                  "ID", "NOME", "EMAIL", "SENHA", "CPF", "TOKEN", "TIPO", "FOTO", "CEP");
                 while (input.hasNext()){
                     int id = input.nextInt(); // Não pode ser nextLine() aqui
                     String name = input.next();
-                    System.out.printf("%03d %-14s\n", id, name);
+                    String email = input.next();
+                    String password = input.next();
+                    String cpf = input.next();
+                    String token = input.next();
+                    String type = input.next();
+                    String picture = input.next();
+                    String cep = input.next();
+                    System.out.printf("%05d %-14s %-20s %-14s %-14s %-14s %-10s %-14s %-14s\n",
+                                      id, name, email, password, cpf, token, type, picture, cep);
                 }
             }
             catch (NoSuchElementException error){
