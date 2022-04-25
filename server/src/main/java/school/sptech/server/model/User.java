@@ -2,6 +2,7 @@ package school.sptech.server.model;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import school.sptech.server.service.ILogin;
 
 @MappedSuperclass
@@ -10,6 +11,7 @@ public abstract class User implements ILogin {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_user")
+    @JsonIgnore
     private Integer id;
 
     @Column(name = "name")
@@ -34,6 +36,9 @@ public abstract class User implements ILogin {
     @Column(name = "cep")
     private String cep;
 
+    @Column(name="authenticated")
+    @JsonIgnore
+    private Character authenticated;
     public String getCep() {
         return cep;
     }
@@ -42,8 +47,8 @@ public abstract class User implements ILogin {
         this.cep = cep;
     }
 
-    @Transient
-    private Boolean authenticated;
+
+
 
     public User() {
 
@@ -70,11 +75,11 @@ public abstract class User implements ILogin {
         this.id = id;
     }
 
-    public Boolean getAuthenticated() {
+    public Character getAuthenticated() {
         return authenticated;
     }
 
-    public void setAuthenticated(Boolean authenticated) {
+    public void setAuthenticated(Character authenticated) {
         this.authenticated = authenticated;
     }
 

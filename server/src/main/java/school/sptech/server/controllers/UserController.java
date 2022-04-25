@@ -19,7 +19,7 @@ public class UserController {
 
     @Autowired
     private UserCustomerRepository dbRepositoryCustomer;
-    List<User> users = new ArrayList<>();
+
     @Autowired
     private UserWorkerRepository dbRepositoryWorker;
 
@@ -27,12 +27,12 @@ public class UserController {
     public ResponseEntity registerUserCustomer(@RequestBody UserCustomer newUser) {
 
         if (newUser.getType().equals("customer")) {
-            dbRepositoryCustomer.save((UserCustomer) newUser);
+            newUser.setAuthenticated('n');
+            dbRepositoryCustomer.save(newUser);
         } else {
             return ResponseEntity.status(403).build();
         }
-        newUser.setAuthenticated(Boolean.FALSE);
-        users.add(newUser);
+
         return ResponseEntity.status(201).build();
 
     }
@@ -50,12 +50,12 @@ public class UserController {
         try {
 
             if (newUser.getType().equals("worker")) {
+                newUser.setAuthenticated('n');
                 dbRepositoryWorker.save(newUser);
             } else {
                 return ResponseEntity.status(403).build();
             }
-            newUser.setAuthenticated(Boolean.FALSE);
-            users.add(newUser);
+
             return ResponseEntity.status(201).build();
         } catch (NullPointerException npe) {
             return ResponseEntity.status(400).build();
@@ -63,20 +63,38 @@ public class UserController {
     }
 
     @GetMapping("/worker")
-    public ResponseEntity<List<UserWorker>> getUserWorker() {
+    public ResponseEntity getUserWorker() {
+        // status(400)solucao paliativa pois estava dando erro quando a lista estava vazia
+        if(dbRepositoryWorker.findAll().isEmpty()){
+            return ResponseEntity.status(400).build();
+        }
         List<UserWorker> users = dbRepositoryWorker.findAll().stream()
                 .filter(user -> user.getType().equals("worker"))
                 .collect(Collectors.toList());
-        return !users.isEmpty() ? ResponseEntity.status(200).body(users) : ResponseEntity.status(204).build();
+        return  ResponseEntity.status(200).body(users);
     }
 
     @GetMapping()
     public ResponseEntity<List<User>> getUser() {
-        return !users.isEmpty() ? ResponseEntity.status(200).body(users) : ResponseEntity.status(204).build();
+        List<User> users = new ArrayList<>();
+        List<UserCustomer> userCustomers = dbRepositoryCustomer.findAll();
+        List<UserWorker> userWorkers = dbRepositoryWorker.findAll();
+        userCustomers.stream().filter(user -> user.getType().equals("customer")).forEach(users::add);
+        userWorkers.stream().filter(user -> user.getType().equals("worker")).forEach(users::add);
+
+        // status(400) solucao paliativa pois estava dando erro quando a lista estava vazia
+        return !users.isEmpty() ? ResponseEntity.status(200).body(users) : ResponseEntity.status(400).build();
     }
 
     @GetMapping("/login/{userLogin}/{userPassword}")
     public ResponseEntity getLoginUser(@PathVariable String userLogin, @PathVariable String userPassword) {
+        List<User> users = new ArrayList<>();
+        List<UserCustomer> userCustomers = dbRepositoryCustomer.findAll();
+        List<UserWorker> userWorkers = dbRepositoryWorker.findAll();
+        users.addAll(userCustomers);
+        users.addAll(userWorkers);
+
+
         for (User user : users) {
             if (user.getEmail().equals(userLogin) && user.getPassword().equals(userPassword)) {
                 user.login(userLogin, userPassword);
@@ -89,12 +107,26 @@ public class UserController {
 
     @GetMapping("/logoff/{userLogin}")
     public ResponseEntity logoffUser(@PathVariable String userLogin) {
-        for (User user : users) {
-            if (user.getEmail().equals(userLogin) & user.getAuthenticated().equals(Boolean.TRUE)) {
-                user.setAuthenticated(Boolean.FALSE);
+
+        List<UserCustomer> usersCostumers = dbRepositoryCustomer.findAll();
+        List<UserWorker> usersWorkers = dbRepositoryWorker.findAll();
+
+        for (User user : usersCostumers) {
+            if (user.getEmail().equals(userLogin) & user.getAuthenticated().equals('s')) {
+                user.setAuthenticated('n');
                 return ResponseEntity.status(200).build();
             }
-            if (user.getEmail().equals(userLogin) & user.getAuthenticated().equals(Boolean.FALSE)) {
+            if (user.getEmail().equals(userLogin) & user.getAuthenticated().equals('n')) {
+                return ResponseEntity.status(403).build();
+            }
+        }
+
+        for (User user : usersWorkers) {
+            if (user.getEmail().equals(userLogin) & user.getAuthenticated().equals('s')) {
+                user.setAuthenticated('n');
+                return ResponseEntity.status(200).build();
+            }
+            if (user.getEmail().equals(userLogin) & user.getAuthenticated().equals('n')) {
                 return ResponseEntity.status(403).build();
             }
         }

@@ -45,7 +45,8 @@ CREATE TABLE "user" (
     token CHAR(16) NOT NULL,
     TYPE varchar(8) CHECK(TYPE IN ("worker", "customer")) NOT NULL,
     picture VARCHAR(250) NOT NULL,
-    cep CHAR(8) NOT NULL
+    cep CHAR(8) NOT NULL,
+    authenticated CHAR(1) CHECK(seen IN ("y", "n")) NOT NULL
 );
 
 CREATE TABLE notification (
