@@ -31,7 +31,8 @@ CREATE TABLE user (
     token CHAR(16) NOT NULL,
     TYPE ENUM("worker", "customer") NOT NULL,
     picture VARCHAR(250) NOT NULL,
-    cep CHAR(8) NOT NULL
+    cep CHAR(8) NOT NULL,
+    authenticated ENUM("y", "n") NOT NULL
 );
 
 CREATE TABLE notification (
