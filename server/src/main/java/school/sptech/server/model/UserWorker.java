@@ -22,4 +22,5 @@ public class UserWorker extends User {
             String type, String picture, String cep) {
         super(id, name, email, password, cpf, token, type, picture, cep);
     }
+
 }

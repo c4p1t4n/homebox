@@ -101,4 +101,21 @@ public class UserController {
         return ResponseEntity.status(400).build();
     }
 
+    @GetMapping("worker/report")
+    public ResponseEntity getReport() {
+        String report = "";
+
+        List<UserWorker> list = dbRepositoryWorker.findAll();
+        for(var user : list) {
+            report += user.getId_user()+","+user.getName()+","+user.getEmail()+","+user.getPassword()+","+user.getCpf()+
+                    ","+user.getToken()+","+user.getType()+","+user.getPicture()+","+user.getCep()+"\r\n";
+        }
+
+        return ResponseEntity
+                .status(200)
+                .header("content-type", "text/csv")
+                //.header("content-length", "9999999999")
+                .header("content-disposition", "filename=\"userWorker.csv\"")
+                .body(report);
+    }
 }

@@ -20,12 +20,11 @@ public class CategoryTest {
         categoryList.add(category4);
         categoryList.add(category5);
 
-        System.out.printf("%3s %-14s\n", "ID", "CATEGORIA");
-        categoryList.show();
+//        System.out.printf("%3s %-14s\n", "ID", "CATEGORIA");
+//        categoryList.show();
 
-        categoryList.show();
-        CsvFile.recordCsvFile(categoryList, "category");
-        CsvFile.readCsvFile("category");
+        CategoryCsv.recordCsvFile(categoryList, "category");
+        CategoryCsv.readCsvFile("category");
     }
 
 }

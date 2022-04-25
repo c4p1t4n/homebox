@@ -51,6 +51,15 @@ public abstract class User implements ILogin {
 
     public User(Integer id, String name, String email, String password, String cpf, String token, String type,
             String picture, String cep) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.cpf = cpf;
+        this.token = token;
+        this.type = type;
+        this.picture = picture;
+        this.cep = cep;
     }
 
     public Integer getId() {
@@ -133,4 +142,9 @@ public abstract class User implements ILogin {
         this.picture = picture;
     }
 
+    @Override
+    public String toString() {
+        return String.format("%05d %-14s %-20s %-14s %-14s %-14s %-14s %-14s %-14s",
+                             id, name, email, password, cpf, token, type, picture, cep);
+    }
 }
