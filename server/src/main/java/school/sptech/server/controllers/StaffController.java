@@ -16,7 +16,7 @@ public class StaffController {
 
     @Autowired
     private StaffRepository dbRepositoryStaff;
-    List<Staff> staff = new ArrayList<>();
+
 
     @GetMapping()
     public ResponseEntity<List<Staff>> getStaff() {
@@ -28,8 +28,8 @@ public class StaffController {
     public ResponseEntity cadastrarStaff(@RequestBody Staff newStaff) {
 
         try {
-            dbRepositoryStaff.save((Staff) newStaff);
-            staff.add(newStaff);
+            dbRepositoryStaff.save(newStaff);
+
             return ResponseEntity.status(200).build();
         } catch (NullPointerException npe) {
             return ResponseEntity.status(400).build();
@@ -38,8 +38,11 @@ public class StaffController {
 
     @GetMapping("/login/{userStaffLogin}/{userPassword}")
     public ResponseEntity getLoginUser(@PathVariable String userLogin, @PathVariable String userPassword) {
+        List<Staff> staff = dbRepositoryStaff.findAll();
+
         for (Staff userStaff : staff) {
-            if (userStaff.login(userLogin, userPassword)) {
+
+            if (userStaff.login(userLogin, userPassword).equals('s')) {
                 return ResponseEntity.status(200).build();
             } else {
                 return ResponseEntity.status(403).build();
