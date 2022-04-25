@@ -20,6 +20,9 @@ public class Staff implements ILogin {
     @Column(name = "password")
     private String password;
 
+    @Column(name="authenticated")
+    private Character authenticated;
+
     public String getName() {
         return name;
     }
@@ -52,9 +55,24 @@ public class Staff implements ILogin {
         this.password = password;
     }
 
+
+    public Character getAuthenticated() {
+        return authenticated;
+    }
+
+    public void setAuthenticated(Character authenticated) {
+        this.authenticated = authenticated;
+    }
+
     @Override
-    public Boolean login(String username, String password) {
-        return getPassword().equals(password) && getEmail().equals(username);
+    public Character login(String username, String password) {
+        Boolean autenticacao = getPassword().equals(password) & getEmail().equals(username);
+        if (autenticacao) {
+            setAuthenticated('s');
+        }else{
+            setAuthenticated('n');
+        }
+        return getAuthenticated();
     }
 
 }
