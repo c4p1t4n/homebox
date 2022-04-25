@@ -10,12 +10,14 @@ public class UserWorker extends User {
     }
 
     @Override
-    public Boolean login(String user, String password) {
+    public Character login(String user, String password) {
         Boolean autenticacao = getPassword().equals(password) & getEmail().equals(user);
         if (autenticacao) {
-            setAuthenticated(Boolean.TRUE);
+            setAuthenticated('s');
+        }else{
+            setAuthenticated('n');
         }
-        return autenticacao;
+        return getAuthenticated();
     }
 
     public UserWorker(Integer id, String name, String email, String password, String cpf, String token,
