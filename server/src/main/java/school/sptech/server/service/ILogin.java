@@ -1,5 +1,5 @@
 package school.sptech.server.service;
 
 public interface ILogin {
-    public Boolean login(String username, String password);
+    public Character login(String username, String password);
 }
