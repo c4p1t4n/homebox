@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.*;
 import school.sptech.server.model.Staff;
 import school.sptech.server.repository.StaffRepository;
 
-import java.util.ArrayList;
 import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 

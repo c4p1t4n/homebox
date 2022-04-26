@@ -64,26 +64,22 @@ public class UserController {
 
     @GetMapping("/worker")
     public ResponseEntity getUserWorker() {
-        // status(400)solucao paliativa pois estava dando erro quando a lista estava vazia
-        if(dbRepositoryWorker.findAll().isEmpty()){
-            return ResponseEntity.status(400).build();
-        }
         List<UserWorker> users = dbRepositoryWorker.findAll().stream()
                 .filter(user -> user.getType().equals("worker"))
                 .collect(Collectors.toList());
-        return  ResponseEntity.status(200).body(users);
+        if (users.isEmpty()) {
+            return ResponseEntity.status(204).build();
+        }
+
+        return ResponseEntity.status(200).body(users);
     }
 
     @GetMapping()
-    public ResponseEntity<List<User>> getUser() {
-        List<User> users = new ArrayList<>();
-        List<UserCustomer> userCustomers = dbRepositoryCustomer.findAll();
-        List<UserWorker> userWorkers = dbRepositoryWorker.findAll();
-        userCustomers.stream().filter(user -> user.getType().equals("customer")).forEach(users::add);
-        userWorkers.stream().filter(user -> user.getType().equals("worker")).forEach(users::add);
-
-        // status(400) solucao paliativa pois estava dando erro quando a lista estava vazia
-        return !users.isEmpty() ? ResponseEntity.status(200).body(users) : ResponseEntity.status(400).build();
+    public ResponseEntity<List<UserCustomer>> getUser() {
+        List<UserCustomer> users = dbRepositoryCustomer.findAll();
+        // status(400) solucao paliativa pois estava dando erro quando a lista estava
+        // vazia
+        return !users.isEmpty() ? ResponseEntity.status(200).body(users) : ResponseEntity.status(204).build();
     }
 
     @GetMapping("/login/{userLogin}/{userPassword}")
@@ -93,7 +89,6 @@ public class UserController {
         List<UserWorker> userWorkers = dbRepositoryWorker.findAll();
         users.addAll(userCustomers);
         users.addAll(userWorkers);
-
 
         for (User user : users) {
             if (user.getEmail().equals(userLogin) && user.getPassword().equals(userPassword)) {
@@ -138,15 +133,17 @@ public class UserController {
         String report = "";
 
         List<UserWorker> list = dbRepositoryWorker.findAll();
-        for(var user : list) {
-            report += user.getId_user()+","+user.getName()+","+user.getEmail()+","+user.getPassword()+","+user.getCpf()+
-                    ","+user.getToken()+","+user.getType()+","+user.getPicture()+","+user.getCep()+"\r\n";
+        for (var user : list) {
+            report += user.getId_user() + "," + user.getName() + "," + user.getEmail() + "," + user.getPassword() + ","
+                    + user.getCpf() +
+                    "," + user.getToken() + "," + user.getType() + "," + user.getPicture() + "," + user.getCep()
+                    + "\r\n";
         }
 
         return ResponseEntity
                 .status(200)
                 .header("content-type", "text/csv")
-                //.header("content-length", "9999999999")
+                // .header("content-length", "9999999999")
                 .header("content-disposition", "filename=\"userWorker.csv\"")
                 .body(report);
     }
