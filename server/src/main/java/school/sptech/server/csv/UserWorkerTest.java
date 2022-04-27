@@ -32,26 +32,11 @@ public class UserWorkerTest {
         System.out.println("--- Exibindo antes do bubble sort ---");
         userWorkerList.show();
 
-        bubbleSort(userWorkerList);
+        userWorkerList.bubbleSort(userWorkerList);
 
         System.out.println();
         System.out.println("--- Exibindo após o bubble sort ---");
         userWorkerList.show();
     }
 
-    public static void bubbleSort(ListObj<UserWorker> v) {
-
-        int aux = 0;
-
-        for (int i = 0; i < v.getSize() - 1; i++){
-            for (int j = 1; j < v.getSize() - i; j++){
-                if (v.getElement(j-1).getId() > v.getElement(j).getId()){
-                    aux = v.getElement(j).getId();
-                    v.getElement(j).setId(v.getElement(j-1).getId());
-                    v.getElement(j-1).setId(aux);
-                }
-            }
-        }
-
-    }
 }
