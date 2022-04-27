@@ -1,5 +1,7 @@
 package school.sptech.server.service;
 
+import school.sptech.server.model.UserWorker;
+
 public class ListObj<T>{
 
     private T[] array;
@@ -70,6 +72,25 @@ public class ListObj<T>{
 
     public void clear(){
         elemNumber = 0;
+    }
+
+    public void overwriteObj(int index, T element){
+        array[index] = element;
+    }
+
+    public static void bubbleSort(ListObj<UserWorker> v) {
+
+        UserWorker aux;
+
+        for (int i = 0; i < v.getSize() - 1; i++){
+            for (int j = 1; j < v.getSize() - i; j++){
+                if (v.getElement(j-1).getId() > v.getElement(j).getId()){
+                    aux = v.getElement(j);
+                    v.overwriteObj(j, v.getElement(j-1));
+                    v.overwriteObj(j-1, aux);
+                }
+            }
+        }
     }
 
 }
