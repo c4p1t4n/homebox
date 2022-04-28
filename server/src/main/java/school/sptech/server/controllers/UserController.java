@@ -8,10 +8,10 @@ import school.sptech.server.model.UserCustomer;
 import school.sptech.server.model.UserWorker;
 import school.sptech.server.repository.UserCustomerRepository;
 import school.sptech.server.repository.UserWorkerRepository;
+import school.sptech.server.request.UserTypeManager;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/users")
@@ -22,6 +22,9 @@ public class UserController {
 
     @Autowired
     private UserWorkerRepository dbRepositoryWorker;
+
+    @Autowired
+    private  UserTypeManager dbServiceUserTypeManager;
 
     @PostMapping("/customer")
     public ResponseEntity registerUserCustomer(@RequestBody UserCustomer newUser) {
@@ -38,11 +41,12 @@ public class UserController {
     }
 
     @GetMapping("/customer")
-    public ResponseEntity<List<UserCustomer>> getUserCustomer() {
-        List<UserCustomer> users = dbRepositoryCustomer.findAll().stream()
-                .filter(user -> user.getType().equals("customer"))
-                .collect(Collectors.toList());
-        return !users.isEmpty() ? ResponseEntity.status(200).body(users) : ResponseEntity.status(204).build();
+    public ResponseEntity<List<User>> getUserCustomer() {
+        dbServiceUserTypeManager.ResetList();
+        List<UserCustomer> users = dbRepositoryCustomer.findAll();
+        dbServiceUserTypeManager.addAllUsers(users);
+        List<User> allCustomer = dbServiceUserTypeManager.getAllCustomer();
+        return !allCustomer.isEmpty() ? ResponseEntity.status(200).body(allCustomer) : ResponseEntity.status(204).build();
     }
 
     @PostMapping("/worker")
@@ -64,22 +68,21 @@ public class UserController {
 
     @GetMapping("/worker")
     public ResponseEntity getUserWorker() {
-        List<UserWorker> users = dbRepositoryWorker.findAll().stream()
-                .filter(user -> user.getType().equals("worker"))
-                .collect(Collectors.toList());
-        if (users.isEmpty()) {
-            return ResponseEntity.status(204).build();
-        }
-
-        return ResponseEntity.status(200).body(users);
+        dbServiceUserTypeManager.ResetList();
+        List<UserCustomer> users = dbRepositoryCustomer.findAll();
+        dbServiceUserTypeManager.addAllUsers(users);
+        List<User> allWorkers = dbServiceUserTypeManager.getAllWorkers();
+        return !allWorkers.isEmpty() ? ResponseEntity.status(200).body(allWorkers): ResponseEntity.status(204).build();
     }
 
     @GetMapping()
-    public ResponseEntity<List<UserCustomer>> getUser() {
-        List<UserCustomer> users = dbRepositoryCustomer.findAll();
-        // status(400) solucao paliativa pois estava dando erro quando a lista estava
-        // vazia
-        return !users.isEmpty() ? ResponseEntity.status(200).body(users) : ResponseEntity.status(204).build();
+    public ResponseEntity<List<User>> getUser() {
+        dbServiceUserTypeManager.ResetList();
+
+        List<UserCustomer> usersCostumers = dbRepositoryCustomer.findAll();
+        dbServiceUserTypeManager.addAllUsers(usersCostumers);
+
+        return !dbServiceUserTypeManager.getAllUsers().isEmpty() ? ResponseEntity.status(200).body(dbServiceUserTypeManager.getAllUsers()) : ResponseEntity.status(204).build();
     }
 
     @GetMapping("/login/{userLogin}/{userPassword}")
@@ -126,6 +129,12 @@ public class UserController {
             }
         }
         return ResponseEntity.status(400).build();
+    }
+
+    @GetMapping("Teste")
+    public List<User> teste(){
+        return dbServiceUserTypeManager.getAllWorkers();
+
     }
 
     @GetMapping("worker/report")
