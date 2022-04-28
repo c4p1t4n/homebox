@@ -34,7 +34,7 @@ public class UserTypeManager  implements  Iterator{
     public  boolean hasNext(){
         System.out.println(currentPosition<sizeList);
         return  currentPosition < sizeList ;
-    }
+    }git
 
     @Override
     public User getNext() {
