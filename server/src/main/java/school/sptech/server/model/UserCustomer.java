@@ -11,6 +11,8 @@ public class UserCustomer extends User {
 
     }
 
+
+
     @Override
     public Character login(String user, String password) {
         Boolean autenticacao = getPassword().equals(password) & getEmail().equals(user);
