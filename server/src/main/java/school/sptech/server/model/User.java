@@ -1,12 +1,17 @@
 package school.sptech.server.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.validator.constraints.br.CPF;
+import org.springframework.validation.annotation.Validated;
 import school.sptech.server.service.ILogin;
 
+@Entity
+@Table(name = "user")
 @MappedSuperclass
-public abstract class User implements ILogin {
+public  class User implements ILogin {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,11 +22,13 @@ public abstract class User implements ILogin {
     @Column(name = "name")
     private String name;
     @Column(name = "email")
+    @Email
     private String email;
     @Column(name = "password")
     private String password;
 
     @Column(name = "cpf")
+    @CPF
     private String cpf;
 
     @Column(name = "token")
@@ -146,6 +153,17 @@ public abstract class User implements ILogin {
     public void setPicture(String picture) {
         this.picture = picture;
     }
+
+    public Character login(String user, String password) {
+        Boolean autenticacao = getPassword().equals(password) & getEmail().equals(user);
+        if (autenticacao) {
+            setAuthenticated('s');
+        }else{
+            setAuthenticated('n');
+        }
+        return getAuthenticated();
+    }
+
 
     @Override
     public String toString() {
