@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 import school.sptech.server.model.Notification;
 import school.sptech.server.model.UserHasNotification;
 import school.sptech.server.repository.NotificationRepository;
-import school.sptech.server.repository.UserCustomerRepository;
+
 import school.sptech.server.repository.UserHasNotificationRepository;
 import school.sptech.server.request.UserIdListRequest;
 import school.sptech.server.response.NotificationJoinUserNotificationResponse;
@@ -18,11 +18,8 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PatchMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
+import school.sptech.server.service.UserService;
 
 @RestController
 @RequestMapping("/notifications")
@@ -31,7 +28,7 @@ public class NotificationController {
     // está sendo utilizada a repository do user customer por ser necessário apenas
     // um pela tabela do banco de dados ser a mesma
     @Autowired
-    private UserCustomerRepository dbRepositoryCustomer;
+    private UserService dbUserService;
 
     @Autowired
     protected NotificationRepository dbRepositoryNotification;
@@ -53,7 +50,7 @@ public class NotificationController {
     @GetMapping(value = "/user/{idUser}")
     public ResponseEntity<List<NotificationJoinUserNotificationResponse>> getNotificationsForUser(
             @PathVariable Integer idUser) {
-        if (!dbRepositoryCustomer.existsById(idUser)) {
+        if (!dbUserService.existsById(idUser)) {
             return ResponseEntity.status(404).build();
         }
 
@@ -105,7 +102,7 @@ public class NotificationController {
             @RequestBody UserIdListRequest idList) {
         if (dbRepositoryNotification.existsById(idNotification)) {
             for (Integer id : idList.getUserIds()) {
-                if (dbRepositoryCustomer.existsById(id)) {
+                if (dbUserService.existsById(id)) {
                     UserHasNotification userHasNotification = new UserHasNotification(id, idNotification,
                             LocalDate.now(), 'n');
                     dbRepositoryUserHasNotification.save(userHasNotification);

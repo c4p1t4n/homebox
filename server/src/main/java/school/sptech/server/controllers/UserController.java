@@ -6,9 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import school.sptech.server.model.User;
 import school.sptech.server.model.UserCustomer;
 import school.sptech.server.model.UserWorker;
-import school.sptech.server.repository.UserCustomerRepository;
-import school.sptech.server.repository.UserWorkerRepository;
-import school.sptech.server.request.UserTypeManager;
+import school.sptech.server.service.UserService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,21 +15,16 @@ import java.util.List;
 @RequestMapping("/users")
 public class UserController {
 
-    @Autowired
-    private UserCustomerRepository dbRepositoryCustomer;
 
     @Autowired
-    private UserWorkerRepository dbRepositoryWorker;
-
-    @Autowired
-    private  UserTypeManager dbServiceUserTypeManager;
+    private UserService dbUserService;
 
     @PostMapping("/customer")
     public ResponseEntity registerUserCustomer(@RequestBody UserCustomer newUser) {
 
         if (newUser.getType().equals("customer")) {
             newUser.setAuthenticated('n');
-            dbRepositoryCustomer.save(newUser);
+            dbUserService.saveUser(newUser);
         } else {
             return ResponseEntity.status(403).build();
         }
@@ -42,11 +35,9 @@ public class UserController {
 
     @GetMapping("/customer")
     public ResponseEntity<List<User>> getUserCustomer() {
-        dbServiceUserTypeManager.ResetList();
-        List<UserCustomer> users = dbRepositoryCustomer.findAll();
-        dbServiceUserTypeManager.addAllUsers(users);
-        List<User> allCustomer = dbServiceUserTypeManager.getAllCustomer();
-        return !allCustomer.isEmpty() ? ResponseEntity.status(200).body(allCustomer) : ResponseEntity.status(204).build();
+
+
+        return !dbUserService.getAllCustomer().isEmpty() ? ResponseEntity.status(200).body(dbUserService.getAllCustomer()) : ResponseEntity.status(204).build();
     }
 
     @PostMapping("/worker")
@@ -55,7 +46,7 @@ public class UserController {
 
             if (newUser.getType().equals("worker")) {
                 newUser.setAuthenticated('n');
-                dbRepositoryWorker.save(newUser);
+                dbUserService.saveUser(newUser);
             } else {
                 return ResponseEntity.status(403).build();
             }
@@ -68,30 +59,18 @@ public class UserController {
 
     @GetMapping("/worker")
     public ResponseEntity getUserWorker() {
-        dbServiceUserTypeManager.ResetList();
-        List<UserCustomer> users = dbRepositoryCustomer.findAll();
-        dbServiceUserTypeManager.addAllUsers(users);
-        List<User> allWorkers = dbServiceUserTypeManager.getAllWorkers();
-        return !allWorkers.isEmpty() ? ResponseEntity.status(200).body(allWorkers): ResponseEntity.status(204).build();
+
+        return !dbUserService.getAllWorkers().isEmpty() ? ResponseEntity.status(200).body(dbUserService.getAllWorkers()): ResponseEntity.status(204).build();
     }
 
     @GetMapping()
     public ResponseEntity<List<User>> getUser() {
-        dbServiceUserTypeManager.ResetList();
-
-        List<UserCustomer> usersCostumers = dbRepositoryCustomer.findAll();
-        dbServiceUserTypeManager.addAllUsers(usersCostumers);
-
-        return !dbServiceUserTypeManager.getAllUsers().isEmpty() ? ResponseEntity.status(200).body(dbServiceUserTypeManager.getAllUsers()) : ResponseEntity.status(204).build();
+          return !dbUserService.findAll().isEmpty() ? ResponseEntity.status(200).body(dbUserService.findAll()) : ResponseEntity.status(204).build();
     }
 
     @GetMapping("/login/{userLogin}/{userPassword}")
     public ResponseEntity getLoginUser(@PathVariable String userLogin, @PathVariable String userPassword) {
-        List<User> users = new ArrayList<>();
-        List<UserCustomer> userCustomers = dbRepositoryCustomer.findAll();
-        List<UserWorker> userWorkers = dbRepositoryWorker.findAll();
-        users.addAll(userCustomers);
-        users.addAll(userWorkers);
+        List<User> users = dbUserService.findAll();
 
         for (User user : users) {
             if (user.getEmail().equals(userLogin) && user.getPassword().equals(userPassword)) {
@@ -106,10 +85,9 @@ public class UserController {
     @GetMapping("/logoff/{userLogin}")
     public ResponseEntity logoffUser(@PathVariable String userLogin) {
 
-        List<UserCustomer> usersCostumers = dbRepositoryCustomer.findAll();
-        List<UserWorker> usersWorkers = dbRepositoryWorker.findAll();
+        List<User> users = dbUserService.findAll();
 
-        for (User user : usersCostumers) {
+        for (User user : users) {
             if (user.getEmail().equals(userLogin) & user.getAuthenticated().equals('s')) {
                 user.setAuthenticated('n');
                 return ResponseEntity.status(200).build();
@@ -119,29 +97,16 @@ public class UserController {
             }
         }
 
-        for (User user : usersWorkers) {
-            if (user.getEmail().equals(userLogin) & user.getAuthenticated().equals('s')) {
-                user.setAuthenticated('n');
-                return ResponseEntity.status(200).build();
-            }
-            if (user.getEmail().equals(userLogin) & user.getAuthenticated().equals('n')) {
-                return ResponseEntity.status(403).build();
-            }
-        }
+
         return ResponseEntity.status(400).build();
     }
 
-    @GetMapping("Teste")
-    public List<User> teste(){
-        return dbServiceUserTypeManager.getAllWorkers();
-
-    }
 
     @GetMapping("worker/report")
     public ResponseEntity getReport() {
         String report = "";
 
-        List<UserWorker> list = dbRepositoryWorker.findAll();
+        List<User> list = dbUserService.getAllWorkers();
         for (var user : list) {
             report += user.getId_user() + "," + user.getName() + "," + user.getEmail() + "," + user.getPassword() + ","
                     + user.getCpf() +
