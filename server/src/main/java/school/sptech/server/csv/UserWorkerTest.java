@@ -34,6 +34,10 @@ public class UserWorkerTest {
 
         userWorkerList.bubbleSort(userWorkerList);
 
+        UserWorkerCsv.recordCsvFile(userWorkerList, "userWorker");
+        UserWorkerCsv.readCsvFile("userWorker");
+
+
         System.out.println();
         System.out.println("--- Exibindo após o bubble sort ---");
         userWorkerList.show();

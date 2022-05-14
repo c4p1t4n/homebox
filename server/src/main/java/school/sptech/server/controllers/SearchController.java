@@ -1,0 +1,72 @@
+package school.sptech.server.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import school.sptech.server.model.Search;
+import school.sptech.server.model.SearchUser;
+import school.sptech.server.model.UserHasNotification;
+import school.sptech.server.repository.SearchRepository;
+import school.sptech.server.repository.SearchUserRepository;
+import school.sptech.server.repository.UserCustomerRepository;
+import school.sptech.server.request.UserIdListRequest;
+import school.sptech.server.request.UserSearchRequest;
+import school.sptech.server.response.NotificationJoinUserNotificationResponse;
+import school.sptech.server.response.SearchJoinUserSearchResponse;
+import school.sptech.server.service.UserHasNotificationId;
+
+import java.time.LocalDate;
+import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
+
+@RestController
+@RequestMapping("/search")
+public class SearchController {
+    @Autowired
+    private SearchRepository dbRepositorySearch;
+
+    @Autowired
+    private SearchUserRepository dbRepositorySearchUser;
+
+    @Autowired
+    private UserCustomerRepository dbRepositoryCustomer;
+
+
+    @PostMapping
+    public ResponseEntity postSearchPerUser(@RequestBody UserSearchRequest searchReq) {
+        Search search = dbRepositorySearch.findByValue(searchReq.getValue());
+        if (Objects.isNull(search)) {
+            search = dbRepositorySearch.save(new Search(searchReq.getValue()));
+        }
+        dbRepositorySearchUser.save(new SearchUser(search.getIdSearch(), searchReq.getIdUser(), LocalDate.now()));
+        return ResponseEntity.status(201).build();
+    }
+
+    @GetMapping
+    public ResponseEntity<List<Search>> getSearch() {
+        List<Search> searchList = dbRepositorySearch.findAll();
+        if (searchList.isEmpty()) {
+            return ResponseEntity.status(204).build();
+        }
+        return ResponseEntity.status(200).body(searchList);
+    }
+
+    @GetMapping("/{idSearch}")
+    public ResponseEntity<Optional<Search>> getSearchById(@PathVariable Integer idSearch) {
+        if (dbRepositorySearch.existsById(idSearch)) {
+            return ResponseEntity.status(200).body(dbRepositorySearch.findById(idSearch));
+        }
+        return ResponseEntity.status(404).build();
+    }
+
+    @DeleteMapping("/{idSearch}")
+    public ResponseEntity deleteSearch(@PathVariable Integer idSearch) {
+        if (dbRepositorySearch.existsById(idSearch)) {
+            dbRepositorySearch.deleteById(idSearch);
+            return ResponseEntity.status(200).build();
+        }
+        return ResponseEntity.status(404).build();
+    }
+}
+

@@ -4,14 +4,14 @@ import java.io.Serializable;
 
 public class UserHasSearchId implements Serializable {
     private Integer fkUser;
-    private Integer fkNotification;
+    private Integer fkSearch;
 
     public UserHasSearchId() {
     }
 
-    public UserHasSearchId(Integer fkUser, Integer fkNotification) {
+    public UserHasSearchId(Integer fkUser, Integer fkSearch) {
         this.fkUser = fkUser;
-        this.fkNotification = fkNotification;
+        this.fkSearch = fkSearch;
     }
 
     public Integer getFkUser() {
@@ -22,19 +22,19 @@ public class UserHasSearchId implements Serializable {
         this.fkUser = fkUser;
     }
 
-    public Integer getFkNotification() {
-        return fkNotification;
+    public Integer getFkSearch() {
+        return fkSearch;
     }
 
-    public void setFkNotification(Integer fkNotification) {
-        this.fkNotification = fkNotification;
+    public void setFkSearch(Integer fkSearch) {
+        this.fkSearch = fkSearch;
     }
 
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((fkNotification == null) ? 0 : fkNotification.hashCode());
+        result = prime * result + ((fkSearch == null) ? 0 : fkSearch.hashCode());
         result = prime * result + ((fkUser == null) ? 0 : fkUser.hashCode());
         return result;
     }
@@ -48,10 +48,10 @@ public class UserHasSearchId implements Serializable {
         if (getClass() != obj.getClass())
             return false;
         UserHasSearchId other = (UserHasSearchId) obj;
-        if (fkNotification == null) {
-            if (other.fkNotification != null)
+        if (fkSearch == null) {
+            if (other.fkSearch != null)
                 return false;
-        } else if (!fkNotification.equals(other.fkNotification))
+        } else if (!fkSearch.equals(other.fkSearch))
             return false;
         if (fkUser == null) {
             if (other.fkUser != null)
