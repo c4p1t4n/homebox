@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.*;
 import school.sptech.server.model.User;
 import school.sptech.server.model.UserCustomer;
 import school.sptech.server.model.UserWorker;
+import school.sptech.server.repository.UserRepository;
 import school.sptech.server.service.UserService;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +18,7 @@ public class UserController {
 
     @Autowired
     private UserService dbUserService;
+
 
     @PostMapping("/customer")
     public ResponseEntity registerUserCustomer(@RequestBody UserCustomer newUser) {
@@ -35,8 +36,6 @@ public class UserController {
 
     @GetMapping("/customer")
     public ResponseEntity<List<User>> getUserCustomer() {
-
-
         return !dbUserService.getAllCustomer().isEmpty() ? ResponseEntity.status(200).body(dbUserService.getAllCustomer()) : ResponseEntity.status(204).build();
     }
 
@@ -65,12 +64,12 @@ public class UserController {
 
     @GetMapping()
     public ResponseEntity<List<User>> getUser() {
-          return !dbUserService.findAll().isEmpty() ? ResponseEntity.status(200).body(dbUserService.findAll()) : ResponseEntity.status(204).build();
+          return !dbUserService.getAll().isEmpty() ? ResponseEntity.status(200).body(dbUserService.getAll()) : ResponseEntity.status(204).build();
     }
 
     @GetMapping("/login/{userLogin}/{userPassword}")
     public ResponseEntity getLoginUser(@PathVariable String userLogin, @PathVariable String userPassword) {
-        List<User> users = dbUserService.findAll();
+        List<User> users = dbUserService.getAll();
 
         for (User user : users) {
             if (user.getEmail().equals(userLogin) && user.getPassword().equals(userPassword)) {
@@ -85,7 +84,7 @@ public class UserController {
     @GetMapping("/logoff/{userLogin}")
     public ResponseEntity logoffUser(@PathVariable String userLogin) {
 
-        List<User> users = dbUserService.findAll();
+        List<User> users = dbUserService.getAll();
 
         for (User user : users) {
             if (user.getEmail().equals(userLogin) & user.getAuthenticated().equals('s')) {
