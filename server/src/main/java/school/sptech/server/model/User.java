@@ -10,9 +10,7 @@ import school.sptech.server.service.ILogin;
 
 @Entity
 @Table(name = "user")
-@MappedSuperclass
 public  class User implements ILogin {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_user")
@@ -53,9 +51,6 @@ public  class User implements ILogin {
     public void setCep(String cep) {
         this.cep = cep;
     }
-
-
-
 
     public User() {
 
@@ -163,8 +158,6 @@ public  class User implements ILogin {
         }
         return getAuthenticated();
     }
-
-
     @Override
     public String toString() {
         return String.format("%05d %-14s %-20s %-14s %-14s %-14s %-14s %-14s %-14s",
