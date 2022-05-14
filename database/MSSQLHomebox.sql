@@ -46,7 +46,7 @@ CREATE TABLE "user" (
     TYPE varchar(8) CHECK(TYPE IN ("worker", "customer")) NOT NULL,
     picture VARCHAR(250) NOT NULL,
     cep CHAR(8) NOT NULL,
-    authenticated CHAR(1) CHECK(seen IN ("y", "n")) NOT NULL
+    authenticated CHAR(1) CHECK(authenticated IN ("y", "n", "p")) NOT NULL
 );
 
 CREATE TABLE notification (
@@ -151,8 +151,14 @@ CREATE TABLE scheduling (
     fk_customer int NOT NULL,
     fk_worker int NOT NULL,
     fk_category int NOT NULL,
-    service_date DATETIME NOT NULL,
-    service_status VARCHAR(16) CHECK(
+    FOREIGN KEY (fk_category) REFERENCES service(fk_category),
+    FOREIGN KEY (fk_customer) REFERENCES "user"(id_user),
+    FOREIGN KEY (fk_worker) REFERENCES service(fk_user)
+);
+
+CREATE TABLE scheduling_status (
+    id_scheduling_status int PRIMARY KEY AUTO_INCREMENT,
+    service_status VARCHAR(18) CHECK(
         service_status IN(
             "scheduled",
             "done",
@@ -162,9 +168,9 @@ CREATE TABLE scheduling (
             "rated"
         )
     ) NOT NULL,
-    FOREIGN KEY (fk_category) REFERENCES service(fk_category),
-    FOREIGN KEY (fk_customer) REFERENCES "user"(id_user),
-    FOREIGN KEY (fk_worker) REFERENCES service(fk_user)
+    service_date DATETIME NOT NULL,
+    fk_scheduling int,
+    FOREIGN KEY (fk_scheduling) REFERENCES scheduling(fk_scheduling)
 );
 
 CREATE TABLE accomplished_service (

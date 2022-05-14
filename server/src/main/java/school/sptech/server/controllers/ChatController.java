@@ -11,8 +11,9 @@ import school.sptech.server.repository.ChatHasMsgRepository;
 import school.sptech.server.repository.ChatRepository;
 import school.sptech.server.repository.MsgRepository;
 import school.sptech.server.repository.UserHasChatRepository;
-import school.sptech.server.repository.UserCustomerRepository;
+
 import school.sptech.server.response.ChatJoinUserHasChat;
+import school.sptech.server.service.UserService;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -30,7 +31,7 @@ public class ChatController {
     @Autowired
     private MsgRepository dbRepositoryMsg;
     @Autowired
-    private UserCustomerRepository dbRepositoryUser;
+    private UserService dbUserService;
 
     @PostMapping("/{idCustomer}/{idWorker}")
     public ResponseEntity postChat(@PathVariable Integer idCustomer, @PathVariable Integer idWorker) {
@@ -87,7 +88,7 @@ public class ChatController {
 
     @GetMapping("/user/{fkUser}")
     public ResponseEntity<List<ChatJoinUserHasChat>> getChatsPerUser(@PathVariable Integer fkUser) {
-        if (!dbRepositoryUser.existsById(fkUser)) {
+        if (!dbUserService.existsById(fkUser)) {
             return ResponseEntity.status(404).build();
         }
 

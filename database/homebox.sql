@@ -32,7 +32,7 @@ CREATE TABLE user (
     TYPE ENUM("worker", "customer") NOT NULL,
     picture VARCHAR(250) NOT NULL,
     cep CHAR(8) NOT NULL,
-    authenticated ENUM("y", "n") NOT NULL
+    authenticated ENUM("y", "n", "p") NOT NULL
 );
 
 CREATE TABLE notification (
@@ -137,7 +137,13 @@ CREATE TABLE scheduling (
     fk_customer int NOT NULL,
     fk_worker int NOT NULL,
     fk_category int NOT NULL,
-    service_date DATETIME NOT NULL,
+    FOREIGN KEY (fk_category) REFERENCES service(fk_category),
+    FOREIGN KEY (fk_customer) REFERENCES user(id_user),
+    FOREIGN KEY (fk_worker) REFERENCES service(fk_user)
+);
+
+CREATE TABLE scheduling_status (
+    id_scheduling_status int PRIMARY KEY AUTO_INCREMENT,
     service_status ENUM(
         "scheduled",
         "done",
@@ -146,9 +152,9 @@ CREATE TABLE scheduling (
         "not-executed",
         "rated"
     ) NOT NULL,
-    FOREIGN KEY (fk_category) REFERENCES service(fk_category),
-    FOREIGN KEY (fk_customer) REFERENCES user(id_user),
-    FOREIGN KEY (fk_worker) REFERENCES service(fk_user)
+    service_date DATETIME NOT NULL,
+    fk_scheduling int,
+    FOREIGN KEY (fk_scheduling) REFERENCES scheduling(fk_scheduling)
 );
 
 CREATE TABLE accomplished_service (
@@ -228,23 +234,8 @@ VALUES
 INSERT INTO
     category
 VALUES
-    (
-        NULL,
-        "Encanamento"
-    ),
-    (
-        NULL,
-        "Elétrica"
-    ),
-    (
-        NULL,
-        "Montagem de móveis"
-    ),
-    (
-        NULL,
-        "Pintura"
-    ),
-    (
-        NULL,
-        "Limpeza"
-    );
+    (NULL, "Encanamento"),
+    (NULL, "Elétrica"),
+    (NULL, "Montagem de móveis"),
+    (NULL, "Pintura"),
+    (NULL, "Limpeza");
