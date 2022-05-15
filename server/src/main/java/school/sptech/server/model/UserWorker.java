@@ -3,8 +3,7 @@ package school.sptech.server.model;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "user")
+
 public class UserWorker extends User {
     public UserWorker() {
     }
@@ -19,7 +18,6 @@ public class UserWorker extends User {
         }
         return getAuthenticated();
     }
-
     public UserWorker(Integer id, String name, String email, String password, String cpf, String token,
             String type, String picture, String cep) {
         super(id, name, email, password, cpf, token, type, picture, cep);
