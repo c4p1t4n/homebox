@@ -13,6 +13,7 @@ import org.springframework.data.repository.query.FluentQuery.FetchableFluentQuer
 
 import school.sptech.server.model.User;
 import school.sptech.server.model.UserCustomer;
+import school.sptech.server.model.UserWorker;
 
 public interface UserRepository extends JpaRepository<User, Integer> {
 
@@ -78,4 +79,5 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 
     <S extends User> Optional<S> findOne(Example<S> example);
 
+    List<User> findByName(String name);
 }

@@ -7,8 +7,13 @@ import school.sptech.server.model.User;
 import school.sptech.server.model.UserCustomer;
 import school.sptech.server.model.UserWorker;
 import school.sptech.server.repository.UserRepository;
+import school.sptech.server.response.GeoApifyResponse;
+import school.sptech.server.response.ViaCepResponse;
+import school.sptech.server.rest.ClienteGeoApify;
+import school.sptech.server.rest.ClienteViaCep;
 import school.sptech.server.service.UserService;
-import java.util.ArrayList;
+
+import java.text.Normalizer;
 import java.util.List;
 
 @RestController
@@ -19,6 +24,11 @@ public class UserController {
     @Autowired
     private UserService dbUserService;
 
+    @Autowired
+    private ClienteViaCep clienteViaCep;
+
+    @Autowired
+    private ClienteGeoApify clienteGeoApify;
 
     @PostMapping("/customer")
     public ResponseEntity registerUserCustomer(@RequestBody UserCustomer newUser) {
@@ -119,5 +129,15 @@ public class UserController {
                 // .header("content-length", "9999999999")
                 .header("content-disposition", "filename=\"userWorker.csv\"")
                 .body(report);
+    }
+
+    @PatchMapping("lonLat/{cep}")
+    public ResponseEntity testCep(@PathVariable String cep){
+        ViaCepResponse viaCeprResponse = clienteViaCep.getCep(cep);
+        GeoApifyResponse geoApifyResponse = clienteGeoApify.getLonLat(Normalizer.normalize(viaCeprResponse.getLogradouro(), Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", ""),
+                                                                      cep,
+                                                                      Normalizer.normalize(viaCeprResponse.getLocalidade(), Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", ""),
+                                                                      viaCeprResponse.getUf());
+        return ResponseEntity.status(200).body(geoApifyResponse);
     }
 }

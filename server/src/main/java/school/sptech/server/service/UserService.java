@@ -3,6 +3,7 @@ package school.sptech.server.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import school.sptech.server.model.User;
+import school.sptech.server.model.UserWorker;
 import school.sptech.server.repository.UserRepository;
 
 import java.util.List;
@@ -41,13 +42,18 @@ public class UserService {
                .stream()
                .filter(user -> user.getType().equals("worker"))
                .collect(Collectors.toList());
-
    }
 
     public  List<User> getAll(){
         return  dbUserRepository.findAll();
     }
 
-
+    public  List<User> getWorkersByName(String name){
+        return  dbUserRepository
+                .findByName(name)
+                .stream()
+                .filter(user -> user.getType().equals("worker"))
+                .collect(Collectors.toList());
+    }
 }
 
