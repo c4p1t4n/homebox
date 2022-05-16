@@ -154,7 +154,7 @@ CREATE TABLE scheduling_status (
     ) NOT NULL,
     service_date DATETIME NOT NULL,
     fk_scheduling int,
-    FOREIGN KEY (fk_scheduling) REFERENCES scheduling(fk_scheduling)
+    FOREIGN KEY (fk_scheduling) REFERENCES scheduling(id_scheduling)
 );
 
 CREATE TABLE accomplished_service (
