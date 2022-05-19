@@ -14,11 +14,9 @@ public class SearchUser {
     @Id
     @Column(name = "fk_search")
     private Integer fkSearch;
-
     @Id
     @Column(name = "fk_user")
     private Integer fkUser;
-
     @PastOrPresent
     @NotNull
     @Column(name = "search_date")
@@ -30,14 +28,8 @@ public class SearchUser {
         this.searchDate = searchDate;
     }
 
-    public SearchUser(Integer fkSearch, Integer fkUser) {
-        this.fkSearch = fkSearch;
-        this.fkUser = fkUser;
-    }
-
     public SearchUser() {
     }
-
 
     public Integer getFkSearch() {
         return fkSearch;

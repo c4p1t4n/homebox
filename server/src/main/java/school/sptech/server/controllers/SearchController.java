@@ -6,10 +6,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import school.sptech.server.model.Search;
 import school.sptech.server.model.SearchUser;
+import school.sptech.server.model.User;
 import school.sptech.server.repository.SearchRepository;
 import school.sptech.server.repository.SearchUserRepository;
 import school.sptech.server.repository.UserRepository;
 import school.sptech.server.request.UserSearchRequest;
+import school.sptech.server.service.UserHasSearchId;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -39,7 +41,7 @@ public class SearchController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Search>> getSearch() {
+    public ResponseEntity<List<Search>> getAllSearch() {
         List<Search> searchList = dbRepositorySearch.findAll();
         if (searchList.isEmpty()) {
             return ResponseEntity.status(204).build();
@@ -55,6 +57,17 @@ public class SearchController {
         return ResponseEntity.status(404).build();
     }
     
+    @GetMapping("/{idUsuario}")
+    public ResponseEntity<List<Search>> getSearchPerUser(@PathVariable Integer idUsuario){
+        if (dbRepositoryCustomer.existsById(idUsuario)){
+            List<Search> list = dbRepositorySearchUser.findAllByFkUser(idUsuario);
+            if (list.isEmpty()){
+                return ResponseEntity.status(204).build();
+            }
+            return ResponseEntity.status(200).body(list);
+        }
+        return ResponseEntity.status(404).build();
+    }
 
     @DeleteMapping("/{idSearch}")
     public ResponseEntity deleteSearch(@PathVariable Integer idSearch) {
@@ -64,4 +77,8 @@ public class SearchController {
         }
         return ResponseEntity.status(404).build();
     }
+
+
+
+
 }

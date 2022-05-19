@@ -10,18 +10,21 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.FluentQuery.FetchableFluentQuery;
 import org.springframework.transaction.annotation.Transactional;
 import school.sptech.server.model.ChatHasMsg;
+import school.sptech.server.model.Search;
 import school.sptech.server.model.SearchUser;
 import school.sptech.server.response.NotificationJoinUserNotificationResponse;
 import school.sptech.server.response.SearchJoinUserSearchResponse;
 import school.sptech.server.service.ChatHasMsgId;
 import school.sptech.server.service.UserHasSearchId;
 
+import javax.persistence.EmbeddedId;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
 
 public interface SearchUserRepository extends JpaRepository<SearchUser, UserHasSearchId> {
 
+    List<Search> findAllByFkUser(Integer fkUser);
 
 /*
     void deleteAllByIdInBatch(Iterable<ChatHasMsgId> ids);

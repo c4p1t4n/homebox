@@ -1,9 +1,12 @@
 package school.sptech.server.service;
 
+import javax.persistence.Column;
 import java.io.Serializable;
 
 public class UserHasSearchId implements Serializable {
+    @Column(name = "fk_user")
     private Integer fkUser;
+    @Column(name = "fk_search")
     private Integer fkSearch;
 
     public UserHasSearchId() {
