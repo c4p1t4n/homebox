@@ -13,5 +13,6 @@ public interface CategoryRepository extends JpaRepository<Category, Long> {
     List<Category> findByNameIgnoreCase(String name);
 
     boolean existsByIdCategory(Integer idCategory);
+    boolean existsByNameIgnoreCase(String name);
     List<Category> deleteByIdCategory(Integer idCategory);
 }

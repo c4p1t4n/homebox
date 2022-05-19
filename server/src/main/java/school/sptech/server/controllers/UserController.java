@@ -129,7 +129,7 @@ public class UserController {
                 .body(report);
     }
 
-    @PatchMapping("lonLat/{cep}")
+    @PatchMapping("/lonLat/{cep}")
     public ResponseEntity testCep(@PathVariable String cep){
         ViaCepResponse viaCeprResponse = clienteViaCep.getCep(cep);
         GeoApifyResponse geoApifyResponse = new GeoApifyResponse();
@@ -139,10 +139,34 @@ public class UserController {
                                     viaCeprResponse.getLocalidade(),
                                     viaCeprResponse.getUf());
 
-//        String[] lonlat = new String[2];
-//        lonlat[0] = geoApifyResponse.getLongitude();
-//        lonlat[1] = geoApifyResponse.getLatitude();
-
         return ResponseEntity.status(200).body(geoApifyResponse);
+    }
+
+    @GetMapping("calcdist/{longitude1}/{latitude1}/{longitude2}/{latitude2}")
+    public ResponseEntity hversine(@PathVariable Double longitude1,
+                                   @PathVariable Double latitude1,
+                                   @PathVariable Double longitude2,
+                                   @PathVariable Double latitude2){
+
+        Double long1 = toRad(longitude1);
+        Double lati1 = toRad(latitude1);
+        Double long2 = toRad(longitude2);
+        Double lati2 = toRad(latitude2);
+
+        Double dlon = long2 - long1;
+        Double dlat = lati2 - lati1;
+
+        Double sinDlatSquare = Math.pow(Math.sin(dlat/2),2);
+        Double sinDlonSquare = Math.pow(Math.sin(dlon/2),2);
+
+        Double a = sinDlatSquare + Math.cos(lati1) * Math.cos(lati2) * sinDlonSquare;
+
+        Double b = 2*(Math.asin(Math.sqrt(a)));
+
+        return ResponseEntity.status(200).body(6371 * b);
+    }
+
+    private static Double toRad(Double value) {
+        return (value * Math.PI) / 180;
     }
 }

@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import school.sptech.server.model.User;
 import school.sptech.server.model.UserCustomer;
 import school.sptech.server.model.UserWorker;
+import school.sptech.server.repository.CategoryRepository;
 import school.sptech.server.service.UserService;
 
 import java.util.List;
@@ -15,6 +16,9 @@ import java.util.List;
 public class SearchController {
     @Autowired
     private UserService dbUserService;
+
+    @Autowired
+    private CategoryRepository dbCategory;
 
     @GetMapping("worker/{name}")
     public ResponseEntity getWorkerByName(@PathVariable String name) {
@@ -29,6 +33,10 @@ public class SearchController {
     /*FAZER DEPOIS DE ARRUMAR AS FK */
     @GetMapping("worker/{category}")
     public ResponseEntity getWorkerByCategory(@PathVariable String category) {
+        if (dbCategory.existsByNameIgnoreCase("%"+category+"%")){
+            
+        }
+
         List<User> list = dbUserService.getWorkersByName("%"+category+"%");
         if (list.isEmpty()) {
             return ResponseEntity.status(201).build();
