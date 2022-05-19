@@ -1,5 +1,6 @@
 package school.sptech.server.controllers;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -9,7 +10,6 @@ import school.sptech.server.model.UserWorker;
 import school.sptech.server.repository.UserRepository;
 import school.sptech.server.response.GeoApifyResponse;
 import school.sptech.server.response.ViaCepResponse;
-import school.sptech.server.rest.ClienteGeoApify;
 import school.sptech.server.rest.ClienteViaCep;
 import school.sptech.server.service.UserService;
 
@@ -27,8 +27,6 @@ public class UserController {
     @Autowired
     private ClienteViaCep clienteViaCep;
 
-    @Autowired
-    private ClienteGeoApify clienteGeoApify;
 
     @PostMapping("/customer")
     public ResponseEntity registerUserCustomer(@RequestBody UserCustomer newUser) {
@@ -134,10 +132,17 @@ public class UserController {
     @PatchMapping("lonLat/{cep}")
     public ResponseEntity testCep(@PathVariable String cep){
         ViaCepResponse viaCeprResponse = clienteViaCep.getCep(cep);
-        GeoApifyResponse geoApifyResponse = clienteGeoApify.getLonLat(Normalizer.normalize(viaCeprResponse.getLogradouro(), Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", ""),
-                                                                      cep,
-                                                                      Normalizer.normalize(viaCeprResponse.getLocalidade(), Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", ""),
-                                                                      viaCeprResponse.getUf());
+        GeoApifyResponse geoApifyResponse = new GeoApifyResponse();
+
+        geoApifyResponse.getLonLat(viaCeprResponse.getLogradouro(),
+                                    cep,
+                                    viaCeprResponse.getLocalidade(),
+                                    viaCeprResponse.getUf());
+
+//        String[] lonlat = new String[2];
+//        lonlat[0] = geoApifyResponse.getLongitude();
+//        lonlat[1] = geoApifyResponse.getLatitude();
+
         return ResponseEntity.status(200).body(geoApifyResponse);
     }
 }

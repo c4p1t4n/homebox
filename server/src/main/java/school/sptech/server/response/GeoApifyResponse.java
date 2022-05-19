@@ -1,39 +1,61 @@
 package school.sptech.server.response;
 
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.util.Iterator;
+
+
 public class GeoApifyResponse {
-    private String results;
-    private String lon;
-    private String lat;
+    private String longitude;
+    private String latitude;
 
-    public String getLon() {
-        return lon;
+    public String getLongitude() {
+        return longitude;
     }
 
-    public void setLon(String lon) {
-        this.lon = lon;
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
     }
 
-    public String getLat() {
-        return lat;
+    public String getLatitude() {
+        return latitude;
     }
 
-    public void setLat(String lat) {
-        this.lat = lat;
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
     }
 
-    public String getResults() {
-        return results;
+    public void getLonLat(String logradouro,String cep, String localidade, String uf){
+            try {
+                String endpoint = String.format("https://api.geoapify.com/v1/geocode/search?street=%s&postcode=%s&city=%s&state=%s&country=Brazil&limit=1&format=json&apiKey=03197b59532d488d8529d2c3d663c4d5",
+                        logradouro, cep, localidade,uf).replace(" ","%20");
+                HttpClient client = HttpClient.newHttpClient();
+                HttpRequest request = HttpRequest.newBuilder()
+                        .uri(URI.create(endpoint))
+                        .header("Content-Type", "application/json")
+                        .build();
+
+                HttpResponse<String> response =
+                        client.send(request, HttpResponse.BodyHandlers.ofString());
+
+                JSONObject object = new JSONObject(response.body()); //jsonString = String from the file
+                JSONArray array = object.getJSONArray("results");
+                Iterator<Object> iterator = array.iterator();
+                while(iterator.hasNext()){
+                    JSONObject jsonObject = (JSONObject) iterator.next();
+                    this.longitude = String.valueOf(jsonObject.get("lon"));
+                    this.latitude = String.valueOf(jsonObject.get("lat"));
+                }
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+              }
+        }
     }
-
-    public void setResults(String result) {
-        this.results = result;
-    }
-}
-
-
-/*
-* {"results":[{"datasource":{"sourcename":"openstreetmap","attribution":"© OpenStreetMap contributors","license":"Open Database License","url":"https://www.openstreetmap.org/copyright"},"name":"Rua Tomás de Sousa Vila Real","street":"Rua Tomás de Sousa Vila Real","suburb":"Ermelino Matarazzo","city":"São Paulo","county":"Região Metropolitana de São Paulo","state":"São Paulo","postcode":"03805-100","country":"Brazil","country_code":"br","lon":-46.4805177,"lat":-23.5041115,"state_code":"SP","formatted":"Rua Tomás de Sousa Vila Real, Ermelino Matarazzo, São Paulo - SP, 03805-100, Brazil","address_line1":"Rua Tomás de Sousa Vila Real","address_line2":"Ermelino Matarazzo, São Paulo - SP, 03805-100, Brazil","result_type":"street","rank":{"importance":0.71,"popularity":6.112645424335111,"confidence":1,"confidence_city_level":1,"confidence_street_level":1,"match_type":"full_match"},"place_id":"5117539f9a813d47c0599a0986730d8137c0f00102f9013d1c330500000000c0020492031d52756120546f6dc3a17320646520536f7573612056696c61205265616c","bbox":{"lon1":-46.4817322,"lat1":-23.5063885,"lon2":-46.4789245,"lat2":-23.5017637}}],"query":{"text":"","parsed":{"street":"Rua Tomas de Sousa Vila Real","postcode":"03805310","city":"Sao Paulo","state":"SP","country":"Brazil","expected_type":"street"}}}
-*
-*
-*
-* */
