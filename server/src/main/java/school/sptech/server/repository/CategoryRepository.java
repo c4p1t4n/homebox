@@ -8,4 +8,10 @@ import java.util.List;
 public interface CategoryRepository extends JpaRepository<Category, Long> {
 
     List<Category> findAll();
+
+    List<Category> findByIdCategory(Integer idCategory);
+    List<Category> findByNameIgnoreCase(String name);
+
+    boolean existsByIdCategory(Integer idCategory);
+    List<Category> deleteByIdCategory(Integer idCategory);
 }
