@@ -1,21 +1,76 @@
-#logoff {
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-family: Poppins;
     display: flex;
-    width: 24%;
-}
-#logoff img{
-    height: 40px;
-    margin-left: 10%;
+    flex-direction: column;
+    align-items: center;
 }
 
-#logoff h1{
-    align-self: center;
+.container {
+    width: 85%;
+    margin: auto;
 }
 
-.inLogoff{
-    position: absolute;
-    top: 60px;
-    right: 84px;
-    background: #0000002b;
-    padding: 1%;
-    display: none;
+Header {
+    width: 100%;
 }
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    height: 140px;
+}
+
+.divSearch {
+    display: flex;
+}
+
+.searchBar input {
+    background-color: #3D6389;
+    color: white;
+    border: none;
+    width: 500px;
+    height: 15px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.searchBar input::placeholder {
+    color: white;
+}
+
+.searchIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2px;
+    background: rgba(133, 133, 133, 0.27);
+    width: 50px;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.searchIcon img {
+    height: 25px;
+}
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+    width: 130px;
+    align-items: center;
+    color: #3D6389;
+    font-weight: bolder;
+}
+
+.profile img {
+    height: 30px;
+}
+
