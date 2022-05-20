@@ -83,6 +83,11 @@ Header {
     font-weight: lighter;
 }
 
+.body h3 {
+    align-self: flex-start;
+    margin-left: 6%;
+}
+
 .cards {
     width: 85%;
     padding: 2%;
@@ -120,4 +125,85 @@ Header {
 
 .access img {
     height: 28px;
+}
+
+.cardCustumerDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    font-weight: bold;
+}
+.cardCustumerDiv .arrows{
+    height: 60px;
+}
+.cardCustumer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(10, 57, 105, 0.13);
+    border-radius: 15px;
+    width: 20%;
+    padding: 2%;
+    margin: 2%;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.25);
+    height: 350px;
+    justify-content: space-between;
+}
+
+.cardCustumer p {
+    margin: 0;
+    padding: 0;
+}
+
+.cardCustumer .imgCustumer{
+    border-radius: 20px;
+    height: 140px;
+}
+
+.avaliacao{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 63%;
+}
+
+.stars{
+    height: 40px;
+}
+
+.cardCustumerDistanceDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    font-weight: bold;
+}
+
+.cardCustumerDistance{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(10, 57, 105, 0.13);
+    border-radius: 15px;
+    width: 24%;
+    padding: 2%;
+    margin: 2%;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.25);
+    height: 400px;
+    justify-content: space-between;
+}
+
+.cardCustumerDistance .imgCustumer{
+    border-radius: 20px;
+    height: 140px;
+}
+
+.cardCustumerDistance p {
+    margin: 0;
+    padding: 0;
+}
+
+.cardCustumerDistance .stars{
+    height: 38px;
 }
