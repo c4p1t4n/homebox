@@ -34,11 +34,9 @@ public class SearchController {
     @GetMapping("worker/{category}")
     public ResponseEntity getWorkerByCategory(@PathVariable String category) {
         if (dbCategory.existsByNameIgnoreCase("%"+category+"%")){
-            
+            List<User> list = dbUserService.getWorkerByCategory("%"+category+"%");
         }
-
-        List<User> list = dbUserService.getWorkersByName("%"+category+"%");
-        if (list.isEmpty()) {
+        else{
             return ResponseEntity.status(201).build();
         }
         return  ResponseEntity.status(200).body(list);
