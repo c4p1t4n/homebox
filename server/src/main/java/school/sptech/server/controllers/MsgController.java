@@ -8,10 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import school.sptech.server.model.ChatHasMsg;
+import school.sptech.server.model.Media;
 import school.sptech.server.model.Msg;
-import school.sptech.server.repository.ChatHasMsgRepository;
-import school.sptech.server.repository.ChatRepository;
-import school.sptech.server.repository.MsgRepository;
+import school.sptech.server.repository.*;
+import school.sptech.server.request.MsgHasMediaRequest;
 import school.sptech.server.response.MsgJoinChatHasMsg;
 import school.sptech.server.service.ChatHasMsgId;
 import school.sptech.server.service.UserService;
@@ -27,6 +27,12 @@ public class MsgController {
     private ChatHasMsgRepository dbRepositoryChatHasMsg;
     @Autowired
     private UserService dbRepositoryUser;
+
+    @Autowired
+    private MediaRepository dbRepositoryMedia;
+
+    @Autowired
+    private MsgHasMediaRepository dbRepositoryMsgHasMedia;
 
     @PostMapping("/auto")
     public ResponseEntity postMsg(@RequestBody Msg msg,
@@ -129,5 +135,6 @@ public class MsgController {
         }
         return ResponseEntity.status(404).build();
     }
+
 
 }

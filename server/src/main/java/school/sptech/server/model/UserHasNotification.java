@@ -12,12 +12,12 @@ import school.sptech.server.service.UserHasNotificationId;
 @IdClass(UserHasNotificationId.class)
 public class UserHasNotification {
     @Id
-    @Column(name = "fk_user")
-    private Integer fkUser;
-
-    @Id
     @Column(name = "fk_notification")
     private Integer fkNotification;
+
+    @Id
+    @Column(name = "fk_user")
+    private Integer fkUser;
 
     @PastOrPresent
     @Column(name = "notification_date")

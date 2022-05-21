@@ -1,21 +1,209 @@
-#logoff {
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-family: Poppins;
     display: flex;
-    width: 24%;
+    flex-direction: column;
+    align-items: center;
 }
-#logoff img{
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+Header {
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    height: 140px;
+}
+
+.divSearch {
+    display: flex;
+}
+
+.searchBar input {
+    background-color: #3D6389;
+    color: white;
+    border: none;
+    width: 500px;
+    height: 15px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.searchBar input::placeholder {
+    color: white;
+}
+
+.searchIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2px;
+    background: rgba(133, 133, 133, 0.27);
+    width: 50px;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.searchIcon img {
+    height: 25px;
+}
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+    align-items: center;
+    color: #3D6389;
+    font-weight: bold;
+}
+
+.profile img {
+    height: 30px;
+}
+
+
+.body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: lighter;
+}
+
+.body h3 {
+    align-self: flex-start;
+    margin-left: 6%;
+}
+
+.cards {
+    width: 85%;
+    padding: 2%;
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 3%;
+    width: 20%;
+    font-weight: bold;
+    justify-content: space-between;
+    height: 270px;
+}
+
+.card img {
+    height: 100px;
+}
+
+.access {
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    width: 144px;
+    color: #3D6389;
+    font-size: 22px;
+    justify-content: space-between;
+}
+
+.access img {
+    height: 28px;
+}
+
+.cardCustumerDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    font-weight: bold;
+}
+.cardCustumerDiv .arrows{
+    height: 60px;
+}
+.cardCustumer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(10, 57, 105, 0.13);
+    border-radius: 15px;
+    width: 20%;
+    padding: 2%;
+    margin: 2%;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.25);
+    height: 350px;
+    justify-content: space-between;
+}
+
+.cardCustumer p {
+    margin: 0;
+    padding: 0;
+}
+
+.cardCustumer .imgCustumer{
+    border-radius: 20px;
+    height: 140px;
+}
+
+.avaliacao{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 63%;
+}
+
+.stars{
     height: 40px;
-    margin-left: 10%;
 }
 
-#logoff h1{
-    align-self: center;
+.cardCustumerDistanceDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    font-weight: bold;
 }
 
-.inLogoff{
-    position: absolute;
-    top: 60px;
-    right: 84px;
-    background: #0000002b;
-    padding: 1%;
-    display: none;
+.cardCustumerDistance{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(10, 57, 105, 0.13);
+    border-radius: 15px;
+    width: 24%;
+    padding: 2%;
+    margin: 2%;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.25);
+    height: 400px;
+    justify-content: space-between;
+}
+
+.cardCustumerDistance .imgCustumer{
+    border-radius: 20px;
+    height: 140px;
+}
+
+.cardCustumerDistance p {
+    margin: 0;
+    padding: 0;
+}
+
+.cardCustumerDistance .stars{
+    height: 38px;
 }
