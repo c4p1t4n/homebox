@@ -151,4 +151,9 @@ build/
 ### VS Code ###
 .vscode/
 
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
 .txt
