@@ -6,11 +6,16 @@ body {
     align-items: center;
 }
 
+body p {
+    padding: 0;
+    margin: 0;
+}
+
 .body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    justify-content: center;
+    align-items: center;
 }
 
 .body h2 {
@@ -20,19 +25,60 @@ body {
 
 .cardCustumerDiv {
     display: flex;
+    justify-content: space-between;
+    width: 70%;
+    height: 450px;
+    overflow: auto;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+
+}
+
+
+.cardCustumerDiv::-webkit-scrollbar {
+    display: none;
+}
+
+.cardCustumerDiv p {
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .cardCustumer {
+    margin-top: 5%;
+    height: 170px;
     display: flex;
     align-items: center;
     background: rgba(10, 57, 105, 0.13);
-    padding: 1%;
+    padding: 4%;
+    border-radius: 20px;
+    width: 60%;
+    justify-content: space-between;
+}
+
+.cardCustumer .imgCustumer {
+    height: 150px;
     border-radius: 20px;
 }
 
-.cardCustumer img{
+.cardCustumer .imgStars {
+    height: 26px;
+}
+
+.infoCustumer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 150px;
-    border-radius: 20px;
+}
+
+
+.assessment2 {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.distance {
+    height: 150px;
 }
