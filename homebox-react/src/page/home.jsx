@@ -1,4 +1,4 @@
-import '../assets/css/homeLOgado.css';
+import '../assets/css/homePage.css';
 import '../assets/css/footer.css';
 
 import Card from "../component/card";
@@ -22,7 +22,7 @@ import img3Stars from "../assets/img/threeStars.png"
 
 const frequent_search = "'pintor'"
 
-function HomeLogado() {
+function Home() {
     return (
         <div>
             <Header/>
@@ -62,4 +62,4 @@ function HomeLogado() {
     );
   }
   
-  export default HomeLogado;
+  export default Home;

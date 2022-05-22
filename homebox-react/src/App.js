@@ -1,8 +1,8 @@
-import Login from "./page/login";
+import SearchResult from "./page/searchResult";
 
 function App() {
   return (
-    <Login/>
+    <SearchResult/>
   );
 }
 
