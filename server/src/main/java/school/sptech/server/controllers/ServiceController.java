@@ -19,6 +19,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -38,6 +39,7 @@ public class ServiceController {
     @Autowired
     private CategoryRepository dbRepositoryCategory;
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping
     public ResponseEntity<List<Service>> getAll() {
         List<Service> services = dbRepositoryService.findAll();
@@ -45,6 +47,7 @@ public class ServiceController {
         return services.isEmpty() ? status(204).build() : status(200).body(services);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping
     public ResponseEntity<Object> create(@RequestBody ServiceCreationRequest serviceBody) {
         Optional<Category> category = dbRepositoryCategory.findById(serviceBody.getFkCategory());
@@ -72,6 +75,7 @@ public class ServiceController {
         return status(201).body(service);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/{id}")
     public ResponseEntity<Service> getId(@PathVariable Integer id) {
         Optional<Service> service = dbRepositoryService.findById(id);
@@ -80,6 +84,7 @@ public class ServiceController {
                 : status(200).body(service.get());
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @DeleteMapping("/{id}")
     public ResponseEntity<Object> deleteById(@PathVariable Integer id) {
         if (!dbRepositoryService.existsById(id)) {
@@ -90,6 +95,7 @@ public class ServiceController {
         return status(200).build();
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PutMapping(value = "/{id}")
     public ResponseEntity<Service> putMethodName(@PathVariable Integer id, @RequestBody Service newService) {
         if (Objects.nonNull(newService.getIdService()) && id != newService.getIdService()) {
@@ -103,6 +109,7 @@ public class ServiceController {
         return status(200).body(service);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PatchMapping("/name/{id}/{newName}")
     public ResponseEntity<Service> patchName(@PathVariable Integer id, @PathVariable String newName) {
 
@@ -120,6 +127,7 @@ public class ServiceController {
         return status(200).body(service);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PatchMapping("/description/{id}/{newDescription}")
     public ResponseEntity<Service> patchDescription(@PathVariable Integer id, @PathVariable String newDescription) {
 
@@ -137,6 +145,7 @@ public class ServiceController {
         return status(200).body(service);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PatchMapping("/name/{id}/{newReferencePrice}")
     public ResponseEntity<Service> patchReferencePrice(@PathVariable Integer id,
             @PathVariable Double newReferencePrice) {

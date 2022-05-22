@@ -36,6 +36,7 @@ public class NotificationController {
     @Autowired
     protected UserHasNotificationRepository dbRepositoryUserHasNotification;
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping
     public ResponseEntity<List<Notification>> getNotifications() {
         List<Notification> notificationList = dbRepositoryNotification.findAll();
@@ -47,6 +48,7 @@ public class NotificationController {
         return ResponseEntity.status(200).body(notificationList);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping(value = "/user/{idUser}")
     public ResponseEntity<List<NotificationJoinUserNotificationResponse>> getNotificationsForUser(
             @PathVariable Integer idUser) {
@@ -64,6 +66,7 @@ public class NotificationController {
         return ResponseEntity.status(200).body(list);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping(value = "/{idNotification}")
     public ResponseEntity<Notification> getNotification(@PathVariable Integer idNotification) {
 
@@ -76,6 +79,7 @@ public class NotificationController {
         return ResponseEntity.status(404).build();
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping(value = "/user/{idUser}/{idNotification}")
     public ResponseEntity<NotificationJoinUserNotificationResponse> getNotificationForUser(
             @PathVariable Integer idNotification,
@@ -90,6 +94,7 @@ public class NotificationController {
         return ResponseEntity.status(200).body(list.get(0));
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping
     public ResponseEntity<Object> createNotification(@RequestBody Notification notification) {
 
@@ -97,6 +102,7 @@ public class NotificationController {
         return ResponseEntity.status(201).build();
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping(value = "/{idNotification}")
     public ResponseEntity<Object> associateNotificationToUsers(@PathVariable Integer idNotification,
             @RequestBody UserIdListRequest idList) {
@@ -115,6 +121,7 @@ public class NotificationController {
         return ResponseEntity.status(404).build();
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PatchMapping(value = "/read/{fkUser}/{fkNotification}")
     public ResponseEntity<Object> readNotification(@PathVariable Integer fkUser, @PathVariable Integer fkNotification) {
         if (dbRepositoryUserHasNotification.existsById(new UserHasNotificationId(fkUser, fkNotification))) {

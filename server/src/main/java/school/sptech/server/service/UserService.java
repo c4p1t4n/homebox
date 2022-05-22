@@ -23,8 +23,8 @@ public class UserService {
 
     }
 
-    public void saveUser(User user) {
-        dbUserRepository.save(user);
+    public User saveUser(User user) {
+        return dbUserRepository.save(user);
     }
 
     public boolean existsById(Integer id) {

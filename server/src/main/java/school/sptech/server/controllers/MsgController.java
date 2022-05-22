@@ -27,6 +27,7 @@ public class MsgController {
     @Autowired
     private UserService dbRepositoryUser;
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/auto")
     public ResponseEntity<Object> postMsg(@RequestBody Msg msg,
             @RequestParam(value = "overwrite", required = false) Boolean overwrite) {
@@ -46,6 +47,7 @@ public class MsgController {
         }
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/short")
     public ResponseEntity<List<Msg>> getMsgs() {
         List<Msg> msgs = dbRepositoryMsg.findAll();
@@ -56,6 +58,7 @@ public class MsgController {
         return ResponseEntity.status(200).body(msgs);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping
     public ResponseEntity<List<MsgJoinChatHasMsg>> getMsgsFull() {
         List<MsgJoinChatHasMsg> msgs = dbRepositoryMsg.findAllWithChat();
@@ -66,6 +69,7 @@ public class MsgController {
         return ResponseEntity.status(200).body(msgs);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/{idMsg}")
     public ResponseEntity<Msg> getMsg(@PathVariable Integer idMsg) {
         if (!dbRepositoryMsg.existsById(idMsg)) {
@@ -75,6 +79,7 @@ public class MsgController {
         return ResponseEntity.status(200).body(dbRepositoryMsg.findById(idMsg).get());
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/user/{idUser}")
     public ResponseEntity<List<Msg>> getMsgsPerUser(@PathVariable Integer idUser) {
         if (!dbRepositoryUser.existsById(idUser)) {
@@ -89,6 +94,7 @@ public class MsgController {
         return ResponseEntity.status(200).body(msgs);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/chat/{idChat}")
     public ResponseEntity<List<MsgJoinChatHasMsg>> getMsgsPerChat(@PathVariable Integer idChat) {
         if (!dbRepositoryChat.existsById(idChat)) {
@@ -104,6 +110,7 @@ public class MsgController {
         return ResponseEntity.status(200).body(msgs);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/chat/{idChat}")
     public ResponseEntity<Object> postMsgInChat(@PathVariable Integer idChat, @RequestBody Msg newMsg) {
         if (!dbRepositoryChat.existsById(idChat)) {
@@ -120,6 +127,7 @@ public class MsgController {
         return ResponseEntity.status(201).build();
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PatchMapping(value = "/read/{fkMsg}/{fkChat}")
     public ResponseEntity<Object> readMsg(@PathVariable Integer fkMsg, @PathVariable Integer fkChat) {
         if (dbRepositoryChatHasMsg.existsById(new ChatHasMsgId(fkMsg, fkChat))) {

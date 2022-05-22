@@ -20,6 +20,7 @@ public class CategoryController {
     @Autowired
     private CategoryRepository dbRepositoryCategory;
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping
     public ResponseEntity<List<Category>> getCategories() {
         List<Category> categoryList = dbRepositoryCategory.findAll();
@@ -30,12 +31,14 @@ public class CategoryController {
         return ResponseEntity.status(200).body(categoryList);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping
     public ResponseEntity<Object> postCategory(@RequestBody @Valid Category newCategory) {
         dbRepositoryCategory.save(newCategory);
         return ResponseEntity.status(201).build();
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/{idCategory}")
     public ResponseEntity<List<Category>> getCategoryById(@PathVariable Integer idCategory) {
         List<Category> categoryList = dbRepositoryCategory.findByIdCategory(idCategory);
@@ -46,6 +49,7 @@ public class CategoryController {
         return ResponseEntity.status(200).body(categoryList);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/filtro/{name}")
     public ResponseEntity<List<Category>> getCategoryByName(@PathVariable String name) {
         List<Category> categoryList = dbRepositoryCategory.findByNameIgnoreCase(name);
@@ -57,6 +61,7 @@ public class CategoryController {
     }
 
     @Transactional
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @DeleteMapping("/{idCategory}")
     public ResponseEntity<Void> deleteCategory(@PathVariable Integer idCategory) {
         if (dbRepositoryCategory.existsByIdCategory(idCategory)) {
@@ -66,6 +71,7 @@ public class CategoryController {
         return ResponseEntity.status(404).build();
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/report")
     public ResponseEntity<Object> getReport() {
         String report = "";
@@ -83,6 +89,7 @@ public class CategoryController {
                 .body(report);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping(value = "/id/{name}")
     public ResponseEntity<Integer> getMethodName(@PathVariable String name) {
 

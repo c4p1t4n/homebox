@@ -6,8 +6,6 @@ import org.springframework.web.bind.annotation.*;
 
 import school.sptech.server.model.Category;
 import school.sptech.server.model.User;
-import school.sptech.server.model.UserCustomer;
-import school.sptech.server.model.UserWorker;
 import school.sptech.server.service.UserService;
 
 import static org.springframework.http.ResponseEntity.status;
@@ -22,20 +20,21 @@ public class UserController {
     @Autowired
     private UserService dbUserService;
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/customer")
-    public ResponseEntity<Object> registerUserCustomer(@RequestBody UserCustomer newUser) {
+    public ResponseEntity<Object> registerUserCustomer(@RequestBody User newUser) {
 
-        if (newUser.getType().equals("customer")) {
-            newUser.setAuthenticated('n');
-            dbUserService.saveUser(newUser);
-        } else {
-            return status(403).build();
+        if (!newUser.getType().equals("customer")) {
+            return status(400).build();
         }
+        newUser.setAuthenticated('n');
+        User user = dbUserService.saveUser(newUser);
 
-        return status(201).build();
+        return status(201).body(user);
 
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/customer")
     public ResponseEntity<List<User>> getUserCustomer() {
         return !dbUserService.getAllCustomer().isEmpty()
@@ -43,23 +42,25 @@ public class UserController {
                 : status(204).build();
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/worker")
-    public ResponseEntity<Object> registerUserWorker(@RequestBody UserWorker newUser) {
+    public ResponseEntity<Object> registerUserWorker(@RequestBody User newUser) {
         try {
 
-            if (newUser.getType().equals("worker")) {
-                newUser.setAuthenticated('n');
-                dbUserService.saveUser(newUser);
-            } else {
-                return status(403).build();
+            if (!newUser.getType().equals("worker")) {
+                return status(400).build();
             }
+            newUser.setAuthenticated('n');
+            User user = dbUserService.saveUser(newUser);
 
-            return status(201).build();
+            return status(201).body(user);
+
         } catch (NullPointerException npe) {
             return status(400).build();
         }
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/worker")
     public ResponseEntity<List<User>> getUserWorker() {
 
@@ -67,12 +68,14 @@ public class UserController {
                 : status(204).build();
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping()
     public ResponseEntity<List<User>> getUser() {
         return !dbUserService.getAll().isEmpty() ? status(200).body(dbUserService.getAll())
                 : status(204).build();
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/login/{userLogin}/{userPassword}")
     public ResponseEntity<Object> getLoginUser(@PathVariable String userLogin, @PathVariable String userPassword) {
         List<User> users = dbUserService.getAll();
@@ -87,6 +90,7 @@ public class UserController {
         return status(401).build();
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/logoff/{userLogin}")
     public ResponseEntity<Object> logoffUser(@PathVariable String userLogin) {
 
@@ -105,6 +109,7 @@ public class UserController {
         return status(400).build();
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("worker/report")
     public ResponseEntity<String> getReport() {
         String report = "";
@@ -124,6 +129,7 @@ public class UserController {
                 .body(report);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping(value = "/worker/categories/{id}")
     public ResponseEntity<List<Category>> getWorkerCategories(@PathVariable Integer id) {
         List<Category> categories = dbUserService.getWorkerCategories(id);
