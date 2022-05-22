@@ -7,9 +7,11 @@ import org.springframework.web.bind.annotation.*;
 import school.sptech.server.model.Category;
 import school.sptech.server.repository.CategoryRepository;
 
-
 import javax.validation.Valid;
 import java.util.List;
+import java.util.Objects;
+
+import org.springframework.web.bind.annotation.GetMapping;
 
 @RestController
 @RequestMapping("/category")
@@ -29,7 +31,7 @@ public class CategoryController {
     }
 
     @PostMapping
-    public ResponseEntity postCategory(@RequestBody @Valid Category newCategory) {
+    public ResponseEntity<Object> postCategory(@RequestBody @Valid Category newCategory) {
         dbRepositoryCategory.save(newCategory);
         return ResponseEntity.status(201).build();
     }
@@ -65,21 +67,32 @@ public class CategoryController {
     }
 
     @GetMapping("/report")
-    public ResponseEntity getReport() {
+    public ResponseEntity<Object> getReport() {
         String report = "";
 
         List<Category> list = dbRepositoryCategory.findAll();
-        for(var categ : list) {
-            report += categ.getIdCategory()+","+categ.getName()+"\r\n";
+        for (var categ : list) {
+            report += categ.getIdCategory() + "," + categ.getName() + "\r\n";
         }
 
         return ResponseEntity
                 .status(200)
                 .header("content-type", "text/csv")
-                //.header("content-length", "9999999999")
+                // .header("content-length", "9999999999")
                 .header("content-disposition", "filename=\"category.csv\"")
                 .body(report);
     }
 
-}
+    @GetMapping(value = "/id/{name}")
+    public ResponseEntity<Integer> getMethodName(@PathVariable String name) {
 
+        Integer categoryId = dbRepositoryCategory.findIdCategoryByName(name);
+
+        if (Objects.isNull(categoryId)) {
+            return ResponseEntity.status(404).build();
+        }
+
+        return ResponseEntity.status(200).body(categoryId);
+    }
+
+}

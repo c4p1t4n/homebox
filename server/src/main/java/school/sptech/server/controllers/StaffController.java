@@ -24,7 +24,7 @@ public class StaffController {
     }
 
     @PostMapping()
-    public ResponseEntity cadastrarStaff(@RequestBody Staff newStaff) {
+    public ResponseEntity<Object> cadastrarStaff(@RequestBody Staff newStaff) {
 
         try {
             dbRepositoryStaff.save(newStaff);
@@ -36,7 +36,7 @@ public class StaffController {
     }
 
     @GetMapping("/login/{userStaffLogin}/{userPassword}")
-    public ResponseEntity getLoginUser(@PathVariable String userLogin, @PathVariable String userPassword) {
+    public ResponseEntity<Object> getLoginUser(@PathVariable String userLogin, @PathVariable String userPassword) {
         List<Staff> staff = dbRepositoryStaff.findAll();
 
         for (Staff userStaff : staff) {
