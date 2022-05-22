@@ -1,17 +1,17 @@
-package school.sptech.server.service;
+package school.sptech.server.id;
 
 import java.io.Serializable;
 
-public class UserChatId implements Serializable {
+public class UserHasNotificationId implements Serializable {
     private Integer fkUser;
-    private Integer fkChat;
+    private Integer fkNotification;
 
-    public UserChatId() {
+    public UserHasNotificationId() {
     }
 
-    public UserChatId(Integer fkUser, Integer fkChat) {
+    public UserHasNotificationId(Integer fkUser, Integer fkNotification) {
         this.fkUser = fkUser;
-        this.fkChat = fkChat;
+        this.fkNotification = fkNotification;
     }
 
     public Integer getFkUser() {
@@ -22,19 +22,19 @@ public class UserChatId implements Serializable {
         this.fkUser = fkUser;
     }
 
-    public Integer getFkChat() {
-        return fkChat;
+    public Integer getFkNotification() {
+        return fkNotification;
     }
 
-    public void setFkChat(Integer fkChat) {
-        this.fkChat = fkChat;
+    public void setFkNotification(Integer fkNotification) {
+        this.fkNotification = fkNotification;
     }
 
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((fkChat == null) ? 0 : fkChat.hashCode());
+        result = prime * result + ((fkNotification == null) ? 0 : fkNotification.hashCode());
         result = prime * result + ((fkUser == null) ? 0 : fkUser.hashCode());
         return result;
     }
@@ -47,11 +47,11 @@ public class UserChatId implements Serializable {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        UserChatId other = (UserChatId) obj;
-        if (fkChat == null) {
-            if (other.fkChat != null)
+        UserHasNotificationId other = (UserHasNotificationId) obj;
+        if (fkNotification == null) {
+            if (other.fkNotification != null)
                 return false;
-        } else if (!fkChat.equals(other.fkChat))
+        } else if (!fkNotification.equals(other.fkNotification))
             return false;
         if (fkUser == null) {
             if (other.fkUser != null)
@@ -60,4 +60,5 @@ public class UserChatId implements Serializable {
             return false;
         return true;
     }
+
 }

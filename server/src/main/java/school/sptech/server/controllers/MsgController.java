@@ -7,13 +7,12 @@ import java.util.Objects;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import school.sptech.server.id.ChatHasMsgId;
 import school.sptech.server.model.ChatHasMsg;
-import school.sptech.server.model.Media;
 import school.sptech.server.model.Msg;
 import school.sptech.server.repository.*;
-import school.sptech.server.request.MsgHasMediaRequest;
 import school.sptech.server.response.MsgJoinChatHasMsg;
-import school.sptech.server.service.ChatHasMsgId;
 import school.sptech.server.service.UserService;
 
 @RestController
@@ -28,14 +27,8 @@ public class MsgController {
     @Autowired
     private UserService dbRepositoryUser;
 
-    @Autowired
-    private MediaRepository dbRepositoryMedia;
-
-    @Autowired
-    private MsgHasMediaRepository dbRepositoryMsgHasMedia;
-
     @PostMapping("/auto")
-    public ResponseEntity postMsg(@RequestBody Msg msg,
+    public ResponseEntity<Object> postMsg(@RequestBody Msg msg,
             @RequestParam(value = "overwrite", required = false) Boolean overwrite) {
         try {
 
@@ -112,7 +105,7 @@ public class MsgController {
     }
 
     @PostMapping("/chat/{idChat}")
-    public ResponseEntity postMsgInChat(@PathVariable Integer idChat, @RequestBody Msg newMsg) {
+    public ResponseEntity<Object> postMsgInChat(@PathVariable Integer idChat, @RequestBody Msg newMsg) {
         if (!dbRepositoryChat.existsById(idChat)) {
             return ResponseEntity.status(404).build();
         }
@@ -128,13 +121,12 @@ public class MsgController {
     }
 
     @PatchMapping(value = "/read/{fkMsg}/{fkChat}")
-    public ResponseEntity readMsg(@PathVariable Integer fkMsg, @PathVariable Integer fkChat) {
+    public ResponseEntity<Object> readMsg(@PathVariable Integer fkMsg, @PathVariable Integer fkChat) {
         if (dbRepositoryChatHasMsg.existsById(new ChatHasMsgId(fkMsg, fkChat))) {
             dbRepositoryChatHasMsg.readNotification(fkMsg, fkChat);
             return ResponseEntity.status(200).build();
         }
         return ResponseEntity.status(404).build();
     }
-
 
 }

@@ -1,20 +1,17 @@
 package school.sptech.server.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-
-
 public class UserCustomer extends User {
 
     public UserCustomer() {
 
     }
+
     @Override
     public Character login(String user, String password) {
         Boolean autenticacao = getPassword().equals(password) & getEmail().equals(user);
         if (autenticacao) {
             setAuthenticated('s');
-        }else{
+        } else {
             setAuthenticated('n');
         }
         return getAuthenticated();

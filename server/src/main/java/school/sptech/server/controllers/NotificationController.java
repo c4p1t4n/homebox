@@ -3,6 +3,7 @@ package school.sptech.server.controllers;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import school.sptech.server.id.UserHasNotificationId;
 import school.sptech.server.model.Notification;
 import school.sptech.server.model.UserHasNotification;
 import school.sptech.server.repository.NotificationRepository;
@@ -10,7 +11,6 @@ import school.sptech.server.repository.NotificationRepository;
 import school.sptech.server.repository.UserHasNotificationRepository;
 import school.sptech.server.request.UserIdListRequest;
 import school.sptech.server.response.NotificationJoinUserNotificationResponse;
-import school.sptech.server.service.UserHasNotificationId;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -91,14 +91,14 @@ public class NotificationController {
     }
 
     @PostMapping
-    public ResponseEntity createNotification(@RequestBody Notification notification) {
+    public ResponseEntity<Object> createNotification(@RequestBody Notification notification) {
 
         dbRepositoryNotification.save(notification);
         return ResponseEntity.status(201).build();
     }
 
     @PostMapping(value = "/{idNotification}")
-    public ResponseEntity associateNotificationToUsers(@PathVariable Integer idNotification,
+    public ResponseEntity<Object> associateNotificationToUsers(@PathVariable Integer idNotification,
             @RequestBody UserIdListRequest idList) {
         if (dbRepositoryNotification.existsById(idNotification)) {
             for (Integer id : idList.getUserIds()) {
@@ -116,7 +116,7 @@ public class NotificationController {
     }
 
     @PatchMapping(value = "/read/{fkUser}/{fkNotification}")
-    public ResponseEntity readNotification(@PathVariable Integer fkUser, @PathVariable Integer fkNotification) {
+    public ResponseEntity<Object> readNotification(@PathVariable Integer fkUser, @PathVariable Integer fkNotification) {
         if (dbRepositoryUserHasNotification.existsById(new UserHasNotificationId(fkUser, fkNotification))) {
             dbRepositoryUserHasNotification.readNotification(fkNotification, fkUser);
             return ResponseEntity.status(200).build();

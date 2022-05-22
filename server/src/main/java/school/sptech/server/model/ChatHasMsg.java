@@ -1,13 +1,14 @@
 package school.sptech.server.model;
 
-import school.sptech.server.service.ChatHasMsgId;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
 import javax.validation.constraints.PastOrPresent;
+
+import school.sptech.server.id.ChatHasMsgId;
+
 import java.time.LocalDate;
 
 @Entity
