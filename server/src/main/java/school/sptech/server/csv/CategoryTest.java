@@ -7,7 +7,7 @@ public class CategoryTest {
 
     public static void main(String[] args) {
 
-        ListObj<Category> categoryList = new ListObj(5);
+        ListObj<Category> categoryList = new ListObj<Category>(5);
         Category category1 = new Category(1, "Encanamento");
         Category category2 = new Category(2, "Elétrica");
         Category category3 = new Category(3, "Montagem de móveis");

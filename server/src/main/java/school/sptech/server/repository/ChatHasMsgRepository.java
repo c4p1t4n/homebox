@@ -15,8 +15,8 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.FluentQuery.FetchableFluentQuery;
 
+import school.sptech.server.id.ChatHasMsgId;
 import school.sptech.server.model.ChatHasMsg;
-import school.sptech.server.service.ChatHasMsgId;
 
 public interface ChatHasMsgRepository extends JpaRepository<ChatHasMsg, ChatHasMsgId> {
     @Transactional

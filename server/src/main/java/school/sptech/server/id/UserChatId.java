@@ -1,20 +1,17 @@
-package school.sptech.server.service;
+package school.sptech.server.id;
 
-import javax.persistence.Column;
 import java.io.Serializable;
 
-public class UserHasSearchId implements Serializable {
-    @Column(name = "fk_user")
+public class UserChatId implements Serializable {
     private Integer fkUser;
-    @Column(name = "fk_search")
-    private Integer fkSearch;
+    private Integer fkChat;
 
-    public UserHasSearchId() {
+    public UserChatId() {
     }
 
-    public UserHasSearchId(Integer fkUser, Integer fkSearch) {
+    public UserChatId(Integer fkUser, Integer fkChat) {
         this.fkUser = fkUser;
-        this.fkSearch = fkSearch;
+        this.fkChat = fkChat;
     }
 
     public Integer getFkUser() {
@@ -25,19 +22,19 @@ public class UserHasSearchId implements Serializable {
         this.fkUser = fkUser;
     }
 
-    public Integer getFkSearch() {
-        return fkSearch;
+    public Integer getFkChat() {
+        return fkChat;
     }
 
-    public void setFkSearch(Integer fkSearch) {
-        this.fkSearch = fkSearch;
+    public void setFkChat(Integer fkChat) {
+        this.fkChat = fkChat;
     }
 
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((fkSearch == null) ? 0 : fkSearch.hashCode());
+        result = prime * result + ((fkChat == null) ? 0 : fkChat.hashCode());
         result = prime * result + ((fkUser == null) ? 0 : fkUser.hashCode());
         return result;
     }
@@ -50,11 +47,11 @@ public class UserHasSearchId implements Serializable {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        UserHasSearchId other = (UserHasSearchId) obj;
-        if (fkSearch == null) {
-            if (other.fkSearch != null)
+        UserChatId other = (UserChatId) obj;
+        if (fkChat == null) {
+            if (other.fkChat != null)
                 return false;
-        } else if (!fkSearch.equals(other.fkSearch))
+        } else if (!fkChat.equals(other.fkChat))
             return false;
         if (fkUser == null) {
             if (other.fkUser != null)
@@ -63,5 +60,4 @@ public class UserHasSearchId implements Serializable {
             return false;
         return true;
     }
-
 }

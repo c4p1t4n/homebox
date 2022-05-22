@@ -1,12 +1,12 @@
 package school.sptech.server.model;
 
-import school.sptech.server.service.UserChatId;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
+
+import school.sptech.server.id.UserChatId;
 
 @Entity
 @Table(name = "user_has_chat")

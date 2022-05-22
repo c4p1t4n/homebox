@@ -1,4 +1,4 @@
-package school.sptech.server.service;
+package school.sptech.server.id;
 
 import java.io.Serializable;
 

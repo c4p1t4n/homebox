@@ -34,7 +34,7 @@ public class ChatController {
     private UserService dbUserService;
 
     @PostMapping("/{idCustomer}/{idWorker}")
-    public ResponseEntity postChat(@PathVariable Integer idCustomer, @PathVariable Integer idWorker) {
+    public ResponseEntity<Object> postChat(@PathVariable Integer idCustomer, @PathVariable Integer idWorker) {
         try {
             LocalDate now = LocalDate.now();
             Chat newChat = dbRepositoryChat.save(new Chat(now));

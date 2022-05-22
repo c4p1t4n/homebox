@@ -42,9 +42,9 @@ CREATE TABLE "user" (
     email VARCHAR(100) NOT NULL,
     PASSWORD CHAR(64) NOT NULL,
     cpf CHAR(11) NOT NULL,
-    token CHAR(16) NOT NULL,
+    token CHAR(16),
     TYPE varchar(8) CHECK(TYPE IN ("worker", "customer")) NOT NULL,
-    picture VARCHAR(250) NOT NULL,
+    picture VARCHAR(250),
     cep CHAR(8) NOT NULL,
     authenticated CHAR(1) CHECK(authenticated IN ("y", "n", "p")) NOT NULL
 );
@@ -126,14 +126,14 @@ CREATE TABLE user_has_tag (
 );
 
 CREATE TABLE service (
+    id_service INT PRIMARY KEY AUTO_INCREMENT,
     fk_user int,
     fk_category int,
     name VARCHAR(100) NOT NULL,
     description TEXT,
     reference_price DECIMAL(7, 2),
     FOREIGN KEY (fk_category) REFERENCES category(id_category),
-    FOREIGN KEY (fk_user) REFERENCES "user"(id_user),
-    PRIMARY KEY (fk_user, fk_category)
+    FOREIGN KEY (fk_user) REFERENCES "user"(id_user)
 );
 
 CREATE TABLE service_has_tag (
@@ -147,13 +147,11 @@ CREATE TABLE service_has_tag (
 );
 
 CREATE TABLE scheduling (
-    id_scheduling int PRIMARY KEY IDENTITY(1, 1),
+    id_scheduling int PRIMARY KEY AUTO_INCREMENT,
     fk_customer int NOT NULL,
-    fk_worker int NOT NULL,
-    fk_category int NOT NULL,
-    FOREIGN KEY (fk_category) REFERENCES service(fk_category),
-    FOREIGN KEY (fk_customer) REFERENCES "user"(id_user),
-    FOREIGN KEY (fk_worker) REFERENCES service(fk_user)
+    fk_service int NOT NULL,
+    FOREIGN KEY (fk_service) REFERENCES service(id_service),
+    FOREIGN KEY (fk_customer) REFERENCES "user"(id_user)
 );
 
 CREATE TABLE scheduling_status (
@@ -168,7 +166,7 @@ CREATE TABLE scheduling_status (
             "rated"
         )
     ) NOT NULL,
-    service_date DATETIME NOT NULL,
+    status_date DATETIME NOT NULL,
     fk_scheduling int,
     FOREIGN KEY (fk_scheduling) REFERENCES scheduling(id_scheduling)
 );
@@ -245,4 +243,61 @@ VALUES
         'Rodrigo Garcez',
         'rodrigo.hermann@sptech.school',
         HASHBYTES("SHA2_256", "ExSenha1")
+    );
+
+INSERT INTO
+    user(
+        'name',
+        'email',
+        'password',
+        'cpf',
+        'type',
+        'cep',
+        'authenticated'
+    )
+VALUES
+    (
+        'José',
+        'jose@gmail.com',
+        HASHBYTES("SHA2_256", "ExSenha1"),
+        '12345678900',
+        'worker',
+        '12345678',
+        'y'
+    ),
+    (
+        'Robson',
+        'jose@gmail.com',
+        HASHBYTES("SHA2_256", "ExSenha1"),
+        '12345678900',
+        'worker',
+        '12345678',
+        'y'
+    ),
+    (
+        'Pedro',
+        'jose@gmail.com',
+        HASHBYTES("SHA2_256", "ExSenha1"),
+        '12345678900',
+        'worker',
+        '12345678',
+        'n'
+    ),
+    (
+        'Bruna',
+        'jose@gmail.com',
+        HASHBYTES("SHA2_256", "ExSenha1"),
+        '12345678900',
+        'customer',
+        '12345678',
+        'y'
+    ),
+    (
+        'Claudio',
+        'jose@gmail.com',
+        HASHBYTES("SHA2_256", "ExSenha1"),
+        '12345678900',
+        'customer',
+        '12345678',
+        'y'
     );

@@ -1,8 +1,8 @@
 package school.sptech.server.model;
 
-import school.sptech.server.service.MsgHasMediaId;
-
 import javax.persistence.*;
+
+import school.sptech.server.id.MsgHasMediaId;
 
 @Entity
 @Table(name = "msg_has_media")

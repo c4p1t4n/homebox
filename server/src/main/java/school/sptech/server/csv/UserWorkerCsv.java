@@ -33,7 +33,7 @@ public class UserWorkerCsv {
                 for (int i = 0; i < list.getSize(); i++) {
                     UserWorker user = list.getElement(i);
                     output.format("%d;%s;%s;%s;%s;%s;%s;%s;%s\n",
-                                 user.getId_user(), user.getName(), user.getEmail(),
+                                 user.getId(), user.getName(), user.getEmail(),
                                  user.getPassword(), user.getCpf(), user. getToken(),
                             user.getType(), user.getPicture(), user.getCep());
 //                        public UserWorker(Integer id, String name, String email, String password, String cpf, String token,
