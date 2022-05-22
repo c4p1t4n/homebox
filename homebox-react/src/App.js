@@ -1,9 +1,8 @@
-import SearchResult from "./page/searchResult";
+import Register from "./pages/register"
+import SearchResult from "./pages/searchResult"
 
 function App() {
-  return (
-    <SearchResult/>
-  );
+    return <Register />
 }
 
-export default App;
+export default App
