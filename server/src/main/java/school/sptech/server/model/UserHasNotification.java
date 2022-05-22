@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import javax.persistence.*;
 import javax.validation.constraints.PastOrPresent;
 
-import school.sptech.server.service.UserHasNotificationId;
+import school.sptech.server.id.UserHasNotificationId;
 
 @Entity
 @Table(name = "user_has_notification")

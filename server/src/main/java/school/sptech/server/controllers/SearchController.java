@@ -4,14 +4,13 @@ import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import school.sptech.server.model.Search;
 import school.sptech.server.model.SearchUser;
-import school.sptech.server.model.User;
 import school.sptech.server.repository.SearchRepository;
 import school.sptech.server.repository.SearchUserRepository;
 import school.sptech.server.repository.UserRepository;
 import school.sptech.server.request.UserSearchRequest;
-import school.sptech.server.service.UserHasSearchId;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -31,7 +30,7 @@ public class SearchController {
     private UserRepository dbRepositoryCustomer;
 
     @PostMapping
-    public ResponseEntity postSearchPerUser(@RequestBody @NotNull UserSearchRequest searchReq) {
+    public ResponseEntity<Object> postSearchPerUser(@RequestBody @NotNull UserSearchRequest searchReq) {
         Search search = dbRepositorySearch.findByValue(searchReq.getValue());
         if (Objects.isNull(search)) {
             search = dbRepositorySearch.save(new Search(searchReq.getValue()));
@@ -70,7 +69,7 @@ public class SearchController {
     }
 
     @DeleteMapping("/{idSearch}")
-    public ResponseEntity deleteSearch(@PathVariable Integer idSearch) {
+    public ResponseEntity<Object> deleteSearch(@PathVariable Integer idSearch) {
         if (dbRepositorySearch.existsById(idSearch)) {
             dbRepositorySearch.deleteById(idSearch);
             return ResponseEntity.status(200).build();

@@ -14,8 +14,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.FluentQuery.FetchableFluentQuery;
 import org.springframework.transaction.annotation.Transactional;
 
+import school.sptech.server.id.UserHasNotificationId;
 import school.sptech.server.model.UserHasNotification;
-import school.sptech.server.service.UserHasNotificationId;
 
 public interface UserHasNotificationRepository extends JpaRepository<UserHasNotification, UserHasNotificationId> {
 

@@ -1,10 +1,9 @@
 package school.sptech.server.model;
 
-import school.sptech.server.service.UserHasSearchId;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
+import school.sptech.server.id.UserHasSearchId;
 import java.time.LocalDate;
 
 @Entity
