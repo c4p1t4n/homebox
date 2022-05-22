@@ -1,17 +1,20 @@
-package school.sptech.server.service;
+package school.sptech.server.id;
 
+import javax.persistence.Column;
 import java.io.Serializable;
 
-public class UserHasNotificationId implements Serializable {
+public class UserHasSearchId implements Serializable {
+    @Column(name = "fk_user")
     private Integer fkUser;
-    private Integer fkNotification;
+    @Column(name = "fk_search")
+    private Integer fkSearch;
 
-    public UserHasNotificationId() {
+    public UserHasSearchId() {
     }
 
-    public UserHasNotificationId(Integer fkUser, Integer fkNotification) {
+    public UserHasSearchId(Integer fkUser, Integer fkSearch) {
         this.fkUser = fkUser;
-        this.fkNotification = fkNotification;
+        this.fkSearch = fkSearch;
     }
 
     public Integer getFkUser() {
@@ -22,19 +25,19 @@ public class UserHasNotificationId implements Serializable {
         this.fkUser = fkUser;
     }
 
-    public Integer getFkNotification() {
-        return fkNotification;
+    public Integer getFkSearch() {
+        return fkSearch;
     }
 
-    public void setFkNotification(Integer fkNotification) {
-        this.fkNotification = fkNotification;
+    public void setFkSearch(Integer fkSearch) {
+        this.fkSearch = fkSearch;
     }
 
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((fkNotification == null) ? 0 : fkNotification.hashCode());
+        result = prime * result + ((fkSearch == null) ? 0 : fkSearch.hashCode());
         result = prime * result + ((fkUser == null) ? 0 : fkUser.hashCode());
         return result;
     }
@@ -47,11 +50,11 @@ public class UserHasNotificationId implements Serializable {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        UserHasNotificationId other = (UserHasNotificationId) obj;
-        if (fkNotification == null) {
-            if (other.fkNotification != null)
+        UserHasSearchId other = (UserHasSearchId) obj;
+        if (fkSearch == null) {
+            if (other.fkSearch != null)
                 return false;
-        } else if (!fkNotification.equals(other.fkNotification))
+        } else if (!fkSearch.equals(other.fkSearch))
             return false;
         if (fkUser == null) {
             if (other.fkUser != null)
