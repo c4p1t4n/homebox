@@ -13,16 +13,22 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.FluentQuery.FetchableFluentQuery;
 
 import school.sptech.server.model.Notification;
+import school.sptech.server.model.User;
+import school.sptech.server.model.UserHasNotification;
+import school.sptech.server.model.keys.UserHasNotificationKey;
 import school.sptech.server.response.NotificationJoinUserNotificationResponse;
 
 public interface NotificationRepository extends JpaRepository<Notification, Integer> {
 
+ /*
     @Query("select new school.sptech.server.response.NotificationJoinUserNotificationResponse(un.fkUser, un.notificationDate, un.seen, n.id, n.title, n.message) from Notification n join UserHasNotification un on n.id = un.fkNotification where un.fkUser = ?1 ")
     List<NotificationJoinUserNotificationResponse> notificationsPerUserList(Integer fkUser);
+*/
 
-    @Query("select new school.sptech.server.response.NotificationJoinUserNotificationResponse(un.fkUser, un.notificationDate, un.seen, n.id, n.title, n.message) from Notification n join UserHasNotification un on n.id = un.fkNotification where n.id = ?2 and un.fkUser = ?1 ")
-    List<NotificationJoinUserNotificationResponse> getNotificationPerUser(Integer idNotification,
-            Integer fkUser);
+
+
+    List<UserHasNotification> findById(UserHasNotificationKey id);
+
 
     void deleteAllByIdInBatch(Iterable<Integer> ids);
 
@@ -81,7 +87,10 @@ public interface NotificationRepository extends JpaRepository<Notification, Inte
     <S extends Notification> Page<S> findAll(Example<S> example, Pageable pageable);
 
     <S extends Notification, R> R findBy(Example<S> example,
-            Function<FetchableFluentQuery<S>, R> queryFunction);
+                                         Function<FetchableFluentQuery<S>, R> queryFunction);
 
     <S extends Notification> Optional<S> findOne(Example<S> example);
+
+
+
 }
