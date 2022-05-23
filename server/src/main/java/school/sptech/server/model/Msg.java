@@ -5,6 +5,8 @@ import javax.persistence.*;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "msg")
 public class Msg {
@@ -21,6 +23,9 @@ public class Msg {
 
     @Column(name = "fk_user")
     private Integer fkUser;
+
+    @OneToMany(mappedBy = "msg")
+    Set<ChatHasMsg> chatHasMsg;
 
     public Msg(Integer idMsg, String message, Character automatic, Integer fkUser) {
         this.idMsg = idMsg;
