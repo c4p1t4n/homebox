@@ -12,30 +12,46 @@
 </head>
 
 <body class="register_body">
-    <div class="homebox_logo">
-        <a href="./index.html"><img class="logo_homebox" src="assets/img/icon/homebox-logo.png" alt=""></a>
+    <div class="container">
+        <a href="./index.html"><img src="./assets/img/icon/logo-removebg-preview.png" alt="logo Homebox"></a>
     </div>
-    <div class="div_register" id="form_1" style="display:initial">
-        <div class="register">
-            <form>
-                <p class="register_title">Cadastro</p>
-                <div class="conteudo_register">
-                    <label>Nome completo:</label>
-                    <input name="name" type="text" required>
-                    <label>CPF:</label>
-                    <input name="cpf" type="text" maxlength="11">
-                    <label>CEP:</label>
-                    <input name="cep" type="text" maxlength="8">
-                    <label>E-mail:</label>
-                    <input name="email" type="text" required>
-                    <label>Senha:</label>
-                    <input name="password" type="password" required>
-                    <label>Digite novamente sua senha:</label>
-                    <input name="password" type="password" required>
-                    <button register>Cadastro</button>
-                </div>
-            </form>
-        </div>
+    <div class="container">
+        <form class="register_div">
+            <h2 class="title_cadastro">Cadastro</h2>
+            <div class="div_input">
+                <p>Nome Completo</p>
+                <input required type="text" placeholder="xxxxxx xxxxxxx xxxxxx">
+            </div>
+            <div class="div_input">
+                <p>CPF</p>
+                <input required type="text" placeholder="592493693-43">
+            </div>
+            <div class="div_input">
+                <p>CEP</p>
+                <input required type="number" placeholder="09385-220">
+            </div>
+            <div class="div_input">
+                <p>E-mail</p>
+                <input required type="email" placeholder="xxxxxx@gmail.com.br">
+            </div>
+            <div class="div_input">
+                <p>Categoria</p>
+                <select required name="category" id="category">
+                    <option value="">Selecione</option>
+                    <option value="provider">Prestador de serviço</option>
+                    <option value="client">Client</option>
+                </select>
+            </div>
+            <div class="div_input">
+                <p>Senha</p>
+                <input required type="password" placeholder="xxxxxxxxxxxxx">
+            </div>
+            <div class="div_input">
+                <p>Digite novamente sua senha</p>
+                <input required type="password" placeholder="xxxxxxxxxxxxx">
+            </div>
+            <a register href="./login.html"><button class="button_register">Cadastrar</button></a>
+        </form>
     </div>
 </body>
 

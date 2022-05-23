@@ -1,9 +1,5 @@
 package school.sptech.server.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-
-
 public class UserWorker extends User {
     public UserWorker() {
     }
@@ -13,11 +9,12 @@ public class UserWorker extends User {
         Boolean autenticacao = getPassword().equals(password) & getEmail().equals(user);
         if (autenticacao) {
             setAuthenticated('s');
-        }else{
+        } else {
             setAuthenticated('n');
         }
         return getAuthenticated();
     }
+
     public UserWorker(Integer id, String name, String email, String password, String cpf, String token,
             String type, String picture, String cep) {
         super(id, name, email, password, cpf, token, type, picture, cep);
