@@ -8,6 +8,8 @@ import org.hibernate.validator.constraints.br.CPF;
 import org.springframework.validation.annotation.Validated;
 import school.sptech.server.service.ILogin;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "user")
 public  class User implements ILogin {
@@ -44,6 +46,14 @@ public  class User implements ILogin {
     @Column(name="authenticated")
     @JsonIgnore
     private Character authenticated;
+
+    @OneToMany(mappedBy = "user")
+    Set<UserHasChat> userHasChat;
+
+    @OneToMany(mappedBy = "user")
+    Set<UserHasNotification> userHasNotifications;
+
+
     public String getCep() {
         return cep;
     }
