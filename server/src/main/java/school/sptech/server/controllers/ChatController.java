@@ -33,9 +33,9 @@ public class ChatController {
     @Autowired
     private UserService dbUserService;
 
-    @PostMapping("/{idCustomer}/{idWorker}")
+   @PostMapping("/{idCustomer}/{idWorker}")
     public ResponseEntity postChat(@PathVariable Integer idCustomer, @PathVariable Integer idWorker) {
-        try {
+
             LocalDate now = LocalDate.now();
             Chat newChat = dbRepositoryChat.save(new Chat(now));
 
@@ -45,26 +45,23 @@ public class ChatController {
             Msg autoMsg = dbRepositoryMsg.findByAutomaticAndFkUser('y', idWorker);
             System.out.println(autoMsg.getMessage());
 
-            if (Objects.nonNull(autoMsg)) {
-                System.out.println('2');
-                ChatHasMsg autoMsgChat = new ChatHasMsg(
-                        autoMsg.getIdMsg(),
-                        newChat.getIdChat(),
-                        now,
-                        'n');
+            System.out.println('2');
+            ChatHasMsg autoMsgChat = new ChatHasMsg(
+                    autoMsg.getIdMsg(),
+                    newChat.getIdChat(),
+                    now,
+                    'n');
 
-                dbRepositoryChatHasMsg.save(autoMsgChat);
-            }
+            dbRepositoryChatHasMsg.save(autoMsgChat);
             System.out.println('1');
 
             dbRepositoryUserHasChat.save(customerChatAccess);
             dbRepositoryUserHasChat.save(WorkerChatAccess);
 
             return ResponseEntity.status(201).build();
-        } catch (NullPointerException npe) {
-            return ResponseEntity.status(405).build();
-        }
+
     }
+
 
     @GetMapping("/{idChat}")
     public ResponseEntity<Chat> getChat(@PathVariable Integer idChat) {
@@ -86,13 +83,14 @@ public class ChatController {
         return ResponseEntity.status(200).body(chats);
     }
 
+
     @GetMapping("/user/{fkUser}")
-    public ResponseEntity<List<ChatJoinUserHasChat>> getChatsPerUser(@PathVariable Integer fkUser) {
+    public ResponseEntity<List<UserHasChat>> getChatsPerUser(@PathVariable Integer fkUser) {
         if (!dbUserService.existsById(fkUser)) {
             return ResponseEntity.status(404).build();
         }
 
-        List<ChatJoinUserHasChat> chats = dbRepositoryChat.findChatsPerUser(fkUser);
+        List<UserHasChat> chats = dbRepositoryUserHasChat.findChatByUser(dbUserService.findById(fkUser).get());
 
         if (chats.isEmpty()) {
             return ResponseEntity.status(404).build();
@@ -100,5 +98,6 @@ public class ChatController {
 
         return ResponseEntity.status(200).body(chats);
     }
+
 
 }

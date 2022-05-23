@@ -4,7 +4,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import school.sptech.server.model.Notification;
+import school.sptech.server.model.User;
 import school.sptech.server.model.UserHasNotification;
+import school.sptech.server.model.keys.UserHasNotificationKey;
 import school.sptech.server.repository.NotificationRepository;
 
 import school.sptech.server.repository.UserHasNotificationRepository;
@@ -48,21 +50,25 @@ public class NotificationController {
     }
 
     @GetMapping(value = "/user/{idUser}")
-    public ResponseEntity<List<NotificationJoinUserNotificationResponse>> getNotificationsForUser(
+    public ResponseEntity getNotificationsForUser(
             @PathVariable Integer idUser) {
         if (!dbUserService.existsById(idUser)) {
             return ResponseEntity.status(404).build();
         }
+        Optional<User> user = dbUserService.findById(idUser);
+        if(dbUserService.findById(idUser).isEmpty()){
 
-        List<NotificationJoinUserNotificationResponse> list = dbRepositoryNotification
-                .notificationsPerUserList(idUser);
+                return ResponseEntity.status(204).build();
 
-        if (list.isEmpty()) {
-            return ResponseEntity.status(204).build();
+
         }
+
+        List<UserHasNotification> list = dbRepositoryUserHasNotification.findByUser(user);
+
 
         return ResponseEntity.status(200).body(list);
     }
+
 
     @GetMapping(value = "/{idNotification}")
     public ResponseEntity<Notification> getNotification(@PathVariable Integer idNotification) {
@@ -76,12 +82,13 @@ public class NotificationController {
         return ResponseEntity.status(404).build();
     }
 
+
     @GetMapping(value = "/user/{idUser}/{idNotification}")
-    public ResponseEntity<NotificationJoinUserNotificationResponse> getNotificationForUser(
+    public ResponseEntity<UserHasNotification> getNotificationForUser(
             @PathVariable Integer idNotification,
             @PathVariable Integer idUser) {
-        List<NotificationJoinUserNotificationResponse> list = dbRepositoryNotification
-                .getNotificationPerUser(idNotification, idUser);
+        List<UserHasNotification> list = dbRepositoryNotification
+                .findById(new UserHasNotificationKey(idNotification,idUser));
 
         if (list.isEmpty()) {
             return ResponseEntity.status(404).build();
@@ -89,6 +96,7 @@ public class NotificationController {
 
         return ResponseEntity.status(200).body(list.get(0));
     }
+
 
     @PostMapping
     public ResponseEntity createNotification(@RequestBody Notification notification) {
@@ -117,8 +125,8 @@ public class NotificationController {
 
     @PatchMapping(value = "/read/{fkUser}/{fkNotification}")
     public ResponseEntity readNotification(@PathVariable Integer fkUser, @PathVariable Integer fkNotification) {
-        if (dbRepositoryUserHasNotification.existsById(new UserHasNotificationId(fkUser, fkNotification))) {
-            dbRepositoryUserHasNotification.readNotification(fkNotification, fkUser);
+        if (dbRepositoryUserHasNotification.existsById(new UserHasNotificationKey(fkNotification,fkUser))) {
+            dbRepositoryUserHasNotification.readNotification( new UserHasNotificationKey(fkNotification,fkUser));
             return ResponseEntity.status(200).build();
         }
         return ResponseEntity.status(404).build();
