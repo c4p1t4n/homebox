@@ -41,12 +41,12 @@ public class ChatController {
 
             UserHasChat customerChatAccess = new UserHasChat(idCustomer, newChat.getIdChat());
             UserHasChat WorkerChatAccess = new UserHasChat(idWorker, newChat.getIdChat());
-            System.out.println('1');
+            
             Msg autoMsg = dbRepositoryMsg.findByAutomaticAndFkUser('y', idWorker);
             System.out.println(autoMsg.getMessage());
 
             if (Objects.nonNull(autoMsg)) {
-                System.out.println('2');
+                
                 ChatHasMsg autoMsgChat = new ChatHasMsg(
                         autoMsg.getIdMsg(),
                         newChat.getIdChat(),
@@ -55,7 +55,7 @@ public class ChatController {
 
                 dbRepositoryChatHasMsg.save(autoMsgChat);
             }
-            System.out.println('1');
+            
 
             dbRepositoryUserHasChat.save(customerChatAccess);
             dbRepositoryUserHasChat.save(WorkerChatAccess);
