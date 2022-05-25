@@ -13,7 +13,6 @@ import school.sptech.server.repository.ChatHasMsgRepository;
 import school.sptech.server.repository.ChatRepository;
 import school.sptech.server.repository.MsgRepository;
 import school.sptech.server.response.MsgJoinChatHasMsg;
-import school.sptech.server.service.ChatHasMsgId;
 import school.sptech.server.service.UserService;
 import school.sptech.server.model.keys.ChatHasMsgKey;
 @RestController

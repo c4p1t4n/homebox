@@ -11,8 +11,6 @@ import school.sptech.server.repository.NotificationRepository;
 
 import school.sptech.server.repository.UserHasNotificationRepository;
 import school.sptech.server.request.UserIdListRequest;
-import school.sptech.server.response.NotificationJoinUserNotificationResponse;
-import school.sptech.server.service.UserHasNotificationId;
 
 import java.time.LocalDate;
 import java.util.List;

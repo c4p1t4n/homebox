@@ -12,7 +12,6 @@ import school.sptech.server.repository.ChatRepository;
 import school.sptech.server.repository.MsgRepository;
 import school.sptech.server.repository.UserHasChatRepository;
 
-import school.sptech.server.response.ChatJoinUserHasChat;
 import school.sptech.server.service.UserService;
 
 import java.time.LocalDate;
@@ -33,19 +32,20 @@ public class ChatController {
     @Autowired
     private UserService dbUserService;
 
-   @PostMapping("/{idCustomer}/{idWorker}")
+    @PostMapping("/{idCustomer}/{idWorker}")
     public ResponseEntity postChat(@PathVariable Integer idCustomer, @PathVariable Integer idWorker) {
 
-            LocalDate now = LocalDate.now();
-            Chat newChat = dbRepositoryChat.save(new Chat(now));
+        LocalDate now = LocalDate.now();
+        Chat newChat = dbRepositoryChat.save(new Chat(now));
 
-            UserHasChat customerChatAccess = new UserHasChat(idCustomer, newChat.getIdChat());
-            UserHasChat WorkerChatAccess = new UserHasChat(idWorker, newChat.getIdChat());
-            System.out.println('1');
-            Msg autoMsg = dbRepositoryMsg.findByAutomaticAndFkUser('y', idWorker);
-            System.out.println(autoMsg.getMessage());
+        UserHasChat customerChatAccess = new UserHasChat(idCustomer, newChat.getIdChat());
+        UserHasChat WorkerChatAccess = new UserHasChat(idWorker, newChat.getIdChat());
 
-            System.out.println('2');
+        Msg autoMsg = dbRepositoryMsg.findByAutomaticAndFkUser('y', idWorker);
+        System.out.println(autoMsg.getMessage());
+
+        if (Objects.nonNull(autoMsg)) {
+
             ChatHasMsg autoMsgChat = new ChatHasMsg(
                     autoMsg.getIdMsg(),
                     newChat.getIdChat(),
@@ -53,15 +53,14 @@ public class ChatController {
                     'n');
 
             dbRepositoryChatHasMsg.save(autoMsgChat);
-            System.out.println('1');
+        }
 
-            dbRepositoryUserHasChat.save(customerChatAccess);
-            dbRepositoryUserHasChat.save(WorkerChatAccess);
+        dbRepositoryUserHasChat.save(customerChatAccess);
+        dbRepositoryUserHasChat.save(WorkerChatAccess);
 
-            return ResponseEntity.status(201).build();
+        return ResponseEntity.status(201).build();
 
     }
-
 
     @GetMapping("/{idChat}")
     public ResponseEntity<Chat> getChat(@PathVariable Integer idChat) {
@@ -83,7 +82,6 @@ public class ChatController {
         return ResponseEntity.status(200).body(chats);
     }
 
-
     @GetMapping("/user/{fkUser}")
     public ResponseEntity<List<UserHasChat>> getChatsPerUser(@PathVariable Integer fkUser) {
         if (!dbUserService.existsById(fkUser)) {
@@ -98,6 +96,5 @@ public class ChatController {
 
         return ResponseEntity.status(200).body(chats);
     }
-
 
 }

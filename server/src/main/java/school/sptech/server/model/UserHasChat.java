@@ -1,7 +1,6 @@
 package school.sptech.server.model;
 
 import school.sptech.server.model.keys.UserHasChatKey;
-import school.sptech.server.service.UserChatId;
 
 import javax.persistence.*;
 
