@@ -66,4 +66,16 @@ public class UserService {
 
         return categories;
     }
+
+    public List<User> getWorkersByName(String name) {
+        List<User> workers = dbUserRepository.findByNameContainsIgnoreCaseAndType(name,"worker");
+
+        return workers;
+    }
+
+    public List<User> getWorkersByCategory(String category) {
+        List<User> workers = dbUserRepository.getWorkerByCategoryContainsIgnoreCase(category);
+
+        return workers;
+    }
 }

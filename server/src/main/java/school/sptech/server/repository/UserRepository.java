@@ -79,5 +79,8 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 
     <S extends User> Optional<S> findOne(Example<S> example);
 
-    List<User> findByName(String name);
+    List<User> findByNameContainsIgnoreCaseAndType(String name, String type);
+
+    @Query("")
+    List<User> getWorkerByCategoryContainsIgnoreCase(String categoria);
 }

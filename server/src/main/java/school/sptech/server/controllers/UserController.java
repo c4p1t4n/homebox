@@ -8,6 +8,7 @@ import school.sptech.server.model.Category;
 import school.sptech.server.model.User;
 import school.sptech.server.model.UserCustomer;
 import school.sptech.server.model.UserWorker;
+import school.sptech.server.repository.CategoryRepository;
 import school.sptech.server.service.UserService;
 
 import static org.springframework.http.ResponseEntity.status;
@@ -21,6 +22,9 @@ public class UserController {
 
     @Autowired
     private UserService dbUserService;
+
+    @Autowired
+    private CategoryRepository dbCategory;
 
     @PostMapping("/customer")
     public ResponseEntity<Object> registerUserCustomer(@RequestBody UserCustomer newUser) {
@@ -129,6 +133,38 @@ public class UserController {
         List<Category> categories = dbUserService.getWorkerCategories(id);
 
         return categories.isEmpty() ? status(204).build() : status(200).body(categories);
+    }
+
+    @GetMapping("search/worker/{name}")
+    public ResponseEntity getWorkerByName(@PathVariable String name) {
+
+        List<User> list = dbUserService.getWorkersByName(name);
+        if (list.isEmpty()) {
+            return ResponseEntity.status(201).build();
+        }
+        return  ResponseEntity.status(200).body(list);
+    }
+
+    /*FAZER DEPOIS DE ARRUMAR AS FK */
+    @GetMapping("serach/worker/{category}")
+    public ResponseEntity getWorkerByCategory(@PathVariable String category) {
+        if (dbCategory.existsByNameContainsIgnoreCase(category)){
+            List<User> list = dbUserService.getWorkersByCategory("%"+category+"%");
+        }
+        else{
+            return ResponseEntity.status(201).build();
+        }
+        return  ResponseEntity.status(200).body(list);
+    }
+
+    @GetMapping("search/worker/{service}")
+    public ResponseEntity getWorkerByService(@PathVariable String service) {
+
+        List<User> list = dbUserService.getWorkersByName("%"+service+"%");
+        if (list.isEmpty()) {
+            return ResponseEntity.status(201).build();
+        }
+        return  ResponseEntity.status(200).body(list);
     }
 
 }
