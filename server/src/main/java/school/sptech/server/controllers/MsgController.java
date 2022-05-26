@@ -12,7 +12,6 @@ import school.sptech.server.model.Msg;
 import school.sptech.server.repository.ChatHasMsgRepository;
 import school.sptech.server.repository.ChatRepository;
 import school.sptech.server.repository.MsgRepository;
-import school.sptech.server.response.MsgJoinChatHasMsg;
 import school.sptech.server.service.UserService;
 import school.sptech.server.model.keys.ChatHasMsgKey;
 @RestController
@@ -28,7 +27,7 @@ public class MsgController {
     private UserService dbRepositoryUser;
 
     @PostMapping("/auto")
-    public ResponseEntity postMsg(@RequestBody Msg msg,
+    public ResponseEntity<Object> postMsg(@RequestBody Msg msg,
             @RequestParam(value = "overwrite", required = false) Boolean overwrite) {
         try {
 
@@ -106,7 +105,7 @@ public class MsgController {
     }
 
     @PostMapping("/chat/{idChat}")
-    public ResponseEntity postMsgInChat(@PathVariable Integer idChat, @RequestBody Msg newMsg) {
+    public ResponseEntity<Void> postMsgInChat(@PathVariable Integer idChat, @RequestBody Msg newMsg) {
         if (!dbRepositoryChat.existsById(idChat)) {
             return ResponseEntity.status(404).build();
         }
@@ -123,7 +122,7 @@ public class MsgController {
 
 
     @PatchMapping(value = "/read/{fkMsg}/{fkChat}")
-    public ResponseEntity readMsg(@PathVariable Integer fkMsg, @PathVariable Integer fkChat) {
+    public ResponseEntity<Void> readMsg(@PathVariable Integer fkMsg, @PathVariable Integer fkChat) {
         if (dbRepositoryChatHasMsg.existsById(new ChatHasMsgKey(fkMsg, fkChat))) {
             dbRepositoryChatHasMsg.readNotification(new ChatHasMsgKey(fkMsg, fkChat));
             return ResponseEntity.status(200).build();

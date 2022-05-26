@@ -48,7 +48,7 @@ public class NotificationController {
     }
 
     @GetMapping(value = "/user/{idUser}")
-    public ResponseEntity getNotificationsForUser(
+    public ResponseEntity<List<UserHasNotification>> getNotificationsForUser(
             @PathVariable Integer idUser) {
         if (!dbUserService.existsById(idUser)) {
             return ResponseEntity.status(404).build();
@@ -97,14 +97,14 @@ public class NotificationController {
 
 
     @PostMapping
-    public ResponseEntity createNotification(@RequestBody Notification notification) {
+    public ResponseEntity<Void> createNotification(@RequestBody Notification notification) {
 
         dbRepositoryNotification.save(notification);
         return ResponseEntity.status(201).build();
     }
 
     @PostMapping(value = "/{idNotification}")
-    public ResponseEntity associateNotificationToUsers(@PathVariable Integer idNotification,
+    public ResponseEntity<Void> associateNotificationToUsers(@PathVariable Integer idNotification,
             @RequestBody UserIdListRequest idList) {
         if (dbRepositoryNotification.existsById(idNotification)) {
             for (Integer id : idList.getUserIds()) {
@@ -122,7 +122,7 @@ public class NotificationController {
     }
 
     @PatchMapping(value = "/read/{fkUser}/{fkNotification}")
-    public ResponseEntity readNotification(@PathVariable Integer fkUser, @PathVariable Integer fkNotification) {
+    public ResponseEntity<Void> readNotification(@PathVariable Integer fkUser, @PathVariable Integer fkNotification) {
         if (dbRepositoryUserHasNotification.existsById(new UserHasNotificationKey(fkNotification,fkUser))) {
             dbRepositoryUserHasNotification.readNotification( new UserHasNotificationKey(fkNotification,fkUser));
             return ResponseEntity.status(200).build();

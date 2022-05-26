@@ -9,14 +9,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.FluentQuery.FetchableFluentQuery;
 
 import school.sptech.server.model.Notification;
-import school.sptech.server.model.User;
 import school.sptech.server.model.UserHasNotification;
 import school.sptech.server.model.keys.UserHasNotificationKey;
-import school.sptech.server.response.NotificationJoinUserNotificationResponse;
 
 public interface NotificationRepository extends JpaRepository<Notification, Integer> {
 

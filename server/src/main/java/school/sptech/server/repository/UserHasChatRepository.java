@@ -6,7 +6,6 @@ import school.sptech.server.model.UserHasChat;
 import school.sptech.server.model.keys.UserHasChatKey;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface UserHasChatRepository extends JpaRepository<UserHasChat, UserHasChatKey> {
 
