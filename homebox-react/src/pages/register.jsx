@@ -126,9 +126,9 @@ const register = e => {
         name,
         email,
         password,
-        cpf,
+        cpf: cpf.trim().replace(".", "").replace(".", "").replace("-", ""),
         type,
-        cep
+        cep: cep.trim().replace(".", "").replace(".", "").replace("-", "")
     })
         .then(response => {
             console.log(response)
