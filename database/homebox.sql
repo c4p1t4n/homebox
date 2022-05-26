@@ -28,9 +28,9 @@ CREATE TABLE user (
     email VARCHAR(100) NOT NULL,
     PASSWORD CHAR(64) NOT NULL,
     cpf CHAR(11) NOT NULL,
-    token CHAR(16) NOT NULL,
+    token CHAR(16),
     TYPE ENUM("worker", "customer") NOT NULL,
-    picture VARCHAR(250) NOT NULL,
+    picture VARCHAR(250),
     cep CHAR(8) NOT NULL,
     authenticated ENUM("y", "n", "p") NOT NULL
 );
@@ -112,34 +112,30 @@ CREATE TABLE user_has_tag (
 );
 
 CREATE TABLE service (
+    id_service INT PRIMARY KEY AUTO_INCREMENT,
     fk_user int,
     fk_category int,
     name VARCHAR(100) NOT NULL,
     description TEXT,
     reference_price DECIMAL(7, 2),
     FOREIGN KEY (fk_category) REFERENCES category(id_category),
-    FOREIGN KEY (fk_user) REFERENCES user(id_user),
-    PRIMARY KEY (fk_user, fk_category)
+    FOREIGN KEY (fk_user) REFERENCES user(id_user)
 );
 
 CREATE TABLE service_has_tag (
     fk_tag int,
-    fk_user int,
-    fk_category int,
-    FOREIGN KEY (fk_user) REFERENCES service(fk_user),
-    FOREIGN KEY (fk_category) REFERENCES service(fk_category),
+    fk_service int,
+    FOREIGN KEY (fk_service) REFERENCES service(id_service),
     FOREIGN KEY (fk_tag) REFERENCES tag(id_tag),
-    PRIMARY KEY (fk_tag, fk_user, fk_category)
+    PRIMARY KEY (fk_tag, fk_service)
 );
 
 CREATE TABLE scheduling (
     id_scheduling int PRIMARY KEY AUTO_INCREMENT,
     fk_customer int NOT NULL,
-    fk_worker int NOT NULL,
-    fk_category int NOT NULL,
-    FOREIGN KEY (fk_category) REFERENCES service(fk_category),
-    FOREIGN KEY (fk_customer) REFERENCES user(id_user),
-    FOREIGN KEY (fk_worker) REFERENCES service(fk_user)
+    fk_service int NOT NULL,
+    FOREIGN KEY (fk_service) REFERENCES service(id_service),
+    FOREIGN KEY (fk_customer) REFERENCES user(id_user)
 );
 
 CREATE TABLE scheduling_status (
@@ -152,26 +148,26 @@ CREATE TABLE scheduling_status (
         "not-executed",
         "rated"
     ) NOT NULL,
-    service_date DATETIME NOT NULL,
+    status_date DATETIME NOT NULL,
     fk_scheduling int,
     FOREIGN KEY (fk_scheduling) REFERENCES scheduling(id_scheduling)
 );
 
 CREATE TABLE accomplished_service (
+    id_accomplished_service int PRIMARY KEY AUTO_INCREMENT,
     fk_scheduling int,
     price DECIMAL(7, 2) NOT NULL,
     description TEXT NOT NULL,
     service_date DATETIME NOT NULL,
-    FOREIGN KEY (fk_scheduling) REFERENCES scheduling(id_scheduling),
-    PRIMARY KEY (fk_scheduling)
+    FOREIGN KEY (fk_scheduling) REFERENCES scheduling(id_scheduling)
 );
 
 CREATE TABLE rating (
+    id_rating int PRIMARY KEY AUTO_INCREMENT,
     fk_accomplished_service int,
     rating int NOT NULL,
     description TEXT NOT NULL,
-    FOREIGN KEY (fk_accomplished_service) REFERENCES accomplished_service(fk_scheduling),
-    PRIMARY KEY (fk_accomplished_service)
+    FOREIGN KEY (fk_accomplished_service) REFERENCES accomplished_service(fk_scheduling)
 );
 
 CREATE TABLE search (
@@ -239,3 +235,67 @@ VALUES
     (NULL, "Montagem de móveis"),
     (NULL, "Pintura"),
     (NULL, "Limpeza");
+
+INSERT INTO
+    user
+VALUES
+    (
+        NULL,
+        'José',
+        'jose@gmail.com',
+        SHA2("ExSenha1", 256),
+        '12345678900',
+        NULL,
+        'worker',
+        NULL,
+        '12345678',
+        'y'
+    ),
+    (
+        NULL,
+        'Robson',
+        'jose@gmail.com',
+        SHA2("ExSenha1", 256),
+        '12345678900',
+        NULL,
+        'worker',
+        NULL,
+        '12345678',
+        'y'
+    ),
+    (
+        NULL,
+        'Pedro',
+        'jose@gmail.com',
+        SHA2("ExSenha1", 256),
+        '12345678900',
+        NULL,
+        'worker',
+        NULL,
+        '12345678',
+        'n'
+    ),
+    (
+        NULL,
+        'Bruna',
+        'jose@gmail.com',
+        SHA2("ExSenha1", 256),
+        '12345678900',
+        NULL,
+        'customer',
+        NULL,
+        '12345678',
+        'y'
+    ),
+    (
+        NULL,
+        'Claudio',
+        'jose@gmail.com',
+        SHA2("ExSenha1", 256),
+        '12345678900',
+        NULL,
+        'customer',
+        NULL,
+        '12345678',
+        'y'
+    );

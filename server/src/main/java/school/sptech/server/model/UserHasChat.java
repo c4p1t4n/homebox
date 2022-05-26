@@ -1,46 +1,58 @@
 package school.sptech.server.model;
 
-import school.sptech.server.service.UserChatId;
+import school.sptech.server.model.keys.UserHasChatKey;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.IdClass;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "user_has_chat")
-@IdClass(UserChatId.class)
+
 public class UserHasChat {
-    @Id
-    @Column(name = "fk_user")
-    private Integer fkUser;
 
-    @Id
-    @Column(name = "fk_chat")
-    private Integer fkChat;
+    @EmbeddedId
+    private UserHasChatKey userHasChatKey;
 
-    public UserHasChat(Integer fkUser, Integer fkChat) {
-        this.fkUser = fkUser;
-        this.fkChat = fkChat;
+    @ManyToOne
+    @MapsId("id")
+    @JoinColumn(name ="id_user")
+    private User user;
+
+    @ManyToOne
+    @MapsId("idChat")
+    @JoinColumn(name ="id_chat")
+    private Chat chat;
+
+    public UserHasChat(Integer idCustomer, Integer idChat) {
+
     }
 
+    public UserHasChatKey getUserHasChatKey() {
+        return userHasChatKey;
+    }
     public UserHasChat() {
     }
 
-    public Integer getFkUser() {
-        return fkUser;
+
+    public void setUserHasChatKey(UserHasChatKey userHasChatKey) {
+        this.userHasChatKey = userHasChatKey;
     }
 
-    public void setFkUser(Integer fkUser) {
-        this.fkUser = fkUser;
+    public User getUser() {
+        return user;
     }
 
-    public Integer getFkChat() {
-        return fkChat;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public void setFkChat(Integer fkChat) {
-        this.fkChat = fkChat;
+    public Chat getChat() {
+        return chat;
     }
+
+    public void setChat(Chat chat) {
+        this.chat = chat;
+    }
+
+
+
 }
