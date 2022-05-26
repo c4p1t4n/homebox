@@ -13,68 +13,6 @@ body {
     margin: auto;
 }
 
-Header {
-    width: 100%;
-}
-
-.header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header .logo {
-    height: 140px;
-}
-
-.divSearch {
-    display: flex;
-}
-
-.searchBar input {
-    background-color: #3D6389;
-    color: white;
-    border: none;
-    width: 500px;
-    height: 15px;
-    padding: 10px;
-    font-size: 20px;
-    border-radius: 20px 0px 0px 20px;
-}
-
-.searchBar input::placeholder {
-    color: white;
-}
-
-.searchIcon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 2px;
-    background: rgba(133, 133, 133, 0.27);
-    width: 50px;
-    border-radius: 0px 20px 20px 0px;
-}
-
-.searchIcon img {
-    height: 25px;
-}
-
-.profile {
-    display: flex;
-    justify-content: space-between;
-    width: 120px;
-    align-items: center;
-    color: #3D6389;
-    font-weight: bold;
-}
-
-.profile img {
-    height: 30px;
-}
-
-
 .body {
     width: 100%;
     display: flex;
@@ -134,9 +72,11 @@ Header {
     width: 90%;
     font-weight: bold;
 }
-.cardCustumerDiv .arrows{
+
+.cardCustumerDiv .arrows {
     height: 60px;
 }
+
 .cardCustumer {
     display: flex;
     flex-direction: column;
@@ -156,23 +96,23 @@ Header {
     padding: 0;
 }
 
-.cardCustumer .imgCustumer{
+.cardCustumer .imgCustumer {
     border-radius: 20px;
     height: 140px;
 }
 
-.avaliacao{
+.avaliacao {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 63%;
 }
 
-.stars{
+.stars {
     height: 40px;
 }
 
-.cardCustumerDistanceDiv{
+.cardCustumerDistanceDiv {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -180,7 +120,7 @@ Header {
     font-weight: bold;
 }
 
-.cardCustumerDistance{
+.cardCustumerDistance {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -194,7 +134,7 @@ Header {
     justify-content: space-between;
 }
 
-.cardCustumerDistance .imgCustumer{
+.cardCustumerDistance .imgCustumer {
     border-radius: 20px;
     height: 140px;
 }
@@ -204,6 +144,6 @@ Header {
     padding: 0;
 }
 
-.cardCustumerDistance .stars{
+.cardCustumerDistance .stars {
     height: 38px;
 }
