@@ -50,7 +50,7 @@ function Register() {
                         <select name="category" id="category">
                             <option value="">Selecione</option>
                             <option value="worker">Prestador de serviço</option>
-                            <option value="client">Cliente</option>
+                            <option value="customer">Cliente</option>
                         </select>
                     </div>
                     <div className="div_input">
