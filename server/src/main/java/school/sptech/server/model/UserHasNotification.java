@@ -1,23 +1,32 @@
 package school.sptech.server.model;
 
+import school.sptech.server.model.keys.UserHasNotificationKey;
+
 import java.time.LocalDate;
 
 import javax.persistence.*;
 import javax.validation.constraints.PastOrPresent;
 
-import school.sptech.server.id.UserHasNotificationId;
+
 
 @Entity
 @Table(name = "user_has_notification")
-@IdClass(UserHasNotificationId.class)
-public class UserHasNotification {
-    @Id
-    @Column(name = "fk_notification")
-    private Integer fkNotification;
 
-    @Id
-    @Column(name = "fk_user")
-    private Integer fkUser;
+public class UserHasNotification {
+
+    @EmbeddedId
+    UserHasNotificationKey id;
+
+    @ManyToOne
+    @MapsId("id")
+    @JoinColumn(name ="id_user")
+    private User user;
+
+    @ManyToOne
+    @MapsId("id")
+    @JoinColumn(name ="id_notification")
+    private Notification notification;
+
 
     @PastOrPresent
     @Column(name = "notification_date")
@@ -28,30 +37,20 @@ public class UserHasNotification {
 
     public UserHasNotification(Integer fkUser, Integer fkNotification, LocalDate notificationDate,
             char seen) {
-        this.fkUser = fkUser;
-        this.fkNotification = fkNotification;
+        this.id = new UserHasNotificationKey(fkNotification,fkUser);
         this.notificationDate = notificationDate;
         this.seen = seen;
+    }
+
+
+    public UserHasNotification(Integer idUsuario,Integer idNotificao) {
+        this.id = new UserHasNotificationKey(idUsuario,idNotificao);
     }
 
     public UserHasNotification() {
     }
 
-    public Integer getFkUser() {
-        return fkUser;
-    }
 
-    public void setFkUser(Integer fkUser) {
-        this.fkUser = fkUser;
-    }
-
-    public Integer getFkNotification() {
-        return fkNotification;
-    }
-
-    public void setFkNotification(Integer fkNotification) {
-        this.fkNotification = fkNotification;
-    }
 
     public LocalDate getNotificationDate() {
         return notificationDate;
@@ -69,4 +68,27 @@ public class UserHasNotification {
         this.seen = seen;
     }
 
+    public UserHasNotificationKey getId() {
+        return id;
+    }
+
+    public void setId(UserHasNotificationKey id) {
+        this.id = id;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Notification getNotification() {
+        return notification;
+    }
+
+    public void setNotification(Notification notification) {
+        this.notification = notification;
+    }
 }

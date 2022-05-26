@@ -14,17 +14,23 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.FluentQuery.FetchableFluentQuery;
-
-import school.sptech.server.id.ChatHasMsgId;
+import school.sptech.server.model.Chat;
 import school.sptech.server.model.ChatHasMsg;
+import school.sptech.server.model.keys.ChatHasMsgKey;
 
-public interface ChatHasMsgRepository extends JpaRepository<ChatHasMsg, ChatHasMsgId> {
+public interface ChatHasMsgRepository extends JpaRepository<ChatHasMsg, ChatHasMsgKey> {
+
+
     @Transactional
     @Modifying
-    @Query("update ChatHasMsg chm set chm.seen = 'y' where chm.fkMsg = ?1 AND chm.fkChat = ?2")
-    void readNotification(Integer idMsg, Integer fkChat);
+    @Query("update ChatHasMsg chm set chm.seen = 'y' where chm.id = ?1")
+    void readNotification(ChatHasMsgKey id);
 
-    void deleteAllByIdInBatch(Iterable<ChatHasMsgId> ids);
+    List<ChatHasMsg>  findAllByChat(Optional<Chat> chat);
+
+    List<ChatHasMsg> findAllByChatIsNotNull();
+
+    void deleteAllByIdInBatch(Iterable<ChatHasMsgKey> ids);
 
     void deleteAllInBatch();
 
@@ -40,13 +46,13 @@ public interface ChatHasMsgRepository extends JpaRepository<ChatHasMsg, ChatHasM
 
     <S extends ChatHasMsg> List<S> findAll(Example<S> example, Sort sort);
 
-    List<ChatHasMsg> findAllById(Iterable<ChatHasMsgId> ids);
+    List<ChatHasMsg> findAllById(Iterable<ChatHasMsgKey> ids);
 
     void flush();
 
-    ChatHasMsg getById(ChatHasMsgId id);
+    ChatHasMsg getById(ChatHasMsgKey id);
 
-    ChatHasMsg getOne(ChatHasMsgId id);
+    ChatHasMsg getOne(ChatHasMsgKey id);
 
     <S extends ChatHasMsg> List<S> saveAll(Iterable<S> entities);
 
@@ -64,13 +70,13 @@ public interface ChatHasMsgRepository extends JpaRepository<ChatHasMsg, ChatHasM
 
     void deleteAll(Iterable<? extends ChatHasMsg> entities);
 
-    void deleteAllById(Iterable<? extends ChatHasMsgId> ids);
+    void deleteAllById(Iterable<? extends ChatHasMsgKey> ids);
 
-    void deleteById(ChatHasMsgId id);
+    void deleteById(ChatHasMsgKey id);
 
-    boolean existsById(ChatHasMsgId id);
+    boolean existsById(ChatHasMsgKey id);
 
-    Optional<ChatHasMsg> findById(ChatHasMsgId id);
+    Optional<ChatHasMsg> findById(ChatHasMsgKey id);
 
     <S extends ChatHasMsg> S save(S entity);
 
@@ -83,4 +89,6 @@ public interface ChatHasMsgRepository extends JpaRepository<ChatHasMsg, ChatHasM
     <S extends ChatHasMsg, R> R findBy(Example<S> example, Function<FetchableFluentQuery<S>, R> queryFunction);
 
     <S extends ChatHasMsg> Optional<S> findOne(Example<S> example);
+
+
 }

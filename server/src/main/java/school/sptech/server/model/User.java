@@ -7,9 +7,11 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.validator.constraints.br.CPF;
 import school.sptech.server.service.ILogin;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "user")
-public class User implements ILogin {
+public  class User implements ILogin {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_user")
@@ -40,9 +42,16 @@ public class User implements ILogin {
     @Column(name = "cep")
     private String cep;
 
-    @Column(name = "authenticated")
+    @Column(name="authenticated")
     @JsonIgnore
     private Character authenticated;
+
+    @OneToMany(mappedBy = "user")
+    Set<UserHasChat> userHasChat;
+
+    @OneToMany(mappedBy = "user")
+    Set<UserHasNotification> userHasNotifications;
+
 
     public String getCep() {
         return cep;
@@ -83,6 +92,14 @@ public class User implements ILogin {
 
     public void setAuthenticated(Character authenticated) {
         this.authenticated = authenticated;
+    }
+
+    public Integer getId_user() {
+        return id;
+    }
+
+    public void setId_user(Integer id_user) {
+        this.id = id_user;
     }
 
     public String getName() {
@@ -145,15 +162,14 @@ public class User implements ILogin {
         Boolean autenticacao = getPassword().equals(password) & getEmail().equals(user);
         if (autenticacao) {
             setAuthenticated('s');
-        } else {
+        }else{
             setAuthenticated('n');
         }
         return getAuthenticated();
     }
-
     @Override
     public String toString() {
         return String.format("%05d %-14s %-20s %-14s %-14s %-14s %-14s %-14s %-14s",
-                id, name, email, password, cpf, token, type, picture, cep);
+                             id, name, email, password, cpf, token, type, picture, cep);
     }
 }

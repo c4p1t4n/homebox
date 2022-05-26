@@ -7,14 +7,13 @@ import java.util.Objects;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import school.sptech.server.id.ChatHasMsgId;
 import school.sptech.server.model.ChatHasMsg;
 import school.sptech.server.model.Msg;
-import school.sptech.server.repository.*;
-import school.sptech.server.response.MsgJoinChatHasMsg;
+import school.sptech.server.repository.ChatHasMsgRepository;
+import school.sptech.server.repository.ChatRepository;
+import school.sptech.server.repository.MsgRepository;
 import school.sptech.server.service.UserService;
-
+import school.sptech.server.model.keys.ChatHasMsgKey;
 @RestController
 @RequestMapping("/msg")
 public class MsgController {
@@ -58,11 +57,10 @@ public class MsgController {
         return ResponseEntity.status(200).body(msgs);
     }
 
-    @CrossOrigin(origins = "*", allowedHeaders = "*")
-    @GetMapping
-    public ResponseEntity<List<MsgJoinChatHasMsg>> getMsgsFull() {
-        List<MsgJoinChatHasMsg> msgs = dbRepositoryMsg.findAllWithChat();
 
+    @GetMapping
+    public ResponseEntity<List<ChatHasMsg>> getMsgsFull() {
+        List<ChatHasMsg> msgs = dbRepositoryChatHasMsg.findAllByChatIsNotNull();
         if (msgs.isEmpty()) {
             return ResponseEntity.status(204).build();
         }
@@ -96,12 +94,12 @@ public class MsgController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/chat/{idChat}")
-    public ResponseEntity<List<MsgJoinChatHasMsg>> getMsgsPerChat(@PathVariable Integer idChat) {
+    public ResponseEntity<List<ChatHasMsg>> getMsgsPerChat(@PathVariable Integer idChat) {
         if (!dbRepositoryChat.existsById(idChat)) {
             return ResponseEntity.status(404).build();
         }
 
-        List<MsgJoinChatHasMsg> msgs = dbRepositoryMsg.findByChat(idChat);
+         List<ChatHasMsg> msgs = dbRepositoryChatHasMsg.findAllByChat(dbRepositoryChat.findById(idChat));
 
         if (msgs.isEmpty()) {
             return ResponseEntity.status(204).build();
@@ -112,7 +110,7 @@ public class MsgController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/chat/{idChat}")
-    public ResponseEntity<Object> postMsgInChat(@PathVariable Integer idChat, @RequestBody Msg newMsg) {
+    public ResponseEntity<Void> postMsgInChat(@PathVariable Integer idChat, @RequestBody Msg newMsg) {
         if (!dbRepositoryChat.existsById(idChat)) {
             return ResponseEntity.status(404).build();
         }
@@ -129,12 +127,13 @@ public class MsgController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PatchMapping(value = "/read/{fkMsg}/{fkChat}")
-    public ResponseEntity<Object> readMsg(@PathVariable Integer fkMsg, @PathVariable Integer fkChat) {
-        if (dbRepositoryChatHasMsg.existsById(new ChatHasMsgId(fkMsg, fkChat))) {
-            dbRepositoryChatHasMsg.readNotification(fkMsg, fkChat);
+    public ResponseEntity<Void> readMsg(@PathVariable Integer fkMsg, @PathVariable Integer fkChat) {
+        if (dbRepositoryChatHasMsg.existsById(new ChatHasMsgKey(fkMsg, fkChat))) {
+            dbRepositoryChatHasMsg.readNotification(new ChatHasMsgKey(fkMsg, fkChat));
             return ResponseEntity.status(200).build();
         }
         return ResponseEntity.status(404).build();
     }
+
 
 }

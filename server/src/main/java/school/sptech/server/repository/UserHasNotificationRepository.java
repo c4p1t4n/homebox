@@ -14,17 +14,22 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.FluentQuery.FetchableFluentQuery;
 import org.springframework.transaction.annotation.Transactional;
 
-import school.sptech.server.id.UserHasNotificationId;
+import school.sptech.server.model.User;
 import school.sptech.server.model.UserHasNotification;
+import school.sptech.server.model.keys.UserHasNotificationKey;
 
-public interface UserHasNotificationRepository extends JpaRepository<UserHasNotification, UserHasNotificationId> {
+
+public interface UserHasNotificationRepository extends JpaRepository<UserHasNotification, UserHasNotificationKey> {
+
 
     @Transactional
     @Modifying
-    @Query("update UserHasNotification un set un.seen = 'y' where un.fkNotification = ?1 AND un.fkUser = ?2")
-    void readNotification(Integer idNotification, Integer fkUser);
+    @Query("update UserHasNotification un set un.seen = 'y' where un.id = ?1")
+    void readNotification(UserHasNotificationKey idNotification);
 
-    void deleteAllByIdInBatch(Iterable<UserHasNotificationId> ids);
+
+    List<UserHasNotification> findByUser(Optional<User> user);
+    void deleteAllByIdInBatch(Iterable<UserHasNotificationKey> ids);
 
     void deleteAllInBatch();
 
@@ -40,13 +45,13 @@ public interface UserHasNotificationRepository extends JpaRepository<UserHasNoti
 
     <S extends UserHasNotification> List<S> findAll(Example<S> example, Sort sort);
 
-    List<UserHasNotification> findAllById(Iterable<UserHasNotificationId> ids);
+    List<UserHasNotification> findAllById(Iterable<UserHasNotificationKey> ids);
 
     void flush();
 
-    UserHasNotification getById(UserHasNotificationId id);
+    UserHasNotification getById(UserHasNotificationKey id);
 
-    UserHasNotification getOne(UserHasNotificationId id);
+    UserHasNotification getOne(UserHasNotificationKey id);
 
     <S extends UserHasNotification> List<S> saveAll(Iterable<S> entities);
 
@@ -64,13 +69,13 @@ public interface UserHasNotificationRepository extends JpaRepository<UserHasNoti
 
     void deleteAll(Iterable<? extends UserHasNotification> entities);
 
-    void deleteAllById(Iterable<? extends UserHasNotificationId> ids);
+    void deleteAllById(Iterable<? extends UserHasNotificationKey> ids);
 
-    void deleteById(UserHasNotificationId id);
+    void deleteById(UserHasNotificationKey id);
 
-    boolean existsById(UserHasNotificationId id);
+    boolean existsById(UserHasNotificationKey id);
 
-    Optional<UserHasNotification> findById(UserHasNotificationId id);
+    Optional<UserHasNotification> findById(UserHasNotificationKey id);
 
     <S extends UserHasNotification> S save(S entity);
 
@@ -84,4 +89,9 @@ public interface UserHasNotificationRepository extends JpaRepository<UserHasNoti
             Function<FetchableFluentQuery<S>, R> queryFunction);
 
     <S extends UserHasNotification> Optional<S> findOne(Example<S> example);
+
+
+
+
+
 }

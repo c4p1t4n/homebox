@@ -3,6 +3,7 @@ package school.sptech.server.model;
 import javax.persistence.*;
 import javax.validation.constraints.PastOrPresent;
 import java.time.LocalDate;
+import java.util.Set;
 
 @Entity
 @Table(name = "chat")
@@ -17,6 +18,11 @@ public class Chat {
     @Column(name = "opening_date")
     private LocalDate openingDate;
 
+    @OneToMany(mappedBy = "chat")
+    Set<ChatHasMsg> chatHasMsg;
+
+    @OneToMany(mappedBy = "chat")
+    Set<UserHasChat> userHasChat;
     public Chat(@PastOrPresent LocalDate openingDate) {
         this.openingDate = openingDate;
     }

@@ -9,6 +9,7 @@ import school.sptech.server.repository.ServiceRepository;
 import school.sptech.server.repository.UserRepository;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -49,14 +50,20 @@ public class UserService {
 
     }
 
+    public List<User> getAll() {
+        return dbUserRepository.findAll();
+    }
+
+    public Optional<User> findById(Integer id) {
+        if (dbUserRepository.findById(id).isPresent()) {
+            return dbUserRepository.findById(id);
+        }
+        return Optional.empty();
+    }
+
     public List<Category> getWorkerCategories(Integer id) {
         List<Category> categories = dbRepositoryService.findDistinctCategoryByWorkerId(id);
 
         return categories;
     }
-
-    public List<User> getAll() {
-        return dbUserRepository.findAll();
-    }
-
 }
