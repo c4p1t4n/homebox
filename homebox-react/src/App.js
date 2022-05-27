@@ -1,8 +1,7 @@
-import Register from "./pages/register"
-import SearchResult from "./pages/searchResult"
+import Router from "./routes"
 
 function App() {
-    return <SearchResult />
+    return <Router />
 }
 
 export default App
