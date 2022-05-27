@@ -1,9 +1,7 @@
-import Home from "./pages/home"
-import NotFound from "./pages/notFound"
-
+import Router from "./routes"
 
 function App() {
-    return <NotFound/>
+    return <Router />
 }
 
 export default App
