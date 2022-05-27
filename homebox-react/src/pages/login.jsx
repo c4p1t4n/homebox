@@ -11,26 +11,31 @@ function Login() {
             <div className="homebox_logo">
                 <a href="./index.html"><img className="logo_homebox" src={logo} alt="" /></a>
             </div>
-            <div className="div_login">
-                <form className="login" id="form_login">
-                    <p className="login_title">Login</p>
-                    <div className="email_password">
-                        <label>E-mail:</label>
-                        <input email name="email" type="text" required />
-                        <label>Senha:</label>
-                        <input password name="password" type="password" required />
-                        <p>OU</p>
-                        <div className="img_container">
-                            <img className="logo" src={google} alt="" />
-                            <img className="logo" src={facebook} alt="" />
-                            <img className="logo" src={twitter} alt="" />
-                        </div>
+            <div className='div_login_and_button'>
+                <div className="div_login">
+                    <h2>Login</h2>
+                    <div className='div_emails'>
+                        <p>E-mail</p>
+                        <input type="e-mail" placeholder='xxxxxx.xxxxxx@gmail.com.br' />
                     </div>
-                </form>
-            </div>
-            <div className="div_button">
-                <button loginBtn>Entrar</button><br />
-                <p><a href="register.html">Ou cadastre-se aqui</a></p>
+                    <div className='div_password'>
+                        <p>Senha</p>
+                        <input type="password" placeholder='XXXXXXXXXX' />
+                    </div>
+                    <p>OU</p>
+                    <div className="container_img">
+                        <img src={google} alt="Google" />
+                        <img src={facebook} alt="Facebook" />
+                        <img src={twitter} alt="Twiter" />
+                    </div>
+                </div>
+                <div className="div_button">
+                    <button loginBtn>Entrar</button>
+                    <br />
+                    <a href=""><p>Ou <p id='register'>cadastre-se</p> aqui</p></a>
+                    <br />
+                    <a href=""><p id='password'>Esqueceu sua senha ?</p></a>
+                </div>
             </div>
         </body>
     );
