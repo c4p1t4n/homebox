@@ -1,26 +1,37 @@
-import '../assets/css/style.css';
+import "../assets/css/style.css"
 
 import logo from "../assets/img/icon/logo-removebg-preview.png"
 import google from "../assets/img/google.png"
 import facebook from "../assets/img/facebook1.png"
 import twitter from "../assets/img/twitter.png"
+import api from "../api"
 
 function Login() {
     return (
         <body className="login_body">
             <div className="homebox_logo">
-                <a href="../index.html"><img className="logo_homebox" src={logo} alt="" /></a>
+                <a href="../index.html">
+                    <img className="logo_homebox" src={logo} alt="" />
+                </a>
             </div>
-            <div className='div_login_and_button'>
+            <div className="div_login_and_button">
                 <div className="div_login">
                     <h2>Login</h2>
-                    <div className='div_emails'>
+                    <div className="div_emails">
                         <p>E-mail</p>
-                        <input type="e-mail" placeholder='xxxxxx.xxxxxx@gmail.com.br' />
+                        <input
+                            id="email"
+                            type="e-mail"
+                            placeholder="xxxxxx.xxxxxx@gmail.com.br"
+                        />
                     </div>
-                    <div className='div_password'>
+                    <div className="div_password">
                         <p>Senha</p>
-                        <input type="password" placeholder='XXXXXXXXXX' />
+                        <input
+                            id="password"
+                            type="password"
+                            placeholder="XXXXXXXXXX"
+                        />
                     </div>
                     <p>OU</p>
                     <div className="container_img">
@@ -30,15 +41,65 @@ function Login() {
                     </div>
                 </div>
                 <div className="div_button">
-                    <button loginBtn>Entrar</button>
+                    <button loginBtn onClick={login}>
+                        Entrar
+                    </button>
                     <br />
-                    <a href="http://localhost:3000/register"><p>Ou <p id='register'>cadastre-se</p> aqui</p></a>
+                    <a href="/register">
+                        <p>
+                            Ou <p id="register">cadastre-se</p> aqui
+                        </p>
+                    </a>
                     <br />
-                    <a href=""><p id='password'>Esqueceu sua senha ?</p></a>
+                    <a href="/">
+                        <p id="password">Esqueceu sua senha ?</p>
+                    </a>
                 </div>
             </div>
         </body>
-    );
+    )
 }
 
-export default Login;
+const login = e => {
+    e.preventDefault()
+    const passwordInput = document.querySelector("#password")
+    const emailInput = document.querySelector("#email")
+
+    const email = emailInput?.value
+    const password = passwordInput?.value
+
+    if (!email || !password) {
+        return console.info("Preencha os campos para logar")
+    }
+
+    // api.post("/users/login/", {
+    //     email,
+    //     password
+    // })
+    //     .then(response => {
+    //         console.log(response)
+    //         if (response.status === 201) {
+    //             console.log("SUCESSO")
+    //             window.location.assign("/")
+    //         } else if (response.status === 400) {
+    //             console.log("DEU RUIM")
+    //         }
+    //     })
+    //     .catch(err => {
+    //         console.error(err)
+    //     })
+
+    api.get(`/users/login/${email}/${password}`)
+        .then(response => {
+            console.log(response)
+            if (response.status === 200) {
+                console.log("SUCESSO")
+                window.location.href = "/"
+            }
+        })
+        .catch(err => {
+            console.log("DEU RUIM")
+        })
+}
+
+export default Login
