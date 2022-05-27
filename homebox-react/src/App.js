@@ -1,8 +1,9 @@
-import Register from "./pages/register"
-import SearchResult from "./pages/searchResult"
+import Home from "./pages/home"
+import NotFound from "./pages/notFound"
+
 
 function App() {
-    return <SearchResult />
+    return <NotFound/>
 }
 
 export default App

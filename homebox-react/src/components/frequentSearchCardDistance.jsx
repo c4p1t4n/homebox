@@ -10,6 +10,7 @@ function FrequentSearchCard(props) {
         </div>
         <img className="stars" src={props.starImg}
             alt="Estrelas que indicam a avaliação do prestador"/>
+            <p>{props.dist}</p>
     </div>
     );
   }

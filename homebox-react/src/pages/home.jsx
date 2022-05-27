@@ -1,10 +1,11 @@
 import "../assets/css/homePage.css"
-import "../assets/css/footer.css"
 
 import Card from "../components/card"
 import Footer from "../components/footer"
 import Header from "../components/header"
+import HeaderProfileOpen from "../components/headerProfileOpen"
 import FrequentSearchCard from "../components/frequentSearchCard"
+import FrequentSearchCardDistance from "../components/frequentSearchCardDistance"
 
 import brushIcon from "../assets/img/brushIcon.png"
 import electrician from "../assets/img/electrician.png"
@@ -23,8 +24,9 @@ const frequent_search = "'pintor'"
 
 function Home() {
     return (
-        <div>
-            <Header />
+        <>
+            
+            <HeaderProfileOpen/>
             <div className="container">
                 <div className="body">
                     <h2>Serviços mais acessados por você</h2>
@@ -55,12 +57,13 @@ function Home() {
                     <br />
                     <br />
                     <h3>Porque você pesquisou por {frequent_search}</h3>
-                    <div className="cardCustumerDiv">
+                    <div className="cardCustumerDiv1">
                         <img
                             className="arrows"
                             src={arrowLeft}
                             alt="Seta para esquerda"
                         />
+                        <div className="cardCustumerDiv">
                         <FrequentSearchCard
                             class={"cardCustumer"}
                             img={imgMaria}
@@ -85,6 +88,15 @@ function Home() {
                             stars={3}
                             starImg={img3Stars}
                         />
+                        <FrequentSearchCard
+                            class={"cardCustumer"}
+                            img={imgLeo}
+                            name={"Leonardo Silveira"}
+                            category={"Pintor"}
+                            stars={3}
+                            starImg={img3Stars}
+                        />
+                        </div>
                         <img
                             className="arrows"
                             src={arrowRight}
@@ -95,7 +107,7 @@ function Home() {
                     <br />
                     <h3>Próximos de você</h3>
                     <div className="cardCustumerDistanceDiv">
-                        <FrequentSearchCard
+                        <FrequentSearchCardDistance
                             class={"cardCustumerDistance"}
                             img={imgMaria}
                             name={"Maria Antonia"}
@@ -104,7 +116,7 @@ function Home() {
                             starImg={img5Stars}
                             dist={"2.2 KM de distância"}
                         />
-                        <FrequentSearchCard
+                        <FrequentSearchCardDistance
                             class={"cardCustumerDistance"}
                             img={imgJose}
                             name={"José Ricardo"}
@@ -113,7 +125,7 @@ function Home() {
                             starImg={img4Stars}
                             dist={"2.2 KM de distância"}
                         />
-                        <FrequentSearchCard
+                        <FrequentSearchCardDistance
                             class={"cardCustumerDistance"}
                             img={imgLeo}
                             name={"Leonardo Silveira"}
@@ -126,7 +138,7 @@ function Home() {
                 </div>
             </div>
             <Footer />
-        </div>
+        </>
     )
 }
 

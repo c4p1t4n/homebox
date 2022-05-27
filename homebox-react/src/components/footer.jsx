@@ -1,3 +1,5 @@
+import "../assets/css/footer.css"
+
 import blackLine from "../assets/img/lineBlackFooter.png"
 import logo from "../assets/img/icon/logo-removebg-preview.png"
 import linkedin from "../assets/img/linkedin.png"
