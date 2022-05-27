@@ -26,7 +26,7 @@ function Home() {
     return (
         <>
 
-            <HeaderProfileOpen />
+            <Header />
             <div className="container">
                 <div className="body">
                     <h2>Serviços mais acessados por você</h2>

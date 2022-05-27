@@ -7,33 +7,33 @@ import twitter from "../assets/img/twitter.png"
 
 function Login() {
     return (
-    <div className="login_body">
-        <div className="homebox_logo">
-            <a href=""><img className="logo_homebox" src={logo} alt="Logo Homebox"/></a>
-        </div>
-        <div className="div_login">
-            <form className="login">
-                <p className="login_title">Login</p>
-                <div className="email_password">
-                    <label>E-mail:</label>
-                    <input name="email" type="text"/>
-                    <label>Senha:</label>
-                    <input name="password" type="password"/>
-                    <p>OU</p>
-                    <div className="img_container">
-                        <img className="logo" src={google} alt="Ícone do google"/>
-                        <img className="logo" src={facebook} alt="Ícone do facebook"/>
-                        <img className="logo" src={twitter} alt="Ícone do twitter"/>
+        <body className="login_body">
+            <div className="homebox_logo">
+                <a href="./index.html"><img className="logo_homebox" src={logo} alt="" /></a>
+            </div>
+            <div className="div_login">
+                <form className="login" id="form_login">
+                    <p className="login_title">Login</p>
+                    <div className="email_password">
+                        <label>E-mail:</label>
+                        <input email name="email" type="text" required />
+                        <label>Senha:</label>
+                        <input password name="password" type="password" required />
+                        <p>OU</p>
+                        <div className="img_container">
+                            <img className="logo" src={google} alt="" />
+                            <img className="logo" src={facebook} alt="" />
+                            <img className="logo" src={twitter} alt="" />
+                        </div>
                     </div>
-                </div>
-            </form>
-        </div>
-        <div className="div_button">
-            <button>Entrar</button><br/>
-            <p><a href="">Ou cadastre-se aqui</a></p>
-        </div>
-    </div>
+                </form>
+            </div>
+            <div className="div_button">
+                <button loginBtn>Entrar</button><br />
+                <p><a href="register.html">Ou cadastre-se aqui</a></p>
+            </div>
+        </body>
     );
-  }
-  
-  export default Login;
+}
+
+export default Login;

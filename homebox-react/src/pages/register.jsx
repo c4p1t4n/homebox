@@ -1,9 +1,6 @@
 import "../assets/css/style.css"
 
 import logo from "../assets/img/icon/logo-removebg-preview.png"
-import google from "../assets/img/google.png"
-import facebook from "../assets/img/facebook1.png"
-import twitter from "../assets/img/twitter.png"
 import api from "../api"
 
 function Register() {
@@ -17,6 +14,14 @@ function Register() {
             <div className="container">
                 <form className="register_div">
                     <h2 className="title_cadastro">Cadastro</h2>
+                    <div className="div_input">
+                        <p>Categoria</p>
+                        <select name="category" id="category">
+                            <option value="">Selecione</option>
+                            <option value="worker">Prestador de serviço</option>
+                            <option value="customer">Cliente</option>
+                        </select>
+                    </div>
                     <div className="div_input">
                         <p>Nome Completo</p>
                         <input
@@ -44,14 +49,6 @@ function Register() {
                             type="email"
                             placeholder="xxxxxx@gmail.com.br"
                         />
-                    </div>
-                    <div className="div_input">
-                        <p>Categoria</p>
-                        <select name="category" id="category">
-                            <option value="">Selecione</option>
-                            <option value="worker">Prestador de serviço</option>
-                            <option value="customer">Cliente</option>
-                        </select>
                     </div>
                     <div className="div_input">
                         <p>Senha</p>
