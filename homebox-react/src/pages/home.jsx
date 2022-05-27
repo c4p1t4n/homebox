@@ -25,8 +25,8 @@ const frequent_search = "'pintor'"
 function Home() {
     return (
         <>
-            
-            <HeaderProfileOpen/>
+
+            <HeaderProfileOpen />
             <div className="container">
                 <div className="body">
                     <h2>Serviços mais acessados por você</h2>
@@ -63,39 +63,31 @@ function Home() {
                             src={arrowLeft}
                             alt="Seta para esquerda"
                         />
-                        <div className="cardCustumerDiv">
-                        <FrequentSearchCard
-                            class={"cardCustumer"}
-                            img={imgMaria}
-                            name={"Maria Antonia"}
-                            category={"Pintora"}
-                            stars={5}
-                            starImg={img5Stars}
-                        />
-                        <FrequentSearchCard
-                            class={"cardCustumer"}
-                            img={imgJose}
-                            name={"José Ricardo"}
-                            category={"Pintor"}
-                            stars={4}
-                            starImg={img4Stars}
-                        />
-                        <FrequentSearchCard
-                            class={"cardCustumer"}
-                            img={imgLeo}
-                            name={"Leonardo Silveira"}
-                            category={"Pintor"}
-                            stars={3}
-                            starImg={img3Stars}
-                        />
-                        <FrequentSearchCard
-                            class={"cardCustumer"}
-                            img={imgLeo}
-                            name={"Leonardo Silveira"}
-                            category={"Pintor"}
-                            stars={3}
-                            starImg={img3Stars}
-                        />
+                        <div className="cardCustumerDiv2">
+                            <FrequentSearchCard
+                                class={"cardCustumer3"}
+                                img={imgMaria}
+                                name={"Maria Antonia"}
+                                category={"Pintora"}
+                                stars={5}
+                                starImg={img5Stars}
+                            />
+                            <FrequentSearchCard
+                                class={"cardCustumer3"}
+                                img={imgJose}
+                                name={"José Ricardo"}
+                                category={"Pintor"}
+                                stars={4}
+                                starImg={img4Stars}
+                            />
+                            <FrequentSearchCard
+                                class={"cardCustumer3"}
+                                img={imgLeo}
+                                name={"Leonardo Silveira"}
+                                category={"Pintor"}
+                                stars={3}
+                                starImg={img3Stars}
+                            />
                         </div>
                         <img
                             className="arrows"

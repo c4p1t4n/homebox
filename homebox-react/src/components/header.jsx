@@ -6,21 +6,21 @@ import "../assets/css/header.css"
 function Header() {
     return (
         <header>
-            <div className="container">
-                <div className="header">
-                    <img className="logo" src={logo} alt="Logo Homebox" />
-                    <div className="divSearch">
-                        <div className="searchBar">
-                            <input type="text" placeholder="Pesquise por serviço" />
+            <div class="container">
+                <div class="header">
+                    <img className="logo" src={logo} alt="Homebox logo"/>
+                        <div class="divSearch">
+                            <div class="searchBar">
+                                <input type="text" placeholder="Pesquise por serviço"/>
+                            </div>
+                            <div className="searchIcon">
+                                <img src={searchIcon} alt="Icone de pesquisar 'lupa'"/>
+                            </div>
                         </div>
-                        <div className="searchIcon">
-                            <img src={searchIcon} alt="Icone de pesquisar 'lupa'" />
+                        <div class="profile">
+                            <p>Wesley</p>
+                            <img src={profile} alt=""/>
                         </div>
-                    </div>
-                    <div className="profile">
-                        <p>Wesley</p>
-                        <img src={profile} alt="Imagem de perfil" />
-                    </div>
                 </div>
             </div>
         </header>

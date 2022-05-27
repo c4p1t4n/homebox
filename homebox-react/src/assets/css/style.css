@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-* {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-}
 
 /* Início página de Login */
 
@@ -92,11 +88,6 @@
     margin-left: 17%;
 }
 
-div .logo {
-    width: 13.5%;
-    border-radius: 5px;
-    padding-right: 17%;
-}
 
 .conteudo_login {
     width: 100%;
