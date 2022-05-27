@@ -1,4 +1,3 @@
-import "../assets/css/header.css"
 import "../assets/css/searchResult.css"
 
 import CardSearch from "../components/cardSearch"
@@ -8,11 +7,11 @@ import imgJose from "../assets/img/joseRicardoCustumer.png"
 
 function SearchResult() {
     return (
-        <div>
+        <>
             <Header />
             <div className="container">
                 <div className="body">
-                    <h2>Exibindo resultado para {"Pintor"}</h2>
+                    <h2>Exibindo resultado para {"'Pintor'"}</h2>
                     <div className="cardCustumerDiv">
                         <CardSearch
                             img={imgJose}
@@ -24,7 +23,7 @@ function SearchResult() {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

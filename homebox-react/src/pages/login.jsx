@@ -9,7 +9,7 @@ function Login() {
     return (
         <body className="login_body">
             <div className="homebox_logo">
-                <a href="./index.html"><img className="logo_homebox" src={logo} alt="" /></a>
+                <a href="../index.html"><img className="logo_homebox" src={logo} alt="" /></a>
             </div>
             <div className='div_login_and_button'>
                 <div className="div_login">
@@ -32,7 +32,7 @@ function Login() {
                 <div className="div_button">
                     <button loginBtn>Entrar</button>
                     <br />
-                    <a href=""><p>Ou <p id='register'>cadastre-se</p> aqui</p></a>
+                    <a href="http://localhost:3000/register"><p>Ou <p id='register'>cadastre-se</p> aqui</p></a>
                     <br />
                     <a href=""><p id='password'>Esqueceu sua senha ?</p></a>
                 </div>

@@ -4,10 +4,6 @@
 /* Início página de Login */
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-* {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-}
 
 /* Início página de Login */
 
@@ -145,7 +141,7 @@
 }
 
 #register {
-    font-weight: bolder;
+    font-weight: 900;
 }
 
 #password {
@@ -184,7 +180,7 @@
     display: flex;
     background-color: white;
     width: 500px;
-    border-radius: 30px;
+    border-radius: 30px 0px 0px 30px;
     flex-direction: column;
     height: 550px;
     overflow: auto;
@@ -195,7 +191,9 @@
 }
 
 .register_div::-webkit-scrollbar {
-    width: 0px;
+    width: 5px;
+
+
 }
 
 .register_div::-webkit-scrollbar-track {
@@ -203,8 +201,8 @@
 }
 
 .register_div::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
+    background: #0A3969;
+    border-radius: 20px;
 }
 
 .register_div::-webkit-scrollbar-thumb:hover {
@@ -258,7 +256,7 @@
 }
 
 .button_register {
-    font-size: x-large;
+    font-size: xx-large;
     color: white;
     margin: 8% 0% 8% 0%;
     background: #0A3969;

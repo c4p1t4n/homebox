@@ -9,7 +9,7 @@ function Header() {
         <header>
             <div className="container">
                 <div className="header">
-                    <img className="logo" src={logo} alt="Logo Homebox" />
+                <a href="http://localhost:3000/"><img  className="logo" src={logo} alt="Homebox logo"/></a>
                     <div className="divSearch">
                         <div className="searchBar">
                             <input type="text" placeholder="Pesquise por serviço" />

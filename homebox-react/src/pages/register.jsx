@@ -16,13 +16,13 @@ function Register() {
                     <h2 className="title_cadastro">Cadastro</h2>
                     <div className="div_input">
                         <p>Categoria</p>
-                        <select name="category" id="category">
+                        <select  name="category" id="category">
                             <option value="">Selecione</option>
                             <option value="worker">Prestador de serviço</option>
                             <option value="customer">Cliente</option>
                         </select>
                     </div>
-                    <div className="div_input">
+                    <div  className="div_input">
                         <p>Nome Completo</p>
                         <input
                             type="text"

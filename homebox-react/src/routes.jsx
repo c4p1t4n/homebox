@@ -1,8 +1,9 @@
-import {BrowserRouter, Route, Routes} from "react-router-dom"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Register from "./pages/register"
 import Login from "./pages/login"
 import Home from "./pages/home"
 import SearchResult from "./pages/searchResult"
+import NotFound from "./pages/notFound"
 
 function Router() {
     return (
@@ -28,11 +29,11 @@ function Router() {
                     element={<SearchResult />}
                     caseSensitive="false"
                 />
-                {/* <Route
+                {<Route
                     path="*"
-                    element={<Page404 />}
+                    element={< NotFound />}
                     caseSensitive="false"
-                /> */}
+                />}
             </Routes>
         </BrowserRouter>
     )

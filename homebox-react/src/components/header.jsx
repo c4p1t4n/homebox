@@ -8,19 +8,19 @@ function Header() {
         <header>
             <div class="container">
                 <div class="header">
-                    <img className="logo" src={logo} alt="Homebox logo"/>
-                        <div class="divSearch">
-                            <div class="searchBar">
-                                <input type="text" placeholder="Pesquise por serviço"/>
-                            </div>
-                            <div className="searchIcon">
-                                <img src={searchIcon} alt="Icone de pesquisar 'lupa'"/>
-                            </div>
+                    <a href="http://localhost:3000/"><img className="logo" src={logo} alt="Homebox logo" /></a>
+                    <div class="divSearch">
+                        <div class="searchBar">
+                            <input type="text" placeholder="Pesquise por serviço" />
                         </div>
-                        <div class="profile">
-                            <p>Wesley</p>
-                            <img src={profile} alt=""/>
+                        <div className="searchIcon">
+                            <img src={searchIcon} alt="Icone de pesquisar 'lupa'" />
                         </div>
+                    </div>
+                    <div class="profile">
+                        <p>Wesley</p>
+                        <img src={profile} alt="" />
+                    </div>
                 </div>
             </div>
         </header>
