@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import school.sptech.server.model.Category;
+
 import school.sptech.server.model.User;
 import school.sptech.server.repository.ServiceRepository;
 import school.sptech.server.repository.UserRepository;
@@ -11,7 +12,6 @@ import school.sptech.server.repository.UserRepository;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
 @Service
 public class UserService {
 
@@ -62,20 +62,8 @@ public class UserService {
     }
 
     public List<Category> getWorkerCategories(Integer id) {
-        List<Category> categories = dbRepositoryService.findDistinctCategoryByWorkerId(id);
+        List<Category> categories = dbRepositoryService.findDistinctByWorkerId(id);
 
         return categories;
-    }
-
-    public List<User> getWorkersByName(String name) {
-        List<User> workers = dbUserRepository.findByNameContainsIgnoreCaseAndType(name,"worker");
-
-        return workers;
-    }
-
-    public List<User> getWorkersByCategory(String category) {
-        List<User> workers = dbUserRepository.getWorkerByCategoryContainsIgnoreCase(category);
-
-        return workers;
     }
 }
