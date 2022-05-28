@@ -12,6 +12,8 @@ import school.sptech.server.service.UserService;
 
 import static org.springframework.http.ResponseEntity.status;
 
+import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -73,18 +75,16 @@ public class UserController {
                 : status(204).build();
     }
 
-    @GetMapping("/login/{userLogin}/{userPassword}")
-    public ResponseEntity<Object> getLoginUser(@PathVariable String userLogin, @PathVariable String userPassword) {
-        List<User> users = dbUserService.getAll();
-
-        for (User user : users) {
-            if (user.getEmail().equals(userLogin) && user.getPassword().equals(userPassword)) {
-                user.login(userLogin, userPassword);
-                return status(200).build();
-            }
-
+    @PostMapping("/login")
+    public ResponseEntity<Object> getLoginUser(@RequestBody User user) throws UnsupportedEncodingException, NoSuchAlgorithmException {
+        String userLogin = user.getEmail();
+        String userPassword = user.getPassword();
+        user = dbUserService.loginUser(userLogin,userPassword);
+        if(user == null){
+            return status(404).build();
         }
-        return status(401).build();
+
+        return status(200).body(user);
     }
 
     @GetMapping("/logoff/{userLogin}")
