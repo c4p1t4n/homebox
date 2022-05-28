@@ -8,9 +8,14 @@ import school.sptech.server.model.User;
 import school.sptech.server.repository.ServiceRepository;
 import school.sptech.server.repository.UserRepository;
 
+import java.io.UnsupportedEncodingException;
+import java.math.BigInteger;
+import java.security.*;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
+import static org.apache.commons.lang3.StringUtils.join;
 
 @Service
 public class UserService {
@@ -40,6 +45,24 @@ public class UserService {
                 .collect(Collectors.toList());
 
     }
+
+
+    public  String encriptPassword(String password) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+        MessageDigest messageDigest =  MessageDigest.getInstance("SHA-256");
+        messageDigest.update(password.getBytes("UTF-8"));
+        return new BigInteger(1, messageDigest.digest()).toString(16);
+    }
+
+
+    public User loginUser(String password,String email) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+
+        password = encriptPassword(password);
+
+
+        return dbUserRepository.findUserByEmailAndPassword(email,password);
+
+    }
+
 
     public List<User> getAllWorkers() {
         return dbUserRepository
