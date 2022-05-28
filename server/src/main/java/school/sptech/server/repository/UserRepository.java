@@ -15,6 +15,11 @@ import school.sptech.server.model.User;
 
 public interface UserRepository extends JpaRepository<User, Integer> {
 
+    User findUserByEmailAndPassword(String email,String password);
+
+
+    boolean existsByEmailAndPassword(String email,String password);
+
     void deleteAllByIdInBatch(Iterable<Integer> ids);
 
     void deleteAllInBatch();
