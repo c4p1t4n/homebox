@@ -31,9 +31,9 @@ public class CategoryController {
     }
 
     @PostMapping
-    public ResponseEntity<Category> postCategory(@RequestBody @Valid Category newCategory) {
+    public ResponseEntity<Void> postCategory(@RequestBody @Valid Category newCategory) {
         dbRepositoryCategory.save(newCategory);
-        return ResponseEntity.status(201).body(newCategory);
+        return ResponseEntity.status(201).build();
     }
 
     @GetMapping("/{idCategory}")
