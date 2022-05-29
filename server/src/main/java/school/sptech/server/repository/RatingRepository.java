@@ -10,4 +10,6 @@ public interface RatingRepository extends JpaRepository<Rating, Integer> {
     @Query("select AVG(rat.rating) from Rating rat where rat.accomplishedService.scheduling.service.worker.id = ?1 GROUP BY rat.accomplishedService.scheduling.service.worker.id")
     Double getAvgRatingForWorker(Integer idWorker);
 
+    boolean existsByAccomplishedServiceSchedulingIdScheduling(Integer id);
+
 }
