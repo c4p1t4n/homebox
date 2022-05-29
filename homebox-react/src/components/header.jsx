@@ -31,11 +31,14 @@ function Header(props) {
                             />
                         </div>
                     </div>
-                    <div className="profile">
-                        <p>Wesley</p>
+                    <div className="profile" onClick={profileSwitch}>
+                        <p>
+                            {JSON.parse(sessionStorage.getItem("user"))?.name ??
+                                ""}
+                        </p>
                         <img src={profile} alt="" />
                     </div>
-                    <div className="profileOpenDiv">
+                    <div className="profileOpenDiv" id="profileMenu">
                         <a href="#">
                             <p>Perfil</p>
                         </a>
@@ -43,14 +46,28 @@ function Header(props) {
                             <p>Chats</p>
                         </a>
                         <img src={lineProfileOpen} alt="" />
-                        <a href="#">
-                            <p id="logoff">Logoff</p>
-                        </a>
+                        <p id="logoff" onClick={logOff}>
+                            Logoff
+                        </p>
                     </div>
                 </div>
             </div>
         </header>
     )
+}
+
+const logOff = e => {
+    sessionStorage.clear()
+    window.location.href = "http://127.0.0.1:5500/website/index.html"
+}
+
+const profileSwitch = e => {
+    e.preventDefault()
+    const profile = document.querySelector(".profile")
+    const profileOpenDiv = document.querySelector(".profileOpenDiv")
+
+    profileOpenDiv.style.display =
+        profileOpenDiv.style.display === "flex" ? "none" : "flex"
 }
 
 const keyStroke = e => {
