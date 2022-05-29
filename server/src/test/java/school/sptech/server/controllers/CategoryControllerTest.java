@@ -181,4 +181,30 @@ class CategoryControllerTest {
         assertNull(response.getBody());
     }
 
+    @Test
+    @DisplayName("Se não houverem categorias cadastradas, getReport() deve retornar 204 SEM corpo")
+    void testGetReportEmpty() {
+        when(dbRepositoryCategory.findAll()).thenReturn(new ArrayList<>());
+        ResponseEntity<List<Category>> response = categoryController.getCategories();
+
+        assertEquals(204, response.getStatusCodeValue());
+        assertNull(response.getBody());
+    }
+
+    @Test
+    @DisplayName("Se houverem categorias cadastradas, getReport() deve retornar 200 e COM corpo")
+    void testGetReportWithBody(){
+        Category category1 = mock(Category.class);
+        Category category2 = mock(Category.class);
+        List<Category> mockList = List.of(category1, category2);
+
+        when(dbRepositoryCategory.findAll()).thenReturn(mockList);
+
+        ResponseEntity<List<Category>> response = categoryController.getCategories();
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertNotNull(response.getBody());
+        assertEquals(mockList, response.getBody());
+    }
+
 }

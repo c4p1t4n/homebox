@@ -72,12 +72,15 @@ public class CategoryController {
     @GetMapping("/report")
     public ResponseEntity<Object> getReport() {
         String report = "";
-
         List<Category> list = dbRepositoryCategory.findAll();
+
+        if (list.isEmpty()) {
+            return ResponseEntity.status(204).build();
+        }
+
         for (var categ : list) {
             report += categ.getIdCategory() + "," + categ.getName() + "\r\n";
         }
-
         return ResponseEntity
                 .status(200)
                 .header("content-type", "text/csv")
