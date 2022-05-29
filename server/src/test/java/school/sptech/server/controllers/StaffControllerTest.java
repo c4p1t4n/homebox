@@ -27,7 +27,7 @@ class StaffControllerTest {
 
     @Test
     @DisplayName("Sem staff deveria retornar 204 SEM corpo")
-    void getStaffEmpty() {
+    void testGetStaffEmpty() {
         when(dbRepositoryStaff.findAll()).thenReturn(new ArrayList<>());
         ResponseEntity<List<Staff>> response = staffController.getStaff();
 
@@ -37,7 +37,7 @@ class StaffControllerTest {
 
     @Test
     @DisplayName("Com staff deveria retornar 200 e COM corpo")
-    void getStaffWithBody(){
+    void testGetStaffWithBody(){
         Staff staff1 = mock(Staff.class);
         Staff staff2 = mock(Staff.class);
         List<Staff> mockList = List.of(staff1, staff2);
@@ -53,7 +53,7 @@ class StaffControllerTest {
 
     @Test
     @DisplayName("No cadastro de um staff, se der certo, deve retornar 201 SEM corpo")
-    void postStaffWithResult() {
+    void testPostStaffWithResult() {
         Staff staff1 = mock(Staff.class);
         when(dbRepositoryStaff.save(staff1)).thenReturn(new Staff());
 
