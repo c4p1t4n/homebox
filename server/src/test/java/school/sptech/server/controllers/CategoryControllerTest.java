@@ -28,7 +28,7 @@ class CategoryControllerTest {
 
     @Test
     @DisplayName("Sem categorias deveria retornar 204 SEM corpo")
-    void getCategoriesEmpty() {
+    void testGetCategoriesEmpty() {
         when(dbRepositoryCategory.findAll()).thenReturn(new ArrayList<>());
         ResponseEntity<List<Category>> response = categoryController.getCategories();
 
@@ -38,7 +38,7 @@ class CategoryControllerTest {
 
     @Test
     @DisplayName("Com categorias deveria retornar 200 e COM corpo")
-    void getCategoriesWithBody(){
+    void testGetCategoriesWithBody(){
         Category category1 = mock(Category.class);
         Category category2 = mock(Category.class);
         List<Category> mockList = List.of(category1, category2);
@@ -54,7 +54,7 @@ class CategoryControllerTest {
 
     @Test
     @DisplayName("No cadastro de uma categoria, se der certo, deve retornar 201 SEM corpo")
-    void postCategoryWithResult() {
+    void testPostCategoryWithResult() {
         Category category1 = mock(Category.class);
         when(dbRepositoryCategory.save(category1)).thenReturn(new Category());
 
@@ -66,7 +66,7 @@ class CategoryControllerTest {
 
     @Test
     @DisplayName("No cadastro de uma categoria, se der errado, deve retornar 404 SEM corpo")
-    void postCategoryWithoutResult() {
+    void testPostCategoryWithoutResult() {
         Category category1 = null;
         when(dbRepositoryCategory.save(category1)).thenReturn(null);
 
@@ -78,7 +78,7 @@ class CategoryControllerTest {
 
     @Test
     @DisplayName("No filtro por id, se encontrar, deve retornar 200 COM corpo")
-    void filterByIdWithResult() {
+    void testFilterByIdWithResult() {
         Category category1 = new Category(1, "Elétrica");
         Integer idTest = 1;
         when(dbRepositoryCategory.existsById(idTest)).thenReturn(true);
@@ -92,7 +92,7 @@ class CategoryControllerTest {
 
     @Test
     @DisplayName("No filtro por id, se não encontrar, deve retornar 404 sem corpo")
-    void filterByIdWithouResult() {
+    void testFilterByIdWithouResult() {
         Integer idTest = 1;
         when(dbRepositoryCategory.findByIdCategory(idTest)).thenReturn(new ArrayList<>());
 
@@ -104,7 +104,7 @@ class CategoryControllerTest {
 
     @Test
     @DisplayName("No filtro por nome, se encontrar, deve retornar 200 COM corpo")
-    void filterByNameWithResult() {
+    void testFilterByNameWithResult() {
         Category category1 = mock(Category.class);
         Category category2 = mock(Category.class);
         List<Category> mockList = List.of(category1, category2);
@@ -121,7 +121,7 @@ class CategoryControllerTest {
 
     @Test
     @DisplayName("No filtro por nome, se não encontrar, deve retornar 204 sem corpo")
-    void filterByNameWithouResult() {
+    void testFilterByNameWithouResult() {
         String filter = "Elétrica";
         when(dbRepositoryCategory.findByNameIgnoreCase(filter)).thenReturn(new ArrayList<>());
 
@@ -133,7 +133,7 @@ class CategoryControllerTest {
 
     @Test
     @DisplayName("No delete por id, se encontrar, deve retornar 200 SEM corpo")
-    void DeleteByIdWithResult() {
+    void testDeleteByIdWithResult() {
         Integer idTest = 1;
         when(dbRepositoryCategory.existsByIdCategory(idTest)).thenReturn(true);
         when(dbRepositoryCategory.findByIdCategory(idTest)).thenReturn(new ArrayList<>());
@@ -146,7 +146,7 @@ class CategoryControllerTest {
 
     @Test
     @DisplayName("No delete por id, se não encontrar, deve retornar 404 sem corpo")
-    void DeleteByIdWithouResult() {
+    void testDeleteByIdWithouResult() {
         Integer idTest = 1;
         when(dbRepositoryCategory.findByIdCategory(idTest)).thenReturn(new ArrayList<>());
 
@@ -158,7 +158,7 @@ class CategoryControllerTest {
 
     @Test
     @DisplayName("Na busca de um id por nome, se encontrar, deve retornar 200 COM corpo")
-    void getIdByNameWithResult() {
+    void testGetIdByNameWithResult() {
         Category category1 = new Category(1, "Elétrica");
         String name = "Elétrica";
         when(dbRepositoryCategory.findIdCategoryByName(name)).thenReturn(category1.getIdCategory());
@@ -171,7 +171,7 @@ class CategoryControllerTest {
 
     @Test
     @DisplayName("Na busca de um id por nome, se não encontrar, deve retornar 404 SEM corpo")
-    void getIdByNameWithouResult() {
+    void testGetIdByNameWithouResult() {
         String name = "Elétrica";
         when(dbRepositoryCategory.findIdCategoryByName(name)).thenReturn(null);
 
