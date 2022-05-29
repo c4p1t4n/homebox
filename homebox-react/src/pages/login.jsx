@@ -80,7 +80,11 @@ const login = e => {
     //         console.log(response)
     //         if (response.status === 201) {
     //             console.log("SUCESSO")
-    //             window.location.assign("/")
+    //             sessionStorage.setItem(
+    //                 "user",
+    //                 JSON.stringify({...response.user})
+    //             )
+    //             window.location.href = "/"
     //         } else if (response.status === 400) {
     //             console.log("DEU RUIM")
     //         }
@@ -94,6 +98,7 @@ const login = e => {
             console.log(response)
             if (response.status === 200) {
                 console.log("SUCESSO")
+                sessionStorage.setItem("user", JSON.stringify({...response}))
                 window.location.href = "/"
             }
         })
