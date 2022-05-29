@@ -1,6 +1,6 @@
 package school.sptech.server.model;
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
+// import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "category")
@@ -12,7 +12,7 @@ public class Category {
     private Integer idCategory;
 
     @Column(name = "name")
-    @NotBlank
+    // @NotBlank
     private String name;
 
     public Category() {
