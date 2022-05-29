@@ -24,7 +24,6 @@ const frequent_search = "'pintor'"
 function Home() {
     return (
         <>
-
             <Header />
             <div className="container">
                 <div className="body">
@@ -129,6 +128,9 @@ function Home() {
                 </div>
             </div>
             <Footer />
+
+
+
         </>
     )
 }
