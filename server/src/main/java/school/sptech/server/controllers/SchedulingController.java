@@ -60,8 +60,8 @@ public class SchedulingController {
     public ResponseEntity<Scheduling> getId(@PathVariable Integer id) {
         Optional<Scheduling> scheduling = dbRepositoryScheduling.findById(id);
 
-        return scheduling.isPresent()
-                ? status(204).build()
+        return !scheduling.isPresent()
+                ? status(404).build()
                 : status(200).body(scheduling.get());
     }
 
@@ -133,7 +133,7 @@ public class SchedulingController {
 
         Scheduling scheduling = schedulingOptional.get();
 
-        if (dbRepositoryAccomplishedService.existsById(scheduling.getIdScheduling())) {
+        if (dbRepositoryAccomplishedService.existsBySchedulingIdScheduling(scheduling.getIdScheduling())) {
             return status(400).body("O serviço relacionado a esse agendamento ja foi prestado");
         }
 
@@ -162,12 +162,12 @@ public class SchedulingController {
         Scheduling scheduling = schedulingOptional.get();
 
         Optional<AccomplishedService> accomplishedService = dbRepositoryAccomplishedService
-                .findById(scheduling.getIdScheduling());
+                .findBySchedulingIdScheduling(scheduling.getIdScheduling());
 
         if (!accomplishedService.isPresent()) {
             return status(400).body("O serviço relacionado a esse agendamento ainda não foi prestado");
         }
-        if (dbRepositoryRating.existsById(scheduling.getIdScheduling())) {
+        if (dbRepositoryRating.existsByAccomplishedServiceSchedulingIdScheduling(scheduling.getIdScheduling())) {
             return status(400).body("O serviço relacionado a esse agendamento já foi prestado e avaliado");
         }
 
@@ -194,21 +194,21 @@ public class SchedulingController {
 
         Scheduling scheduling = schedulingOptional.get();
 
-        if (!dbRepositoryAccomplishedService.existsById(scheduling.getIdScheduling())) {
+        if (!dbRepositoryAccomplishedService.existsBySchedulingIdScheduling(scheduling.getIdScheduling())) {
             return status(400).body("O serviço relacionado a esse agendamento ainda não foi prestado");
         }
-        if (dbRepositoryRating.existsById(scheduling.getIdScheduling())) {
+        if (dbRepositoryRating.existsByAccomplishedServiceSchedulingIdScheduling(scheduling.getIdScheduling())) {
             return status(400).body("O serviço relacionado a esse agendamento já foi prestado e avaliado");
         }
 
         SchedulingStatus schedulingStatus = null;
-        if (!dbRepositorySchedulingStatus.existsByServiceStatusAndSchedulingIdScheduling("rated",
+        if (dbRepositorySchedulingStatus.existsByServiceStatusAndSchedulingIdScheduling("rated",
                 scheduling.getIdScheduling())) {
             schedulingStatus = dbRepositorySchedulingStatus
-                    .save(new SchedulingStatus("rated", LocalDate.now(), scheduling));
+                    .findFirstBySchedulingIdSchedulingOrderByStatusDateDesc(scheduling.getIdScheduling());
         } else {
             schedulingStatus = dbRepositorySchedulingStatus
-                    .findFirstBySchedulingIdSchedulingOrderByStatusDateDesc(scheduling.getIdScheduling());
+                    .save(new SchedulingStatus("rated", LocalDate.now(), scheduling));
         }
 
         return status(201).body(schedulingStatus);
