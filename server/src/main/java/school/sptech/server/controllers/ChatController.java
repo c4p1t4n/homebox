@@ -43,7 +43,6 @@ public class ChatController {
         UserHasChat WorkerChatAccess = new UserHasChat(idWorker, newChat.getIdChat());
 
         Msg autoMsg = dbRepositoryMsg.findByAutomaticAndFkUser('y', idWorker);
-        System.out.println(autoMsg.getMessage());
 
         if (Objects.nonNull(autoMsg)) {
 

@@ -66,10 +66,7 @@ public class ServiceController {
 
         Service service = new Service(worker.get(), category.get(), serviceBody.getName(), serviceBody.getDescription(),
                 serviceBody.getReferencePrice());
-
-        System.out.println("#####################################################");
-        System.out.println(service.getIdService());
-        System.out.println("#####################################################");
+                
         service = dbRepositoryService.save(service);
 
         return status(201).body(service);

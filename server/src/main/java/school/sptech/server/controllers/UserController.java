@@ -182,8 +182,6 @@ public class UserController {
     @PostMapping(value = "/category/{value}")
     public ResponseEntity<List<User>> getWorkersByCategory(@PathVariable String value) {
         if (!dbRepositoryCategory.existsByNameContainsIgnoreCase(value)) {
-            System.out.println(dbRepositoryCategory.findAll());
-            System.out.println(value);
             return status(404).build();
         }
 
