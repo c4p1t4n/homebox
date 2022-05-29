@@ -3,7 +3,6 @@ import "../assets/css/homePage.css"
 import Card from "../components/card"
 import Footer from "../components/footer"
 import Header from "../components/header"
-import HeaderProfileOpen from "../components/headerProfileOpen"
 import FrequentSearchCard from "../components/frequentSearchCard"
 import FrequentSearchCardDistance from "../components/frequentSearchCardDistance"
 
@@ -25,7 +24,6 @@ const frequent_search = "'pintor'"
 function Home() {
     return (
         <>
-
             <Header />
             <div className="container">
                 <div className="body">
@@ -130,6 +128,9 @@ function Home() {
                 </div>
             </div>
             <Footer />
+
+
+
         </>
     )
 }

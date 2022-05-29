@@ -2,7 +2,7 @@ import "../assets/css/searchResult.css"
 
 import CardSearch from "../components/cardSearch"
 import Header from "../components/header"
-
+import api from "../api"
 import imgJose from "../assets/img/joseRicardoCustumer.png"
 import {useEffect, useState} from "react"
 import {search} from "../assets/js/search"
@@ -25,7 +25,7 @@ function SearchResult() {
 
     return (
         <>
-            <Header search={`${searchValue}`}/>
+            <Header search={`${searchValue}`} />
             <div className="container">
                 <div className="body">
                     <h2>Exibindo resultado para {`"${searchValue}"`}</h2>

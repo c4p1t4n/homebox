@@ -66,7 +66,8 @@ body {
 .card img {
     height: 100px;
 }
-.cardBlue img{
+
+.cardBlue img {
     height: 100px;
 }
 
@@ -83,26 +84,29 @@ body {
 .access img {
     height: 28px;
 }
-.cardCustumerDiv1{
+
+.cardCustumerDiv1 {
     display: flex;
     align-items: center;
     width: 90%;
 }
-.cardCustumerDiv2{
+
+.cardCustumerDiv2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     font-weight: bold;
     overflow: auto;
-    overflow-x:auto;
+    overflow-x: auto;
 }
 
 
-.cardCustumerDiv1 .arrows{
+.cardCustumerDiv1 .arrows {
     height: 60px;
     margin: 2%;
 }
+
 .cardCustumer3 {
     display: flex;
     flex-direction: column;
@@ -112,6 +116,7 @@ body {
     width: 300px;
     padding: 2%;
     margin: 2%;
+    font-size: 20px;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.25);
     height: 355px;
     justify-content: space-between;
@@ -122,23 +127,23 @@ body {
     padding: 0;
 }
 
-.cardCustumer3 .imgCustumer{
+.cardCustumer3 .imgCustumer {
     border-radius: 20px;
     height: 140px;
 }
 
-.avaliacao{
+.avaliacao {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 63%;
 }
 
-.stars{
+.stars {
     height: 40px;
 }
 
-.cardCustumerDistanceDiv{
+.cardCustumerDistanceDiv {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -146,7 +151,7 @@ body {
     font-weight: bold;
 }
 
-.cardCustumerDistance{
+.cardCustumerDistance {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -160,7 +165,7 @@ body {
     justify-content: space-between;
 }
 
-.cardCustumerDistance .imgCustumer{
+.cardCustumerDistance .imgCustumer {
     border-radius: 20px;
     height: 140px;
 }
@@ -168,13 +173,14 @@ body {
 .cardCustumerDistance p {
     margin: 0;
     padding: 0;
+    font-size: 20px;
 }
 
-.cardCustumerDistance .stars{
+.cardCustumerDistance .stars {
     height: 38px;
 }
 
 
-.white{
+.white {
     color: white;
 }

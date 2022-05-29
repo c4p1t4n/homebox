@@ -3,6 +3,8 @@ import searchIcon from "../assets/img/searchIconBlack.png"
 import profile from "../assets/img/profile.png"
 import "../assets/css/header.css"
 import {search} from "../assets/js/search"
+import "../assets/css/headerProfileOpen.css"
+import lineProfileOpen from "../assets/img/lineBlackProfileOpen.png"
 
 function Header(props) {
     return (
@@ -32,6 +34,18 @@ function Header(props) {
                     <div className="profile">
                         <p>Wesley</p>
                         <img src={profile} alt="" />
+                    </div>
+                    <div className="profileOpenDiv">
+                        <a href="#">
+                            <p>Perfil</p>
+                        </a>
+                        <a href="#">
+                            <p>Chats</p>
+                        </a>
+                        <img src={lineProfileOpen} alt="" />
+                        <a href="#">
+                            <p id="logoff">Logoff</p>
+                        </a>
                     </div>
                 </div>
             </div>
