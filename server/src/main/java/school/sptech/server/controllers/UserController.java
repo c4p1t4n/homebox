@@ -151,6 +151,7 @@ public class UserController {
         return categories.isEmpty() ? status(204).build() : status(200).body(categories);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping(value = "/search/{value}")
     public ResponseEntity<List<UserSearchQueryResult>> search(@PathVariable String value) {
         ResponseEntity<List<User>> response = getWorkersByCategory(value);
@@ -177,6 +178,7 @@ public class UserController {
         return status(200).body(users);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping(value = "/category/{value}")
     public ResponseEntity<List<User>> getWorkersByCategory(@PathVariable String value) {
         if (!dbRepositoryCategory.existsByNameContainsIgnoreCase(value)) {
@@ -194,6 +196,7 @@ public class UserController {
         return status(200).body(users);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping(value = "/avg-rating/{idUser}")
     public ResponseEntity<Double> getAvgRating(@PathVariable Integer idUser) {
         if (!dbUserService.existsById(idUser)) {
