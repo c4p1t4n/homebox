@@ -4,6 +4,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh;
 }
 
 body p {
@@ -21,13 +22,14 @@ body p {
 .body h2 {
     text-align: center;
     font-weight: bold;
+    font-size: 22px;
 }
 
 .cardCustumerDiv {
     display: flex;
     justify-content: space-between;
     width: 70%;
-    height: 450px;
+    height: 420px;
     overflow: auto;
     flex-direction: column;
     align-items: center;
@@ -41,7 +43,7 @@ body p {
 
 .cardCustumerDiv p {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .cardCustumer {
@@ -60,7 +62,7 @@ body p {
 .cardCustumer .imgCustumer {
     height: 150px;
     border-radius: 10%;
-    border: #0A3969 solid ;
+    border: #0A3969 solid;
 }
 
 .cardCustumer .imgStars {

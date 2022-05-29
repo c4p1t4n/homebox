@@ -1,4 +1,4 @@
-
+import fourStars from "../assets/img/fourStars.png"
 
 function CardSearch(props) {
   return (
@@ -7,13 +7,13 @@ function CardSearch(props) {
         <div className="infoCustumer">
             <div className="nameCustumer">
                 <p>{props.name}</p>
-                <p>{props.category}</p>
+                <p>Pintor</p>
             </div>
             <div className="assessment">
-                <img className="imgStars" src="./assets/img/fourStars.png" alt=""/>
+                <img className="imgStars" src={fourStars} alt=""/>
                 <div className="assessment2">
                     <p>Avaliação:</p>
-                    <p>{props.aval}/5</p>
+                    <p>4/5</p>
                 </div>
             </div>
         </div>

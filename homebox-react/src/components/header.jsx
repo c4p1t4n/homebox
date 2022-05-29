@@ -2,6 +2,8 @@ import logo from "../assets/img/icon/logo-removebg-preview.png"
 import searchIcon from "../assets/img/searchIconBlack.png"
 import profile from "../assets/img/profile.png"
 import "../assets/css/header.css"
+import "../assets/css/headerProfileOpen.css"
+import lineProfileOpen from "../assets/img/lineBlackProfileOpen.png"
 
 function Header() {
     return (
@@ -21,9 +23,17 @@ function Header() {
                         <p>Wesley</p>
                         <img src={profile} alt="" />
                     </div>
+                    <div  className="profileOpenDiv">
+                        <a href=""><p>Perfil</p></a>
+                        <a href=""><p>Chats</p></a>
+                        <img src={lineProfileOpen} alt="" />
+                        <a href=""><p id="logoff">Logoff</p></a>
+                    </div>
                 </div>
             </div>
         </header>
+
+
     );
 }
 
