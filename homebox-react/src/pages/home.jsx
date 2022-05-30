@@ -18,12 +18,14 @@ import imgLeo from "../assets/img/leonardoCustumer.png"
 import img5Stars from "../assets/img/fiveStarts.png"
 import img4Stars from "../assets/img/fourStars.png"
 import img3Stars from "../assets/img/threeStars.png"
+import VLibras from "@djpfs/react-vlibras"
 
 const frequent_search = "'pintor'"
 
 function Home() {
     return (
         <>
+            <VLibras/>
             <Header />
             <div className="container">
                 <div className="body">
