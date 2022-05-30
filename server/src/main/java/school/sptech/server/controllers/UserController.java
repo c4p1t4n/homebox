@@ -9,6 +9,10 @@ import school.sptech.server.model.User;
 import school.sptech.server.model.UserCustomer;
 import school.sptech.server.model.UserWorker;
 import school.sptech.server.request.LoginRequest;
+import school.sptech.server.repository.CategoryRepository;
+import school.sptech.server.repository.RatingRepository;
+import school.sptech.server.repository.ServiceRepository;
+import school.sptech.server.response.UserSearchQueryResult;
 import school.sptech.server.service.UserService;
 
 import static org.springframework.http.ResponseEntity.status;
@@ -17,6 +21,7 @@ import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -26,6 +31,14 @@ public class UserController {
 
     @Autowired
     private UserService dbServiceUser;
+
+    @Autowired
+    private CategoryRepository dbRepositoryCategory;
+
+    @Autowired
+    private ServiceRepository dbRepositoryService;
+    @Autowired
+    private RatingRepository dbRepositoryRating;
 
     @PostMapping("/customer")
     public ResponseEntity<Object> registerUserCustomer(@RequestBody UserCustomer newUser) {
@@ -142,4 +155,60 @@ public class UserController {
         return categories.isEmpty() ? status(204).build() : status(200).body(categories);
     }
 
+    @PostMapping(value = "/search/{value}")
+    public ResponseEntity<List<UserSearchQueryResult>> search(@PathVariable String value) {
+        ResponseEntity<List<User>> response = getWorkersByCategory(value);
+        List<UserSearchQueryResult> users;
+
+        if (response.getStatusCodeValue() == 404 || response.getStatusCodeValue() == 204) {
+            users = dbRepositoryService.searchUsers(value).stream()
+                    .map((user) -> new UserSearchQueryResult(user,
+                            dbRepositoryRating.getAvgRatingForWorker(user.getId())))
+                    .collect(Collectors.toList());
+
+        } else {
+            users = response
+                    .getBody()
+                    .stream()
+                    .map((user) -> new UserSearchQueryResult(user,
+                            dbRepositoryRating.getAvgRatingForWorker(user.getId())))
+                    .collect(Collectors.toList());
+        }
+
+        if (users.isEmpty()) {
+            return status(204).build();
+        }
+        return status(200).body(users);
+    }
+
+    @PostMapping(value = "/category/{value}")
+    public ResponseEntity<List<User>> getWorkersByCategory(@PathVariable String value) {
+        if (!dbRepositoryCategory.existsByNameContainsIgnoreCase(value)) {
+            System.out.println(dbRepositoryCategory.findAll());
+            System.out.println(value);
+            return status(404).build();
+        }
+
+        List<User> users = dbRepositoryService.findByCategoryNameContainsIgnoreCase(value);
+
+        if (users.isEmpty()) {
+            return status(204).build();
+        }
+
+        return status(200).body(users);
+    }
+
+    @PostMapping(value = "/avg-rating/{idUser}")
+    public ResponseEntity<Double> getAvgRating(@PathVariable Integer idUser) {
+        if (!dbServiceUser.existsById(idUser)) {
+            return status(404).build();
+        }
+        Double rating = dbRepositoryRating.getAvgRatingForWorker(idUser);
+
+        if (rating == null) {
+            return status(204).build();
+        }
+
+        return status(200).body(rating);
+    }
 }

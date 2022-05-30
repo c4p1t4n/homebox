@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import school.sptech.server.model.Category;
+
 import school.sptech.server.model.User;
 import school.sptech.server.repository.ServiceRepository;
 import school.sptech.server.repository.UserRepository;
@@ -14,7 +15,6 @@ import java.security.*;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
 @Service
 public class UserService {
 
@@ -84,7 +84,7 @@ public class UserService {
     }
 
     public List<Category> getWorkerCategories(Integer id) {
-        List<Category> categories = dbRepositoryService.findDistinctCategoryByWorkerId(id);
+        List<Category> categories = dbRepositoryService.findDistinctByWorkerId(id);
 
         return categories;
     }
