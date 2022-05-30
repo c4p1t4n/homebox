@@ -33,20 +33,24 @@ public class CategoryController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping
-    public ResponseEntity<Void> postCategory(@RequestBody @Valid Category newCategory) {
+    public ResponseEntity<Object> postCategory(@RequestBody @Valid Category newCategory) {
+        if (Objects.isNull(newCategory)) {
+            return ResponseEntity.status(404).build();
+        }
+
+
         dbRepositoryCategory.save(newCategory);
         return ResponseEntity.status(201).build();
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/{idCategory}")
-    public ResponseEntity<List<Category>> getCategoryById(@PathVariable Integer idCategory) {
-        List<Category> categoryList = dbRepositoryCategory.findByIdCategory(idCategory);
-
-        if (!dbRepositoryCategory.existsByIdCategory(idCategory)) {
+    public ResponseEntity<Category> getCategoryById(@PathVariable Integer idCategory) {
+        if (!dbRepositoryCategory.existsById(idCategory)) {
             return ResponseEntity.status(404).build();
         }
-        return ResponseEntity.status(200).body(categoryList);
+
+        return ResponseEntity.status(200).body(dbRepositoryCategory.findById(idCategory).get());
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -75,12 +79,15 @@ public class CategoryController {
     @GetMapping("/report")
     public ResponseEntity<Object> getReport() {
         String report = "";
-
         List<Category> list = dbRepositoryCategory.findAll();
+
+        if (list.isEmpty()) {
+            return ResponseEntity.status(204).build();
+        }
+
         for (var categ : list) {
             report += categ.getIdCategory() + "," + categ.getName() + "\r\n";
         }
-
         return ResponseEntity
                 .status(200)
                 .header("content-type", "text/csv")
