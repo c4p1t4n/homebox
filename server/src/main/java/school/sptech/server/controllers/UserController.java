@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.*;
 
 import school.sptech.server.model.Category;
 import school.sptech.server.model.User;
+import school.sptech.server.model.UserCustomer;
+import school.sptech.server.model.UserWorker;
+import school.sptech.server.request.LoginRequest;
 import school.sptech.server.repository.CategoryRepository;
 import school.sptech.server.repository.RatingRepository;
 import school.sptech.server.repository.ServiceRepository;
@@ -14,7 +17,10 @@ import school.sptech.server.service.UserService;
 
 import static org.springframework.http.ResponseEntity.status;
 
+import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,7 +30,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class UserController {
 
     @Autowired
-    private UserService dbUserService;
+    private UserService dbServiceUser;
 
     @Autowired
     private CategoryRepository dbRepositoryCategory;
@@ -42,7 +48,7 @@ public class UserController {
             return status(400).build();
         }
         newUser.setAuthenticated('n');
-        User user = dbUserService.saveUser(newUser);
+        User user = dbServiceUser.saveUser(newUser);
 
         return status(201).body(user);
 
@@ -51,8 +57,8 @@ public class UserController {
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/customer")
     public ResponseEntity<List<User>> getUserCustomer() {
-        return !dbUserService.getAllCustomer().isEmpty()
-                ? status(200).body(dbUserService.getAllCustomer())
+        return !dbServiceUser.getAllCustomer().isEmpty()
+                ? status(200).body(dbServiceUser.getAllCustomer())
                 : status(204).build();
     }
 
@@ -65,7 +71,7 @@ public class UserController {
                 return status(400).build();
             }
             newUser.setAuthenticated('n');
-            User user = dbUserService.saveUser(newUser);
+            User user = dbServiceUser.saveUser(newUser);
 
             return status(201).body(user);
 
@@ -78,37 +84,43 @@ public class UserController {
     @GetMapping("/worker")
     public ResponseEntity<List<User>> getUserWorker() {
 
-        return !dbUserService.getAllWorkers().isEmpty() ? status(200).body(dbUserService.getAllWorkers())
+        return !dbServiceUser.getAllWorkers().isEmpty() ? status(200).body(dbServiceUser.getAllWorkers())
                 : status(204).build();
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping()
     public ResponseEntity<List<User>> getUser() {
-        return !dbUserService.getAll().isEmpty() ? status(200).body(dbUserService.getAll())
+        return !dbServiceUser.getAll().isEmpty() ? status(200).body(dbServiceUser.getAll())
                 : status(204).build();
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
-    @GetMapping("/login/{userLogin}/{userPassword}")
-    public ResponseEntity<Object> getLoginUser(@PathVariable String userLogin, @PathVariable String userPassword) {
-        List<User> users = dbUserService.getAll();
-
-        for (User user : users) {
-            if (user.getEmail().equals(userLogin) && user.getPassword().equals(userPassword)) {
-                user.login(userLogin, userPassword);
-                return status(200).build();
-            }
-
+    @PostMapping("/login")
+    public ResponseEntity<User> LoginUser(@RequestBody LoginRequest loginCredentials) {
+        if (!dbServiceUser.existsByEmail(loginCredentials.getEmail())) {
+            return status(404).build();
         }
-        return status(401).build();
+
+        User user = null;
+
+        try {
+            user = dbServiceUser.login(loginCredentials.getEmail(), loginCredentials.getPassword());
+        } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        if (Objects.isNull(user)) {
+            return status(400).build();
+        }
+
+        return status(200).body(user);
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/logoff/{userLogin}")
     public ResponseEntity<Object> logoffUser(@PathVariable String userLogin) {
 
-        List<User> users = dbUserService.getAll();
+        List<User> users = dbServiceUser.getAll();
 
         for (User user : users) {
             if (user.getEmail().equals(userLogin) & user.getAuthenticated().equals('s')) {
@@ -128,7 +140,7 @@ public class UserController {
     public ResponseEntity<String> getReport() {
         String report = "";
 
-        List<User> list = dbUserService.getAllWorkers();
+        List<User> list = dbServiceUser.getAllWorkers();
         for (var user : list) {
             report += user.getId() + "," + user.getName() + "," + user.getEmail() + "," + user.getPassword() + ","
                     + user.getCpf() +
@@ -146,7 +158,7 @@ public class UserController {
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping(value = "/worker/categories/{id}")
     public ResponseEntity<List<Category>> getWorkerCategories(@PathVariable Integer id) {
-        List<Category> categories = dbUserService.getWorkerCategories(id);
+        List<Category> categories = dbServiceUser.getWorkerCategories(id);
 
         return categories.isEmpty() ? status(204).build() : status(200).body(categories);
     }
@@ -197,7 +209,7 @@ public class UserController {
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping(value = "/avg-rating/{idUser}")
     public ResponseEntity<Double> getAvgRating(@PathVariable Integer idUser) {
-        if (!dbUserService.existsById(idUser)) {
+        if (!dbServiceUser.existsById(idUser)) {
             return status(404).build();
         }
         Double rating = dbRepositoryRating.getAvgRatingForWorker(idUser);

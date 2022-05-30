@@ -9,6 +9,9 @@ import school.sptech.server.model.User;
 import school.sptech.server.repository.ServiceRepository;
 import school.sptech.server.repository.UserRepository;
 
+import java.io.UnsupportedEncodingException;
+import java.math.BigInteger;
+import java.security.*;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -38,6 +41,25 @@ public class UserService {
                 .stream()
                 .filter(user -> user.getType().equals("customer"))
                 .collect(Collectors.toList());
+
+    }
+
+    public String encriptPassword(String password) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+        MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
+        messageDigest.update(password.getBytes("UTF-8"));
+        return new BigInteger(1, messageDigest.digest()).toString(16);
+    }
+
+    public User login(String email, String password) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+
+        password = encriptPassword(password);
+
+        return dbUserRepository.findByEmailAndPassword(email, password);
+
+    }
+    public boolean existsByEmail(String email) {
+
+        return dbUserRepository.existsByEmail(email);
 
     }
 
