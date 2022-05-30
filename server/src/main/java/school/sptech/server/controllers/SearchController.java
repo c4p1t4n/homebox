@@ -1,6 +1,5 @@
 package school.sptech.server.controllers;
 
-import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -30,7 +29,7 @@ public class SearchController {
     private UserRepository dbRepositoryCustomer;
 
     @PostMapping
-    public ResponseEntity<Object> postSearchPerUser(@RequestBody @NotNull UserSearchRequest searchReq) {
+    public ResponseEntity<Object> postSearchPerUser(@RequestBody UserSearchRequest searchReq) {
         Search search = dbRepositorySearch.findByValue(searchReq.getValue());
         if (Objects.isNull(search)) {
             search = dbRepositorySearch.save(new Search(searchReq.getValue()));
@@ -56,7 +55,7 @@ public class SearchController {
         return ResponseEntity.status(404).build();
     }
 
-    @GetMapping("/{idUsuario}")
+    @GetMapping("/user/{idUsuario}")
     public ResponseEntity<List<Search>> getSearchPerUser(@PathVariable Integer idUsuario){
         if (dbRepositoryCustomer.existsById(idUsuario)){
             List<Search> list = dbRepositorySearchUser.findAllByFkUser(idUsuario);
