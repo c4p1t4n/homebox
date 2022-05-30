@@ -2,7 +2,6 @@ import "../assets/css/searchResult.css"
 
 import CardSearch from "../components/cardSearch"
 import Header from "../components/header"
-import api from "../api"
 import imgJose from "../assets/img/joseRicardoCustumer.png"
 import {useEffect, useState} from "react"
 import {search} from "../assets/js/search"
@@ -35,7 +34,7 @@ function SearchResult() {
                                 img={item.user?.picture ?? imgJose}
                                 name={item.user?.name}
                                 category={item.user?.category}
-                                aval={item.ranking ?? "N/A"}
+                                ranking={item.ranking ?? "N/A"}
                                 dist={item.distance ?? "N/A"}
                             />
                         ))}
