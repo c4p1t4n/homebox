@@ -10,7 +10,7 @@ function Login() {
     return (
         <body className="login_body">
             <div className="homebox_logo">
-                <a href="../index.html">
+                <a href="http://127.0.0.1:5500/website/index.html">
                     <img className="logo_homebox" src={logo} alt="" />
                 </a>
             </div>
@@ -41,9 +41,7 @@ function Login() {
                     </div>
                 </div>
                 <div className="div_button">
-                    <button loginBtn onClick={login}>
-                        Entrar
-                    </button>
+                    <button onClick={login}>Entrar</button>
                     <br />
                     <a href="/register">
                         <p>
@@ -72,38 +70,27 @@ const login = e => {
         return console.info("Preencha os campos para logar")
     }
 
-    // api.post("/users/login/", {
-    //     email,
-    //     password
-    // })
-    //     .then(response => {
-    //         console.log(response)
-    //         if (response.status === 201) {
-    //             console.log("SUCESSO")
-    //             sessionStorage.setItem(
-    //                 "user",
-    //                 JSON.stringify({...response.user})
-    //             )
-    //             window.location.href = "/"
-    //         } else if (response.status === 400) {
-    //             console.log("DEU RUIM")
-    //         }
-    //     })
-    //     .catch(err => {
-    //         console.error(err)
-    //     })
-
-    api.get(`/users/login/${email}/${password}`)
+    api.post("/users/login/", {
+        email,
+        password
+    })
         .then(response => {
             console.log(response)
             if (response.status === 200) {
                 console.log("SUCESSO")
-                sessionStorage.setItem("user", JSON.stringify({...response.data}))
+                sessionStorage.setItem(
+                    "user",
+                    JSON.stringify({...response.data})
+                )
                 window.location.href = "/"
+            } else if (response.status === 400) {
+                console.log("DEU RUIM")
+            } else if (response.status === 404) {
+                console.log("DEU MUITO RUIM")
             }
         })
         .catch(err => {
-            console.log("DEU RUIM")
+            console.error(err)
         })
 }
 

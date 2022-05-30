@@ -242,7 +242,7 @@ VALUES
     (
         NULL,
         'José',
-        'jose@gmail.com',
+        'jose1@gmail.com',
         SHA2("ExSenha1", 256),
         '12345678900',
         NULL,
