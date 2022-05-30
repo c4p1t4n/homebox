@@ -131,7 +131,14 @@
     color: white;
     font-size: xx-large;
 }
-
+.div_button button:hover {
+    width: 180px;
+    background: #0A3969;
+    border-radius: 30px;
+    color: white;
+    font-size: xx-large;
+    cursor: pointer;
+}
 .div_button a {
     text-decoration: none;
     color: #000000;

@@ -52,10 +52,17 @@ Header {
     border-radius: 0px 20px 20px 0px;
 }
 
+.searchIcon:hover{
+    border: black 0.5px solid;
+    cursor: pointer;
+}
+
 .searchIcon img {
     height: 25px;
 }
-
+.searchIcon img:hover {
+    height: 26px;
+}
 .profile {
     display: flex;
     justify-content: space-between;
