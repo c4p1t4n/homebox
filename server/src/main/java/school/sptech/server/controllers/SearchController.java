@@ -55,7 +55,7 @@ public class SearchController {
         }
         return ResponseEntity.status(404).build();
     }
-    
+
     @GetMapping("/{idUsuario}")
     public ResponseEntity<List<Search>> getSearchPerUser(@PathVariable Integer idUsuario){
         if (dbRepositoryCustomer.existsById(idUsuario)){
@@ -81,3 +81,4 @@ public class SearchController {
 
 
 }
+

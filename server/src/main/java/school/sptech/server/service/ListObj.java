@@ -2,7 +2,8 @@ package school.sptech.server.service;
 
 import school.sptech.server.model.UserWorker;
 
-public class ListObj<T>{
+@SuppressWarnings("unchecked")
+public class ListObj<T> {
 
     private T[] array;
     private int elemNumber;
@@ -15,8 +16,7 @@ public class ListObj<T>{
     public void add(T element) {
         if (elemNumber >= array.length) {
             System.out.println("Lista está cheia");
-        }
-        else {
+        } else {
             array[elemNumber++] = element;
         }
     }
@@ -24,8 +24,7 @@ public class ListObj<T>{
     public void show() {
         if (elemNumber == 0) {
             System.out.println("\nA lista está vazia.");
-        }
-        else {
+        } else {
             for (int i = 0; i < elemNumber; i++) {
                 System.out.println(array[i]);
             }
@@ -42,15 +41,15 @@ public class ListObj<T>{
         return -1;
     }
 
-    public boolean removeByIndex (int index) {
+    public boolean removeByIndex(int index) {
         if (index < 0 || index >= elemNumber) {
             System.out.println("\nÍndice inválido!");
             return false;
         }
         for (int i = index; i < elemNumber - 1; i++) {
-            array[i] = array[i+1];
+            array[i] = array[i + 1];
         }
-        elemNumber--;          // decrementa nroElem
+        elemNumber--; // decrementa nroElem
         return true;
     }
 
@@ -58,23 +57,23 @@ public class ListObj<T>{
         return removeByIndex(search(element));
     }
 
-    public int getSize(){
+    public int getSize() {
         return elemNumber;
     }
 
-    public T getElement(int index){
-        if (index < 0 || index >= elemNumber){
+    public T getElement(int index) {
+        if (index < 0 || index >= elemNumber) {
             return null;
         } else {
             return array[index];
         }
     }
 
-    public void clear(){
+    public void clear() {
         elemNumber = 0;
     }
 
-    public void overwriteObj(int index, T element){
+    public void overwriteObj(int index, T element) {
         array[index] = element;
     }
 
@@ -82,16 +81,15 @@ public class ListObj<T>{
 
         UserWorker aux;
 
-        for (int i = 0; i < v.getSize() - 1; i++){
-            for (int j = 1; j < v.getSize() - i; j++){
-                if (v.getElement(j-1).getId() > v.getElement(j).getId()){
+        for (int i = 0; i < v.getSize() - 1; i++) {
+            for (int j = 1; j < v.getSize() - i; j++) {
+                if (v.getElement(j - 1).getId() > v.getElement(j).getId()) {
                     aux = v.getElement(j);
-                    v.overwriteObj(j, v.getElement(j-1));
-                    v.overwriteObj(j-1, aux);
+                    v.overwriteObj(j, v.getElement(j - 1));
+                    v.overwriteObj(j - 1, aux);
                 }
             }
         }
     }
 
 }
-

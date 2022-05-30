@@ -113,13 +113,13 @@ CREATE TABLE user_has_tag (
 
 CREATE TABLE service (
     id_service INT PRIMARY KEY AUTO_INCREMENT,
-    fk_user int,
-    fk_category int,
+    worker_id_user int,
+    category_id_category int,
     name VARCHAR(100) NOT NULL,
     description TEXT,
     reference_price DECIMAL(7, 2),
-    FOREIGN KEY (fk_category) REFERENCES category(id_category),
-    FOREIGN KEY (fk_user) REFERENCES user(id_user)
+    FOREIGN KEY(category_id_category) REFERENCES category(id_category),
+    FOREIGN KEY(worker_id_user) REFERENCES user(id_user)
 );
 
 CREATE TABLE service_has_tag (
@@ -298,4 +298,38 @@ VALUES
         NULL,
         '12345678',
         'y'
+    );
+
+INSERT INTO
+    service (
+        worker_id_user,
+        category_id_category,
+        name,
+        description,
+        reference_price
+    )
+VALUES
+    (1, 1, "Troca de cano", "Troca de cano", 100.00),
+    (
+        1,
+        1,
+        "Desentupimento",
+        "Desentupimento de calhas e ralos",
+        200.00
+    ),
+    (2, 3, "Mesa", "Montagem de mesa", 50.00),
+    (2, 3, "Armario", "Montagem de armario", 160.00),
+    (
+        3,
+        4,
+        "Pintura de parede",
+        "Pintura de 1 parede",
+        400.00
+    ),
+    (
+        3,
+        4,
+        "Pintura de casa",
+        "Pintura de mais de 7 paredes",
+        5000.00
     );
