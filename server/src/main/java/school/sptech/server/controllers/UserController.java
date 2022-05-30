@@ -6,8 +6,6 @@ import org.springframework.web.bind.annotation.*;
 
 import school.sptech.server.model.Category;
 import school.sptech.server.model.User;
-import school.sptech.server.model.UserCustomer;
-import school.sptech.server.model.UserWorker;
 import school.sptech.server.request.LoginRequest;
 import school.sptech.server.repository.CategoryRepository;
 import school.sptech.server.repository.RatingRepository;
