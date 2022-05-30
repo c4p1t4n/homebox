@@ -163,7 +163,7 @@ class CategoryControllerTest {
         String name = "Elétrica";
         when(dbRepositoryCategory.findIdCategoryByName(name)).thenReturn(category1.getIdCategory());
 
-        ResponseEntity response = categoryController.getMethodName(name);
+        ResponseEntity<Integer> response = categoryController.getMethodName(name);
 
         assertEquals(200, response.getStatusCodeValue());
         assertEquals(category1.getIdCategory(), response.getBody());
@@ -175,7 +175,7 @@ class CategoryControllerTest {
         String name = "Elétrica";
         when(dbRepositoryCategory.findIdCategoryByName(name)).thenReturn(null);
 
-        ResponseEntity response = categoryController.getMethodName(name);
+        ResponseEntity<Integer> response = categoryController.getMethodName(name);
 
         assertEquals(404, response.getStatusCodeValue());
         assertNull(response.getBody());

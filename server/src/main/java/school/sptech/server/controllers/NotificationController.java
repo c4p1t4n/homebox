@@ -13,6 +13,7 @@ import school.sptech.server.repository.UserHasNotificationRepository;
 import school.sptech.server.request.UserIdListRequest;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -54,19 +55,16 @@ public class NotificationController {
             return ResponseEntity.status(404).build();
         }
         Optional<User> user = dbUserService.findById(idUser);
-        if(dbUserService.findById(idUser).isEmpty()){
+        if (dbUserService.findById(idUser).isEmpty()) {
 
-                return ResponseEntity.status(204).build();
-
+            return ResponseEntity.status(204).build();
 
         }
 
         List<UserHasNotification> list = dbRepositoryUserHasNotification.findByUser(user);
 
-
         return ResponseEntity.status(200).body(list);
     }
-
 
     @GetMapping(value = "/{idNotification}")
     public ResponseEntity<Notification> getNotification(@PathVariable Integer idNotification) {
@@ -80,13 +78,12 @@ public class NotificationController {
         return ResponseEntity.status(404).build();
     }
 
-
     @GetMapping(value = "/user/{idUser}/{idNotification}")
     public ResponseEntity<UserHasNotification> getNotificationForUser(
             @PathVariable Integer idNotification,
             @PathVariable Integer idUser) {
         List<UserHasNotification> list = dbRepositoryNotification
-                .findById(new UserHasNotificationKey(idNotification,idUser));
+                .findById(new UserHasNotificationKey(idNotification, idUser));
 
         if (list.isEmpty()) {
             return ResponseEntity.status(404).build();
@@ -95,36 +92,36 @@ public class NotificationController {
         return ResponseEntity.status(200).body(list.get(0));
     }
 
-
     @PostMapping
-    public ResponseEntity<Void> createNotification(@RequestBody Notification notification) {
+    public ResponseEntity<Notification> createNotification(@RequestBody Notification notification) {
 
-        dbRepositoryNotification.save(notification);
-        return ResponseEntity.status(201).build();
+        notification = dbRepositoryNotification.save(notification);
+        return ResponseEntity.status(201).body(notification);
     }
 
     @PostMapping(value = "/{idNotification}")
-    public ResponseEntity<Void> associateNotificationToUsers(@PathVariable Integer idNotification,
+    public ResponseEntity<List<UserHasNotification>> associateNotificationToUsers(@PathVariable Integer idNotification,
             @RequestBody UserIdListRequest idList) {
+        List<UserHasNotification> notifications = new ArrayList<UserHasNotification>();
         if (dbRepositoryNotification.existsById(idNotification)) {
             for (Integer id : idList.getUserIds()) {
                 if (dbUserService.existsById(id)) {
                     UserHasNotification userHasNotification = new UserHasNotification(id, idNotification,
                             LocalDate.now(), 'n');
-                    dbRepositoryUserHasNotification.save(userHasNotification);
+                    notifications.add(dbRepositoryUserHasNotification.save(userHasNotification));
                 }
 
             }
 
-            return ResponseEntity.status(201).build();
+            return ResponseEntity.status(201).body(notifications);
         }
         return ResponseEntity.status(404).build();
     }
 
     @PatchMapping(value = "/read/{fkUser}/{fkNotification}")
     public ResponseEntity<Void> readNotification(@PathVariable Integer fkUser, @PathVariable Integer fkNotification) {
-        if (dbRepositoryUserHasNotification.existsById(new UserHasNotificationKey(fkNotification,fkUser))) {
-            dbRepositoryUserHasNotification.readNotification( new UserHasNotificationKey(fkNotification,fkUser));
+        if (dbRepositoryUserHasNotification.existsById(new UserHasNotificationKey(fkNotification, fkUser))) {
+            dbRepositoryUserHasNotification.readNotification(new UserHasNotificationKey(fkNotification, fkUser));
             return ResponseEntity.status(200).build();
         }
         return ResponseEntity.status(404).build();
