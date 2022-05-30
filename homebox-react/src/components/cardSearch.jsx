@@ -4,6 +4,9 @@ function CardSearch(props) {
     // const backgroundImg = {
     //     backgroundImage: props.img
     // }
+    const styleRating = {
+        display: "inline"
+    }
 
     return (
         <div className="cardCustumer">
@@ -15,13 +18,12 @@ function CardSearch(props) {
             <div className="infoCustumer">
                 <div className="nameCustumer">
                     <p>{props.name}</p>
-                    <p>Pintor</p>
+                    <p>{props.category}</p>
                 </div>
                 <div className="assessment">
                     <img className="imgStars" src={fourStars} alt="" />
                     <div className="assessment2">
-                        <p>Avaliação:</p>
-                        <p>4/5</p>
+                        <p style={styleRating}>Avaliação: {""} {props.ranking}/5</p>
                     </div>
                 </div>
             </div>
