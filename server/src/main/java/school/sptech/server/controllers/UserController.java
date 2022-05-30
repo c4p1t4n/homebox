@@ -6,7 +6,16 @@ import org.springframework.web.bind.annotation.*;
 
 import school.sptech.server.model.Category;
 import school.sptech.server.model.User;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import school.sptech.server.model.UserCustomer;
+import school.sptech.server.model.UserWorker;
 import school.sptech.server.request.LoginRequest;
+>>>>>>> d7946715fbf16aaba532007849b354b77f6155e8
+=======
+import school.sptech.server.request.LoginRequest;
+>>>>>>> 07e90f68639e365b8cb707ab371bc99b0a80ac14
 import school.sptech.server.repository.CategoryRepository;
 import school.sptech.server.repository.RatingRepository;
 import school.sptech.server.repository.ServiceRepository;
@@ -42,8 +51,21 @@ public class UserController {
     @PostMapping("/customer")
     public ResponseEntity<Object> registerUserCustomer(@RequestBody User newUser) {
 
+<<<<<<< HEAD
+<<<<<<< HEAD
         if (!newUser.getType().equals("customer")) {
             return status(400).build();
+=======
+        if (newUser.getType().equals("customer")) {
+            newUser.setAuthenticated('n');
+            dbServiceUser.saveUser(newUser);
+        } else {
+            return status(403).build();
+>>>>>>> d7946715fbf16aaba532007849b354b77f6155e8
+=======
+        if (!newUser.getType().equals("customer")) {
+            return status(400).build();
+>>>>>>> 07e90f68639e365b8cb707ab371bc99b0a80ac14
         }
         newUser.setAuthenticated('n');
         User user = dbServiceUser.saveUser(newUser);
@@ -65,8 +87,21 @@ public class UserController {
     public ResponseEntity<Object> registerUserWorker(@RequestBody User newUser) {
         try {
 
+<<<<<<< HEAD
+<<<<<<< HEAD
             if (!newUser.getType().equals("worker")) {
                 return status(400).build();
+=======
+            if (newUser.getType().equals("worker")) {
+                newUser.setAuthenticated('n');
+                dbServiceUser.saveUser(newUser);
+            } else {
+                return status(403).build();
+>>>>>>> d7946715fbf16aaba532007849b354b77f6155e8
+=======
+            if (!newUser.getType().equals("worker")) {
+                return status(400).build();
+>>>>>>> 07e90f68639e365b8cb707ab371bc99b0a80ac14
             }
             newUser.setAuthenticated('n');
             User user = dbServiceUser.saveUser(newUser);
@@ -93,12 +128,25 @@ public class UserController {
                 : status(204).build();
     }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
     @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @GetMapping("/login/{userLogin}/{userPassword}")
+    public ResponseEntity<Object> getLoginUser(@PathVariable String userLogin, @PathVariable String userPassword) {
+        List<User> users = dbUserService.getAll();
+=======
+=======
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+>>>>>>> 07e90f68639e365b8cb707ab371bc99b0a80ac14
     @PostMapping("/login")
     public ResponseEntity<User> LoginUser(@RequestBody LoginRequest loginCredentials) {
         if (!dbServiceUser.existsByEmail(loginCredentials.getEmail())) {
             return status(404).build();
         }
+<<<<<<< HEAD
+>>>>>>> d7946715fbf16aaba532007849b354b77f6155e8
+=======
+>>>>>>> 07e90f68639e365b8cb707ab371bc99b0a80ac14
 
         User user = null;
 
