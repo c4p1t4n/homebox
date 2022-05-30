@@ -8,6 +8,7 @@ import school.sptech.server.model.Category;
 import school.sptech.server.model.User;
 import school.sptech.server.model.UserCustomer;
 import school.sptech.server.model.UserWorker;
+import school.sptech.server.request.LoginRequest;
 import school.sptech.server.service.UserService;
 
 import static org.springframework.http.ResponseEntity.status;
@@ -15,6 +16,8 @@ import static org.springframework.http.ResponseEntity.status;
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
+import java.util.Objects;
+
 import org.springframework.web.bind.annotation.GetMapping;
 
 @RestController
@@ -22,14 +25,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class UserController {
 
     @Autowired
-    private UserService dbUserService;
+    private UserService dbServiceUser;
 
     @PostMapping("/customer")
     public ResponseEntity<Object> registerUserCustomer(@RequestBody UserCustomer newUser) {
 
         if (newUser.getType().equals("customer")) {
             newUser.setAuthenticated('n');
-            dbUserService.saveUser(newUser);
+            dbServiceUser.saveUser(newUser);
         } else {
             return status(403).build();
         }
@@ -40,8 +43,8 @@ public class UserController {
 
     @GetMapping("/customer")
     public ResponseEntity<List<User>> getUserCustomer() {
-        return !dbUserService.getAllCustomer().isEmpty()
-                ? status(200).body(dbUserService.getAllCustomer())
+        return !dbServiceUser.getAllCustomer().isEmpty()
+                ? status(200).body(dbServiceUser.getAllCustomer())
                 : status(204).build();
     }
 
@@ -51,7 +54,7 @@ public class UserController {
 
             if (newUser.getType().equals("worker")) {
                 newUser.setAuthenticated('n');
-                dbUserService.saveUser(newUser);
+                dbServiceUser.saveUser(newUser);
             } else {
                 return status(403).build();
             }
@@ -65,23 +68,31 @@ public class UserController {
     @GetMapping("/worker")
     public ResponseEntity<List<User>> getUserWorker() {
 
-        return !dbUserService.getAllWorkers().isEmpty() ? status(200).body(dbUserService.getAllWorkers())
+        return !dbServiceUser.getAllWorkers().isEmpty() ? status(200).body(dbServiceUser.getAllWorkers())
                 : status(204).build();
     }
 
     @GetMapping()
     public ResponseEntity<List<User>> getUser() {
-        return !dbUserService.getAll().isEmpty() ? status(200).body(dbUserService.getAll())
+        return !dbServiceUser.getAll().isEmpty() ? status(200).body(dbServiceUser.getAll())
                 : status(204).build();
     }
 
     @PostMapping("/login")
-    public ResponseEntity<Object> getLoginUser(@RequestBody User user) throws UnsupportedEncodingException, NoSuchAlgorithmException {
-        String userLogin = user.getEmail();
-        String userPassword = user.getPassword();
-        user = dbUserService.loginUser(userLogin,userPassword);
-        if(user == null){
+    public ResponseEntity<User> LoginUser(@RequestBody LoginRequest loginCredentials) {
+        if (!dbServiceUser.existsByEmail(loginCredentials.getEmail())) {
             return status(404).build();
+        }
+
+        User user = null;
+
+        try {
+            user = dbServiceUser.login(loginCredentials.getEmail(), loginCredentials.getPassword());
+        } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        if (Objects.isNull(user)) {
+            return status(400).build();
         }
 
         return status(200).body(user);
@@ -90,7 +101,7 @@ public class UserController {
     @GetMapping("/logoff/{userLogin}")
     public ResponseEntity<Object> logoffUser(@PathVariable String userLogin) {
 
-        List<User> users = dbUserService.getAll();
+        List<User> users = dbServiceUser.getAll();
 
         for (User user : users) {
             if (user.getEmail().equals(userLogin) & user.getAuthenticated().equals('s')) {
@@ -109,7 +120,7 @@ public class UserController {
     public ResponseEntity<String> getReport() {
         String report = "";
 
-        List<User> list = dbUserService.getAllWorkers();
+        List<User> list = dbServiceUser.getAllWorkers();
         for (var user : list) {
             report += user.getId() + "," + user.getName() + "," + user.getEmail() + "," + user.getPassword() + ","
                     + user.getCpf() +
@@ -126,7 +137,7 @@ public class UserController {
 
     @GetMapping(value = "/worker/categories/{id}")
     public ResponseEntity<List<Category>> getWorkerCategories(@PathVariable Integer id) {
-        List<Category> categories = dbUserService.getWorkerCategories(id);
+        List<Category> categories = dbServiceUser.getWorkerCategories(id);
 
         return categories.isEmpty() ? status(204).build() : status(200).body(categories);
     }
