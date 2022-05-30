@@ -98,7 +98,7 @@ const login = e => {
             console.log(response)
             if (response.status === 200) {
                 console.log("SUCESSO")
-                sessionStorage.setItem("user", JSON.stringify({...response}))
+                sessionStorage.setItem("user", JSON.stringify({...response.data}))
                 window.location.href = "/"
             }
         })
