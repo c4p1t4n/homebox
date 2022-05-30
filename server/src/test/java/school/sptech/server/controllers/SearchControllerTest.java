@@ -13,6 +13,7 @@ import school.sptech.server.repository.UserRepository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
@@ -60,6 +61,44 @@ class SearchControllerTest {
     }
 
     @Test
+    @DisplayName("No filtro por id, se encontrar, deve retornar 200 COM corpo")
+    void testSearchByIdWithResult() {
+        Search search1 = mock(Search.class);
+        Integer idTest = 1;
+        when(dbRepositorySearch.existsById(idTest)).thenReturn(true);
+        when(dbRepositorySearch.findById(idTest)).thenReturn(Optional.of(search1));
+
+        ResponseEntity<Optional<Search>> response = searchController.getSearchById(idTest);
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(dbRepositorySearch.findById(idTest), response.getBody());
+    }
+
+    @Test
+    @DisplayName("No filtro por id, se não encontrar, deve retornar 404 sem corpo")
+    void testSearchByIdWithoutResult() {
+        Integer idTest = 1;
+        when(dbRepositorySearch.findByIdSearch(idTest)).thenReturn(new ArrayList<>());
+
+        ResponseEntity<Optional<Search>> response = searchController.getSearchById(idTest);
+
+        assertEquals(404, response.getStatusCodeValue());
+        assertNull(response.getBody());
+    }
+
+    @Test
+    @DisplayName("No filtro por id do usuário, se não encontrar, deve retornar 404 sem corpo")
+    void testSearchByIdUserWithoutResult() {
+        Integer idUserTest = 1;
+        when(dbRepositoryCustomer.existsById(idUserTest)).thenReturn(false);
+
+        ResponseEntity<List<Search>> response = searchController.getSearchPerUser(idUserTest);
+
+        assertEquals(404, response.getStatusCodeValue());
+        assertNull(response.getBody());
+    }
+
+    @Test
     @DisplayName("No delete por id, se encontrar, deve retornar 200 SEM corpo")
     void testDeleteByIdWithResult() {
         Integer idTest = 1;
@@ -84,4 +123,13 @@ class SearchControllerTest {
         assertNull(response.getBody());
     }
 
+    @Test
+    @DisplayName("No post de um usuário, encontrar, deve retornar 404 sem corpo")
+    void postSearchPerUserWithResult() {
+    }
+
+    @Test
+    @DisplayName("No post de um usuário, se não encontrar, deve retornar 201 sem corpo")
+    void postSearchPerUserWithoutResult() {
+    }
 }
