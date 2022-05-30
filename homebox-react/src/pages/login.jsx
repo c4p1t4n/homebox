@@ -10,7 +10,7 @@ function Login() {
     return (
         <body className="login_body">
             <div className="homebox_logo">
-                <a href="../index.html">
+                <a href="http://127.0.0.1:5500/website/index.html">
                     <img className="logo_homebox" src={logo} alt="" />
                 </a>
             </div>
