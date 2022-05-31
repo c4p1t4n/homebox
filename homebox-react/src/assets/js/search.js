@@ -10,7 +10,7 @@ const sortThroughRating = (a, b) => {
 const search = async search => {
     return api.post(`users/search/${search}`).then(({status, data}) => {
         if (status === 204) {
-            return "NENHUM RESULTADO ENCONTRADO"
+            return []
         } else if (status === 200) {
             let searchResult = data
             searchResult = searchResult.sort(sortThroughRating)

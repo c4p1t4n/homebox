@@ -166,21 +166,22 @@ public class UserController {
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping(value = "/search/{value}")
     public ResponseEntity<List<UserSearchQueryResult>> search(@PathVariable String value) {
-        ResponseEntity<List<User>> response = getWorkersByCategory(value);
+        ResponseEntity<List<UserSearchQueryResult>> response = getWorkersByCategory(value);
         List<UserSearchQueryResult> users;
 
         if (response.getStatusCodeValue() == 404 || response.getStatusCodeValue() == 204) {
             users = dbRepositoryService.searchUsers(value).stream()
                     .map((user) -> new UserSearchQueryResult(user,
-                            dbRepositoryRating.getAvgRatingForWorker(user.getId())))
+                            dbRepositoryRating.getAvgRatingForWorker(user.getId()),
+                            getWorkerCategories(user.getId()).getBody().get(0).getName()))
                     .collect(Collectors.toList());
 
         } else {
             users = response
                     .getBody()
                     .stream()
-                    .map((user) -> new UserSearchQueryResult(user,
-                            dbRepositoryRating.getAvgRatingForWorker(user.getId())))
+                    .map((item) -> new UserSearchQueryResult(item.getUser(),
+                            dbRepositoryRating.getAvgRatingForWorker(item.getUser().getId()), item.getCategory()))
                     .collect(Collectors.toList());
         }
 
@@ -192,12 +193,12 @@ public class UserController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping(value = "/category/{value}")
-    public ResponseEntity<List<User>> getWorkersByCategory(@PathVariable String value) {
+    public ResponseEntity<List<UserSearchQueryResult>> getWorkersByCategory(@PathVariable String value) {
         if (!dbRepositoryCategory.existsByNameContainsIgnoreCase(value)) {
             return status(404).build();
         }
 
-        List<User> users = dbRepositoryService.findByCategoryNameContainsIgnoreCase(value);
+        List<UserSearchQueryResult> users = dbRepositoryService.findByCategoryNameContainsIgnoreCase(value);
 
         if (users.isEmpty()) {
             return status(204).build();

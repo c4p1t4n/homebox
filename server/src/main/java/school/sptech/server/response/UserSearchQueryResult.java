@@ -5,6 +5,26 @@ import school.sptech.server.model.User;
 public class UserSearchQueryResult {
     private User user;
     private Double rating;
+    private String category;
+
+    public UserSearchQueryResult(User user, Double rating, String category) {
+        this.user = user;
+        this.rating = rating;
+        this.category = category;
+    }
+
+    public UserSearchQueryResult(User user, String category) {
+        this.user = user;
+        this.category = category;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
 
     public UserSearchQueryResult(User user, Double rating) {
         this.user = user;
