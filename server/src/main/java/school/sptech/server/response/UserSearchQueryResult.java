@@ -5,7 +5,23 @@ import school.sptech.server.model.User;
 public class UserSearchQueryResult {
     private User user;
     private Double rating;
+    private Double distance;
     private String category;
+
+    public Double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(Double distance) {
+        this.distance = distance;
+    }
+
+    public UserSearchQueryResult(User user, Double rating, Double distance, String category) {
+        this.user = user;
+        this.rating = rating;
+        this.distance = distance;
+        this.category = category;
+    }
 
     public UserSearchQueryResult(User user, Double rating, String category) {
         this.user = user;
