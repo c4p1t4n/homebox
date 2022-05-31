@@ -27,7 +27,7 @@ public  class User implements ILogin {
     private String password;
 
     @Column(name = "cpf")
-    @CPF
+//    @CPF
     private String cpf;
 
     @Column(name = "token")

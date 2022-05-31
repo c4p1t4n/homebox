@@ -138,7 +138,6 @@ const register = e => {
             if (response.status === 201) {
                 console.log("SUCESSO")
                 window.alert("Cadastro realizado com sucesso!")
-                window.location.href = "http://localhost:8080/login";
             } else if (response.status === 400) {
                 console.log("DEU RUIM")
                 window.alert("Não foi possivel realizar o cadastro!")
