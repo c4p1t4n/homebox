@@ -13,7 +13,7 @@ function CardSearch(props) {
             <img
                 className="imgCustumer"
                 src={props.img}
-                alt="Imagem do José Ricardo"
+                alt="Imagem do prestador"
             />
             <div className="infoCustumer">
                 <div className="nameCustumer">
