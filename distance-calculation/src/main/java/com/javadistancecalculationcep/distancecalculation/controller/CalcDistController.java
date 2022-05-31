@@ -27,22 +27,22 @@ public class CalcDistController {
 
     @GetMapping("/dist/{cep1}/{cep2}")
     public ResponseEntity getDist(@PathVariable String cep1,
-                                  @PathVariable String cep2){
+            @PathVariable String cep2) {
 
         ViaCep cepEncontrado1 = clienteViaCep.getCep(cep1);
         ViaCep cepEncontrado2 = clienteViaCep.getCep(cep2);
 
         Double[] lonlat1 = buscarLatidudeLongitude(cepEncontrado1.getLogradouro(),
-                                                    cep1,
-                                                    cepEncontrado1.getLocalidade(),
-                                                    cepEncontrado1.getUf());
+                cep1,
+                cepEncontrado1.getLocalidade(),
+                cepEncontrado1.getUf());
 
         Double[] lonlat2 = buscarLatidudeLongitude(cepEncontrado2.getLogradouro(),
-                                                   cep2,
-                                                   cepEncontrado2.getLocalidade(),
-                                                   cepEncontrado2.getUf());
+                cep2,
+                cepEncontrado2.getLocalidade(),
+                cepEncontrado2.getUf());
 
-        Double dist = calcularDisntancia(lonlat1,lonlat2);
+        Double dist = calcularDisntancia(lonlat1, lonlat2);
 
         return ResponseEntity.status(200).body(dist);
     }
@@ -50,21 +50,21 @@ public class CalcDistController {
     public Double[] buscarLatidudeLongitude(String logradouro, String cep, String localidade, String uf) {
         Double[] list = new Double[2];
         try {
-            String endpoint = String.format("https://api.geoapify.com/v1/geocode/search?street=%s&postcode=%s&city=%s&state=%s&country=Brazil&limit=1&format=json&apiKey=03197b59532d488d8529d2c3d663c4d5",
-                    logradouro, cep, localidade, uf).replace(" ","%20");
+            String endpoint = String.format(
+                    "https://api.geoapify.com/v1/geocode/search?street=%s&postcode=%s&city=%s&state=%s&country=Brazil&limit=1&format=json&apiKey=03197b59532d488d8529d2c3d663c4d5",
+                    logradouro, cep, localidade, uf).replace(" ", "%20");
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create(endpoint))
                     .header("Content-Type", "application/json")
                     .build();
 
-            HttpResponse<String> response =
-                    client.send(request, HttpResponse.BodyHandlers.ofString());
+            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-            JSONObject object = new JSONObject(response.body()); //jsonString = String from the file
+            JSONObject object = new JSONObject(response.body()); // jsonString = String from the file
             JSONArray array = object.getJSONArray("results");
             Iterator<Object> iterator = array.iterator();
-            while(iterator.hasNext()){
+            while (iterator.hasNext()) {
                 JSONObject jsonObject = (JSONObject) iterator.next();
 
                 list[0] = Double.valueOf(String.valueOf(jsonObject.get("lon")));
@@ -81,9 +81,9 @@ public class CalcDistController {
         return (value * Math.PI) / 180;
     }
 
-    public static Double calcularDisntancia(Double[] lugar1, Double[] lugar2){
-        System.out.println(lugar1[0]+"\t"+lugar1[1]);
-        System.out.println(lugar2[0]+"\t"+lugar2[1]);
+    public static Double calcularDisntancia(Double[] lugar1, Double[] lugar2) {
+        System.out.println(lugar1[0] + "\t" + lugar1[1]);
+        System.out.println(lugar2[0] + "\t" + lugar2[1]);
 
         Double long1 = toRad(lugar1[0]);
         Double lati1 = toRad(lugar1[1]);
@@ -93,22 +93,22 @@ public class CalcDistController {
         Double dlon = long2 - long1;
         Double dlat = lati2 - lati1;
 
-        Double sinDlatSquare = Math.pow(Math.sin(dlat/2),2);
-        Double sinDlonSquare = Math.pow(Math.sin(dlon/2),2);
+        Double sinDlatSquare = Math.pow(Math.sin(dlat / 2), 2);
+        Double sinDlonSquare = Math.pow(Math.sin(dlon / 2), 2);
 
         Double a = sinDlatSquare + Math.cos(lati1) * Math.cos(lati2) * sinDlonSquare;
 
-        Double b = 2*(Math.asin(Math.sqrt(a)));
+        Double b = 2 * (Math.asin(Math.sqrt(a)));
 
         return 6371 * b;
-            /*
-    *   dlon = lon2 - lon1
-        dlat = lat2 - lat1
-        a = (sin(dlat/2))^2 + cos(lat1) * cos(lat2) * (sin(dlon/2))^2
-        c = 2 * atan2( sqrt(a), sqrt(1-a) )
-        d = R * c
-        R = 6367 km
-    *
-    * */
+        /*
+         * dlon = lon2 - lon1
+         * dlat = lat2 - lat1
+         * a = (sin(dlat/2))^2 + cos(lat1) * cos(lat2) * (sin(dlon/2))^2
+         * c = 2 * atan2( sqrt(a), sqrt(1-a) )
+         * d = R * c
+         * R = 6367 km
+         *
+         */
     }
 }
