@@ -221,4 +221,15 @@ public class UserController {
 
         return status(200).body(rating);
     }
+    
+    @GetMapping("/dist/cep1/cep2")
+    public ResponseEntity getDist(@PathVariable String cep1,
+                                  @PathVariable String cep2){
+
+        DistResponse dist = clienteCalcDist(cep1,cep2);
+        if (dist == null){
+            return ResponseEntity.status(401).build();
+        }
+        return ResponseEntity.status(200).body(dist);
+    }
 }
