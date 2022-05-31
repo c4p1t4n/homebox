@@ -11,11 +11,13 @@ import school.sptech.server.repository.SearchRepository;
 import school.sptech.server.repository.SearchUserRepository;
 import school.sptech.server.repository.UserRepository;
 import school.sptech.server.request.UserSearchRequest;
-
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
+import school.sptech.server.service.PilhaObj;
+
 
 @RestController
 @RequestMapping("/search")
@@ -29,18 +31,46 @@ public class SearchController {
     @Autowired
     private UserRepository dbRepositoryCustomer;
 
+<<<<<<< HEAD
     @CrossOrigin(origins = "*", allowedHeaders = "*")
+=======
+
+    PilhaObj<String> lastSearchs = new PilhaObj<>(5);
+>>>>>>> 7d8cbd0a356f2af1e32a0d6bbea5d94f8b090f92
     @PostMapping
     public ResponseEntity<Object> postSearchPerUser(@RequestBody @NotNull UserSearchRequest searchReq) {
         Search search = dbRepositorySearch.findByValue(searchReq.getValue());
+
+
         if (Objects.isNull(search)) {
             search = dbRepositorySearch.save(new Search(searchReq.getValue()));
         }
+       lastSearchs.push(search.getValue());
+
         dbRepositorySearchUser.save(new SearchUser(search.getIdSearch(), searchReq.getIdUser(), LocalDate.now()));
         return ResponseEntity.status(201).build();
     }
 
+<<<<<<< HEAD
     @CrossOrigin(origins = "*", allowedHeaders = "*")
+=======
+    @GetMapping("/last/search")
+    public ResponseEntity<List<String>> getLastSearchs() {
+        List<String> list = new ArrayList<>(5);
+        while(!lastSearchs.isEmpty()){
+            list.add(lastSearchs.pop());
+        }
+        lastSearchs.setTopo(4);
+        if (list.isEmpty()) {
+            return ResponseEntity.status(204).build();
+        }
+        return ResponseEntity.status(200).body(list);
+    }
+
+
+
+
+>>>>>>> 7d8cbd0a356f2af1e32a0d6bbea5d94f8b090f92
     @GetMapping
     public ResponseEntity<List<Search>> getAllSearch() {
         List<Search> searchList = dbRepositorySearch.findAll();
