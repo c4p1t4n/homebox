@@ -2,7 +2,7 @@ import "../assets/css/searchResult.css"
 import VLibras from "@djpfs/react-vlibras"
 import CardSearch from "../components/cardSearch"
 import Header from "../components/header"
-import imgJose from "../assets/img/joseRicardoCustumer.png"
+import profileImg from "../assets/img/profileIcon.png"
 import {useEffect, useState} from "react"
 import {search} from "../assets/js/search"
 
@@ -35,7 +35,7 @@ function SearchResult() {
                         {searchResult
                             ? searchResult.map(item => (
                                   <CardSearch
-                                      img={item.user?.picture ?? imgJose}
+                                      img={item.user?.picture ?? profileImg}
                                       name={item.user?.name}
                                       category={item?.category}
                                       ranking={item.ranking ?? "N/A"}
