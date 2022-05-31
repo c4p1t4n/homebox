@@ -4,9 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import school.sptech.server.client.CalcDistClient;
 import school.sptech.server.model.Category;
 import school.sptech.server.model.User;
 import school.sptech.server.request.LoginRequest;
+import school.sptech.server.request.UserIdRequest;
 import school.sptech.server.repository.CategoryRepository;
 import school.sptech.server.repository.RatingRepository;
 import school.sptech.server.repository.ServiceRepository;
@@ -32,6 +34,8 @@ public class UserController {
 
     @Autowired
     private CategoryRepository dbRepositoryCategory;
+    @Autowired
+    private CalcDistClient distClient;
 
     @Autowired
     private ServiceRepository dbRepositoryService;
@@ -165,14 +169,20 @@ public class UserController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping(value = "/search/{value}")
-    public ResponseEntity<List<UserSearchQueryResult>> search(@PathVariable String value) {
+    public ResponseEntity<List<UserSearchQueryResult>> search(@PathVariable String value,
+            @RequestBody UserIdRequest requestId) {
         ResponseEntity<List<UserSearchQueryResult>> response = getWorkersByCategory(value);
         List<UserSearchQueryResult> users;
+
+        if (Objects.isNull(requestId.getId()) || !dbServiceUser.existsById(requestId.getId())) {
+            return status(404).build();
+        }
 
         if (response.getStatusCodeValue() == 404 || response.getStatusCodeValue() == 204) {
             users = dbRepositoryService.searchUsers(value).stream()
                     .map((user) -> new UserSearchQueryResult(user,
                             dbRepositoryRating.getAvgRatingForWorker(user.getId()),
+                            getDist(user.getCep(), dbServiceUser.findById(requestId.getId()).get().getCep()).getBody(),
                             getWorkerCategories(user.getId()).getBody().get(0).getName()))
                     .collect(Collectors.toList());
 
@@ -181,7 +191,10 @@ public class UserController {
                     .getBody()
                     .stream()
                     .map((item) -> new UserSearchQueryResult(item.getUser(),
-                            dbRepositoryRating.getAvgRatingForWorker(item.getUser().getId()), item.getCategory()))
+                            dbRepositoryRating.getAvgRatingForWorker(item.getUser().getId()),
+                            getDist(item.getUser().getCep(), dbServiceUser.findById(requestId.getId()).get().getCep())
+                                    .getBody(),
+                            item.getCategory()))
                     .collect(Collectors.toList());
         }
 
@@ -221,15 +234,15 @@ public class UserController {
 
         return status(200).body(rating);
     }
-    
-    @GetMapping("/dist/cep1/cep2")
-    public ResponseEntity getDist(@PathVariable String cep1,
-                                  @PathVariable String cep2){
 
-        DistResponse dist = clienteCalcDist(cep1,cep2);
-        if (dist == null){
-            return ResponseEntity.status(401).build();
+    @GetMapping("/distance/cep1/cep2")
+    public ResponseEntity<Double> getDist(@PathVariable String cep1,
+            @PathVariable String cep2) {
+
+        ResponseEntity<Double> dist = distClient.getDist(cep1, cep2);
+        if (Objects.isNull(dist.getBody())) {
+            return status(400).build();
         }
-        return ResponseEntity.status(200).body(dist);
+        return status(200).body(dist.getBody());
     }
 }
