@@ -5,9 +5,12 @@ import google from "../assets/img/google.png"
 import facebook from "../assets/img/facebook1.png"
 import twitter from "../assets/img/twitter.png"
 import api from "../api"
+import VLibras from "@djpfs/react-vlibras"
 
 function Login() {
     return (
+        <>
+        <VLibras/>
         <body className="login_body">
             <div className="homebox_logo">
                 <a href="http://127.0.0.1:5500/website/index.html">
@@ -55,6 +58,7 @@ function Login() {
                 </div>
             </div>
         </body>
+        </>
     )
 }
 
