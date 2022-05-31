@@ -1,5 +1,6 @@
 import "../assets/css/homePage.css"
 
+import Plumber from "../assets/img/plumber.png"
 import Card from "../components/card"
 import Footer from "../components/footer"
 import Header from "../components/header"
@@ -32,21 +33,21 @@ function Home() {
                     <h2>Serviços mais acessados por você</h2>
                     <div className="cards">
                         <Card
-                            categoria="Pintor"
+                            categoria="Pintura"
                             icon={brushIcon}
                             class="card"
                             iconAccesses={accessIcon}
                         />
                         <Card
-                            categoria="Eletricista"
+                            categoria="Elétrica"
                             icon={electrician}
                             class="cardBlue"
                             color="white"
                             iconAccesses={accessIconWhite}
                         />
                         <Card
-                            categoria="Pintor"
-                            icon={brushIcon}
+                            categoria="Encanamento"
+                            icon={Plumber}
                             class="card"
                             iconAccesses={accessIcon}
                         />

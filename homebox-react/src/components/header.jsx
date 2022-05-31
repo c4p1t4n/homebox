@@ -14,6 +14,7 @@ function Header(props) {
     useEffect(() => {
         api.get("/search/last/search")
             .then(response => {
+                console.log(response)
                 if (response.status === 200) {
                     setSearchResult(response.data)
                 }
@@ -39,10 +40,11 @@ function Header(props) {
                                 placeholder="Pesquise por serviço"
                             />
                             <datalist id="searchs">
-                                {searchResult.map((item, key) => (
+                                {
+                                searchResult.map((item, key) => (
                                     <option
                                         key={key}
-                                        value={item.displayValue}
+                                        value={item}
                                     />
                                 ))}
                             </datalist>

@@ -86,6 +86,7 @@ public class SearchController {
         }
         return ResponseEntity.status(404).build();
     }
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/last/search")
     public ResponseEntity<List<String>> getLastSearchs() {
         List<String> list = new ArrayList<>(5);

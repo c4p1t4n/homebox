@@ -76,3 +76,9 @@ Header {
 .profile img {
     height: 30px;
 }
+
+.profile img:hover{
+    height: 31px;
+    image-rendering: pixelated;
+}
+
