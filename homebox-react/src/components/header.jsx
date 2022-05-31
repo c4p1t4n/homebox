@@ -14,7 +14,7 @@ function Header(props) {
 
     useEffect(() => {
         api.get("/search/last/search").then(response => {
-            if (response.status == 200) {
+            if (response.status === 200) {
                 setSearchResult(response.data)
             }
         })
@@ -86,7 +86,6 @@ const logOff = e => {
 
 const profileSwitch = e => {
     e.preventDefault()
-    const profile = document.querySelector(".profile")
     const profileOpenDiv = document.querySelector(".profileOpenDiv")
 
     profileOpenDiv.style.display =
@@ -100,6 +99,17 @@ const keyStroke = e => {
         return
     }
     if (e.key === "Enter") {
+        const user = JSON.parse(sessionStorage.getItem("user"))
+        if (user) {
+            let {id_user: idUser} = user
+            api.post("/search", {idUser, value: searchValue}).then(response => {
+                if (response.status === 201) {
+                    console.log("SUCESSO")
+                } else {
+                    console.log(response)
+                }
+            })
+        }
         window.location.href = `/search?search=${searchValue}`
     }
     search(searchValue)
