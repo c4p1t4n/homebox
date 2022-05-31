@@ -3,8 +3,8 @@ import VLibras from "@djpfs/react-vlibras"
 import CardSearch from "../components/cardSearch"
 import Header from "../components/header"
 import profileImg from "../assets/img/profileIcon.png"
-import {useEffect, useState} from "react"
-import {search} from "../assets/js/search"
+import { useEffect, useState } from "react"
+import { search } from "../assets/js/search"
 
 function SearchResult() {
     const queryString = window.location.search
@@ -34,14 +34,14 @@ function SearchResult() {
                     <div className="cardCustumerDiv">
                         {searchResult
                             ? searchResult.map(item => (
-                                  <CardSearch
-                                      img={item.user?.picture ?? profileImg}
-                                      name={item.user?.name}
-                                      category={item?.category}
-                                      ranking={item.ranking ?? "N/A"}
-                                      dist={item.distance ?? "N/A"}
-                                  />
-                              ))
+                                <CardSearch
+                                    img={item.user?.picture ?? profileImg}
+                                    name={item.user?.name}
+                                    category={item?.category}
+                                    ranking={item.ranking ?? "N/A"}
+                                    dist={item.distance ?? "N/A"}
+                                />
+                            ))
                             : ""}
                     </div>
                 </div>

@@ -45,3 +45,11 @@
     user-select: none;
     color: red;
 }
+
+.profileOpenDiv a:hover{
+    text-decoration: underline;
+}
+
+#logoff:hover{
+    text-decoration: underline;
+}
