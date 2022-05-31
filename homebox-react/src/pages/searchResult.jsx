@@ -23,7 +23,9 @@ function SearchResult() {
                 setSearchResult([])
             })
     }, [searchValue])
-
+    if (!(sessionStorage.getItem('user'))) {
+        window.location.href = "/login"
+    }
     return (
         <>
             <VLibras />
