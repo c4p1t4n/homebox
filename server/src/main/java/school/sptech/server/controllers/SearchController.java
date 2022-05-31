@@ -10,11 +10,13 @@ import school.sptech.server.repository.SearchRepository;
 import school.sptech.server.repository.SearchUserRepository;
 import school.sptech.server.repository.UserRepository;
 import school.sptech.server.request.UserSearchRequest;
-
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
+import school.sptech.server.service.PilhaObj;
+
 
 @RestController
 @RequestMapping("/search")
@@ -28,15 +30,37 @@ public class SearchController {
     @Autowired
     private UserRepository dbRepositoryCustomer;
 
+
+    PilhaObj<String> lastSearchs = new PilhaObj<>(5);
     @PostMapping
     public ResponseEntity<Object> postSearchPerUser(@RequestBody UserSearchRequest searchReq) {
         Search search = dbRepositorySearch.findByValue(searchReq.getValue());
+
+
         if (Objects.isNull(search)) {
             search = dbRepositorySearch.save(new Search(searchReq.getValue()));
         }
+       lastSearchs.push(search.getValue());
+
         dbRepositorySearchUser.save(new SearchUser(search.getIdSearch(), searchReq.getIdUser(), LocalDate.now()));
         return ResponseEntity.status(201).build();
     }
+
+    @GetMapping("/last/search")
+    public ResponseEntity<List<String>> getLastSearchs() {
+        List<String> list = new ArrayList<>(5);
+        while(!lastSearchs.isEmpty()){
+            list.add(lastSearchs.pop());
+        }
+        lastSearchs.setTopo(4);
+        if (list.isEmpty()) {
+            return ResponseEntity.status(204).build();
+        }
+        return ResponseEntity.status(200).body(list);
+    }
+
+
+
 
     @GetMapping
     public ResponseEntity<List<Search>> getAllSearch() {
