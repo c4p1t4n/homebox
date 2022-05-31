@@ -35,7 +35,7 @@ function SearchResult() {
             .catch(err => {
                 setSearchResult([])
             })
-    }, [searchValue])
+    }, [searchValue, id_user])
 
     return (
         <>
