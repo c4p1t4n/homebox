@@ -7,8 +7,8 @@ const sortThroughRating = (a, b) => {
     return 0
 }
 
-const search = async search => {
-    return api.post(`users/search/${search}`).then(({status, data}) => {
+const search = async (search, id) => {
+    return api.post(`users/search/${search}`, {id}).then(({status, data}) => {
         if (status === 204) {
             return []
         } else if (status === 200) {
