@@ -23,6 +23,7 @@ function Login() {
                     <div className="div_emails">
                         <p>E-mail</p>
                         <input
+                            onKeyDown={keyStroke}
                             id="email"
                             type="e-mail"
                             placeholder="xxxxxx.xxxxxx@gmail.com.br"
@@ -31,6 +32,7 @@ function Login() {
                     <div className="div_password">
                         <p>Senha</p>
                         <input
+                            onKeyDown={keyStroke}
                             id="password"
                             type="password"
                             placeholder="XXXXXXXXXX"
@@ -44,7 +46,7 @@ function Login() {
                     </div>
                 </div>
                 <div className="div_button">
-                    <button onClick={login}>Entrar</button>
+                    <button id="buttonLogin" onClick={login}>Entrar</button>
                     <br />
                     <a href="/register">
                         <p>
@@ -62,6 +64,16 @@ function Login() {
     )
 }
 
+const keyStroke = e => {
+    const buttonLogin = document.querySelector("#buttonLogin")
+   
+   
+    if (e.key === "Enter") {
+        buttonLogin.click()
+    }
+}
+
+
 const login = e => {
     e.preventDefault()
     const passwordInput = document.querySelector("#password")
@@ -71,7 +83,7 @@ const login = e => {
     const password = passwordInput?.value
 
     if (!email || !password) {
-        return console.info("Preencha os campos para logar")
+        return window.alert("Preencha os campos para entrar")
     }
 
     api.post("/users/login/", {
@@ -88,9 +100,11 @@ const login = e => {
                 )
                 window.location.href = "/"
             } else if (response.status === 400) {
-                console.log("DEU RUIM")
+                window.alert("Usuario ou Senha errado(s)!")
             } else if (response.status === 404) {
                 console.log("DEU MUITO RUIM")
+                window.alert("Usuario ou Senha errado(s)!")
+
             }
         })
         .catch(err => {
