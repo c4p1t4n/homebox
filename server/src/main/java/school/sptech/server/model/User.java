@@ -43,7 +43,6 @@ public  class User implements ILogin {
     private String cep;
 
     @Column(name="authenticated")
-    @JsonIgnore
     private Character authenticated;
 
     @OneToMany(mappedBy = "user")

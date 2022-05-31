@@ -34,6 +34,8 @@ public interface SearchRepository extends JpaRepository<Search, Integer> {
 
     List<Search> findAllById(Iterable<Integer> ids);
 
+    List<Search> findByIdSearch(Integer idSearch);
+
     void flush();
 
     Search getById(Integer id);
