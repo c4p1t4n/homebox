@@ -29,13 +29,9 @@ public class SearchController {
 
     @Autowired
     private UserRepository dbRepositoryCustomer;
-
-<<<<<<< HEAD
-    @CrossOrigin(origins = "*", allowedHeaders = "*")
-=======
-
     PilhaObj<String> lastSearchs = new PilhaObj<>(5);
->>>>>>> 7d8cbd0a356f2af1e32a0d6bbea5d94f8b090f92
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping
     public ResponseEntity<Object> postSearchPerUser(@RequestBody @NotNull UserSearchRequest searchReq) {
         Search search = dbRepositorySearch.findByValue(searchReq.getValue());
