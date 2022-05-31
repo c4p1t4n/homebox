@@ -131,14 +131,15 @@
     color: white;
     font-size: xx-large;
 }
+
 .div_button button:hover {
     width: 180px;
-    background: #0A3969;
     border-radius: 30px;
-    color: white;
-    font-size: xx-large;
     cursor: pointer;
+    background-color: rgb(255, 184, 52);
+    color: black;
 }
+
 .div_button a {
     text-decoration: none;
     color: #000000;
@@ -269,6 +270,12 @@
     margin: 8% 0% 8% 0%;
     background: #0A3969;
     border-radius: 30px;
+}
+
+.button_register:hover{
+    cursor: pointer;
+    background-color: rgb(255, 184, 52);
+    color: black;
 }
 
 /* Fim página de Cadastro */
