@@ -3,14 +3,9 @@ import VLibras from "@djpfs/react-vlibras"
 import CardSearch from "../components/cardSearch"
 import Header from "../components/header"
 import imgJose from "../assets/img/joseRicardoCustumer.png"
-<<<<<<< HEAD
-import { useEffect, useState } from "react"
-import { search } from "../assets/js/search"
-=======
 import {useEffect, useState} from "react"
 import {search} from "../assets/js/search"
 import api from "../api"
->>>>>>> ffcf1ca892c7d7f32a32cd91621ac2f88704e179
 
 function SearchResult() {
     const queryString = window.location.search
