@@ -1,10 +1,10 @@
 import "../assets/css/searchResult.css"
-
+import VLibras from "@djpfs/react-vlibras"
 import CardSearch from "../components/cardSearch"
 import Header from "../components/header"
 import imgJose from "../assets/img/joseRicardoCustumer.png"
-import {useEffect, useState} from "react"
-import {search} from "../assets/js/search"
+import { useEffect, useState } from "react"
+import { search } from "../assets/js/search"
 
 function SearchResult() {
     const queryString = window.location.search
@@ -24,6 +24,7 @@ function SearchResult() {
 
     return (
         <>
+            <VLibras />
             <Header search={`${searchValue}`} />
             <div className="container">
                 <div className="body">
