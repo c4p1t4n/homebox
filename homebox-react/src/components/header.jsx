@@ -2,13 +2,18 @@ import logo from "../assets/img/icon/logo-removebg-preview.png"
 import searchIcon from "../assets/img/searchIconBlack.png"
 import profile from "../assets/img/profile.png"
 import "../assets/css/header.css"
-import {search} from "../assets/js/search"
+import { search } from "../assets/js/search"
 import "../assets/css/headerProfileOpen.css"
 import lineProfileOpen from "../assets/img/lineBlackProfileOpen.png"
 import api from "../api"
-import {useEffect, useState} from "react"
+import { useEffect, useState } from "react"
 
 function Header(props) {
+
+    if (!(sessionStorage.getItem('user'))) {
+        window.location.href = "/login"
+    }
+
     const [searchResult, setSearchResult] = useState([])
 
     useEffect(() => {
@@ -41,12 +46,10 @@ function Header(props) {
                             />
                             <datalist id="searchs">
                                 {
-                                searchResult.map((item, key) => (
-                                    <option
-                                        key={key}
-                                        value={item}
-                                    />
-                                ))}
+                                    searchResult.map((item, key) => (
+                                        <option value={item}>{item}</option>
+
+                                    ))}
                             </datalist>
                         </div>
 
@@ -105,8 +108,8 @@ const keyStroke = e => {
     if (e.key === "Enter") {
         const user = JSON.parse(sessionStorage.getItem("user"))
         if (user) {
-            let {id_user: idUser} = user
-            api.post("/search", {idUser, value: searchValue}).then(response => {
+            let { id_user: idUser } = user
+            api.post("/search", { idUser, value: searchValue }).then(response => {
                 if (response.status === 201) {
                     console.log("SUCESSO")
                 } else {

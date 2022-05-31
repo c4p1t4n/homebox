@@ -82,3 +82,6 @@ Header {
     image-rendering: pixelated;
 }
 
+option{
+    width: 100%;
+}
