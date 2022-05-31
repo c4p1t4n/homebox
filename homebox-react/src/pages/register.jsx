@@ -20,7 +20,9 @@ function Register() {
                             <p>Categoria</p>
                             <select name="category" id="category">
                                 <option value="">Selecione</option>
-                                <option value="worker">Prestador de serviço</option>
+                                <option value="worker">
+                                    Prestador de serviço
+                                </option>
                                 <option value="customer">Cliente</option>
                             </select>
                         </div>
@@ -42,7 +44,11 @@ function Register() {
                         </div>
                         <div className="div_input">
                             <p>CEP</p>
-                            <input id="cep" type="number" placeholder="09385-220" />
+                            <input
+                                id="cep"
+                                type="text"
+                                placeholder="09385-220"
+                            />
                         </div>
                         <div className="div_input">
                             <p>E-mail</p>
@@ -138,10 +144,15 @@ const register = e => {
             if (response.status === 201) {
                 console.log("SUCESSO")
                 window.alert("Cadastro realizado com sucesso!")
+                sessionStorage.setItem(
+                    "user",
+                    JSON.stringify({...response.data})
+                )
+                window.location.href = "/"
             } else if (response.status === 400) {
                 console.log("DEU RUIM")
                 window.alert("Não foi possivel realizar o cadastro!")
-            } 
+            }
         })
         .catch(error => {
             console.error(error)
