@@ -2,27 +2,26 @@ import logo from "../assets/img/icon/logo-removebg-preview.png"
 import searchIcon from "../assets/img/searchIconBlack.png"
 import profile from "../assets/img/profile.png"
 import "../assets/css/header.css"
-import { search } from "../assets/js/search"
+import {search} from "../assets/js/search"
 import "../assets/css/headerProfileOpen.css"
 import lineProfileOpen from "../assets/img/lineBlackProfileOpen.png"
 import api from "../api"
-import { useEffect, useState } from "react"
+import {useEffect, useState} from "react"
 
 function Header(props) {
-
     const [searchResult, setSearchResult] = useState([])
 
     useEffect(() => {
-        api.get("/search/last/search").then(response => {
-            if (response.status === 200) {
-                setSearchResult(response.data)
-            }
-        })
+        api.get("/search/last/search")
+            .then(response => {
+                if (response.status === 200) {
+                    setSearchResult(response.data)
+                }
+            })
             .catch(err => console.warn(err))
     }, [])
 
     return (
-
         <header>
             <div className="container">
                 <div className="header">
@@ -40,12 +39,14 @@ function Header(props) {
                                 placeholder="Pesquise por serviço"
                             />
                             <datalist id="searchs">
-                                {searchResult.map((item, key) =>
-                                    <option key={key} value={item.displayValue} />
-                                )}
+                                {searchResult.map((item, key) => (
+                                    <option
+                                        key={key}
+                                        value={item.displayValue}
+                                    />
+                                ))}
                             </datalist>
                         </div>
-
 
                         <div className="searchIcon">
                             <img
@@ -56,8 +57,9 @@ function Header(props) {
                     </div>
                     <div className="profile" onClick={profileSwitch}>
                         <p>
-                            {JSON.parse(sessionStorage.getItem("user"))?.name ??
-                                ""}
+                            {JSON.parse(
+                                sessionStorage.getItem("user")
+                            )?.name?.split(" ")?.[0] ?? ""}
                         </p>
                         <img src={profile} alt="" />
                     </div>
