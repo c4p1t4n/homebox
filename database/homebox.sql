@@ -247,9 +247,21 @@ VALUES
         '12345678900',
         NULL,
         'worker',
-        NULL,
+        'https://images.unsplash.com/photo-1468218457742-ee484fe2fe4c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80',
         '12345678',
         'y'
+    ),
+	(
+		NULL,
+		'Larissa',
+		'lari@gmail.com',
+		SHA2("ExSenha1", 256),
+		'12345678900',
+		NULL,
+		'worker',
+		'https://images.pexels.com/photos/7218004/pexels-photo-7218004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+		'12345678',
+		'y'
     ),
     (
         NULL,
@@ -259,7 +271,7 @@ VALUES
         '12345678900',
         NULL,
         'worker',
-        NULL,
+        'https://images.pexels.com/photos/8005401/pexels-photo-8005401.jpeg?auto=compress&cs=tinysrgb&w=600',
         '12345678',
         'y'
     ),
@@ -271,7 +283,7 @@ VALUES
         '12345678900',
         NULL,
         'worker',
-        NULL,
+        'https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
         '12345678',
         'n'
     ),
