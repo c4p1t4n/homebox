@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import school.sptech.server.model.Category;
+
 import school.sptech.server.model.User;
 import school.sptech.server.repository.ServiceRepository;
 import school.sptech.server.repository.UserRepository;
@@ -14,9 +15,6 @@ import java.security.*;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
-import static org.apache.commons.lang3.StringUtils.join;
-
 @Service
 public class UserService {
 
@@ -46,23 +44,24 @@ public class UserService {
 
     }
 
-
-    public  String encriptPassword(String password) throws NoSuchAlgorithmException, UnsupportedEncodingException {
-        MessageDigest messageDigest =  MessageDigest.getInstance("SHA-256");
+    public String encriptPassword(String password) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+        MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
         messageDigest.update(password.getBytes("UTF-8"));
         return new BigInteger(1, messageDigest.digest()).toString(16);
     }
 
-
-    public User loginUser(String password,String email) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+    public User login(String email, String password) throws NoSuchAlgorithmException, UnsupportedEncodingException {
 
         password = encriptPassword(password);
 
-
-        return dbUserRepository.findUserByEmailAndPassword(email,password);
+        return dbUserRepository.findByEmailAndPassword(email, password);
 
     }
+    public boolean existsByEmail(String email) {
 
+        return dbUserRepository.existsByEmail(email);
+
+    }
 
     public List<User> getAllWorkers() {
         return dbUserRepository
@@ -85,7 +84,7 @@ public class UserService {
     }
 
     public List<Category> getWorkerCategories(Integer id) {
-        List<Category> categories = dbRepositoryService.findDistinctCategoryByWorkerId(id);
+        List<Category> categories = dbRepositoryService.findDistinctByWorkerId(id);
 
         return categories;
     }

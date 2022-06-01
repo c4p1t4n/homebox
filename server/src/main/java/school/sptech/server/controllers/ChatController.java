@@ -34,6 +34,12 @@ public class ChatController {
 
     @PostMapping("/{idCustomer}/{idWorker}")
     public ResponseEntity<Void> postChat(@PathVariable Integer idCustomer, @PathVariable Integer idWorker) {
+        if (!dbUserService.existsById(idCustomer)) {
+            return ResponseEntity.status(404).build();
+        }
+        if (!dbUserService.existsById(idWorker)) {
+            return ResponseEntity.status(404).build();
+        }
 
         LocalDate now = LocalDate.now();
         Chat newChat = dbRepositoryChat.save(new Chat(now));
@@ -91,7 +97,7 @@ public class ChatController {
         List<UserHasChat> chats = dbRepositoryUserHasChat.findChatByUser(dbUserService.findById(fkUser).get());
 
         if (chats.isEmpty()) {
-            return ResponseEntity.status(404).build();
+            return ResponseEntity.status(204).build();
         }
 
         return ResponseEntity.status(200).body(chats);
