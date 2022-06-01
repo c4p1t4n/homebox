@@ -185,3 +185,13 @@ body {
 .white {
     color: white;
 }
+
+#loadingDivHome{
+    position:absolute;
+    left: 46.5%;
+    top: 120%;
+}
+
+#loadingDivHome img{
+    height: 120px;
+}

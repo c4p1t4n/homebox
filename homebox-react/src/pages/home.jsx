@@ -1,10 +1,12 @@
-import {useEffect, useState} from "react"
+import { useEffect, useState } from "react"
 import api from "../api"
 import "../assets/css/homePage.css"
 
 import Plumber from "../assets/img/plumber.png"
 import Card from "../components/card"
 import Footer from "../components/footer"
+import iconLoading from "../assets/img/iconLoading.gif"
+
 import Header from "../components/header"
 import FrequentSearchCard from "../components/frequentSearchCard"
 import FrequentSearchCardDistance from "../components/frequentSearchCardDistance"
@@ -31,10 +33,10 @@ function Home() {
 
     useEffect(() => {
         api.get(
-            `/users/recomendation/${
-                JSON.parse(sessionStorage.getItem("user")).id_user
+            `/users/recomendation/${JSON.parse(sessionStorage.getItem("user")).id_user
             }`
-        ).then(({status, data}) => {
+        ).then(({ status, data }) => {
+            document.getElementById("loadingDivHome").style.display = "none"
             if (status === 200) {
                 console.log(data)
                 setWorker(data)
@@ -74,7 +76,9 @@ function Home() {
                     <br />
                     <h2>Recomendações para você</h2>
                     <div className="cardCustumerDiv1">
-                       
+                        <div id="loadingDivHome">
+                            <img src={iconLoading} alt="Carregando a pagina" />
+                        </div>
                         <div className="cardCustumerDiv2">
                             {worker.map(item => (
                                 <FrequentSearchCardDistance
@@ -88,7 +92,6 @@ function Home() {
                                 />
                             ))}
                         </div>
-                      
                     </div>
                     <br />
                 </div>
