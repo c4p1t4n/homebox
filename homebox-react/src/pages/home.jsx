@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react"
 import api from "../api"
 import "../assets/css/homePage.css"
 
@@ -9,6 +9,7 @@ import Header from "../components/header"
 import FrequentSearchCard from "../components/frequentSearchCard"
 import FrequentSearchCardDistance from "../components/frequentSearchCardDistance"
 
+import profileImg from "../assets/img/profileIcon.png"
 import brushIcon from "../assets/img/brushIcon.png"
 import electrician from "../assets/img/electrician.png"
 import accessIcon from "../assets/img/accessIcon.png"
@@ -29,17 +30,21 @@ function Home() {
     const [worker, setWorker] = useState([])
 
     useEffect(() => {
-        api.get("/users/recomendation",{id:JSON.parse(sessionStorage.getItem("user")).id_user}).then(({status, response}) => {
+        api.get(
+            `/users/recomendation/${
+                JSON.parse(sessionStorage.getItem("user")).id_user
+            }`
+        ).then(({status, data}) => {
             if (status === 200) {
-                console.log(response)
-                setWorker(response)
-            }  
+                console.log(data)
+                setWorker(data)
+            }
         })
-      },[])
+    }, [])
 
     return (
         <>
-            <VLibras/>
+            <VLibras />
             <Header />
             <div className="container">
                 <div className="body">
@@ -75,18 +80,17 @@ function Home() {
                             alt="Seta para esquerda"
                         />
                         <div className="cardCustumerDiv2">
-                            {
-                                worker.map((itemWorker) => (
-                                    <FrequentSearchCard
+                            {worker.map(item => (
+                                <FrequentSearchCardDistance
                                     class={"cardCustumer3"}
-                                    img={itemWorker.img}
-                                    name={itemWorker.name}
-                                    category={itemWorker.category}
-                                    stars={itemWorker.aval}
-                                    starImg={img5Stars}//fix
+                                    img={item.user?.picture ?? profileImg}
+                                    name={item.user?.name}
+                                    category={item?.category}
+                                    ranking={item.ranking ?? "N/A"}
+                                    dist={item.distance ?? "N/A"}
+                                    starImg={img5Stars}
                                 />
-                                ))
-                            } 
+                            ))}
                         </div>
                         <img
                             className="arrows"
@@ -98,9 +102,6 @@ function Home() {
                 </div>
             </div>
             <Footer />
-
-
-
         </>
     )
 }
