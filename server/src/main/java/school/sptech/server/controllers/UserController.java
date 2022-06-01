@@ -8,6 +8,8 @@ import school.sptech.server.model.Category;
 import school.sptech.server.model.User;
 import school.sptech.server.model.UserCustomer;
 import school.sptech.server.model.UserWorker;
+import school.sptech.server.service.ExportTxt;
+import school.sptech.server.service.FilaObj;
 import school.sptech.server.request.LoginRequest;
 import school.sptech.server.repository.CategoryRepository;
 import school.sptech.server.repository.RatingRepository;
@@ -17,8 +19,10 @@ import school.sptech.server.service.UserService;
 
 import static org.springframework.http.ResponseEntity.status;
 
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.security.NoSuchAlgorithmException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -39,6 +43,9 @@ public class UserController {
     private ServiceRepository dbRepositoryService;
     @Autowired
     private RatingRepository dbRepositoryRating;
+
+    @Autowired
+    private CategoryRepository categoryRepository;
 
     @PostMapping("/customer")
     public ResponseEntity<Object> registerUserCustomer(@RequestBody UserCustomer newUser) {
@@ -130,22 +137,20 @@ public class UserController {
     }
 
     @GetMapping("worker/report")
-    public ResponseEntity<String> getReport() {
-        String report = "";
 
-        List<User> list = dbServiceUser.getAllWorkers();
-        for (var user : list) {
-            report += user.getId() + "," + user.getName() + "," + user.getEmail() + "," + user.getPassword() + ","
-                    + user.getCpf() +
-                    "," + user.getToken() + "," + user.getType() + "," + user.getPicture() + "," + user.getCep()
-                    + "\r\n";
-        }
+    public ResponseEntity getReport() throws IOException {
+
+        ExportTxt ex = new ExportTxt();
+
+        List<User> users = dbUserService.getAll();
+        List<Category> categories = categoryRepository.findAll();
+ 
 
         return status(200)
-                .header("content-type", "text/csv")
+                .header("content-type", "text/txt")
                 // .header("content-length", "9999999999")
-                .header("content-disposition", "filename=\"userWorker.csv\"")
-                .body(report);
+                .header("content-disposition", "filename=\"report.txt\"")
+                .body(ex.gravaArquivoTxt(users,categories,"report.txt"));
     }
 
     @GetMapping(value = "/worker/categories/{id}")
@@ -154,6 +159,12 @@ public class UserController {
 
         return categories.isEmpty() ? status(204).build() : status(200).body(categories);
     }
+
+
+    
+
+
+
 
     @PostMapping(value = "/search/{value}")
     public ResponseEntity<List<UserSearchQueryResult>> search(@PathVariable String value) {
@@ -210,5 +221,30 @@ public class UserController {
         }
 
         return status(200).body(rating);
+    }
+    @PatchMapping(value = "/report", consumes = "text/txt; charset: utf-8")
+    public ResponseEntity importUsers(@RequestBody byte[] report) throws IOException {
+        String document;
+        try {
+            document = new String(report, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            return ResponseEntity.status(400).body("Codificação nao suportada");
+        }
+        PrintWriter writer = new PrintWriter("ImportReport.txt", "UTF-8");
+        writer.println(document);
+        writer.close();
+        ExportTxt ex = new ExportTxt();
+        FilaObj<Object> fila = ex.lerArquivoTxt("ImportReport.txt");
+        while (!fila.isEmpty()){
+            if(fila.peek().getClass().toString().equals("class school.sptech.server.model.User")){
+                dbUserService.saveUser((User) fila.poll());
+            }
+            if(fila.peek().getClass().toString().equals("class school.sptech.server.model.Category")){
+                categoryRepository.save((Category) fila.poll());
+            }
+
+        }
+
+        return ResponseEntity.status(200).build();
     }
 }
