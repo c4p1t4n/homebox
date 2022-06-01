@@ -42,8 +42,9 @@ body p {
 }
 
 .cardCustumerDiv p {
-    font-weight: bold;
-    font-size: 17px;
+    
+    font-size: 18px;
+    margin-top: 1%;
 }
 
 .cardCustumer {
@@ -54,7 +55,7 @@ body p {
     background: rgba(10, 57, 105, 0.13);
     padding: 4%;
     border-radius: 10px;
-    width: 60%;
+    width: 70%;
     justify-content: space-between;
     box-shadow: 0px 1px 3px gray inset;
 }
@@ -67,7 +68,7 @@ body p {
 }
 
 .cardCustumer .imgStars {
-    height: 26px;
+    width: 150px;
 }
 
 .infoCustumer {
@@ -89,7 +90,7 @@ body p {
 }
 
 .assessment2 p {
-
+    margin-top: 7%;
     min-inline-size: max-content;
 }
 
