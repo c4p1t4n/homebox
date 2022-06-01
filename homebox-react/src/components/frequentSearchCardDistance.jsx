@@ -1,3 +1,5 @@
+import { DynamicStar } from 'react-dynamic-star';
+
 function FrequentSearchCard(props) {
     const styleRating = {
         display: "inline"
@@ -9,13 +11,9 @@ function FrequentSearchCard(props) {
             <img className="imgCustumer" src={props.img} alt="Foto de perfil" />
             <p>{props.category}</p>
             <div className="avaliacao">
-                <p style={styleRating}>Avaliação: {props.ranking}/5</p>
+                <p style={styleRating}>Avaliação: {props.rankingStr}/5</p>
             </div>
-            <img
-                className="stars"
-                src={props.starImg}
-                alt="Estrelas que indicam a avaliação do prestador"
-            />
+            {props.ranking ? <DynamicStar width={35} rating={props.ranking}  emptyStarColor={"grey"}/> : ""}
             <p>{props.dist.toFixed(2)} km de distância</p>
         </div>
     )

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import api from "../api"
 import "../assets/css/homePage.css"
-
 import Plumber from "../assets/img/plumber.png"
 import Card from "../components/card"
 import Footer from "../components/footer"
@@ -86,7 +85,8 @@ function Home() {
                                     img={item.user?.picture ?? profileImg}
                                     name={item.user?.name}
                                     category={item?.category}
-                                    ranking={item.ranking ?? "N/A"}
+                                    ranking={item.ranking}
+                                    rankingStr={item.ranking ?? "N/A"}
                                     dist={item.distance ?? "N/A"}
                                 />
                             ))}
