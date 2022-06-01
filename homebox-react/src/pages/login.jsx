@@ -89,7 +89,7 @@ const login = e => {
     api.post("/users/login/", {
         email,
         password
-    })
+    }).catch(err => err.response)
         .then(response => {
             console.log(response)
             if (response.status === 200) {
