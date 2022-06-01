@@ -23,12 +23,14 @@ function CardSearch(props) {
                 <div className="assessment">
                     <img className="imgStars" src={fourStars} alt="" />
                     <div className="assessment2">
-                        <p style={styleRating}>Avaliação: {""} {props.ranking}/5</p>
+                        <p style={styleRating}>
+                            Avaliação: {""} {props.ranking}/5
+                        </p>
                     </div>
                 </div>
             </div>
             <div className="distance">
-                <p>{props.dist} km de distância</p>
+                <p>{props.dist.toFixed(2)} km de distância</p>
             </div>
         </div>
     )
