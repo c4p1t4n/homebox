@@ -6,6 +6,7 @@ import profileImg from "../assets/img/profileIcon.png"
 import {useEffect, useState} from "react"
 import {search} from "../assets/js/search"
 
+
 function SearchResult() {
     const queryString = window.location.search
     const parameters = new URLSearchParams(queryString)
@@ -27,7 +28,7 @@ function SearchResult() {
         window.location.href = "/login"
     }
     return (
-        <>
+        <>  
             <VLibras />
             <Header search={`${searchValue}`} />
             <div className="container">
