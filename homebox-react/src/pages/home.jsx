@@ -88,7 +88,6 @@ function Home() {
                                     category={item?.category}
                                     ranking={item.ranking ?? "N/A"}
                                     dist={item.distance ?? "N/A"}
-                                    starImg={img5Stars}
                                 />
                             ))}
                         </div>
