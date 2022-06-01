@@ -15,6 +15,7 @@ import java.security.*;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
 @Service
 public class UserService {
 
@@ -57,6 +58,7 @@ public class UserService {
         return dbUserRepository.findByEmailAndPassword(email, password);
 
     }
+
     public boolean existsByEmail(String email) {
 
         return dbUserRepository.existsByEmail(email);
@@ -72,8 +74,8 @@ public class UserService {
 
     }
 
-    public List<User> get4Workers() {
-        return dbUserRepository.findTop4ByType("worker");
+    public List<User> get3Workers() {
+        return dbUserRepository.findTop3ByType("worker");
 
     }
 
