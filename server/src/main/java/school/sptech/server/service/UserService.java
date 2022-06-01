@@ -72,6 +72,11 @@ public class UserService {
 
     }
 
+    public List<User> get4Workers() {
+        return dbUserRepository.findTop4ByType("worker");
+
+    }
+
     public List<User> getAll() {
         return dbUserRepository.findAll();
     }

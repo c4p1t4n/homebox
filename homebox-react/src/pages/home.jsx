@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import api from "../api"
 import "../assets/css/homePage.css"
 
 import Plumber from "../assets/img/plumber.png"
@@ -24,6 +26,17 @@ import VLibras from "@djpfs/react-vlibras"
 const frequent_search = "'pintor'"
 
 function Home() {
+    const [worker, setWorker] = useState([])
+
+    useEffect(() => {
+        api.get("/users/recomendation",{id:JSON.parse(sessionStorage.getItem("user")).id_user}).then(({status, response}) => {
+            if (status === 200) {
+                console.log(response)
+                setWorker(response)
+            }  
+        })
+      },[])
+
     return (
         <>
             <VLibras/>
@@ -55,9 +68,6 @@ function Home() {
                     <br />
                     <br />
                     <h2>Recomendações para você</h2>
-                    <br />
-                    <br />
-                    <h3>Porque você pesquisou por {frequent_search}</h3>
                     <div className="cardCustumerDiv1">
                         <img
                             className="arrows"
@@ -65,30 +75,18 @@ function Home() {
                             alt="Seta para esquerda"
                         />
                         <div className="cardCustumerDiv2">
-                            <FrequentSearchCard
-                                class={"cardCustumer3"}
-                                img={imgMaria}
-                                name={"Maria Antonia"}
-                                category={"Pintora"}
-                                stars={5}
-                                starImg={img5Stars}
-                            />
-                            <FrequentSearchCard
-                                class={"cardCustumer3"}
-                                img={imgJose}
-                                name={"José Ricardo"}
-                                category={"Pintor"}
-                                stars={4}
-                                starImg={img4Stars}
-                            />
-                            <FrequentSearchCard
-                                class={"cardCustumer3"}
-                                img={imgLeo}
-                                name={"Leonardo Silveira"}
-                                category={"Pintor"}
-                                stars={3}
-                                starImg={img3Stars}
-                            />
+                            {
+                                worker.map((itemWorker) => (
+                                    <FrequentSearchCard
+                                    class={"cardCustumer3"}
+                                    img={itemWorker.img}
+                                    name={itemWorker.name}
+                                    category={itemWorker.category}
+                                    stars={itemWorker.aval}
+                                    starImg={img5Stars}//fix
+                                />
+                                ))
+                            } 
                         </div>
                         <img
                             className="arrows"
@@ -97,37 +95,6 @@ function Home() {
                         />
                     </div>
                     <br />
-                    <br />
-                    <h3>Próximos de você</h3>
-                    <div className="cardCustumerDistanceDiv">
-                        <FrequentSearchCardDistance
-                            class={"cardCustumerDistance"}
-                            img={imgMaria}
-                            name={"Maria Antonia"}
-                            category={"Pintora"}
-                            stars={5}
-                            starImg={img5Stars}
-                            dist={"2.2 KM de distância"}
-                        />
-                        <FrequentSearchCardDistance
-                            class={"cardCustumerDistance"}
-                            img={imgJose}
-                            name={"José Ricardo"}
-                            category={"Pintor"}
-                            stars={4}
-                            starImg={img4Stars}
-                            dist={"2.2 KM de distância"}
-                        />
-                        <FrequentSearchCardDistance
-                            class={"cardCustumerDistance"}
-                            img={imgLeo}
-                            name={"Leonardo Silveira"}
-                            category={"Pintor"}
-                            stars={3}
-                            starImg={img3Stars}
-                            dist={"2.2 KM de distância"}
-                        />
-                    </div>
                 </div>
             </div>
             <Footer />

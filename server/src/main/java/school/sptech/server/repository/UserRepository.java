@@ -39,6 +39,8 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 
     List<User> findAllById(Iterable<Integer> ids);
 
+    List<User> findTop4ByType(String type);
+
     void flush();
 
     User getById(Integer id);

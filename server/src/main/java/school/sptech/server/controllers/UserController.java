@@ -245,4 +245,20 @@ public class UserController {
         }
         return status(200).body(dist.getBody());
     }
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @GetMapping("/recomendation")
+    public ResponseEntity<List<UserSearchQueryResult>> getRecomendation(@RequestBody UserIdRequest requestId) {
+
+        List<UserSearchQueryResult> users;
+
+        users = dbServiceUser.get4Workers().stream()
+                .map((user) -> new UserSearchQueryResult(user,
+                            dbRepositoryRating.getAvgRatingForWorker(user.getId()),
+                            getDist(user.getCep(), dbServiceUser.findById(requestId.getId()).get().getCep()).getBody(),
+                            getWorkerCategories(user.getId()).getBody().get(0).getName()))
+                            .collect(Collectors.toList());
+
+        return status(200).body(users);
+    }
 }
