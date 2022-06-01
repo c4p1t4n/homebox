@@ -74,11 +74,7 @@ function Home() {
                     <br />
                     <h2>Recomendações para você</h2>
                     <div className="cardCustumerDiv1">
-                        <img
-                            className="arrows"
-                            src={arrowLeft}
-                            alt="Seta para esquerda"
-                        />
+                       
                         <div className="cardCustumerDiv2">
                             {worker.map(item => (
                                 <FrequentSearchCardDistance
@@ -92,11 +88,7 @@ function Home() {
                                 />
                             ))}
                         </div>
-                        <img
-                            className="arrows"
-                            src={arrowRight}
-                            alt="Seta para direita"
-                        />
+                      
                     </div>
                     <br />
                 </div>
