@@ -76,6 +76,7 @@ public  class User implements ILogin {
         this.type = type;
         this.picture = picture;
         this.cep = cep;
+        this.authenticated = 'n';
     }
 
     public Integer getId() {
