@@ -2,11 +2,11 @@ import logo from "../assets/img/icon/logo-removebg-preview.png"
 import searchIcon from "../assets/img/searchIconBlack.png"
 import profile from "../assets/img/profile.png"
 import "../assets/css/header.css"
-import {search} from "../assets/js/search"
+import { search } from "../assets/js/search"
 import "../assets/css/headerProfileOpen.css"
 import lineProfileOpen from "../assets/img/lineBlackProfileOpen.png"
 import api from "../api"
-import {useEffect, useState} from "react"
+import { useEffect, useState } from "react"
 
 function Header(props) {
     if (!sessionStorage.getItem("user")) {
@@ -73,15 +73,32 @@ function Header(props) {
                             <p>Chats</p>
                         </a>
                         <img src={lineProfileOpen} alt="" />
-                        <p id="logoff" onClick={logOff}>
+                        <p id="logoff" onClick={logOffSwitch}>
                             Logoff
                         </p>
                     </div>
                 </div>
             </div>
+            <div id="logOffDivAbsolut">
+                <img src={logo} alt="Logo homebox" />
+                <p>Tem certeza que deseja sair ?</p>
+                <div className="buttonsLogOff">
+                    <button onClick={logOff} id="buttonYes">SIM</button>
+                    <button onClick={logOffSwitch} id="buttonNo">NÃO</button>
+                </div>
+            </div>
         </header>
     )
 }
+
+const logOffSwitch = e => {
+    e.preventDefault()
+    const logoffOpenDiv = document.getElementById("logOffDivAbsolut")
+
+    logoffOpenDiv.style.display =
+        logoffOpenDiv.style.display === "flex" ? "none" : "flex"
+}
+
 
 const logOff = e => {
     sessionStorage.clear()
@@ -101,8 +118,8 @@ function ClickSearch() {
     const searchValue = input?.value
     const user = JSON.parse(sessionStorage.getItem("user"))
     if (user) {
-        let {id_user: idUser} = user
-        api.post("/search", {idUser, value: searchValue}).then(response => {
+        let { id_user: idUser } = user
+        api.post("/search", { idUser, value: searchValue }).then(response => {
             if (response.status === 201) {
                 console.log("SUCESSO")
             } else {
@@ -126,6 +143,6 @@ const keyStroke = e => {
         .then(value => {
             console.log(value)
         })
-        .catch(err => {})
+        .catch(err => { })
 }
 export default Header

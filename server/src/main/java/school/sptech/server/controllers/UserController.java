@@ -248,15 +248,16 @@ public class UserController {
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
-    @GetMapping("/recomendation")
-    public ResponseEntity<List<UserSearchQueryResult>> getRecomendation(@RequestBody UserIdRequest requestId) {
+    @GetMapping("/recomendation/{id}")
+    public ResponseEntity<List<UserSearchQueryResult>> getRecomendation(@PathVariable Integer id) {
 
-        List<UserSearchQueryResult> users;
-
-        users = dbServiceUser.get4Workers().stream()
+        if (Objects.isNull(id) || !dbServiceUser.existsById(id)) {
+            return status(404).build();
+        }
+        List<UserSearchQueryResult> users = dbServiceUser.get3Workers().stream()
                 .map((user) -> new UserSearchQueryResult(user,
                         dbRepositoryRating.getAvgRatingForWorker(user.getId()),
-                        getDist(user.getCep(), dbServiceUser.findById(requestId.getId()).get().getCep()).getBody(),
+                        getDist(user.getCep(), dbServiceUser.findById(id).get().getCep()).getBody(),
                         getWorkerCategories(user.getId()).getBody().get(0).getName()))
                 .collect(Collectors.toList());
 

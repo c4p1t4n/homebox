@@ -1,14 +1,17 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"
 import api from "../api"
 import "../assets/css/homePage.css"
 
 import Plumber from "../assets/img/plumber.png"
 import Card from "../components/card"
 import Footer from "../components/footer"
+import iconLoading from "../assets/img/iconLoading.gif"
+
 import Header from "../components/header"
 import FrequentSearchCard from "../components/frequentSearchCard"
 import FrequentSearchCardDistance from "../components/frequentSearchCardDistance"
 
+import profileImg from "../assets/img/profileIcon.png"
 import brushIcon from "../assets/img/brushIcon.png"
 import electrician from "../assets/img/electrician.png"
 import accessIcon from "../assets/img/accessIcon.png"
@@ -29,17 +32,21 @@ function Home() {
     const [worker, setWorker] = useState([])
 
     useEffect(() => {
-        api.get("/users/recomendation",{id:JSON.parse(sessionStorage.getItem("user")).id_user}).then(({status, response}) => {
+        api.get(
+            `/users/recomendation/${JSON.parse(sessionStorage.getItem("user")).id_user
+            }`
+        ).then(({ status, data }) => {
+            document.getElementById("loadingDivHome").style.display = "none"
             if (status === 200) {
-                console.log(response)
-                setWorker(response)
-            }  
+                console.log(data)
+                setWorker(data)
+            }
         })
-      },[])
+    }, [])
 
     return (
         <>
-            <VLibras/>
+            <VLibras />
             <Header />
             <div className="container">
                 <div className="body">
@@ -69,38 +76,27 @@ function Home() {
                     <br />
                     <h2>Recomendações para você</h2>
                     <div className="cardCustumerDiv1">
-                        <img
-                            className="arrows"
-                            src={arrowLeft}
-                            alt="Seta para esquerda"
-                        />
-                        <div className="cardCustumerDiv2">
-                            {
-                                worker.map((itemWorker) => (
-                                    <FrequentSearchCard
-                                    class={"cardCustumer3"}
-                                    img={itemWorker.img}
-                                    name={itemWorker.name}
-                                    category={itemWorker.category}
-                                    stars={itemWorker.aval}
-                                    starImg={img5Stars}//fix
-                                />
-                                ))
-                            } 
+                        <div id="loadingDivHome">
+                            <img src={iconLoading} alt="Carregando a pagina" />
                         </div>
-                        <img
-                            className="arrows"
-                            src={arrowRight}
-                            alt="Seta para direita"
-                        />
+                        <div className="cardCustumerDiv2">
+                            {worker.map(item => (
+                                <FrequentSearchCardDistance
+                                    class={"cardCustumer3"}
+                                    img={item.user?.picture ?? profileImg}
+                                    name={item.user?.name}
+                                    category={item?.category}
+                                    ranking={item.ranking ?? "N/A"}
+                                    dist={item.distance ?? "N/A"}
+                                    starImg={img5Stars}
+                                />
+                            ))}
+                        </div>
                     </div>
                     <br />
                 </div>
             </div>
             <Footer />
-
-
-
         </>
     )
 }
