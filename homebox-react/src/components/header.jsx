@@ -2,15 +2,14 @@ import logo from "../assets/img/icon/logo-removebg-preview.png"
 import searchIcon from "../assets/img/searchIconBlack.png"
 import profile from "../assets/img/profile.png"
 import "../assets/css/header.css"
-import { search } from "../assets/js/search"
+import {search} from "../assets/js/search"
 import "../assets/css/headerProfileOpen.css"
 import lineProfileOpen from "../assets/img/lineBlackProfileOpen.png"
 import api from "../api"
-import { useEffect, useState } from "react"
+import {useEffect, useState} from "react"
 
 function Header(props) {
-
-    if (!(sessionStorage.getItem('user'))) {
+    if (!sessionStorage.getItem("user")) {
         window.location.href = "/login"
     }
 
@@ -42,18 +41,16 @@ function Header(props) {
                                 id="search-input"
                                 type="text"
                                 onKeyDown={keyStroke}
-                                placeholder="Pesquise por serviço"
+                                placeholder="Pesquise"
                             />
                             <datalist id="searchs">
-                                {
-                                    searchResult.map((item, key) => (
-                                        <option value={item}>{item}</option>
-
-                                    ))}
+                                {searchResult.map((item, key) => (
+                                    <option value={item}>{item}</option>
+                                ))}
                             </datalist>
                         </div>
 
-                        <div className="searchIcon">
+                        <div onClick={ClickSearch} className="searchIcon">
                             <img
                                 src={searchIcon}
                                 alt="Icone de pesquisar 'lupa'"
@@ -99,6 +96,23 @@ const profileSwitch = e => {
         profileOpenDiv.style.display === "flex" ? "none" : "flex"
 }
 
+function ClickSearch() {
+    const input = document.querySelector("#search-input")
+    const searchValue = input?.value
+    const user = JSON.parse(sessionStorage.getItem("user"))
+    if (user) {
+        let {id_user: idUser} = user
+        api.post("/search", {idUser, value: searchValue}).then(response => {
+            if (response.status === 201) {
+                console.log("SUCESSO")
+            } else {
+                console.log(response)
+            }
+        })
+    }
+    window.location.href = `/search?search=${searchValue}`
+}
+
 const keyStroke = e => {
     const input = document.querySelector("#search-input")
     const searchValue = input?.value
@@ -106,23 +120,12 @@ const keyStroke = e => {
         return
     }
     if (e.key === "Enter") {
-        const user = JSON.parse(sessionStorage.getItem("user"))
-        if (user) {
-            let { id_user: idUser } = user
-            api.post("/search", { idUser, value: searchValue }).then(response => {
-                if (response.status === 201) {
-                    console.log("SUCESSO")
-                } else {
-                    console.log(response)
-                }
-            })
-        }
-        window.location.href = `/search?search=${searchValue}`
+        ClickSearch()
     }
-    search(searchValue)
+    search(searchValue, JSON.parse(sessionStorage.getItem("user")).id_user)
         .then(value => {
             console.log(value)
         })
-        .catch(err => console.warn(err))
+        .catch(err => {})
 }
 export default Header

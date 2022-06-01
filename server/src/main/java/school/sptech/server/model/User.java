@@ -4,7 +4,6 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.hibernate.validator.constraints.br.CPF;
 import school.sptech.server.service.ILogin;
 
 import java.util.Set;
@@ -75,6 +74,7 @@ public  class User implements ILogin {
         this.type = type;
         this.picture = picture;
         this.cep = cep;
+        this.authenticated = 'n';
     }
 
     public Integer getId() {
