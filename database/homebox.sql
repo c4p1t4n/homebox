@@ -253,6 +253,18 @@ VALUES
     ),
     (
         NULL,
+        'Robson',
+        'robson@gmail.com',
+        SHA2("ExSenha1", 256),
+        '12345678900',
+        NULL,
+        'worker',
+        'https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+        '01414001',
+        'y'
+    ),
+    (
+        NULL,
         'Larissa',
         'lari@gmail.com',
         SHA2("ExSenha1", 256),
@@ -260,19 +272,7 @@ VALUES
         NULL,
         'worker',
         'https://images.pexels.com/photos/7218004/pexels-photo-7218004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        '01414001',
-        'y'
-    ),
-    (
-        NULL,
-        'Robson',
-        'robson@gmail.com',
-        SHA2("ExSenha1", 256),
-        '12345678900',
-        NULL,
-        'worker',
-        'https://images.pexels.com/photos/8005401/pexels-photo-8005401.jpeg?auto=compress&cs=tinysrgb&w=600',
-        '49088060',
+        '03314030',
         'y'
     ),
     (
@@ -283,7 +283,7 @@ VALUES
         '12345678900',
         NULL,
         'worker',
-        'https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+        'https://images.pexels.com/photos/8005401/pexels-photo-8005401.jpeg?auto=compress&cs=tinysrgb&w=600',
         '56513000',
         'n'
     ),
