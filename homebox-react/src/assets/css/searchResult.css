@@ -97,3 +97,10 @@ body p {
 .distance {
     height: 150px;
 }
+
+#loadingDiv img{
+    height: 100px;
+    position: absolute;
+    top: 50%;  
+    left: 47%; 
+}
