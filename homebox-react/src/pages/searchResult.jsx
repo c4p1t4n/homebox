@@ -1,5 +1,6 @@
 import "../assets/css/searchResult.css"
 import VLibras from "@djpfs/react-vlibras"
+import iconLoading from "../assets/img/iconLoading.gif"
 import CardSearch from "../components/cardSearch"
 import Header from "../components/header"
 import profileImg from "../assets/img/profileIcon.png"
@@ -17,6 +18,7 @@ function SearchResult() {
     useEffect(() => {
         search(searchValue, JSON.parse(sessionStorage.getItem("user")).id_user)
             .then(value => {
+                document.getElementById("loadingDiv").style.display="none"
                 if (!value[0]) {
                     document.getElementById("titleSearch").innerHTML = `Nenhum resultado para "${searchValue}"`;
                 }
@@ -33,6 +35,9 @@ function SearchResult() {
     }
     return (
         <>
+            <div id="loadingDiv">
+                <img src={iconLoading} alt="Carregando a pagina" />
+            </div>
             <VLibras />
             <Header search={`${searchValue}`} />
             <div className="container">
