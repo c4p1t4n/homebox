@@ -29,8 +29,16 @@ public class FilaObj<T> {
             fila[tamanho] = info;
             tamanho++;
             return;
+        }else{
+            T[] filaTemp = (T[]) new Object[1+tamanho];
+            for (int i = 0; i < fila.length; i++) {
+                filaTemp[i] = fila[i];
+            }
+            fila = filaTemp;
+            fila[tamanho++] = info;
         }
-        throw new IllegalStateException();
+
+
 
     }
     public T peek() {
@@ -49,8 +57,8 @@ public class FilaObj<T> {
     }
 
     public void exibe() {
-        for(T element: fila){
-            System.out.println(element);
+        for (int i = 0; i < tamanho ; i++) {
+            System.out.println(fila[i]);
         }
     }
 
