@@ -43,7 +43,7 @@ body p {
 
 .cardCustumerDiv p {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 .cardCustumer {
@@ -62,6 +62,7 @@ body p {
 .cardCustumer .imgCustumer {
     height: 150px;
     border-radius: 10%;
+    width: 180px;
     border: #0A3969 solid;
 }
 
@@ -76,11 +77,20 @@ body p {
     height: 150px;
 }
 
+.assessment {
+    display: flex;
+    flex-direction: column;
+}
 
 .assessment2 {
     display: flex;
     justify-content: space-between;
     width: 60%;
+}
+
+.assessment2 p {
+
+    min-inline-size: max-content;
 }
 
 .distance {
