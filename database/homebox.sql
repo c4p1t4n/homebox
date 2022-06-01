@@ -248,7 +248,7 @@ VALUES
         NULL,
         'worker',
         'https://images.unsplash.com/photo-1468218457742-ee484fe2fe4c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80',
-        '01310100',
+        '01327900',
         'y'
     ),
     (
