@@ -2,15 +2,14 @@ import logo from "../assets/img/icon/logo-removebg-preview.png"
 import searchIcon from "../assets/img/searchIconBlack.png"
 import profile from "../assets/img/profile.png"
 import "../assets/css/header.css"
-import { search } from "../assets/js/search"
+import {search} from "../assets/js/search"
 import "../assets/css/headerProfileOpen.css"
 import lineProfileOpen from "../assets/img/lineBlackProfileOpen.png"
 import api from "../api"
-import { useEffect, useState } from "react"
+import {useEffect, useState} from "react"
 
 function Header(props) {
-
-    if (!(sessionStorage.getItem('user'))) {
+    if (!sessionStorage.getItem("user")) {
         window.location.href = "/login"
     }
 
@@ -45,11 +44,9 @@ function Header(props) {
                                 placeholder="Pesquise"
                             />
                             <datalist id="searchs">
-                                {
-                                    searchResult.map((item, key) => (
-                                        <option value={item}>{item}</option>
-
-                                    ))}
+                                {searchResult.map((item, key) => (
+                                    <option value={item}>{item}</option>
+                                ))}
                             </datalist>
                         </div>
 
@@ -99,14 +96,13 @@ const profileSwitch = e => {
         profileOpenDiv.style.display === "flex" ? "none" : "flex"
 }
 
-
-function ClickSearch(){
+function ClickSearch() {
     const input = document.querySelector("#search-input")
     const searchValue = input?.value
     const user = JSON.parse(sessionStorage.getItem("user"))
     if (user) {
-        let { id_user: idUser } = user
-        api.post("/search", { idUser, value: searchValue }).then(response => {
+        let {id_user: idUser} = user
+        api.post("/search", {idUser, value: searchValue}).then(response => {
             if (response.status === 201) {
                 console.log("SUCESSO")
             } else {
@@ -117,10 +113,6 @@ function ClickSearch(){
     window.location.href = `/search?search=${searchValue}`
 }
 
-
-
-
-
 const keyStroke = e => {
     const input = document.querySelector("#search-input")
     const searchValue = input?.value
@@ -130,10 +122,10 @@ const keyStroke = e => {
     if (e.key === "Enter") {
         ClickSearch()
     }
-    search(searchValue)
+    search(searchValue, JSON.parse(sessionStorage.getItem("user")).id_user)
         .then(value => {
             console.log(value)
         })
-        .catch(err => console.warn(err))
+        .catch(err => {})
 }
 export default Header
