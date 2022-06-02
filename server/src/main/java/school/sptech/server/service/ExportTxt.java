@@ -1,16 +1,25 @@
 package school.sptech.server.service;
 
+import org.springframework.stereotype.Service;
 import school.sptech.server.model.Category;
 import school.sptech.server.model.User;
 
 import java.io.*;
+import java.math.BigInteger;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class ExportTxt {
+    public String encriptPassword(String password) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+        MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
+        messageDigest.update(password.getBytes("UTF-8"));
+        return new BigInteger(1, messageDigest.digest()).toString(16);
+    }
     public static void gravaRegistro(String registro, String nomeArq) {
         BufferedWriter saida = null;
         // File file = new File(nomeArq);
@@ -62,13 +71,14 @@ public class ExportTxt {
                     System.out.println(registro.substring(3,7));
                     id = Integer.valueOf(registro.substring(3,7).trim());
                     name = registro.substring(8,21).trim();
-                    email = registro.substring(22,51).trim();
-                    password = registro.substring(52,65).trim();
-                    cpf = registro.substring(65,76).trim();
-                    token = registro.substring(76,90).trim();
-                    type = registro.substring(90,98).trim();
-                    picture = registro.substring(98,112).trim();
-                    cep = registro.substring(112,123).trim();
+                    email = registro.substring(21,40).trim();
+                    password = registro.substring(41,107).trim();
+                    cpf = registro.substring(107,117).trim();
+                    token = registro.substring(118,130).trim();
+                    type = registro.substring(130,138).trim();
+                    picture = registro.substring(139,298).trim();
+                    cep = registro.substring(299,309).trim();
+                    password = encriptPassword(password);
                     fila.insert(new User(id,name,email,password,cpf,token,type,picture,cep));
 
                 }
@@ -91,6 +101,8 @@ public class ExportTxt {
         }
         catch (IOException erro) {
             System.out.println("Erro ao ler o arquivo: " + erro);
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
         }
         return fila;
 
@@ -113,12 +125,12 @@ public class ExportTxt {
             corpo = "02";
             corpo += String.format("%5.5s", usr.getId());
             corpo += String.format("%14.14s", usr.getName());
-            corpo += String.format("%30.30s", usr.getEmail());
-            corpo += String.format("%14.14s", usr.getPassword());
+            corpo += String.format("%-20.20s", usr.getEmail());
+            corpo += String.format("%64.64s", usr.getPassword());
             corpo += String.format("%11.11s", usr.getCpf());
             corpo += String.format("%14.14s", usr.getToken());
             corpo += String.format("%8.8s", usr.getType());
-            corpo += String.format("%14.14s", usr.getPicture());
+            corpo += String.format("%160.160s", usr.getPicture());
             corpo += String.format("%11.11s", usr.getCep());
 
 
