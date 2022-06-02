@@ -54,6 +54,11 @@ public class UserController {
         if (!newUser.getType().equals("customer")) {
             return status(400).build();
         }
+        try {
+            newUser.setPassword(dbServiceUser.encriptPassword(newUser.getPassword()));
+        } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
         newUser.setAuthenticated('n');
         User user = dbServiceUser.saveUser(newUser);
 
@@ -76,6 +81,11 @@ public class UserController {
 
             if (!newUser.getType().equals("worker")) {
                 return status(400).build();
+            }
+            try {
+                newUser.setPassword(dbServiceUser.encriptPassword(newUser.getPassword()));
+            } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
+                e.printStackTrace();
             }
             newUser.setAuthenticated('n');
             User user = dbServiceUser.saveUser(newUser);
