@@ -132,10 +132,10 @@ CREATE TABLE service_has_tag (
 
 CREATE TABLE scheduling (
     id_scheduling int PRIMARY KEY AUTO_INCREMENT,
-    fk_customer int NOT NULL,
-    fk_service int NOT NULL,
-    FOREIGN KEY (fk_service) REFERENCES service(id_service),
-    FOREIGN KEY (fk_customer) REFERENCES user(id_user)
+    customer_id_user int NOT NULL,
+    service_id_service int NOT NULL,
+    FOREIGN KEY (service_id_service) REFERENCES service(id_service),
+    FOREIGN KEY (customer_id_user) REFERENCES user(id_user)
 );
 
 CREATE TABLE scheduling_status (
@@ -149,17 +149,17 @@ CREATE TABLE scheduling_status (
         "rated"
     ) NOT NULL,
     status_date DATETIME NOT NULL,
-    fk_scheduling int,
-    FOREIGN KEY (fk_scheduling) REFERENCES scheduling(id_scheduling)
+    scheduling_id_scheduling int,
+    FOREIGN KEY (scheduling_id_scheduling) REFERENCES scheduling(id_scheduling)
 );
 
 CREATE TABLE accomplished_service (
     id_accomplished_service int PRIMARY KEY AUTO_INCREMENT,
-    fk_scheduling int,
+    scheduling_id_scheduling int,
     price DECIMAL(7, 2) NOT NULL,
     description TEXT NOT NULL,
     service_date DATETIME NOT NULL,
-    FOREIGN KEY (fk_scheduling) REFERENCES scheduling(id_scheduling)
+    FOREIGN KEY (scheduling_id_scheduling) REFERENCES scheduling(id_scheduling)
 );
 
 CREATE TABLE rating (
@@ -167,7 +167,7 @@ CREATE TABLE rating (
     fk_accomplished_service int,
     rating int NOT NULL,
     description TEXT,
-    FOREIGN KEY (fk_accomplished_service) REFERENCES accomplished_service(fk_scheduling)
+    FOREIGN KEY (fk_accomplished_service) REFERENCES accomplished_service(scheduling_id_scheduling)
 );
 
 CREATE TABLE search (
@@ -346,9 +346,9 @@ VALUES
         5000.00
     );
 
--- 5  6
+
 INSERT INTO
-    scheduling(fk_customer, fk_service)
+    scheduling(customer_id_user, service_id_service)
 VALUES
     (5, 1),
     (5, 2),
@@ -434,7 +434,7 @@ VALUES
 
 INSERT INTO
     accomplished_service(
-        fk_scheduling,
+        scheduling_id_scheduling,
         price,
         description,
         service_date
