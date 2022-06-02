@@ -1,4 +1,4 @@
-import fourStars from "../assets/img/fourStars.png"
+import { DynamicStar } from 'react-dynamic-star';
 
 function CardSearch(props) {
     // const backgroundImg = {
@@ -21,13 +21,13 @@ function CardSearch(props) {
                     <p>{props.category}</p>
                 </div>
                 <div className="assessment">
-                    <img className="imgStars" src={fourStars} alt="" />
+                    {props.ranking ? <DynamicStar width={35} rating={props.ranking} emptyStarColor={"grey"} /> : ""}
                     <div className="assessment2">
                         <p style={styleRating}>
                             Avaliação: {props.ranking}/5
                         </p>
                     </div>
-                </div>  
+                </div>
             </div>
             <div className="distance">
                 <p>{props.dist.toFixed(2)} km de distância</p>
