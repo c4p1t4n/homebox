@@ -85,8 +85,8 @@ function Home() {
                                     img={item.user?.picture ?? profileImg}
                                     name={item.user?.name}
                                     category={item?.category}
-                                    ranking={item.ranking}
-                                    rankingStr={item.ranking ?? "N/A"}
+                                    rating={item.rating}
+                                    ratingStr={item.rating ?? "N/A"}
                                     dist={item.distance ?? "N/A"}
                                 />
                             ))}

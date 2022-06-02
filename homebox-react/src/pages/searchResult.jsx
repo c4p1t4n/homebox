@@ -50,7 +50,7 @@ function SearchResult() {
                                     img={item.user?.picture ?? profileImg}
                                     name={item.user?.name}
                                     category={item?.category}
-                                    ranking={item.ranking ?? "N/A"}
+                                    rating={item.rating ?? "N/A"}
                                     dist={item.distance ?? "N/A"}
                                 />
                             ))
