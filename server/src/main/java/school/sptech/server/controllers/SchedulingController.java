@@ -32,6 +32,7 @@ import school.sptech.server.request.SchedulingCreationRequest;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 @RequestMapping("/schedulings")
@@ -220,6 +221,11 @@ public class SchedulingController {
         }
 
         return status(201).body(schedulingStatus);
+    }
+
+    @GetMapping(value = "/ratings")
+    public ResponseEntity<List<Rating>> getMethodName() {
+        return status(200).body(dbRepositoryRating.findAll());
     }
 
 }

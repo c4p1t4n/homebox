@@ -1,5 +1,8 @@
 package school.sptech.server.response;
 
+import java.util.Objects;
+
+import school.sptech.server.model.Category;
 import school.sptech.server.model.User;
 
 public class UserSearchQueryResult {
@@ -21,6 +24,17 @@ public class UserSearchQueryResult {
         this.rating = rating;
         this.distance = distance;
         this.category = category;
+    }
+
+    public UserSearchQueryResult(User user, Double rating, Double distance, Category category) {
+        this.user = user;
+        this.rating = rating;
+        this.distance = distance;
+        if (Objects.isNull(category)) {
+            this.category = "";
+        } else {
+            this.category = category.getName();
+        }
     }
 
     public UserSearchQueryResult(User user, Double rating, String category) {

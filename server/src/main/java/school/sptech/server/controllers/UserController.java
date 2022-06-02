@@ -254,11 +254,12 @@ public class UserController {
         if (Objects.isNull(id) || !dbServiceUser.existsById(id)) {
             return status(404).build();
         }
+
         List<UserSearchQueryResult> users = dbServiceUser.get3Workers().stream()
                 .map((user) -> new UserSearchQueryResult(user,
                         dbRepositoryRating.getAvgRatingForWorker(user.getId()),
                         getDist(user.getCep(), dbServiceUser.findById(id).get().getCep()).getBody(),
-                        getWorkerCategories(user.getId()).getBody().get(0).getName()))
+                        getWorkerCategories(user.getId()).getBody().get(0)))
                 .collect(Collectors.toList());
 
         return status(200).body(users);
