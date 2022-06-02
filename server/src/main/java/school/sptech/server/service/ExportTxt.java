@@ -140,7 +140,7 @@ public class ExportTxt {
         for (Category usr : listCt) {
             corpo = "03";
             corpo += String.format("%5.3s", usr.getIdCategory());
-            corpo += String.format("%14.40s", usr.getName());
+            corpo += String.format("%30.30s", usr.getName());
 
             contaRegCorpo++;
             gravaRegistro(corpo, nomeArq);
