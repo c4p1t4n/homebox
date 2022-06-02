@@ -1,4 +1,4 @@
-import { DynamicStar } from 'react-dynamic-star';
+import {DynamicStar} from "react-dynamic-star"
 
 function CardSearch(props) {
     // const backgroundImg = {
@@ -21,7 +21,15 @@ function CardSearch(props) {
                     <p>{props.category}</p>
                 </div>
                 <div className="assessment">
-                    {props.ranking ? <DynamicStar width={35} rating={props.ranking} emptyStarColor={"grey"} /> : ""}
+                    {props.rating ? (
+                        <DynamicStar
+                            width={35}
+                            rating={props.rating.toFixed(1)}
+                            emptyStarColor={"grey"}
+                        />
+                    ) : (
+                        ""
+                    )}
                     <div className="assessment2">
                         <p style={styleRating}>
                             Avaliação: {props.rating.toFixed(1)}/5
