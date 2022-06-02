@@ -32,6 +32,7 @@ public class ChatController {
     @Autowired
     private UserService dbUserService;
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/{idCustomer}/{idWorker}")
     public ResponseEntity<Void> postChat(@PathVariable Integer idCustomer, @PathVariable Integer idWorker) {
         if (!dbUserService.existsById(idCustomer)) {
@@ -48,7 +49,6 @@ public class ChatController {
         UserHasChat WorkerChatAccess = new UserHasChat(idWorker, newChat.getIdChat());
 
         Msg autoMsg = dbRepositoryMsg.findByAutomaticAndFkUser('y', idWorker);
-        System.out.println(autoMsg.getMessage());
 
         if (Objects.nonNull(autoMsg)) {
 
@@ -68,6 +68,7 @@ public class ChatController {
 
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/{idChat}")
     public ResponseEntity<Chat> getChat(@PathVariable Integer idChat) {
         if (!dbRepositoryChat.existsById(idChat)) {
@@ -77,6 +78,7 @@ public class ChatController {
         return ResponseEntity.status(200).body(dbRepositoryChat.findById(idChat).get());
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping
     public ResponseEntity<List<Chat>> getChats() {
         List<Chat> chats = dbRepositoryChat.findAll();
@@ -88,6 +90,7 @@ public class ChatController {
         return ResponseEntity.status(200).body(chats);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/user/{fkUser}")
     public ResponseEntity<List<UserHasChat>> getChatsPerUser(@PathVariable Integer fkUser) {
         if (!dbUserService.existsById(fkUser)) {

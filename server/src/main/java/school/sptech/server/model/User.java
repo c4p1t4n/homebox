@@ -4,7 +4,6 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.hibernate.validator.constraints.br.CPF;
 import school.sptech.server.service.ILogin;
 
 import java.util.Set;
@@ -27,7 +26,7 @@ public  class User implements ILogin {
     private String password;
 
     @Column(name = "cpf")
-    @CPF
+//    @CPF
     private String cpf;
 
     @Column(name = "token")

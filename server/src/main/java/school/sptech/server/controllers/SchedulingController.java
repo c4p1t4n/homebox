@@ -8,6 +8,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,6 +32,7 @@ import school.sptech.server.request.SchedulingCreationRequest;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 @RequestMapping("/schedulings")
@@ -49,6 +51,7 @@ public class SchedulingController {
     @Autowired
     private RatingRepository dbRepositoryRating;
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping
     public ResponseEntity<List<Scheduling>> getAll() {
         List<Scheduling> schedulings = dbRepositoryScheduling.findAll();
@@ -56,6 +59,7 @@ public class SchedulingController {
         return schedulings.isEmpty() ? status(204).build() : status(200).body(schedulings);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/{id}")
     public ResponseEntity<Scheduling> getId(@PathVariable Integer id) {
         Optional<Scheduling> scheduling = dbRepositoryScheduling.findById(id);
@@ -65,6 +69,7 @@ public class SchedulingController {
                 : status(200).body(scheduling.get());
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping
     public ResponseEntity<Object> create(@RequestBody SchedulingCreationRequest schedulingBody) {
         Optional<User> userOptional = dbRepositoryUser.findById(schedulingBody.getFkUser());
@@ -95,6 +100,7 @@ public class SchedulingController {
         return status(201).body(schedulingStatus);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/status/{id}/{status}")
     public ResponseEntity<Object> updateStatus(@PathVariable Integer id, @PathVariable String status) {
         Optional<Scheduling> schedulingOptional = dbRepositoryScheduling.findById(id);
@@ -116,6 +122,7 @@ public class SchedulingController {
         return status(201).body(schedulingStatus);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/accomplish/{id}")
     public ResponseEntity<Object> accomplishScheduling(@PathVariable Integer id,
             @RequestBody AccomplishServiceInfo serviceInfo) {
@@ -150,6 +157,7 @@ public class SchedulingController {
         return status(201).body(accomplishedService);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/rating/{id}")
     public ResponseEntity<Object> rateScheduling(@PathVariable Integer id,
             @RequestBody RatingCreationRequest ratingInfo) {
@@ -184,6 +192,7 @@ public class SchedulingController {
         return status(201).body(rating);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/skip-rating/{id}")
     public ResponseEntity<Object> skipRatingScheduling(@PathVariable Integer id) {
         Optional<Scheduling> schedulingOptional = dbRepositoryScheduling.findById(id);
@@ -212,6 +221,11 @@ public class SchedulingController {
         }
 
         return status(201).body(schedulingStatus);
+    }
+
+    @GetMapping(value = "/ratings")
+    public ResponseEntity<List<Rating>> getMethodName() {
+        return status(200).body(dbRepositoryRating.findAll());
     }
 
 }

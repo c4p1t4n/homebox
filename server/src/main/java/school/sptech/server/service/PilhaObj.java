@@ -1,5 +1,6 @@
 package school.sptech.server.service;
 
+@SuppressWarnings("unchecked")
 public class PilhaObj<T> {
 
     private T[] pilha;
@@ -40,8 +41,8 @@ public class PilhaObj<T> {
             pilha[++topo] = info;
         } else {
 
-            for (int i = 0; i < pilha.length-1; i++) {
-                pilha[i] = pilha[i+1];
+            for (int i = 0; i < pilha.length - 1; i++) {
+                pilha[i] = pilha[i + 1];
             }
             pilha[topo] = info;
         }

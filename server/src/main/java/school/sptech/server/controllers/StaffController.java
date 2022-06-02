@@ -16,13 +16,14 @@ public class StaffController {
     @Autowired
     private StaffRepository dbRepositoryStaff;
 
-
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping()
     public ResponseEntity<List<Staff>> getStaff() {
         List<Staff> users = dbRepositoryStaff.findAll();
         return !users.isEmpty() ? ResponseEntity.status(200).body(users) : ResponseEntity.status(204).build();
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping()
     public ResponseEntity<Object> cadastrarStaff(@RequestBody Staff newStaff) {
 
@@ -35,6 +36,7 @@ public class StaffController {
         }
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/login/{userStaffLogin}/{userPassword}")
     public ResponseEntity<Object> getLoginUser(@PathVariable String userLogin, @PathVariable String userPassword) {
         List<Staff> staff = dbRepositoryStaff.findAll();

@@ -4,13 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import school.sptech.server.client.CalcDistClient;
 import school.sptech.server.model.Category;
 import school.sptech.server.model.User;
-import school.sptech.server.model.UserCustomer;
-import school.sptech.server.model.UserWorker;
 import school.sptech.server.service.ExportTxt;
 import school.sptech.server.service.FilaObj;
 import school.sptech.server.request.LoginRequest;
+import school.sptech.server.request.UserIdRequest;
 import school.sptech.server.repository.CategoryRepository;
 import school.sptech.server.repository.RatingRepository;
 import school.sptech.server.repository.ServiceRepository;
@@ -21,8 +21,6 @@ import static org.springframework.http.ResponseEntity.status;
 
 import java.io.*;
 import java.security.NoSuchAlgorithmException;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -38,6 +36,8 @@ public class UserController {
 
     @Autowired
     private CategoryRepository dbRepositoryCategory;
+    @Autowired
+    private CalcDistClient distClient;
 
     @Autowired
     private ServiceRepository dbRepositoryService;
@@ -47,20 +47,21 @@ public class UserController {
     @Autowired
     private CategoryRepository categoryRepository;
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/customer")
-    public ResponseEntity<Object> registerUserCustomer(@RequestBody UserCustomer newUser) {
+    public ResponseEntity<Object> registerUserCustomer(@RequestBody User newUser) {
 
-        if (newUser.getType().equals("customer")) {
-            newUser.setAuthenticated('n');
-            dbServiceUser.saveUser(newUser);
-        } else {
-            return status(403).build();
+        if (!newUser.getType().equals("customer")) {
+            return status(400).build();
         }
+        newUser.setAuthenticated('n');
+        User user = dbServiceUser.saveUser(newUser);
 
-        return status(201).build();
+        return status(201).body(user);
 
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/customer")
     public ResponseEntity<List<User>> getUserCustomer() {
         return !dbServiceUser.getAllCustomer().isEmpty()
@@ -68,23 +69,27 @@ public class UserController {
                 : status(204).build();
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/worker")
-    public ResponseEntity<Object> registerUserWorker(@RequestBody UserWorker newUser) {
+    public ResponseEntity<Object> registerUserWorker(@RequestBody User newUser) {
         try {
 
-            if (newUser.getType().equals("worker")) {
-                newUser.setAuthenticated('n');
-                dbServiceUser.saveUser(newUser);
-            } else {
-                return status(403).build();
+            if (!newUser.getType().equals("worker")) {
+                return status(400).build();
             }
+            newUser.setAuthenticated('n');
+            User user = dbServiceUser.saveUser(newUser);
 
-            return status(201).build();
-        } catch (NullPointerException npe) {
+            return status(201).body(user);
+
+        } catch (
+
+        NullPointerException npe) {
             return status(400).build();
         }
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/worker")
     public ResponseEntity<List<User>> getUserWorker() {
 
@@ -92,12 +97,14 @@ public class UserController {
                 : status(204).build();
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping()
     public ResponseEntity<List<User>> getUser() {
         return !dbServiceUser.getAll().isEmpty() ? status(200).body(dbServiceUser.getAll())
                 : status(204).build();
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/login")
     public ResponseEntity<User> LoginUser(@RequestBody LoginRequest loginCredentials) {
         if (!dbServiceUser.existsByEmail(loginCredentials.getEmail())) {
@@ -118,6 +125,7 @@ public class UserController {
         return status(200).body(user);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/logoff/{userLogin}")
     public ResponseEntity<Object> logoffUser(@PathVariable String userLogin) {
 
@@ -136,23 +144,23 @@ public class UserController {
         return status(400).build();
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("worker/report")
-
-    public ResponseEntity getReport() throws IOException {
+    public ResponseEntity<StringBuilder> getReport() throws IOException {
 
         ExportTxt ex = new ExportTxt();
 
-        List<User> users = dbUserService.getAll();
+        List<User> users = dbServiceUser.getAll();
         List<Category> categories = categoryRepository.findAll();
- 
 
         return status(200)
                 .header("content-type", "text/txt")
                 // .header("content-length", "9999999999")
                 .header("content-disposition", "filename=\"report.txt\"")
-                .body(ex.gravaArquivoTxt(users,categories,"report.txt"));
+                .body(ex.gravaArquivoTxt(users, categories, "report.txt"));
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping(value = "/worker/categories/{id}")
     public ResponseEntity<List<Category>> getWorkerCategories(@PathVariable Integer id) {
         List<Category> categories = dbServiceUser.getWorkerCategories(id);
@@ -160,29 +168,34 @@ public class UserController {
         return categories.isEmpty() ? status(204).build() : status(200).body(categories);
     }
 
-
-    
-
-
-
-
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping(value = "/search/{value}")
-    public ResponseEntity<List<UserSearchQueryResult>> search(@PathVariable String value) {
-        ResponseEntity<List<User>> response = getWorkersByCategory(value);
+    public ResponseEntity<List<UserSearchQueryResult>> search(@PathVariable String value,
+            @RequestBody UserIdRequest requestId) {
+        ResponseEntity<List<UserSearchQueryResult>> response = getWorkersByCategory(value);
         List<UserSearchQueryResult> users;
+
+        if (Objects.isNull(requestId.getId()) || !dbServiceUser.existsById(requestId.getId())) {
+            return status(404).build();
+        }
 
         if (response.getStatusCodeValue() == 404 || response.getStatusCodeValue() == 204) {
             users = dbRepositoryService.searchUsers(value).stream()
                     .map((user) -> new UserSearchQueryResult(user,
-                            dbRepositoryRating.getAvgRatingForWorker(user.getId())))
+                            dbRepositoryRating.getAvgRatingForWorker(user.getId()),
+                            getDist(user.getCep(), dbServiceUser.findById(requestId.getId()).get().getCep()).getBody(),
+                            getWorkerCategories(user.getId()).getBody().get(0).getName()))
                     .collect(Collectors.toList());
 
         } else {
             users = response
                     .getBody()
                     .stream()
-                    .map((user) -> new UserSearchQueryResult(user,
-                            dbRepositoryRating.getAvgRatingForWorker(user.getId())))
+                    .map((item) -> new UserSearchQueryResult(item.getUser(),
+                            dbRepositoryRating.getAvgRatingForWorker(item.getUser().getId()),
+                            getDist(item.getUser().getCep(), dbServiceUser.findById(requestId.getId()).get().getCep())
+                                    .getBody(),
+                            item.getCategory()))
                     .collect(Collectors.toList());
         }
 
@@ -192,15 +205,14 @@ public class UserController {
         return status(200).body(users);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping(value = "/category/{value}")
-    public ResponseEntity<List<User>> getWorkersByCategory(@PathVariable String value) {
+    public ResponseEntity<List<UserSearchQueryResult>> getWorkersByCategory(@PathVariable String value) {
         if (!dbRepositoryCategory.existsByNameContainsIgnoreCase(value)) {
-            System.out.println(dbRepositoryCategory.findAll());
-            System.out.println(value);
             return status(404).build();
         }
 
-        List<User> users = dbRepositoryService.findByCategoryNameContainsIgnoreCase(value);
+        List<UserSearchQueryResult> users = dbRepositoryService.findByCategoryNameContainsIgnoreCase(value);
 
         if (users.isEmpty()) {
             return status(204).build();
@@ -209,6 +221,7 @@ public class UserController {
         return status(200).body(users);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping(value = "/avg-rating/{idUser}")
     public ResponseEntity<Double> getAvgRating(@PathVariable Integer idUser) {
         if (!dbServiceUser.existsById(idUser)) {
@@ -222,8 +235,38 @@ public class UserController {
 
         return status(200).body(rating);
     }
+
+    @GetMapping("/distance/cep1/cep2")
+    public ResponseEntity<Double> getDist(@PathVariable String cep1,
+            @PathVariable String cep2) {
+
+        ResponseEntity<Double> dist = distClient.getDist(cep1, cep2);
+        if (Objects.isNull(dist.getBody())) {
+            return status(400).build();
+        }
+        return status(200).body(dist.getBody());
+    }
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @GetMapping("/recomendation/{id}")
+    public ResponseEntity<List<UserSearchQueryResult>> getRecomendation(@PathVariable Integer id) {
+
+        if (Objects.isNull(id) || !dbServiceUser.existsById(id)) {
+            return status(404).build();
+        }
+
+        List<UserSearchQueryResult> users = dbServiceUser.get3Workers().stream()
+                .map((user) -> new UserSearchQueryResult(user,
+                        dbRepositoryRating.getAvgRatingForWorker(user.getId()),
+                        getDist(user.getCep(), dbServiceUser.findById(id).get().getCep()).getBody(),
+                        getWorkerCategories(user.getId()).getBody().get(0)))
+                .collect(Collectors.toList());
+
+        return status(200).body(users);
+    }
+
     @PatchMapping(value = "/report", consumes = "text/txt; charset: utf-8")
-    public ResponseEntity importUsers(@RequestBody byte[] report) throws IOException {
+    public ResponseEntity<Object> importUsers(@RequestBody byte[] report) throws IOException {
         String document;
         try {
             document = new String(report, "UTF-8");
@@ -235,11 +278,11 @@ public class UserController {
         writer.close();
         ExportTxt ex = new ExportTxt();
         FilaObj<Object> fila = ex.lerArquivoTxt("ImportReport.txt");
-        while (!fila.isEmpty()){
-            if(fila.peek().getClass().toString().equals("class school.sptech.server.model.User")){
-                dbUserService.saveUser((User) fila.poll());
+        while (!fila.isEmpty()) {
+            if (fila.peek().getClass().toString().equals("class school.sptech.server.model.User")) {
+                dbServiceUser.saveUser((User) fila.poll());
             }
-            if(fila.peek().getClass().toString().equals("class school.sptech.server.model.Category")){
+            if (fila.peek().getClass().toString().equals("class school.sptech.server.model.Category")) {
                 categoryRepository.save((Category) fila.poll());
             }
 

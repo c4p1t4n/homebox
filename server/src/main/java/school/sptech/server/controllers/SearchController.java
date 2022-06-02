@@ -17,7 +17,6 @@ import java.util.Objects;
 import java.util.Optional;
 import school.sptech.server.service.PilhaObj;
 
-
 @RestController
 @RequestMapping("/search")
 public class SearchController {
@@ -29,9 +28,9 @@ public class SearchController {
 
     @Autowired
     private UserRepository dbRepositoryCustomer;
-
-
     PilhaObj<String> lastSearchs = new PilhaObj<>(5);
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping
     public ResponseEntity<Object> postSearchPerUser(@RequestBody UserSearchRequest searchReq) {
         Search search = dbRepositorySearch.findByValue(searchReq.getValue());
@@ -46,6 +45,48 @@ public class SearchController {
         return ResponseEntity.status(201).build();
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @GetMapping
+    public ResponseEntity<List<Search>> getAllSearch() {
+        List<Search> searchList = dbRepositorySearch.findAll();
+        if (searchList.isEmpty()) {
+            return ResponseEntity.status(204).build();
+        }
+        return ResponseEntity.status(200).body(searchList);
+    }
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @GetMapping("/{idSearch}")
+    public ResponseEntity<Optional<Search>> getSearchById(@PathVariable Integer idSearch) {
+        if (dbRepositorySearch.existsById(idSearch)) {
+            return ResponseEntity.status(200).body(dbRepositorySearch.findById(idSearch));
+        }
+        return ResponseEntity.status(404).build();
+    }
+    
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @GetMapping("/user/{idUsuario}")
+    public ResponseEntity<List<Search>> getSearchPerUser(@PathVariable Integer idUsuario){
+        if (dbRepositoryCustomer.existsById(idUsuario)){
+            List<Search> list = dbRepositorySearchUser.findAllByFkUser(idUsuario);
+            if (list.isEmpty()) {
+                return ResponseEntity.status(204).build();
+            }
+            return ResponseEntity.status(200).body(list);
+        }
+        return ResponseEntity.status(404).build();
+    }
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @DeleteMapping("/{idSearch}")
+    public ResponseEntity<Object> deleteSearch(@PathVariable Integer idSearch) {
+        if (dbRepositorySearch.existsById(idSearch)) {
+            dbRepositorySearch.deleteById(idSearch);
+            return ResponseEntity.status(200).build();
+        }
+        return ResponseEntity.status(404).build();
+    }
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/last/search")
     public ResponseEntity<List<String>> getLastSearchs() {
         List<String> list = new ArrayList<>(5);
@@ -58,50 +99,4 @@ public class SearchController {
         }
         return ResponseEntity.status(200).body(list);
     }
-
-
-
-
-    @GetMapping
-    public ResponseEntity<List<Search>> getAllSearch() {
-        List<Search> searchList = dbRepositorySearch.findAll();
-        if (searchList.isEmpty()) {
-            return ResponseEntity.status(204).build();
-        }
-        return ResponseEntity.status(200).body(searchList);
-    }
-
-    @GetMapping("/{idSearch}")
-    public ResponseEntity<Optional<Search>> getSearchById(@PathVariable Integer idSearch) {
-        if (dbRepositorySearch.existsById(idSearch)) {
-            return ResponseEntity.status(200).body(dbRepositorySearch.findById(idSearch));
-        }
-        return ResponseEntity.status(404).build();
-    }
-
-    @GetMapping("/user/{idUsuario}")
-    public ResponseEntity<List<Search>> getSearchPerUser(@PathVariable Integer idUsuario){
-        if (dbRepositoryCustomer.existsById(idUsuario)){
-            List<Search> list = dbRepositorySearchUser.findAllByFkUser(idUsuario);
-            if (list.isEmpty()){
-                return ResponseEntity.status(204).build();
-            }
-            return ResponseEntity.status(200).body(list);
-        }
-        return ResponseEntity.status(404).build();
-    }
-
-    @DeleteMapping("/{idSearch}")
-    public ResponseEntity<Object> deleteSearch(@PathVariable Integer idSearch) {
-        if (dbRepositorySearch.existsById(idSearch)) {
-            dbRepositorySearch.deleteById(idSearch);
-            return ResponseEntity.status(200).build();
-        }
-        return ResponseEntity.status(404).build();
-    }
-
-
-
-
 }
-

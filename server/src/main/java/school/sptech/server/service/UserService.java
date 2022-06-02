@@ -15,6 +15,7 @@ import java.security.*;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
 @Service
 public class UserService {
 
@@ -27,8 +28,8 @@ public class UserService {
 
     }
 
-    public void saveUser(User user) {
-        dbUserRepository.save(user);
+    public User saveUser(User user) {
+        return dbUserRepository.save(user);
     }
 
     public boolean existsById(Integer id) {
@@ -57,6 +58,7 @@ public class UserService {
         return dbUserRepository.findByEmailAndPassword(email, password);
 
     }
+
     public boolean existsByEmail(String email) {
 
         return dbUserRepository.existsByEmail(email);
@@ -69,6 +71,11 @@ public class UserService {
                 .stream()
                 .filter(user -> user.getType().equals("worker"))
                 .collect(Collectors.toList());
+
+    }
+
+    public List<User> get3Workers() {
+        return dbUserRepository.findTop3ByType("worker");
 
     }
 

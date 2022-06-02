@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import school.sptech.server.model.Category;
 import school.sptech.server.model.Service;
 import school.sptech.server.model.User;
+import school.sptech.server.response.UserSearchQueryResult;
 
 public interface ServiceRepository extends JpaRepository<Service, Integer> {
     List<Service> findByNameAndWorkerId(String name, Integer idWorker);
@@ -15,8 +16,8 @@ public interface ServiceRepository extends JpaRepository<Service, Integer> {
     @Query("select distinct s.category from Service s where s.worker.id = ?1")
     List<Category> findDistinctByWorkerId(Integer idWorker);
 
-    @Query("select distinct s.worker from Service s where s.category.name LIKE %:name%")
-    List<User> findByCategoryNameContainsIgnoreCase(String name);
+    @Query("select distinct new school.sptech.server.response.UserSearchQueryResult(s.worker, s.category.name) from Service s where s.category.name LIKE %:name%")
+    List<UserSearchQueryResult> findByCategoryNameContainsIgnoreCase(String name);
 
     @Query("select distinct s.worker from Service s where s.worker.name LIKE %:info%")
     List<User> searchUsers(String info);

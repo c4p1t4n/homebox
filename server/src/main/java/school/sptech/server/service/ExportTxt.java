@@ -13,7 +13,7 @@ import java.util.List;
 public class ExportTxt {
     public static void gravaRegistro(String registro, String nomeArq) {
         BufferedWriter saida = null;
-        File file = new File(nomeArq);
+        // File file = new File(nomeArq);
 
         try {
             saida = new BufferedWriter(new FileWriter(nomeArq, true));
