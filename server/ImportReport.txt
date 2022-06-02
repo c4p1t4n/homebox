@@ -1,0 +1,14 @@
+00USUÁRIOS02-06-2022 16:20:5601
+02    1          joaojose@gmail.com      75296be0137b2bf57130aab92bf421877ef195a4dd5c52824c60e2c88de198ce12345678900          null  worker   https://images.unsplash.com/photo-1468218457742-ee484fe2fe4c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80   01327900
+02    2        Robsonrobson@gmail.com    75296be0137b2bf57130aab92bf421877ef195a4dd5c52824c60e2c88de198ce12345678900          null  worker   https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80   01414001
+02    3       Larissalari@gmail.com      75296be0137b2bf57130aab92bf421877ef195a4dd5c52824c60e2c88de198ce12345678900          null  worker                                                 https://images.pexels.com/photos/7218004/pexels-photo-7218004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1   03314030
+02    4         Pedropedro@gmail.com     75296be0137b2bf57130aab92bf421877ef195a4dd5c52824c60e2c88de198ce12345678900          null  worker                                                              https://images.pexels.com/photos/8005401/pexels-photo-8005401.jpeg?auto=compress&cs=tinysrgb&w=600   56513000
+02    5         Brunabruna@gmail.com     75296be0137b2bf57130aab92bf421877ef195a4dd5c52824c60e2c88de198ce12345678900          nullcustomer                                                                                                                                                            null   40320615
+02    6       Claudioclaudio@gmail.com   75296be0137b2bf57130aab92bf421877ef195a4dd5c52824c60e2c88de198ce12345678900          nullcustomer                                                                                                                                                            null   01310200
+03    1                   Encanamento
+03    2                      Elétrica
+03    3            Montagem de móveis
+03    4                       Pintura
+03    5                       Limpeza
+010000000011
+
