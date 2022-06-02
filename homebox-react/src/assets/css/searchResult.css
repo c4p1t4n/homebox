@@ -81,6 +81,8 @@ body p {
 .assessment {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 70px;
 }
 
 .assessment2 {
@@ -90,8 +92,8 @@ body p {
 }
 
 .assessment2 p {
-    margin-top: 7%;
     min-inline-size: max-content;
+
 }
 
 .distance {

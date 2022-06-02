@@ -13,7 +13,12 @@ function FrequentSearchCard(props) {
             <div className="avaliacao">
                 <p style={styleRating}>Avaliação: {props.ratingStr.toFixed(1)}/5</p>
             </div>
-            {props.rating ? <DynamicStar width={35} rating={props.rating.toFixed(1)}  emptyStarColor={"grey"}/> : ""}
+            {props.rating ?
+                <DynamicStar
+                    width={35}
+                    height={35}
+                    rating={props.rating.toFixed(1)}
+                    emptyStarColor={"grey"} /> : ""}
             <p>{props.dist.toFixed(2)} km de distância</p>
         </div>
     )
