@@ -1,6 +1,5 @@
 package school.sptech.server.service;
 
-import org.springframework.stereotype.Service;
 import school.sptech.server.model.Category;
 import school.sptech.server.model.User;
 
