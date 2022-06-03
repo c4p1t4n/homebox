@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RestController;
 import school.sptech.server.model.Notification;
 import school.sptech.server.model.User;
 import school.sptech.server.model.UserHasNotification;
-import school.sptech.server.model.keys.UserHasNotificationKey;
 import school.sptech.server.repository.NotificationRepository;
 
 import school.sptech.server.repository.UserHasNotificationRepository;
@@ -86,8 +85,8 @@ public class NotificationController {
     public ResponseEntity<UserHasNotification> getNotificationForUser(
             @PathVariable Integer idNotification,
             @PathVariable Integer idUser) {
-        List<UserHasNotification> list = dbRepositoryNotification
-                .findById(new UserHasNotificationKey(idNotification, idUser));
+        List<UserHasNotification> list = dbRepositoryUserHasNotification
+                .findByUserIdAndNotificationId(idNotification, idUser);
 
         if (list.isEmpty()) {
             return ResponseEntity.status(404).build();
@@ -112,7 +111,8 @@ public class NotificationController {
         if (dbRepositoryNotification.existsById(idNotification)) {
             for (Integer id : idList.getUserIds()) {
                 if (dbUserService.existsById(id)) {
-                    UserHasNotification userHasNotification = new UserHasNotification(id, idNotification,
+                    UserHasNotification userHasNotification = new UserHasNotification(dbUserService.findById(id).get(),
+                            dbRepositoryNotification.findById(idNotification).get(),
                             LocalDate.now(), 'n');
                     notifications.add(dbRepositoryUserHasNotification.save(userHasNotification));
                 }
@@ -127,8 +127,8 @@ public class NotificationController {
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PatchMapping(value = "/read/{fkUser}/{fkNotification}")
     public ResponseEntity<Void> readNotification(@PathVariable Integer fkUser, @PathVariable Integer fkNotification) {
-        if (dbRepositoryUserHasNotification.existsById(new UserHasNotificationKey(fkNotification, fkUser))) {
-            dbRepositoryUserHasNotification.readNotification(new UserHasNotificationKey(fkNotification, fkUser));
+        if (dbRepositoryUserHasNotification.existsByUserIdAndNotificationId(fkNotification, fkUser)) {
+            dbRepositoryUserHasNotification.readNotification(fkNotification, fkUser);
             return ResponseEntity.status(200).build();
         }
         return ResponseEntity.status(404).build();

@@ -5,9 +5,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import school.sptech.server.model.Search;
-import school.sptech.server.model.SearchUser;
+import school.sptech.server.model.UserHasSearch;
 import school.sptech.server.repository.SearchRepository;
-import school.sptech.server.repository.SearchUserRepository;
+import school.sptech.server.repository.UserHasSearchRepository;
 import school.sptech.server.repository.UserRepository;
 import school.sptech.server.request.UserSearchRequest;
 import java.time.LocalDate;
@@ -24,10 +24,10 @@ public class SearchController {
     private SearchRepository dbRepositorySearch;
 
     @Autowired
-    private SearchUserRepository dbRepositorySearchUser;
+    private UserHasSearchRepository dbRepositoryUserHasSearch;
 
     @Autowired
-    private UserRepository dbRepositoryCustomer;
+    private UserRepository dbRepositoryUser;
     PilhaObj<String> lastSearchs = new PilhaObj<>(5);
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -35,13 +35,13 @@ public class SearchController {
     public ResponseEntity<Object> postSearchPerUser(@RequestBody UserSearchRequest searchReq) {
         Search search = dbRepositorySearch.findByValue(searchReq.getValue());
 
-
         if (Objects.isNull(search)) {
             search = dbRepositorySearch.save(new Search(searchReq.getValue()));
         }
-       lastSearchs.push(search.getValue());
+        lastSearchs.push(search.getValue());
 
-        dbRepositorySearchUser.save(new SearchUser(search.getIdSearch(), searchReq.getIdUser(), LocalDate.now()));
+        dbRepositoryUserHasSearch.save(
+                new UserHasSearch(search, dbRepositoryUser.findById(searchReq.getIdUser()).get(), LocalDate.now()));
         return ResponseEntity.status(201).build();
     }
 
@@ -63,12 +63,12 @@ public class SearchController {
         }
         return ResponseEntity.status(404).build();
     }
-    
+
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/user/{idUsuario}")
-    public ResponseEntity<List<Search>> getSearchPerUser(@PathVariable Integer idUsuario){
-        if (dbRepositoryCustomer.existsById(idUsuario)){
-            List<Search> list = dbRepositorySearchUser.findAllByFkUser(idUsuario);
+    public ResponseEntity<List<Search>> getSearchPerUser(@PathVariable Integer idUsuario) {
+        if (dbRepositoryUser.existsById(idUsuario)) {
+            List<Search> list = dbRepositoryUserHasSearch.findAllByUserId(idUsuario);
             if (list.isEmpty()) {
                 return ResponseEntity.status(204).build();
             }
@@ -86,11 +86,12 @@ public class SearchController {
         }
         return ResponseEntity.status(404).build();
     }
+
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/last/search")
     public ResponseEntity<List<String>> getLastSearchs() {
         List<String> list = new ArrayList<>(5);
-        while(!lastSearchs.isEmpty()){
+        while (!lastSearchs.isEmpty()) {
             list.add(lastSearchs.pop());
         }
         lastSearchs.setTopo(4);
