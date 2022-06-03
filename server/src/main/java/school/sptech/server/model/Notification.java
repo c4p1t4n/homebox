@@ -1,7 +1,6 @@
 package school.sptech.server.model;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
 @Table(name = "notification")
@@ -16,10 +15,6 @@ public class Notification {
     private String title;
     @Column(name = "message")
     private String message;
-
-    @OneToMany(mappedBy = "notification")
-    Set<UserHasNotification> userHasNotifications;
-
 
     public Notification(Integer id, String title, String message) {
         this.id = id;
