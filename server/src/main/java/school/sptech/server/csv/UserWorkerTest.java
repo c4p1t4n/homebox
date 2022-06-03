@@ -1,20 +1,20 @@
 package school.sptech.server.csv;
 
-import school.sptech.server.model.UserWorker;
+import school.sptech.server.model.User;
 import school.sptech.server.service.ListObj;
 
 public class UserWorkerTest {
 
     public static void main(String[] args) {
 
-        ListObj<UserWorker> userWorkerList = new ListObj<UserWorker>(5);
-        UserWorker user1 = new UserWorker(1, "José Silva", "jose@gmail.com", "senhaExemplo1",
+        ListObj<User> userWorkerList = new ListObj<User>(5);
+        User user1 = new User(1, "José Silva", "jose@gmail.com", "senhaExemplo1",
                 "00011122233", "tokenExemplo1", "worker", "foto.png",
                 "1234567");
-        UserWorker user2 = new UserWorker(2, "Lara Alves", "lara@gmail.com", "senhaExemplo2",
+        User user2 = new User(2, "Lara Alves", "lara@gmail.com", "senhaExemplo2",
                 "00011122244", "tokenExemplo2", "worker", "foto.png",
                 "1234577");
-        UserWorker user3 = new UserWorker(3, "Felipe Abreu", "felipe@gmail.com", "senhaExemplo3",
+        User user3 = new User(3, "Felipe Abreu", "felipe@gmail.com", "senhaExemplo3",
                 "00011122255", "tokenExemplo3", "worker", "foto.png",
                 "1234588");
 
