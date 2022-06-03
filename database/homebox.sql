@@ -13,7 +13,7 @@ CREATE TABLE staff (
 
 CREATE TABLE tag (
     id_tag int PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(100) NOT NULL
+    value VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE media (
@@ -42,29 +42,29 @@ CREATE TABLE notification (
 );
 
 CREATE TABLE user_has_notification (
-    fk_notification int NOT NULL,
-    fk_user int NOT NULL,
+    id_user_has_notification int PRIMARY KEY AUTO_INCREMENT,
+    notification_id_notification int NOT NULL,
+    user_id_user int NOT NULL,
     notification_date DATETIME NOT NULL,
     seen ENUM("y", "n") NOT NULL,
-    FOREIGN KEY(fk_notification) REFERENCES notification(id_notification),
-    FOREIGN KEY(fk_user) REFERENCES user(id_user),
-    PRIMARY KEY(fk_notification, fk_user)
+    FOREIGN KEY(notification_id_notification) REFERENCES notification(id_notification),
+    FOREIGN KEY(user_id_user) REFERENCES user(id_user)
 );
 
 CREATE TABLE msg (
     id_msg int PRIMARY KEY AUTO_INCREMENT,
     message TEXT NOT NULL,
     automatic ENUM("y", "n") NOT NULL,
-    fk_user int NOT NULL,
-    FOREIGN KEY(fk_user) REFERENCES user(id_user)
+    user_id_user int NOT NULL,
+    FOREIGN KEY(user_id_user) REFERENCES user(id_user)
 );
 
 CREATE TABLE msg_has_media (
-    fk_msg int,
-    fk_media int NOT NULL,
-    FOREIGN KEY(fk_media) REFERENCES media(id_media),
-    FOREIGN KEY(fk_msg) REFERENCES msg(id_msg),
-    PRIMARY KEY(fk_msg, fk_media)
+    id_msg_has_media int PRIMARY KEY AUTO_INCREMENT,
+    msg_id_msg int NOT NULL,
+    media_id_media int NOT NULL,
+    FOREIGN KEY(media_id_media) REFERENCES media(id_media),
+    FOREIGN KEY(msg_id_msg) REFERENCES msg(id_msg)
 );
 
 CREATE TABLE chat (
@@ -73,21 +73,21 @@ CREATE TABLE chat (
 );
 
 CREATE TABLE chat_has_msg (
-    fk_msg int NOT NULL,
-    fk_chat int NOT NULL,
+    id_chat_has_msg int PRIMARY KEY AUTO_INCREMENT,
+    msg_id_msg int NOT NULL,
+    chat_id_chat int NOT NULL,
     send_date DATETIME NOT NULL,
     seen ENUM("y", "n") NOT NULL,
-    FOREIGN KEY(fk_msg) REFERENCES msg(id_msg),
-    FOREIGN KEY(fk_chat) REFERENCES chat(id_chat),
-    PRIMARY KEY(fk_msg, fk_chat)
+    FOREIGN KEY(msg_id_msg) REFERENCES msg(id_msg),
+    FOREIGN KEY(chat_id_chat) REFERENCES chat(id_chat)
 );
 
 CREATE TABLE chat_has_user (
-    fk_chat int NOT NULL,
-    fk_user int NOT NULL,
-    FOREIGN KEY(fk_chat) REFERENCES chat(id_chat),
-    FOREIGN KEY(fk_user) REFERENCES user(id_user),
-    PRIMARY KEY(fk_user, fk_chat)
+    id_chat_has_user int PRIMARY KEY AUTO_INCREMENT,
+    chat_id_chat int NOT NULL,
+    user_id_user int NOT NULL,
+    FOREIGN KEY(chat_id_chat) REFERENCES chat(id_chat),
+    FOREIGN KEY(user_id_user) REFERENCES user(id_user)
 );
 
 CREATE TABLE category (
@@ -96,19 +96,19 @@ CREATE TABLE category (
 );
 
 CREATE TABLE category_has_tag (
-    fk_tag int,
-    fk_category int,
-    FOREIGN KEY (fk_category) REFERENCES category(id_category),
-    FOREIGN KEY (fk_tag) REFERENCES tag(id_tag),
-    PRIMARY KEY (fk_tag, fk_category)
+    id_category_has_tag int PRIMARY KEY AUTO_INCREMENT,
+    tag_id_tag int,
+    category_id_category int,
+    FOREIGN KEY (category_id_category) REFERENCES category(id_category),
+    FOREIGN KEY (tag_id_tag) REFERENCES tag(id_tag)
 );
 
 CREATE TABLE user_has_tag (
-    fk_tag int,
-    fk_user int,
-    FOREIGN KEY (fk_user) REFERENCES user(id_user),
-    FOREIGN KEY (fk_tag) REFERENCES tag(id_tag),
-    PRIMARY KEY (fk_tag, fk_user)
+    id_user_has_tag int PRIMARY KEY AUTO_INCREMENT,
+    tag_id_tag int,
+    user_id_user int,
+    FOREIGN KEY (user_id_user) REFERENCES user(id_user),
+    FOREIGN KEY (tag_id_tag) REFERENCES tag(id_tag)
 );
 
 CREATE TABLE service (
@@ -123,11 +123,11 @@ CREATE TABLE service (
 );
 
 CREATE TABLE service_has_tag (
-    fk_tag int,
-    fk_service int,
-    FOREIGN KEY (fk_service) REFERENCES service(id_service),
-    FOREIGN KEY (fk_tag) REFERENCES tag(id_tag),
-    PRIMARY KEY (fk_tag, fk_service)
+    id_sevice_has_tag int PRIMARY KEY AUTO_INCREMENT,
+    tag_id_tag int,
+    service_id_service int,
+    FOREIGN KEY (service_id_service) REFERENCES service(id_service),
+    FOREIGN KEY (tag_id_tag) REFERENCES tag(id_tag)
 );
 
 CREATE TABLE scheduling (
@@ -175,22 +175,22 @@ CREATE TABLE search (
     value VARCHAR(100) NOT NULL
 );
 
-CREATE TABLE search_user (
-    fk_search int,
-    fk_user int,
+CREATE TABLE user_has_search (
+    id_user_has_search int PRIMARY KEY AUTO_INCREMENT,
+    search_is_search int,
+    user_id_user int,
     search_date DATETIME NOT NULL,
-    FOREIGN KEY (fk_search) REFERENCES search(id_search),
-    FOREIGN KEY (fk_user) REFERENCES user(id_user),
-    PRIMARY KEY (fk_search, fk_user)
+    FOREIGN KEY (search_is_search) REFERENCES search(id_search),
+    FOREIGN KEY (user_id_user) REFERENCES user(id_user)
 );
 
 CREATE TABLE interest_access (
-    fk_user int,
-    fk_tag int,
+    id_interest_access int PRIMARY KEY AUTO_INCREMENT,
+    user_id_user int,
+    tag_id_tag int,
     access_date DATETIME NOT NULL,
-    FOREIGN KEY (fk_user) REFERENCES user(id_user),
-    FOREIGN KEY (fk_tag) REFERENCES tag(id_tag),
-    PRIMARY KEY (fk_user, fk_tag)
+    FOREIGN KEY (user_id_user) REFERENCES user(id_user),
+    FOREIGN KEY (tag_id_tag) REFERENCES tag(id_tag)
 );
 
 INSERT INTO
@@ -345,7 +345,6 @@ VALUES
         "Pintura de mais de 7 paredes",
         5000.00
     );
-
 
 INSERT INTO
     scheduling(customer_id_user, service_id_service)
