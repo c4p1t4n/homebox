@@ -11,13 +11,12 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.FluentQuery.FetchableFluentQuery;
 
-import school.sptech.server.id.MsgHasMediaId;
 import school.sptech.server.model.MsgHasMedia;
 
-public interface MsgHasMediaRepository extends JpaRepository<MsgHasMedia, MsgHasMediaId> {
+public interface MsgHasMediaRepository extends JpaRepository<MsgHasMedia, Integer> {
 
     @Override
-    void deleteAllByIdInBatch(Iterable<MsgHasMediaId> ids);
+    void deleteAllByIdInBatch(Iterable<Integer> ids);
 
     @Override
     void deleteAllInBatch();
@@ -41,16 +40,16 @@ public interface MsgHasMediaRepository extends JpaRepository<MsgHasMedia, MsgHas
     <S extends MsgHasMedia> List<S> findAll(Example<S> example, Sort sort);
 
     @Override
-    List<MsgHasMedia> findAllById(Iterable<MsgHasMediaId> ids);
+    List<MsgHasMedia> findAllById(Iterable<Integer> ids);
 
     @Override
     void flush();
 
     @Override
-    MsgHasMedia getById(MsgHasMediaId id);
+    MsgHasMedia getById(Integer id);
 
     @Override
-    MsgHasMedia getOne(MsgHasMediaId id);
+    MsgHasMedia getOne(Integer id);
 
     @Override
     <S extends MsgHasMedia> List<S> saveAll(Iterable<S> entities);
@@ -77,16 +76,16 @@ public interface MsgHasMediaRepository extends JpaRepository<MsgHasMedia, MsgHas
     void deleteAll(Iterable<? extends MsgHasMedia> entities);
 
     @Override
-    void deleteAllById(Iterable<? extends MsgHasMediaId> ids);
+    void deleteAllById(Iterable<? extends Integer> ids);
 
     @Override
-    void deleteById(MsgHasMediaId id);
+    void deleteById(Integer id);
 
     @Override
-    boolean existsById(MsgHasMediaId id);
+    boolean existsById(Integer id);
 
     @Override
-    Optional<MsgHasMedia> findById(MsgHasMediaId id);
+    Optional<MsgHasMedia> findById(Integer id);
 
     @Override
     <S extends MsgHasMedia> S save(S entity);
