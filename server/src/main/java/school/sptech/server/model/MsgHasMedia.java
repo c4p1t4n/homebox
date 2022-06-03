@@ -2,41 +2,55 @@ package school.sptech.server.model;
 
 import javax.persistence.*;
 
-import school.sptech.server.id.MsgHasMediaId;
-
 @Entity
 @Table(name = "msg_has_media")
-@IdClass(MsgHasMediaId.class)
 public class MsgHasMedia {
     @Id
-    @Column(name = "fk_msg")
-    private Integer fkMsg;
+    @Column(name = "id_msg_has_media")
+    private Integer id;
 
-    @Id
-    @Column(name = "fk_media")
-    private Integer fkMedia;
+    @ManyToOne
+    private Msg msg;
 
-    public MsgHasMedia(Integer fkMsg, Integer fkMedia) {
-        this.fkMsg = fkMsg;
-        this.fkMedia = fkMedia;
+    @ManyToOne
+    private Media media;
+
+    public MsgHasMedia(Integer id, Msg msg, Media media) {
+        this.id = id;
+        this.msg = msg;
+        this.media = media;
+    }
+
+    public MsgHasMedia(Msg msg, Media media) {
+        this.msg = msg;
+        this.media = media;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Msg getMsg() {
+        return msg;
+    }
+
+    public void setMsg(Msg msg) {
+        this.msg = msg;
+    }
+
+    public Media getMedia() {
+        return media;
+    }
+
+    public void setMedia(Media media) {
+        this.media = media;
     }
 
     public MsgHasMedia() {
     }
 
-    public Integer getFkMsg() {
-        return fkMsg;
-    }
-
-    public void setFkMsg(Integer fkMsg) {
-        this.fkMsg = fkMsg;
-    }
-
-    public Integer getFkMedia() {
-        return fkMedia;
-    }
-
-    public void setFkMedia(Integer fkMedia) {
-        this.fkMedia = fkMedia;
-    }
 }
