@@ -52,11 +52,7 @@ public class ChatController {
 
         if (Objects.nonNull(autoMsg)) {
 
-            ChatHasMsg autoMsgChat = new ChatHasMsg(
-                    autoMsg.getIdMsg(),
-                    newChat.getIdChat(),
-                    now,
-                    'n');
+            ChatHasMsg autoMsgChat = new ChatHasMsg(newChat, autoMsg, now, 'n');
 
             dbRepositoryChatHasMsg.save(autoMsgChat);
         }

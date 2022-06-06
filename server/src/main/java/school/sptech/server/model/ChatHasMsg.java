@@ -1,8 +1,5 @@
 package school.sptech.server.model;
 
-import school.sptech.server.model.keys.ChatHasMsgKey;
-
-
 import javax.persistence.*;
 import javax.validation.constraints.PastOrPresent;
 import java.time.LocalDate;
@@ -12,18 +9,16 @@ import java.time.LocalDate;
 
 public class ChatHasMsg {
 
-    @EmbeddedId
-    ChatHasMsgKey id;
+    @Id
+    @Column(name = "id_chat_has_msg")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
     @ManyToOne
-    @MapsId("idChat")
-    @JoinColumn(name ="id_chat")
-    Chat chat;
+    private Chat chat;
 
     @ManyToOne
-    @MapsId("idMsg")
-    @JoinColumn(name = "id_msg")
-    Msg msg;
+    private Msg msg;
 
     @PastOrPresent
     @Column(name = "send_date")
@@ -32,12 +27,38 @@ public class ChatHasMsg {
     @Column(name = "seen")
     private Character seen;
 
-
-
-    public ChatHasMsg() {
+    public Integer getId() {
+        return id;
     }
 
-    public ChatHasMsg(ChatHasMsgKey id, Chat chat, Msg msg, LocalDate sendDate, Character seen) {
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Chat getChat() {
+        return chat;
+    }
+
+    public void setChat(Chat chat) {
+        this.chat = chat;
+    }
+
+    public Msg getMsg() {
+        return msg;
+    }
+
+    public void setMsg(Msg msg) {
+        this.msg = msg;
+    }
+
+    public ChatHasMsg(Chat chat, Msg msg, @PastOrPresent LocalDate sendDate, Character seen) {
+        this.chat = chat;
+        this.msg = msg;
+        this.sendDate = sendDate;
+        this.seen = seen;
+    }
+
+    public ChatHasMsg(Integer id, Chat chat, Msg msg, @PastOrPresent LocalDate sendDate, Character seen) {
         this.id = id;
         this.chat = chat;
         this.msg = msg;
@@ -45,12 +66,7 @@ public class ChatHasMsg {
         this.seen = seen;
     }
 
-    public ChatHasMsg(Integer idMsg, Integer idChat, LocalDate now, char n) {
-
-    }
-
-    public ChatHasMsg(Integer fkMsg, Integer fkChat) {
-        this.id = new ChatHasMsgKey(fkChat,fkMsg);
+    public ChatHasMsg() {
     }
 
     public LocalDate getSendDate() {

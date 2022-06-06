@@ -13,7 +13,7 @@ import school.sptech.server.repository.ChatHasMsgRepository;
 import school.sptech.server.repository.ChatRepository;
 import school.sptech.server.repository.MsgRepository;
 import school.sptech.server.service.UserService;
-import school.sptech.server.model.keys.ChatHasMsgKey;
+
 @RestController
 @RequestMapping("/msg")
 public class MsgController {
@@ -57,7 +57,6 @@ public class MsgController {
         return ResponseEntity.status(200).body(msgs);
     }
 
-
     @GetMapping
     public ResponseEntity<List<ChatHasMsg>> getMsgsFull() {
         List<ChatHasMsg> msgs = dbRepositoryChatHasMsg.findAllByChatIsNotNull();
@@ -99,7 +98,7 @@ public class MsgController {
             return ResponseEntity.status(404).build();
         }
 
-         List<ChatHasMsg> msgs = dbRepositoryChatHasMsg.findAllByChat(dbRepositoryChat.findById(idChat));
+        List<ChatHasMsg> msgs = dbRepositoryChatHasMsg.findAllByChat(dbRepositoryChat.findById(idChat));
 
         if (msgs.isEmpty()) {
             return ResponseEntity.status(204).build();
@@ -118,7 +117,7 @@ public class MsgController {
 
         Msg msg = dbRepositoryMsg.save(newMsg);
 
-        ChatHasMsg chatHasMsg = new ChatHasMsg(msg.getIdMsg(), idChat, LocalDate.now(), 'n');
+        ChatHasMsg chatHasMsg = new ChatHasMsg(dbRepositoryChat.findById(idChat).get(), msg, LocalDate.now(), 'n');
 
         dbRepositoryChatHasMsg.save(chatHasMsg);
 
@@ -128,12 +127,11 @@ public class MsgController {
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PatchMapping(value = "/read/{fkMsg}/{fkChat}")
     public ResponseEntity<Void> readMsg(@PathVariable Integer fkMsg, @PathVariable Integer fkChat) {
-        if (dbRepositoryChatHasMsg.existsById(new ChatHasMsgKey(fkMsg, fkChat))) {
-            dbRepositoryChatHasMsg.readNotification(new ChatHasMsgKey(fkMsg, fkChat));
+        if (dbRepositoryChatHasMsg.existsByMsgIdMsgAndChatIdChat(fkMsg, fkChat)) {
+            dbRepositoryChatHasMsg.readNotification(fkMsg, fkChat);
             return ResponseEntity.status(200).build();
         }
         return ResponseEntity.status(404).build();
     }
-
 
 }

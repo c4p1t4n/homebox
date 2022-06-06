@@ -8,7 +8,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.ResponseEntity;
 import school.sptech.server.model.Search;
 import school.sptech.server.repository.SearchRepository;
-import school.sptech.server.repository.SearchUserRepository;
+import school.sptech.server.repository.UserHasSearchRepository;
 import school.sptech.server.repository.UserRepository;
 
 import java.util.ArrayList;
@@ -19,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-@SpringBootTest(classes = {SearchController.class})
+@SpringBootTest(classes = { SearchController.class })
 class SearchControllerTest {
 
     @Autowired
@@ -29,7 +29,7 @@ class SearchControllerTest {
     private SearchRepository dbRepositorySearch;
 
     @MockBean
-    private SearchUserRepository dbRepositorySearchUser;
+    private UserHasSearchRepository dbRepositoryUserHasSearch;
 
     @MockBean
     private UserRepository dbRepositoryCustomer;
@@ -46,7 +46,7 @@ class SearchControllerTest {
 
     @Test
     @DisplayName("Se existem pesquisas deveria retornar 200 e COM corpo")
-    void testGetListOfAllSearchWithBody(){
+    void testGetListOfAllSearchWithBody() {
         Search search1 = mock(Search.class);
         Search search2 = mock(Search.class);
         List<Search> mockList = List.of(search1, search2);

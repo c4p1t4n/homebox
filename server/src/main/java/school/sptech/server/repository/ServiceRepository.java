@@ -20,7 +20,7 @@ public interface ServiceRepository extends JpaRepository<Service, Integer> {
     List<UserSearchQueryResult> findByCategoryNameContainsIgnoreCase(String name);
 
     @Query("select distinct s.worker from Service s where s.worker.name LIKE %:info%")
-    List<User> searchUsers(String info);
+    List<User> UserHasSearchs(String info);
 
     boolean existsByWorkerId(Integer idWorker);
 

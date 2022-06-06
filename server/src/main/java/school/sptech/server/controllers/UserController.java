@@ -190,7 +190,7 @@ public class UserController {
         }
 
         if (response.getStatusCodeValue() == 404 || response.getStatusCodeValue() == 204) {
-            users = dbRepositoryService.searchUsers(value).stream()
+            users = dbRepositoryService.UserHasSearchs(value).stream()
                     .map((user) -> new UserSearchQueryResult(user,
                             dbRepositoryRating.getAvgRatingForWorker(user.getId()),
                             getDist(user.getCep(), dbServiceUser.findById(requestId.getId()).get().getCep()).getBody(),

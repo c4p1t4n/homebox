@@ -1,6 +1,6 @@
 package school.sptech.server.service;
 
-import school.sptech.server.model.UserWorker;
+import school.sptech.server.model.User;
 
 @SuppressWarnings("unchecked")
 public class ListObj<T> {
@@ -77,9 +77,9 @@ public class ListObj<T> {
         array[index] = element;
     }
 
-    public static void bubbleSort(ListObj<UserWorker> v) {
+    public static void bubbleSort(ListObj<User> v) {
 
-        UserWorker aux;
+        User aux;
 
         for (int i = 0; i < v.getSize() - 1; i++) {
             for (int j = 1; j < v.getSize() - i; j++) {
