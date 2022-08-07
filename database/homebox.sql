@@ -31,6 +31,7 @@ CREATE TABLE user (
     token CHAR(16),
     TYPE ENUM("worker", "customer") NOT NULL,
     picture VARCHAR(250),
+    birth_date DATE NOT NULL,
     cep CHAR(8) NOT NULL,
     authenticated ENUM("y", "n", "p") NOT NULL
 );
@@ -248,6 +249,7 @@ VALUES
         NULL,
         'worker',
         'https://images.unsplash.com/photo-1468218457742-ee484fe2fe4c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80',
+        DATE('1965-01-01'),
         '01327900',
         'y'
     ),
@@ -260,6 +262,7 @@ VALUES
         NULL,
         'worker',
         'https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+        DATE('1975-01-01'),
         '01414001',
         'y'
     ),
@@ -272,6 +275,7 @@ VALUES
         NULL,
         'worker',
         'https://images.pexels.com/photos/7218004/pexels-photo-7218004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        DATE('1989-01-01'),
         '03314030',
         'y'
     ),
@@ -284,6 +288,7 @@ VALUES
         NULL,
         'worker',
         'https://images.pexels.com/photos/8005401/pexels-photo-8005401.jpeg?auto=compress&cs=tinysrgb&w=600',
+        DATE('1980-01-01'),
         '56513000',
         'n'
     ),
@@ -296,6 +301,7 @@ VALUES
         NULL,
         'customer',
         NULL,
+        DATE('1993-01-01'),
         '40320615',
         'y'
     ),
@@ -308,6 +314,7 @@ VALUES
         NULL,
         'customer',
         NULL,
+        DATE('1978-01-01'),
         '01310200',
         'y'
     );

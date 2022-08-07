@@ -1,5 +1,7 @@
 package school.sptech.server.model;
 
+import java.time.LocalDate;
+
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 
@@ -36,6 +38,9 @@ public class User implements ILogin {
     @Column(name = "picture")
     private String picture;
 
+    @Column(name = "birth_date")
+    private LocalDate birthDate;
+
     @Column(name = "cep")
     private String cep;
 
@@ -54,7 +59,22 @@ public class User implements ILogin {
 
     }
 
-    public User(Integer id, String name, String email, String password, String cpf, String token, String type,
+    public User(Integer id, String name, @Email String email, String password, String cpf, String token, String type,
+            String picture, LocalDate birthDate, String cep, Character authenticated) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.cpf = cpf;
+        this.token = token;
+        this.type = type;
+        this.picture = picture;
+        this.birthDate = birthDate;
+        this.cep = cep;
+        this.authenticated = 'n';
+    }
+
+    public User(Integer id, String name, @Email String email, String password, String cpf, String token, String type,
             String picture, String cep) {
         this.id = id;
         this.name = name;
@@ -162,5 +182,13 @@ public class User implements ILogin {
     public String toString() {
         return String.format("%05d %-14s %-20s %-14s %-14s %-14s %-14s %-14s %-14s",
                 id, name, email, password, cpf, token, type, picture, cep);
+    }
+
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
     }
 }

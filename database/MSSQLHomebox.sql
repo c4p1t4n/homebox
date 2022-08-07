@@ -45,6 +45,7 @@ CREATE TABLE "user" (
     token CHAR(16),
     TYPE varchar(8) CHECK(TYPE IN ("worker", "customer")) NOT NULL,
     picture VARCHAR(250),
+    birth_date DATE NOT NULL,
     cep CHAR(8) NOT NULL,
     authenticated CHAR(1) CHECK(authenticated IN ("y", "n", "p")) NOT NULL
 );
@@ -252,6 +253,7 @@ INSERT INTO
         'password',
         'cpf',
         'type',
+        'birth_date',
         'cep',
         'authenticated'
     )
@@ -262,6 +264,7 @@ VALUES
         HASHBYTES("SHA2_256", "ExSenha1"),
         '12345678900',
         'worker',
+        DATE('1965-01-01'),
         '12345678',
         'y'
     ),
@@ -271,6 +274,7 @@ VALUES
         HASHBYTES("SHA2_256", "ExSenha1"),
         '12345678900',
         'worker',
+        DATE('1975-01-01'),
         '12345678',
         'y'
     ),
@@ -289,6 +293,7 @@ VALUES
         HASHBYTES("SHA2_256", "ExSenha1"),
         '12345678900',
         'customer',
+        DATE('1985-01-01'),
         '12345678',
         'y'
     ),
@@ -298,6 +303,7 @@ VALUES
         HASHBYTES("SHA2_256", "ExSenha1"),
         '12345678900',
         'customer',
+        DATE('1993-01-01'),
         '12345678',
         'y'
     );
