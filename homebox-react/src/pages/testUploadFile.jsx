@@ -27,15 +27,18 @@ const onFileUpload = () => {
     // Create an object of formData
     const formData = new FormData();
 
-    console.log(state.selectedFile)
-    
+
     // Update the formData object
     formData.append(
         state.selectedFile.name,
-        state.selectedFile.type,
-        state.selectedFile.size
+        state.selectedFile,
     )
 
+    console.log(formData)
+
+    api.post("/upload/uploadFile", {
+        formData
+    })
 }
 
 
