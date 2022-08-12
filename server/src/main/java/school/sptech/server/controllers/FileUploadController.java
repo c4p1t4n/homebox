@@ -1,34 +1,35 @@
 package school.sptech.server.controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import school.sptech.server.service.FilesStorageService;
-import school.sptech.server.service.UploadFile;
+import school.sptech.server.response.FileUploadResponse;
+import school.sptech.server.service.FileUploadUtil;
 
+import java.io.IOException;
 
-@Controller
+@RestController
+@RequestMapping("/upload")
 public class FileUploadController {
 
-    @Autowired
-    FilesStorageService storageService;
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @PostMapping("/uploadFile")
+    public ResponseEntity<FileUploadResponse> uploadFile(
+            @RequestParam("file") MultipartFile multipartFile)
+            throws IOException {
 
-    @PostMapping("/upload")
-    public ResponseEntity<String> uploadFile(@RequestBody UploadFile upload) {
-        String message = "";
-        MultipartFile file = upload.getFile();
-        try {
-            storageService.save(file);
-            message = "Uploaded the file successfully: " + file.getOriginalFilename();
-            return ResponseEntity.status(HttpStatus.OK).body(message);
-        } catch (Exception e) {
-            message = "Could not upload the file: " + file.getOriginalFilename() + "!";
-            return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(message);
-        }
+        String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
+        long size = multipartFile.getSize();
+
+        String filecode = FileUploadUtil.saveFile(fileName, multipartFile);
+
+        FileUploadResponse response = new FileUploadResponse();
+        response.setFileName(fileName);
+        response.setSize(size);
+        response.setDownloadUri("/downloadFile/" + filecode);
+
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
-
 }
