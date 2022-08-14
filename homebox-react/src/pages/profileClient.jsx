@@ -13,6 +13,8 @@ function ProfileClient() {
                 <h4 className="dashH4">Outros moradores de(a) Vila Madalena se interessam por serviços de</h4>
                 <div className="dashboard">
                     <CardDashboardCLient />
+                    <CardDashboardCLient />
+                    <CardDashboardCLient />
                 </div>
             </div>
         </>
