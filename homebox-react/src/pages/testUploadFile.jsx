@@ -2,43 +2,42 @@ import api from "../api"
 
 
 function TestUploadFile() {
+
+
     return (
         <>
-            <div>
-                <input onChange={onFileChange} id="fileUpload" type="file" name="fileUpload" />
+            <form onSubmit={onFormSubmit}>
+                <h1>File Upload</h1>
+                <input type="file" onChange={onChange} />
                 <br />
-                <button id="upload-button" onClick={onFileUpload}>Upload</button>
-            </div>
+                <button type="submit">Upload</button>
+            </form>
         </>
     )
 }
 
 var state = {
-    selectedFile: null
+    file: null
 }
-
-const onFileChange = event => {
-    // Update the state
-    state = ({ selectedFile: event.target.files[0] });
-}
-
-const onFileUpload = () => {
-
-    // Create an object of formData
+const onFormSubmit = e => {
+    e.preventDefault()
+    const url = '/upload/uploadFile';
     const formData = new FormData();
+    formData.append('file', state.file);
+    const config = {
+        headers: {
+            'content-type': 'multipart/form-data'
+        }
+    }
+    api.post(url, formData, config)
+        .then((response) => {
+            console.log(response.data)
+        })
+}
 
 
-    // Update the formData object
-    formData.append(
-        state.selectedFile.name,
-        state.selectedFile,
-    )
-
-    console.log(formData)
-
-    api.post("/upload/uploadFile", {
-        formData
-    })
+const onChange = e => {
+    state = ({ file: e.target.files[0] })
 }
 
 
