@@ -18,7 +18,7 @@ CREATE TABLE tag (
 
 CREATE TABLE media (
     id_media int PRIMARY KEY AUTO_INCREMENT,
-    TYPE ENUM("picture", "video", "audio") NOT NULL,
+    TYPE varchar(25),
     path varchar(250)
 );
 

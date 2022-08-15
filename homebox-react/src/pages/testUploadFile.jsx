@@ -23,7 +23,7 @@ const onFormSubmit = e => {
     e.preventDefault()
     const url = '/upload/uploadFile';
     const formData = new FormData();
-    formData.append('file', state.file);
+    formData.append("file", state.file);
     const config = {
         headers: {
             'content-type': 'multipart/form-data'
