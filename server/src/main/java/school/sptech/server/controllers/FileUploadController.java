@@ -36,9 +36,8 @@ public class FileUploadController {
         response.setSize(size);
         response.setDownloadUri("/downloadFile/" + filecode);
 
-        System.out.println(multipartFile.getContentType());
 
-        Media media = new Media(1,multipartFile.getContentType(), String.format("./Files-Upload/%s", multipartFile.getName()));
+        Media media = new Media(1,multipartFile.getContentType(), String.format("./Files-Upload/%s", multipartFile.getOriginalFilename()));
 
         dbMidiaRepository.save(media);
 
