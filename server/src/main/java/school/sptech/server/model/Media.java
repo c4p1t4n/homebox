@@ -23,14 +23,18 @@ public class Media {
         this.type = type;
         this.path = path;
     }
+    public Media(String type, String path) {
+        this.type = type;
+        this.path = path;
+    }
 
     public Media() {
     }
 
-    public Media(String contentType, String format) {
-        this.type = type;
-        this.path = path;
-    }
+//    public Media(String contentType, String format) {
+//        this.type = type;
+//        this.path = path;
+//    }
 
     public Integer getIdMedia() {
         return idMedia;

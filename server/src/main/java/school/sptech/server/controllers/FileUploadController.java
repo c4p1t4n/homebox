@@ -22,26 +22,29 @@ public class FileUploadController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/uploadFile")
-    public ResponseEntity<FileUploadResponse> uploadFile(
-            @RequestParam("file") MultipartFile multipartFile)
-            throws IOException {
+    public ResponseEntity<HttpStatus> uploadFile(@RequestParam("file") MultipartFile multipartFile) throws IOException {
 
         String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
         long size = multipartFile.getSize();
-
-        String filecode = FileUploadUtil.saveFile(fileName, multipartFile);
-
         FileUploadResponse response = new FileUploadResponse();
-        response.setFileName(fileName);
-        response.setSize(size);
-        response.setDownloadUri("/downloadFile/" + filecode);
 
 
-        Media media = new Media(1,multipartFile.getContentType(), String.format("./Files-Upload/%s", multipartFile.getOriginalFilename()));
+        if (!(dbMidiaRepository.existsByPath("./Files-Upload/" + fileName))) {
+            String filecode = FileUploadUtil.saveFile(fileName, multipartFile);
 
-        dbMidiaRepository.save(media);
+            response.setFileName(fileName);
+            response.setSize(size);
+            response.setDownloadUri("/downloadFile/" + filecode);
+            Media media = new Media(multipartFile.getContentType(), String.format("./Files-Upload/%s", multipartFile.getOriginalFilename()));
+
+            dbMidiaRepository.save(media);
+        } else {
+            return ResponseEntity.status(409).build();
+        }
 
 
-        return new ResponseEntity<>(response, HttpStatus.OK);
+        return ResponseEntity.status(200).build();
     }
+
+    
 }

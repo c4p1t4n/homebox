@@ -5,7 +5,7 @@ import org.springframework.web.multipart.MultipartFile;
 import school.sptech.server.model.Media;
 
 public interface MediaRepository extends JpaRepository<Media, Integer> {
-    Media findMediaByIdMedia(Integer fkMedia);
 
+    Boolean existsByPath(String fileName);
 
 }

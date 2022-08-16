@@ -31,7 +31,7 @@ const onFormSubmit = e => {
     }
     api.post(url, formData, config)
         .then((response) => {
-            console.log(response.data)
+            console.log(response.status)
         })
 }
 
