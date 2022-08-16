@@ -1,0 +1,109 @@
+.body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.divLeft {
+    height: 91vh;
+    width: 500px;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    background: rgba(10, 57, 105, 0.13);
+}
+
+.divRight {
+    height: 100%;
+    width: 70vw;
+    background: rgba(0, 255, 174, 0.079);
+}
+
+.divLogoChat {
+    display: flex;
+    align-items: center;
+}
+
+.divLogoChat .iconBack {
+    margin-right: 22%;
+    height: 50px;
+}
+
+.convs {
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    margin: -5%;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+
+    color: #000000;
+}
+
+.divSearchBar {
+    display: flex;
+}
+
+
+.barSearch input {
+    background-color: #3D6389;
+    color: white;
+    border: none;
+    height: 19px;
+    padding: 10px;
+    width: 410px;
+    font-size: 20px;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.barSearch input::placeholder {
+    color: white;
+}
+
+.iconSearch {
+    background: rgba(255, 255, 255, 0.54);
+    border-radius: 0px 20px 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+}
+
+.iconSearch img {
+    height: 30px;
+}
+
+.divCardsChat {
+    width: 100%;
+    height: 400px;
+    margin-top: 8%;
+    overflow: auto;
+}
+
+.cardChat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 5% 1% 5%;
+    background: rgba(10, 57, 105, 0.5);
+    border-radius: 13px;
+    font-size: 22px;
+    margin-bottom: 6%;
+    color: white;
+}
+
+.divCardsChat::-webkit-scrollbar{
+    display: none;
+}
+
+
+.cardChat .nameP {
+    margin-right: 40%;
+}
+
+.cardChat img {
+    height: 60px;
+    border-radius: 100%;
+}
