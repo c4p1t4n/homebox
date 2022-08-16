@@ -12,6 +12,7 @@ import school.sptech.server.response.FileUploadResponse;
 import school.sptech.server.service.FileUploadUtil;
 
 import java.io.IOException;
+import java.util.List;
 
 @RestController
 @RequestMapping("/upload")
@@ -44,6 +45,16 @@ public class FileUploadController {
 
 
         return ResponseEntity.status(200).build();
+    }
+
+    @GetMapping("/files")
+    public ResponseEntity<List<Media>> getAllFiles() {
+        List<Media> mediaList = dbMidiaRepository.findAll();
+        if (mediaList.isEmpty()) {
+            return ResponseEntity.status(204).build();
+        } else {
+            return ResponseEntity.status(200).body(mediaList);
+        }
     }
 
     
