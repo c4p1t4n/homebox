@@ -1,4 +1,4 @@
-.body {
+.bodyChat {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -17,7 +17,6 @@
 .divRight {
     height: 100%;
     width: 70vw;
-    background: rgba(0, 255, 174, 0.079);
 }
 
 .divLogoChat {
@@ -26,8 +25,20 @@
 }
 
 .divLogoChat .iconBack {
-    margin-right: 22%;
     height: 50px;
+}
+
+.divLogoChat .iconBack:hover {
+    cursor: pointer;
+    border-bottom: inset #3D6389;
+    border-radius: 99%;
+}
+
+.divLogoChat .butIconBack {
+    margin-right: 19%;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
 }
 
 .convs {
@@ -62,17 +73,25 @@
     color: white;
 }
 
-.iconSearch {
-    background: rgba(255, 255, 255, 0.54);
+.iconSearch button {
+    background: rgba(255, 255, 255, 0.702);
     border-radius: 0px 20px 20px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50px;
+    border: none;
+    padding: 3px;
+}
+
+.iconSearch button:hover {
+    cursor: pointer;
+    padding: 2%;
+    border: #3D6389 solid 2px;
 }
 
 .iconSearch img {
-    height: 30px;
+    height: 33px;
 }
 
 .divCardsChat {
@@ -94,7 +113,12 @@
     color: white;
 }
 
-.divCardsChat::-webkit-scrollbar{
+.cardChat:hover {
+    border: black solid 2.4px;
+    cursor: pointer;
+}
+
+.divCardsChat::-webkit-scrollbar {
     display: none;
 }
 
@@ -106,4 +130,52 @@
 .cardChat img {
     height: 60px;
     border-radius: 100%;
+}
+
+.topChat {
+    width: 100%;
+    height: 88%;
+    background-color: white;
+}
+
+.butChat {
+    background: rgba(10, 57, 105, 0.13);
+    width: 100%;
+    height: 12%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.butChat img {
+    height: 40px;
+}
+
+.butChat button {
+    background-color: rgba(255, 255, 255, 0);
+    margin-right: 2%;
+    border: none;
+}
+
+.butChat button:hover {
+    border-bottom: #000000 solid 2px;
+    border-radius: 100%;
+}
+
+
+.butChat input {
+    height: 50%;
+    background: #3D6389;
+    border-radius: 12px;
+    margin: 1%;
+    width: 80%;
+    padding: 0% 0% 0% 1%;
+    font-size: 20px;
+    color: white;
+}
+
+.butChat input::placeholder {
+    color: white;
+    font-size: 20px;
 }
