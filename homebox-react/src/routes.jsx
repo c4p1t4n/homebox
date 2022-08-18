@@ -4,6 +4,7 @@ import Login from "./pages/login"
 import Home from "./pages/home"
 import SearchResult from "./pages/searchResult"
 import NotFound from "./pages/notFound"
+import TestUploadFile from "./pages/testUploadFile"
 import ProfileClient from "./pages/profileClient"
 import Chat from "./pages/chat"
 
@@ -29,6 +30,11 @@ function Router() {
                 <Route
                     path="/search"
                     element={<SearchResult />}
+                    caseSensitive="false"
+                />
+                <Route
+                    path="/testUpload"
+                    element={<TestUploadFile />}
                     caseSensitive="false"
                 />
                 <Route

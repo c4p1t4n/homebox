@@ -11,7 +11,7 @@ public class Media {
     @Column(name = "id_media")
     private Integer idMedia;
 
-    @Column(name = "type")
+    @Column(name = "TYPE")
     @NotNull
     private String type;
 
@@ -23,9 +23,14 @@ public class Media {
         this.type = type;
         this.path = path;
     }
+    public Media(String type, String path) {
+        this.type = type;
+        this.path = path;
+    }
 
     public Media() {
     }
+
 
     public Integer getIdMedia() {
         return idMedia;
