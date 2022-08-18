@@ -31,10 +31,6 @@ public class Media {
     public Media() {
     }
 
-//    public Media(String contentType, String format) {
-//        this.type = type;
-//        this.path = path;
-//    }
 
     public Integer getIdMedia() {
         return idMedia;
