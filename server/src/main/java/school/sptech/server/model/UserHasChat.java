@@ -36,10 +36,6 @@ public class UserHasChat {
         this.id = id;
     }
 
-    public UserHasChat(Integer idCustomer, Integer idChat) {
-
-    }
-
     public UserHasChat() {
     }
 

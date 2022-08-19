@@ -2,7 +2,7 @@ package school.sptech.server.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.PastOrPresent;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "chat_has_msg")
@@ -22,7 +22,7 @@ public class ChatHasMsg {
 
     @PastOrPresent
     @Column(name = "send_date")
-    private LocalDate sendDate;
+    private LocalDateTime sendDate;
 
     @Column(name = "seen")
     private Character seen;
@@ -51,14 +51,14 @@ public class ChatHasMsg {
         this.msg = msg;
     }
 
-    public ChatHasMsg(Chat chat, Msg msg, @PastOrPresent LocalDate sendDate, Character seen) {
+    public ChatHasMsg(Chat chat, Msg msg, @PastOrPresent LocalDateTime sendDate, Character seen) {
         this.chat = chat;
         this.msg = msg;
         this.sendDate = sendDate;
         this.seen = seen;
     }
 
-    public ChatHasMsg(Integer id, Chat chat, Msg msg, @PastOrPresent LocalDate sendDate, Character seen) {
+    public ChatHasMsg(Integer id, Chat chat, Msg msg, @PastOrPresent LocalDateTime sendDate, Character seen) {
         this.id = id;
         this.chat = chat;
         this.msg = msg;
@@ -69,11 +69,11 @@ public class ChatHasMsg {
     public ChatHasMsg() {
     }
 
-    public LocalDate getSendDate() {
+    public LocalDateTime getSendDate() {
         return sendDate;
     }
 
-    public void setSendDate(LocalDate sendDate) {
+    public void setSendDate(LocalDateTime sendDate) {
         this.sendDate = sendDate;
     }
 
