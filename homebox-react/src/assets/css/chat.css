@@ -231,4 +231,10 @@
     width: 100%;
 }
 
-
+.openDivClip {
+    position: absolute;
+    background-color: aqua;
+    bottom: 80px;
+    right: 100px;
+    border-radius: 15px 50px;
+}

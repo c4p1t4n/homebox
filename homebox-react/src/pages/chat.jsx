@@ -63,6 +63,10 @@ function Chat() {
                         <button><img src={iconSendMsg} alt="Icone para enviar mensagem" className="sendMsg" /></button>
                         <button><img src={paperclip} alt="Icone para anexar foto ou video" className="anexImg" /></button>
                         <button><img src={iconSendMp3} alt="Icone para enviar audio" className="iconMic" /></button>
+                        <div className="openDivClip">
+                            <img src="" alt="Enviar imagem" />
+                            <img src="" alt="Enviar video" />
+                        </div>
                     </div>
                 </div>
             </div>
