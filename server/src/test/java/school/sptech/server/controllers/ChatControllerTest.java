@@ -23,6 +23,7 @@ import school.sptech.server.repository.ChatHasMsgRepository;
 import school.sptech.server.repository.ChatRepository;
 import school.sptech.server.repository.MsgRepository;
 import school.sptech.server.repository.UserHasChatRepository;
+import school.sptech.server.response.ChatsPerUser;
 import school.sptech.server.service.UserService;
 
 @SpringBootTest(classes = { ChatController.class })
@@ -102,9 +103,9 @@ public class ChatControllerTest {
         List<UserHasChat> listMock = List.of(mock1, mock2);
 
         when(dbUserService.findById(1)).thenReturn(Optional.of(userMock));
-        when(dbRepositoryUserHasChat.findChatByUser(userMock)).thenReturn(listMock);
+        when(dbRepositoryUserHasChat.findByUser(userMock)).thenReturn(listMock);
 
-        ResponseEntity<List<UserHasChat>> response = controller.getChatsPerUser(1);
+        ResponseEntity<List<ChatsPerUser>> response = controller.getChatsPerUser(1);
 
         assertEquals(200, response.getStatusCodeValue());
         assertNotNull(response.getBody());
@@ -119,9 +120,9 @@ public class ChatControllerTest {
         userMock.setId(1);
 
         when(dbUserService.findById(1)).thenReturn(Optional.of(userMock));
-        when(dbRepositoryUserHasChat.findChatByUser(userMock)).thenReturn(new ArrayList<UserHasChat>());
+        when(dbRepositoryUserHasChat.findByUser(userMock)).thenReturn(new ArrayList<UserHasChat>());
 
-        ResponseEntity<List<UserHasChat>> response = controller.getChatsPerUser(1);
+        ResponseEntity<List<ChatsPerUser>> response = controller.getChatsPerUser(1);
 
         assertEquals(204, response.getStatusCodeValue());
         assertNull(response.getBody());
@@ -132,7 +133,7 @@ public class ChatControllerTest {
     void testGetChatsPerUserWhenUserDoesNotExist() {
         when(dbUserService.existsById(1)).thenReturn(false);
 
-        ResponseEntity<List<UserHasChat>> response = controller.getChatsPerUser(1);
+        ResponseEntity<List<ChatsPerUser>> response = controller.getChatsPerUser(1);
 
         assertEquals(404, response.getStatusCodeValue());
         assertNull(response.getBody());
