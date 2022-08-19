@@ -35,7 +35,7 @@
 }
 
 .divLogoChat .butIconBack {
-    margin-right: 19%;
+    margin-right: 20%;
     border-radius: 100%;
     background-color: rgba(255, 255, 255, 0);
     border: none;
@@ -124,7 +124,17 @@
 
 
 .cardChat .nameP {
-    margin-right: 40%;
+    width: 60%;
+}
+
+.lastMsg {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 100;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.7);
+
 }
 
 .cardChat img {
@@ -135,7 +145,19 @@
 .topChat {
     width: 100%;
     height: 88%;
+}
+
+.overflowDiv {
+    overflow: auto;
+    width: 100%;
+    flex-flow: column;
+    display: flex;
+    height: 100%;
     background-color: white;
+}
+
+.overflowDiv::-webkit-scrollbar {
+    display: none;
 }
 
 .butChat {
@@ -178,4 +200,44 @@
 .butChat input::placeholder {
     color: white;
     font-size: 20px;
+}
+
+.cardChatMsgLeft {
+    padding: 2%;
+    background-color: #367cc1ca;
+    width: 50%;
+    margin-bottom: 4%;
+    border-radius: 70px 15px;
+}
+
+.cardChatMsgRight {
+    border-radius: 15px 50px;
+    align-self: end;
+    padding: 2%;
+    width: 50%;
+    margin-bottom: 4%;
+    background-color: #214160ca;
+    color: white;
+    display: flex;
+    justify-content: end;
+}
+
+.cardChatMsgLeft p {
+    width: 100%;
+}
+
+.cardChatMsgRight p {
+    width: 100%;
+}
+
+
+.divOpenAnexo {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    bottom: 70px;
+    right: 110px;
+    border-radius: 15px 50px;
+
 }
