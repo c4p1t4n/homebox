@@ -9,10 +9,8 @@ import VLibras from "@djpfs/react-vlibras"
 
 
 import iconBack from "../assets/img/arrowLeft.png"
-import videoIcon from "../assets/img/videoIcon.png"
-import pictureIcon from "../assets/img/pictureIcon.png"
 import iconSendMsg from "../assets/img/iconSendMsg.png"
-import iconSendImg from "../assets/img/iconSendImg.png"
+import paperclip from "../assets/img/paperclip.png"
 import iconSendMp3 from "../assets/img/iconSendMp3.png"
 import iconHomebox from "../assets/img/icon/logo-removebg-preview.png"
 import searchIcon from "../assets/img/searchIconBlack.png"
@@ -63,13 +61,8 @@ function Chat() {
                     <div className="butChat">
                         <input placeholder="Digite aqui ..." type="text" className="msg" />
                         <button><img src={iconSendMsg} alt="Icone para enviar mensagem" className="sendMsg" /></button>
-                        <button><img src={iconSendImg} alt="Icone para anexar foto ou video" className="anexImg" /></button>
+                        <button><img src={paperclip} alt="Icone para anexar foto ou video" className="anexImg" /></button>
                         <button><img src={iconSendMp3} alt="Icone para enviar audio" className="iconMic" /></button>
-
-                        <div className="divOpenAnexo">
-                            <img src={pictureIcon} alt="Enviar foto" />
-                            <img src={videoIcon} alt="Enviar video" />
-                        </div>
                     </div>
                 </div>
             </div>
