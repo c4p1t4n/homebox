@@ -11,6 +11,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.FluentQuery.FetchableFluentQuery;
 
+import school.sptech.server.model.Category;
 import school.sptech.server.model.User;
 
 public interface UserRepository extends JpaRepository<User, Integer> {
@@ -18,6 +19,8 @@ public interface UserRepository extends JpaRepository<User, Integer> {
     boolean existsByEmail(String email);
 
     User findByEmailAndPassword(String email, String password);
+
+    User findByEmail(String email);
 
     boolean existsByEmailAndPassword(String email, String password);
 
@@ -84,4 +87,5 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 
     <S extends User> Optional<S> findOne(Example<S> example);
 
+//    Category findByEmail(String email);
 }
