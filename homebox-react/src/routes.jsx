@@ -6,6 +6,7 @@ import SearchResult from "./pages/searchResult"
 import NotFound from "./pages/notFound"
 import TestUploadFile from "./pages/testUploadFile"
 import ProfileClient from "./pages/profileClient"
+import ProfileProvider from "./pages/profileProvider"
 import Chat from "./pages/chat"
 
 function Router() {
@@ -44,7 +45,11 @@ function Router() {
                 />
                 <Route
                     path="/profile/client/chat"
-                    element={<Chat/>}
+                    element={<Chat />}
+                    caseSensitive="false"
+                /><Route
+                    path="/profile/provider/"
+                    element={<ProfileProvider />}
                     caseSensitive="false"
                 />
                 {<Route

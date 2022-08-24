@@ -1,0 +1,59 @@
+.divBodyProfileProvider {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.divLeftProfileProvider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+
+    background: rgba(10, 57, 105, 0.13);
+    height: 100vh;
+}
+
+.welcomeProvider {
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+
+    color: #000000;
+}
+
+.logoProfileProvider {
+    width: 160px;
+}
+
+.tagAprofileProvider {
+    text-decoration: none;
+    color: black;
+
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid #000000;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8% 0% 0% 0%;
+    width: 353px;
+    height: 62.59px;
+}
+
+.logoffProfileProvider{
+    width: 90%;
+    text-align: end;
+    margin-top: 30%;
+}
+
+
+
+.divRightProfileProvider {
+    background-color: bisque;
+    width: 70%;
+    height: 100vh;
+}
