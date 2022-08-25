@@ -23,7 +23,7 @@ function Chat() {
             <div className="bodyChat">
                 <div className="divLeft">
                     <div className="divLogoChat">
-                        <button className="butIconBack"><img className="iconBack" src={iconBack} alt="voltar" /></button>
+                        <button onClick={back} className="butIconBack"><img className="iconBack" src={iconBack} alt="voltar" /></button>
                         <img className="iconHomebox" src={iconHomebox} alt="logo homebox" />
                     </div>
                     <div className="convs">
@@ -68,3 +68,7 @@ function Chat() {
 }
 
 export default Chat
+
+const back = e => {
+    window.history.back()
+}
