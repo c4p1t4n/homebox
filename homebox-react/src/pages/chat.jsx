@@ -38,23 +38,8 @@ class Chat extends Component {
             });
         };
 
-        onStop = (audioData) => {
-            console.log(typeof audioData);
-            console.log(audioData);
-
-            console.log(typeof audioData.blob);
-            console.log(audioData.blob);
-
-
-            // var blob = new Blob()
-            // console.log(typeof blob);
-            // console.log(blob);
-            
-            var file = new File([audioData.blob], "file",{lastModified: new Date().getTime(),
-                type: audioData.type });
-            console.log(file);
-            
-            const url = '/upload/uploadAudio';
+        onStop = (audioData) => {            
+            const url = '/upload/uploadFile';
             const formData = new FormData();
             // formData.append("file", file, uuidv4()+".mp3");
             formData.append("file", audioData.blob, uuidv4()+".mp3");
