@@ -225,10 +225,18 @@
 
 .cardChatMsgLeft p {
     width: 100%;
+    font-size: 20px;
 }
 
 .cardChatMsgRight p {
     width: 100%;
+    font-size: 20px;
 }
 
-
+.openDivClip {
+    position: absolute;
+    background-color: aqua;
+    bottom: 80px;
+    right: 100px;
+    border-radius: 15px 50px;
+}
