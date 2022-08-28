@@ -1,0 +1,34 @@
+Resources:
+  SubnetPubAZ1:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VPC
+      CidrBlock: 10.0.1.0/26
+      Name: sub-az1-pub-homebox
+      MapPublicIpOnLaunch: true
+      AvailabilityZoneId: use1-az1
+      Tags:
+        Name: "sub-az1-pub-homebox"
+
+  SubnetPriBackAZ1:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VPC
+      CidrBlock: 10.0.2.0/26
+      MapPublicIpOnLaunch: false
+      AvailabilityZoneId: use1-az1
+      Tags:
+        Name: "sub-az1-pri-back-homebox"
+      Tags:
+        - Name: Name
+          Type: string
+
+  SubnetPriDBAZ1:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VPC
+      CidrBlock: 10.0.3.0/26
+      MapPublicIpOnLaunch: false
+      AvailabilityZoneId: use1-az1
+      Tags:
+        Name: "sub-az1-pri-db-homebox"

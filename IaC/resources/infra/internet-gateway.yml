@@ -1,0 +1,6 @@
+Resources:
+  IgwHomebox:
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+        Name: "igw-homebox"
