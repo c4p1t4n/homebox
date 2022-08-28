@@ -14,6 +14,10 @@
     background: rgba(10, 57, 105, 0.13);
 }
 
+.recorder {
+    display: none;
+}
+
 .divRight {
     height: 100%;
     width: 70vw;

@@ -3,6 +3,8 @@ import "../assets/css/chat.css"
 import CardChat from "../components/cardChat";
 import CardChatMsgLeft from "../components/cardChatMsgLeft";
 import CardChatMsgRight from "../components/cardChatMsgRight";
+import CardAudioRight from "../components/cardAudioRight";
+import CardAudioLeft from "../components/cardAudioLeft";
 
 import VLibras from "@djpfs/react-vlibras"
 import api from "../api"
@@ -24,15 +26,19 @@ class Chat extends Component {
         this.state = {
             recordState: null
         };
+
+        this.condition = true
     }
 
     start = () => {
+        this.condition = false
         this.setState({
             recordState: RecordState.START
         });
     };
 
     stop = () => {
+        this.condition = true
         this.setState({
             recordState: RecordState.STOP
         });
@@ -54,7 +60,6 @@ class Chat extends Component {
                 console.log(response.status)
             })
     };
-
     render() {
         const { recordState } = this.state;
         return (
@@ -80,11 +85,16 @@ class Chat extends Component {
                             </div>
                         </div>
                         <div className="divCardsChat">
-                            <CardChat />
-                            <CardChat />
-                            <CardChat />
-                            <CardChat />
-                            <CardChat />
+                        {searchResult
+                            ? searchResult.map(item => (
+                                <CardChat
+                                    img={item.user?.picture ?? profileImg}
+                                    name={item.user?.name}
+                                    lastMessage={item?.lastMessage}
+                                    lastMessageHour={item.lastMessageHour ?? "N/A"}
+                                />
+                            ))
+                            : ""}
                         </div>
                     </div>
                     <div className="divRight">
@@ -96,21 +106,20 @@ class Chat extends Component {
                                 <CardChatMsgRight />
                                 <CardChatMsgRight />
                                 <CardChatMsgRight />
-                                <div>
-                                    <AudioReactRecorder state={recordState} onStop={this.onStop} />
-                                    <button onClick={this.start}>Start</button>
-                                    <button onClick={this.stop}>Stop</button>
-                                </div>
+                                <CardAudioLeft />
+                                <CardAudioRight />
                             </div>
                         </div>
                         <div className="butChat">
                             <input placeholder="Digite aqui ..." type="text" className="msg" />
                             <button><img src={iconSendMsg} alt="Icone para enviar mensagem" className="sendMsg" /></button>
                             <button><img src={paperclip} alt="Icone para anexar foto ou video" className="anexImg" /></button>
-                            <button><img src={iconSendMp3} alt="Icone para enviar audio" className="iconMic" /></button>
-
+                            <button onClick={this.condition ? this.start : this.stop}><img src={iconSendMp3} alt="Icone para enviar audio" className="iconMic" /></button>
                         </div>
                     </div>
+                </div>
+                <div className="recorder">
+                    <AudioReactRecorder state={recordState} onStop={this.onStop} />
                 </div>
             </>
         )
