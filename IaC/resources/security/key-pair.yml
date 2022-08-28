@@ -1,0 +1,18 @@
+Resources:
+  KeyPairEC2Pub:
+    Type: AWS::EC2::KeyPair
+    Properties:
+      KeyName: ch28082022Pub
+      KeyType: rsa
+
+  KeyPairEC2PriBack:
+    Type: AWS::EC2::KeyPair
+    Properties:
+      KeyName: ch28082022PriBack
+      KeyType: rsa
+
+  KeyPairEC2PriDB:
+    Type: AWS::EC2::KeyPair
+    Properties:
+      KeyName: ch28082022PriDB
+      KeyType: rsa
