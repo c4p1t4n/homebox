@@ -9,8 +9,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.FluentQuery.FetchableFluentQuery;
 
+import org.springframework.transaction.annotation.Transactional;
 import school.sptech.server.model.Category;
 import school.sptech.server.model.User;
 
@@ -88,4 +91,9 @@ public interface UserRepository extends JpaRepository<User, Integer> {
     <S extends User> Optional<S> findOne(Example<S> example);
 
 //    Category findByEmail(String email);
+//
+//    @Transactional
+//    @Modifying
+//    @Query("update User u set u.token = ?1 where u.id_user = ?2")
+//    void updateToken(String token, Integer idUser);
 }

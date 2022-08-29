@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import school.sptech.server.model.User;
+import school.sptech.server.repository.EmailRepository;
 import school.sptech.server.repository.UserRepository;
 import school.sptech.server.service.UserService;
 import school.sptech.server.service.UserUtil;
@@ -21,10 +22,12 @@ public class EmailController {
     @Autowired
     private JavaMailSender mailSender;
     @Autowired
-    private UserRepository userRepository;
+    private UserRepository dbUserRepository;
     private UserUtil userUtil;
     @Autowired
     private UserService dbServiceUser;
+    @Autowired
+    private EmailRepository dbEmailRepository;
 
     @Bean
     public MailSenderValidatorAutoConfiguration mailSenderValidatorAutoConfiguration(JavaMailSenderImpl javaMailSender){
@@ -33,15 +36,15 @@ public class EmailController {
 
     String newToken = UserUtil.getToken();
 
-    public static void saveNewToken(User user, String newToken){
-        user.setToken(newToken);
+    public void saveNewToken(User user, String newToken){
+        dbEmailRepository.updateToken(newToken, user.getId());
     }
 
     @RequestMapping(path = "/{email}", method = RequestMethod.GET)
     public String sendTokenByMail(@PathVariable String email) {
         if (dbServiceUser.existsByEmail(email)) {
 
-            User user = userRepository.findByEmail(email);
+            User user = dbUserRepository.findByEmail(email);
             saveNewToken(user, newToken);
 
             SimpleMailMessage message = new SimpleMailMessage();
@@ -49,7 +52,7 @@ public class EmailController {
             message.setText(String.format("Hello, %s!\n\nThis is your token to change password: %s",
                                            user.getName(), user.getToken()));
 //            message.setTo("homebox-inovacao@outlook.com");
-            message.setTo("avi65223@xcoxc.com");
+            message.setTo("pgb61207@xcoxc.com");
             message.setFrom("homebox-inovacao@outlook.com");
             try {
                 mailSender.send(message);
@@ -66,7 +69,7 @@ public class EmailController {
     @RequestMapping(path = "reset/{email}/{token}", method = RequestMethod.GET)
     public String checkToken(@PathVariable String email, @PathVariable String token) {
         if (dbServiceUser.existsByEmail(email)) {
-            User user = userRepository.findByEmail(email);
+            User user = dbUserRepository.findByEmail(email);
             saveNewToken(user, newToken);
             if (token.equals(user.getToken())) {
                 return "Token correto.";
@@ -80,9 +83,10 @@ public class EmailController {
 
     @RequestMapping(path = "reset/{email}/{token}/{newPassword}", method = RequestMethod.GET)
     public String changePassword(@PathVariable String email, @PathVariable String token, @PathVariable String newPassword) {
-        User user = userRepository.findByEmail(email);
+        User user = dbUserRepository.findByEmail(email);
         if(checkToken(email,token).equalsIgnoreCase("Token correto.")){
-            user.setPassword(newPassword);
+            dbEmailRepository.updatePassword(newPassword, user.getId());
+            saveNewToken(user, UserUtil.getToken());
             return "Senha alterada com sucesso!";
         } else {
             return "Não foi possível alterar sua senha";
