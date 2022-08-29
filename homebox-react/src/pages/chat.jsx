@@ -85,16 +85,17 @@ class Chat extends Component {
                             </div>
                         </div>
                         <div className="divCardsChat">
-                        {searchResult
-                            ? searchResult.map(item => (
-                                <CardChat
-                                    img={item.user?.picture ?? profileImg}
-                                    name={item.user?.name}
-                                    lastMessage={item?.lastMessage}
-                                    lastMessageHour={item.lastMessageHour ?? "N/A"}
-                                />
-                            ))
-                            : ""}
+                           {/*  {
+                                searchResult
+                                    ? searchResult.map(item => (
+                                        <CardChat
+                                            img={item.user?.picture ?? profileImg}
+                                            name={item.user?.name}
+                                            lastMessage={item?.lastMessage}
+                                            lastMessageHour={item.lastMessageHour ?? "N/A"}
+                                        />
+                                    ))
+                                    : ""} */}
                         </div>
                     </div>
                     <div className="divRight">
