@@ -3,7 +3,7 @@ Resources:
     Type: AWS::EC2::Subnet
     Properties:
       VpcId: !Ref VPC
-      CidrBlock: 10.0.1.0/26
+      CidrBlock: 10.0.0.0/26
       Name: sub-az1-pub-homebox
       MapPublicIpOnLaunch: true
       AvailabilityZoneId: use1-az1
@@ -14,7 +14,7 @@ Resources:
     Type: AWS::EC2::Subnet
     Properties:
       VpcId: !Ref VPC
-      CidrBlock: 10.0.2.0/26
+      CidrBlock: 10.0.1.0/26
       MapPublicIpOnLaunch: false
       AvailabilityZoneId: use1-az1
       Tags:
