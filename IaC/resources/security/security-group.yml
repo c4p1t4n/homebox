@@ -21,32 +21,10 @@ Resources:
         - CidrIp: 0.0.0.0/0
           IpProtocol: -1
 
-  SecurityGroupPriDB:
+  SecurityGroupPri:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupName: sg_pri_db_homebox
-      VpcId: !Ref VPC
-      SecurityGroupIngress:
-        - CidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          FromPort: 22
-          ToPort: 22
-        - SourceSecurityGroupId: !Ref SecurityGroupPriBack
-          IpProtocol: tcp
-          FromPort: 80
-          ToPort: 80
-        - SourceSecurityGroupId: !Ref SecurityGroupPriBack
-          IpProtocol: tcp
-          FromPort: 443
-          ToPort: 443
-      SecurityGroupEgress:
-        - CidrIp: 0.0.0.0/0
-          IpProtocol: -1
-
-  SecurityGroupPriBack:
-    Type: AWS::EC2::SecurityGroup
-    Properties:
-      GroupName: sg_pri_back_homebox
+      GroupName: sg_pri_homebox
       VpcId: !Ref VPC
       SecurityGroupIngress:
         - CidrIp: 0.0.0.0/0
