@@ -8,7 +8,8 @@ Resources:
       MapPublicIpOnLaunch: true
       AvailabilityZoneId: use1-az1
       Tags:
-        Name: "sub-az1-pub-homebox"
+        - Key: Name
+        - Value: "sub-az1-pub-homebox"
 
   SubnetPriAZ1:
     Type: AWS::EC2::Subnet
@@ -18,7 +19,5 @@ Resources:
       MapPublicIpOnLaunch: false
       AvailabilityZoneId: use1-az1
       Tags:
-        Name: "sub-az1-pri-homebox"
-      Tags:
-        - Name: Name
-          Type: string
+        - Key: Name
+        - Value: "sub-az1-pri-homebox"

@@ -3,4 +3,5 @@ Resources:
     Type: AWS::EC2::InternetGateway
     Properties:
       Tags:
-        Name: "igw-homebox"
+        - Key: Name
+        - Value: "igw-homebox"
