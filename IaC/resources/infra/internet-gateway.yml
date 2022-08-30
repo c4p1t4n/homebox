@@ -1,7 +1,7 @@
 Resources:
-    IgwHomebox:
-        Type: AWS::EC2::InternetGateway
-        Properties:
-            Tags:
-                - Key: Name
-                  Value: "igw-homebox"
+  IgwHomebox:
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+        - Key: Name
+          Value: igw-homebox

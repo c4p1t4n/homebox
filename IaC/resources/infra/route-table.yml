@@ -1,15 +1,15 @@
 Resources:
-    RtbHomebox:
-        Type: AWS::EC2::RouteTable
-        Properties:
-            VpcId: !Ref VPC
-            Tags:
-                - Key: Name
-                  Value: "rtb-homebox"
+  RtbHomebox:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId: !Ref VPC
+      Tags:
+        - Key: Name
+          Value: rtb-homebox
 
-    RouteRtbIgwHomebox:
-        Type: AWS::EC2::Route
-        Properties:
-            GatewayId: !Ref IgwHomebox
-            RouteTableId: !Ref RtbHomebox
-            DestinationCidrBlock: 0.0.0.0/0
+  RouteRtbIgwHomebox:
+    Type: AWS::EC2::Route
+    Properties:
+      GatewayId: !Ref IgwHomebox
+      RouteTableId: !Ref RtbHomebox
+      DestinationCidrBlock: 0.0.0.0/0
