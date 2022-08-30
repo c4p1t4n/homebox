@@ -43,6 +43,13 @@ function Register() {
                             />
                         </div>
                         <div className="div_input">
+                            <p>Data Aniversario</p>
+                            <input
+                                id="birth_date"
+                                type="date"
+                            />
+                        </div>
+                        <div className="div_input">
                             <p>CEP</p>
                             <input
                                 id="cep"
