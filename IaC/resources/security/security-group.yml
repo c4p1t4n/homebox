@@ -3,6 +3,7 @@ Resources:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupName: sg_pub_homebox
+      GroupDescription: sg_pub_homebox
       VpcId: !Ref VPC
       SecurityGroupIngress:
         - CidrIp: 0.0.0.0/0
@@ -25,6 +26,7 @@ Resources:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupName: sg_pri_homebox
+      GroupDescription: sg_pri_homebox
       VpcId: !Ref VPC
       SecurityGroupIngress:
         - CidrIp: 0.0.0.0/0
