@@ -5,7 +5,7 @@ Resources:
             VpcId: !Ref VPC
             Tags:
                 - Key: Name
-                - Value: "rtb-homebox"
+                  Value: "rtb-homebox"
 
     RouteRtbIgwHomebox:
         Type: AWS::EC2::Route
