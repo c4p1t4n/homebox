@@ -1,5 +1,5 @@
 Resources:
-  RtbHomebox:
+  rtbHomebox:
     Type: AWS::EC2::RouteTable
     Properties:
       VpcId: !Ref VPC
@@ -7,9 +7,15 @@ Resources:
         - Key: Name
           Value: rtb-homebox
 
-  RouteRtbIgwHomebox:
+  routeTableAssocName:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Ref SubnetPriAZ1
+      RouteTableId: !Ref rtbHomebox
+
+  routeName:
     Type: AWS::EC2::Route
     Properties:
-      GatewayId: !Ref IgwHomebox
-      RouteTableId: !Ref RtbHomebox
+      RouteTableId: !Ref rtbHomebox
       DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref IgwHomebox
