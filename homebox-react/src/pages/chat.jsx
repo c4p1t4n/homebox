@@ -85,7 +85,7 @@ class Chat extends Component {
                             </div>
                         </div>
                         <div className="divCardsChat">
-                        {searchResult
+                        {/* {searchResult
                             ? searchResult.map(item => (
                                 <CardChat
                                     img={item.user?.picture ?? profileImg}
@@ -94,7 +94,7 @@ class Chat extends Component {
                                     lastMessageHour={item.lastMessageHour ?? "N/A"}
                                 />
                             ))
-                            : ""}
+                            : ""} */}
                         </div>
                     </div>
                     <div className="divRight">
@@ -113,13 +113,18 @@ class Chat extends Component {
                         <div className="butChat">
                             <input placeholder="Digite aqui ..." type="text" className="msg" />
                             <button><img src={iconSendMsg} alt="Icone para enviar mensagem" className="sendMsg" /></button>
-                            <button><img src={paperclip} alt="Icone para anexar foto ou video" className="anexImg" /></button>
-                            <button onClick={this.condition ? this.start : this.stop}><img src={iconSendMp3} alt="Icone para enviar audio" className="iconMic" /></button>
+                            <button onClick={getFile}>
+                                <img src={paperclip} alt="Icone para anexar foto ou video"/>
+                            </button>
+                            <button onClick={this.condition ? this.start : this.stop}>
+                                <img src={iconSendMp3} alt="Icone para enviar audio" className="iconMic" />
+                            </button>
                         </div>
                     </div>
                 </div>
                 <div className="recorder">
                     <AudioReactRecorder state={recordState} onStop={this.onStop} />
+                    <input type="file" onChange={onChange} id="inputFile"/>
                 </div>
             </>
         )
@@ -130,4 +135,30 @@ export default Chat
 
 const back = e => {
     window.history.back()
+}
+
+var state = {
+    file: null
+}
+
+const onChange = e => {
+    state = ({ file: e.target.files[0] })
+    console.log(state.file)
+    const url = '/upload/uploadFile';
+    const formData = new FormData();
+    formData.append("file", state.file, uuidv4()+".png");
+    const config = {
+        headers: {
+            'content-type': 'multipart/form-data'
+        }
+    }
+    api.post(url, formData, config)
+        .then((response) => {
+            console.log(response.status)
+        })
+
+}
+
+const getFile = e =>{
+    document.getElementById("inputFile").click();
 }
