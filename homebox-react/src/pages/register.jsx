@@ -43,6 +43,13 @@ function Register() {
                             />
                         </div>
                         <div className="div_input">
+                            <p>Data Aniversario</p>
+                            <input
+                                id="birth_date"
+                                type="date"
+                            />
+                        </div>
+                        <div className="div_input">
                             <p>CEP</p>
                             <input
                                 id="cep"
@@ -99,6 +106,7 @@ const register = e => {
     e.preventDefault()
     const inputName = document?.querySelector("#name")
     const inputCPF = document?.querySelector("#cpf")
+    const inputBirthDate = document?.querySelector("#birth_date")
     const inputCEP = document?.querySelector("#cep")
     const inputEmail = document?.querySelector("#email")
     const inputType = document?.querySelector("#category")
@@ -107,6 +115,7 @@ const register = e => {
 
     const name = inputName?.value
     const cpf = inputCPF?.value
+    const birthDate = inputBirthDate?.value
     const cep = inputCEP?.value
     const email = inputEmail?.value
     const type = inputType?.selectedOptions?.[0]?.value
@@ -116,6 +125,7 @@ const register = e => {
     if (
         !name ||
         !cpf ||
+        !birthDate ||
         !cep ||
         !email ||
         !password ||
@@ -137,6 +147,7 @@ const register = e => {
         password,
         cpf: cpf.trim().replace(".", "").replace(".", "").replace("-", ""),
         type,
+        birthDate,
         cep: cep.trim().replace(".", "").replace(".", "").replace("-", "")
     })
         .then(response => {
@@ -146,7 +157,7 @@ const register = e => {
                 window.alert("Cadastro realizado com sucesso!")
                 sessionStorage.setItem(
                     "user",
-                    JSON.stringify({...response.data})
+                    JSON.stringify({ ...response.data })
                 )
                 window.location.href = "/"
             } else if (response.status === 400) {
