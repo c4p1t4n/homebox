@@ -5,41 +5,58 @@ import "../assets/css/providerDash.css"
 import questionMark from "../assets/img/quesntion-mark.png"
 
 
+
+
+
 function relatorioProvider() {
     return (
         <>
             <div className="divBodyProfileProvider">
                 <MenuLeftProvider />
                 <div className="divRightProfileProvider">
-                    <div className="divTopDashProvider">
-                        <div className="divLeftDashTopProvider">
-                            <div className="divInsideDashTopLeft">
-                                <div className="visitsYourProfile">
-                                    <div className="divPTop">
-                                        <p>Visitas ao seu perfil</p>
-                                        <img src={questionMark} alt="informação sobre visitas ao seu perfil" />
+                    <div className="divRightProfileProviderRelatorio">
+                        <div className="divRightProfileProviderTop">
+                            <div className="divRightProfileProviderTopLeft">
+                                <div className="divRightProfileProviderTopLeftTOP">
+                                    <div className="visitsYourProfile">
+                                        <div className="visitsYourProfileTOP">
+                                            <p>Visitas ao seu perfil</p>
+                                            <img src={questionMark} alt="Informações sobre visitas ao seu perfil" />
+                                        </div>
+                                        <div className="visitsYourProfileBut">
+                                            <p id="indice">13%</p>
+                                            <div className="indiceDiv2">
+                                                <p id="indice2">24</p>
+                                                <p>nessa semana</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="divPbutt">
-                                        <p id="indice">+13%</p>
-                                        <p>24 <br />nessa semana</p>
-                                    </div>
-                                </div>
-                                <div className="yourAvarage">
-                                    <div className="divPTop">
-                                        <p>Sua nota (média)</p>
-                                        <img src={questionMark} alt="informação sobre sua média" />
-                                    </div>
-                                    <div className="divPbutt">
-                                        <p id="indice">+0.10</p>
-                                        <div className="avarageProviderDash">
-                                            <p>4.2 <br />XXXXXX</p>
+                                    <div className="visitsYourProfile">
+                                        <div className="visitsYourProfileTOP">
+                                            <p>Sua nota média</p>
+                                            <img src={questionMark} alt="Informações sobre visitas ao seu perfil" />
+                                        </div>
+                                        <div className="visitsYourProfileBut">
+                                            <p id="indice">+10</p>
+                                            <div className="indiceDiv2">
+                                                <p id="indice2">4.3</p>
+                                                <p>**estrelas**</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <br />
+                                <div className="divRightProfileProviderTopLeftBut">
+                                    <p>Sua nota média é maior que a dos outros Pintoresda nossa plataforma (4.0 X 3.8)</p>
+                                    <p className="indiceDiv3">+0.20</p>
+                                </div>
+                            </div>
+                            <div className="divRightProfileProviderTopRight">
+
                             </div>
                         </div>
-                        <div className="divRightDashTopProvider">
-
+                        <br />
+                        <div className="divRightProfileProviderMed">
                         </div>
                     </div>
                 </div>
@@ -49,3 +66,4 @@ function relatorioProvider() {
 }
 
 export default relatorioProvider
+
