@@ -2,6 +2,7 @@ import "../assets/css/searchResult.css"
 import VLibras from "@djpfs/react-vlibras"
 import iconLoading from "../assets/img/iconLoading.gif"
 import CardSearch from "../components/cardSearch"
+import CardSearchOpenClick from "../components/cardSearchOpenClick"
 import Header from "../components/header"
 import profileImg from "../assets/img/profileIcon.png"
 import { useEffect, useState } from "react"
@@ -18,7 +19,7 @@ function SearchResult() {
     useEffect(() => {
         search(searchValue, JSON.parse(sessionStorage.getItem("user")).id_user)
             .then(value => {
-                document.getElementById("loadingDiv").style.display="none"
+                document.getElementById("loadingDiv").style.display = "none"
                 if (!value[0]) {
                     document.getElementById("titleSearch").innerHTML = `Nenhum resultado para "${searchValue}"`;
                 }
@@ -52,10 +53,21 @@ function SearchResult() {
                                     category={item?.category}
                                     rating={item.rating ?? "N/A"}
                                     dist={item.distance ?? "N/A"}
+
                                 />
                             ))
                             : ""}
                     </div>
+                    {searchResult
+                        ? searchResult.map(item => (
+                            <CardSearchOpenClick
+                                img={item.user?.picture ?? profileImg}
+                                name={item.user?.name}
+                                category={item?.category}
+                                rating={item.rating ?? "N/A"}
+                            />
+                        ))
+                        : ""}
                 </div>
             </div>
         </>
@@ -63,3 +75,4 @@ function SearchResult() {
 }
 
 export default SearchResult
+
