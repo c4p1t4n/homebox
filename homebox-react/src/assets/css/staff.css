@@ -1,0 +1,21 @@
+.headerStaff {
+    align-items: center;
+    background: rgba(10, 57, 105, 0.13);
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+}
+.logoHomeboxStaff{
+    margin: 1% 1% 1% 5%;
+    width: 6%;
+}
+.profileStaff {
+    display: flex;
+    margin: 0% 2% 0% 0%;
+}
+.profileStaff img{
+    height: 30px;
+    margin-left: 10px;
+}
