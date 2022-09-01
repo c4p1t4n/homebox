@@ -16,6 +16,7 @@ import iconBack from "../assets/img/arrowLeft.png"
 import iconSendMsg from "../assets/img/iconSendMsg.png"
 import paperclip from "../assets/img/paperclip.png"
 import iconSendMp3 from "../assets/img/iconSendMp3.png"
+import iconStopMp3 from "../assets/img/iconSendMp3Red.png"
 import iconHomebox from "../assets/img/icon/logo-removebg-preview.png"
 import searchIcon from "../assets/img/searchIconBlack.png"
 
@@ -32,13 +33,17 @@ class Chat extends Component {
 
     start = () => {
         this.condition = false
+        document.getElementById("imgMic").src = iconStopMp3
+        document.getElementById("imgMic").style.height = "35px"
         this.setState({
             recordState: RecordState.START
         });
     };
-
+    
     stop = () => {
         this.condition = true
+        document.getElementById("imgMic").src = iconSendMp3
+        document.getElementById("imgMic").style.height = "40px"
         this.setState({
             recordState: RecordState.STOP
         });
@@ -111,13 +116,13 @@ class Chat extends Component {
                             </div>
                         </div>
                         <div className="butChat">
-                            <input placeholder="Digite aqui ..." type="text" className="msg" />
-                            <button><img src={iconSendMsg} alt="Icone para enviar mensagem" className="sendMsg" /></button>
+                            <input id="inputMsg" placeholder="Digite aqui ..." type="text" className="msg" />
+                            <button onClick={sendMsg}><img src={iconSendMsg} alt="Icone para enviar mensagem" className="sendMsg" /></button>
                             <button onClick={getFile}>
                                 <img src={paperclip} alt="Icone para anexar foto ou video"/>
                             </button>
                             <button onClick={this.condition ? this.start : this.stop}>
-                                <img src={iconSendMp3} alt="Icone para enviar audio" className="iconMic" />
+                                <img id="imgMic" src={iconSendMp3} alt="Icone para enviar audio" className="iconMic" />
                             </button>
                         </div>
                     </div>
@@ -161,4 +166,21 @@ const onChange = e => {
 
 const getFile = e =>{
     document.getElementById("inputFile").click();
+}
+
+const sendMsg = e =>{
+    
+    var msg = {
+        message: document.getElementById("inputMsg").value,
+        user: {
+          id: 1
+        }
+    }
+    const url = '/chat/msg/1';
+    console.log(msg)
+
+    api.post(url, msg)
+        .then((response) => {
+            console.log(response.status)
+        })
 }
