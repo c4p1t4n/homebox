@@ -27,17 +27,16 @@
     border-radius: 100%;
 }
 
-.divUserInfo{
+.divUserInfo {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 40%;
 }
-
-.userInformations{
+.divUserInfo img{
+    height: 30px;
+}
+.userInformations {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
     align-items: center;
     height: 60px;
 }

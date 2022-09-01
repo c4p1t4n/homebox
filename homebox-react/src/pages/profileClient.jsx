@@ -8,7 +8,10 @@ function ProfileClient() {
     return (
         <>
             <Header />
-            <ProfileClientComp />
+            <ProfileClientComp
+                nome={nome}
+                email={email}
+            />
             <div className="divDashboardClint">
                 <h4 className="dashH4">Outros moradores de(a) Vila Madalena se interessam por serviços de</h4>
                 <div className="dashboard">
@@ -22,3 +25,8 @@ function ProfileClient() {
 }
 
 export default ProfileClient
+
+
+const nome = JSON.parse(sessionStorage.getItem("user"))?.name?.split(" ")?.[0] ?? ""
+const email = JSON.parse(sessionStorage.getItem("user"))?.email
+
