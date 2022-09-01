@@ -112,7 +112,7 @@ body p {
     top: 0.1px;
     width: 99vw;
     height: 99vh;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.402);

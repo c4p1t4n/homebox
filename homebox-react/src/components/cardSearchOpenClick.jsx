@@ -15,14 +15,14 @@ function cardSearchOpenClick(props) {
                     <div className="cardSearchOpenDivTopInfo">
                         <div className="cardSearchOpenDivTopInfoInside">
                             <div className="cardSearchOpenDivTopInfoInsideP">
-                                <p>Jose Ricardo</p>
-                                <p>Pintor</p>
+                                <p>{props.name}</p>
+                                <p>{props.category}</p>
                             </div>
-                            <img className="imgProvider" src={joseRicardo} alt="Imagem do prestador" />
+                            <img className="imgProvider" src={props.img} alt="Imagem do prestador" />
                             <div className="cardSearchOpenDivTopInfoInsideAvarage">
-                                <p>Avaliação: 4.0</p>
+                                <p>{Math.round(props.rating).toFixed(1)}</p>
                                 <DynamicStars
-                                    rating={4.0} />
+                                    rating={props.rating} />
                             </div>
                         </div>
                     </div>

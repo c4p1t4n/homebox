@@ -9,7 +9,7 @@ function CardSearch(props) {
     }
 
     return (
-        <div className="cardCustumer">
+        <div onClick={openCardSearch} className="cardCustumer">
             <img
                 className="imgCustumer"
                 src={props.img}
@@ -47,3 +47,8 @@ function CardSearch(props) {
 }
 
 export default CardSearch
+
+
+function openCardSearch() {
+    document.getElementById("cardSearchOpenID").style.display = "flex"
+}

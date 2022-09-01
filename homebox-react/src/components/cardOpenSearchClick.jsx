@@ -4,8 +4,8 @@ function cardOpenSearchClick() {
             <details className="cardSearchOpenDivServicesOpen">
                 <summary className="summaryCardSearchOpen">
                     <div className="nameServiceSearchCardOpen">
-                        <p>Serviço:</p>
-                        <p>xxxxxxxx</p>
+                        <p>Serviço</p>
+                        <p>: xxxxxxxx</p>
                     </div>
                     <div className="valueAvarageSearchCardOPen">
                         <p>Valor de Referencia: R$</p>
