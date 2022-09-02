@@ -32,6 +32,7 @@ public class Msg {
     @JsonCreator
     public Msg(@JsonProperty("message") String message, User user) {
         this.message = message;
+        this.automatic = 'n';
         this.user = user;
     }
 
