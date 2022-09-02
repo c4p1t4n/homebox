@@ -1,18 +1,21 @@
 Resources:
   EC2FrontEnd:
-   Type: AWS::EC2::Instance
-   Properties:
-     ImageId: ami-08d4ac5b634553e16
-     KeyName: ch28082022Pub
-     InstanceType: t2.micro
-     SubnetId: !Ref SubnetPubAZ1
-     SecurityGroupIds:
-       - !GetAtt SecurityGroupPub.GroupId
-     BlockDeviceMappings:
-     - DeviceName: "/dev/sda1"
-       Ebs:
-         VolumeType: "gp2"
-         VolumeSize: "8"
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-08d4ac5b634553e16
+      KeyName: ch28082022Pub
+      InstanceType: t2.micro
+      SubnetId: !Ref SubnetPubAZ1
+      SecurityGroupIds:
+        - !GetAtt SecurityGroupPub.GroupId
+      BlockDeviceMappings:
+        - DeviceName: "/dev/sda1"
+          Ebs:
+            VolumeType: "gp2"
+            VolumeSize: "8"
+      Tags:
+        - Key: Name
+          Value: ec2-pub-front-end
 
   EC2Private:
     Type: AWS::EC2::Instance
@@ -28,3 +31,6 @@ Resources:
           Ebs:
             VolumeType: "gp2"
             VolumeSize: "8"
+      Tags:
+        - Key: Name
+          Value: ec2-priv-back-bd
