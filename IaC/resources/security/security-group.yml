@@ -21,6 +21,9 @@ Resources:
       SecurityGroupEgress:
         - CidrIp: 0.0.0.0/0
           IpProtocol: -1
+      Tags:
+        - Key: Name
+          Value: sg_pub_homebox
 
   SecurityGroupPri:
     Type: AWS::EC2::SecurityGroup
@@ -44,3 +47,6 @@ Resources:
       SecurityGroupEgress:
         - CidrIp: 0.0.0.0/0
           IpProtocol: -1
+      Tags:
+        - Key: Name
+          Value: sg_pri_homebox

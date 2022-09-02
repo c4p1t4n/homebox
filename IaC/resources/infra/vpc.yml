@@ -7,4 +7,4 @@ Resources:
       EnableDnsSupport: true
       Tags:
         - Key: Name
-          Value: vpc-homebox
+          Value: vpc-homebox    
