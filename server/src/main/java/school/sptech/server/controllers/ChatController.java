@@ -3,14 +3,8 @@ package school.sptech.server.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import school.sptech.server.model.Chat;
-import school.sptech.server.model.ChatHasMsg;
-import school.sptech.server.model.Msg;
-import school.sptech.server.model.UserHasChat;
-import school.sptech.server.repository.ChatHasMsgRepository;
-import school.sptech.server.repository.ChatRepository;
-import school.sptech.server.repository.MsgRepository;
-import school.sptech.server.repository.UserHasChatRepository;
+import school.sptech.server.model.*;
+import school.sptech.server.repository.*;
 import school.sptech.server.response.ChatsPerUser;
 import school.sptech.server.service.UserService;
 
@@ -19,6 +13,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/chat")
@@ -35,6 +30,8 @@ public class ChatController {
     private UserService dbUserService;
     @Autowired
     private UserService dbRepositoryUser;
+    @Autowired
+    private UserRepository dbUserRepository;
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/{idCustomer}/{idWorker}")
@@ -195,14 +192,20 @@ public class ChatController {
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
-    @PostMapping("/msg/{idChat}")
-    public ResponseEntity<Void> postMsgInChat(@PathVariable Integer idChat, @RequestBody Msg newMsg) {
+    @PostMapping("/msg/{idChat}/{idUsuario}")
+    public ResponseEntity<Void> postMsgInChat(@PathVariable Integer idChat,
+                                              @RequestBody Msg newMsg,
+                                              @PathVariable Integer idUsuario) {
+
         if (!dbRepositoryChat.existsById(idChat)) {
             return ResponseEntity.status(404).build();
         }
 
         System.out.println(newMsg);
         newMsg.setAutomatic('n');
+
+        User user = dbUserRepository.getById(idUsuario);
+        newMsg.setUser(user);
 
         Msg msg = dbRepositoryMsg.save(newMsg);
 

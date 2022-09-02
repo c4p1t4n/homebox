@@ -172,9 +172,7 @@ const sendMsg = e =>{
     
     var msg = {
         message: document.getElementById("inputMsg").value,
-        user: {
-          id: 1
-        }
+        id: 1
     }
     const url = '/chat/msg/1';
     console.log(msg)
