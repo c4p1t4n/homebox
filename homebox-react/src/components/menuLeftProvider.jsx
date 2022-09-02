@@ -13,7 +13,7 @@ function menuLeftProvider() {
                 <a href="" className="tagAprofileProvider"><p>Relatorios</p></a>
                 <a href="" className="tagAprofileProvider"><p>Meu Chat</p></a>
                 <div className="logoffProfileProvider">
-                    <a href=""><img src={logoffProfileProvider} alt="logoff" /></a>
+                    <a onClick={logOffSwitch} href=""><img src={logoffProfileProvider} alt="logoff" /></a>
                 </div>
             </div>
         </>
@@ -21,3 +21,14 @@ function menuLeftProvider() {
 }
 
 export default menuLeftProvider
+
+
+
+const logOffSwitch = e => {
+    e.preventDefault()
+    const logoffOpenDiv = document.getElementById("logOffDivAbsolut")
+
+    logoffOpenDiv.style.display =
+        logoffOpenDiv.style.display === "flex" ? "none" : "flex"
+}
+
