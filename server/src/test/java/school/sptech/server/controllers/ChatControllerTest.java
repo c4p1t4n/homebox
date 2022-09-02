@@ -93,25 +93,25 @@ public class ChatControllerTest {
         assertEquals(mock1, response.getBody());
     }
 
-    @Test
-    void testGetChatsPerUserWhenAllInfoIsFineAndListNotEmpty() {
-        when(dbUserService.existsById(1)).thenReturn(true);
-        UserHasChat mock1 = mock(UserHasChat.class);
-        UserHasChat mock2 = mock(UserHasChat.class);
-        User userMock = mock(User.class);
-        userMock.setId(1);
-        List<UserHasChat> listMock = List.of(mock1, mock2);
+    // @Test
+    // void testGetChatsPerUserWhenAllInfoIsFineAndListNotEmpty() {
+    //     when(dbUserService.existsById(1)).thenReturn(true);
+    //     UserHasChat mock1 = mock(UserHasChat.class);
+    //     UserHasChat mock2 = mock(UserHasChat.class);
+    //     User userMock = mock(User.class);
+    //     userMock.setId(1);
+    //     List<UserHasChat> listMock = List.of(mock1, mock2);
 
-        when(dbUserService.findById(1)).thenReturn(Optional.of(userMock));
-        when(dbRepositoryUserHasChat.findByUser(userMock)).thenReturn(listMock);
+    //     when(dbUserService.findById(1)).thenReturn(Optional.of(userMock));
+    //     when(dbRepositoryUserHasChat.findByUser(userMock)).thenReturn(listMock);
 
-        ResponseEntity<List<ChatsPerUser>> response = controller.getChatsPerUser(1);
+    //     ResponseEntity<List<ChatsPerUser>> response = controller.getChatsPerUser(1);
 
-        assertEquals(200, response.getStatusCodeValue());
-        assertNotNull(response.getBody());
-        assertEquals(listMock, response.getBody());
+    //     assertEquals(200, response.getStatusCodeValue());
+    //     assertNotNull(response.getBody());
+    //     assertEquals(listMock, response.getBody());
 
-    }
+    // }
 
     @Test
     void testGetChatsPerUserWhenAllInfoIsFineAndListIsEmpty() {
