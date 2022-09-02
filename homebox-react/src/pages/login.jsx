@@ -90,18 +90,21 @@ const login = e => {
         email,
         password
     }).catch(err => err.response)
-        .then(response => {
-            console.log(response)
-            if (response.status === 200) {
+        .then(({ status, data }) => {
+            console.log(status)
+            console.log(data)
+            if (status === 200) {
                 console.log("SUCESSO")
                 sessionStorage.setItem(
                     "user",
-                    JSON.stringify({ ...response.data })
+                    JSON.stringify({ ...data })
                 )
-                window.location.href = "/"
-            } else if (response.status === 400) {
+                if (data.type === "worker") window.location.href = "/profile/provider"
+                else if (data.type === "customer") window.location.href = "/"
+                else throw new TypeError("DEU RUIM NO TIPO DO USUARIO")
+            } else if (status === 400) {
                 window.alert("Senha errada!")
-            } else if (response.status === 404) {
+            } else if (status === 404) {
                 console.log("DEU MUITO RUIM")
                 window.alert("Email não encontrado!")
 
