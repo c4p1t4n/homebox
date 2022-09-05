@@ -2,7 +2,7 @@ Resources:
   EC2FrontEnd:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-08d4ac5b634553e16
+      ImageId: ami-05fa00d4c63e32376
       KeyName: ch28082022Pub
       InstanceType: t2.micro
       SubnetId: !Ref SubnetPubAZ1
@@ -20,7 +20,7 @@ Resources:
   EC2Private:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-08d4ac5b634553e16
+      ImageId: ami-05fa00d4c63e32376
       KeyName: ch28082022Pri
       InstanceType: t2.micro
       SubnetId: !Ref SubnetPriAZ1
