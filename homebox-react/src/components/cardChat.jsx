@@ -1,7 +1,7 @@
 function cardChat(props) {
     return (
         <>
-            <div className="cardsChat">
+            <div className="cardsChat" key={props.index}>
                 <div className="cardChat">
                     <img src={props.img} alt="Foto do Jose" />
                     <div className="nameP">

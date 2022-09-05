@@ -5,68 +5,30 @@ import CardChatMsgLeft from "../components/cardChatMsgLeft";
 import CardChatMsgRight from "../components/cardChatMsgRight";
 import CardAudioRight from "../components/cardAudioRight";
 import CardAudioLeft from "../components/cardAudioLeft";
+import SendMsg from "../components/sendMsg";
 
 import VLibras from "@djpfs/react-vlibras"
 import api from "../api"
-import AudioReactRecorder, { RecordState } from 'audio-react-recorder'
-import { v4 as uuidv4 } from 'uuid';
-import React, { Component } from 'react'
+import { useEffect, useState } from "react"
 
 import iconBack from "../assets/img/arrowLeft.png"
-import iconSendMsg from "../assets/img/iconSendMsg.png"
-import paperclip from "../assets/img/paperclip.png"
-import iconSendMp3 from "../assets/img/iconSendMp3.png"
-import iconStopMp3 from "../assets/img/iconSendMp3Red.png"
 import iconHomebox from "../assets/img/icon/logo-removebg-preview.png"
 import searchIcon from "../assets/img/searchIconBlack.png"
+import profileImg from "../assets/img/profileIcon.png"
 
-class Chat extends Component {
-    constructor(props) {
-        super(props)
+function Chat(){
+    const [worker, setWorker] = useState([])
 
-        this.state = {
-            recordState: null
-        };
-
-        this.condition = true
-    }
-
-    start = () => {
-        this.condition = false
-        document.getElementById("imgMic").src = iconStopMp3
-        document.getElementById("imgMic").style.height = "35px"
-        this.setState({
-            recordState: RecordState.START
-        });
-    };
-    
-    stop = () => {
-        this.condition = true
-        document.getElementById("imgMic").src = iconSendMp3
-        document.getElementById("imgMic").style.height = "40px"
-        this.setState({
-            recordState: RecordState.STOP
-        });
-    };
-
-    onStop = (audioData) => {
-        const url = '/upload/uploadFile';
-        const formData = new FormData();
-        // formData.append("file", file, uuidv4()+".mp3");
-        formData.append("file", audioData.blob, uuidv4() + ".mp3");
-        const config = {
-            headers: {
-                'content-type': 'multipart/form-data'
+    useEffect(() => {
+        api.get(`/chat/user/`+JSON.parse(sessionStorage.getItem("user")).id_user
+        ).then(({ status, data }) => {
+            if (status === 200) {
+                console.log(data)
+                setWorker(data)
             }
-        }
+        })
+    }, [])
 
-        api.post(url, formData, config)
-            .then((response) => {
-                console.log(response.status)
-            })
-    };
-    render() {
-        const { recordState } = this.state;
         return (
             <>
                 <VLibras />
@@ -90,16 +52,15 @@ class Chat extends Component {
                             </div>
                         </div>
                         <div className="divCardsChat">
-                        {/* {searchResult
-                            ? searchResult.map(item => (
+                        {worker.map(item => (
                                 <CardChat
                                     img={item.user?.picture ?? profileImg}
                                     name={item.user?.name}
                                     lastMessage={item?.lastMessage}
                                     lastMessageHour={item.lastMessageHour ?? "N/A"}
+                                    key={item.id}
                                 />
-                            ))
-                            : ""} */}
+                            ))}   
                         </div>
                     </div>
                     <div className="divRight">
@@ -116,69 +77,16 @@ class Chat extends Component {
                             </div>
                         </div>
                         <div className="butChat">
-                            <input id="inputMsg" placeholder="Digite aqui ..." type="text" className="msg" />
-                            <button onClick={sendMsg}><img src={iconSendMsg} alt="Icone para enviar mensagem" className="sendMsg" /></button>
-                            <button onClick={getFile}>
-                                <img src={paperclip} alt="Icone para anexar foto ou video"/>
-                            </button>
-                            <button onClick={this.condition ? this.start : this.stop}>
-                                <img id="imgMic" src={iconSendMp3} alt="Icone para enviar audio" className="iconMic" />
-                            </button>
+                            <SendMsg />
                         </div>
                     </div>
                 </div>
-                <div className="recorder">
-                    <AudioReactRecorder state={recordState} onStop={this.onStop} />
-                    <input type="file" onChange={onChange} id="inputFile"/>
-                </div>
             </>
         )
-    }
 }
 
 export default Chat
 
 const back = e => {
     window.history.back()
-}
-
-var state = {
-    file: null
-}
-
-const onChange = e => {
-    state = ({ file: e.target.files[0] })
-    console.log(state.file)
-    const url = '/upload/uploadFile';
-    const formData = new FormData();
-    formData.append("file", state.file, uuidv4()+".png");
-    const config = {
-        headers: {
-            'content-type': 'multipart/form-data'
-        }
-    }
-    api.post(url, formData, config)
-        .then((response) => {
-            console.log(response.status)
-        })
-
-}
-
-const getFile = e =>{
-    document.getElementById("inputFile").click();
-}
-
-const sendMsg = e =>{
-    
-    var msg = {
-        message: document.getElementById("inputMsg").value,
-        id: 1
-    }
-    const url = '/chat/msg/1';
-    console.log(msg)
-
-    api.post(url, msg)
-        .then((response) => {
-            console.log(response.status)
-        })
 }
