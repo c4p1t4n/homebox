@@ -40,6 +40,9 @@ public class UserWorkerTest {
         System.out.println();
         System.out.println("--- Exibindo após o bubble sort ---");
         userWorkerList.show();
+
+        System.out.println("--- Exibindo com o método recursivo ---");
+        userWorkerList.recursiveShow(userWorkerList, 0);
     }
 
 }
