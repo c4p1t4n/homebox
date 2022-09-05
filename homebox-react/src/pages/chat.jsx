@@ -17,14 +17,14 @@ import searchIcon from "../assets/img/searchIconBlack.png"
 import profileImg from "../assets/img/profileIcon.png"
 
 function Chat(){
-    const [worker, setWorker] = useState([])
+    const [chats, setChats] = useState([])
 
     useEffect(() => {
         api.get(`/chat/user/`+JSON.parse(sessionStorage.getItem("user")).id_user
         ).then(({ status, data }) => {
             if (status === 200) {
                 console.log(data)
-                setWorker(data)
+                setChats(data)
             }
         })
     }, [])
@@ -52,7 +52,7 @@ function Chat(){
                             </div>
                         </div>
                         <div className="divCardsChat">
-                        {worker.map(item => (
+                        {chats.map((item) => (
                                 <CardChat
                                     img={item.user?.picture ?? profileImg}
                                     name={item.user?.name}
