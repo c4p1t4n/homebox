@@ -32,7 +32,7 @@ Resources:
       GroupDescription: sg_pri_homebox
       VpcId: !Ref VPC
       SecurityGroupIngress:
-        - CidrIp: 0.0.0.0/0
+        - SourceSecurityGroupId: !Ref SecurityGroupPub
           IpProtocol: tcp
           FromPort: 22
           ToPort: 22

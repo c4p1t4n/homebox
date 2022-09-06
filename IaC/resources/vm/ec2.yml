@@ -2,8 +2,8 @@ Resources:
   EC2FrontEnd:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-05fa00d4c63e32376
-      KeyName: ch28082022Pub
+      ImageId: ami-08d4ac5b634553e16
+      KeyName: ch28082022Publica
       InstanceType: t2.micro
       SubnetId: !Ref SubnetPubAZ1
       SecurityGroupIds:
@@ -15,13 +15,13 @@ Resources:
             VolumeSize: "8"
       Tags:
         - Key: Name
-          Value: ec2-pub-front-end
+          Value: ec2-pub-front-end-az1
 
   EC2Private:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-05fa00d4c63e32376
-      KeyName: ch28082022Pri
+      ImageId: ami-08d4ac5b634553e16
+      KeyName: ch28082022Privada
       InstanceType: t2.micro
       SubnetId: !Ref SubnetPriAZ1
       SecurityGroupIds:
@@ -33,4 +33,4 @@ Resources:
             VolumeSize: "8"
       Tags:
         - Key: Name
-          Value: ec2-priv-back-bd
+          Value: ec2-priv-back-bd-az1

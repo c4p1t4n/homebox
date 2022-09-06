@@ -1,4 +1,4 @@
-service: IaC
+service: IaC-Homebox
 
 frameworkVersion: "3"
 
