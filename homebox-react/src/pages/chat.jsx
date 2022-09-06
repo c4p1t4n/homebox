@@ -56,8 +56,8 @@ function Chat(){
                                 <CardChat
                                     img={item.user?.picture ?? profileImg}
                                     name={item.user?.name}
-                                    lastMessage={item?.lastMessage}
-                                    lastMessageHour={item.lastMessageHour ?? "N/A"}
+                                    lastMessage={item?.lastMessage.message}
+                                    lastMessageHour={item.sendDate ?? "N/A"}
                                     key={item.id}
                                 />
                             ))}   

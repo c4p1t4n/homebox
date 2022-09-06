@@ -8,7 +8,7 @@ function cardChat(props) {
                     <p>{props.name}</p>
                     <p className="lastMsg">{props.lastMessage}</p>
                     </div>
-                    <p>{props.lastMessageHour}</p>
+                    <p className="timestamp">{`${props.lastMessageHour.split('T')[0]}\n${props.lastMessageHour.split('T')[1]}`}</p>
                 </div>
             </div>
         </>

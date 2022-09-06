@@ -104,7 +104,11 @@ public class ChatController {
         List<ChatsPerUser> chatsPerUser = new ArrayList<ChatsPerUser>();
 
         for (UserHasChat chat : chats) {
-            ChatHasMsg chm = dbRepositoryChatHasMsg.findTop1ByChatIdChatAndMsgUserIdOrderBySendDateDesc(chat.getChat().getIdChat(), fkUser);
+            ChatHasMsg chm = dbRepositoryChatHasMsg.findTop1ByChatIdChatOrderBySendDateDesc(chat.getChat().getIdChat());
+            System.out.println(chm);
+            System.out.println(chm.getMsg());
+            System.out.println(chm.getSendDate());
+            System.out.println(chm.getSeen());
             chatsPerUser.add(new ChatsPerUser(chat.getId(), chat.getUser(), chat.getChat(), chm.getMsg(), chm.getSendDate(), chm.getSeen()));
         }
 

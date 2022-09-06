@@ -265,3 +265,9 @@
     display: flex;
     justify-content: end;
 }
+
+.timestamp {
+    font-size: 13px;
+    opacity: .80;
+    text-align: end;
+}

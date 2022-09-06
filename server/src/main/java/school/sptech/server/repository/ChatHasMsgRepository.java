@@ -26,7 +26,7 @@ public interface ChatHasMsgRepository extends JpaRepository<ChatHasMsg, Integer>
     @Query("update ChatHasMsg chm set chm.seen = 'y' where chm.msg.idMsg = ?1 and chm.chat.idChat = ?2")
     void readNotification(Integer idMsg, Integer idChat);
 
-    ChatHasMsg findTop1ByChatIdChatAndMsgUserIdOrderBySendDateDesc(Integer idChat, Integer idUser);
+    ChatHasMsg findTop1ByChatIdChatOrderBySendDateDesc(Integer idChat);
 
     List<ChatHasMsg> findAllByChat(Optional<Chat> chat);
 
