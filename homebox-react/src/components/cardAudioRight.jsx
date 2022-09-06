@@ -2,7 +2,7 @@ function cardAudioRight() {
     var url = ""
     return (
         <>
-            <div className="cardChatMsgRight">
+            <div className="cardChatAudioRight">
             <audio src={url} controls />
             </div>
         </>
