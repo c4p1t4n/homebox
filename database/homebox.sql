@@ -83,8 +83,8 @@ CREATE TABLE chat_has_msg (
     FOREIGN KEY(chat_id_chat) REFERENCES chat(id_chat)
 );
 
-CREATE TABLE chat_has_user (
-    id_chat_has_user int PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE user_has_chat (
+    id_user_has_chat int PRIMARY KEY AUTO_INCREMENT,
     chat_id_chat int NOT NULL,
     user_id_user int NOT NULL,
     FOREIGN KEY(chat_id_chat) REFERENCES chat(id_chat),
@@ -615,3 +615,9 @@ VALUES
     (79, 2),
     (80, 4),
     (81, 2);
+
+
+insert into msg values(null,"Ola eu sou o Jose, como posso te ajudar?",'y',1),
+		      (null,"Ola eu sou o Robson, como posso te ajudar?",'y',2),
+		      (null,"Ola eu sou a Larissa, como posso te ajudar?",'y',3),
+		      (null,"Ola eu sou a Pedro, como posso te ajudar?",'y',4);

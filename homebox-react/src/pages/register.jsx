@@ -150,17 +150,18 @@ const register = e => {
         birthDate,
         cep: cep.trim().replace(".", "").replace(".", "").replace("-", "")
     })
-        .then(response => {
-            console.log(response)
-            if (response.status === 201) {
+        .then(({ status, data }) => {
+
+            if (status === 201) {
                 console.log("SUCESSO")
                 window.alert("Cadastro realizado com sucesso!")
                 sessionStorage.setItem(
                     "user",
-                    JSON.stringify({ ...response.data })
+                    JSON.stringify({ ...data })
                 )
-                window.location.href = "/"
-            } else if (response.status === 400) {
+                if (data.type === "worker") window.location.href = "/profile/provider"
+                else if (data.type === "customer") window.location.href = "/"
+            } else if (status === 400) {
                 console.log("DEU RUIM")
                 window.alert("Não foi possivel realizar o cadastro!")
             }

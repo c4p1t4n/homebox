@@ -1,0 +1,341 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "The AWS CloudFormation template for this Serverless application",
+  "Resources": {
+    "ServerlessDeploymentBucket": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketEncryption": {
+          "ServerSideEncryptionConfiguration": [
+            {
+              "ServerSideEncryptionByDefault": {
+                "SSEAlgorithm": "AES256"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "ServerlessDeploymentBucketPolicy": {
+      "Type": "AWS::S3::BucketPolicy",
+      "Properties": {
+        "Bucket": {
+          "Ref": "ServerlessDeploymentBucket"
+        },
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "s3:*",
+              "Effect": "Deny",
+              "Principal": "*",
+              "Resource": [
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":s3:::",
+                      {
+                        "Ref": "ServerlessDeploymentBucket"
+                      },
+                      "/*"
+                    ]
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":s3:::",
+                      {
+                        "Ref": "ServerlessDeploymentBucket"
+                      }
+                    ]
+                  ]
+                }
+              ],
+              "Condition": {
+                "Bool": {
+                  "aws:SecureTransport": false
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "VPC": {
+      "Type": "AWS::EC2::VPC",
+      "Properties": {
+        "CidrBlock": "10.0.0.0/24",
+        "EnableDnsHostnames": true,
+        "EnableDnsSupport": true,
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "vpc-homebox"
+          }
+        ]
+      }
+    },
+    "SubnetPubAZ1": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "CidrBlock": "10.0.0.70/26",
+        "MapPublicIpOnLaunch": true,
+        "AvailabilityZoneId": "use1-az1",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "sub-az1-pub-homebox"
+          }
+        ]
+      }
+    },
+    "SubnetPriAZ1": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "CidrBlock": "10.0.0.0/26",
+        "MapPublicIpOnLaunch": false,
+        "AvailabilityZoneId": "use1-az1",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "sub-az1-pri-homebox"
+          }
+        ]
+      }
+    },
+    "IgwHomebox": {
+      "Type": "AWS::EC2::InternetGateway",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "igw-homebox"
+          }
+        ]
+      }
+    },
+    "AttachGateway": {
+      "Type": "AWS::EC2::VPCGatewayAttachment",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "InternetGatewayId": {
+          "Ref": "IgwHomebox"
+        }
+      }
+    },
+    "NATGatewayEIP": {
+      "Type": "AWS::EC2::EIP",
+      "Properties": {
+        "InstanceId": {
+          "Ref": "EC2Private"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "eip-gateway-homebox"
+          }
+        ]
+      }
+    },
+    "SecurityGroupPub": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupName": "sg_pub_homebox",
+        "GroupDescription": "sg_pub_homebox",
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "SecurityGroupIngress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "IpProtocol": "tcp",
+            "FromPort": 22,
+            "ToPort": 22
+          },
+          {
+            "CidrIp": "0.0.0.0/0",
+            "IpProtocol": "tcp",
+            "FromPort": 80,
+            "ToPort": 80
+          },
+          {
+            "CidrIp": "0.0.0.0/0",
+            "IpProtocol": "tcp",
+            "FromPort": 443,
+            "ToPort": 443
+          }
+        ],
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "IpProtocol": -1
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "sg_pub_homebox"
+          }
+        ]
+      }
+    },
+    "SecurityGroupPri": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupName": "sg_pri_homebox",
+        "GroupDescription": "sg_pri_homebox",
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "SecurityGroupIngress": [
+          {
+            "SourceSecurityGroupId": {
+              "Ref": "SecurityGroupPub"
+            },
+            "IpProtocol": "tcp",
+            "FromPort": 22,
+            "ToPort": 22
+          },
+          {
+            "SourceSecurityGroupId": {
+              "Ref": "SecurityGroupPub"
+            },
+            "IpProtocol": "tcp",
+            "FromPort": 80,
+            "ToPort": 80
+          },
+          {
+            "SourceSecurityGroupId": {
+              "Ref": "SecurityGroupPub"
+            },
+            "IpProtocol": "tcp",
+            "FromPort": 443,
+            "ToPort": 443
+          }
+        ],
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "IpProtocol": -1
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "sg_pri_homebox"
+          }
+        ]
+      }
+    },
+    "KeyPairEC2Pub": {
+      "Type": "AWS::EC2::KeyPair",
+      "Properties": {
+        "KeyName": "ch28082022Publica",
+        "KeyType": "rsa"
+      }
+    },
+    "KeyPairEC2Pri": {
+      "Type": "AWS::EC2::KeyPair",
+      "Properties": {
+        "KeyName": "ch28082022Privada",
+        "KeyType": "rsa"
+      }
+    },
+    "EC2FrontEnd": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "ImageId": "ami-08d4ac5b634553e16",
+        "KeyName": "ch28082022Publica",
+        "InstanceType": "t2.micro",
+        "SubnetId": {
+          "Ref": "SubnetPubAZ1"
+        },
+        "SecurityGroupIds": [
+          {
+            "Fn::GetAtt": [
+              "SecurityGroupPub",
+              "GroupId"
+            ]
+          }
+        ],
+        "BlockDeviceMappings": [
+          {
+            "DeviceName": "/dev/sda1",
+            "Ebs": {
+              "VolumeType": "gp2",
+              "VolumeSize": "8"
+            }
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "ec2-pub-front-end-az1"
+          }
+        ]
+      }
+    },
+    "EC2Private": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "ImageId": "ami-08d4ac5b634553e16",
+        "KeyName": "ch28082022Privada",
+        "InstanceType": "t2.micro",
+        "SubnetId": {
+          "Ref": "SubnetPriAZ1"
+        },
+        "SecurityGroupIds": [
+          {
+            "Fn::GetAtt": [
+              "SecurityGroupPri",
+              "GroupId"
+            ]
+          }
+        ],
+        "BlockDeviceMappings": [
+          {
+            "DeviceName": "/dev/sda1",
+            "Ebs": {
+              "VolumeType": "gp2",
+              "VolumeSize": "8"
+            }
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "ec2-priv-back-bd-az1"
+          }
+        ]
+      }
+    }
+  },
+  "Outputs": {
+    "ServerlessDeploymentBucketName": {
+      "Value": {
+        "Ref": "ServerlessDeploymentBucket"
+      },
+      "Export": {
+        "Name": "sls-IaC-Homebox-dev-ServerlessDeploymentBucketName"
+      }
+    }
+  }
+}

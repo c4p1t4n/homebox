@@ -1,4 +1,5 @@
 import "../assets/css/profileProvider.css"
+import logo from "../assets/img/icon/logo-removebg-preview.png"
 
 import alterNameProvider from "../assets/img/alterNameProvider.png"
 import deleteService from "../assets/img/deleteService.png"
@@ -106,8 +107,30 @@ function profileProvider() {
                     </div>
                 </div>
             </div>
+            <div id="logOffDivAbsolut">
+                <img src={logo} alt="Logo homebox" />
+                <p>Tem certeza que deseja sair ?</p>
+                <div className="buttonsLogOff">
+                    <button onClick={logOff} id="buttonYes">SIM</button>
+                    <button onClick={logOffSwitch} id="buttonNo">NÃO</button>
+                </div>
+            </div>
         </>
     )
 }
 
 export default profileProvider
+
+const logOffSwitch = e => {
+    e.preventDefault()
+    const logoffOpenDiv = document.getElementById("logOffDivAbsolut")
+
+    logoffOpenDiv.style.display =
+        logoffOpenDiv.style.display === "flex" ? "none" : "flex"
+}
+
+
+const logOff = e => {
+    sessionStorage.clear()
+    window.location.href = "http://127.0.0.1:5500/website/index.html"
+}
