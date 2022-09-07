@@ -1,8 +1,16 @@
 Resources:
-  NATGatewayEIP:
+  NATGatewayEIPBackends:
     Type: AWS::EC2::EIP
     Properties:
       InstanceId: !Ref EC2Private
       Tags:
         - Key: Name
-          Value: eip-gateway-homebox
+          Value: eip-pub-backend-homebox
+
+  NATGatewayEIPFrontend:
+    Type: AWS::EC2::EIP
+    Properties:
+      InstanceId: !Ref EC2FrontEnd
+      Tags:
+        - Key: Name
+          Value: eip-pub-frontend-homebox
