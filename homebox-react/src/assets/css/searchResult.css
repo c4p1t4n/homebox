@@ -43,7 +43,7 @@ body p {
 
 .cardCustumerDiv p {
 
-    font-size: 18px;
+    font-size: 20px;
     margin-top: 1%;
 }
 
@@ -112,6 +112,7 @@ body p {
     top: 0.1px;
     width: 99vw;
     height: 99vh;
+    left: 2px;
     display: none;
     align-items: center;
     justify-content: center;

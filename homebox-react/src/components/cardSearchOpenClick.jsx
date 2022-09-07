@@ -10,7 +10,7 @@ function cardSearchOpenClick(props) {
             <div id="cardSearchOpenID" className="cardSearchOpen">
                 <div className="cardSearchOpenDiv">
                     <div className="cardSearchOpenDivIconClose">
-                        <img onClick={teste} src={iconCloseBlue} alt="Icone de fechar" />
+                        <img onClick={openCardSearch} src={iconCloseBlue} alt="Icone de fechar" />
                     </div>
                     <div className="cardSearchOpenDivTopInfo">
                         <div className="cardSearchOpenDivTopInfoInside">
@@ -43,6 +43,6 @@ function cardSearchOpenClick(props) {
 export default cardSearchOpenClick
 
 
-function teste() {
+function openCardSearch() {
     document.getElementById("cardSearchOpenID").style.display = "none"
 }

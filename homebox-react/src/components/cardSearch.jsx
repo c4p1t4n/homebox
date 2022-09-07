@@ -44,10 +44,10 @@ function CardSearch(props) {
                 <p>{props.dist.toFixed(2)} km de distância</p>
             </div>
             <CardSearchOpenClick
-              /*   img={item.user?.picture ?? profileImg}
-                name={item.user?.name}
-                category={item?.category}
-                rating={item.rating ?? "N/A"} */
+                img={props.img}
+                name={props.name}
+                category={props.category}
+                rating={props.rating ?? "N/A"}
             />
         </div>
     )
@@ -59,3 +59,4 @@ export default CardSearch
 function openCardSearch() {
     document.getElementById("cardSearchOpenID").style.display = "flex"
 }
+
