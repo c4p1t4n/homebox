@@ -8,13 +8,15 @@ import Chart from "react-apexcharts"
 
 import React, { Component } from "react"
 
+import api from "../api"
+
 
 
 
 class relatorioProvider extends Component {
     constructor(props) {
+        
         super(props)
-
         this.state = {
             options: {
                 title:{
@@ -37,13 +39,31 @@ class relatorioProvider extends Component {
                     name: "series-1",
                     data: [30, 40, 45, 50, 49, 60, 70, 91]
                 }
-            ]
+            ],
+            valor: 0
         };
     }
-    render() {
+     
+    async componentDidMount() {
 
-        return (
-            <>
+        let id_user = JSON.parse(sessionStorage.getItem('user')).id_user
+
+        let temp_value = await api.post(`/users/avg-rating/${id_user}`,).catch(err => err.response)
+        this.setState({valor: (temp_value.data == 0  ? "0" : temp_value.data)})
+        console.log(this.state.valor)
+    }
+    render() {
+        
+        // const getAvgRating = async(idUser) => {
+        //    let valor = await api.post(`/users/avg-rating/${idUser}`,).catch(err => err.response)
+        //     console.log(valor)
+        //     console.log(valor.data)
+        //     return valor.data
+        //         // console.log(`data:${data}`)
+        // }
+                return (
+                    <>
+                
                 <div className="divBodyProfileProvider">
                     <MenuLeftProvider />
                     <div className="divRightProfileProvider">
@@ -72,7 +92,7 @@ class relatorioProvider extends Component {
                                             <div className="visitsYourProfileBut">
                                                 <p id="indice">+10</p>
                                                 <div className="indiceDiv2">
-                                                    <p id="indice2">4.3</p>
+                                                    <p id="indice2">{this.state.valor}</p>
                                                     <p>**estrelas**</p>
                                                 </div>
                                             </div>
@@ -103,7 +123,10 @@ class relatorioProvider extends Component {
             </>
         )
     }
+
 }
+
+
 
 export default relatorioProvider
 
