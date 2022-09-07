@@ -3,6 +3,12 @@ import "../assets/css/chat.css"
 import CardChat from "../components/cardChat";
 import SendMsg from "../components/sendMsg";
 import Msgs from "../components/msgs";
+import CardChatMsgLeft from "../components/cardChatMsgLeft";
+import CardChatMsgRight from "../components/cardChatMsgRight";
+import CardAudioRight from "../components/cardAudioRight";
+import CardAudioLeft from "../components/cardAudioLeft";
+import CardImgRight from "../components/cardImgRight";
+import CardImgLeft from "../components/cardImgLeft";
 
 import VLibras from "@djpfs/react-vlibras"
 import api from "../api"

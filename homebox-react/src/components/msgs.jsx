@@ -5,11 +5,9 @@ import CardAudioLeft from "../components/cardAudioLeft";
 import CardImgRight from "../components/cardImgRight";
 import CardImgLeft from "../components/cardImgLeft";
 
-import React,{useState } from "react"
 
 function Msgs() {
     
-    const [listMsgs,setListMsgs] = useState()
     var list = []
     const info = JSON.parse(sessionStorage.getItem("chatInfo"));
     for(var i in info){
@@ -40,14 +38,10 @@ function Msgs() {
             }
         }
     }
-
-    const attMsg = () =>{
-        setListMsgs(list)        
-    }
     
     return (
         <>
-        {listMsgs}
+        {list}
         </>
     )
 }
