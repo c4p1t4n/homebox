@@ -58,16 +58,6 @@ function SearchResult() {
                             ))
                             : ""}
                     </div>
-                    {searchResult
-                        ? searchResult.map(item => (
-                            <CardSearchOpenClick
-                                img={item.user?.picture ?? profileImg}
-                                name={item.user?.name}
-                                category={item?.category}
-                                rating={item.rating ?? "N/A"}
-                            />
-                        ))
-                        : ""}
                 </div>
             </div>
         </>
