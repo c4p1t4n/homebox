@@ -84,7 +84,7 @@ function Chat() {
                                         text={msg}
                                         /> : 
                                     item.type ?
-                                        <CardChatMsgLeft 
+                                        <CardImgLeft 
                                         text={msg}/> :
                                         <CardAudioLeft
                                         text={msg} />:
@@ -96,7 +96,7 @@ function Chat() {
                                     item.type ?
                                         <CardChatMsgRight 
                                         text={msg}/> :
-                                        <CardAudioRight
+                                        <CardImgRight
                                         text={msg} />  
                             ))} */}
                             
@@ -105,25 +105,6 @@ function Chat() {
                         <div className="butChat">
                             <SendMsg />
                         </div>
-                    </div>
-                </div>
-                <div className="divRight">
-                    <div className="topChat">
-                        <div className="overflowDiv">
-                            <CardChatMsgLeft />
-                            <CardChatMsgLeft />
-                            <CardChatMsgLeft />
-                            <CardChatMsgRight />
-                            <CardChatMsgRight />
-                            <CardChatMsgRight />
-                            <CardAudioLeft />
-                            <CardAudioRight />
-                            <CardImgLeft />
-                            <CardImgRight />
-                        </div>
-                    </div>
-                    <div className="butChat">
-                        <SendMsg />
                     </div>
                 </div>
             </div>
