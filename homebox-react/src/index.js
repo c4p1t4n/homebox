@@ -5,8 +5,12 @@ import App from './App';
 
 
 const body = ReactDOM.createRoot(document.getElementById('body'));
-body.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+function tick(){
+    body.render(
+      <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+}
+
+setInterval(tick,220)
