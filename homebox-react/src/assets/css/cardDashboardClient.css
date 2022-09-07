@@ -1,0 +1,29 @@
+.cardDashboardClient {
+    padding: 2%;
+    margin: 2%;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 270px;
+    background: #FFFEFE;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+
+.serviceIMG{
+    height: 100px;
+    border-radius: 100%;
+}
+.divAcess {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 58%;
+}
+
+.iconAccess{
+    height: 28px;
+}

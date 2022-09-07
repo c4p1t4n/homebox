@@ -19,20 +19,20 @@ public class Msg {
     @Column(name = "automatic")
     private Character automatic;
 
-    @Column(name = "fk_user")
-    private Integer fkUser;
+    @ManyToOne
+    private User user;
 
-    public Msg(Integer idMsg, String message, Character automatic, Integer fkUser) {
+    public Msg(Integer idMsg, String message, Character automatic, User user) {
         this.idMsg = idMsg;
         this.message = message;
         this.automatic = automatic;
-        this.fkUser = fkUser;
+        this.user = user;
     }
 
     @JsonCreator
-    public Msg(@JsonProperty("message") String message, @JsonProperty("fkUser") Integer fkUser) {
+    public Msg(@JsonProperty("message") String message, User user) {
         this.message = message;
-        this.fkUser = fkUser;
+        this.user = user;
     }
 
     public Msg() {
@@ -62,11 +62,11 @@ public class Msg {
         this.automatic = automatic;
     }
 
-    public Integer getFkUser() {
-        return fkUser;
+    public User getUser() {
+        return user;
     }
 
-    public void setFkUser(Integer fkUser) {
-        this.fkUser = fkUser;
+    public void setUser(User user) {
+        this.user = user;
     }
 }

@@ -1,5 +1,5 @@
 import api from "../api"
-
+import { v4 as uuidv4 } from 'uuid';
 
 function TestUploadFile() {
 
@@ -21,9 +21,10 @@ var state = {
 }
 const onFormSubmit = e => {
     e.preventDefault()
+    console.log(state.file)
     const url = '/upload/uploadFile';
     const formData = new FormData();
-    formData.append("file", state.file);
+    formData.append("file", state.file, uuidv4()+".png");
     const config = {
         headers: {
             'content-type': 'multipart/form-data'

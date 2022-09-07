@@ -1,0 +1,242 @@
+.bodyChat {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.divLeft {
+    height: 91vh;
+    width: 500px;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    background: rgba(10, 57, 105, 0.13);
+}
+
+.divRight {
+    height: 100%;
+    width: 70vw;
+}
+
+.divLogoChat {
+    display: flex;
+    align-items: center;
+}
+
+.divLogoChat .iconBack {
+    height: 50px;
+}
+
+.divLogoChat .iconBack:hover {
+    cursor: pointer;
+    border-bottom: inset #3D6389;
+    border-radius: 99%;
+}
+
+.divLogoChat .butIconBack {
+    margin-right: 20%;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+
+.convs {
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    margin: -5%;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+
+    color: #000000;
+}
+
+.divSearchBar {
+    display: flex;
+}
+
+
+.barSearch input {
+    background-color: #3D6389;
+    color: white;
+    border: none;
+    height: 19px;
+    padding: 10px;
+    width: 410px;
+    font-size: 20px;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.barSearch input::placeholder {
+    color: white;
+}
+
+.iconSearch button {
+    background: rgba(255, 255, 255, 0.702);
+    border-radius: 0px 20px 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    border: none;
+    padding: 3px;
+}
+
+.iconSearch button:hover {
+    cursor: pointer;
+    padding: 2%;
+    border: #3D6389 solid 2px;
+}
+
+.iconSearch img {
+    height: 33px;
+}
+
+.divCardsChat {
+    width: 100%;
+    height: 400px;
+    margin-top: 8%;
+    overflow: auto;
+}
+
+.cardChat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 5% 1% 5%;
+    background: rgba(10, 57, 105, 0.5);
+    border-radius: 13px;
+    font-size: 22px;
+    margin-bottom: 6%;
+    color: white;
+}
+
+.cardChat:hover {
+    border: black solid 2.4px;
+    cursor: pointer;
+}
+
+.divCardsChat::-webkit-scrollbar {
+    display: none;
+}
+
+
+.cardChat .nameP {
+    width: 60%;
+}
+
+.lastMsg {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 100;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.7);
+
+}
+
+.cardChat img {
+    height: 60px;
+    border-radius: 100%;
+}
+
+.topChat {
+    width: 98%;
+    height: 84.5%;
+    padding: 1%;
+}
+
+.overflowDiv {
+    overflow: auto;
+    width: 100%;
+    flex-flow: column;
+    display: flex;
+    height: 100%;
+    background-color: white;
+}
+
+.overflowDiv::-webkit-scrollbar {
+    display: none;
+}
+
+.butChat {
+    background: rgba(10, 57, 105, 0.13);
+    width: 100%;
+    height: 12%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.butChat img {
+    height: 40px;
+}
+
+.butChat button {
+    background-color: rgba(255, 255, 255, 0);
+    margin-right: 2%;
+    border: none;
+}
+
+.butChat button:hover {
+    border-bottom: #000000 solid 2px;
+    border-radius: 100%;
+}
+
+
+.butChat input {
+    height: 50%;
+    background: #3D6389;
+    border-radius: 12px;
+    margin: 1%;
+    width: 80%;
+    padding: 0% 0% 0% 1%;
+    font-size: 20px;
+    color: white;
+}
+
+.butChat input::placeholder {
+    color: white;
+    font-size: 20px;
+}
+
+.cardChatMsgLeft {
+    padding: 2%;
+    background-color: #367cc1ca;
+    width: 50%;
+    margin-bottom: 4%;
+    border-radius: 70px 15px;
+}
+
+.cardChatMsgRight {
+    border-radius: 15px 50px;
+    align-self: end;
+    padding: 2%;
+    width: 50%;
+    margin-bottom: 4%;
+    background-color: #214160ca;
+    color: white;
+    display: flex;
+    justify-content: end;
+}
+
+.cardChatMsgLeft p {
+    width: 100%;
+    font-size: 20px;
+}
+
+.cardChatMsgRight p {
+    width: 100%;
+    font-size: 20px;
+}
+
+.openDivClip {
+    position: absolute;
+    background-color: aqua;
+    bottom: 80px;
+    right: 100px;
+    border-radius: 15px 50px;
+}

@@ -66,10 +66,10 @@ function Header(props) {
                         <img src={profile} alt="" />
                     </div>
                     <div className="profileOpenDiv" id="profileMenu">
-                        <a href="#">
+                        <a href="http://localhost:3000/profile/client">
                             <p>Perfil</p>
                         </a>
-                        <a href="#">
+                        <a href="http://localhost:3000/profile/client/chat">
                             <p>Chats</p>
                         </a>
                         <img src={lineProfileOpen} alt="" />

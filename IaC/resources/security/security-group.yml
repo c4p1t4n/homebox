@@ -1,0 +1,52 @@
+Resources:
+  SecurityGroupPub:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupName: sg_pub_homebox
+      GroupDescription: sg_pub_homebox
+      VpcId: !Ref VPC
+      SecurityGroupIngress:
+        - CidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+        - CidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+        - CidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+      SecurityGroupEgress:
+        - CidrIp: 0.0.0.0/0
+          IpProtocol: -1
+      Tags:
+        - Key: Name
+          Value: sg_pub_homebox
+
+  SecurityGroupPri:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupName: sg_pri_homebox
+      GroupDescription: sg_pri_homebox
+      VpcId: !Ref VPC
+      SecurityGroupIngress:
+        - SourceSecurityGroupId: !Ref SecurityGroupPub
+          IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+        - SourceSecurityGroupId: !Ref SecurityGroupPub
+          IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+        - SourceSecurityGroupId: !Ref SecurityGroupPub
+          IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+      SecurityGroupEgress:
+        - CidrIp: 0.0.0.0/0
+          IpProtocol: -1
+      Tags:
+        - Key: Name
+          Value: sg_pri_homebox

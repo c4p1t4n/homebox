@@ -6,11 +6,11 @@ import school.sptech.server.model.Msg;
 import java.util.List;
 
 public interface MsgRepository extends JpaRepository<Msg, Integer> {
-    Msg findByAutomaticAndFkUser(char automatic, int fkUser);
+    Msg findByAutomaticAndUserId(char automatic, int fkUser);
 
-    boolean existsByFkUser(Integer fkUser);
+    boolean existsByUserId(Integer fkUser);
 
-    List<Msg> findByFkUser(Integer fkUser);
+    List<Msg> findByUserId(Integer fkUser);
 
  //   List<MsgJoinChatHasMsg> findAllWithChat();
 

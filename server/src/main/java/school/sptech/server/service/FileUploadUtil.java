@@ -1,6 +1,5 @@
 package school.sptech.server.service;
 
-import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
