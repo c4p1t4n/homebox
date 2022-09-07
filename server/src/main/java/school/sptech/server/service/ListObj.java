@@ -32,6 +32,21 @@ public class ListObj<T> {
         }
     }
 
+    public void recursiveShow(ListObj<User> v, int index) {
+        if (elemNumber == 0) {
+            System.out.println("\nA lista está vazia.");
+        } else {
+            recursiveShow2(v, index);
+        }
+    }
+
+    public void recursiveShow2(ListObj<User> v, int index) {
+        if (index < v.getSize()) {
+            System.out.println(v.getElement(index));
+            recursiveShow(v, index + 1);
+        }
+    }
+
     public int search(T element) {
         for (int i = 0; i < elemNumber; i++) {
             if (array[i].equals(element)) {
