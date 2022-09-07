@@ -101,11 +101,10 @@ const login = e => {
                 )
                 if (data.type === "worker") window.location.href = "/profile/provider"
                 else if (data.type === "customer") window.location.href = "/"
-                else throw new TypeError("DEU RUIM NO TIPO DO USUARIO")
+                else throw new TypeError("TIPO DE USUARIO INVALIDO")
             } else if (status === 400) {
                 window.alert("Senha errada!")
             } else if (status === 404) {
-                console.log("DEU MUITO RUIM")
                 window.alert("Email não encontrado!")
 
             }

@@ -58,7 +58,7 @@ function Chat(){
                                     name={item.user?.name}
                                     lastMessage={item?.lastMessage.message}
                                     lastMessageHour={item.sendDate ?? "N/A"}
-                                    key={item.id}
+                                    index={item.chat.idChat}
                                 />
                             ))}   
                         </div>
@@ -66,14 +66,29 @@ function Chat(){
                     <div className="divRight">
                         <div className="topChat">
                             <div className="overflowDiv">
-                                <CardChatMsgLeft />
-                                <CardChatMsgLeft />
-                                <CardChatMsgLeft />
-                                <CardChatMsgRight />
-                                <CardChatMsgRight />
-                                <CardChatMsgRight />
-                                <CardAudioLeft />
-                                <CardAudioRight />
+                            {/* {chats.map((item) => ( 
+                                item.id ?
+                                    item.message ?  
+                                        <CardChatMsgLeft
+                                        text={msg}
+                                        /> : 
+                                    item.type ?
+                                        <CardChatMsgLeft 
+                                        text={msg}/> :
+                                        <CardAudioLeft
+                                        text={msg} />:
+
+                                    item.message ?  
+                                        <CardChatMsgRight
+                                        text={msg}
+                                        /> : 
+                                    item.type ?
+                                        <CardChatMsgRight 
+                                        text={msg}/> :
+                                        <CardAudioRight
+                                        text={msg} />  
+                            ))} */}
+                            
                             </div>
                         </div>
                         <div className="butChat">
@@ -89,4 +104,4 @@ export default Chat
 
 const back = e => {
     window.history.back()
-}
+}                

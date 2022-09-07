@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import school.sptech.server.model.*;
 import school.sptech.server.repository.*;
+import school.sptech.server.response.ChatJoinMsgJoinMedia;
 import school.sptech.server.response.ChatsPerUser;
 import school.sptech.server.service.UserService;
 
@@ -105,10 +106,6 @@ public class ChatController {
 
         for (UserHasChat chat : chats) {
             ChatHasMsg chm = dbRepositoryChatHasMsg.findTop1ByChatIdChatOrderBySendDateDesc(chat.getChat().getIdChat());
-            System.out.println(chm);
-            System.out.println(chm.getMsg());
-            System.out.println(chm.getSendDate());
-            System.out.println(chm.getSeen());
             chatsPerUser.add(new ChatsPerUser(chat.getId(), chat.getUser(), chat.getChat(), chm.getMsg(), chm.getSendDate(), chm.getSeen()));
         }
 
@@ -181,18 +178,12 @@ public class ChatController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/msgs/{idChat}")
-    public ResponseEntity<List<ChatHasMsg>> getMsgsPerChat(@PathVariable Integer idChat) {
+    public ResponseEntity<List<ChatJoinMsgJoinMedia>> getMsgsPerChat(@PathVariable Integer idChat) {
         if (!dbRepositoryChat.existsById(idChat)) {
             return ResponseEntity.status(404).build();
         }
 
-        List<ChatHasMsg> msgs = dbRepositoryChatHasMsg.findAllByChat(dbRepositoryChat.findById(idChat));
-
-        if (msgs.isEmpty()) {
-            return ResponseEntity.status(204).build();
-        }
-
-        return ResponseEntity.status(200).body(msgs);
+        return ResponseEntity.status(200).body(dbRepositoryChatHasMsg.findAllByChat(idChat));
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")

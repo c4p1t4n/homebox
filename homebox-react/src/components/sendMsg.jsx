@@ -38,8 +38,8 @@ class SendMsg extends Component {
     };
 
     onStop = (audioData) => {
-        let user =  JSON.parse(sessionStorage.getItem("user")).id_user
-        let chat = 1;
+        let user = JSON.parse(sessionStorage.getItem("user")).id_user
+        let chat = JSON.parse(sessionStorage.getItem("chat")).idChat;
 
         const url = '/upload/uploadFile/'+chat+"/"+user;
 
@@ -83,12 +83,11 @@ export default SendMsg
 
 var state = {
     file: null,
-    idChat: null
 }
 
 const onChange = e => {
-    let user =  JSON.parse(sessionStorage.getItem("user")).id_user
-    let chat = 1;
+    let user = JSON.parse(sessionStorage.getItem("user")).id_user
+    let chat = JSON.parse(sessionStorage.getItem("chat")).idChat
 
     state = ({ file: e.target.files[0] })
     console.log(state.file)
@@ -113,9 +112,7 @@ const getFile = e =>{
 }
 
 const sendMsg = e =>{
-    state.idChat = 1;
-
-    let chat = 1;
+    let chat = JSON.parse(sessionStorage.getItem("chat")).idChat;
     let user = JSON.parse(sessionStorage.getItem("user")).id_user;
 
     let msg = {

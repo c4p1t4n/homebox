@@ -11,10 +11,4 @@ public interface MsgRepository extends JpaRepository<Msg, Integer> {
     boolean existsByUserId(Integer fkUser);
 
     List<Msg> findByUserId(Integer fkUser);
-
- //   List<MsgJoinChatHasMsg> findAllWithChat();
-
-    // List<MsgJoinChatHasMsg> findAllWithChat();
-
-
 }
