@@ -1,8 +1,8 @@
-function cardChatMsgRight() {
+function cardChatMsgRight(props) {
     return (
         <>
             <div className="cardChatMsgRight">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sunt quam in  accusantium delectus.</p>
+                <p>{props.text}</p>
             </div>
         </>
     )

@@ -1,13 +1,8 @@
 import "../assets/css/chat.css"
 
 import CardChat from "../components/cardChat";
-import CardChatMsgLeft from "../components/cardChatMsgLeft";
-import CardChatMsgRight from "../components/cardChatMsgRight";
-import CardAudioRight from "../components/cardAudioRight";
-import CardImgRight from "../components/cardImgRight";
-import CardAudioLeft from "../components/cardAudioLeft";
-import CardImgLeft from "../components/cardImgLeft";
 import SendMsg from "../components/sendMsg";
+import Msgs from "../components/msgs";
 
 import VLibras from "@djpfs/react-vlibras"
 import api from "../api"
@@ -18,36 +13,32 @@ import iconHomebox from "../assets/img/icon/logo-removebg-preview.png"
 import searchIcon from "../assets/img/searchIconBlack.png"
 import profileImg from "../assets/img/profileIcon.png"
 
-function Chat() {
-    const [chats, setChats] = useState([])
 
+const data = {
+    idChat: 0
+}
+sessionStorage.setItem("chat", JSON.stringify({...data}))
+
+
+function Chat(){
+    const [chats, setChats] = useState([])
     useEffect(() => {
-        api.get(`/chat/user/` + JSON.parse(sessionStorage.getItem("user")).id_user
+        api.get(`/chat/user/`+JSON.parse(sessionStorage.getItem("user")).id_user
         ).then(({ status, data }) => {
             if (status === 200) {
-                console.log(data)
                 setChats(data)
             }
         })
     }, [])
 
-    return (
-        <>
-            <VLibras />
-            <div className="bodyChat">
-                <div className="divLeft">
-                    <div className="divLogoChat">
-                        <button onClick={back} className="butIconBack"><img className="iconBack" src={iconBack} alt="voltar" /></button>
-                        <img className="iconHomebox" src={iconHomebox} alt="logo homebox" />
-                    </div>
-                    <div className="convs">
-                        <h5>
-                            Conversas
-                        </h5>
-                    </div>
-                    <div className="divSearchBar">
-                        <div className="barSearch">
-                            <input placeholder="Pesquisar..." type="text" />
+        return (
+            <>
+                <VLibras />
+                <div className="bodyChat">
+                    <div className="divLeft">
+                        <div className="divLogoChat">
+                            <button onClick={back} className="butIconBack"><img className="iconBack" src={iconBack} alt="voltar" /></button>
+                            <img className="iconHomebox" src={iconHomebox} alt="logo homebox" />
                         </div>
                         <div className="convs">
                             <h5>
@@ -77,29 +68,7 @@ function Chat() {
                     <div className="divRight">
                         <div className="topChat">
                             <div className="overflowDiv">
-                            {/* {chats.map((item) => ( 
-                                item.id ?
-                                    item.message ?  
-                                        <CardChatMsgLeft
-                                        text={msg}
-                                        /> : 
-                                    item.type ?
-                                        <CardImgLeft 
-                                        text={msg}/> :
-                                        <CardAudioLeft
-                                        text={msg} />:
-
-                                    item.message ?  
-                                        <CardChatMsgRight
-                                        text={msg}
-                                        /> : 
-                                    item.type ?
-                                        <CardChatMsgRight 
-                                        text={msg}/> :
-                                        <CardImgRight
-                                        text={msg} />  
-                            ))} */}
-                            
+                            <Msgs />
                             </div>
                         </div>
                         <div className="butChat">
@@ -107,13 +76,12 @@ function Chat() {
                         </div>
                     </div>
                 </div>
-            </div>
-        </>
-    )
+            </>
+        )
 }
 
 export default Chat
 
 const back = e => {
     window.history.back()
-}                
+}

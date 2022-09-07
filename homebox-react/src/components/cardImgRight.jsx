@@ -1,9 +1,8 @@
-function cardImgRight() {
-    var url = ""
+function cardImgRight(props) {
     return (
         <>
             <div className="cardChatImgRight">
-            <img src="" alt="img teste" />
+            <img src={props.url} alt="imagem enviado por você" />
             </div>
         </>
     )
