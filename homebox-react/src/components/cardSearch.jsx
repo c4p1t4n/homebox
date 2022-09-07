@@ -1,4 +1,5 @@
 import { DynamicStar } from "react-dynamic-star"
+import CardSearchOpenClick from "../components/cardSearchOpenClick"
 
 function CardSearch(props) {
     // const backgroundImg = {
@@ -42,6 +43,12 @@ function CardSearch(props) {
             <div className="distance">
                 <p>{props.dist.toFixed(2)} km de distância</p>
             </div>
+            <CardSearchOpenClick
+              /*   img={item.user?.picture ?? profileImg}
+                name={item.user?.name}
+                category={item?.category}
+                rating={item.rating ?? "N/A"} */
+            />
         </div>
     )
 }
