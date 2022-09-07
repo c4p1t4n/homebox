@@ -27,6 +27,18 @@ public class InterestAccess {
     @Column(name = "access_date")
     private LocalDate accessDate;
 
+
+    public InterestAccess(Integer id, User user, Tag tag, LocalDate accessDate) {
+        this.id = id;
+        this.user = user;
+        this.tag = tag;
+        this.accessDate = accessDate;
+    }
+
+    public InterestAccess() {
+    }
+
+
     public Integer getId() {
         return id;
     }
@@ -51,4 +63,12 @@ public class InterestAccess {
         this.tag = tag;
     }
 
+
+    public LocalDate getAccessDate() {
+        return accessDate;
+    }
+
+    public void setAccessDate(LocalDate accessDate) {
+        this.accessDate = accessDate;
+    }
 }
