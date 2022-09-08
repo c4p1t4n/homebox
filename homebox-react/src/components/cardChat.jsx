@@ -1,4 +1,7 @@
-function cardChat(props) {
+import api from "../api"
+import {attMsg} from "../components/msgs"
+
+function CardChat(props) {
     return (
         <>
             <div className="cardsChat" key={props.index} onClick={() => setChat(props.index)}>
@@ -15,13 +18,18 @@ function cardChat(props) {
     )
 }
 
-export default cardChat
+export default CardChat
 
 function setChat(value){
-    console.log(value)
     const data = {
         idChat: value
     }
-    console.log(data)
     sessionStorage.setItem("chat", JSON.stringify({...data}))
+    
+    api.get(`/chat/msgs/`+JSON.parse(sessionStorage.getItem("chat")).idChat
+    ).then(({ status, data }) => {
+        if (status === 200) {
+            sessionStorage.setItem("chatInfo", JSON.stringify({...data}))
+        }
+    })
 }

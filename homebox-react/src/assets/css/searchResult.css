@@ -43,7 +43,7 @@ body p {
 
 .cardCustumerDiv p {
 
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 1%;
 }
 
@@ -111,9 +111,9 @@ body p {
     position: absolute;
     top: 0.1px;
     width: 99vw;
+    display: flex;
     height: 99vh;
     left: 2px;
-    display: none;
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.402);
@@ -196,7 +196,8 @@ details {
     display: flex;
     justify-content: space-between;
 }
-.summaryCardSearchOpen:hover{
+
+.summaryCardSearchOpen:hover {
     cursor: pointer;
     color: #0A3969;
     font-size: 21px;

@@ -1,9 +1,8 @@
-function cardAudioRight() {
-    var url = "file:///C:\\Users\\eduardo.oliveira\\OneDrive - Yandeh\\Área de Trabalho\\projects\\faculdade\\homebox\\homebox-react\\src\\pages\\f8df290c-4031-438c-818c-b442aa32e5f6.mp3"
+function cardAudioRight(props) {
     return (
         <>
             <div className="cardChatAudioRight">
-            <audio src={url} controls />
+            <audio src={props.url} controls />
             </div>
         </>
     )
