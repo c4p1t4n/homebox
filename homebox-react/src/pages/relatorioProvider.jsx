@@ -83,7 +83,7 @@ class relatorioProvider extends Component {
         let id_user = JSON.parse(sessionStorage.getItem('user')).id_user
 
         let temp_value = await api.post(`/users/avg-rating/1`,).catch(err => err.response)
-        this.setState({avg: (temp_value.data == 0  ? "0" : temp_value.data)})
+        this.setState({avg: (temp_value.data == 0  ? "0" : temp_value.data.toFixed(2))})
         console.log(this.state.avg)
 
 
