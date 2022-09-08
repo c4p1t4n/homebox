@@ -20,7 +20,7 @@ function CardSearch(props) {
         setCardList([])
         console.log("open")
         setCardList(cardList.concat(<CardSearchOpenClick
-            id_user = {props.id_user}
+            id_user={props.id_user}
             img={props.img}
             name={props.name}
             category={props.category}

@@ -51,6 +51,7 @@ function SearchResult() {
                         {searchResult
                             ? searchResult.map(item => (
                                 <CardSearch
+                                    id_user={item.user.id_user}
                                     img={item.user?.picture ?? profileImg}
                                     name={item.user?.name}
                                     category={item?.category}
