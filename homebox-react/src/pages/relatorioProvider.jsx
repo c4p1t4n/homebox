@@ -13,6 +13,32 @@ import api from "../api"
 
 
 
+
+function getLastSevendays(){
+    var date = new Date();
+    var list = [];
+    var count = 0;   
+    var list_date = []
+    for (var i = 0; i < 7; i++) {
+        
+        list.push(date.getDate()-count)
+        count++
+        console.log(count)
+    }
+    for(var x=0;x<=list.length;x++) {
+        date = new Date();
+        if(list[x]<= list[0]){
+            list_date.push(String(list[x])+'/'+ String(date.getMonth()+1))
+        }else{
+            list_date.push(String(list[x])+'/'+ String(date.getMonth()))
+        }
+    }
+    console.log(list)
+    console.log(list_date)
+    return list_date
+}
+
+
 class relatorioProvider extends Component {
     constructor(props) {
         
@@ -37,20 +63,66 @@ class relatorioProvider extends Component {
             series: [
                 {
                     name: "series-1",
-                    data: [30, 40, 45, 50, 49, 60, 70, 91]
+                    data: [5, 4, 4.3, 3.7, 4, 5, 5, 4.7]
                 }
             ],
-            valor: 0
+            avg: 0,
+            visitas_semana:0
         };
     }
      
-    async componentDidMount() {
 
+
+
+
+    
+
+
+
+    async componentDidMount() {
         let id_user = JSON.parse(sessionStorage.getItem('user')).id_user
 
-        let temp_value = await api.post(`/users/avg-rating/${id_user}`,).catch(err => err.response)
-        this.setState({valor: (temp_value.data == 0  ? "0" : temp_value.data)})
-        console.log(this.state.valor)
+        let temp_value = await api.post(`/users/avg-rating/1`,).catch(err => err.response)
+        this.setState({avg: (temp_value.data == 0  ? "0" : temp_value.data)})
+        console.log(this.state.avg)
+
+
+        let visitas_semana = await api.get(`/interestAcess/avg_last_seven_days/1`,).catch(err => err.response)
+        this.setState({visitas_semana: (visitas_semana.data == 0  ? "0" : visitas_semana.data)})
+        console.log(this.state.visitas_semana)
+
+        let list_medias_ultima_semana = await api.get(`/interestAcess/getListAvgLastSevenDays/1`,).catch(err => err.response)
+
+        this.setState({series:[
+                {
+                    data: list_medias_ultima_semana.data,
+                }
+            ]     
+        
+        });
+
+        this.setState({options:{
+            title:{
+                text:"Sua nota ao longo do tempo",
+                align:"center",
+                style:{
+                    fontSize:"28px",
+                    color:'#174574'
+                }
+            },
+            chart: {
+                id: "basic-bar"
+            },
+            xaxis: {
+                categories: getLastSevendays()
+            }
+        }
+        })
+        
+        
+
+        
+    
     }
     render() {
         
@@ -79,7 +151,7 @@ class relatorioProvider extends Component {
                                             <div className="visitsYourProfileBut">
                                                 <p id="indice">13%</p>
                                                 <div className="indiceDiv2">
-                                                    <p id="indice2">24</p>
+                                                    <p id="indice2">{this.state.visitas_semana}</p>
                                                     <p>nessa semana</p>
                                                 </div>
                                             </div>
@@ -92,7 +164,7 @@ class relatorioProvider extends Component {
                                             <div className="visitsYourProfileBut">
                                                 <p id="indice">+10</p>
                                                 <div className="indiceDiv2">
-                                                    <p id="indice2">{this.state.valor}</p>
+                                                    <p id="indice2">{this.state.avg}</p>
                                                     <p>**estrelas**</p>
                                                 </div>
                                             </div>
@@ -100,7 +172,7 @@ class relatorioProvider extends Component {
                                     </div>
                                     <br />
                                     <div className="divRightProfileProviderTopLeftBut">
-                                        <p>Sua nota média é maior que a dos outros Pintoresda nossa plataforma (4.0 X 3.8)</p>
+                                        <p>Sua nota média é maior que a dos outros Pintores da nossa plataforma (4.0 X 3.8)</p>
                                         <p className="indiceDiv3">+0.20</p>
                                     </div>
                                 </div>

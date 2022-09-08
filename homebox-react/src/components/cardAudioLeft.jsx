@@ -1,9 +1,8 @@
-function cardAudioLeft() {
-    var url = ""
+function cardAudioLeft(props) {
     return (
         <>
             <div className="cardChatAudioLeft">
-            <audio src={url} controls />
+            <audio src={props.url} controls />
             </div>
         </>
     )
