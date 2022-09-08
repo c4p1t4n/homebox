@@ -1,0 +1,21 @@
+service: IaC-Homebox
+
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: python3.8
+
+# functions:
+#   - ${file(functions/lambda.yml)}
+#   hello:
+#     handler: handler.hello
+
+resources:
+  - ${file(resources/infra/vpc.yml)}
+  - ${file(resources/infra/subnet.yml)}
+  - ${file(resources/infra/internet-gateway.yml)}
+  - ${file(resources/infra/natGateway.yml)}
+  - ${file(resources/security/security-group.yml)}
+  - ${file(resources/security/key-pair.yml)}
+  - ${file(resources/vm/ec2.yml)}

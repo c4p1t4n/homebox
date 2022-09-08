@@ -1,0 +1,35 @@
+service: site-estatico
+
+provider:
+  name: aws
+  stage: development
+  
+resources: 
+  Resources:
+    S3Bucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: homebox.com
+        AccessControl: PublicRead
+        WebsiteConfiguration:
+          IndexDocument: index.html
+          ErrorDocument: error.html
+      DeletionPolicy: Delete
+
+    BucketPolicy:
+      Type: AWS::S3::BucketPolicy
+      Properties:
+        PolicyDocument:
+          Id: homeboxPolicy
+          Statement:
+            - Sid: AllowPublicReadAccess
+              Effect: Allow
+              Principal: '*'
+              Action: 's3:GetObject'
+              Resource: !Join 
+                - ''
+                - - 'arn:aws:s3:::'
+                  - !Ref S3Bucket
+                  - /*
+                  
+        Bucket: !Ref S3Bucket

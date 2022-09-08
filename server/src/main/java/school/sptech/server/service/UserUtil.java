@@ -7,7 +7,7 @@ import java.util.List;
 public class UserUtil {
 
     public static String getToken() {
-        String characters = "QWERTYUIOPASDFGHJKLÇZXCVBNMqwertyuiopasdfghjklçzxcvbnm1234567890(){}[!*]|$#üáśẃéŕýíóǵḱĺḿńźãõẽĩũ+âôîêû";
+        String characters = "QWERTYUIOPASDFGHJKLÇZXCVBNMqwertyuiopasdfghjklçzxcvbnm1234567890()!*$#üáśẃéŕýíóǵḱĺḿńźãõẽĩũâôîêû";
 
         List<String> letters = Arrays.asList(characters.split(""));
 
