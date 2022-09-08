@@ -4,13 +4,21 @@ import joseRicardo from "../assets/img/joseRicardoCustumer.png"
 import iconCloseBlue from "../assets/img/iconCloseBlue.png"
 
 function cardSearchOpenClick(props) {
+
+    const close = e => {
+        console.log("close")
+        document.getElementById(props.name + props.id_user).innerHTML = ""
+    };
+
+
+
     return (
         <>
 
             <div id="cardSearchOpenID" className="cardSearchOpen">
                 <div className="cardSearchOpenDiv">
                     <div className="cardSearchOpenDivIconClose">
-                        <img onClick={openCardSearch} src={iconCloseBlue} alt="Icone de fechar" />
+                        <img onClick={close} src={iconCloseBlue} alt="Icone de fechar" />
                     </div>
                     <div className="cardSearchOpenDivTopInfo">
                         <div className="cardSearchOpenDivTopInfoInside">
@@ -20,7 +28,7 @@ function cardSearchOpenClick(props) {
                             </div>
                             <img className="imgProvider" src={props.img} alt="Imagem do prestador" />
                             <div className="cardSearchOpenDivTopInfoInsideAvarage">
-                                <p>{Math.round(props.rating).toFixed(1)}</p>
+                                <p>{props.rating.toFixed(1)}/5</p>
                                 <DynamicStars
                                     rating={props.rating} />
                             </div>
@@ -43,6 +51,10 @@ function cardSearchOpenClick(props) {
 export default cardSearchOpenClick
 
 
-function openCardSearch() {
-    document.getElementById("cardSearchOpenID").style.display = "none"
-}
+
+// const closeDivProviderCard = e => {
+//     e.preventDefault()
+//     const openDivProviderCardOpen = document.getElementById("cardSearchOpenID")
+//     console.log(openDivProviderCardOpen)
+//     openDivProviderCardOpen.style.display = "none"
+// }
