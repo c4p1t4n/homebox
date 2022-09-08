@@ -13,7 +13,7 @@ public interface RatingRepository extends JpaRepository<Rating, Integer> {
     @Query("select AVG(rat.rating) from Rating rat where rat.accomplishedService.scheduling.service.worker.id = ?1 GROUP BY rat.accomplishedService.scheduling.service.worker.id")
     Double getAvgRatingForWorker(Integer idWorker);
 
-    @Query("select  AVG(rat.rating) from Rating rat where rat.accomplishedService.scheduling.service.worker.id = ?1  and rat.accomplishedService.serviceDate  BETWEEN  DATE(?2)  and DATE(CURRENT_DATE)  GROUP BY rat.accomplishedService.scheduling.service.worker.id,rat.accomplishedService.serviceDate ORDER BY  rat.accomplishedService.serviceDate ")
+    @Query("select  AVG(rat.rating) from Rating rat where rat.accomplishedService.scheduling.service.worker.id = ?1  and rat.accomplishedService.serviceDate  BETWEEN  ?2 and CURRENT_DATE GROUP BY rat.accomplishedService.scheduling.service.worker.id,rat.accomplishedService.serviceDate ORDER BY  rat.accomplishedService.serviceDate ")
     List<Double> getAvgRatingForWorkerLastSevenDays(Integer idWorker,LocalDate date);
 
 

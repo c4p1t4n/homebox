@@ -15,7 +15,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
-@RequestMapping("/interestAcess")
+@RequestMapping("/interestAccess")
 public class InterestAcess {
     @Autowired
     TagRepository tagRepository;
