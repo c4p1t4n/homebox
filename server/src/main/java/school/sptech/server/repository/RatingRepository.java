@@ -4,7 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import school.sptech.server.model.Rating;
-import school.sptech.server.response.RatingDateLastSevenDays;
 
 import java.time.LocalDate;
 import java.util.List;

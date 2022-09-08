@@ -86,7 +86,7 @@ public class InterestAcess {
 
     @GetMapping("/avg_last_seven_days/{id_user}")
     public  ResponseEntity AvgLastSevenDays(@PathVariable Integer id_user){
-       return ResponseEntity.status(200).body(interestAccessRepository.countIntestAcess(id_user));
+       return ResponseEntity.status(200).body(interestAccessRepository.countIntestAcess(id_user,LocalDate.now().minusDays(7)));
     }
 
     @GetMapping("/getListAvgLastSevenDays/{id_user}")
