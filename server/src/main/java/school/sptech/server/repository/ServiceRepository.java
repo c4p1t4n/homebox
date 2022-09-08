@@ -13,6 +13,8 @@ import school.sptech.server.response.UserSearchQueryResult;
 public interface ServiceRepository extends JpaRepository<Service, Integer> {
     List<Service> findByNameAndWorkerId(String name, Integer idWorker);
 
+    List<Service> findByWorkerId(Integer idWorker);
+
     @Query("select distinct s.category from Service s where s.worker.id = ?1")
     List<Category> findDistinctByWorkerId(Integer idWorker);
 

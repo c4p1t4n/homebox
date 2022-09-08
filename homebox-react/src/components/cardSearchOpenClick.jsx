@@ -1,9 +1,34 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import CardOpenSearchClick from "../components/cardOpenSearchClick"
 import DynamicStars from "../components/dynamicStart"
 import joseRicardo from "../assets/img/joseRicardoCustumer.png"
 import iconCloseBlue from "../assets/img/iconCloseBlue.png"
+import api from "../api"
+import { useEffect, useState } from "react"
 
 function cardSearchOpenClick(props) {
+
+
+
+
+    const [listServices, setServices] = useState([])
+
+    useEffect(() => {
+        api.get(`services/getServicesOfWorker/1`)
+            .then(({ status, data }) => {
+                if (status === 200) {
+                    console.log(data)
+                    setServices(data)
+                }
+            })
+    },[])
+
+
+
+
+
+
+
 
     const close = e => {
         console.log("close")
@@ -35,10 +60,14 @@ function cardSearchOpenClick(props) {
                         </div>
                     </div>
                     <div className="cardSearchOpenDivServices">
-                        <CardOpenSearchClick />
-                        <CardOpenSearchClick />
-                        <CardOpenSearchClick />
-
+                        {listServices.map(item=>(
+                            <CardOpenSearchClick
+                            nameService = {item.name}
+                            referencePrice = {item.referencePrice}
+                            description = {item.description}
+                            />
+                        ))}
+                        
                     </div>
                     <button className="buttonInitChat">Iniciar Chat</button>
                 </div>
@@ -49,12 +78,3 @@ function cardSearchOpenClick(props) {
 
 
 export default cardSearchOpenClick
-
-
-
-// const closeDivProviderCard = e => {
-//     e.preventDefault()
-//     const openDivProviderCardOpen = document.getElementById("cardSearchOpenID")
-//     console.log(openDivProviderCardOpen)
-//     openDivProviderCardOpen.style.display = "none"
-// }

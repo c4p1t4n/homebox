@@ -1,19 +1,20 @@
-function cardOpenSearchClick() {
+function cardOpenSearchClick(props) {
+
     return (
         <>
             <details className="cardSearchOpenDivServicesOpen">
                 <summary className="summaryCardSearchOpen">
                     <div className="nameServiceSearchCardOpen">
                         <p>Serviço</p>
-                        <p>: xxxxxxxx</p>
+                        <p>: {props.nameService}</p>
                     </div>
                     <div className="valueAvarageSearchCardOPen">
                         <p>Valor de Referencia: R$</p>
-                        <p>00,00</p>
+                        <p>{props.referencePrice}</p>
                     </div>
                     <div></div>
                 </summary>
-                <div className="descriptionServiceOpenCard">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+                <div className="descriptionServiceOpenCard">{props.description}</div>
             </details>
         </>
     )
