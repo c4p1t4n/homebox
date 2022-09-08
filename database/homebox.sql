@@ -647,7 +647,21 @@ insert into msg values(null,"Ola eu sou o Jose, como posso te ajudar?",'y',1),
 		      (null,"Ola eu sou o Robson, como posso te ajudar?",'y',2),
 		      (null,"Ola eu sou a Larissa, como posso te ajudar?",'y',3),
 		      (null,"Ola eu sou a Pedro, como posso te ajudar?",'y',4);
-              
-                      
+
+
 insert into chat values(null,'2022-09-06 00:00:00');
-insert into user_has_chat values(null,1,7),(null,1,8);              
+insert into user_has_chat values(null,1,7),(null,1,8);
+
+insert into tag values
+(null, "limpeza"),
+(null, "limpeza"),
+(null, "limpeza"),
+(null, "limpeza"),
+(null, "limpeza");
+
+insert into interest_access values
+(null, 1, 1, NOW()),
+(null, 1, 1, NOW()),
+(null, 1, 1, NOW()),
+(null, 1, 1, NOW()),
+(null, 1, 1, NOW());
