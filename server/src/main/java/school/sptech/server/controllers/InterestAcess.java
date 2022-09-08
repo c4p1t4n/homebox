@@ -32,7 +32,8 @@ public class InterestAcess {
     @Autowired
     CategoryRepository categoryRepository;
 
-
+    @Autowired
+    RatingRepository ratingRepository;
     @Autowired
     UserHasTagRepository userHasTag;
 
@@ -70,6 +71,8 @@ public class InterestAcess {
         for(Tag actual_tag:listTag){
             if(actual_tag.getValue().equals(tag.getValue())){
                 tag = actual_tag;
+
+
                 interestAccessRepository.save(new InterestAccess(actualInterestAcess.getId(),actualInterestAcess.getUser(),tag,actualInterestAcess.getAccessDate()));
                 return ResponseEntity.status(201).build();
             }
@@ -86,6 +89,12 @@ public class InterestAcess {
        return ResponseEntity.status(200).body(interestAccessRepository.countIntestAcess(id_user));
     }
 
+    @GetMapping("/getListAvgLastSevenDays/{id_user}")
+    public  ResponseEntity ListAvgLastSevenDays(@PathVariable Integer id_user){
+
+
+        return ResponseEntity.status(200).body(ratingRepository.getAvgRatingForWorkerLastSevenDays(id_user,LocalDate.now().minusDays(7)));
+    }
 
 
 
