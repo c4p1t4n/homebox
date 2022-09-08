@@ -130,7 +130,9 @@ body p {
     align-items: center;
     justify-content: space-between;
 }
-
+.cardSearchOpenDiv p{
+    font-size: 19px;
+}
 .cardSearchOpenDivIconClose {
     width: 100%;
     display: flex;

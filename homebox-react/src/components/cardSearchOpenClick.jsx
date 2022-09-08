@@ -14,14 +14,13 @@ function cardSearchOpenClick(props) {
     const [listServices, setServices] = useState([])
 
     useEffect(() => {
-        api.get(`services/getServicesOfWorker/1`)
+        api.get(`services/getServicesOfWorker/2`)
             .then(({ status, data }) => {
                 if (status === 200) {
-                    console.log(data)
                     setServices(data)
                 }
             })
-    },[])
+    }, [])
 
 
 
@@ -60,14 +59,18 @@ function cardSearchOpenClick(props) {
                         </div>
                     </div>
                     <div className="cardSearchOpenDivServices">
-                        {listServices.map(item=>(
+                        {/* <div id={props.name + props.id_user}>
+                            {listServices}
+                        </div> */}
+
+                        {listServices.map(item => (
                             <CardOpenSearchClick
-                            nameService = {item.name}
-                            referencePrice = {item.referencePrice}
-                            description = {item.description}
+                                nameService={item.name}
+                                referencePrice={item.referencePrice}
+                                description={item.description}
                             />
                         ))}
-                        
+
                     </div>
                     <button className="buttonInitChat">Iniciar Chat</button>
                 </div>
