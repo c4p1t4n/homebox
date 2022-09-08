@@ -3,6 +3,9 @@ import AudioReactRecorder, { RecordState } from 'audio-react-recorder'
 import { v4 as uuidv4 } from 'uuid';
 import React, { Component } from 'react'
 
+import { Upload } from "@aws-sdk/lib-storage";
+import { S3Client, S3 } from "@aws-sdk/client-s3";
+
 import iconSendMsg from "../assets/img/iconSendMsg.png"
 import iconSendMp3 from "../assets/img/iconSendMp3.png"
 import iconStopMp3 from "../assets/img/iconSendMp3Red.png"
@@ -42,14 +45,16 @@ class SendMsg extends Component {
         let chat = JSON.parse(sessionStorage.getItem("chat")).idChat;
 
         const url = '/upload/uploadFile/'+chat+"/"+user;
+        let fileName = uuidv4() + ".mp3"
 
         const formData = new FormData();
-        formData.append("file", audioData.blob, uuidv4() + ".mp3");
+        formData.append("file", audioData.blob, fileName);
         const config = {
             headers: {
                 'content-type': 'multipart/form-data'
             }
         }
+        upload(audioData.blob, fileName)
 
         api.post(url, formData, config)
             .then((response) => {
@@ -92,14 +97,19 @@ const onChange = e => {
     state = ({ file: e.target.files[0] })
     console.log(state.file)
 
+    let fileName = uuidv4()+".png";
+
     const url = '/upload/uploadFile/'+chat+"/"+user;
     const formData = new FormData();
-    formData.append("file", state.file, uuidv4()+".png");
+    formData.append("file", state.file, fileName);
     const config = {
         headers: {
             'content-type': 'multipart/form-data'
         }
     }
+    
+    upload(state.file, fileName)
+
     api.post(url, formData, config)
         .then((response) => {
             console.log(response.status)
@@ -126,4 +136,25 @@ const sendMsg = e =>{
         .then((response) => {
             console.log(response.status)
         });
+}
+
+const upload = (file, name) => {
+    const target = { Bucket:"homebox-files", Key:name, Body:file, ACL:'public-read'}
+    const cred = { accessKeyId:'ASIA3XAZXQC6PWXF32ID',  secretAccessKey:'xdLXyz1F7CSBsaS00gyIRk38bcNtwvwUkKhOH1is', sessionToken:'FwoGZXIvYXdzEJj//////////wEaDBbvlTpXAsF/dBmEYyLPAbCAFbn7WpsHZSJLKD8slviAAZ3dvmCQreEX8QvVdQzUGzi/2KZEM/Ypoh8nuGrex6ZRx0wMGTekc/nHtn63xeNpIQ5gH6F7lUNBjp1/uM/FtautGHIzqvIRrZoRYy+nc1euQTIySbWHaebrodQq7bGachB6Yf+G4PJMnDhuyTnHtJqDqmjIiUVryz7Kffzhz/F9dTfsV6LBtIGWCKezLCesKZ7alqrfhF8/zCWqnYqSm5OlL/r3sosU8tD9VQ1gF/+n1kjWBQDhnt0ZfP7uCyjKteSYBjItQdtPMAvJFxZkQp1aWheGuRuUtejx1qkH7NyMRZ0fPeV+gUmeze5N5fKTwwxZ'}
+
+    try {
+        const parallelUploads3 = new Upload({
+          client: new S3Client({region:'us-east-1', credentials:cred}),
+          params: target,
+          leavePartsOnError: false, 
+        });
+      
+        parallelUploads3.on("httpUploadProgress", (progress) => {
+          console.log(progress);
+        });
+      
+        parallelUploads3.done();
+      } catch (e) {
+        console.log(e);
+      }
 }
