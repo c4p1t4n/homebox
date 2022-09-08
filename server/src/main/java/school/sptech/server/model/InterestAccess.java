@@ -35,6 +35,13 @@ public class InterestAccess {
         this.accessDate = accessDate;
     }
 
+    public InterestAccess( User user, Tag tag, LocalDate accessDate) {
+        this.user = user;
+        this.tag = tag;
+        this.accessDate = accessDate;
+    }
+
+
     public InterestAccess() {
     }
 

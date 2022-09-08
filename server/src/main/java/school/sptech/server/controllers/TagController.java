@@ -9,12 +9,13 @@ import school.sptech.server.repository.*;
 import school.sptech.server.service.UserService;
 
 import javax.validation.Valid;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import static org.springframework.http.ResponseEntity.status;
 
-@RestController
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@RestController @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/tag")
 public class TagController {
 
@@ -58,6 +59,12 @@ public class TagController {
         return ResponseEntity.status(201).build();
 
     }
+
+
+
+
+
+
     @PostMapping("/user/{idUser}")
     public ResponseEntity postUserHasTag(@RequestBody Tag tag ,@PathVariable Integer idUser){
         List<Tag> listTag = tagRepository.findAll();
@@ -79,6 +86,10 @@ public class TagController {
         return ResponseEntity.status(201).build();
 
     }
+
+
+
+
 
 
     @PostMapping("/category/{idCategory}")
@@ -126,28 +137,7 @@ public class TagController {
     }
 
 
-    @PostMapping("/user/{idInterestAcess}")
-    public ResponseEntity postInterestAcess(@RequestBody Tag tag ,@PathVariable Integer idInterestAcess){
-        List<Tag> listTag = tagRepository.findAll();
 
-        if(!interestAccessRepository.existsById(idInterestAcess)){
-            return ResponseEntity.status(400).body("Usuario não existente");
-        }
-        InterestAccess actualInterestAcess = interestAccessRepository.getById(idInterestAcess);
-
-        for(Tag actual_tag:listTag){
-            if(actual_tag.getValue().equals(tag.getValue())){
-                tag = actual_tag;
-                interestAccessRepository.save(new InterestAccess(actualInterestAcess.getId(),actualInterestAcess.getUser(),tag,actualInterestAcess.getAccessDate()));
-                return ResponseEntity.status(201).build();
-            }
-        }
-
-        tagRepository.save(tag);
-        interestAccessRepository.save(new InterestAccess(actualInterestAcess.getId(),actualInterestAcess.getUser(),tag,actualInterestAcess.getAccessDate()));
-        return ResponseEntity.status(201).build();
-
-    }
 
 
 
