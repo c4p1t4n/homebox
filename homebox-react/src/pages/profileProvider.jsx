@@ -1,6 +1,6 @@
 import "../assets/css/profileProvider.css"
 import logo from "../assets/img/icon/logo-removebg-preview.png"
-
+import DynamicStars from "../components/dynamicStart"
 import alterNameProvider from "../assets/img/alterNameProvider.png"
 import deleteService from "../assets/img/deleteService.png"
 import imgJose from "../assets/img/joseRicardoCustumer.png"
@@ -15,12 +15,15 @@ function profileProvider() {
                 <div className="divRightProfileProvider">
                     <div className="divImgProfileProvider">
                         <div className="divNameProvider">
-                            <p className="nameProvider">xxxxxxx</p>
+                            <p className="nameProvider">{JSON.parse(sessionStorage.getItem("user")).name}</p>
                             <img src={alterNameProvider} alt="alterar o nome de exibição" className="alterNameProvider" />
                         </div>
                         <img className="imgPhotoProvider" src={imgJose} alt="imagem do prestador" />
                         <div className="ratingProvider">
-                            <p>Div avaliação</p>
+                            <p>3/5</p>
+                            <p><DynamicStars
+                                rating={3}
+                            /></p>
                         </div>
                     </div>
                     <div className="divAlterPhotoProvider">

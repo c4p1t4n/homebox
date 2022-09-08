@@ -7,8 +7,31 @@ import api from "../api"
 import { useEffect, useState } from "react"
 
 function cardSearchOpenClick(props) {
+
+
+
+
+
+
+    function initChat() {
+        const idUser = sessionStorage.getItem("user").id_user
+        const idWorker = props.id_user
+
+        api.post(`/chat/${idUser}/${idWorker}`)
+            .then(({status, data}) => {
+                if (status === 200){
+                    window.location.href = '/profile/client/chat'
+                }
+            })
+    }
+
+
+
+
+
+
     const [listServices, setServices] = useState([])
-    
+
     useEffect(() => {
         api.get(`services/getServicesOfWorker/${props.id_user}`)
             .then(({ status, data }) => {
@@ -68,7 +91,7 @@ function cardSearchOpenClick(props) {
                         ))}
 
                     </div>
-                    <button className="buttonInitChat">Iniciar Chat</button>
+                    <button onClick={initChat} className="buttonInitChat">Iniciar Chat</button>
                 </div>
             </div>
         </>
