@@ -1,5 +1,4 @@
 import api from "../api"
-import {attMsg} from "../components/msgs"
 
 function CardChat(props) {
     return (
@@ -25,7 +24,7 @@ function setChat(value){
         idChat: value
     }
     sessionStorage.setItem("chat", JSON.stringify({...data}))
-    
+
     api.get(`/chat/msgs/`+JSON.parse(sessionStorage.getItem("chat")).idChat
     ).then(({ status, data }) => {
         if (status === 200) {

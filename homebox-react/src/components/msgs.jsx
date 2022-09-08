@@ -5,8 +5,16 @@ import CardAudioLeft from "../components/cardAudioLeft";
 import CardImgRight from "../components/cardImgRight";
 import CardImgLeft from "../components/cardImgLeft";
 
+import api from "../api"
+
 
 function Msgs() {
+    api.get(`/chat/msgs/`+JSON.parse(sessionStorage.getItem("chat")).idChat
+    ).then(({ status, data }) => {
+        if (status === 200) {
+            sessionStorage.setItem("chatInfo", JSON.stringify({...data}))
+        }
+    })
     
     var list = []
     const info = JSON.parse(sessionStorage.getItem("chatInfo"));

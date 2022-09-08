@@ -317,6 +317,32 @@ VALUES
         DATE('1978-01-01'),
         '01310200',
         'y'
+    ),
+    (
+        NULL,
+        'user1',
+        'email@email.com',
+        SHA2("senha123", 256),
+        '12345678900',
+        NULL,
+        'customer',
+        NULL,
+        DATE('1978-01-01'),
+        '01310200',
+        'y'
+    ),
+    (
+        NULL,
+        'user2',
+        'email2@email.com',
+        SHA2("ExSenha1", 256),
+        '12345678900',
+        NULL,
+        'worker',
+        NULL,
+        DATE('1978-01-01'),
+        '01310200',
+        'y'
     );
 
 INSERT INTO
@@ -621,3 +647,7 @@ insert into msg values(null,"Ola eu sou o Jose, como posso te ajudar?",'y',1),
 		      (null,"Ola eu sou o Robson, como posso te ajudar?",'y',2),
 		      (null,"Ola eu sou a Larissa, como posso te ajudar?",'y',3),
 		      (null,"Ola eu sou a Pedro, como posso te ajudar?",'y',4);
+              
+                      
+insert into chat values(null,'2022-09-06 00:00:00');
+insert into user_has_chat values(null,1,7),(null,1,8);              

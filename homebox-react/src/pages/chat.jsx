@@ -21,7 +21,7 @@ import profileImg from "../assets/img/profileIcon.png"
 
 
 const data = {
-    idChat: 0
+    idChat: 1
 }
 sessionStorage.setItem("chat", JSON.stringify({...data}))
 

@@ -135,7 +135,7 @@ const sendMsg = e =>{
     api.post('chat/msg/'+chat+'/'+user, msg)
         .then((response) => {
             console.log(response.status)
-        });
+    });      
 }
 
 const upload = (file, name) => {
