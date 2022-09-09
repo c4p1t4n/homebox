@@ -59,8 +59,12 @@ public class User implements ILogin {
 
     }
 
+    public User(Integer id) {
+        this.id = id;
+    }
+
     public User(Integer id, String name, @Email String email, String password, String cpf, String token, String type,
-            String picture, LocalDate birthDate, String cep, Character authenticated) {
+                String picture, LocalDate birthDate, String cep, Character authenticated) {
         this.id = id;
         this.name = name;
         this.email = email;

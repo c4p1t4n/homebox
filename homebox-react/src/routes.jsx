@@ -7,6 +7,8 @@ import NotFound from "./pages/notFound"
 import TestUploadFile from "./pages/testUploadFile"
 import ProfileClient from "./pages/profileClient"
 import ProfileProvider from "./pages/profileProvider"
+import RelatorioProvider from "./pages/relatorioProvider"
+import Staff from "./pages/staff"
 import Chat from "./pages/chat"
 
 function Router() {
@@ -50,6 +52,16 @@ function Router() {
                 /><Route
                     path="/profile/provider/"
                     element={<ProfileProvider />}
+                    caseSensitive="false"
+                />
+                <Route
+                    path="/profile/provider/relatorio"
+                    element={<RelatorioProvider />}
+                    caseSensitive="false"
+                />
+                <Route
+                    path="/staff"
+                    element={<Staff />}
                     caseSensitive="false"
                 />
                 {<Route

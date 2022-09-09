@@ -22,7 +22,8 @@
 }
 
 .homebox_logo img {
-    height: 150px;
+    height: 90px;
+    margin-top: 80px;
 }
 
 .div_login_and_button {
@@ -181,7 +182,7 @@
 }
 
 .register_body img {
-    height: 130px;
+    height: 100px;
     float: right;
 }
 

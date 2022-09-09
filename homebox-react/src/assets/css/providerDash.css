@@ -1,0 +1,95 @@
+.divRightProfileProviderRelatorio {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+.divRightProfileProviderRelatorio::-webkit-scrollbar{
+    display: none;
+}
+.divRightProfileProviderTop {
+    width: 100%;
+    height: 300px;
+}
+
+.divRightProfileProviderTopLeft {
+    width: 60%;
+    height: 98%;
+    border-radius: 15px 50px 30px;
+    font-size: 18px;
+}
+
+.visitsYourProfile {
+    width: 48%;
+    border-radius: 20px;
+    background-color: whitesmoke;
+}
+
+#indice {
+    align-self: flex-end;
+    background: #B9DCAC;
+    border-radius: 30px;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+}
+
+#indice2 {
+    font-size: 44px;
+}
+
+.indiceDiv2 {
+    text-align: end;
+    color: #174574;
+}
+
+.visitsYourProfileTOP {
+    color: #174574;
+}
+
+.visitsYourProfileTOP,
+.visitsYourProfileBut {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    margin-bottom: 2%;
+    padding: 1%;
+    justify-content: space-around;
+}
+
+.visitsYourProfileTOP img {
+    height: 20px;
+}
+
+
+.divRightProfileProviderMed {
+    background-color: whitesmoke;
+    width: 100%;
+}
+
+
+.divRightProfileProviderTopLeftTOP {
+    display: flex;
+    justify-content: space-between;
+}
+
+.divRightProfileProviderTopLeftBut {
+    padding: 2%;
+    display: flex;
+    background-color: whitesmoke;
+    flex-direction: column;
+    border-radius: 20px;
+    font-size: 24px;
+    color: #174574;
+}
+
+.indiceDiv3 {
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    align-self: flex-end;
+    background-color: #B9DCAC;
+    width: 60px;
+    border-radius: 20px;
+}

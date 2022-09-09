@@ -2,6 +2,7 @@ import "../assets/css/searchResult.css"
 import VLibras from "@djpfs/react-vlibras"
 import iconLoading from "../assets/img/iconLoading.gif"
 import CardSearch from "../components/cardSearch"
+import CardSearchOpenClick from "../components/cardSearchOpenClick"
 import Header from "../components/header"
 import profileImg from "../assets/img/profileIcon.png"
 import { useEffect, useState } from "react"
@@ -9,16 +10,19 @@ import { search } from "../assets/js/search"
 
 
 function SearchResult() {
+
+
     const queryString = window.location.search
     const parameters = new URLSearchParams(queryString)
     const searchValue = parameters.get("search")
+
 
     const [searchResult, setSearchResult] = useState([])
 
     useEffect(() => {
         search(searchValue, JSON.parse(sessionStorage.getItem("user")).id_user)
             .then(value => {
-                document.getElementById("loadingDiv").style.display="none"
+                document.getElementById("loadingDiv").style.display = "none"
                 if (!value[0]) {
                     document.getElementById("titleSearch").innerHTML = `Nenhum resultado para "${searchValue}"`;
                 }
@@ -47,11 +51,13 @@ function SearchResult() {
                         {searchResult
                             ? searchResult.map(item => (
                                 <CardSearch
+                                    id_user={item.user.id_user}
                                     img={item.user?.picture ?? profileImg}
                                     name={item.user?.name}
                                     category={item?.category}
                                     rating={item.rating ?? "N/A"}
                                     dist={item.distance ?? "N/A"}
+
                                 />
                             ))
                             : ""}
@@ -63,3 +69,5 @@ function SearchResult() {
 }
 
 export default SearchResult
+
+

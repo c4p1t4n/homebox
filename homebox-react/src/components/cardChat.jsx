@@ -1,21 +1,34 @@
-import jose from "../assets/img/joseRicardoCustumer.png"
+import api from "../api"
 
-
-function cardChat() {
+function CardChat(props) {
     return (
         <>
-            <div className="cardsChat">
+            <div className="cardsChat" key={props.index} onClick={() => setChat(props.index)}>
                 <div className="cardChat">
-                    <img src={jose} alt="Foto do Jose" />
+                    <img src={props.img} alt="Foto do Jose" />
                     <div className="nameP">
-                    <p>José Roberto</p>
-                    <p className="lastMsg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur officia minima vel deserunt minus inventore illo aut, dolore beatae molestiae sapiente expedita veritatis, totam repellat maiores voluptas distinctio consectetur non.</p>
+                    <p>{props.name}</p>
+                    <p className="lastMsg">{props.lastMessage}</p>
                     </div>
-                    <p>00h00</p>
+                    <p className="timestamp">{`${props.lastMessageHour.split('T')[0]}\n${props.lastMessageHour.split('T')[1]}`}</p>
                 </div>
             </div>
         </>
     )
 }
 
-export default cardChat
+export default CardChat
+
+function setChat(value){
+    const data = {
+        idChat: value
+    }
+    sessionStorage.setItem("chat", JSON.stringify({...data}))
+
+    api.get(`/chat/msgs/`+JSON.parse(sessionStorage.getItem("chat")).idChat
+    ).then(({ status, data }) => {
+        if (status === 200) {
+            sessionStorage.setItem("chatInfo", JSON.stringify({...data}))
+        }
+    })
+}

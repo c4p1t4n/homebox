@@ -66,7 +66,7 @@ public class ServiceController {
 
         Service service = new Service(worker.get(), category.get(), serviceBody.getName(), serviceBody.getDescription(),
                 serviceBody.getReferencePrice());
-                
+
         service = dbRepositoryService.save(service);
 
         return status(201).body(service);
@@ -80,6 +80,17 @@ public class ServiceController {
         return service.isPresent() ? status(204).build()
                 : status(200).body(service.get());
     }
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @GetMapping("/getServicesOfWorker/{idWorker}")
+    public ResponseEntity<List<Service>> getServicesOfWorker(@PathVariable Integer idWorker) {
+        List<Service> listServices = dbRepositoryService.findByWorkerId(idWorker);
+
+        if (listServices.isEmpty()) {
+            return ResponseEntity.status(204).build();
+        }
+        return ResponseEntity.status(200).body(listServices);
+    }
+
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @DeleteMapping("/{id}")
@@ -145,7 +156,7 @@ public class ServiceController {
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PatchMapping("/name/{id}/{newReferencePrice}")
     public ResponseEntity<Service> patchReferencePrice(@PathVariable Integer id,
-            @PathVariable Double newReferencePrice) {
+                                                       @PathVariable Double newReferencePrice) {
 
         Optional<Service> serviceOptional = dbRepositoryService.findById(id);
 
