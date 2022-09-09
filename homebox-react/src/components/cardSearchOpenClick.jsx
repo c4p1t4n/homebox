@@ -18,9 +18,9 @@ function cardSearchOpenClick(props) {
         const idWorker = props.id_user
 
         api.post(`/chat/${idUser}/${idWorker}`)
-            .then(({status, data}) => {
-                if (status === 200){
-                    window.location.href = '/profile/client/chat'
+            .then(({ status, data }) => {
+                if (status === 200) {
+                    window.location.href = '/chat'
                 }
             })
     }

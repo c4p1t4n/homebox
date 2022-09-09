@@ -1,13 +1,55 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import "../assets/css/profileProvider.css"
 import logo from "../assets/img/icon/logo-removebg-preview.png"
 import DynamicStars from "../components/dynamicStart"
+import iconCloseBlue from "../assets/img/iconCloseBlue.png"
+import CardServiceProviderServices from "../components/cardServiceProvderServices"
 import alterNameProvider from "../assets/img/alterNameProvider.png"
 import deleteService from "../assets/img/deleteService.png"
 import imgJose from "../assets/img/joseRicardoCustumer.png"
-
+import api from "../api"
 import MenuLeftProvider from "../components/menuLeftProvider"
+import { useEffect, useState } from "react"
 
 function profileProvider() {
+
+
+    function openCreateService() {
+        document.getElementById("addServiceDiv").style.display = "flex"
+    }
+
+    function createService() {
+        api.post(`/services`, {
+            fkUser: JSON.parse(sessionStorage.getItem("user").id_user),
+            
+        })
+            .then(({ status, data }) => {
+                if (status === 200) {
+                    setServices(data)
+                }
+            })
+    }
+
+
+    function closeDivCreateService() {
+        document.getElementById("addServiceDiv").style.display = "none"
+    }
+
+
+    const [listServices2, setServices] = useState([])
+
+    useEffect(() => {
+        api.get(`services/getServicesOfWorker/${JSON.parse(sessionStorage.getItem("user")).id_user}`)
+            .then(({ status, data }) => {
+                if (status === 200) {
+                    setServices(data)
+                }
+            })
+    }, [])
+
+
+
+
     return (
         <>
             <div className="divBodyProfileProvider">
@@ -29,54 +71,40 @@ function profileProvider() {
                     <div className="divAlterPhotoProvider">
                         <a href=""><p>Alterar foto</p></a>
                     </div>
-                    <button>Adicionar um serviço</button>
+                    <button onClick={openCreateService}>Adicionar um serviço</button>
                     <div className="divServicesProvider">
-                        <details className="cardServiceProvider">
-                            <summary className="infoService">
-                                <div className="nameServiceProvider">
-                                    <p>Serviço:</p>
-                                    <p>xxxxxxx</p>
-                                </div>
-                                <div className="valueAvg">
-                                    <p>Valor de Referência</p>
-                                    <p>R$00,00</p>
-                                </div>
-                                <div className="divIconsService">
-                                    <img src={alterNameProvider} alt="icone para editr serviço" className="editServiceProvider" />
-                                    <img src={deleteService} alt="icone de deletar serviço" className="deleteService" />
-                                </div>
-                            </summary>
-                            <div className="descriptionServiceProvider">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum. Adipisci, deserunt reprehenderit quaerat suscipit enim, delectus voluptatibus modi autem facilis dele</p>
-                            </div>
-                        </details>
+                        {listServices2.map(item => (
+                            <CardServiceProviderServices
+                                nameService={item.name}
+                                referencePrice={item.referencePrice}
+                                description={item.description}
+                            />
+                        ))}
                     </div>
                 </div>
             </div>
-            <div id="logOffDivAbsolut">
-                <img src={logo} alt="Logo homebox" />
-                <p>Tem certeza que deseja sair ?</p>
-                <div className="buttonsLogOff">
-                    <button onClick={logOff} id="buttonYes">SIM</button>
-                    <button onClick={logOffSwitch} id="buttonNo">NÃO</button>
-                </div>
+            <div id="addServiceDiv" className="addServiceDiv">
+
+                <form className="modalCreateService" action={createService}>
+                    <img onClick={closeDivCreateService} className="iconCloseService" src={iconCloseBlue} alt="icone de fechar" />
+                    <div className="divInputForm">
+                        <label htmlFor="nameService">Nome do serviço:</label>
+                        <input required id="nameServiceId" type="text" placeholder="Exemplo: Troca de cano" />
+                    </div>
+                    <div className="divInputForm">
+                        <label htmlFor="refValue">Valor de Referência:</label>
+                        <input required id="refValueId" type="text" placeholder="Exemplo: 120" />
+                    </div>
+                    <div className="divInputForm">
+                        <label htmlFor="descriptionService">Descrição do serviço:</label>
+                        <textarea required id="txtid" name="txtname" rows="5" cols="50" ></textarea>
+                    </div>
+                    <input id="submitForm" type="submit" value="Salvar Serviço" />
+                </form>
+
             </div>
         </>
     )
 }
 
 export default profileProvider
-
-const logOffSwitch = e => {
-    e.preventDefault()
-    const logoffOpenDiv = document.getElementById("logOffDivAbsolut")
-
-    logoffOpenDiv.style.display =
-        logoffOpenDiv.style.display === "flex" ? "none" : "flex"
-}
-
-
-const logOff = e => {
-    sessionStorage.clear()
-    window.location.href = "http://127.0.0.1:5500/website/index.html"
-}

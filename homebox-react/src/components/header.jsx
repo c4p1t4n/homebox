@@ -69,7 +69,7 @@ function Header(props) {
                         <a href="http://localhost:3000/profile/client">
                             <p>Perfil</p>
                         </a>
-                        <a href="http://localhost:3000/profile/client/chat">
+                        <a href="http://localhost:3000/chat">
                             <p>Chats</p>
                         </a>
                         <img src={lineProfileOpen} alt="" />

@@ -46,7 +46,7 @@ function Router() {
                     caseSensitive="false"
                 />
                 <Route
-                    path="/profile/client/chat"
+                    path="/chat"
                     element={<Chat />}
                     caseSensitive="false"
                 /><Route

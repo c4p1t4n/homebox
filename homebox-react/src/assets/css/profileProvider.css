@@ -116,7 +116,7 @@
 .nameServiceProvider {
     display: flex;
     justify-content: space-between;
-    width: 15%;
+    align-items: center;
 }
 
 .divServicesProvider {
@@ -137,7 +137,6 @@
 .valueAvg {
     display: flex;
     justify-content: space-between;
-    width: 28%;
 }
 
 .cardServiceProvider {
@@ -177,6 +176,74 @@
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.ratingProvider p{
+.ratingProvider p {
     text-align: center;
+}
+
+
+.addServiceDiv {
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.724);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalCreateService {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    width: 50%;
+    justify-content: space-between;
+    height: 54%;
+    font-size: 32px;
+}
+
+.divInputForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.divInputForm input {
+    font-size: 22px;
+    height: 30px;
+    width: 50%;
+    border-radius: 10px;
+    border: black solid 1px;
+}
+
+#submitForm {
+    background-color: #0A3969;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 50%;
+    padding: 1%;
+    border-radius: 20px;
+    font-size: 28px;
+}
+
+#submitForm:hover {
+    background-color: orange;
+    color: black;
+    cursor: pointer;
+}
+
+.iconCloseService {
+    position: absolute;
+    right: 428px;
+}
+.iconCloseService:hover{
+    cursor: pointer;
+    height: 55px;
 }

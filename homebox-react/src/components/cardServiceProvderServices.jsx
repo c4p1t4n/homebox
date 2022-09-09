@@ -2,17 +2,17 @@ import alterNameProvider from "../assets/img/alterNameProvider.png"
 import deleteService from "../assets/img/deleteService.png"
 
 
-function cardServiceProviderServices() {
+function cardServiceProviderServices(props) {
     return (
         <details className="cardServiceProvider">
             <summary className="infoService">
                 <div className="nameServiceProvider">
-                    <p>Serviço:</p>
-                    <p>xxxxxxx</p>
+                    <p>Serviço</p>
+                    <p>: {props.nameService}</p>
                 </div>
                 <div className="valueAvg">
                     <p>Valor de Referência</p>
-                    <p>R$00,00</p>
+                    <p>: R${props.referencePrice}</p>
                 </div>
                 <div className="divIconsService">
                     <img src={alterNameProvider} alt="icone para editr serviço" className="editServiceProvider" />
@@ -20,7 +20,7 @@ function cardServiceProviderServices() {
                 </div>
             </summary>
             <div className="descriptionServiceProvider">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum. Adipisci, deserunt reprehenderit quaerat suscipit enim, delectus voluptatibus modi autem facilis dele</p>
+                <p>{props.description}</p>
             </div>
         </details>
     )
