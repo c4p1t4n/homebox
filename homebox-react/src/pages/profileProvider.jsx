@@ -21,7 +21,7 @@ function profileProvider() {
     function createService() {
         api.post(`/services`, {
             fkUser: JSON.parse(sessionStorage.getItem("user").id_user),
-            
+
         })
             .then(({ status, data }) => {
                 if (status === 200) {
@@ -94,6 +94,16 @@ function profileProvider() {
                     <div className="divInputForm">
                         <label htmlFor="refValue">Valor de Referência:</label>
                         <input required id="refValueId" type="text" placeholder="Exemplo: 120" />
+                    </div>
+                    <div className="divInputForm">
+                        <label htmlFor="categoryService">Categoria do serviço:</label>
+                        <select name="" id="">
+                            <option value="">Selecione</option>
+                            <option value="">Pintura</option>
+                            <option value="">Encanamento</option>
+                            <option value="">Elétrico</option>
+                            <option value="">Montagem de imovéis</option>
+                        </select>
                     </div>
                     <div className="divInputForm">
                         <label htmlFor="descriptionService">Descrição do serviço:</label>

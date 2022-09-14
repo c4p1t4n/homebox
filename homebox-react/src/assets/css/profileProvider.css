@@ -51,7 +51,7 @@
     margin-top: 30%;
 }
 
-.logoffProfileProvider img:hover{
+.logoffProfileProvider img:hover {
     cursor: pointer;
     height: 40px;
     image-rendering: optimizeQuality;
@@ -206,7 +206,7 @@
     border-radius: 20px;
     width: 50%;
     justify-content: space-between;
-    height: 54%;
+    height: 70%;
     font-size: 32px;
 }
 
@@ -222,6 +222,12 @@
     width: 50%;
     border-radius: 10px;
     border: black solid 1px;
+}
+
+.divInputForm select {
+    height: 30px;
+    width: 50%;
+    font-size: 20px;
 }
 
 #submitForm {
@@ -247,7 +253,8 @@
     position: absolute;
     right: 428px;
 }
-.iconCloseService:hover{
+
+.iconCloseService:hover {
     cursor: pointer;
     height: 55px;
 }
