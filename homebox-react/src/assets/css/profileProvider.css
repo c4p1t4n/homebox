@@ -51,7 +51,11 @@
     margin-top: 30%;
 }
 
-
+.logoffProfileProvider img:hover{
+    cursor: pointer;
+    height: 40px;
+    image-rendering: optimizeQuality;
+}
 
 .divRightProfileProvider {
     width: 70%;

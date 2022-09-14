@@ -10,6 +10,8 @@ import React, { Component } from "react"
 
 import api from "../api"
 
+import DynamicStars from "../components/dynamicStart"
+
 
 
 
@@ -151,7 +153,7 @@ class relatorioProvider extends Component {
                                             <div className="visitsYourProfileBut">
                                                 <p id="indice">13%</p>
                                                 <div className="indiceDiv2">
-                                                    <p id="indice2">{this.state.visitas_semana}</p>
+                                                    <p id="indice2">22 {this.state.visitas_semana}</p>
                                                     <p>nessa semana</p>
                                                 </div>
                                             </div>
@@ -165,7 +167,9 @@ class relatorioProvider extends Component {
                                                 <p id="indice">+10</p>
                                                 <div className="indiceDiv2">
                                                     <p id="indice2">{this.state.avg}</p>
-                                                    <p>**estrelas**</p>
+                                                    <DynamicStars
+                                                        rating={3}
+                                                    />
                                                 </div>
                                             </div>
                                         </div>
