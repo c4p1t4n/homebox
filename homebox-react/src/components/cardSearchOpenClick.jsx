@@ -66,7 +66,7 @@ function cardSearchOpenClick(props) {
                     <div className="cardSearchOpenDivTopInfo">
                         <div className="cardSearchOpenDivTopInfoInside">
                             <div className="cardSearchOpenDivTopInfoInsideP">
-                                <p>{props.name}</p>
+                                <p className="nameProviderTest">{props.name}</p>
                                 <p>{props.category}</p>
                             </div>
                             <img className="imgProvider" src={props.img} alt="Imagem do prestador" />
