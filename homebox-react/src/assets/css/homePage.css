@@ -49,6 +49,21 @@ body {
     height: 270px;
 }
 
+.card:hover {
+    cursor: pointer;
+    font-size: 26px;
+    box-shadow: 10px 10px 10px 10px rgba(79, 74, 74, 0.547);
+    width: 21%;
+}
+
+.cardBlue:hover {
+    width: 21%;
+
+    cursor: pointer;
+    font-size: 26px;
+    box-shadow: 10px 10px 10px 10px rgba(79, 74, 74, 0.547);
+}
+
 .cardBlue {
     display: flex;
     flex-direction: column;
@@ -122,6 +137,12 @@ body {
     justify-content: space-between;
 }
 
+.cardCustumer3:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 5px 5px rgba(52, 50, 50, 0.59);
+    width: 275px;
+}
+
 .cardCustumer3 p {
     margin: 0;
     padding: 0;
@@ -186,12 +207,12 @@ body {
     color: white;
 }
 
-#loadingDivHome{
-    position:absolute;
+#loadingDivHome {
+    position: absolute;
     left: 46.5%;
     top: 118%;
 }
 
-#loadingDivHome img{
+#loadingDivHome img {
     height: 120px;
 }
