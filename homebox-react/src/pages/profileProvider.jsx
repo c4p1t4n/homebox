@@ -69,9 +69,9 @@ function profileProvider() {
                         </div>
                     </div>
                     <div className="divAlterPhotoProvider">
-                        <a href=""><p>Alterar foto</p></a>
+                        <p>Alterar foto</p >
                     </div>
-                    <button onClick={openCreateService}>Adicionar um serviço</button>
+                    <button id="botao1" onClick={openCreateService}>Adicionar um serviço</button>
                     <div className="divServicesProvider">
                         {listServices2.map(item => (
                             <CardServiceProviderServices
@@ -81,6 +81,7 @@ function profileProvider() {
                             />
                         ))}
                     </div>
+                    
                 </div>
             </div>
             <div id="addServiceDiv" className="addServiceDiv">

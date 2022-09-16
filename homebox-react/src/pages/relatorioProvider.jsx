@@ -2,6 +2,8 @@ import MenuLeftProvider from "../components/menuLeftProvider"
 
 import "../assets/css/providerDash.css"
 
+import CardServiceInProgressProvider from "../components/cardServiceInProgressProvider"
+
 import questionMark from "../assets/img/quesntion-mark.png"
 
 import Chart from "react-apexcharts"
@@ -16,23 +18,23 @@ import DynamicStars from "../components/dynamicStart"
 
 
 
-function getLastSevendays(){
+function getLastSevendays() {
     var date = new Date();
     var list = [];
-    var count = 0;   
+    var count = 0;
     var list_date = []
     for (var i = 0; i < 7; i++) {
-        
-        list.push(date.getDate()-count)
+
+        list.push(date.getDate() - count)
         count++
         console.log(count)
     }
-    for(var x=0;x<=list.length;x++) {
+    for (var x = 0; x <= list.length; x++) {
         date = new Date();
-        if(list[x]<= list[0]){
-            list_date.push(String(list[x])+'/'+ String(date.getMonth()+1))
-        }else{
-            list_date.push(String(list[x])+'/'+ String(date.getMonth()))
+        if (list[x] <= list[0]) {
+            list_date.push(String(list[x]) + '/' + String(date.getMonth() + 1))
+        } else {
+            list_date.push(String(list[x]) + '/' + String(date.getMonth()))
         }
     }
     console.log(list)
@@ -43,16 +45,16 @@ function getLastSevendays(){
 
 class relatorioProvider extends Component {
     constructor(props) {
-        
+
         super(props)
         this.state = {
             options: {
-                title:{
-                    text:"Sua nota ao longo do tempo",
-                    align:"center",
-                    style:{
-                        fontSize:"28px",
-                        color:'#174574'
+                title: {
+                    text: "Sua nota ao longo do tempo",
+                    align: "center",
+                    style: {
+                        fontSize: "28px",
+                        color: '#174574'
                     }
                 },
                 chart: {
@@ -69,15 +71,15 @@ class relatorioProvider extends Component {
                 }
             ],
             avg: 0,
-            visitas_semana:0
+            visitas_semana: 0
         };
     }
-     
 
 
 
 
-    
+
+
 
 
 
@@ -85,49 +87,51 @@ class relatorioProvider extends Component {
         let id_user = JSON.parse(sessionStorage.getItem('user')).id_user
 
         let temp_value = await api.post(`/users/avg-rating/1`,).catch(err => err.response)
-        this.setState({avg: (temp_value.data === 0  ? "0" : temp_value.data.toFixed(2))})
+        this.setState({ avg: (temp_value.data === 0 ? "0" : temp_value.data.toFixed(2)) })
         console.log(this.state.avg)
 
 
         let visitas_semana = await api.get(`/interestAcess/avg_last_seven_days/1`,).catch(err => err.response)
-        this.setState({visitas_semana: (visitas_semana.data === 0  ? "0" : visitas_semana.data)})
+        this.setState({ visitas_semana: (visitas_semana.data === 0 ? "0" : visitas_semana.data) })
         console.log(this.state.visitas_semana)
 
         let list_medias_ultima_semana = await api.get(`/interestAcess/getListAvgLastSevenDays/1`,).catch(err => err.response)
 
-        this.setState({series:[
+        this.setState({
+            series: [
                 {
                     data: list_medias_ultima_semana.data,
                 }
-            ]     
-        
+            ]
+
         });
 
-        this.setState({options:{
-            title:{
-                text:"Sua nota ao longo do tempo",
-                align:"center",
-                style:{
-                    fontSize:"28px",
-                    color:'#174574'
+        this.setState({
+            options: {
+                title: {
+                    text: "Sua nota ao longo do tempo",
+                    align: "center",
+                    style: {
+                        fontSize: "28px",
+                        color: '#174574'
+                    }
+                },
+                chart: {
+                    id: "basic-bar"
+                },
+                xaxis: {
+                    categories: getLastSevendays()
                 }
-            },
-            chart: {
-                id: "basic-bar"
-            },
-            xaxis: {
-                categories: getLastSevendays()
             }
-        }
         })
-        
-        
 
-        
-    
+
+
+
+
     }
     render() {
-        
+
         // const getAvgRating = async(idUser) => {
         //    let valor = await api.post(`/users/avg-rating/${idUser}`,).catch(err => err.response)
         //     console.log(valor)
@@ -135,13 +139,21 @@ class relatorioProvider extends Component {
         //     return valor.data
         //         // console.log(`data:${data}`)
         // }
-                return (
-                    <>
-                
+        return (
+            <>
+
                 <div className="divBodyProfileProvider">
                     <MenuLeftProvider />
                     <div className="divRightProfileProvider">
                         <div className="divRightProfileProviderRelatorio">
+                            <div className="servicesInProgress">
+                                <p>Serviços ativos</p>
+                                <div className="servicesInProgressOverflow">
+                                    <CardServiceInProgressProvider/>
+                                    <CardServiceInProgressProvider/>
+                                    <CardServiceInProgressProvider/>
+                                </div>
+                            </div>
                             <div className="divRightProfileProviderTop">
                                 <div className="divRightProfileProviderTopLeft">
                                     <div className="divRightProfileProviderTopLeftTOP">
@@ -190,7 +202,7 @@ class relatorioProvider extends Component {
                                     options={this.state.options}
                                     series={this.state.series}
                                     type="line"
-                                    height={310}
+                                    height={320}
                                 />
                             </div>
                         </div>

@@ -5,9 +5,11 @@
     height: 100%;
     overflow: auto;
 }
-.divRightProfileProviderRelatorio::-webkit-scrollbar{
+
+.divRightProfileProviderRelatorio::-webkit-scrollbar {
     display: none;
 }
+
 .divRightProfileProviderTop {
     width: 100%;
     height: 300px;
@@ -92,4 +94,92 @@
     background-color: #B9DCAC;
     width: 60px;
     border-radius: 20px;
+}
+
+.servicesInProgress {
+    width: 100%;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #174574;
+    padding: 1%;
+}
+
+.servicesInProgressOverflow {
+    background-color: whitesmoke;
+    width: 97%;
+    box-shadow: 5px 5px 2px #72717173;
+
+    border-radius: 15px;
+    display: flex;
+    overflow: auto;
+    font-size: 22px;
+    flex-direction: column;
+    height: 350px;
+    align-items: center;
+
+}
+
+.servicesInProgressOverflow::-webkit-scrollbar {
+    display: none;
+}
+
+.cardServiceInProgressProvider {
+    width: 95%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: whitesmoke;
+    box-shadow: 5px 5px 2px #aaaaaa92;
+    padding: 1%;
+    border-radius: 8px;
+    border-bottom: black 1px solid;
+    color: black;
+}
+
+.cardServiceInProgressProvider summary {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-radius: 8px;
+    align-items: center;
+    height: 50px;
+}
+
+.cardServiceInProgressProvider:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 2px #727171be;
+    color: #0A3969;
+}
+
+.nameServiceInProgressProvider {
+    display: flex;
+}
+
+.endService button {
+    font-size: 20px;
+    font-family: 'Poppins';
+    font-style: normal;
+    line-height: 36px;
+    color: #FFFFFF;
+    background: #0A3969;
+    border-radius: 15px;
+    color: white;
+}
+
+.endService button:hover {
+    cursor: pointer;
+    background-color: orange;
+    color: black;
+}
+
+.descriptionServiceInProgress {
+    display: flex;
+    width: 59%;
+    justify-content: space-between;
+}
+
+.clientServiceInProgress,
+.local {
+    display: flex;
 }
