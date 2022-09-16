@@ -55,11 +55,13 @@ class SendMsg extends Component {
             }
         }
         upload(audioData.blob, fileName)
-
+        
         api.post(url, formData, config)
-            .then((response) => {
-                console.log(response.status)
-            })
+        .then((response) => {
+            console.log(response.status)
+        })         
+        document.getElementById("lMsg").innerHTML = "Áudio";
+        sessionStorage.setItem("sendMsg", true)
     };
 
     render() {
@@ -114,7 +116,9 @@ const onChange = e => {
         .then((response) => {
             console.log(response.status)
         })
-
+        document.getElementById("lMsg").innerHTML = "Imagem";
+        sessionStorage.setItem("sendMsg", true)
+    
 }
 
 const getFile = e =>{
@@ -135,7 +139,9 @@ const sendMsg = e =>{
     api.post('chat/msg/'+chat+'/'+user, msg)
         .then((response) => {
             console.log(response.status)
-    });      
+    });   
+    document.getElementById("lMsg").innerHTML = msg.message;
+    sessionStorage.setItem("sendMsg", true)
 }
 
 const upload = (file, name) => {

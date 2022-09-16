@@ -85,12 +85,12 @@ class relatorioProvider extends Component {
         let id_user = JSON.parse(sessionStorage.getItem('user')).id_user
 
         let temp_value = await api.post(`/users/avg-rating/1`,).catch(err => err.response)
-        this.setState({avg: (temp_value.data == 0  ? "0" : temp_value.data.toFixed(2))})
+        this.setState({avg: (temp_value.data === 0  ? "0" : temp_value.data.toFixed(2))})
         console.log(this.state.avg)
 
 
         let visitas_semana = await api.get(`/interestAcess/avg_last_seven_days/1`,).catch(err => err.response)
-        this.setState({visitas_semana: (visitas_semana.data == 0  ? "0" : visitas_semana.data)})
+        this.setState({visitas_semana: (visitas_semana.data === 0  ? "0" : visitas_semana.data)})
         console.log(this.state.visitas_semana)
 
         let list_medias_ultima_semana = await api.get(`/interestAcess/getListAvgLastSevenDays/1`,).catch(err => err.response)
