@@ -28,6 +28,11 @@ import VLibras from "@djpfs/react-vlibras"
 const frequent_search = "'pintor'"
 
 function Home() {
+    const data = {
+        idChat: 1
+    }
+    sessionStorage.setItem("chat", JSON.stringify({...data}))
+
     const [worker, setWorker] = useState([])
 
     useEffect(() => {
