@@ -1,6 +1,7 @@
 import Header from "../components/header";
 import ProfileClientComp from "../components/profileClientComp";
 import CardDashboardCLient from "../components/cardDashboardClient";
+import CardLastServiceHistory from "../components/cardLastServiceHistory";
 import "../assets/css/profileClient.css"
 
 
@@ -18,6 +19,16 @@ function ProfileClient() {
                     <CardDashboardCLient />
                     <CardDashboardCLient />
                     <CardDashboardCLient />
+                </div>
+            </div>
+            <div className="historyOfServiceClientDiv">
+                <h3>Historico de Serviços</h3>
+                <div className="historyOfServiceClientDivOverflow">
+                    <CardLastServiceHistory/>
+                    <CardLastServiceHistory/>
+                    <CardLastServiceHistory/>
+                    <CardLastServiceHistory/>
+                    <CardLastServiceHistory/>
                 </div>
             </div>
         </>
