@@ -7,42 +7,47 @@
     width: 85%;
     margin: auto;
 }
-.headerIn{
+
+.headerIn {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-between;
 }
 
-.logoHomeboxDiv{
+.logoHomeboxDiv {
     width: 24%;
 }
 
-.logoHomeboxDiv img{
+.logoHomeboxDiv img {
     height: 80px;
 }
 
-.nameStaffDiv{
+.nameStaffDiv {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 24%;
 }
-.nameStaffDiv:hover{
+
+.nameStaffDiv:hover {
     cursor: pointer;
 }
-.nameStaffDiv img:hover{
+
+.nameStaffDiv img:hover {
     cursor: pointer;
     height: 32px;
 }
-.nameStaffDiv p{
+
+.nameStaffDiv p {
     font-size: 22px;
 }
-.nameStaffDiv img{
+
+.nameStaffDiv img {
     height: 30px;
 }
 
-.logoffStaffDiv{
+.logoffStaffDiv {
     background-color: rgba(109, 102, 102, 0.737);
     padding: 1%;
     color: white;
@@ -52,7 +57,22 @@
     border-radius: 20px 0px 20px 20px;
     top: 75px;
 }
-.logoffStaffDiv p:hover{
+
+.logoffStaffDiv p:hover {
     cursor: pointer;
     color: red;
+}
+
+.mainDiv {
+    display: flex;
+}
+
+.leftDivStaff {
+    width: 50%;
+    padding: 1%;
+}
+
+.rigthDivStaff{
+    width: 50%;
+    padding: 1%;
 }

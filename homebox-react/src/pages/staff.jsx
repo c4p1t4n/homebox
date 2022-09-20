@@ -35,6 +35,24 @@ function staff() {
                     </div>
                 </div>
             </header>
+            <main>
+                <div className="containerStaff">
+                    <div className="mainDiv">
+                        <div className="leftDivStaff"></div>
+                        <div className="rigthDivStaff">
+                            <div className="divToprigthDivStaff">
+                                <div className="serviceOfRegion">
+
+                                </div>
+                                <div className="proporcaoStaff">
+                                    <div className="proporcaoStaffDiv"></div>
+                                    <div className="proporcaoStaffDiv"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
         </>
     )
 }
