@@ -5,8 +5,12 @@ import iconProfile from "../assets/img/profile.png"
 
 function staff() {
 
-    function openLogoffStaffDiv(){
-        
+    function openLogoffStaffDiv() {
+
+        const logoffOpenDiv = document.getElementById("logoffStaffDiv")
+
+        logoffOpenDiv.style.display =
+            logoffOpenDiv.style.display === "flex" ? "none" : "flex"
     }
 
 
@@ -24,7 +28,7 @@ function staff() {
                                 <p>Seja bem vindo(a) , {JSON.parse(sessionStorage.getItem("user")).name}</p>
                                 <img src={iconProfile} alt="Icone de perfil" />
                             </div>
-                            <div className="logoffStaffDiv">
+                            <div id="logoffStaffDiv" className="logoffStaffDiv">
                                 <p>Logoff</p>
                             </div>
                         </div>
