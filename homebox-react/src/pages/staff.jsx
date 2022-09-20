@@ -4,16 +4,34 @@ import iconProfile from "../assets/img/profile.png"
 
 
 function staff() {
+
+    function openLogoffStaffDiv(){
+        
+    }
+
+
     return (
-        <header className="headerStaff">
-            <img className="logoHomeboxStaff" src={logoHomebox} alt="Logo homebox" />
-            <h2>Administração</h2>
-            <div className="profileStaff">
-                <p>Seja bem vindo</p>
-                <p>, XXXXXX</p>
-                <img src={iconProfile} alt="Perfil Staff" />
-            </div>
-        </header>
+        <>
+            <header>
+                <div className="divHeader">
+                    <div className="containerStaff">
+                        <div className="headerIn">
+                            <div className="logoHomeboxDiv">
+                                <img src={logoHomebox} alt="Icone Homebox" />
+                            </div>
+                            <h4>Administração</h4>
+                            <div onClick={openLogoffStaffDiv} className="nameStaffDiv">
+                                <p>Seja bem vindo(a) , {JSON.parse(sessionStorage.getItem("user")).name}</p>
+                                <img src={iconProfile} alt="Icone de perfil" />
+                            </div>
+                            <div className="logoffStaffDiv">
+                                <p>Logoff</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </>
     )
 }
 

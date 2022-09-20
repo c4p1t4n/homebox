@@ -148,6 +148,7 @@ class relatorioProvider extends Component {
                         <div className="divRightProfileProviderRelatorio">
                             <div className="servicesInProgress">
                                 <p>Serviços ativos</p>
+                                <br />
                                 <div className="servicesInProgressOverflow">
                                     <CardServiceInProgressProvider/>
                                     <CardServiceInProgressProvider/>

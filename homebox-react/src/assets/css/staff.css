@@ -1,21 +1,58 @@
-.headerStaff {
-    align-items: center;
+.divHeader {
+    width: 100%;
     background: rgba(10, 57, 105, 0.13);
+}
+
+.containerStaff {
+    width: 85%;
+    margin: auto;
+}
+.headerIn{
     display: flex;
-    width: 100vw;
+    width: 100%;
+    align-items: center;
     justify-content: space-between;
-    font-size: 20px;
-    font-weight: bold;
 }
-.logoHomeboxStaff{
-    margin: 1% 1% 1% 5%;
-    width: 6%;
+
+.logoHomeboxDiv{
+    width: 24%;
 }
-.profileStaff {
+
+.logoHomeboxDiv img{
+    height: 80px;
+}
+
+.nameStaffDiv{
     display: flex;
-    margin: 0% 2% 0% 0%;
+    align-items: center;
+    justify-content: space-between;
+    width: 24%;
 }
-.profileStaff img{
+.nameStaffDiv:hover{
+    cursor: pointer;
+}
+.nameStaffDiv img:hover{
+    cursor: pointer;
+    height: 32px;
+}
+.nameStaffDiv p{
+    font-size: 22px;
+}
+.nameStaffDiv img{
     height: 30px;
-    margin-left: 10px;
+}
+
+.logoffStaffDiv{
+    background-color: rgba(109, 102, 102, 0.737);
+    padding: 1%;
+    color: white;
+    display: none;
+    position: absolute;
+    right: 140px;
+    border-radius: 20px 0px 20px 20px;
+    top: 75px;
+}
+.logoffStaffDiv p:hover{
+    cursor: pointer;
+    color: red;
 }

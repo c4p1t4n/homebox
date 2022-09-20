@@ -12,18 +12,20 @@
 
 .divRightProfileProviderTop {
     width: 100%;
-    height: 300px;
 }
 
 .divRightProfileProviderTopLeft {
-    width: 60%;
-    height: 98%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border-radius: 15px 50px 30px;
     font-size: 18px;
 }
 
 .visitsYourProfile {
-    width: 48%;
+    width: 32%;
+    padding: 1%;
     border-radius: 20px;
     background-color: whitesmoke;
 }
@@ -54,10 +56,7 @@
 .visitsYourProfileBut {
     display: flex;
     align-items: center;
-    width: 300px;
-    margin-bottom: 2%;
-    padding: 1%;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .visitsYourProfileTOP img {
@@ -73,11 +72,18 @@
 
 .divRightProfileProviderTopLeftTOP {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .divRightProfileProviderTopLeftBut {
-    padding: 2%;
+    padding: 1%;
+    width: 98%;
+    margin-bottom: 20px;
+    align-items: center;
+    height: 90px;
+    justify-content: space-between;
     display: flex;
     background-color: whitesmoke;
     flex-direction: column;
@@ -87,12 +93,12 @@
 }
 
 .indiceDiv3 {
-    font-size: 20px;
+    font-size: 22px;
     text-align: center;
     color: black;
-    align-self: flex-end;
+    padding: 1px;
     background-color: #B9DCAC;
-    width: 60px;
+    width: 20%;
     border-radius: 20px;
 }
 
