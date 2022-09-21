@@ -1,16 +1,8 @@
 Resources:
-  NATGatewayEIPBackends:
+  NATGatewayEIPLoadBalancer:
     Type: AWS::EC2::EIP
     Properties:
-      InstanceId: !Ref EC2Private
+      InstanceId: !Ref EC2LoadBalancerAZ1
       Tags:
         - Key: Name
-          Value: eip-pub-backend-homebox
-
-  NATGatewayEIPFrontend:
-    Type: AWS::EC2::EIP
-    Properties:
-      InstanceId: !Ref EC2FrontEnd
-      Tags:
-        - Key: Name
-          Value: eip-pub-frontend-homebox
+          Value: eip-pub-lb-homebox-az1

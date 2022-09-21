@@ -1,5 +1,26 @@
 Resources:
-  EC2FrontEnd:
+  # LOAD BALANCER
+
+  EC2LoadBalancerAZ1:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-08d4ac5b634553e16
+      KeyName: ch28082022Publica
+      InstanceType: t2.micro
+      SubnetId: !Ref SubnetPubAZ1
+      SecurityGroupIds:
+        - !GetAtt SecurityGroupLBPub.GroupId
+      BlockDeviceMappings:
+        - DeviceName: "/dev/sda1"
+          Ebs:
+            VolumeType: "gp2"
+            VolumeSize: "8"
+      Tags:
+        - Key: Name
+          Value: ec2-pub-lb-az1
+
+  # AZ1
+  EC2FrontEndAZ1:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: ami-08d4ac5b634553e16
@@ -17,7 +38,7 @@ Resources:
         - Key: Name
           Value: ec2-pub-front-end-az1
 
-  EC2Private:
+  EC2PrivateAZ1:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: ami-08d4ac5b634553e16
@@ -34,3 +55,41 @@ Resources:
       Tags:
         - Key: Name
           Value: ec2-priv-back-bd-az1
+
+  # AZ2
+
+  EC2FrontEndAZ2:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-08d4ac5b634553e16
+      KeyName: ch28082022Publica
+      InstanceType: t2.micro
+      SubnetId: !Ref SubnetPubAZ2
+      SecurityGroupIds:
+        - !GetAtt SecurityGroupPubAz2.GroupId
+      BlockDeviceMappings:
+        - DeviceName: "/dev/sda1"
+          Ebs:
+            VolumeType: "gp2"
+            VolumeSize: "8"
+      Tags:
+        - Key: Name
+          Value: ec2-pub-front-end-az2
+
+  EC2PrivateAZ2:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-08d4ac5b634553e16
+      KeyName: ch28082022Privada
+      InstanceType: t2.micro
+      SubnetId: !Ref SubnetPriAZ2
+      SecurityGroupIds:
+        - !GetAtt SecurityGroupPriAz2.GroupId
+      BlockDeviceMappings:
+        - DeviceName: "/dev/sda1"
+          Ebs:
+            VolumeType: "gp2"
+            VolumeSize: "8"
+      Tags:
+        - Key: Name
+          Value: ec2-priv-back-bd-az2

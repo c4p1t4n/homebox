@@ -1,9 +1,11 @@
 Resources:
-  SecurityGroupPub:
+  # SG-LB
+
+  SecurityGroupLBPub:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupName: sg_pub_homebox
-      GroupDescription: sg_pub_homebox
+      GroupName: sg_lb_homebox_az1
+      GroupDescription: sg_lb_homebox_az1
       VpcId: !Ref VPC
       SecurityGroupIngress:
         - CidrIp: 0.0.0.0/0
@@ -23,13 +25,45 @@ Resources:
           IpProtocol: -1
       Tags:
         - Key: Name
-          Value: sg_pub_homebox
+          Value: sg_lb_homebox_az1
+
+  # AZ1
+
+  SecurityGroupPub:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupName: sg_pub_homebox_az1
+      GroupDescription: sg_pub_homebox_az1
+      VpcId: !Ref VPC
+      SecurityGroupIngress:
+        - SourceSecurityGroupId: !Ref SecurityGroupLBPub
+          IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+        - SourceSecurityGroupId: !Ref SecurityGroupLBPub
+          IpProtocol: tcp
+          FromPort: 3000
+          ToPort: 3000
+        - SourceSecurityGroupId: !Ref SecurityGroupLBPub
+          IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+        - SourceSecurityGroupId: !Ref SecurityGroupLBPub
+          IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+      SecurityGroupEgress:
+        - CidrIp: 0.0.0.0/0
+          IpProtocol: -1
+      Tags:
+        - Key: Name
+          Value: sg_pub_homebox_az1
 
   SecurityGroupPri:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupName: sg_pri_homebox
-      GroupDescription: sg_pri_homebox
+      GroupName: sg_pri_homebox_az1
+      GroupDescription: sg_pri_homebox_az1
       VpcId: !Ref VPC
       SecurityGroupIngress:
         - SourceSecurityGroupId: !Ref SecurityGroupPub
@@ -42,6 +76,10 @@ Resources:
           ToPort: 80
         - SourceSecurityGroupId: !Ref SecurityGroupPub
           IpProtocol: tcp
+          FromPort: 8080
+          ToPort: 8080
+        - SourceSecurityGroupId: !Ref SecurityGroupPub
+          IpProtocol: tcp
           FromPort: 443
           ToPort: 443
       SecurityGroupEgress:
@@ -49,4 +87,63 @@ Resources:
           IpProtocol: -1
       Tags:
         - Key: Name
-          Value: sg_pri_homebox
+          Value: sg_pri_homebox_az1
+
+  # AZ2
+
+  SecurityGroupPubAz2:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupName: sg_pub_homebox_az2
+      GroupDescription: sg_pub_homebox_az2
+      VpcId: !Ref VPC
+      SecurityGroupIngress:
+        - SourceSecurityGroupId: !Ref SecurityGroupLBPub
+          IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+        - SourceSecurityGroupId: !Ref SecurityGroupLBPub
+          IpProtocol: tcp
+          FromPort: 3000
+          ToPort: 3000
+        - SourceSecurityGroupId: !Ref SecurityGroupLBPub
+          IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+        - SourceSecurityGroupId: !Ref SecurityGroupLBPub
+          IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+      SecurityGroupEgress:
+        - CidrIp: 0.0.0.0/0
+          IpProtocol: -1
+      Tags:
+        - Key: Name
+          Value: sg_pub_homebox_az2
+
+  SecurityGroupPriAz2:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupName: sg_pri_homebox_az2
+      GroupDescription: sg_pri_homebox_az2
+      VpcId: !Ref VPC
+      SecurityGroupIngress:
+        - SourceSecurityGroupId: !Ref SecurityGroupPubAz2
+          IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+        - SourceSecurityGroupId: !Ref SecurityGroupPubAz2
+          IpProtocol: tcp
+          FromPort: 8080
+          ToPort: 8080
+        - SourceSecurityGroupId: !Ref SecurityGroupPubAz2
+          IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+        - SourceSecurityGroupId: !Ref SecurityGroupPubAz2
+          IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+      Tags:
+        - Key: Name
+          Value: sg_pri_homebox_az2

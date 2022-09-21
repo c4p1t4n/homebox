@@ -20,3 +20,25 @@ Resources:
       Tags:
         - Key: Name
           Value: sub-az1-pri-homebox
+
+  SubnetPubAZ2:
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone: us-east-1c
+      VpcId: !Ref VPC
+      CidrBlock: 10.0.0.128/26
+      MapPublicIpOnLaunch: true
+      Tags:
+        - Key: Name
+          Value: sub-az2-pub-homebox
+
+  SubnetPriAZ2:
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone: us-east-1c
+      VpcId: !Ref VPC
+      CidrBlock: 10.0.0.192/26
+      MapPublicIpOnLaunch: false
+      Tags:
+        - Key: Name
+          Value: sub-az2-pri-homebox
