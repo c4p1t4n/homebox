@@ -103,6 +103,17 @@ function staff() {
                                     </div>
                                 </div>
                             </div>
+                            <div className="divButrigthDivStaff">
+                                <p>Leads</p>
+                                <div className="timeAvgDiv">
+                                    <div className="timeAvg">
+                                        <p>Tempo médio</p>
+                                        <p>Entre acesso e cadastro</p>
+                                        <div className="indiceAvgTime"></div>
+                                    </div>
+                                    <div className="timeAvg"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

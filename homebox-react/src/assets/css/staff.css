@@ -79,7 +79,6 @@ main {
 .leftDivStaff {
     width: 50%;
     padding: 2%;
-    background: white;
     height: 600px;
 }
 
@@ -93,7 +92,26 @@ main {
     width: 100%;
     justify-content: space-between;
 }
-.serviceOfRegion{
+
+.divButrigthDivStaff {
+    margin-top: 2%;
+    width: 100%;
+    border-top: rgba(103, 99, 99, 0.536) solid 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divButrigthDivStaff p {
+    margin: 1%;
+    width: 100px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #EFC5B7;
+}
+
+.serviceOfRegion {
+    width: 55%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -102,10 +120,12 @@ main {
     border-radius: 20px;
     padding: 1%;
 }
+.serviceOfRegion p{
+    font-size: 20px;
+}
 .proporcaoStaff {
     font-size: 22px;
     display: flex;
-    width: 30%;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -118,7 +138,6 @@ main {
     flex-direction: column;
     align-items: center;
     height: 150px;
-    padding: 1%;
     width: 250px;
     justify-content: space-between;
 
@@ -137,9 +156,38 @@ main {
     margin: 0;
 }
 
-.pIndiceVerdeStaff{
+.pIndiceVerdeStaff {
     color: black;
     padding: 2%;
     background: #B9DCAC;
     border-radius: 8px;
+}
+
+.timeAvgDiv {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.timeAvg {
+    display: flex;
+    flex-direction: column;
+    height: 125px;
+    padding: 1%;
+    width: 40%;
+    margin: 1%;
+
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+.timeAvg p{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    color: black;
+    text-align-last: start;
+    background: none;
+    width: 100%;
 }
