@@ -91,10 +91,7 @@ const login = e => {
         password
     }).catch(err => err.response)
         .then(({ status, data }) => {
-            console.log(status)
-            console.log(data)
             if (status === 200) {
-                console.log("SUCESSO")
                 sessionStorage.setItem(
                     "user",
                     JSON.stringify({ ...data })

@@ -7,15 +7,63 @@ import {
     ArcElement,
     Tooltip,
     Legend,
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
 } from 'chart.js';
 import { PolarArea } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 
 
 
 function staff() {
 
 
-    ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
+    const options2 = {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            // title: {
+            //     display: true,
+            //     text: 'Agendamentos e serviços finalizados',
+            // },
+        },
+    };
+
+    const labels = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sabado'];
+
+    const data2 = {
+        labels,
+        datasets: [
+            {
+                label: 'Agendamentos',
+                data: [100, 200, 300, 400, 500, 600],
+                borderColor: 'rgb(255, 99, 132)',
+                backgroundColor: 'rgba(255, 99, 132, 0.5)',
+            },
+            {
+                label: 'Serviços finalizados',
+                data: [150, 250, 350, 450, 550, 650],
+                borderColor: 'rgb(53, 162, 235)',
+                backgroundColor: 'rgba(53, 162, 235, 0.5)',
+            },
+        ],
+    };
+
+
+
+
+
+
+    ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend, CategoryScale,
+        LinearScale,
+        PointElement,
+        LineElement,
+        Title);
 
     const data = {
         labels: ['Zona Central', 'Zona Sul', 'Zona Norte'],
@@ -76,7 +124,31 @@ function staff() {
                 <div className="containerStaff">
                     <div className="mainDiv">
                         <div className="leftDivStaff">
-                            <div></div>
+                            <div className="chartLineStaff">
+                                <p>Agendamentos e serviços finalizados</p>
+                                <Line options={options2} data={data2} />
+                            </div>
+                            <div className="visitsDivStaff">
+                                <p>Visitantes</p>
+                                <div className="timeAvgDiv">
+                                    <div className="visitsPropsStaff">
+                                        <p>xxxxxxxx</p>
+                                        <p>xxxxxxxxxxxxxxxxxx</p>
+                                        <div className="visitsPropsStaffIndice">
+                                            <p>-xs</p>
+                                            <h2>x.x min</h2>
+                                        </div>
+                                    </div>
+                                    <div className="visitsPropsStaff">
+                                        <p>xxxxxx</p>
+                                        <p>xxxxxxxxxxxx</p>
+                                        <div className="visitsPropsStaffIndice">
+                                            <p>-X%</p>
+                                            <h2>x:x</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div className="rigthDivStaff">
                             <div className="divToprigthDivStaff">
@@ -109,9 +181,19 @@ function staff() {
                                     <div className="timeAvg">
                                         <p>Tempo médio</p>
                                         <p>Entre acesso e cadastro</p>
-                                        <div className="indiceAvgTime"></div>
+                                        <div className="indiceAvgTime">
+                                            <p>-Xs</p>
+                                            <h2>x.x min</h2>
+                                        </div>
                                     </div>
-                                    <div className="timeAvg"></div>
+                                    <div className="timeAvg">
+                                        <p>Proporção</p>
+                                        <p>Chats : Agendamentos</p>
+                                        <div className="indiceAvgTime">
+                                            <p>-X%</p>
+                                            <h2>x:x</h2>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
