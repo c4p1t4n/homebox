@@ -1,8 +1,10 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import "../assets/css/style.css"
 
 import logo from "../assets/img/icon/logo-removebg-preview.png"
 import google from "../assets/img/google.png"
 import facebook from "../assets/img/facebook1.png"
+import iconClose from "../assets/img/iconCloseBlue.png"
 import twitter from "../assets/img/twitter.png"
 import api from "../api"
 import VLibras from "@djpfs/react-vlibras"
@@ -54,15 +56,34 @@ function Login() {
                             </p>
                         </a>
                         <br />
-                        <a href="/">
-                            <p id="password">Esqueceu sua senha ?</p>
-                        </a>
+                        <p onClick={openDivForgotPassword} id="password">Esqueceu sua senha ?</p>
                     </div>
                 </div>
             </body>
+            <div id="forgotPasswordDiv" className="forgotPasswordDiv">
+                <img onClick={openDivForgotPassword} src={iconClose} alt="Icone de fechar" />
+                <form >
+                    <h2>Recuperar Senha</h2>
+                    <div className="inputFormForgotPassword">
+                        <label htmlFor="email">Informe o e-mail cadastrado:</label>
+                        <input type="text" placeholder="Digite aqui" />
+                    </div>
+                    <label htmlFor="email">Enviaremos um link para redefinição de senha no email informado</label>
+                    <input onClick={resetPassword} id="submitForgotPassword" type="submit" />
+                </form>
+            </div>
         </>
     )
 }
+
+function openDivForgotPassword() {
+    const logoffOpenDiv = document.getElementById("forgotPasswordDiv")
+
+    logoffOpenDiv.style.display =
+        logoffOpenDiv.style.display === "flex" ? "none" : "flex"
+}
+
+function resetPassword() { }
 
 const keyStroke = e => {
     const buttonLogin = document.querySelector("#buttonLogin")
