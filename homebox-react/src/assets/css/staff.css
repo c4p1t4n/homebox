@@ -48,9 +48,10 @@
 }
 
 .logoffStaffDiv {
-    background-color: rgba(109, 102, 102, 0.737);
-    padding: 1%;
-    color: white;
+    background-color: rgba(255, 255, 255, 0.903);
+    padding: 1.5%;
+    color: black;
+    border: black solid 1px;
     display: none;
     position: absolute;
     right: 140px;
@@ -63,16 +64,130 @@
     color: red;
 }
 
+main {
+    width: 100%;
+    height: 100vh;
+    background: rgba(10, 58, 105, 0.055);
+    color: #0A3969;
+}
+
 .mainDiv {
     display: flex;
+    width: 100%;
 }
 
 .leftDivStaff {
     width: 50%;
-    padding: 1%;
+    padding: 2%;
+    height: 600px;
 }
 
-.rigthDivStaff{
+.rigthDivStaff {
     width: 50%;
+    padding: 2%;
+}
+
+.divToprigthDivStaff {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.divButrigthDivStaff {
+    margin-top: 2%;
+    width: 100%;
+    border-top: rgba(103, 99, 99, 0.536) solid 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divButrigthDivStaff p {
+    margin: 1%;
+    width: 100px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #EFC5B7;
+}
+
+.serviceOfRegion {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 20px;
     padding: 1%;
+}
+.serviceOfRegion p{
+    font-size: 20px;
+}
+.proporcaoStaff {
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 360px;
+
+}
+
+.proporcaoStaffDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 150px;
+    width: 250px;
+    justify-content: space-between;
+
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+.indiceProporcaoStaff {
+    display: flex;
+    width: 70%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.indiceProporcaoStaff h1 {
+    margin: 0;
+}
+
+.pIndiceVerdeStaff {
+    color: black;
+    padding: 2%;
+    background: #B9DCAC;
+    border-radius: 8px;
+}
+
+.timeAvgDiv {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.timeAvg {
+    display: flex;
+    flex-direction: column;
+    height: 125px;
+    padding: 1%;
+    width: 40%;
+    margin: 1%;
+
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+.timeAvg p{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    color: black;
+    text-align-last: start;
+    background: none;
+    width: 100%;
 }
