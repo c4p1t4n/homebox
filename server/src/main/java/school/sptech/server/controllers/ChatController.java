@@ -109,8 +109,35 @@ public class ChatController {
             chatsPerUser.add(new ChatsPerUser(chat.getId(), chat.getUser(), chat.getChat(), chm.getMsg(), chm.getSendDate(), chm.getSeen()));
         }
 
+
+
         return ResponseEntity.status(200).body(chatsPerUser);
     }
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @GetMapping("/user/{fkUser}/{name}")
+    public ResponseEntity<List<ChatsPerUser>> searchChatsPerUser(@PathVariable Integer fkUser,
+                                                                 @PathVariable String name) {
+        if (!dbUserService.existsById(fkUser)) {
+            return ResponseEntity.status(404).build();
+        }
+
+        List<UserHasChat> chats = dbRepositoryUserHasChat.findByUserWithSpecificPartner(fkUser,name);
+
+        if (chats.isEmpty()) {
+            return ResponseEntity.status(204).build();
+        }
+
+        List<ChatsPerUser> chatsPerUser = new ArrayList<ChatsPerUser>();
+
+        for (UserHasChat chat : chats) {
+            ChatHasMsg chm = dbRepositoryChatHasMsg.findTop1ByChatIdChatOrderBySendDateDesc(chat.getChat().getIdChat());
+            chatsPerUser.add(new ChatsPerUser(chat.getId(), chat.getUser(), chat.getChat(), chm.getMsg(), chm.getSendDate(), chm.getSeen()));
+        }
+
+        return ResponseEntity.status(200).body(chatsPerUser);
+    }
+
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/auto")
     public ResponseEntity<Object> postMsg(@RequestBody Msg msg,

@@ -56,7 +56,7 @@ class SendMsg extends Component {
         }
         upload(audioData.blob, fileName)
         
-        document.getElementById("lMsg").innerHTML = "Áudio";
+        document.getElementById(JSON.parse(sessionStorage.getItem("chat")).idChat).innerHTML = "Áudio";
         
         setTimeout(() => {   
             api.post(url, formData, config)
@@ -72,7 +72,11 @@ class SendMsg extends Component {
 
         return (
             <>
-                <input id="inputMsg" placeholder="Digite aqui ..." type="text" className="msg" />
+                <input id="inputMsg" placeholder="Digite aqui ..." type="text" className="msg" 
+                onKeyPress={(e) => {
+                    if(e.key === "Enter"){
+                        sendMsg()
+                    }}}/>
                 <button onClick={sendMsg}><img src={iconSendMsg} alt="Icone para enviar mensagem" className="sendMsg" /></button>
                 <button onClick={getFile}>
                     <img src={paperclip} alt="Icone para anexar foto ou video"/>
@@ -116,7 +120,7 @@ const onChange = e => {
     upload(state.file, fileName)
 
     
-    document.getElementById("lMsg").innerHTML = "Imagem";
+    document.getElementById(JSON.parse(sessionStorage.getItem("chat")).idChat).innerHTML = "Imagem";
     setTimeout(() => {   
         api.post(url, formData, config)
             .then((response) => {
@@ -146,7 +150,7 @@ const sendMsg = e =>{
         .then((response) => {
             console.log(response.status)
     });   
-    document.getElementById("lMsg").innerHTML = msg.message;
+    document.getElementById(JSON.parse(sessionStorage.getItem("chat")).idChat).innerHTML = msg.message;
     sessionStorage.setItem("sendMsg", true)
 }
 

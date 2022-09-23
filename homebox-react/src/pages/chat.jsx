@@ -31,6 +31,24 @@ function Chat(){
         })
     }, [])
 
+    const searchChat = () => {
+        var name = document.getElementById("searchChat").value
+        console.log("Pesquisando....")
+        api.get(`/chat/user/`+JSON.parse(sessionStorage.getItem("user")).id_user+`/`+name
+        ).then(({ status, data }) => {
+            if (status === 200) {
+                setChats(data)
+            }
+            else{
+                setChats([])
+            }
+        }).catch(
+            err => {
+                setChats([])
+            }
+        )
+    }
+
     const messagesEndRef = useRef(null)
 
     const scrollToBottom = () => { 
@@ -100,10 +118,14 @@ function Chat(){
                         </div>
                         <div className="divSearchBar">
                             <div className="barSearch">
-                                <input placeholder="Pesquisar..." type="text" />
+                                <input id="searchChat" placeholder="Pesquisar..." type="text" 
+                                onKeyPress={(e) => {
+                                    if(e.key === "Enter"){
+                                        searchChat()
+                                    }}}/>
                             </div>
                             <div className="iconSearch">
-                                <button><img src={searchIcon} alt="Icone de pesquisar 'lupa'" /></button>
+                                <button><img src={searchIcon} alt="Icone de pesquisar 'lupa'" onClick={searchChat}/></button>
                             </div>
                         </div>
                         <div className="divCardsChat">
