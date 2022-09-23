@@ -27,9 +27,8 @@ function getLastSevendays() {
 
         list.push(date.getDate() - count)
         count++
-        console.log(count)
     }
-    for (var x = 0; x <= list.length; x++) {
+    for (var x = 0; x <= 6; x++) {
         date = new Date();
         if (list[x] <= list[0]) {
             list_date.push(String(list[x]) + '/' + String(date.getMonth() + 1))
@@ -39,7 +38,7 @@ function getLastSevendays() {
     }
     console.log(list)
     console.log(list_date)
-    return list_date
+    return list_date.reverse()
 }
 
 
@@ -62,6 +61,11 @@ class relatorioProvider extends Component {
                 },
                 xaxis: {
                     categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
+                },
+                yaxis:{
+                    forceNiceScale: true,
+                    min:0,
+                    max:5
                 }
             },
             series: [
@@ -86,17 +90,22 @@ class relatorioProvider extends Component {
     async componentDidMount() {
         let id_user = JSON.parse(sessionStorage.getItem('user')).id_user
 
-        let temp_value = await api.post(`/users/avg-rating/1`,).catch(err => err.response)
+        let temp_value = await api.get(`/users/avg-rating/${id_user}`).catch(err => err.response)
+        console.log(`media:${temp_value.data}`)
         this.setState({ avg: (temp_value.data === 0 ? "0" : temp_value.data.toFixed(2)) })
         console.log(this.state.avg)
 
 
-        let visitas_semana = await api.get(`/interestAcess/avg_last_seven_days/1`,).catch(err => err.response)
+        let visitas_semana = await api.get(`interestAccess/avg_last_seven_days/${id_user}`,).catch(err => err.response)
         this.setState({ visitas_semana: (visitas_semana.data === 0 ? "0" : visitas_semana.data) })
-        console.log(this.state.visitas_semana)
+        console.log(`lista_ultima_semanaaaaaa:${this.state.visitas_semana}`)
 
-        let list_medias_ultima_semana = await api.get(`/interestAcess/getListAvgLastSevenDays/1`,).catch(err => err.response)
 
+
+
+        let list_medias_ultima_semana = await api.get(`interestAccess/getListAvgLastSevenDays/${id_user}`,).catch(err => err.response)
+        console.log(list_medias_ultima_semana)
+        console.log(`lista_dados:${list_medias_ultima_semana.data}`)
         this.setState({
             series: [
                 {
@@ -124,10 +133,6 @@ class relatorioProvider extends Component {
                 }
             }
         })
-
-
-
-
 
     }
     render() {
@@ -166,7 +171,7 @@ class relatorioProvider extends Component {
                                             <div className="visitsYourProfileBut">
                                                 <p id="indice">13%</p>
                                                 <div className="indiceDiv2">
-                                                    <p id="indice2">22 {this.state.visitas_semana}</p>
+                                                    <p id="indice2">{this.state.visitas_semana}</p>
                                                     <p>nessa semana</p>
                                                 </div>
                                             </div>
