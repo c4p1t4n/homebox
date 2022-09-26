@@ -11,10 +11,7 @@ import school.sptech.server.service.UserService;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 
 @RestController
 @RequestMapping("/chat")
@@ -109,9 +106,11 @@ public class ChatController {
             chatsPerUser.add(new ChatsPerUser(chat.getId(), chat.getUser(), chat.getChat(), chm.getMsg(), chm.getSendDate(), chm.getSeen()));
         }
 
+        chatsPerUser = quickSort(chatsPerUser, 0, chatsPerUser.size()-1);
+        List<ChatsPerUser> chatsPerUserWithoutDuplicates = new ArrayList<>(
+                new LinkedHashSet<>(chatsPerUser));
 
-
-        return ResponseEntity.status(200).body(chatsPerUser);
+        return ResponseEntity.status(200).body(chatsPerUserWithoutDuplicates);
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -135,7 +134,11 @@ public class ChatController {
             chatsPerUser.add(new ChatsPerUser(chat.getId(), chat.getUser(), chat.getChat(), chm.getMsg(), chm.getSendDate(), chm.getSeen()));
         }
 
-        return ResponseEntity.status(200).body(chatsPerUser);
+        chatsPerUser = quickSort(chatsPerUser, 0, chatsPerUser.size()-1);
+        List<ChatsPerUser> chatsPerUserWithoutDuplicates = new ArrayList<>(
+                new LinkedHashSet<>(chatsPerUser));
+
+        return ResponseEntity.status(200).body(chatsPerUserWithoutDuplicates);
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -246,6 +249,40 @@ public class ChatController {
             return ResponseEntity.status(200).build();
         }
         return ResponseEntity.status(404).build();
+    }
+
+    public List<ChatsPerUser> quickSort(List<ChatsPerUser> v,int begin,int end){
+        int i = begin;
+        int j = end;
+    
+        LocalDateTime pivo = v.get((begin + end)/2).getSendDate();
+        while(i<=j){
+            //isAfter(), isBefore() and isEqual()
+            while (i<end && v.get(i).getSendDate().isAfter(pivo)){
+                i=i+1;
+            }
+            while (j>begin && v.get(j).getSendDate().isBefore(pivo)){
+                j=j-1;
+            }
+            if (i<=j){
+                ChatsPerUser aux = v.get(i);
+                int indexI = v.indexOf(v.get(i));
+                int indexJ = v.indexOf(v.get(j));
+                v.add(indexI, v.get(j));
+                v.add(indexJ, aux);
+                // v[i] = v[j];
+                // v[j] = aux;
+                i = i + 1;
+                j = j - 1;
+            }
+        }
+        if (begin<j){
+            quickSort(v,begin,j);
+        }
+        if (i<end){
+            quickSort(v,i,end);
+        }
+        return v;
     }
 
 }

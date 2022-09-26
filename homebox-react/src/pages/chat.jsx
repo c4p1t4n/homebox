@@ -29,11 +29,10 @@ function Chat(){
                 setChats(data)
             }
         })
-    }, [])
+    },[chats])
 
     const searchChat = () => {
         var name = document.getElementById("searchChat").value
-        console.log("Pesquisando....")
         api.get(`/chat/user/`+JSON.parse(sessionStorage.getItem("user")).id_user+`/`+name
         ).then(({ status, data }) => {
             if (status === 200) {
@@ -57,7 +56,6 @@ function Chat(){
             setTimeout(function() {
                 sessionStorage.setItem("sendMsg", false)
               }, 500);
-              
         }
     }  
     
@@ -74,7 +72,7 @@ function Chat(){
     for(var i in info){
         if(info[i].userId===JSON.parse(sessionStorage.getItem("user")).id_user){
             if(info[i].message !== ""){
-                list.push(<CardChatMsgRight text={info[i].message}/>) 
+                list.push(<CardChatMsgRight text={info[i].message}/>)   
             }
             else{
                 if(info[i].type === "image/png" || info[i].type === "image/jpeg"){
@@ -99,8 +97,6 @@ function Chat(){
             }
         }
     }
-
-
 
         return (
             <>

@@ -13,4 +13,4 @@ function tick(){
   );
 }
 
-setInterval(tick,220)
+setInterval(tick,420)
