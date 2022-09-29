@@ -108,9 +108,42 @@ function profileProvider() {
                     <button>Trocar</button>
                 </div>
             </div>
+            <div id="editServiceDiv" className="addServiceDiv">
 
+                <form className="modalCreateService">
+                    <img onClick={closeDivEditService} className="iconCloseService" src={iconCloseBlue} alt="icone de fechar" />
+                    <div className="divInputForm">
+                        <label htmlFor="nameService">Nome do serviço:</label>
+                        <input required id="nameServiceId" type="text" placeholder="Exemplo: Troca de cano" />
+                    </div>
+                    <div className="divInputForm">
+                        <label htmlFor="refValue">Valor de Referência:</label>
+                        <input required id="refValueId" type="text" placeholder="Exemplo: 120" />
+                    </div>
+                    <div className="divInputForm">
+                        <label htmlFor="categoryService">Categoria do serviço:</label>
+                        <select name="categories" id="select_categories">
+                            <option value="0">Selecione</option>
+                            <option value="1">Encanamento</option>
+                            <option value="2">Elétrico</option>
+                            <option value="3">Montagem de imovéis</option>
+                            <option value="4">Pintura</option>
+                        </select>
+                    </div>
+                    <div className="divInputForm">
+                        <label htmlFor="descriptionService">Descrição do serviço:</label>
+                        <textarea required id="txtid" name="txtname" rows="5" cols="50" ></textarea>
+                    </div>
+                    <input id="submitForm" value="Editar Serviço" onClick={createService} />
+                </form>
+
+            </div>
         </>
     )
+}
+
+function closeDivEditService() {
+    document.getElementById("editServiceDiv").style.display = "none"
 }
 
 export default profileProvider
