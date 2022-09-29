@@ -4,7 +4,7 @@ import deleteService from "../assets/img/deleteService.png"
 
 function cardServiceProviderServices(props) {
     return (
-        <details className="cardServiceProvider">
+        <details open className="cardServiceProvider">
             <summary className="infoService">
                 <div className="nameServiceProvider">
                     <p>Serviço</p>

@@ -74,7 +74,7 @@ function profileProvider() {
                             />
                         ))}
                     </div>
-                    
+
                 </div>
             </div>
             <div id="addServiceDiv" className="addServiceDiv">
@@ -107,6 +107,14 @@ function profileProvider() {
                 </form>
 
             </div>
+            <div className="openDivAlterNameProvider">
+                <div className="divAlterName">
+                    <h3>Alterar nome social</h3>
+                    <input type="text" placeholder="Digite aqui" />
+                    <button>Trocar</button>
+                </div>
+            </div>
+
         </>
     )
 }
