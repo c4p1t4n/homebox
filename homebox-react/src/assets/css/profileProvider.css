@@ -183,6 +183,11 @@
     margin-left: 10%;
 }
 
+.divIconsService img:hover {
+    width: 45%;
+    cursor: pointer;
+}
+
 .descriptionServiceProvider {
     width: 98%;
     padding: 1%;
@@ -273,8 +278,8 @@
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background-color: #00000040;
-    display: flex;
+    background-color: #0000006c;
+    display: none;
     align-items: center;
     justify-content: center;
 }
@@ -304,7 +309,8 @@
     width: 80%;
     border-radius: 6px;
 }
-.divAlterName input:focus{
+
+.divAlterName input:focus {
     border: none;
 }
 
@@ -315,8 +321,21 @@
     padding: 1%;
     border-radius: 20px;
 }
-.divAlterName button:hover{
+
+.divAlterName button:hover {
     background-color: orange;
     color: black;
+    cursor: pointer;
+}
+
+.imgCloseAlterName {
+    position: absolute;
+    top: 265px;
+    right: 620px;
+    height: 40px;
+}
+
+.imgCloseAlterName:hover {
+    height: 45px;
     cursor: pointer;
 }

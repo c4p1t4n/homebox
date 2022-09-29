@@ -54,7 +54,7 @@ function profileProvider() {
                     <ProfileProvtderComp />
                     <div className="divAlterPhotoProvider">
                         <button onClick={changePhoto}>
-                        <p>Alterar foto</p >
+                            <p>Alterar foto</p >
                         </button>
                     </div>
                     <button id="botao1" onClick={openCreateService}>Adicionar um serviço</button>
@@ -96,11 +96,12 @@ function profileProvider() {
                         <label htmlFor="descriptionService">Descrição do serviço:</label>
                         <textarea required id="txtid" name="txtname" rows="5" cols="50" ></textarea>
                     </div>
-                    <input id="submitForm" value="Salvar Serviço" onClick={createService}/>
+                    <input id="submitForm" value="Salvar Serviço" onClick={createService} />
                 </form>
 
             </div>
-            <div className="openDivAlterNameProvider">
+            <div id="openDivAlterNameProvider" className="openDivAlterNameProvider">
+                <img onClick={closeChangeName} className="imgCloseAlterName" src={iconCloseBlue} alt="Icone de fechar" />
                 <div className="divAlterName">
                     <h3>Alterar nome social</h3>
                     <input type="text" placeholder="Digite aqui" />
@@ -113,8 +114,10 @@ function profileProvider() {
 }
 
 export default profileProvider
-
+const closeChangeName = e => {
+    document.getElementById("openDivAlterNameProvider").style.display = "none"
+}
 
 const changePhoto = e => {
     console.log("Mudando o nome")
- }
+}

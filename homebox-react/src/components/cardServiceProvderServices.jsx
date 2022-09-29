@@ -15,12 +15,12 @@ function cardServiceProviderServices(props) {
                     <p>: R${props.referencePrice}</p>
                 </div>
                 <div className="divIconsService">
-                    <button>
+
                     <img src={alterNameProvider} alt="icone para editr serviço" className="editServiceProvider" />
-                    </button>
-                    <button>
+
+
                     <img src={deleteService} alt="icone de deletar serviço" className="deleteService" />
-                    </button>
+
                 </div>
             </summary>
             <div className="descriptionServiceProvider">
