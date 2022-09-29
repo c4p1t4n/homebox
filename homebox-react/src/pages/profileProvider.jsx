@@ -13,25 +13,18 @@ function profileProvider() {
     }
 
     function createService() {
-        // api.post(`/services`, {
-        //     fkUser: JSON.parse(sessionStorage.getItem("user").id_user),
-        // })
-        //     .then(({ status, data }) => {
-        //         if (status === 200) {
-        //             setServices(data)
-        //         }
-        //     })
+        api.post(`/services`, {
+            fkUser: JSON.parse(sessionStorage.getItem("user")).id_user,
+            fkCategory: document.getElementById("select_categories").value,
+            name: document.getElementById("nameServiceId").value,
+            description: document.getElementById("txtid").value,
+            referencePrice: document.getElementById("refValueId").value
+        }).then((response) => {
+            console.log(response.status)
+        })
 
-        console.log(document.getElementsByName("categories"))
-        var body = {
-            fkUser: JSON.parse(sessionStorage.getItem("user").id_user),
-            fkCategory: document.getElementsByName("categories").value,
-            name: document.getElementsByName("valuenameServiceId").value,
-            description: document.getElementsByName("txtid").value,
-            referencePrice: document.getElementsByName("refValueId").value
-        }
-
-        console.log(body)
+        document.getElementById("addServiceDiv").style.display = "none"
+        alert("Serviço adicionado !!!")
     }
 
 
@@ -48,7 +41,7 @@ function profileProvider() {
                     setServices(data)
                 }
             })
-    }, [])
+    }, [listServices])
 
 
 

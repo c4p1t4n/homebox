@@ -11,7 +11,6 @@ function ProfileProvtderComp() {
         ).then(({ status, data }) => {
             if (status === 200) {                
                 setStar(data)   
-                console.log(star)
             }
         })
     },[star])
