@@ -13,15 +13,25 @@ function profileProvider() {
     }
 
     function createService() {
-        api.post(`/services`, {
-            fkUser: JSON.parse(sessionStorage.getItem("user").id_user),
+        // api.post(`/services`, {
+        //     fkUser: JSON.parse(sessionStorage.getItem("user").id_user),
+        // })
+        //     .then(({ status, data }) => {
+        //         if (status === 200) {
+        //             setServices(data)
+        //         }
+        //     })
 
-        })
-            .then(({ status, data }) => {
-                if (status === 200) {
-                    setServices(data)
-                }
-            })
+        console.log(document.getElementsByName("categories"))
+        var body = {
+            fkUser: JSON.parse(sessionStorage.getItem("user").id_user),
+            fkCategory: document.getElementsByName("categories").value,
+            name: document.getElementsByName("valuenameServiceId").value,
+            description: document.getElementsByName("txtid").value,
+            referencePrice: document.getElementsByName("refValueId").value
+        }
+
+        console.log(body)
     }
 
 
@@ -30,8 +40,7 @@ function profileProvider() {
     }
 
 
-    const [listServices2, setServices] = useState([])
-
+    const [listServices, setServices] = useState([])
     useEffect(() => {
         api.get(`services/getServicesOfWorker/${JSON.parse(sessionStorage.getItem("user")).id_user}`)
             .then(({ status, data }) => {
@@ -51,11 +60,13 @@ function profileProvider() {
                 <div className="divRightProfileProvider">
                     <ProfileProvtderComp />
                     <div className="divAlterPhotoProvider">
+                        <button onClick={changePhoto}>
                         <p>Alterar foto</p >
+                        </button>
                     </div>
                     <button id="botao1" onClick={openCreateService}>Adicionar um serviço</button>
                     <div className="divServicesProvider">
-                        {listServices2.map(item => (
+                        {listServices.map(item => (
                             <CardServiceProviderServices
                                 nameService={item.name}
                                 referencePrice={item.referencePrice}
@@ -68,7 +79,7 @@ function profileProvider() {
             </div>
             <div id="addServiceDiv" className="addServiceDiv">
 
-                <form className="modalCreateService" action={createService}>
+                <form className="modalCreateService">
                     <img onClick={closeDivCreateService} className="iconCloseService" src={iconCloseBlue} alt="icone de fechar" />
                     <div className="divInputForm">
                         <label htmlFor="nameService">Nome do serviço:</label>
@@ -80,19 +91,19 @@ function profileProvider() {
                     </div>
                     <div className="divInputForm">
                         <label htmlFor="categoryService">Categoria do serviço:</label>
-                        <select name="" id="">
-                            <option value="">Selecione</option>
-                            <option value="">Pintura</option>
-                            <option value="">Encanamento</option>
-                            <option value="">Elétrico</option>
-                            <option value="">Montagem de imovéis</option>
+                        <select name="categories" id="select_categories">
+                            <option value="0">Selecione</option>
+                            <option value="1">Encanamento</option>
+                            <option value="2">Elétrico</option>
+                            <option value="3">Montagem de imovéis</option>
+                            <option value="4">Pintura</option>
                         </select>
                     </div>
                     <div className="divInputForm">
                         <label htmlFor="descriptionService">Descrição do serviço:</label>
                         <textarea required id="txtid" name="txtname" rows="5" cols="50" ></textarea>
                     </div>
-                    <input id="submitForm" type="submit" value="Salvar Serviço" />
+                    <input id="submitForm" value="Salvar Serviço" onClick={createService}/>
                 </form>
 
             </div>
@@ -101,3 +112,8 @@ function profileProvider() {
 }
 
 export default profileProvider
+
+
+const changePhoto = e => {
+    console.log("Mudando o nome")
+ }
