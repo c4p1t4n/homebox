@@ -15,7 +15,17 @@ function ProfileProvtderComp() {
         })
     }, [star])
 
-    // var num   = star
+    useEffect(() => {
+        api.get(`/users/` + JSON.parse(sessionStorage.getItem("user")).id_user
+        ).then(({ status, data }) => {
+            if (status === 200) {
+                sessionStorage.setItem(
+                    "user",
+                    JSON.stringify({ ...data })
+                )
+            }
+        })
+    })
 
     return (
         <>
