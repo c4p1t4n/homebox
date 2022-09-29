@@ -23,6 +23,7 @@ import java.io.*;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -65,6 +66,30 @@ public class UserController {
         return status(201).body(user);
 
     }
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @PatchMapping("/att/img/{idUser}/{picture}")
+    public ResponseEntity attImg(@PathVariable Integer idUser,
+                                 @PathVariable String picture){
+        if(!dbServiceUser.existsById(idUser)){
+            return status(404).build();
+        }
+
+        User user = dbServiceUser.findById(idUser).get();
+        user.setPicture("https://homebox-files.s3.amazonaws.com/"+picture);
+        dbServiceUser.saveUser(user);
+        return status(200).build();
+    }
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @GetMapping("/{idUser}")
+    public ResponseEntity getUser(@PathVariable Integer idUser){
+        if(!dbServiceUser.existsById(idUser)){
+            return status(404).build();
+        }
+        return status(200).body(dbServiceUser.findById(idUser).get());
+    }
+
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/customer")

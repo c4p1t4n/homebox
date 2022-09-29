@@ -13,9 +13,9 @@ function menuLeftProvider() {
             <div className="divLeftProfileProvider">
                 <img src={logoHomebox} alt="logo homebox" className="logoProfileProvider" />
                 <p className="welcomeProvider">Seja bem vindo(a), {nome}</p>
-                <a href="http://localhost:3000/profile/provider" className="tagAprofileProvider"><p>Meu Perfil</p></a>
-                <a href="http://localhost:3000/profile/provider/relatorio" className="tagAprofileProvider"><p>Relatorios</p></a>
-                <a href="http://localhost:3000/chat" className="tagAprofileProvider"><p>Meu Chat</p></a>
+                <a href="/profile/provider" className="tagAprofileProvider"><p>Meu Perfil</p></a>
+                <a href="/profile/provider/relatorio" className="tagAprofileProvider"><p>Relatorios</p></a>
+                <a href="/chat" className="tagAprofileProvider"><p>Meu Chat</p></a>
                 <div className="logoffProfileProvider">
                     <a onClick={logOffSwitch}><img src={logoffProfileProvider} alt="logoff" /></a>
                 </div>

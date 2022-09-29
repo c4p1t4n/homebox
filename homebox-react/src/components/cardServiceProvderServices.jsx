@@ -3,6 +3,11 @@ import deleteService from "../assets/img/deleteService.png"
 
 
 function cardServiceProviderServices(props) {
+
+    function openEditService() {
+        document.getElementById("editServiceDiv").style.display = "flex"
+    }
+
     return (
         <details open className="cardServiceProvider">
             <summary className="infoService">
@@ -16,7 +21,7 @@ function cardServiceProviderServices(props) {
                 </div>
                 <div className="divIconsService">
 
-                    <img src={alterNameProvider} alt="icone para editr serviço" className="editServiceProvider" />
+                    <img onClick={openEditService} src={alterNameProvider} alt="icone para editr serviço" className="editServiceProvider" />
 
 
                     <img src={deleteService} alt="icone de deletar serviço" className="deleteService" />
