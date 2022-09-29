@@ -5,7 +5,7 @@ function getFaviconEl() {
   }
 function App() {
     const favicon = getFaviconEl(); // Accessing favicon element
-    favicon.href = "http://localhost:3000/favicon.ico";
+    favicon.href = "https://s3.amazonaws.com/homebox.com/assets/img/favicon.ico";
     return <Router />
 }
 
