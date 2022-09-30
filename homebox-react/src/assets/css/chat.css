@@ -290,3 +290,124 @@
     margin-bottom: 4%;
     border-radius: 70px 15px;
 }
+
+
+.closeBusinessDiv {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 18%;
+    right: 10px;
+    bottom: 130px;
+}
+
+.closeBusinessDivImg {
+    display: flex;
+    align-items: center;
+
+}
+
+.closeBusinessDivImg img {
+    border-radius: 100%;
+}
+
+.closeBusinessDivImg:hover {
+    cursor: pointer;
+}
+
+.closeBusinessDivImg img:hover {
+    cursor: pointer;
+    border: #000000 solid 1px;
+    height: 59px;
+}
+
+.closeBusinessDivImgWithText {
+    display: none;
+    background-color: #3d638919;
+    border-radius: 15px;
+    padding: 2%;
+    width: 100%;
+    align-items: center;
+}
+
+.closeBusinessDivImgWithText p {
+    width: 100%;
+}
+
+.closeBusinessDivImgWithText img {
+    height: 60px;
+    margin-left: 20px;
+}
+
+.closeBusinessDivImgWithText img:hover {
+    border: #000000 solid 1px;
+    border-radius: 100%;
+}
+
+.closeBusinessDivImgWithText:hover {
+    /* cursor: pointer; */
+}
+
+.closeBusinessDivImgWithText p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.modalCloseBusinessDiv {
+    position: absolute;
+    background-color: #00000078;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.openModalCloseBusiness {
+    display: flex;
+    width: 30%;
+    height: 50vh;
+    flex-direction: column;
+    color: #193d61;
+    justify-content: space-between;
+    padding: 2%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.modalCloseBusinessDiv input {
+    border: none;
+    border-bottom: #193d61 solid 1px;
+    border-radius: 6px;
+    width: 50%;
+    font-size: 20px;
+}
+
+.modalCloseBusinessDiv input:focus {
+    border-width: 0;
+    border: none;
+}
+
+.buttonsCloseBusiness {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.modalCloseBusinessDiv button {
+    font-size: 22px;
+    width: 40%;
+    padding: 1%;
+    background-color: #193d61;
+    color: white;
+    border-radius: 15px;
+}
+
+.modalCloseBusinessDiv button:hover{
+    cursor: pointer;
+    background-color: orange;
+    color: black;
+}
