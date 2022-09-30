@@ -290,3 +290,67 @@
     margin-bottom: 4%;
     border-radius: 70px 15px;
 }
+
+
+.closeBusinessDiv {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 18%;
+    right: 10px;
+    bottom: 130px;
+}
+
+.closeBusinessDivImg {
+    display: flex;
+    align-items: center;
+
+}
+
+.closeBusinessDivImg img {
+    border-radius: 100%;
+}
+
+.closeBusinessDivImg:hover {
+    cursor: pointer;
+}
+
+.closeBusinessDivImg img:hover {
+    cursor: pointer;
+    border: #000000 solid 1px;
+    height: 59px;
+}
+
+.closeBusinessDivImgWithText {
+    display: none;
+    background-color: #3d638919;
+    border-radius: 15px;
+    padding: 2%;
+    width: 100%;
+    align-items: center;
+}
+
+.closeBusinessDivImgWithText p {
+    width: 100%;
+}
+
+.closeBusinessDivImgWithText img {
+    height: 60px;
+    margin-left: 20px;
+}
+
+.closeBusinessDivImgWithText img:hover {
+    border: #000000 solid 1px;
+    border-radius: 100%;
+}
+
+.closeBusinessDivImgWithText:hover {
+    /* cursor: pointer; */
+}
+
+.closeBusinessDivImgWithText p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 25px;
+}
