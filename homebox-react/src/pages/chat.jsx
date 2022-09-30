@@ -155,10 +155,29 @@ function Chat() {
                     <img onClick={openCloseBusinessDivImgWithText} src={closeBusiness} alt="Fechar Negocio" />
                 </div>
                 <div id="closeBusinessDivImgWithText" className="closeBusinessDivImgWithText">
-                    <p>Fechar negocio ?</p>
+                    <p onClick={openModalCloseBusinessDiv}>Fechar negocio ?</p>
                     <img onClick={openCloseBusinessDivImgWithText} src={closeBusiness} alt="Fechar Negocio" />
                 </div>
-
+            </div>
+            <div id="modalCloseBusinessDiv" className="modalCloseBusinessDiv">
+                <div className="openModalCloseBusiness" action="">
+                    <label htmlFor="Service">
+                        <p>Nome do serviço</p>
+                        <input type="text" placeholder="Nome do serviço" />
+                    </label>
+                    <label htmlFor="ValueOfService">
+                        <p>Valor do serviço</p>
+                        <input type="number" placeholder="Valor R$" />
+                    </label>
+                    <label htmlFor="dateOfService">
+                        <p>Data do serviço</p>
+                        <input type="date" placeholder="Data do serviço" />
+                    </label>
+                    <label htmlFor="" className="buttonsCloseBusiness">
+                        <button onClick={closeBusinessN}>Fechar negócio?</button>
+                        <button onClick={openModalCloseBusinessDiv}>Cancelar</button>
+                    </label>
+                </div>
             </div>
         </>
     )
@@ -166,11 +185,16 @@ function Chat() {
 
 export default Chat
 
+function closeBusinessN() { }
+
+function openModalCloseBusinessDiv() {
+    document.getElementById("modalCloseBusinessDiv").style.display = document.getElementById("modalCloseBusinessDiv").style.display === "flex" ? "none" : "flex"
+}
 function openCloseBusinessDivImgWithText() {
     document.getElementById("closeBusinessDivImgWithText").style.display = document.getElementById("closeBusinessDivImgWithText").style.display === "flex" ? "none" : "flex"
 
     document.getElementById("closeBusinessDivImg").style.display = document.getElementById("closeBusinessDivImg").style.display === "none" ? "flex" : "none"
-    
+
 }
 
 const back = e => {
