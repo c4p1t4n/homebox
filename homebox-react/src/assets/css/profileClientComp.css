@@ -40,3 +40,7 @@
     align-items: center;
     height: 60px;
 }
+
+.alterPhoto {
+    cursor: pointer;
+}

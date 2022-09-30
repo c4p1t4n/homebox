@@ -7,7 +7,7 @@ import MenuLeftProvider from "../components/menuLeftProvider"
 import ProfileProvtderComp from "../components/infoProvider"
 import { useEffect, useState } from "react"
 import { Upload } from "@aws-sdk/lib-storage";
-import { S3Client, S3 } from "@aws-sdk/client-s3";
+import { S3Client} from "@aws-sdk/client-s3";
 import { v4 as uuidv4 } from 'uuid';
 
 function profileProvider() {
@@ -41,6 +41,7 @@ function profileProvider() {
         api.get(`services/getServicesOfWorker/${JSON.parse(sessionStorage.getItem("user")).id_user}`)
             .then(({ status, data }) => {
                 if (status === 200) {
+                    sessionStorage.setItem("servicesInfo", JSON.stringify({...data}))
                     setServices(data)
                 }
             })
@@ -56,12 +57,13 @@ function profileProvider() {
                 <div className="divRightProfileProvider">
                     <ProfileProvtderComp />
                     <div className="divAlterPhotoProvider">
-                        <p onClick={changePhoto}>Alterar foto</p >
+                        <p className="alterPhoto" onClick={changePhoto}>Alterar foto</p >
                     </div>
                     <button id="botao1" onClick={openCreateService}>Adicionar um serviço</button>
                     <div className="divServicesProvider">
                         {listServices.map(item => (
                             <CardServiceProviderServices
+                                id={item.idService}
                                 nameService={item.name}
                                 referencePrice={item.referencePrice}
                                 description={item.description}
@@ -105,25 +107,28 @@ function profileProvider() {
                 <img onClick={closeChangeName} className="imgCloseAlterName" src={iconCloseBlue} alt="Icone de fechar" />
                 <div className="divAlterName">
                     <h3>Alterar nome social</h3>
-                    <input type="text" placeholder="Digite aqui" />
-                    <button>Trocar</button>
+                    <input type="text" placeholder="Digite aqui" id="changeName"
+                        onKeyPress={(e) => {
+                            if(e.key === "Enter"){
+                                updateName()
+                        }}}/>
+                    <button onClick={updateName}>Trocar</button>
                 </div>
             </div>
             <div id="editServiceDiv" className="addServiceDiv">
-
                 <form className="modalCreateService">
                     <img onClick={closeDivEditService} className="iconCloseService" src={iconCloseBlue} alt="icone de fechar" />
                     <div className="divInputForm">
                         <label htmlFor="nameService">Nome do serviço:</label>
-                        <input required id="nameServiceId" type="text" placeholder="Exemplo: Troca de cano" />
+                        <input required id="editServiceDivNameServiceId" type="text" placeholder="Exemplo: Troca de cano" />
                     </div>
                     <div className="divInputForm">
                         <label htmlFor="refValue">Valor de Referência:</label>
-                        <input required id="refValueId" type="text" placeholder="Exemplo: 120" />
+                        <input required id="editServiceDivRefValueId" type="text" placeholder="Exemplo: 120" />
                     </div>
                     <div className="divInputForm">
                         <label htmlFor="categoryService">Categoria do serviço:</label>
-                        <select name="categories" id="select_categories">
+                        <select name="categories" id="editServiceDivSelectCategories">
                             <option value="0">Selecione</option>
                             <option value="1">Encanamento</option>
                             <option value="2">Elétrico</option>
@@ -133,9 +138,9 @@ function profileProvider() {
                     </div>
                     <div className="divInputForm">
                         <label htmlFor="descriptionService">Descrição do serviço:</label>
-                        <textarea required id="txtid" name="txtname" rows="5" cols="50" ></textarea>
+                        <textarea required id="editServiceDivTxtid" name="txtname" rows="5" cols="50" ></textarea>
                     </div>
-                    <input id="submitForm" value="Editar Serviço" onClick={createService} />
+                    <input id="submitForm" value="Editar Serviço" onClick={updateService} />
                 </form>
 
             </div>
@@ -181,6 +186,37 @@ const onChange = e => {
     })
     }, 690);
     
+}
+
+const updateName = () => {
+    let user = JSON.parse(sessionStorage.getItem("user")).id_user
+
+    var nameArray = document.getElementById("changeName").value.toLowerCase().split("")
+    nameArray[0] = nameArray[0].toUpperCase()
+    for (let i = 0; i < nameArray.length; i++) {
+        if(nameArray[i] === ' '){
+            nameArray[i+1] = nameArray[i+1].toUpperCase()
+        }
+    } 
+    var newName = nameArray.toString().replace(/,/g,"")
+
+    document.getElementById("changeName").value = ""
+    const url = '/users/att/name/'+user+'/'+newName;
+
+    api.patch(url)
+    .then((response) => {
+        console.log(response.status)
+    })
+
+    alert("Nome Alterado!!!!\n"+newName)
+    document.getElementById("openDivAlterNameProvider").style.display = "none"
+}
+
+const updateService = () => {
+    let user = JSON.parse(sessionStorage.getItem("user")).id_user
+
+    
+    document.getElementById("editServiceDiv").style.display = "none"
 }
 
 const upload = (file, name) => {

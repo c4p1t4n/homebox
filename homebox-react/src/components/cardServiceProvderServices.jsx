@@ -5,6 +5,19 @@ import deleteService from "../assets/img/deleteService.png"
 function cardServiceProviderServices(props) {
 
     function openEditService() {
+        var id = props.id;
+        var serviceInfoObj = JSON.parse(sessionStorage.getItem("servicesInfo"));
+        var serviceInfo = Object.keys(serviceInfoObj).map(key => [String(key), serviceInfoObj[key]]);
+
+        for (let i = 0; i < serviceInfo.length; i++) {
+            if(serviceInfo[i][1].idService === id){
+                document.getElementById("editServiceDivTxtid").value = serviceInfo[i][1].description
+                document.getElementById("editServiceDivNameServiceId").value = serviceInfo[i][1].name
+                document.getElementById("editServiceDivRefValueId").value = serviceInfo[i][1].referencePrice
+                document.getElementById("editServiceDivSelectCategories").value = serviceInfo[i][1].category.idCategory
+            }
+        }
+        
         document.getElementById("editServiceDiv").style.display = "flex"
     }
 
@@ -20,10 +33,7 @@ function cardServiceProviderServices(props) {
                     <p>: R${props.referencePrice}</p>
                 </div>
                 <div className="divIconsService">
-
                     <img onClick={openEditService} src={alterNameProvider} alt="icone para editr serviço" className="editServiceProvider" />
-
-
                     <img src={deleteService} alt="icone de deletar serviço" className="deleteService" />
 
                 </div>
@@ -34,6 +44,5 @@ function cardServiceProviderServices(props) {
         </details>
     )
 }
-
 
 export default cardServiceProviderServices
