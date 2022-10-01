@@ -4,6 +4,10 @@ import deleteService from "../assets/img/deleteService.png"
 
 function cardServiceProviderServices(props) {
 
+    function openDeleteService(){
+        document.getElementById("deleteServiceProvider").style.display="flex"
+    }
+
     function openEditService() {
         var id = props.id;
         var serviceInfoObj = JSON.parse(sessionStorage.getItem("servicesInfo"));
@@ -39,7 +43,7 @@ function cardServiceProviderServices(props) {
                 </div>
                 <div className="divIconsService">
                     <img onClick={openEditService} src={alterNameProvider} alt="icone para editr serviço" className="editServiceProvider" />
-                    <img src={deleteService} alt="icone de deletar serviço" className="deleteService" />
+                    <img onClick={openDeleteService} src={deleteService} alt="icone de deletar serviço" className="deleteService" />
 
                 </div>
             </summary>

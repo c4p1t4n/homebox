@@ -170,6 +170,7 @@
 .infoService:hover {
     background-color: #0a3a69b5;
     color: white;
+    
     cursor: pointer;
 }
 
@@ -185,6 +186,9 @@
 
 .divIconsService img:hover {
     width: 45%;
+    filter: invert(100%) sepia(16%) saturate(7463%) hue-rotate(222deg) brightness(119%) contrast(115%);
+
+    border-radius: 100%;
     cursor: pointer;
 }
 
@@ -338,4 +342,50 @@
 .imgCloseAlterName:hover {
     height: 45px;
     cursor: pointer;
+}
+
+.deleteServiceProvider {
+    position: absolute;
+    background-color: #0000007c;
+    width: 100vw;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.deleteServiceProviderDiv {
+    background-color: white;
+    padding: 2%;
+    display: flex;
+    height: 15vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.deleteServiceProviderDiv h3 {
+    margin: 0;
+}
+
+.deleteServiceProviderDivButton {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.deleteServiceProviderDivButton button {
+    font-size: 28px;
+    padding: 2%;
+    border-radius: 15px;
+    background-color: #0A3969;
+    color: white;
+}
+
+.deleteServiceProviderDiv button:hover {
+    cursor: pointer;
+    background-color: orange;
+    color: black;
 }

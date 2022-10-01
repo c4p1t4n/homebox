@@ -7,7 +7,7 @@ import MenuLeftProvider from "../components/menuLeftProvider"
 import ProfileProvtderComp from "../components/infoProvider"
 import { useEffect, useState } from "react"
 import { Upload } from "@aws-sdk/lib-storage";
-import { S3Client} from "@aws-sdk/client-s3";
+import { S3Client } from "@aws-sdk/client-s3";
 import { v4 as uuidv4 } from 'uuid';
 
 function profileProvider() {
@@ -56,7 +56,7 @@ function profileProvider() {
         api.get(`services/getServicesOfWorker/${JSON.parse(sessionStorage.getItem("user")).id_user}`)
             .then(({ status, data }) => {
                 if (status === 200) {
-                    sessionStorage.setItem("servicesInfo", JSON.stringify({...data}))
+                    sessionStorage.setItem("servicesInfo", JSON.stringify({ ...data }))
                     setServices(data)
                 }
             })
@@ -124,9 +124,10 @@ function profileProvider() {
                     <h3>Alterar nome social</h3>
                     <input type="text" placeholder="Digite aqui" id="changeName"
                         onKeyPress={(e) => {
-                            if(e.key === "Enter"){
+                            if (e.key === "Enter") {
                                 updateName()
-                        }}}/>
+                            }
+                        }} />
                     <button onClick={updateName}>Trocar</button>
                 </div>
             </div>
@@ -160,10 +161,23 @@ function profileProvider() {
 
             </div>
             <div className="recorder">
-                <input type="file" onChange={onChange} id="inputFile"/>
+                <input type="file" onChange={onChange} id="inputFile" />
+            </div>
+            <div id="deleteServiceProvider" className="deleteServiceProvider">
+                <div className="deleteServiceProviderDiv">
+                    <h3>Deseja excluir esse serviço ?</h3>
+                    <div className="deleteServiceProviderDivButton">
+                        <button>SIM</button>
+                        <button onClick={closeDeleteService}>NÃO</button>
+                    </div>
+                </div>
             </div>
         </>
     )
+}
+
+function closeDeleteService() {
+    document.getElementById("deleteServiceProvider").style.display = "none"
 }
 
 function closeDivEditService() {
@@ -190,17 +204,17 @@ const onChange = e => {
     state = ({ file: e.target.files[0] })
     console.log(state.file)
 
-    let fileName = uuidv4()+".png";    
-    const url = '/users/att/img/'+user+'/'+fileName;
+    let fileName = uuidv4() + ".png";
+    const url = '/users/att/img/' + user + '/' + fileName;
     upload(state.file, fileName)
-   
-    setTimeout(() => { 
-    api.patch(url)
-        .then((response) => {
-            console.log(response.status)
-    })
+
+    setTimeout(() => {
+        api.patch(url)
+            .then((response) => {
+                console.log(response.status)
+            })
     }, 690);
-    
+
 }
 
 const updateName = () => {
@@ -209,43 +223,45 @@ const updateName = () => {
     var nameArray = document.getElementById("changeName").value.toLowerCase().split("")
     nameArray[0] = nameArray[0].toUpperCase()
     for (let i = 0; i < nameArray.length; i++) {
-        if(nameArray[i] === ' '){
-            nameArray[i+1] = nameArray[i+1].toUpperCase()
+        if (nameArray[i] === ' ') {
+            nameArray[i + 1] = nameArray[i + 1].toUpperCase()
         }
-    } 
-    var newName = nameArray.toString().replace(/,/g,"")
+    }
+    var newName = nameArray.toString().replace(/,/g, "")
 
     document.getElementById("changeName").value = ""
-    const url = '/users/att/name/'+user+'/'+newName;
+    const url = '/users/att/name/' + user + '/' + newName;
 
     api.patch(url)
-    .then((response) => {
-        console.log(response.status)
-    })
+        .then((response) => {
+            console.log(response.status)
+        })
 
-    alert("Nome Alterado!!!!\n"+newName)
+    alert("Nome Alterado!!!!\n" + newName)
     document.getElementById("openDivAlterNameProvider").style.display = "none"
 }
 
 const upload = (file, name) => {
-    const target = { Bucket:"homebox-files", Key:name, Body:file, ACL:'public-read'}
-    const cred = { accessKeyId:'ASIA3XAZXQC6JOR4WL2T',  
-                   secretAccessKey:'kY4qoCTb+5ou8hVPCbrCTpGY/6okZwNkzWm9IINy', 
-                   sessionToken:'FwoGZXIvYXdzEKj//////////wEaDEm0mXBz1ogJbuawhyLPASjqh6v+vuIqADhqjfb1lTLKGzKDWKcRzmClL5sSGPLHQiVYHxYpxYTtBLtZTkgHDm9oz39MqAL1hj9ThIDZQDTGZ4Ii0CalpB3yB5RIGBxsRCqkVdBjIyktnGxtQ8iAyMx2NJ4mFGZaB1DoBGdcWDfszC/fOzuTeVeqvaW66udf6A25qVqU/5/URlU2FFOnE+w3ve1bxQRFG38/O/gztWSyoNDLbsMnKx6kOtmqfSlFp/gLMDtd71mzixO9yGBQae1t0iaw/3dDJbpBFzjFSijcw9iZBjItm/M4B6wDbkCZXnIMn2iq43NXLUK7xaKDYUR+CPcSlwkNfzTd3yePE0xEruxe'}
+    const target = { Bucket: "homebox-files", Key: name, Body: file, ACL: 'public-read' }
+    const cred = {
+        accessKeyId: 'ASIA3XAZXQC6JOR4WL2T',
+        secretAccessKey: 'kY4qoCTb+5ou8hVPCbrCTpGY/6okZwNkzWm9IINy',
+        sessionToken: 'FwoGZXIvYXdzEKj//////////wEaDEm0mXBz1ogJbuawhyLPASjqh6v+vuIqADhqjfb1lTLKGzKDWKcRzmClL5sSGPLHQiVYHxYpxYTtBLtZTkgHDm9oz39MqAL1hj9ThIDZQDTGZ4Ii0CalpB3yB5RIGBxsRCqkVdBjIyktnGxtQ8iAyMx2NJ4mFGZaB1DoBGdcWDfszC/fOzuTeVeqvaW66udf6A25qVqU/5/URlU2FFOnE+w3ve1bxQRFG38/O/gztWSyoNDLbsMnKx6kOtmqfSlFp/gLMDtd71mzixO9yGBQae1t0iaw/3dDJbpBFzjFSijcw9iZBjItm/M4B6wDbkCZXnIMn2iq43NXLUK7xaKDYUR+CPcSlwkNfzTd3yePE0xEruxe'
+    }
 
     try {
         const parallelUploads3 = new Upload({
-          client: new S3Client({region:'us-east-1', credentials:cred}),
-          params: target,
-          leavePartsOnError: false, 
+            client: new S3Client({ region: 'us-east-1', credentials: cred }),
+            params: target,
+            leavePartsOnError: false,
         });
-      
+
         parallelUploads3.on("httpUploadProgress", (progress) => {
-          console.log(progress);
+            console.log(progress);
         });
-      
+
         parallelUploads3.done();
-      } catch (e) {
+    } catch (e) {
         console.log(e);
-      }
+    }
 }
