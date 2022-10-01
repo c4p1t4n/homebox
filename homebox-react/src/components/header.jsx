@@ -69,7 +69,7 @@ function Header(props) {
                         <a href="/profile/client">
                             <p>Perfil</p>
                         </a>
-                        <a href="chat">
+                        <a href="/chat">
                             <p>Chats</p>
                         </a>
                         <img src={lineProfileOpen} alt="" />

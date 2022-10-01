@@ -24,11 +24,18 @@ function ProfileClient() {
             <div className="historyOfServiceClientDiv">
                 <h3>Historico de Serviços</h3>
                 <div className="historyOfServiceClientDivOverflow">
-                    <CardLastServiceHistory/>
-                    <CardLastServiceHistory/>
-                    <CardLastServiceHistory/>
-                    <CardLastServiceHistory/>
-                    <CardLastServiceHistory/>
+                    <CardLastServiceHistory />
+                    <CardLastServiceHistory />
+                </div>
+            </div>
+            <div id="endServiceDivClient" className="endServiceDiv">
+                <div className="endServiceDivIn">
+                    <p>Enviamos um código para o email do cliente, insira este código abaixo</p>
+                    <input type="text" />
+                    <div className="endServiceDivInButton">
+                        <button>Finalizar serviço</button>
+                        <button onClick={closeendServiceDiv}>Sair</button>
+                    </div>
                 </div>
             </div>
         </>
@@ -37,6 +44,9 @@ function ProfileClient() {
 
 export default ProfileClient
 
+function closeendServiceDiv() {
+    document.getElementById("endServiceDivClient").style.display = "none"
+}
 
 const nome = JSON.parse(sessionStorage.getItem("user"))?.name?.split(" ")?.[0] ?? ""
 const email = JSON.parse(sessionStorage.getItem("user"))?.email

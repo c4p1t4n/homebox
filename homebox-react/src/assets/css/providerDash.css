@@ -189,3 +189,57 @@
 .local {
     display: flex;
 }
+
+.endServiceDiv {
+    background-color: rgba(0, 0, 0, 0.413);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.endServiceDivIn {
+    padding: 2%;
+    background-color: white;
+    width: 32vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 30vh;
+    justify-content: space-between;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.endServiceDivIn input {
+    border: none;
+    border-bottom: #0A3969 solid 1px;
+    border-radius: 6px;
+    width: 30%;
+    font-size: 24px;
+    text-align: center;
+}
+
+.endServiceDivInButton {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.endServiceDivInButton button {
+    font-size: 22px;
+    padding: 2%;
+    border-radius: 15px;
+    width: 35%;
+    background-color: #0A3969;
+    color: white;
+}
+
+.endServiceDivInButton button:hover{
+    cursor: pointer;
+    background-color: orange;
+    color: black;
+}

@@ -14,9 +14,16 @@ function cardLastServiceHistory(props) {
                     <p>Data do serviço</p>
                     <p>: 00/00/0000</p>
                 </div>
+                <div className="cardLastServiceButton">
+                    <button onClick={openEndServiceDivClient}>Finalizar Serviço</button>
+                </div>
             </div>
         </>
     )
 }
 
 export default cardLastServiceHistory
+
+function openEndServiceDivClient() {
+    document.getElementById("endServiceDivClient").style.display = "flex"
+}

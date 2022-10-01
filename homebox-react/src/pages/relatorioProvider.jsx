@@ -62,10 +62,10 @@ class relatorioProvider extends Component {
                 xaxis: {
                     categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
                 },
-                yaxis:{
+                yaxis: {
                     forceNiceScale: true,
-                    min:0,
-                    max:5
+                    min: 0,
+                    max: 5
                 }
             },
             series: [
@@ -155,9 +155,9 @@ class relatorioProvider extends Component {
                                 <p>Serviços ativos</p>
                                 <br />
                                 <div className="servicesInProgressOverflow">
-                                    <CardServiceInProgressProvider/>
-                                    <CardServiceInProgressProvider/>
-                                    <CardServiceInProgressProvider/>
+                                    <CardServiceInProgressProvider />
+                                    <CardServiceInProgressProvider />
+                                    <CardServiceInProgressProvider />
                                 </div>
                             </div>
                             <div className="divRightProfileProviderTop">
@@ -214,13 +214,25 @@ class relatorioProvider extends Component {
                         </div>
                     </div>
                 </div>
+                <div id="endServiceDiv" className="endServiceDiv">
+                    <div className="endServiceDivIn">
+                        <p>Enviamos um código para o email do cliente, insira este código abaixo</p>
+                        <input type="text" />
+                        <div className="endServiceDivInButton">
+                            <button>Finalizar serviço</button>
+                            <button onClick={closeendServiceDiv}>Sair</button>
+                        </div>
+                    </div>
+                </div>
             </>
         )
     }
 
 }
 
-
+function closeendServiceDiv() {
+    document.getElementById("endServiceDiv").style.display = "none"
+}
 
 export default relatorioProvider
 

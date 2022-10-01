@@ -62,3 +62,16 @@
 .dateServiceHistory {
     display: flex;
 }
+
+.cardLastServiceButton button{
+    font-size: 24px;
+    background-color: #174574;
+    color: white;
+    border-radius: 15px;
+}
+
+.cardLastServiceButton button:hover{
+    cursor: pointer;
+    background-color: orange;
+    color: black;
+}

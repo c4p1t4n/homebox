@@ -12,7 +12,7 @@ function cardServiceInProgressProvider(props) {
                         <p>: R$00,00</p>
                     </div>
                     <div className="endService">
-                        <button>Finalizar Serviço</button>
+                        <button onClick={openEndServiceDiv}>Finalizar Serviço</button>
                     </div>
                 </summary>
                 <div className="descriptionServiceInProgress">
@@ -28,6 +28,11 @@ function cardServiceInProgressProvider(props) {
             </details>
         </>
     )
+}
+
+
+function openEndServiceDiv() {
+    document.getElementById("endServiceDiv").style.display = "flex"
 }
 
 export default cardServiceInProgressProvider
