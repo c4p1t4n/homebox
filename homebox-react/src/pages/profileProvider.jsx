@@ -30,6 +30,21 @@ function profileProvider() {
         alert("Serviço adicionado !!!")
     }
 
+    function updateService() {
+        api.patch(`/services/update/`+JSON.parse(sessionStorage.getItem("service")).idService, {
+            fkUser: JSON.parse(sessionStorage.getItem("user")).id_user,
+            fkCategory: document.getElementById("editServiceDivSelectCategories").value,
+            name: document.getElementById("editServiceDivNameServiceId").value,
+            description: document.getElementById("editServiceDivTxtid").value,
+            referencePrice: document.getElementById("editServiceDivRefValueId").value
+        }).then((response) => {
+            console.log(response.status)
+        })
+
+      
+        document.getElementById("editServiceDiv").style.display = "none"
+        alert("Serviço Atualizado !!!")
+    }
 
     function closeDivCreateService() {
         document.getElementById("addServiceDiv").style.display = "none"
@@ -152,7 +167,7 @@ function profileProvider() {
                 <div className="deleteServiceProviderDiv">
                     <h3>Deseja excluir esse serviço ?</h3>
                     <div className="deleteServiceProviderDivButton">
-                        <button>SIM</button>
+                        <button onClick={deleteService}>SIM</button>
                         <button onClick={closeDeleteService}>NÃO</button>
                     </div>
                 </div>
@@ -162,6 +177,14 @@ function profileProvider() {
 }
 
 function closeDeleteService() {
+    document.getElementById("deleteServiceProvider").style.display = "none"
+}
+
+function deleteService() {
+    api.delete(`/services/delete/`+JSON.parse(sessionStorage.getItem("service")).idService).then((response) => {
+        console.log(response.status)
+    })
+
     document.getElementById("deleteServiceProvider").style.display = "none"
 }
 
@@ -224,13 +247,6 @@ const updateName = () => {
 
     alert("Nome Alterado!!!!\n" + newName)
     document.getElementById("openDivAlterNameProvider").style.display = "none"
-}
-
-const updateService = () => {
-    let user = JSON.parse(sessionStorage.getItem("user")).id_user
-
-
-    document.getElementById("editServiceDiv").style.display = "none"
 }
 
 const upload = (file, name) => {

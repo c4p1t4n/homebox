@@ -73,6 +73,37 @@ public class ServiceController {
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @PatchMapping("/update/{idService}")
+    public ResponseEntity updateService(@PathVariable int idService,
+                                        @RequestBody ServiceCreationRequest serviceRequest){
+
+        if(!dbRepositoryService.existsByidService(idService)){
+            return status(404).build();
+        }
+
+        Service service = dbRepositoryService.findByidService(idService);
+
+        service.setWorker(dbRepositoryUser.findById(serviceRequest.getFkUser()).get());
+        service.setCategory(dbRepositoryCategory.findById(serviceRequest.getFkCategory()).get());
+        service.setName(serviceRequest.getName());
+        service.setDescription(serviceRequest.getDescription());
+        service.setReferencePrice(serviceRequest.getReferencePrice());
+
+        dbRepositoryService.save(service);
+        return status(200).build();
+    }
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @DeleteMapping("/delete/{idService}")
+    public ResponseEntity delete(@PathVariable Integer idService){
+        if (!dbRepositoryService.existsById(idService)){
+            return status(404).build();
+        }
+        dbRepositoryService.deleteById(idService);
+        return status(200).build();
+    }
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/{id}")
     public ResponseEntity<Service> getId(@PathVariable Integer id) {
         Optional<Service> service = dbRepositoryService.findById(id);
