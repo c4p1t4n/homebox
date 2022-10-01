@@ -30,6 +30,21 @@ function profileProvider() {
         alert("Serviço adicionado !!!")
     }
 
+    function updateService() {
+        api.patch(`/services/update/`+JSON.parse(sessionStorage.getItem("service")).idService, {
+            fkUser: JSON.parse(sessionStorage.getItem("user")).id_user,
+            fkCategory: document.getElementById("editServiceDivSelectCategories").value,
+            name: document.getElementById("editServiceDivNameServiceId").value,
+            description: document.getElementById("editServiceDivTxtid").value,
+            referencePrice: document.getElementById("editServiceDivRefValueId").value
+        }).then((response) => {
+            console.log(response.status)
+        })
+
+      
+        document.getElementById("editServiceDiv").style.display = "none"
+        alert("Serviço Atualizado !!!")
+    }
 
     function closeDivCreateService() {
         document.getElementById("addServiceDiv").style.display = "none"
@@ -210,13 +225,6 @@ const updateName = () => {
 
     alert("Nome Alterado!!!!\n"+newName)
     document.getElementById("openDivAlterNameProvider").style.display = "none"
-}
-
-const updateService = () => {
-    let user = JSON.parse(sessionStorage.getItem("user")).id_user
-
-    
-    document.getElementById("editServiceDiv").style.display = "none"
 }
 
 const upload = (file, name) => {

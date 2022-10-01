@@ -26,4 +26,7 @@ public interface ServiceRepository extends JpaRepository<Service, Integer> {
 
     boolean existsByWorkerId(Integer idWorker);
 
+    boolean existsByidService(Integer idService);
+    Service findByidService(Integer idService);
+
 }
