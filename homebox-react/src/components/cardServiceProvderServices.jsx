@@ -6,6 +6,11 @@ function cardServiceProviderServices(props) {
 
     function openDeleteService(){
         document.getElementById("deleteServiceProvider").style.display="flex"
+
+        const data = {
+            idService: props.id
+        }
+        sessionStorage.setItem("service",JSON.stringify({ ...data }))
     }
 
     function openEditService() {
@@ -21,12 +26,11 @@ function cardServiceProviderServices(props) {
                 document.getElementById("editServiceDivSelectCategories").value = serviceInfo[i][1].category.idCategory
             }
         }
-
+        
         const data = {
             idService: id
         }
         sessionStorage.setItem("service",JSON.stringify({ ...data }))
-        
         document.getElementById("editServiceDiv").style.display = "flex"
     }
 

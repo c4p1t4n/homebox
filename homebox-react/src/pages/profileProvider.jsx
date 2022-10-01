@@ -167,7 +167,7 @@ function profileProvider() {
                 <div className="deleteServiceProviderDiv">
                     <h3>Deseja excluir esse serviço ?</h3>
                     <div className="deleteServiceProviderDivButton">
-                        <button>SIM</button>
+                        <button onClick={deleteService}>SIM</button>
                         <button onClick={closeDeleteService}>NÃO</button>
                     </div>
                 </div>
@@ -177,6 +177,14 @@ function profileProvider() {
 }
 
 function closeDeleteService() {
+    document.getElementById("deleteServiceProvider").style.display = "none"
+}
+
+function deleteService() {
+    api.delete(`/services/delete/`+JSON.parse(sessionStorage.getItem("service")).idService).then((response) => {
+        console.log(response.status)
+    })
+
     document.getElementById("deleteServiceProvider").style.display = "none"
 }
 

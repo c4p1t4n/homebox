@@ -87,12 +87,19 @@ public class ServiceController {
         service.setCategory(dbRepositoryCategory.findById(serviceRequest.getFkCategory()).get());
         service.setName(serviceRequest.getName());
         service.setDescription(serviceRequest.getDescription());
-
-        System.out.println(serviceRequest.getReferencePrice());
-
         service.setReferencePrice(serviceRequest.getReferencePrice());
 
         dbRepositoryService.save(service);
+        return status(200).build();
+    }
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @DeleteMapping("/delete/{idService}")
+    public ResponseEntity delete(@PathVariable Integer idService){
+        if (!dbRepositoryService.existsById(idService)){
+            return status(404).build();
+        }
+        dbRepositoryService.deleteById(idService);
         return status(200).build();
     }
 
