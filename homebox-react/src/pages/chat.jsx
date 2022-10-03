@@ -174,7 +174,7 @@ function Chat() {
                         <input type="date" placeholder="Data do serviço" />
                     </label>
                     <label htmlFor="" className="buttonsCloseBusiness">
-                        <button onClick={closeBusinessN}>Fechar negócio?</button>
+                        <button onClick={closeBusiness}>Fechar negócio?</button>
                         <button onClick={openModalCloseBusinessDiv}>Cancelar</button>
                     </label>
                 </div>
@@ -185,7 +185,29 @@ function Chat() {
 
 export default Chat
 
-function closeBusinessN() { }
+function closeBusiness() { 
+    api.post("/schedulings",{
+        fkUser: JSON.parse(sessionStorage.getItem("user")).id_user,
+        fkService: JSON.parse(sessionStorage.getItem("chatInfo"))//###### get info from worker
+    }
+    ).then(({ status, data }) => {//##### return id from scheduling
+        if (status === 201) {
+            api.post("/schedulings//accomplish/"+data,{
+                scheduling,
+                price,
+                description,
+                serviceDate
+            }
+            ).then(({ status, data }) => {
+                if (status === 201) {
+                    alert("Pedido de serviço enviado!!!")
+                }
+            })
+        }
+    })
+
+    openModalCloseBusinessDiv()
+}
 
 function openModalCloseBusinessDiv() {
     document.getElementById("modalCloseBusinessDiv").style.display = document.getElementById("modalCloseBusinessDiv").style.display === "flex" ? "none" : "flex"

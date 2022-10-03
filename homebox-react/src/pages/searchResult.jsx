@@ -26,8 +26,6 @@ function SearchResult() {
                 if (!value[0]) {
                     document.getElementById("titleSearch").innerHTML = `Nenhum resultado para "${searchValue}"`;
                 }
-                console.log(value)
-                console.log(!value)
                 setSearchResult(value)
             })
             .catch(err => {

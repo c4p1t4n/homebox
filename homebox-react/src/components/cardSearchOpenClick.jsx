@@ -1,34 +1,23 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import CardOpenSearchClick from "../components/cardOpenSearchClick"
 import DynamicStars from "../components/dynamicStart"
-import joseRicardo from "../assets/img/joseRicardoCustumer.png"
 import iconCloseBlue from "../assets/img/iconCloseBlue.png"
 import api from "../api"
 import { useEffect, useState } from "react"
 
 function cardSearchOpenClick(props) {
 
-
-
-
-
-
     function initChat() {
-        const idUser = sessionStorage.getItem("user").id_user
+        const idUser = JSON.parse(sessionStorage.getItem("user")).id_user
         const idWorker = props.id_user
 
-        api.post(`/chat/${idUser}/${idWorker}`)
-            .then(({ status, data }) => {
-                if (status === 200) {
+        api.post("/chat/" + idUser + "/" + idWorker)
+            .then(({ status}) => {
+                if (status === 201) {
                     window.location.href = '/chat'
                 }
             })
     }
-
-
-
-
-
 
     const [listServices, setServices] = useState([])
 
@@ -41,19 +30,10 @@ function cardSearchOpenClick(props) {
             })
     }, [])
 
-
-
-
-
-
-
-
     const close = e => {
         console.log("close")
         document.getElementById(props.name + props.id_user).innerHTML = ""
     };
-
-
 
     return (
         <>
@@ -78,10 +58,6 @@ function cardSearchOpenClick(props) {
                         </div>
                     </div>
                     <div className="cardSearchOpenDivServices">
-                        {/* <div id={props.name + props.id_user}>
-                            {listServices}
-                        </div> */}
-
                         {listServices.map(item => (
                             <CardOpenSearchClick
                                 nameService={item.name}
