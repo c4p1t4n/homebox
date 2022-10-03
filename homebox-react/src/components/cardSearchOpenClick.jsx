@@ -12,9 +12,12 @@ function cardSearchOpenClick(props) {
         const idWorker = props.id_user
 
         api.post("/chat/" + idUser + "/" + idWorker)
-            .then(({ status}) => {
+            .then(({ status }) => {
                 if (status === 201) {
                     window.location.href = '/chat'
+                } else {
+                    console.log(status)
+                    console.log("/chat/" + idUser + "/" + idWorker)
                 }
             })
     }

@@ -40,6 +40,7 @@ public class ChatController {
         if (!dbUserService.existsById(idWorker)) {
             return ResponseEntity.status(404).build();
         }
+        System.out.println(idCustomer + " " + idWorker);
 
         LocalDate today = LocalDate.now();
         Chat newChat = dbRepositoryChat.save(new Chat(today));
@@ -103,10 +104,11 @@ public class ChatController {
 
         for (UserHasChat chat : chats) {
             ChatHasMsg chm = dbRepositoryChatHasMsg.findTop1ByChatIdChatOrderBySendDateDesc(chat.getChat().getIdChat());
-            chatsPerUser.add(new ChatsPerUser(chat.getId(), chat.getUser(), chat.getChat(), chm.getMsg(), chm.getSendDate(), chm.getSeen()));
+            chatsPerUser.add(new ChatsPerUser(chat.getId(), chat.getUser(), chat.getChat(), chm.getMsg(),
+                    chm.getSendDate(), chm.getSeen()));
         }
 
-        chatsPerUser = quickSort(chatsPerUser, 0, chatsPerUser.size()-1);
+        chatsPerUser = quickSort(chatsPerUser, 0, chatsPerUser.size() - 1);
         List<ChatsPerUser> chatsPerUserWithoutDuplicates = new ArrayList<>(
                 new LinkedHashSet<>(chatsPerUser));
 
@@ -116,12 +118,12 @@ public class ChatController {
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/user/{fkUser}/{name}")
     public ResponseEntity<List<ChatsPerUser>> searchChatsPerUser(@PathVariable Integer fkUser,
-                                                                 @PathVariable String name) {
+            @PathVariable String name) {
         if (!dbUserService.existsById(fkUser)) {
             return ResponseEntity.status(404).build();
         }
 
-        List<UserHasChat> chats = dbRepositoryUserHasChat.findByUserWithSpecificPartner(fkUser,name);
+        List<UserHasChat> chats = dbRepositoryUserHasChat.findByUserWithSpecificPartner(fkUser, name);
 
         if (chats.isEmpty()) {
             return ResponseEntity.status(204).build();
@@ -131,10 +133,11 @@ public class ChatController {
 
         for (UserHasChat chat : chats) {
             ChatHasMsg chm = dbRepositoryChatHasMsg.findTop1ByChatIdChatOrderBySendDateDesc(chat.getChat().getIdChat());
-            chatsPerUser.add(new ChatsPerUser(chat.getId(), chat.getUser(), chat.getChat(), chm.getMsg(), chm.getSendDate(), chm.getSeen()));
+            chatsPerUser.add(new ChatsPerUser(chat.getId(), chat.getUser(), chat.getChat(), chm.getMsg(),
+                    chm.getSendDate(), chm.getSeen()));
         }
 
-        chatsPerUser = quickSort(chatsPerUser, 0, chatsPerUser.size()-1);
+        chatsPerUser = quickSort(chatsPerUser, 0, chatsPerUser.size() - 1);
         List<ChatsPerUser> chatsPerUserWithoutDuplicates = new ArrayList<>(
                 new LinkedHashSet<>(chatsPerUser));
 
@@ -219,8 +222,8 @@ public class ChatController {
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/msg/{idChat}/{idUsuario}")
     public ResponseEntity<Void> postMsgInChat(@PathVariable Integer idChat,
-                                              @RequestBody Msg newMsg,
-                                              @PathVariable Integer idUsuario) {
+            @RequestBody Msg newMsg,
+            @PathVariable Integer idUsuario) {
 
         if (!dbRepositoryChat.existsById(idChat)) {
             return ResponseEntity.status(404).build();
@@ -251,20 +254,20 @@ public class ChatController {
         return ResponseEntity.status(404).build();
     }
 
-    public List<ChatsPerUser> quickSort(List<ChatsPerUser> v,int begin,int end){
+    public List<ChatsPerUser> quickSort(List<ChatsPerUser> v, int begin, int end) {
         int i = begin;
         int j = end;
-    
-        LocalDateTime pivo = v.get((begin + end)/2).getSendDate();
-        while(i<=j){
-            //isAfter(), isBefore() and isEqual()
-            while (i<end && v.get(i).getSendDate().isAfter(pivo)){
-                i=i+1;
+
+        LocalDateTime pivo = v.get((begin + end) / 2).getSendDate();
+        while (i <= j) {
+            // isAfter(), isBefore() and isEqual()
+            while (i < end && v.get(i).getSendDate().isAfter(pivo)) {
+                i = i + 1;
             }
-            while (j>begin && v.get(j).getSendDate().isBefore(pivo)){
-                j=j-1;
+            while (j > begin && v.get(j).getSendDate().isBefore(pivo)) {
+                j = j - 1;
             }
-            if (i<=j){
+            if (i <= j) {
                 ChatsPerUser aux = v.get(i);
                 int indexI = v.indexOf(v.get(i));
                 int indexJ = v.indexOf(v.get(j));
@@ -276,11 +279,11 @@ public class ChatController {
                 j = j - 1;
             }
         }
-        if (begin<j){
-            quickSort(v,begin,j);
+        if (begin < j) {
+            quickSort(v, begin, j);
         }
-        if (i<end){
-            quickSort(v,i,end);
+        if (i < end) {
+            quickSort(v, i, end);
         }
         return v;
     }
