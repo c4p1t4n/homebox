@@ -31,7 +31,11 @@ function Home() {
     const data = {
         idChat: 1
     }
+    const info = {
+        
+    }
     sessionStorage.setItem("chat", JSON.stringify({...data}))
+    sessionStorage.setItem("servicesInfo", JSON.stringify({...info}))
 
     const [worker, setWorker] = useState([])
 
