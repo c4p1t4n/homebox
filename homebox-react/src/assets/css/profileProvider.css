@@ -170,7 +170,7 @@
 .infoService:hover {
     background-color: #0a3a69b5;
     color: white;
-    
+
     cursor: pointer;
 }
 
@@ -388,4 +388,81 @@
     cursor: pointer;
     background-color: orange;
     color: black;
+}
+
+.addMsgOfInit {
+    width: 100%;
+    font-size: 20px;
+    margin-top: 3%;
+    border: none;
+    border-bottom: solid 1px #0A3969;
+    border-radius: 5px;
+}
+
+#botao5 {
+    font-family: 'Poppins';
+    font-style: normal;
+    line-height: 36px;
+    width: 400px;
+    height: 50px;
+    color: #000000;
+    background: #c9c9c9b6;
+    border-radius: 49px;
+    font-size: 20px;
+}
+
+#botao5:hover {
+    cursor: pointer;
+    background: rgba(145, 139, 139, 0.813);
+    color: white;
+}
+
+.modalAlterMsgInitChat {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #00000053;
+}
+
+.modalAlterMsgInitChatDiv {
+    background-color: white;
+    padding: 2%;
+    font-size: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 40vh;
+    border-radius: 15px;
+    color: #031c34;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.modalAlterMsgInitChatDiv textarea {
+    font-size: 18px;
+    width: 100%;
+}
+
+.divBotao10 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.botao10 {
+    font-size: 28px;
+    padding: 2%;
+    width: 30%;
+    border-radius: 15px;
+    background-color: #0A3969;
+    color: white;
+}
+
+.botao10:hover {
+    background-color: orange;
+    color: black;
+    cursor: pointer;
 }

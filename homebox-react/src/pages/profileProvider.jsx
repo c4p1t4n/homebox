@@ -31,7 +31,7 @@ function profileProvider() {
     }
 
     function updateService() {
-        api.patch(`/services/update/`+JSON.parse(sessionStorage.getItem("service")).idService, {
+        api.patch(`/services/update/` + JSON.parse(sessionStorage.getItem("service")).idService, {
             fkUser: JSON.parse(sessionStorage.getItem("user")).id_user,
             fkCategory: document.getElementById("editServiceDivSelectCategories").value,
             name: document.getElementById("editServiceDivNameServiceId").value,
@@ -41,7 +41,7 @@ function profileProvider() {
             console.log(response.status)
         })
 
-      
+
         document.getElementById("editServiceDiv").style.display = "none"
         alert("Serviço Atualizado !!!")
     }
@@ -74,6 +74,7 @@ function profileProvider() {
                     <div className="divAlterPhotoProvider">
                         <p className="alterPhoto" onClick={changePhoto}>Alterar foto</p >
                     </div>
+                    <button onClick={openModalAlterMsgInitChat} id="botao5">Alterar mensagem de saudação</button>
                     <button id="botao1" onClick={openCreateService}>Adicionar um serviço</button>
                     <div className="divServicesProvider">
                         {listServices.map(item => (
@@ -172,16 +173,36 @@ function profileProvider() {
                     </div>
                 </div>
             </div>
+            <div id="modalAlterMsgInitChat" className="modalAlterMsgInitChat">
+                <div className="modalAlterMsgInitChatDiv">
+                    <p>Digite uma mensagem de saudação abaixo para o chat</p>
+                    <textarea placeholder="Exemplo: Olá, sou xxxxx, qual serviço gostaria de conversar ?" name="" id="" cols="30" rows="8"></textarea>
+                    <div className="divBotao10">
+                        <button className="botao10">Salvar</button>
+                        <button onClick={closeModalAlterMsgInitChat} className="botao10">Sair</button>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
+
+
+function openModalAlterMsgInitChat() {
+    document.getElementById("modalAlterMsgInitChat").style.display = "flex"
+}
+
+function closeModalAlterMsgInitChat() {
+    document.getElementById("modalAlterMsgInitChat").style.display = "none"
+}
+
 
 function closeDeleteService() {
     document.getElementById("deleteServiceProvider").style.display = "none"
 }
 
 function deleteService() {
-    api.delete(`/services/delete/`+JSON.parse(sessionStorage.getItem("service")).idService).then((response) => {
+    api.delete(`/services/delete/` + JSON.parse(sessionStorage.getItem("service")).idService).then((response) => {
         console.log(response.status)
     })
 
