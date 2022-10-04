@@ -229,6 +229,7 @@
 
 .cardChatMsgLeft p {
     width: 100%;
+    color: white;
     font-size: 20px;
 }
 
@@ -324,7 +325,7 @@
 
 .closeBusinessDivImgWithText {
     display: none;
-    background-color: #3d638919;
+    background-color: rgb(195 208 223);
     border-radius: 15px;
     padding: 2%;
     width: 100%;
@@ -406,7 +407,7 @@
     border-radius: 15px;
 }
 
-.modalCloseBusinessDiv button:hover{
+.modalCloseBusinessDiv button:hover {
     cursor: pointer;
     background-color: orange;
     color: black;
