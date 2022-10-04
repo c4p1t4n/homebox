@@ -1,9 +1,9 @@
 #root{
-    width: 100%;
+    width: 100vw;
 }
 
 Header {
-    width: 100%;
+    width: 100vw;
 }
 
 
@@ -20,7 +20,7 @@ Header {
 }
 
 .header .logo {
-    height: 80px;
+    width: 120px;
     margin-top: 10px;
 }
 
