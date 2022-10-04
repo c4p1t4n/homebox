@@ -165,6 +165,10 @@ function Chat() {
                         <p>Nome do serviço</p>
                         <input type="text" placeholder="Nome do serviço" />
                     </label>
+                    <label htmlFor="Address">
+                        <p>Endereço</p>
+                        <input type="text" placeholder="Endereço"/>
+                    </label>
                     <label htmlFor="ValueOfService">
                         <p>Valor do serviço</p>
                         <input type="number" placeholder="Valor R$" />
