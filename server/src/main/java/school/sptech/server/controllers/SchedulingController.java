@@ -86,17 +86,17 @@ public class SchedulingController {
             return status(400).body("Usuário cadastrado como prestador de serviço");
         }
 
-        if (dbRepositoryScheduling.existsByCustomerIdAndServiceIdService(customer.getId(),
-                service.getIdService())) {
-            return status(403).body("Usuário já possui agendamento do serviço em questão");
-        }
+//        if (dbRepositoryScheduling.existsByCustomerIdAndServiceIdService(customer.getId(),
+//                service.getIdService())) {
+//            return status(403).body("Usuário já possui agendamento do serviço em questão");
+//        }
 
         Scheduling scheduling = dbRepositoryScheduling.save(new Scheduling(customer, service));
 
         SchedulingStatus schedulingStatus = dbRepositorySchedulingStatus
                 .save(new SchedulingStatus("scheduled", LocalDate.now(), scheduling));
 
-        return status(201).body(schedulingStatus);
+        return status(201).body(scheduling);
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -125,12 +125,9 @@ public class SchedulingController {
     @PostMapping("/accomplish/{id}")
     public ResponseEntity<Object> accomplishScheduling(@PathVariable Integer id,
             @RequestBody AccomplishServiceInfo serviceInfo) {
-        // ! implementar refactor para fazer o prestador de serviço confirmar a execução
-        // ! e apenas depois aparecer para o cliente (setar o status como done e na vez
-        // ! (setar o status como done e na vez do cliente ver se ja é done)
-        // ! ou associar o done com o prestador de serviço e o rated com o cliente (pois
-        // ! mesmo se o cliente prefere não avaliar o status fica como rated para não
-        // ! ficar floodando ele com esse pedido)
+
+        System.out.println(id);
+
         Optional<Scheduling> schedulingOptional = dbRepositoryScheduling.findById(id);
 
         if (!schedulingOptional.isPresent()) {

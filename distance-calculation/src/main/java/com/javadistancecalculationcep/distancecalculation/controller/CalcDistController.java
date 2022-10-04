@@ -82,9 +82,6 @@ public class CalcDistController {
     }
 
     public static Double calcularDisntancia(Double[] lugar1, Double[] lugar2) {
-        System.out.println(lugar1[0] + "\t" + lugar1[1]);
-        System.out.println(lugar2[0] + "\t" + lugar2[1]);
-
         Double long1 = toRad(lugar1[0]);
         Double lati1 = toRad(lugar1[1]);
         Double long2 = toRad(lugar2[0]);
