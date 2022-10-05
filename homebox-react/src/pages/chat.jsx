@@ -104,7 +104,7 @@ function Chat() {
     var serviceInfoObj = JSON.parse(sessionStorage.getItem("servicesInfo"));
     var serviceInfo = Object.keys(serviceInfoObj).map(key => [String(key), serviceInfoObj[key]]);
     for (let i = 0; i < serviceInfo.length; i++) {
-        services.push(<option value={serviceInfo[i][1].idService+"/"+serviceInfo[i][1].name}>
+        services.push(<option value={serviceInfo[i][1].idService}>
             {serviceInfo[i][1].name}
             </option>)
     }
@@ -179,7 +179,7 @@ function Chat() {
                     </label>
                     <label htmlFor="Address">
                         <p>Endereço</p>
-                        <input type="text" placeholder="Endereço"/>
+                        <input id="adress" type="text" placeholder="Endereço"/>
                     </label>
                     <label htmlFor="ValueOfService">
                         <p>Valor do serviço</p>
@@ -201,28 +201,17 @@ function Chat() {
 
 export default Chat
 
-// function setChatEmpty(){
-//     if(JSON.parse(sessionStorage.getItem("chat")).idChat == 1){
-//         document.getElementById("closeBusinessDivImg").display = 'none'
-//     }
-// }
-
-
-
 function closeBusinessFunction() {
-    var array = document.getElementById("select_categories").value.split("/")
-    var value = parseInt(array[0])
-    var nameService = array[1]
 
     api.post("/schedulings", {
         fkUser: JSON.parse(sessionStorage.getItem("user")).id_user,
-        fkService: value
+        fkService: document.getElementById("select_categories").value
     }
     ).then(({ status, data }) => {
         if (status === 201) {
             api.post("/schedulings/accomplish/" + data.idScheduling, {
                 price: document.getElementById("serviceValue").value,
-                description: nameService,
+                description: document.getElementById("adress").value,
                 serviceDate: document.getElementById("serviceDate").value 
             }
             ).then(({ status, data }) => {
