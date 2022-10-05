@@ -177,6 +177,10 @@ function Chat() {
                             {services}
                         </select>
                     </label>
+                    <label htmlFor="Address">
+                        <p>Endereço</p>
+                        <input type="text" placeholder="Endereço"/>
+                    </label>
                     <label htmlFor="ValueOfService">
                         <p>Valor do serviço</p>
                         <input id="serviceValue" type="number" placeholder="Valor R$" />
