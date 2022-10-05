@@ -104,7 +104,7 @@ function Chat() {
     var serviceInfoObj = JSON.parse(sessionStorage.getItem("servicesInfo"));
     var serviceInfo = Object.keys(serviceInfoObj).map(key => [String(key), serviceInfoObj[key]]);
     for (let i = 0; i < serviceInfo.length; i++) {
-        services.push(<option value={serviceInfo[i][1].category.idCategory+"/"+serviceInfo[i][1].name}>
+        services.push(<option value={serviceInfo[i][1].idService+"/"+serviceInfo[i][1].name}>
             {serviceInfo[i][1].name}
             </option>)
     }
@@ -160,7 +160,7 @@ function Chat() {
                     </div>
                 </div>
             </div>
-            <div className="closeBusinessDiv">
+            <div className="closeBusinessDiv" id="closeBusinessDiv">
                 <div id="closeBusinessDivImg" className="closeBusinessDivImg">
                     <img onClick={openCloseBusinessDivImgWithText} src={closeBusiness} alt="Fechar Negocio" />
                 </div>
@@ -196,6 +196,14 @@ function Chat() {
 }
 
 export default Chat
+
+// function setChatEmpty(){
+//     if(JSON.parse(sessionStorage.getItem("chat")).idChat == 1){
+//         document.getElementById("closeBusinessDivImg").display = 'none'
+//     }
+// }
+
+
 
 function closeBusinessFunction() {
     var array = document.getElementById("select_categories").value.split("/")

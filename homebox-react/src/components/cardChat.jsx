@@ -31,4 +31,6 @@ function setChat(value){
             sessionStorage.setItem("chatInfo", JSON.stringify({...data}))
         }
     })
+
+    document.getElementById("closeBusinessDiv").style.display = 'flex'
 }

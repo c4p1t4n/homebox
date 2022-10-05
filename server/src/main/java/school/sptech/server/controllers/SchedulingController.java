@@ -60,12 +60,10 @@ public class SchedulingController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/{id}")
-    public ResponseEntity<Scheduling> getId(@PathVariable Integer id) {
-        Optional<Scheduling> scheduling = dbRepositoryScheduling.findById(id);
+    public ResponseEntity getId(@PathVariable Integer id) {
+        Scheduling scheduling = dbRepositoryScheduling.findById(id).get();
 
-        return !scheduling.isPresent()
-                ? status(404).build()
-                : status(200).body(scheduling.get());
+        return status(200).build();
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -86,10 +84,10 @@ public class SchedulingController {
             return status(400).body("Usuário cadastrado como prestador de serviço");
         }
 
-//        if (dbRepositoryScheduling.existsByCustomerIdAndServiceIdService(customer.getId(),
-//                service.getIdService())) {
-//            return status(403).body("Usuário já possui agendamento do serviço em questão");
-//        }
+        if (dbRepositoryScheduling.existsByCustomerIdAndServiceIdService(customer.getId(),
+                service.getIdService())) {
+            return status(403).body("Usuário já possui agendamento do serviço em questão");
+        }
 
         Scheduling scheduling = dbRepositoryScheduling.save(new Scheduling(customer, service));
 

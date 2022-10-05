@@ -1,21 +1,12 @@
-import MenuLeftProvider from "../components/menuLeftProvider"
-
 import "../assets/css/providerDash.css"
-
+import MenuLeftProvider from "../components/menuLeftProvider"
 import CardServiceInProgressProvider from "../components/cardServiceInProgressProvider"
-
+import DynamicStars from "../components/dynamicStart"
 import questionMark from "../assets/img/quesntion-mark.png"
 
 import Chart from "react-apexcharts"
-
 import React, { Component } from "react"
-
 import api from "../api"
-
-import DynamicStars from "../components/dynamicStart"
-
-
-
 
 
 function getLastSevendays() {
@@ -36,8 +27,6 @@ function getLastSevendays() {
             list_date.push(String(list[x]) + '/' + String(date.getMonth()))
         }
     }
-    console.log(list)
-    console.log(list_date)
     return list_date.reverse()
 }
 
@@ -79,33 +68,16 @@ class relatorioProvider extends Component {
         };
     }
 
-
-
-
-
-
-
-
-
     async componentDidMount() {
         let id_user = JSON.parse(sessionStorage.getItem('user')).id_user
 
         let temp_value = await api.get(`/users/avg-rating/${id_user}`).catch(err => err.response)
-        console.log(`media:${temp_value.data}`)
         this.setState({ avg: (temp_value.data === 0 ? "0" : temp_value.data.toFixed(2)) })
-        console.log(this.state.avg)
-
-
+    
         let visitas_semana = await api.get(`interestAccess/avg_last_seven_days/${id_user}`,).catch(err => err.response)
         this.setState({ visitas_semana: (visitas_semana.data === 0 ? "0" : visitas_semana.data) })
-        console.log(`lista_ultima_semanaaaaaa:${this.state.visitas_semana}`)
-
-
-
 
         let list_medias_ultima_semana = await api.get(`interestAccess/getListAvgLastSevenDays/${id_user}`,).catch(err => err.response)
-        console.log(list_medias_ultima_semana)
-        console.log(`lista_dados:${list_medias_ultima_semana.data}`)
         this.setState({
             series: [
                 {
@@ -136,14 +108,17 @@ class relatorioProvider extends Component {
 
     }
     render() {
+        
+        var servicesList = []
+        api.get(`/chat/msgs/` + JSON.parse(sessionStorage.getItem("chat")).idChat
+        ).then(({ status, data }) => {
+            if (status === 200) {
+                sessionStorage.setItem("chatInfo", JSON.stringify({ ...data }))
+            }
+        })
 
-        // const getAvgRating = async(idUser) => {
-        //    let valor = await api.post(`/users/avg-rating/${idUser}`,).catch(err => err.response)
-        //     console.log(valor)
-        //     console.log(valor.data)
-        //     return valor.data
-        //         // console.log(`data:${data}`)
-        // }
+        servicesList.push(<CardServiceInProgressProvider />)
+        
         return (
             <>
 
@@ -155,9 +130,7 @@ class relatorioProvider extends Component {
                                 <p>Serviços ativos</p>
                                 <br />
                                 <div className="servicesInProgressOverflow">
-                                    <CardServiceInProgressProvider />
-                                    <CardServiceInProgressProvider />
-                                    <CardServiceInProgressProvider />
+                                    {servicesList}
                                 </div>
                             </div>
                             <div className="divRightProfileProviderTop">
