@@ -232,7 +232,7 @@ public class UserController {
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
-    @PostMapping(value = "/avg-rating/{idUser}")
+    @GetMapping(value = "/avg-rating/{idUser}")
     public ResponseEntity<Double> getAvgRating(@PathVariable Integer idUser) {
         if (!dbServiceUser.existsById(idUser)) {
             return status(404).build();
