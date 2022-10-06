@@ -11,4 +11,5 @@ public interface MsgRepository extends JpaRepository<Msg, Integer> {
     boolean existsByUserId(Integer fkUser);
 
     List<Msg> findByUserId(Integer fkUser);
+    Msg findByUserIdAndAutomatic(Integer fkUser, Character automatic);
 }

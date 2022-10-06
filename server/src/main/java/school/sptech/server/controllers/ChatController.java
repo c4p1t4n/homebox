@@ -254,6 +254,32 @@ public class ChatController {
         return ResponseEntity.status(404).build();
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @GetMapping(value = "/msg/auto/{idUser}")
+    public ResponseEntity getAutoMsg(@PathVariable Integer idUser) {
+        if (!dbRepositoryUser.existsById(idUser)) {
+            return ResponseEntity.status(404).build();
+        }
+        Msg msg = dbRepositoryMsg.findByUserIdAndAutomatic(idUser, 'y');
+
+        return ResponseEntity.status(200).body(msg);
+    }
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @PatchMapping(value = "/att/msg/{idUser}/{message}")
+    public ResponseEntity updateAutoMsg(@PathVariable Integer idUser,
+                                        @PathVariable String message) {
+        if (!dbRepositoryUser.existsById(idUser)) {
+            return ResponseEntity.status(404).build();
+        }
+        Msg msg = dbRepositoryMsg.findByUserIdAndAutomatic(idUser, 'y');
+        msg.setMessage(message);
+        dbRepositoryMsg.save(msg);
+
+        return ResponseEntity.status(200).build();
+    }
+
+
     public List<ChatsPerUser> quickSort(List<ChatsPerUser> v, int begin, int end) {
         int i = begin;
         int j = end;

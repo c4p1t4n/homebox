@@ -176,9 +176,9 @@ function profileProvider() {
             <div id="modalAlterMsgInitChat" className="modalAlterMsgInitChat">
                 <div className="modalAlterMsgInitChatDiv">
                     <p>Digite uma mensagem de saudação abaixo para o chat</p>
-                    <textarea placeholder="Exemplo: Olá, sou xxxxx, qual serviço gostaria de conversar ?" name="" id="" cols="30" rows="8"></textarea>
+                    <textarea placeholder="Exemplo: Olá, sou xxxxx, qual serviço gostaria de conversar ?"  id="textArea" cols="30" rows="8"></textarea>
                     <div className="divBotao10">
-                        <button className="botao10">Salvar</button>
+                        <button onClick={alterMsgInitChat} className="botao10">Salvar</button>
                         <button onClick={closeModalAlterMsgInitChat} className="botao10">Sair</button>
                     </div>
                 </div>
@@ -187,8 +187,25 @@ function profileProvider() {
     )
 }
 
+function alterMsgInitChat() {
+    api.patch(`/chat/att/msg/${JSON.parse(sessionStorage.getItem("user")).id_user}/`+document.getElementById("textArea").value)
+    .then(({ status, data }) => {
+        if (status === 200) {
+            alert("Menssagem Alterada")
+            closeModalAlterMsgInitChat()
+        }
+    })
+
+}
 
 function openModalAlterMsgInitChat() {
+    api.get(`/chat/msg/auto/${JSON.parse(sessionStorage.getItem("user")).id_user}`)
+    .then(({ status, data }) => {
+        if (status === 200) {
+            document.getElementById("textArea").innerHTML = data.message
+        }
+    })
+
     document.getElementById("modalAlterMsgInitChat").style.display = "flex"
 }
 
