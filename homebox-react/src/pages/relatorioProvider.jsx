@@ -110,12 +110,12 @@ class relatorioProvider extends Component {
     render() {
         
         var servicesList = []
-        api.get(`/chat/msgs/` + JSON.parse(sessionStorage.getItem("chat")).idChat
-        ).then(({ status, data }) => {
-            if (status === 200) {
-                sessionStorage.setItem("chatInfo", JSON.stringify({ ...data }))
-            }
-        })
+            // api.get(`/services/list/` + JSON.parse(sessionStorage.getItem("chat")).idChat
+            // ).then(({ status, data }) => {
+            //     if (status === 200) {
+            //     console.log(data)
+            //     }
+            // })
 
         servicesList.push(<CardServiceInProgressProvider />)
         

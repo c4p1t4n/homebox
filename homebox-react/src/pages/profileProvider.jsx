@@ -11,6 +11,11 @@ import { S3Client } from "@aws-sdk/client-s3";
 import { v4 as uuidv4 } from 'uuid';
 
 function profileProvider() {
+    const data = {
+        idChat: 1
+    }
+    sessionStorage.setItem("chat", JSON.stringify({...data}))
+
     function openCreateService() {
         document.getElementById("addServiceDiv").style.display = "flex"
     }
@@ -40,7 +45,6 @@ function profileProvider() {
         }).then((response) => {
             console.log(response.status)
         })
-
 
         document.getElementById("editServiceDiv").style.display = "none"
         alert("Serviço Atualizado !!!")
