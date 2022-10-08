@@ -102,7 +102,7 @@ const logOffSwitch = e => {
 
 const logOff = e => {
     sessionStorage.clear()
-    window.location.href = "http://127.0.0.1:5500/website/index.html"
+    window.location.href = "http://app-homebox.sytes.net/login"
 }
 
 const profileSwitch = e => {
