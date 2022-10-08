@@ -8,11 +8,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import school.sptech.server.model.AccomplishedService;
 import school.sptech.server.model.Rating;
@@ -29,9 +25,6 @@ import school.sptech.server.repository.UserRepository;
 import school.sptech.server.request.AccomplishServiceInfo;
 import school.sptech.server.request.RatingCreationRequest;
 import school.sptech.server.request.SchedulingCreationRequest;
-
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/schedulings")
@@ -98,8 +91,9 @@ public class SchedulingController {
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
-    @PostMapping("/status/{id}/{status}")
-    public ResponseEntity<Object> updateStatus(@PathVariable Integer id, @PathVariable String status) {
+    @PatchMapping("/status/{id}/{status}")
+    public ResponseEntity updateStatus(@PathVariable Integer id,
+                                       @PathVariable String status) {
         Optional<Scheduling> schedulingOptional = dbRepositoryScheduling.findById(id);
 
         if (!schedulingOptional.isPresent()) {
@@ -116,15 +110,13 @@ public class SchedulingController {
         SchedulingStatus schedulingStatus = dbRepositorySchedulingStatus
                 .save(new SchedulingStatus(status, LocalDate.now(), scheduling));
 
-        return status(201).body(schedulingStatus);
+        return status(201).build();
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/accomplish/{id}")
     public ResponseEntity<Object> accomplishScheduling(@PathVariable Integer id,
             @RequestBody AccomplishServiceInfo serviceInfo) {
-
-        System.out.println(id);
 
         Optional<Scheduling> schedulingOptional = dbRepositoryScheduling.findById(id);
 

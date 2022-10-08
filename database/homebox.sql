@@ -141,14 +141,7 @@ CREATE TABLE scheduling (
 
 CREATE TABLE scheduling_status (
     id_scheduling_status int PRIMARY KEY AUTO_INCREMENT,
-    service_status ENUM(
-        "scheduled",
-        "done",
-        "worker-cancelled",
-        "customer-cancelled",
-        "not-executed",
-        "rated"
-    ) NOT NULL,
+    service_status VARCHAR(28),
     status_date DATETIME NOT NULL,
     scheduling_id_scheduling int,
     FOREIGN KEY (scheduling_id_scheduling) REFERENCES scheduling(id_scheduling)

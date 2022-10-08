@@ -1,15 +1,27 @@
+import api from "../api"
+
 function cardServiceInProgressProvider(props) {
+    
+    function openEndServiceDiv() {
+    const data = {
+        idService: props.id
+    }
+    sessionStorage.setItem("service", JSON.stringify({...data}))
+
+        document.getElementById("endServiceDiv").style.display = "flex"
+    }
+
     return (
         <>
             <details open className="cardServiceInProgressProvider">
                 <summary>
                     <div className="nameServiceInProgressProvider">
                         <p>Serviço</p>
-                        <p>: xxxxxxx</p>
+                        <p>: {props.service}</p>
                     </div>
                     <div className="nameServiceInProgressProvider">
                         <p>Preço</p>
-                        <p>: R$00,00</p>
+                        <p>: R${props.price}</p>
                     </div>
                     <div className="endService">
                         <button onClick={openEndServiceDiv}>Finalizar Serviço</button>
@@ -18,21 +30,16 @@ function cardServiceInProgressProvider(props) {
                 <div className="descriptionServiceInProgress">
                     <div className="clientServiceInProgress">
                         <p>Cliente</p>
-                        <p>: xxxxxxx</p>
+                        <p>:{props.client}</p>
                     </div>
                     <div className="local">
                         <p>Local</p>
-                        <p>: xxxxxxxxxx</p>
+                        <p>: {props.local}</p>
                     </div>
                 </div>
             </details>
         </>
     )
-}
-
-
-function openEndServiceDiv() {
-    document.getElementById("endServiceDiv").style.display = "flex"
 }
 
 export default cardServiceInProgressProvider

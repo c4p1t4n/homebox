@@ -5,9 +5,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import school.sptech.server.model.Category;
 import school.sptech.server.model.Service;
+import school.sptech.server.model.ServicesScheduling;
 import school.sptech.server.model.User;
 import school.sptech.server.repository.CategoryRepository;
 import school.sptech.server.repository.ServiceRepository;
+import school.sptech.server.repository.ServicesSchedulingRepository;
 import school.sptech.server.repository.UserRepository;
 import school.sptech.server.request.ServiceCreationRequest;
 
@@ -38,6 +40,9 @@ public class ServiceController {
     private UserRepository dbRepositoryUser;
     @Autowired
     private CategoryRepository dbRepositoryCategory;
+
+    @Autowired
+    private ServicesSchedulingRepository dbRepositoryServicesScheduling;
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping
@@ -201,6 +206,34 @@ public class ServiceController {
         service = dbRepositoryService.save(service);
 
         return status(200).body(service);
+    }
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @GetMapping("/list/{id}")
+    public ResponseEntity listServicesScheduled(@PathVariable Integer id) {
+
+        List<ServicesScheduling> services = dbRepositoryServicesScheduling.findByWorkerIdAndStatus(id,"scheduled");
+
+        if (services.isEmpty()) {
+            return status(404).build();
+        }
+
+        return status(200).body(services);
+
+    }
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @GetMapping("/list/client/{id}")
+    public ResponseEntity listServicesScheduledClient(@PathVariable Integer id) {
+
+        List<ServicesScheduling> services = dbRepositoryServicesScheduling.findByCustomerIdAndStatusOrStatus(id,"scheduled","done");
+
+        if (services.isEmpty()) {
+            return status(404).build();
+        }
+
+        return status(200).body(services);
+
     }
 
 }
