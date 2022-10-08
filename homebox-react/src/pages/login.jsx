@@ -113,9 +113,7 @@ const login = e => {
     }).catch(err => err.response)
         .then(({ status, data }) => {
             if (status === 200) {
-                sessionStorage.setItem(
-                    "user",
-                    JSON.stringify({ ...data })
+                sessionStorage.setItem("user",JSON.stringify({ ...data })    
                 )
                 if (data.type === "worker") window.location.href = "/profile/provider"
                 else if (data.type === "customer") window.location.href = "/"

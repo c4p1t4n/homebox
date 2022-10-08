@@ -231,7 +231,7 @@ public class UserController {
         if (response.getStatusCodeValue() == 404 || response.getStatusCodeValue() == 204) {
             users = dbRepositoryService.UserHasSearchs(value).stream()
                     .map((user) -> new UserSearchQueryResult(user,
-                            dbRepositoryRating.getAvgRatingForWorker(user.getId()),
+                            dbRepositoryRating.getAvgWorker(user.getId()),
                             getDist(user.getCep(), dbServiceUser.findById(requestId.getId()).get().getCep()).getBody(),
                             getWorkerCategories(user.getId()).getBody().get(0).getName()))
                     .collect(Collectors.toList());
@@ -241,7 +241,7 @@ public class UserController {
                     .getBody()
                     .stream()
                     .map((item) -> new UserSearchQueryResult(item.getUser(),
-                            dbRepositoryRating.getAvgRatingForWorker(item.getUser().getId()),
+                            dbRepositoryRating.getAvgWorker(item.getUser().getId()),
                             getDist(item.getUser().getCep(), dbServiceUser.findById(requestId.getId()).get().getCep())
                                     .getBody(),
                             item.getCategory()))
@@ -276,7 +276,7 @@ public class UserController {
         if (!dbServiceUser.existsById(idUser)) {
             return status(404).build();
         }
-        Double rating = dbRepositoryRating.getAvgRatingForWorker(idUser);
+        Double rating = dbRepositoryRating.getAvgWorker(idUser);
 
         if (rating == null) {
             return status(204).build();
@@ -306,7 +306,7 @@ public class UserController {
 
         List<UserSearchQueryResult> users = dbServiceUser.get3Workers().stream()
                 .map((user) -> new UserSearchQueryResult(user,
-                        dbRepositoryRating.getAvgRatingForWorker(user.getId()),
+                        dbRepositoryRating.getAvgWorker(user.getId()),
                         getDist(user.getCep(), dbServiceUser.findById(id).get().getCep()).getBody(),
                         getWorkerCategories(user.getId()).getBody().get(0)))
                 .collect(Collectors.toList());

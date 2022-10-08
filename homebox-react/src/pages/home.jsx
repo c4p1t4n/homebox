@@ -31,8 +31,7 @@ function Home() {
     const data = {
         idChat: 1
     }
-    const info = {
-        
+    const info = {     
     }
     sessionStorage.setItem("chat", JSON.stringify({...data}))
     sessionStorage.setItem("servicesInfo", JSON.stringify({...info}))

@@ -1,6 +1,6 @@
 import "../assets/css/providerDash.css"
 import MenuLeftProvider from "../components/menuLeftProvider"
-import CardServiceInProgressProvider from "../components/cardServiceInProgressProvider"
+import ServicesList from "../components/servicesList"
 import DynamicStars from "../components/dynamicStart"
 import questionMark from "../assets/img/quesntion-mark.png"
 
@@ -107,18 +107,7 @@ class relatorioProvider extends Component {
         })
 
     }
-    render() {
-        
-        var servicesList = []
-        api.get(`/chat/msgs/` + JSON.parse(sessionStorage.getItem("chat")).idChat
-        ).then(({ status, data }) => {
-            if (status === 200) {
-                sessionStorage.setItem("chatInfo", JSON.stringify({ ...data }))
-            }
-        })
-
-        servicesList.push(<CardServiceInProgressProvider />)
-        
+    render() {        
         return (
             <>
 
@@ -130,7 +119,7 @@ class relatorioProvider extends Component {
                                 <p>Serviços ativos</p>
                                 <br />
                                 <div className="servicesInProgressOverflow">
-                                    {servicesList}
+                                    <ServicesList />
                                 </div>
                             </div>
                             <div className="divRightProfileProviderTop">
@@ -190,9 +179,9 @@ class relatorioProvider extends Component {
                 <div id="endServiceDiv" className="endServiceDiv">
                     <div className="endServiceDivIn">
                         <p>Enviamos um código para o email do cliente, insira este código abaixo</p>
-                        <input type="text" />
+                        <input id="pin" type="text" />
                         <div className="endServiceDivInButton">
-                            <button>Finalizar serviço</button>
+                            <button onClick={finishService}>Finalizar serviço</button>
                             <button onClick={closeendServiceDiv}>Sair</button>
                         </div>
                     </div>
@@ -201,6 +190,19 @@ class relatorioProvider extends Component {
         )
     }
 
+}
+
+function finishService(){
+    var pin = document.getElementById("pin").value
+    var id = JSON.parse(sessionStorage.getItem("service")).idService
+    
+    api.patch(`/schedulings/status/${id}/done`
+    ).then(({ status, data }) => {
+        if (status === 201) {
+            alert("Serviço Finalizado!!!")
+            closeendServiceDiv()
+        }
+    })
 }
 
 function closeendServiceDiv() {
