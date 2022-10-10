@@ -12,8 +12,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.FluentQuery.FetchableFluentQuery;
 
 import school.sptech.server.model.Staff;
+import school.sptech.server.model.User;
 
 public interface StaffRepository extends JpaRepository<Staff, Integer> {
+
+    Staff findByEmailAndPassword(String email, String password);
 
     void deleteAllByIdInBatch(Iterable<Integer> ids);
 

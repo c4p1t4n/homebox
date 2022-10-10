@@ -4,10 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import school.sptech.server.model.Category;
-
+import school.sptech.server.model.Staff;
 import school.sptech.server.model.User;
 import school.sptech.server.repository.ServiceRepository;
 import school.sptech.server.repository.UserRepository;
+import school.sptech.server.repository.StaffRepository;
 
 import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
@@ -21,6 +22,8 @@ public class UserService {
 
     @Autowired
     UserRepository dbUserRepository;
+    @Autowired
+    StaffRepository dbStaffRepository;
     @Autowired
     ServiceRepository dbRepositoryService;
 
@@ -58,6 +61,14 @@ public class UserService {
         password = encriptPassword(password);
 
         return dbUserRepository.findByEmailAndPassword(email, password);
+
+    }
+
+    public Staff staffLogin(String email, String password) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+
+        password = encriptPassword(password);
+
+        return dbStaffRepository.findByEmailAndPassword(email, password);
 
     }
 

@@ -4,8 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import school.sptech.server.model.Staff;
+import school.sptech.server.model.User;
 import school.sptech.server.repository.StaffRepository;
+import school.sptech.server.request.LoginRequest;
+import school.sptech.server.service.UserService;
 
+import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -15,6 +20,8 @@ public class StaffController {
 
     @Autowired
     private StaffRepository dbRepositoryStaff;
+    @Autowired
+    private UserService dbServiceUser;
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping()
@@ -37,19 +44,16 @@ public class StaffController {
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
-    @GetMapping("/login/{userStaffLogin}/{userPassword}")
-    public ResponseEntity<Object> getLoginUser(@PathVariable String userLogin, @PathVariable String userPassword) {
-        List<Staff> staff = dbRepositoryStaff.findAll();
+    @PostMapping("/login")
+    public ResponseEntity<Staff> login(@RequestBody LoginRequest loginCredentials)
+            throws NoSuchAlgorithmException, UnsupportedEncodingException {
 
-        for (Staff userStaff : staff) {
+        Staff staff = dbServiceUser.staffLogin(loginCredentials.getEmail(), loginCredentials.getPassword());
 
-            if (userStaff.login(userLogin, userPassword).equals('s')) {
-                return ResponseEntity.status(200).build();
-            } else {
-                return ResponseEntity.status(403).build();
-            }
-        }
-        return ResponseEntity.status(401).build();
+        if (staff != null)
+            return ResponseEntity.status(200).body(staff);
+
+        return ResponseEntity.status(404).build();
     }
 
 }
