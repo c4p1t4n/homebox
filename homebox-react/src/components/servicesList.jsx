@@ -16,17 +16,15 @@ function ServicesList() {
 
     return (
         <>
-            <div className="servicesInProgressOverflow">
-                {services.map(item =>(
-                    <CardServiceInProgressProvider 
-                        id = {item.id}
-                        service = {item.nameService}
-                        price = {item.reference_price}
-                        client = {item.customerId}
-                        local = {item.address}
-                    />
-                ))}
-            </div>
+            {services.map(item => (
+                <CardServiceInProgressProvider
+                    id={item.id}
+                    service={item.nameService}
+                    price={item.reference_price}
+                    client={item.customerId}
+                    local={item.address}
+                />
+            ))}
         </>
     )
 }
