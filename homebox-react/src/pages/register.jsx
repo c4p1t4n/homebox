@@ -50,6 +50,15 @@ function Register() {
                             />
                         </div>
                         <div className="div_input">
+                            <p>Genero</p>
+                            <select name="category" id="category">
+                                <option value="">Selecione</option>
+                                <option value="M">Masculino</option>
+                                <option value="F">Feminino</option>
+                                <option value="NA">Prefiro não informar</option>
+                            </select>
+                        </div>
+                        <div className="div_input">
                             <p>CEP</p>
                             <input
                                 id="cep"
