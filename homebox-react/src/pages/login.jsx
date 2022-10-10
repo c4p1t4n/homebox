@@ -48,7 +48,9 @@ function Login() {
                         </div>
                     </div>
                     <div className="div_button">
-                        <button id="buttonLogin" onClick={login}>Entrar</button>
+                        <button id="buttonLogin" onClick={login}>
+                            Entrar
+                        </button>
                         <br />
                         <a href="/register">
                             <p>
@@ -56,20 +58,35 @@ function Login() {
                             </p>
                         </a>
                         <br />
-                        <p onClick={openDivForgotPassword} id="password">Esqueceu sua senha ?</p>
+                        <p onClick={openDivForgotPassword} id="password">
+                            Esqueceu sua senha ?
+                        </p>
                     </div>
                 </div>
             </body>
             <div id="forgotPasswordDiv" className="forgotPasswordDiv">
-                <img onClick={openDivForgotPassword} src={iconClose} alt="Icone de fechar" />
-                <form >
+                <img
+                    onClick={openDivForgotPassword}
+                    src={iconClose}
+                    alt="Icone de fechar"
+                />
+                <form>
                     <h2>Recuperar Senha</h2>
                     <div className="inputFormForgotPassword">
-                        <label htmlFor="email">Informe o e-mail cadastrado:</label>
+                        <label htmlFor="email">
+                            Informe o e-mail cadastrado:
+                        </label>
                         <input type="text" placeholder="Digite aqui" />
                     </div>
-                    <label htmlFor="email">Enviaremos um link para redefinição de senha no email informado</label>
-                    <input onClick={resetPassword} id="submitForgotPassword" type="submit" />
+                    <label htmlFor="email">
+                        Enviaremos um link para redefinição de senha no email
+                        informado
+                    </label>
+                    <input
+                        onClick={resetPassword}
+                        id="submitForgotPassword"
+                        type="submit"
+                    />
                 </form>
             </div>
         </>
@@ -83,17 +100,15 @@ function openDivForgotPassword() {
         logoffOpenDiv.style.display === "flex" ? "none" : "flex"
 }
 
-function resetPassword() { }
+function resetPassword() {}
 
 const keyStroke = e => {
     const buttonLogin = document.querySelector("#buttonLogin")
-
 
     if (e.key === "Enter") {
         buttonLogin.click()
     }
 }
-
 
 const login = e => {
     e.preventDefault()
@@ -110,19 +125,33 @@ const login = e => {
     api.post("/users/login/", {
         email,
         password
-    }).catch(err => err.response)
-        .then(({ status, data }) => {
+    })
+        .catch(err => err.response)
+        .then(({status, data}) => {
             if (status === 200) {
-                sessionStorage.setItem("user",JSON.stringify({ ...data })    
-                )
-                if (data.type === "worker") window.location.href = "/profile/provider"
+                sessionStorage.setItem("user", JSON.stringify({...data}))
+                if (data.type === "worker")
+                    window.location.href = "/profile/provider"
                 else if (data.type === "customer") window.location.href = "/"
                 else throw new TypeError("TIPO DE USUARIO INVALIDO")
             } else if (status === 400) {
                 window.alert("Senha errada!")
             } else if (status === 404) {
-                window.alert("Email não encontrado!")
-
+                api.post("/staff/login/", {
+                    email,
+                    password
+                })
+                    .catch(err => err.response)
+                    .then(({status, data}) => {
+                        console.log(data)
+                        if (status === 200) {
+                            sessionStorage.setItem(
+                                "staff",
+                                JSON.stringify({...data})
+                            )
+                            window.location.href = "/staff"
+                        } else window.alert("Email não encontrado!")
+                    })
             }
         })
         .catch(err => {

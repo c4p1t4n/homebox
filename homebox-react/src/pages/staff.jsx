@@ -110,7 +110,7 @@ function staff() {
                             </div>
                             <h4>Administração</h4>
                             <div onClick={openLogoffStaffDiv} className="nameStaffDiv">
-                                <p>Seja bem vindo(a) , {JSON.parse(sessionStorage.getItem("user")).name}</p>
+                                <p>Seja bem vindo(a), {JSON.parse(sessionStorage.getItem("staff")).name.split(' ')[0]}</p>
                                 <img src={iconProfile} alt="Icone de perfil" />
                             </div>
                             <div id="logoffStaffDiv" className="logoffStaffDiv">
