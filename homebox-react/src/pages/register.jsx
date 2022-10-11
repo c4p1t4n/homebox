@@ -153,7 +153,6 @@ const register = e => {
         .then(({ status, data }) => {
 
             if (status === 201) {
-                console.log("SUCESSO")
                 window.alert("Cadastro realizado com sucesso!")
                 sessionStorage.setItem(
                     "user",
@@ -162,7 +161,6 @@ const register = e => {
                 if (data.type === "worker") window.location.href = "/profile/provider"
                 else if (data.type === "customer") window.location.href = "/"
             } else if (status === 400) {
-                console.log("DEU RUIM")
                 window.alert("Não foi possivel realizar o cadastro!")
             }
         })

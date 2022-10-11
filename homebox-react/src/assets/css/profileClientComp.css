@@ -41,6 +41,10 @@
     height: 60px;
 }
 
+.userInformations img{
+    cursor: pointer;
+}
+
 .alterPhoto {
     cursor: pointer;
 }

@@ -96,6 +96,21 @@ public class UserController {
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @PatchMapping("/att/email/{idUser}/{email}")
+    public ResponseEntity attEmail(@PathVariable Integer idUser,
+                                  @PathVariable String email){
+
+        if(!dbServiceUser.existsById(idUser)){
+            return status(404).build();
+        }
+
+        User user = dbServiceUser.findById(idUser).get();
+        user.setEmail(email);
+        dbServiceUser.saveUser(user);
+        return status(200).build();
+    }
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/{idUser}")
     public ResponseEntity getUser(@PathVariable Integer idUser){
         if(!dbServiceUser.existsById(idUser)){

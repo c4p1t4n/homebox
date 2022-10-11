@@ -67,8 +67,6 @@ function profileProvider() {
     }, [listServices])
 
 
-
-
     return (
         <>
             <div className="divBodyProfileProvider">

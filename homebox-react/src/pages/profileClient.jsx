@@ -18,6 +18,16 @@ function ProfileClient() {
         })
     }, [services])
 
+    api.get(`/users/` + JSON.parse(sessionStorage.getItem("user")).id_user
+    ).then(({ status, data }) => {
+        if (status === 200) {
+            sessionStorage.setItem(
+                "user",
+                JSON.stringify({ ...data })
+            )
+        }
+    })
+
 
     return (
         <>
@@ -25,14 +35,15 @@ function ProfileClient() {
             <ProfileClientComp
                 nome={nome}
                 email={email}
+                image = {img}
             />
             <div className="divDashboardClint">
                 <h4 className="dashH4">Outros moradores de(a) Vila Madalena se interessam por serviços de</h4>
-                {/* <div className="dashboard">
+                <div className="dashboard">
                     <CardDashboardCLient />
                     <CardDashboardCLient />
                     <CardDashboardCLient />
-                </div> */}
+                </div>
             </div>
             <div className="historyOfServiceClientDiv">
                 <h3>Historico de Serviços</h3>
@@ -85,4 +96,5 @@ function closeendServiceDiv() {
 
 const nome = JSON.parse(sessionStorage.getItem("user"))?.name?.split(" ")?.[0] ?? ""
 const email = JSON.parse(sessionStorage.getItem("user"))?.email
+const img =  JSON.parse(sessionStorage.getItem("user"))?.picture
 
