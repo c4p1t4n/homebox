@@ -9,11 +9,13 @@ import school.sptech.server.model.Category;
 import school.sptech.server.model.User;
 import school.sptech.server.service.ExportTxt;
 import school.sptech.server.service.FilaObj;
+import school.sptech.server.request.DistRequest;
 import school.sptech.server.request.LoginRequest;
 import school.sptech.server.request.UserIdRequest;
 import school.sptech.server.repository.CategoryRepository;
 import school.sptech.server.repository.RatingRepository;
 import school.sptech.server.repository.ServiceRepository;
+import school.sptech.server.response.DistResponse;
 import school.sptech.server.response.UserSearchQueryResult;
 import school.sptech.server.service.UserService;
 
@@ -23,7 +25,6 @@ import java.io.*;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -69,7 +70,7 @@ public class UserController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PatchMapping("/att/img/{idUser}/{picture}")
-    public ResponseEntity attImg(@PathVariable Integer idUser,
+    public ResponseEntity<Void> attImg(@PathVariable Integer idUser,
                                  @PathVariable String picture){
         if(!dbServiceUser.existsById(idUser)){
             return status(404).build();
@@ -83,7 +84,7 @@ public class UserController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PatchMapping("/att/name/{idUser}/{name}")
-    public ResponseEntity attName(@PathVariable Integer idUser,
+    public ResponseEntity<Void> attName(@PathVariable Integer idUser,
                                  @PathVariable String name){
         if(!dbServiceUser.existsById(idUser)){
             return status(404).build();
@@ -97,7 +98,7 @@ public class UserController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/{idUser}")
-    public ResponseEntity getUser(@PathVariable Integer idUser){
+    public ResponseEntity<User> getUser(@PathVariable Integer idUser){
         if(!dbServiceUser.existsById(idUser)){
             return status(404).build();
         }
@@ -285,15 +286,17 @@ public class UserController {
         return status(200).body(rating);
     }
 
-    @GetMapping("/distance/cep1/cep2")
+    @GetMapping("/distance/{cep1}/{cep2}")
     public ResponseEntity<Double> getDist(@PathVariable String cep1,
             @PathVariable String cep2) {
 
-        ResponseEntity<Double> dist = distClient.getDist(cep1, cep2);
+        DistRequest distRequest = new DistRequest(cep1, cep2);
+
+        ResponseEntity<DistResponse> dist = distClient.getDist(distRequest);
         if (Objects.isNull(dist.getBody())) {
             return status(400).build();
         }
-        return status(200).body(dist.getBody());
+        return status(200).body(dist.getBody().getDistance());
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
