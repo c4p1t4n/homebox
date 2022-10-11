@@ -2,11 +2,9 @@ package school.sptech.server.model;
 
 import javax.persistence.*;
 
-import school.sptech.server.service.ILogin;
-
 @Entity
 @Table(name = "staff")
-public class Staff implements ILogin {
+public class Staff {
 
     @Column(name = "name")
     private String name;
@@ -62,17 +60,6 @@ public class Staff implements ILogin {
 
     public void setAuthenticated(Character authenticated) {
         this.authenticated = authenticated;
-    }
-
-    @Override
-    public Character login(String username, String password) {
-        Boolean autenticacao = getPassword().equals(password) & getEmail().equals(username);
-        if (autenticacao) {
-            setAuthenticated('s');
-        }else{
-            setAuthenticated('n');
-        }
-        return getAuthenticated();
     }
 
 }

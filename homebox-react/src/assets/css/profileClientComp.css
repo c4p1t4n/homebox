@@ -39,6 +39,8 @@
     display: flex;
     align-items: center;
     height: 60px;
+    justify-content: space-between;
+    width: 102%;
 }
 
 .userInformations img{

@@ -35,11 +35,6 @@ function ProfileClientComp() {
                             <p>: {JSON.parse(sessionStorage.getItem("user")).email}</p>
                             <img onClick={changeEmail} src={alterInfo} alt="alterar e-mail" />
                         </div>
-                        <div className="userInformations">
-                            <h4>Contato</h4>
-                            <p>: 99999-9999</p>
-                            <img src={alterInfo} alt="alterar telefone" />
-                        </div>
                     </div>
                 </div>
             </div>
