@@ -77,11 +77,6 @@ public class SchedulingController {
             return status(400).body("Usuário cadastrado como prestador de serviço");
         }
 
-        if (dbRepositoryScheduling.existsByCustomerIdAndServiceIdService(customer.getId(),
-                service.getIdService())) {
-            return status(403).body("Usuário já possui agendamento do serviço em questão");
-        }
-
         Scheduling scheduling = dbRepositoryScheduling.save(new Scheduling(customer, service));
 
         SchedulingStatus schedulingStatus = dbRepositorySchedulingStatus
@@ -131,12 +126,6 @@ public class SchedulingController {
         }
 
         LocalDate date = LocalDate.now();
-        if (!dbRepositorySchedulingStatus.existsByServiceStatusAndSchedulingIdScheduling("done",
-                scheduling.getIdScheduling())) {
-            dbRepositorySchedulingStatus.save(new SchedulingStatus("done", date,
-                    scheduling));
-        }
-
         AccomplishedService accomplishedService = dbRepositoryAccomplishedService.save(new AccomplishedService(
                 scheduling, serviceInfo.getPrice(), serviceInfo.getDescription(), date));
 

@@ -1,6 +1,7 @@
 import Header from "../components/header";
 import ProfileClientComp from "../components/profileClientComp";
 import CardLastServiceHistory from "../components/cardLastServiceHistory";
+import CardDashboardCLient from "../components/cardDashboardClient";
 import "../assets/css/profileClient.css"
 
 import { useEffect, useState } from "react"
@@ -52,7 +53,7 @@ function ProfileClient() {
                         <CardLastServiceHistory 
                             id = {item.id}
                             service = {item.nameService}
-                            price = {item.reference_price}
+                            price = {item.price}
                             date = {item.date}
                             client = {item.customerId}
                             local = {item.address}

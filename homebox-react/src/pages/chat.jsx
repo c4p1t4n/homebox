@@ -218,13 +218,7 @@ function closeBusinessFunction() {
                 if (status === 201) {
                     alert("Pedido de serviço enviado!!!")
                 }
-                else{
-                    console.log(status)
-                    console.log("/schedulings/accomplish/" + data.idSchedulingStatus)
-                }
             })
-        }else{
-            console.log(status)
         }
 
     })

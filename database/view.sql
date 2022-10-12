@@ -4,7 +4,7 @@ CREATE VIEW services_scheduling
 AS
 SELECT ROW_NUMBER() OVER (ORDER BY accomplished_service.service_date ) AS id,
 worker_id_user AS worker_id, customer_id_user AS customer_id, name AS name_service, 
-service.description AS service_description, accomplished_service.description AS address,reference_price, 
+service.description AS service_description, accomplished_service.description AS address,price, 
 scheduling_status.status_date AS date, scheduling_status.service_status AS status 
 FROM service JOIN scheduling
              ON service.id_service = scheduling.service_id_service 

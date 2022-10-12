@@ -20,7 +20,7 @@ function ServicesList() {
                 <CardServiceInProgressProvider
                     id={item.id}
                     service={item.nameService}
-                    price={item.reference_price}
+                    price={item.price}
                     client={item.customerId}
                     local={item.address}
                 />
