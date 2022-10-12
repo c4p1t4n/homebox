@@ -25,6 +25,7 @@ CREATE TABLE media (
 CREATE TABLE user (
     id_user int PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
+    gender VARCHAR(50) NOT NULL,
     email VARCHAR(100) NOT NULL,
     PASSWORD CHAR(64) NOT NULL,
     cpf CHAR(11) NOT NULL,
@@ -243,6 +244,7 @@ VALUES
     (
         NULL,
         'José',
+        'Masculino',
         'jose@gmail.com',
         SHA2("ExSenha1", 256),
         '12345678900',
@@ -256,6 +258,7 @@ VALUES
     (
         NULL,
         'Robson',
+        'Masculino',
         'robson@gmail.com',
         SHA2("ExSenha1", 256),
         '12345678900',
@@ -269,6 +272,7 @@ VALUES
     (
         NULL,
         'Larissa',
+        'Feminino',
         'lari@gmail.com',
         SHA2("ExSenha1", 256),
         '12345678900',
@@ -282,6 +286,7 @@ VALUES
     (
         NULL,
         'Pedro',
+        'Masculino',
         'pedro@gmail.com',
         SHA2("ExSenha1", 256),
         '12345678900',
@@ -295,6 +300,7 @@ VALUES
     (
         NULL,
         'Bruna',
+        'Feminino',
         'bruna@gmail.com',
         SHA2("ExSenha1", 256),
         '12345678900',
@@ -308,6 +314,7 @@ VALUES
     (
         NULL,
         'Claudio',
+        'Masculino',
         'claudio@gmail.com',
         SHA2("ExSenha1", 256),
         '12345678900',
@@ -321,6 +328,7 @@ VALUES
     (
         NULL,
         'user1',
+        'Masculino',
         'email@email.com',
         SHA2("senha123", 256),
         '12345678900',
@@ -334,6 +342,7 @@ VALUES
     (
         NULL,
         'user2',
+        'Feminino',
         'email2@email.com',
         SHA2("ExSenha1", 256),
         '12345678900',
