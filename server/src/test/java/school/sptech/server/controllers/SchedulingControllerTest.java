@@ -101,7 +101,7 @@ public class SchedulingControllerTest {
         SchedulingCreationRequest requestMock = new SchedulingCreationRequest(1, 1);
         User workerMock = mock(User.class);
         Category categoryMock = mock(Category.class);
-        User customerMock = new User(1, "name", "email", "password", "cpf", "token", "customer", "picture", "cep");
+        User customerMock = new User(1, "name", "gender", "email", "password", "cpf", "token", "customer", "picture", "cep");
         Service serviceMock = new Service(1, workerMock, categoryMock, "name", "description", 1000d);
         Scheduling schedulingMock = mock(Scheduling.class);
         SchedulingStatus schedulingStatusMock = mock(SchedulingStatus.class);
@@ -123,7 +123,7 @@ public class SchedulingControllerTest {
     @Test
     void testCreateWhenTheServiceDoesNotExist() {
         SchedulingCreationRequest requestMock = new SchedulingCreationRequest(1, 4);
-        User customerMock = new User(1, "name", "email", "password", "cpf", "token", "customer", "picture", "cep");
+        User customerMock = new User(1, "name","gender", "email", "password", "cpf", "token", "customer", "picture", "cep");
 
         when(dbRepositoryUser.findById(requestMock.getFkUser())).thenReturn(Optional.of(customerMock));
         when(dbRepositoryService.findById(requestMock.getFkService())).thenReturn(Optional.ofNullable(null));
@@ -159,7 +159,7 @@ public class SchedulingControllerTest {
         SchedulingCreationRequest requestMock = new SchedulingCreationRequest(1, 1);
         User workerMock = mock(User.class);
         Category categoryMock = mock(Category.class);
-        User customerMock = new User(1, "name", "email", "password", "cpf", "token", "worker", "picture", "cep");
+        User customerMock = new User(1, "name","gender", "email", "password", "cpf", "token", "worker", "picture", "cep");
         Service serviceMock = new Service(1, workerMock, categoryMock, "name", "description", 1000d);
 
         when(dbRepositoryUser.findById(requestMock.getFkUser())).thenReturn(Optional.of(customerMock));
@@ -178,7 +178,7 @@ public class SchedulingControllerTest {
         SchedulingCreationRequest requestMock = new SchedulingCreationRequest(1, 1);
         User workerMock = mock(User.class);
         Category categoryMock = mock(Category.class);
-        User customerMock = new User(1, "name", "email", "password", "cpf", "token", "customer", "picture", "cep");
+        User customerMock = new User(1, "name","gender", "email", "password", "cpf", "token", "customer", "picture", "cep");
         Service serviceMock = new Service(1, workerMock, categoryMock, "name", "description", 1000d);
 
         when(dbRepositoryUser.findById(requestMock.getFkUser())).thenReturn(Optional.of(customerMock));
