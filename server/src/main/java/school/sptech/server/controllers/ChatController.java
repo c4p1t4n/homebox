@@ -31,6 +31,9 @@ public class ChatController {
     @Autowired
     private UserRepository dbUserRepository;
 
+    @Autowired
+    private ChatsRepository dbChatsRepository;
+
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/{idCustomer}/{idWorker}")
     public ResponseEntity<Void> postChat(@PathVariable Integer idCustomer, @PathVariable Integer idWorker) {
@@ -42,27 +45,29 @@ public class ChatController {
         }
         System.out.println(idCustomer + " " + idWorker);
 
-        LocalDate today = LocalDate.now();
-        Chat newChat = dbRepositoryChat.save(new Chat(today));
+        if(!dbChatsRepository.existsByUserIdAndUserId2(idWorker,idCustomer)){
+            LocalDate today = LocalDate.now();
+            Chat newChat = dbRepositoryChat.save(new Chat(today));
 
-        UserHasChat customerChatAccess = new UserHasChat(dbRepositoryUser.findById(idCustomer).get(), newChat);
-        UserHasChat WorkerChatAccess = new UserHasChat(dbRepositoryUser.findById(idWorker).get(), newChat);
+            UserHasChat customerChatAccess = new UserHasChat(dbRepositoryUser.findById(idCustomer).get(), newChat);
+            UserHasChat WorkerChatAccess = new UserHasChat(dbRepositoryUser.findById(idWorker).get(), newChat);
 
-        Msg autoMsg = dbRepositoryMsg.findByAutomaticAndUserId('y', idWorker);
+            Msg autoMsg = dbRepositoryMsg.findByAutomaticAndUserId('y', idWorker);
 
-        if (Objects.nonNull(autoMsg)) {
-            LocalDateTime now = LocalDateTime.now();
+            if (Objects.nonNull(autoMsg)) {
+                LocalDateTime now = LocalDateTime.now();
 
-            ChatHasMsg autoMsgChat = new ChatHasMsg(newChat, autoMsg, now, 'n');
+                ChatHasMsg autoMsgChat = new ChatHasMsg(newChat, autoMsg, now, 'n');
 
-            dbRepositoryChatHasMsg.save(autoMsgChat);
+                dbRepositoryChatHasMsg.save(autoMsgChat);
+            }
+
+            dbRepositoryUserHasChat.save(customerChatAccess);
+            dbRepositoryUserHasChat.save(WorkerChatAccess);
+
+            return ResponseEntity.status(201).build();
         }
-
-        dbRepositoryUserHasChat.save(customerChatAccess);
-        dbRepositoryUserHasChat.save(WorkerChatAccess);
-
-        return ResponseEntity.status(201).build();
-
+        return ResponseEntity.status(400).build();
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")

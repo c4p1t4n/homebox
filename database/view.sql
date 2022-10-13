@@ -37,3 +37,11 @@ FROM service JOIN scheduling ON id_service = service_id_service
              JOIN rating 
              ON fk_accomplished_service = id_accomplished_service 
 ORDER BY(id_scheduling);
+
+
+CREATE VIEW chats
+AS
+SELECT uhc.*, user_has_chat.user_id_user AS id2 
+FROM user_has_chat uhc 
+JOIN user_has_chat ON user_has_chat.chat_id_chat = uhc.chat_id_chat 
+GROUP BY(uhc.chat_id_chat);
