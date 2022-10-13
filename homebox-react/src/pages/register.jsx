@@ -53,8 +53,8 @@ function Register() {
                             <p>Genero</p>
                             <select name="categoryGenero" id="categoryGenero">
                                 <option value="">Selecione</option>
-                                <option value="M">Masculino</option>
-                                <option value="F">Feminino</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Feminino">Feminino</option>
                                 <option value="NA">Prefiro não informar</option>
                             </select>
                         </div>
