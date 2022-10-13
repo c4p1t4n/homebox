@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import school.sptech.server.model.Category;
 import school.sptech.server.model.Service;
+import school.sptech.server.model.ServicesScheduling;
 import school.sptech.server.model.User;
 import school.sptech.server.response.UserSearchQueryResult;
 
@@ -26,4 +27,6 @@ public interface ServiceRepository extends JpaRepository<Service, Integer> {
 
     boolean existsByWorkerId(Integer idWorker);
 
+    boolean existsByidService(Integer idService);
+    Service findByidService(Integer idService);
 }

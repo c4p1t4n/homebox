@@ -8,7 +8,7 @@ function CardChat(props) {
                     <img src={props.img} alt="Foto do Jose" />
                     <div className="nameP">
                     <p>{props.name}</p>
-                    <p className="lastMsg">{props.lastMessage}</p>
+                    <p className="lastMsg" id={props.index}>{props.lastMessage}</p>
                     </div>
                     <p className="timestamp">{`${props.lastMessageHour.split('T')[0]}\n${props.lastMessageHour.split('T')[1]}`}</p>
                 </div>
@@ -24,11 +24,13 @@ function setChat(value){
         idChat: value
     }
     sessionStorage.setItem("chat", JSON.stringify({...data}))
-
+    sessionStorage.setItem("sendMsg", true)
     api.get(`/chat/msgs/`+JSON.parse(sessionStorage.getItem("chat")).idChat
     ).then(({ status, data }) => {
         if (status === 200) {
             sessionStorage.setItem("chatInfo", JSON.stringify({...data}))
         }
     })
+
+    document.getElementById("closeBusinessDiv").style.display = 'flex'
 }

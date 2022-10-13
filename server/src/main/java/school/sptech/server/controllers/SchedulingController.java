@@ -8,11 +8,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import school.sptech.server.model.AccomplishedService;
 import school.sptech.server.model.Rating;
@@ -29,9 +25,6 @@ import school.sptech.server.repository.UserRepository;
 import school.sptech.server.request.AccomplishServiceInfo;
 import school.sptech.server.request.RatingCreationRequest;
 import school.sptech.server.request.SchedulingCreationRequest;
-
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/schedulings")
@@ -60,12 +53,10 @@ public class SchedulingController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/{id}")
-    public ResponseEntity<Scheduling> getId(@PathVariable Integer id) {
-        Optional<Scheduling> scheduling = dbRepositoryScheduling.findById(id);
+    public ResponseEntity getId(@PathVariable Integer id) {
+        Scheduling scheduling = dbRepositoryScheduling.findById(id).get();
 
-        return !scheduling.isPresent()
-                ? status(404).build()
-                : status(200).body(scheduling.get());
+        return status(200).build();
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -86,22 +77,18 @@ public class SchedulingController {
             return status(400).body("Usuário cadastrado como prestador de serviço");
         }
 
-        if (dbRepositoryScheduling.existsByCustomerIdAndServiceIdService(customer.getId(),
-                service.getIdService())) {
-            return status(403).body("Usuário já possui agendamento do serviço em questão");
-        }
-
         Scheduling scheduling = dbRepositoryScheduling.save(new Scheduling(customer, service));
 
         SchedulingStatus schedulingStatus = dbRepositorySchedulingStatus
                 .save(new SchedulingStatus("scheduled", LocalDate.now(), scheduling));
 
-        return status(201).body(schedulingStatus);
+        return status(201).body(scheduling);
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
-    @PostMapping("/status/{id}/{status}")
-    public ResponseEntity<Object> updateStatus(@PathVariable Integer id, @PathVariable String status) {
+    @PatchMapping("/status/{id}/{status}")
+    public ResponseEntity updateStatus(@PathVariable Integer id,
+                                       @PathVariable String status) {
         Optional<Scheduling> schedulingOptional = dbRepositoryScheduling.findById(id);
 
         if (!schedulingOptional.isPresent()) {
@@ -118,19 +105,14 @@ public class SchedulingController {
         SchedulingStatus schedulingStatus = dbRepositorySchedulingStatus
                 .save(new SchedulingStatus(status, LocalDate.now(), scheduling));
 
-        return status(201).body(schedulingStatus);
+        return status(201).build();
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/accomplish/{id}")
     public ResponseEntity<Object> accomplishScheduling(@PathVariable Integer id,
             @RequestBody AccomplishServiceInfo serviceInfo) {
-        // ! implementar refactor para fazer o prestador de serviço confirmar a execução
-        // ! e apenas depois aparecer para o cliente (setar o status como done e na vez
-        // ! (setar o status como done e na vez do cliente ver se ja é done)
-        // ! ou associar o done com o prestador de serviço e o rated com o cliente (pois
-        // ! mesmo se o cliente prefere não avaliar o status fica como rated para não
-        // ! ficar floodando ele com esse pedido)
+
         Optional<Scheduling> schedulingOptional = dbRepositoryScheduling.findById(id);
 
         if (!schedulingOptional.isPresent()) {
@@ -144,12 +126,6 @@ public class SchedulingController {
         }
 
         LocalDate date = LocalDate.now();
-        if (!dbRepositorySchedulingStatus.existsByServiceStatusAndSchedulingIdScheduling("done",
-                scheduling.getIdScheduling())) {
-            dbRepositorySchedulingStatus.save(new SchedulingStatus("done", date,
-                    scheduling));
-        }
-
         AccomplishedService accomplishedService = dbRepositoryAccomplishedService.save(new AccomplishedService(
                 scheduling, serviceInfo.getPrice(), serviceInfo.getDescription(), date));
 

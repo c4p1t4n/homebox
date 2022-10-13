@@ -9,7 +9,7 @@ function Register() {
             <VLibras />
             <div className="register_body">
                 <div className="container">
-                    <a href="http://127.0.0.1:5500/website/index.html">
+                    <a href="http://homebox.sytes.net">
                         <img src={logo} alt="logo Homebox" />
                     </a>
                 </div>
@@ -48,6 +48,15 @@ function Register() {
                                 id="birth_date"
                                 type="date"
                             />
+                        </div>
+                        <div className="div_input">
+                            <p>Genero</p>
+                            <select name="category" id="category">
+                                <option value="">Selecione</option>
+                                <option value="M">Masculino</option>
+                                <option value="F">Feminino</option>
+                                <option value="NA">Prefiro não informar</option>
+                            </select>
                         </div>
                         <div className="div_input">
                             <p>CEP</p>
@@ -153,7 +162,6 @@ const register = e => {
         .then(({ status, data }) => {
 
             if (status === 201) {
-                console.log("SUCESSO")
                 window.alert("Cadastro realizado com sucesso!")
                 sessionStorage.setItem(
                     "user",
@@ -162,7 +170,6 @@ const register = e => {
                 if (data.type === "worker") window.location.href = "/profile/provider"
                 else if (data.type === "customer") window.location.href = "/"
             } else if (status === 400) {
-                console.log("DEU RUIM")
                 window.alert("Não foi possivel realizar o cadastro!")
             }
         })

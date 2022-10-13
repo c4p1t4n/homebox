@@ -26,8 +26,6 @@ function SearchResult() {
                 if (!value[0]) {
                     document.getElementById("titleSearch").innerHTML = `Nenhum resultado para "${searchValue}"`;
                 }
-                console.log(value)
-                console.log(!value)
                 setSearchResult(value)
             })
             .catch(err => {
@@ -55,7 +53,7 @@ function SearchResult() {
                                     img={item.user?.picture ?? profileImg}
                                     name={item.user?.name}
                                     category={item?.category}
-                                    rating={item.rating ?? "N/A"}
+                                    rating={item.rating ?? 0.0}
                                     dist={item.distance ?? "N/A"}
 
                                 />

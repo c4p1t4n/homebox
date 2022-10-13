@@ -11,10 +11,7 @@ import school.sptech.server.service.UserService;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 
 @RestController
 @RequestMapping("/chat")
@@ -34,6 +31,9 @@ public class ChatController {
     @Autowired
     private UserRepository dbUserRepository;
 
+    @Autowired
+    private ChatsRepository dbChatsRepository;
+
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/{idCustomer}/{idWorker}")
     public ResponseEntity<Void> postChat(@PathVariable Integer idCustomer, @PathVariable Integer idWorker) {
@@ -43,28 +43,31 @@ public class ChatController {
         if (!dbUserService.existsById(idWorker)) {
             return ResponseEntity.status(404).build();
         }
+        System.out.println(idCustomer + " " + idWorker);
 
-        LocalDate today = LocalDate.now();
-        Chat newChat = dbRepositoryChat.save(new Chat(today));
+        if(!dbChatsRepository.existsByUserIdAndUserId2(idWorker,idCustomer)){
+            LocalDate today = LocalDate.now();
+            Chat newChat = dbRepositoryChat.save(new Chat(today));
 
-        UserHasChat customerChatAccess = new UserHasChat(dbRepositoryUser.findById(idCustomer).get(), newChat);
-        UserHasChat WorkerChatAccess = new UserHasChat(dbRepositoryUser.findById(idWorker).get(), newChat);
+            UserHasChat customerChatAccess = new UserHasChat(dbRepositoryUser.findById(idCustomer).get(), newChat);
+            UserHasChat WorkerChatAccess = new UserHasChat(dbRepositoryUser.findById(idWorker).get(), newChat);
 
-        Msg autoMsg = dbRepositoryMsg.findByAutomaticAndUserId('y', idWorker);
+            Msg autoMsg = dbRepositoryMsg.findByAutomaticAndUserId('y', idWorker);
 
-        if (Objects.nonNull(autoMsg)) {
-            LocalDateTime now = LocalDateTime.now();
+            if (Objects.nonNull(autoMsg)) {
+                LocalDateTime now = LocalDateTime.now();
 
-            ChatHasMsg autoMsgChat = new ChatHasMsg(newChat, autoMsg, now, 'n');
+                ChatHasMsg autoMsgChat = new ChatHasMsg(newChat, autoMsg, now, 'n');
 
-            dbRepositoryChatHasMsg.save(autoMsgChat);
+                dbRepositoryChatHasMsg.save(autoMsgChat);
+            }
+
+            dbRepositoryUserHasChat.save(customerChatAccess);
+            dbRepositoryUserHasChat.save(WorkerChatAccess);
+
+            return ResponseEntity.status(201).build();
         }
-
-        dbRepositoryUserHasChat.save(customerChatAccess);
-        dbRepositoryUserHasChat.save(WorkerChatAccess);
-
-        return ResponseEntity.status(201).build();
-
+        return ResponseEntity.status(400).build();
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -106,11 +109,46 @@ public class ChatController {
 
         for (UserHasChat chat : chats) {
             ChatHasMsg chm = dbRepositoryChatHasMsg.findTop1ByChatIdChatOrderBySendDateDesc(chat.getChat().getIdChat());
-            chatsPerUser.add(new ChatsPerUser(chat.getId(), chat.getUser(), chat.getChat(), chm.getMsg(), chm.getSendDate(), chm.getSeen()));
+            chatsPerUser.add(new ChatsPerUser(chat.getId(), chat.getUser(), chat.getChat(), chm.getMsg(),
+                    chm.getSendDate(), chm.getSeen()));
         }
 
-        return ResponseEntity.status(200).body(chatsPerUser);
+        chatsPerUser = quickSort(chatsPerUser, 0, chatsPerUser.size() - 1);
+        List<ChatsPerUser> chatsPerUserWithoutDuplicates = new ArrayList<>(
+                new LinkedHashSet<>(chatsPerUser));
+
+        return ResponseEntity.status(200).body(chatsPerUserWithoutDuplicates);
     }
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @GetMapping("/user/{fkUser}/{name}")
+    public ResponseEntity<List<ChatsPerUser>> searchChatsPerUser(@PathVariable Integer fkUser,
+            @PathVariable String name) {
+        if (!dbUserService.existsById(fkUser)) {
+            return ResponseEntity.status(404).build();
+        }
+
+        List<UserHasChat> chats = dbRepositoryUserHasChat.findByUserWithSpecificPartner(fkUser, name);
+
+        if (chats.isEmpty()) {
+            return ResponseEntity.status(204).build();
+        }
+
+        List<ChatsPerUser> chatsPerUser = new ArrayList<ChatsPerUser>();
+
+        for (UserHasChat chat : chats) {
+            ChatHasMsg chm = dbRepositoryChatHasMsg.findTop1ByChatIdChatOrderBySendDateDesc(chat.getChat().getIdChat());
+            chatsPerUser.add(new ChatsPerUser(chat.getId(), chat.getUser(), chat.getChat(), chm.getMsg(),
+                    chm.getSendDate(), chm.getSeen()));
+        }
+
+        chatsPerUser = quickSort(chatsPerUser, 0, chatsPerUser.size() - 1);
+        List<ChatsPerUser> chatsPerUserWithoutDuplicates = new ArrayList<>(
+                new LinkedHashSet<>(chatsPerUser));
+
+        return ResponseEntity.status(200).body(chatsPerUserWithoutDuplicates);
+    }
+
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/auto")
     public ResponseEntity<Object> postMsg(@RequestBody Msg msg,
@@ -189,8 +227,8 @@ public class ChatController {
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/msg/{idChat}/{idUsuario}")
     public ResponseEntity<Void> postMsgInChat(@PathVariable Integer idChat,
-                                              @RequestBody Msg newMsg,
-                                              @PathVariable Integer idUsuario) {
+            @RequestBody Msg newMsg,
+            @PathVariable Integer idUsuario) {
 
         if (!dbRepositoryChat.existsById(idChat)) {
             return ResponseEntity.status(404).build();
@@ -219,6 +257,66 @@ public class ChatController {
             return ResponseEntity.status(200).build();
         }
         return ResponseEntity.status(404).build();
+    }
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @GetMapping(value = "/msg/auto/{idUser}")
+    public ResponseEntity getAutoMsg(@PathVariable Integer idUser) {
+        if (!dbRepositoryUser.existsById(idUser)) {
+            return ResponseEntity.status(404).build();
+        }
+        Msg msg = dbRepositoryMsg.findByUserIdAndAutomatic(idUser, 'y');
+
+        return ResponseEntity.status(200).body(msg);
+    }
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @PatchMapping(value = "/att/msg/{idUser}/{message}")
+    public ResponseEntity updateAutoMsg(@PathVariable Integer idUser,
+                                        @PathVariable String message) {
+        if (!dbRepositoryUser.existsById(idUser)) {
+            return ResponseEntity.status(404).build();
+        }
+        Msg msg = dbRepositoryMsg.findByUserIdAndAutomatic(idUser, 'y');
+        msg.setMessage(message);
+        dbRepositoryMsg.save(msg);
+
+        return ResponseEntity.status(200).build();
+    }
+
+
+    public List<ChatsPerUser> quickSort(List<ChatsPerUser> v, int begin, int end) {
+        int i = begin;
+        int j = end;
+
+        LocalDateTime pivo = v.get((begin + end) / 2).getSendDate();
+        while (i <= j) {
+            // isAfter(), isBefore() and isEqual()
+            while (i < end && v.get(i).getSendDate().isAfter(pivo)) {
+                i = i + 1;
+            }
+            while (j > begin && v.get(j).getSendDate().isBefore(pivo)) {
+                j = j - 1;
+            }
+            if (i <= j) {
+                ChatsPerUser aux = v.get(i);
+                int indexI = v.indexOf(v.get(i));
+                int indexJ = v.indexOf(v.get(j));
+                v.add(indexI, v.get(j));
+                v.add(indexJ, aux);
+                // v[i] = v[j];
+                // v[j] = aux;
+                i = i + 1;
+                j = j - 1;
+            }
+        }
+        if (begin < j) {
+            quickSort(v, begin, j);
+        }
+        if (i < end) {
+            quickSort(v, i, end);
+        }
+        return v;
     }
 
 }

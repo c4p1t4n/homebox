@@ -51,19 +51,24 @@
     margin-top: 30%;
 }
 
-
+.logoffProfileProvider img:hover {
+    cursor: pointer;
+    height: 40px;
+    image-rendering: optimizeQuality;
+}
 
 .divRightProfileProvider {
     width: 70%;
     height: 91.5vh;
+    overflow: auto;
     display: flex;
-    padding: 2%;
+    padding: 1%;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
 
-.divRightProfileProvider button {
+#botao1 {
     font-family: 'Poppins';
     font-style: normal;
     line-height: 36px;
@@ -76,7 +81,7 @@
     color: white;
 }
 
-.divRightProfileProvider button:hover {
+#botao1:hover {
     background-color: orange;
     color: black;
     cursor: pointer;
@@ -116,12 +121,20 @@
 .nameServiceProvider {
     display: flex;
     justify-content: space-between;
-    width: 15%;
+    align-items: center;
+}
+
+.alterNameProvider:hover {
+    cursor: pointer;
+    height: 48px;
 }
 
 .divServicesProvider {
     width: 100%;
     height: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     overflow: auto;
 }
 
@@ -137,13 +150,13 @@
 .valueAvg {
     display: flex;
     justify-content: space-between;
-    width: 28%;
 }
 
 .cardServiceProvider {
     display: flex;
     flex-direction: column;
     margin-bottom: 2%;
+    width: 100%;
 }
 
 .infoService {
@@ -157,6 +170,7 @@
 .infoService:hover {
     background-color: #0a3a69b5;
     color: white;
+
     cursor: pointer;
 }
 
@@ -170,6 +184,14 @@
     margin-left: 10%;
 }
 
+.divIconsService img:hover {
+    width: 45%;
+    filter: invert(100%) sepia(16%) saturate(7463%) hue-rotate(222deg) brightness(119%) contrast(115%);
+
+    border-radius: 100%;
+    cursor: pointer;
+}
+
 .descriptionServiceProvider {
     width: 98%;
     padding: 1%;
@@ -177,6 +199,270 @@
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.ratingProvider p{
+.ratingProvider p {
     text-align: center;
+}
+
+
+.addServiceDiv {
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.724);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalCreateService {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    width: 50%;
+    justify-content: space-between;
+    height: 70%;
+    font-size: 32px;
+}
+
+.divInputForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.divInputForm input {
+    font-size: 22px;
+    height: 30px;
+    width: 50%;
+    border-radius: 10px;
+    border: black solid 1px;
+}
+
+.divInputForm select {
+    height: 30px;
+    width: 50%;
+    font-size: 20px;
+}
+
+#submitForm {
+    background-color: #0A3969;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 50%;
+    padding: 1%;
+    border-radius: 20px;
+    font-size: 28px;
+}
+
+#submitForm:hover {
+    background-color: orange;
+    color: black;
+    cursor: pointer;
+}
+
+.iconCloseService {
+    position: absolute;
+    right: 428px;
+}
+
+.iconCloseService:hover {
+    cursor: pointer;
+    height: 55px;
+}
+
+.openDivAlterNameProvider {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0000006c;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.divAlterName {
+    background-color: white;
+    color: #0A3969;
+    width: 30%;
+    height: 300px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    border-radius: 20px;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.divAlterName h3 {
+    margin: 0;
+}
+
+.divAlterName input {
+    font-size: 22px;
+    border: none;
+    border-bottom: #0A3969 1px solid;
+    width: 80%;
+    border-radius: 6px;
+}
+
+.divAlterName input:focus {
+    border: none;
+}
+
+.divAlterName button {
+    font-size: 28px;
+    background-color: #0A3969;
+    color: #FFFFFF;
+    padding: 1%;
+    border-radius: 20px;
+}
+
+.divAlterName button:hover {
+    background-color: orange;
+    color: black;
+    cursor: pointer;
+}
+
+.imgCloseAlterName {
+    position: absolute;
+    top: 265px;
+    right: 620px;
+    height: 40px;
+}
+
+.imgCloseAlterName:hover {
+    height: 45px;
+    cursor: pointer;
+}
+
+.deleteServiceProvider {
+    position: absolute;
+    background-color: #0000007c;
+    width: 100vw;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.deleteServiceProviderDiv {
+    background-color: white;
+    padding: 2%;
+    display: flex;
+    height: 15vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.deleteServiceProviderDiv h3 {
+    margin: 0;
+}
+
+.deleteServiceProviderDivButton {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.deleteServiceProviderDivButton button {
+    font-size: 28px;
+    padding: 2%;
+    border-radius: 15px;
+    background-color: #0A3969;
+    color: white;
+}
+
+.deleteServiceProviderDiv button:hover {
+    cursor: pointer;
+    background-color: orange;
+    color: black;
+}
+
+.addMsgOfInit {
+    width: 100%;
+    font-size: 20px;
+    margin-top: 3%;
+    border: none;
+    border-bottom: solid 1px #0A3969;
+    border-radius: 5px;
+}
+
+#botao5 {
+    font-family: 'Poppins';
+    font-style: normal;
+    line-height: 36px;
+    width: 400px;
+    height: 50px;
+    color: #000000;
+    background: #c9c9c9b6;
+    border-radius: 49px;
+    font-size: 20px;
+}
+
+#botao5:hover {
+    cursor: pointer;
+    background: rgba(145, 139, 139, 0.813);
+    color: white;
+}
+
+.modalAlterMsgInitChat {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #00000053;
+}
+
+.modalAlterMsgInitChatDiv {
+    background-color: white;
+    padding: 2%;
+    font-size: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 40vh;
+    border-radius: 15px;
+    color: #031c34;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.modalAlterMsgInitChatDiv textarea {
+    font-size: 18px;
+    width: 100%;
+}
+
+.divBotao10 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.botao10 {
+    font-size: 28px;
+    padding: 2%;
+    width: 30%;
+    border-radius: 15px;
+    background-color: #0A3969;
+    color: white;
+}
+
+.botao10:hover {
+    background-color: orange;
+    color: black;
+    cursor: pointer;
 }

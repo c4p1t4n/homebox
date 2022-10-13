@@ -60,6 +60,12 @@ body p {
     box-shadow: 0px 1px 3px gray inset;
 }
 
+.cardCustumer:hover {
+    cursor: pointer;
+    box-shadow: 6px 6px 6px 6px rgba(79, 74, 74, 0.365);
+
+}
+
 .cardCustumer .imgCustumer {
     border-radius: 10%;
     border: #0A3969 solid;
@@ -130,9 +136,11 @@ body p {
     align-items: center;
     justify-content: space-between;
 }
-.cardSearchOpenDiv p{
+
+.cardSearchOpenDiv p {
     font-size: 19px;
 }
+
 .cardSearchOpenDivIconClose {
     width: 100%;
     display: flex;
@@ -201,7 +209,8 @@ details {
 
 .summaryCardSearchOpen:hover {
     cursor: pointer;
-    color: #0A3969;
+    color: white;
+    background-color: #0a3a699a;
     font-size: 21px;
 }
 
@@ -233,4 +242,8 @@ details {
     background-color: orange;
     color: black;
     cursor: pointer;
+}
+
+.nameProviderTest {
+    width: 130px;
 }

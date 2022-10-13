@@ -2,29 +2,60 @@ import alterNameProvider from "../assets/img/alterNameProvider.png"
 import deleteService from "../assets/img/deleteService.png"
 
 
-function cardServiceProviderServices() {
+function cardServiceProviderServices(props) {
+
+    function openDeleteService(){
+        document.getElementById("deleteServiceProvider").style.display="flex"
+
+        const data = {
+            idService: props.id
+        }
+        sessionStorage.setItem("service",JSON.stringify({ ...data }))
+    }
+
+    function openEditService() {
+        var id = props.id;
+        var serviceInfoObj = JSON.parse(sessionStorage.getItem("servicesInfo"));
+        var serviceInfo = Object.keys(serviceInfoObj).map(key => [String(key), serviceInfoObj[key]]);
+
+        for (let i = 0; i < serviceInfo.length; i++) {
+            if(serviceInfo[i][1].idService === id){
+                document.getElementById("editServiceDivTxtid").value = serviceInfo[i][1].description
+                document.getElementById("editServiceDivNameServiceId").value = serviceInfo[i][1].name
+                document.getElementById("editServiceDivRefValueId").value = serviceInfo[i][1].referencePrice
+                document.getElementById("editServiceDivSelectCategories").value = serviceInfo[i][1].category.idCategory
+            }
+        }
+        
+        const data = {
+            idService: id
+        }
+        sessionStorage.setItem("service",JSON.stringify({ ...data }))
+        document.getElementById("editServiceDiv").style.display = "flex"
+    }
+
     return (
-        <details className="cardServiceProvider">
+        <details open className="cardServiceProvider">
             <summary className="infoService">
                 <div className="nameServiceProvider">
-                    <p>Serviço:</p>
-                    <p>xxxxxxx</p>
+                    <p>Serviço</p>
+                    <p>: {props.nameService}</p>
                 </div>
                 <div className="valueAvg">
                     <p>Valor de Referência</p>
-                    <p>R$00,00</p>
+                    <p>: R${props.referencePrice}</p>
                 </div>
                 <div className="divIconsService">
-                    <img src={alterNameProvider} alt="icone para editr serviço" className="editServiceProvider" />
-                    <img src={deleteService} alt="icone de deletar serviço" className="deleteService" />
+                    <img onClick={openEditService} src={alterNameProvider} alt="icone para editr serviço" className="editServiceProvider" />
+                    <img onClick={openDeleteService} src={deleteService} alt="icone de deletar serviço" className="deleteService" />
+
                 </div>
             </summary>
             <div className="descriptionServiceProvider">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum. Adipisci, deserunt reprehenderit quaerat suscipit enim, delectus voluptatibus modi autem facilis dele</p>
+                <p>{props.description}</p>
             </div>
         </details>
     )
 }
-
 
 export default cardServiceProviderServices

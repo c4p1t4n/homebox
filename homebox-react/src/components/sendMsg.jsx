@@ -55,11 +55,16 @@ class SendMsg extends Component {
             }
         }
         upload(audioData.blob, fileName)
-
-        api.post(url, formData, config)
+        
+        document.getElementById(JSON.parse(sessionStorage.getItem("chat")).idChat).innerHTML = "Áudio";
+        
+        setTimeout(() => {   
+            api.post(url, formData, config)
             .then((response) => {
                 console.log(response.status)
             })
+            sessionStorage.setItem("sendMsg", true)         
+        }, 620);
     };
 
     render() {
@@ -67,7 +72,11 @@ class SendMsg extends Component {
 
         return (
             <>
-                <input id="inputMsg" placeholder="Digite aqui ..." type="text" className="msg" />
+                <input id="inputMsg" placeholder="Digite aqui ..." type="text" className="msg" 
+                onKeyPress={(e) => {
+                    if(e.key === "Enter"){
+                        sendMsg()
+                    }}}/>
                 <button onClick={sendMsg}><img src={iconSendMsg} alt="Icone para enviar mensagem" className="sendMsg" /></button>
                 <button onClick={getFile}>
                     <img src={paperclip} alt="Icone para anexar foto ou video"/>
@@ -110,11 +119,16 @@ const onChange = e => {
     
     upload(state.file, fileName)
 
-    api.post(url, formData, config)
-        .then((response) => {
-            console.log(response.status)
-        })
-
+    
+    document.getElementById(JSON.parse(sessionStorage.getItem("chat")).idChat).innerHTML = "Imagem";
+    setTimeout(() => {   
+        api.post(url, formData, config)
+            .then((response) => {
+                console.log(response.status)
+            })
+            sessionStorage.setItem("sendMsg", true)
+    }, 620);    
+    
 }
 
 const getFile = e =>{
@@ -135,12 +149,16 @@ const sendMsg = e =>{
     api.post('chat/msg/'+chat+'/'+user, msg)
         .then((response) => {
             console.log(response.status)
-    });      
+    });   
+    document.getElementById(JSON.parse(sessionStorage.getItem("chat")).idChat).innerHTML = msg.message;
+    sessionStorage.setItem("sendMsg", true)
 }
 
 const upload = (file, name) => {
     const target = { Bucket:"homebox-files", Key:name, Body:file, ACL:'public-read'}
-    const cred = { accessKeyId:'ASIA3XAZXQC6PWXF32ID',  secretAccessKey:'xdLXyz1F7CSBsaS00gyIRk38bcNtwvwUkKhOH1is', sessionToken:'FwoGZXIvYXdzEJj//////////wEaDBbvlTpXAsF/dBmEYyLPAbCAFbn7WpsHZSJLKD8slviAAZ3dvmCQreEX8QvVdQzUGzi/2KZEM/Ypoh8nuGrex6ZRx0wMGTekc/nHtn63xeNpIQ5gH6F7lUNBjp1/uM/FtautGHIzqvIRrZoRYy+nc1euQTIySbWHaebrodQq7bGachB6Yf+G4PJMnDhuyTnHtJqDqmjIiUVryz7Kffzhz/F9dTfsV6LBtIGWCKezLCesKZ7alqrfhF8/zCWqnYqSm5OlL/r3sosU8tD9VQ1gF/+n1kjWBQDhnt0ZfP7uCyjKteSYBjItQdtPMAvJFxZkQp1aWheGuRuUtejx1qkH7NyMRZ0fPeV+gUmeze5N5fKTwwxZ'}
+    const cred = { accessKeyId:'ASIA3XAZXQC6FNJ7AGZ5',  
+                   secretAccessKey:'+FbT1bbcbTcK/1N+H61ck7Wz6C67JtZ0aCiIDRu+', 
+                   sessionToken:'FwoGZXIvYXdzEOz//////////wEaDJxTp31VUR/AwCDh4iLPAQ0UeDeV/7tc3HyIGoOwrMyv9ETganyJiZvizepdUjgqwuWgbVafHqgrzJDf9AoHrgyCgD+xYrNU8tQmvzKKZlXorCw8KPZgbH5eTCgTvlq6ht9Fw3aZFneTMUYGm2d+Ku1Uh+XqaUf8tNemKfGJIyovmXxtOcnrLDAIEkFSjO11/5WxIOrJOiqR105PDb8JvZZ0toaM7OWEXuCNOfVqQpfeT7e/q+xq0UWFlkMQDwiSbKlmXSat7gmUuA0p6ieSshpU8vMrIYtoM53ivxF5WCijla+ZBjIt38x9f1BweKL2IlRxzsKMGXL8ENio2jYlK6kkm3qwG53IC/yb+kVvOj9fFlDd'}
 
     try {
         const parallelUploads3 = new Upload({

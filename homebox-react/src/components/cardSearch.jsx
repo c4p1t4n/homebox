@@ -24,7 +24,7 @@ function CardSearch(props) {
             img={props.img}
             name={props.name}
             category={props.category}
-            rating={props.rating ?? "N/A"}
+            rating={props.rating ?? 0.0}
         />))
     }
 

@@ -28,6 +28,14 @@ import VLibras from "@djpfs/react-vlibras"
 const frequent_search = "'pintor'"
 
 function Home() {
+    const data = {
+        idChat: 1
+    }
+    const info = {
+    }
+    sessionStorage.setItem("chat", JSON.stringify({...data}))
+    sessionStorage.setItem("servicesInfo", JSON.stringify({...info}))
+
     const [worker, setWorker] = useState([])
 
     useEffect(() => {
@@ -85,8 +93,8 @@ function Home() {
                                     img={item.user?.picture ?? profileImg}
                                     name={item.user?.name}
                                     category={item?.category}
-                                    rating={item.rating}
-                                    ratingStr={item.rating ?? "N/A"}
+                                    rating={item.rating ?? 0.0}
+                                    ratingStr={item.rating ?? 0.0}
                                     dist={item.distance ?? "N/A"}
                                 />
                             ))}

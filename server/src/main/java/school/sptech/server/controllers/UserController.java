@@ -9,11 +9,13 @@ import school.sptech.server.model.Category;
 import school.sptech.server.model.User;
 //import school.sptech.server.service.ExportTxt;
 import school.sptech.server.service.FilaObj;
+import school.sptech.server.request.DistRequest;
 import school.sptech.server.request.LoginRequest;
 import school.sptech.server.request.UserIdRequest;
 import school.sptech.server.repository.CategoryRepository;
 import school.sptech.server.repository.RatingRepository;
 import school.sptech.server.repository.ServiceRepository;
+import school.sptech.server.response.DistResponse;
 import school.sptech.server.response.UserSearchQueryResult;
 import school.sptech.server.service.UserService;
 
@@ -65,6 +67,59 @@ public class UserController {
         return status(201).body(user);
 
     }
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @PatchMapping("/att/img/{idUser}/{picture}")
+    public ResponseEntity<Void> attImg(@PathVariable Integer idUser,
+                                 @PathVariable String picture){
+        if(!dbServiceUser.existsById(idUser)){
+            return status(404).build();
+        }
+
+        User user = dbServiceUser.findById(idUser).get();
+        user.setPicture("https://homebox-files.s3.amazonaws.com/"+picture);
+        dbServiceUser.saveUser(user);
+        return status(200).build();
+    }
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @PatchMapping("/att/name/{idUser}/{name}")
+    public ResponseEntity<Void> attName(@PathVariable Integer idUser,
+                                 @PathVariable String name){
+        if(!dbServiceUser.existsById(idUser)){
+            return status(404).build();
+        }
+
+        User user = dbServiceUser.findById(idUser).get();
+        user.setName(name);
+        dbServiceUser.saveUser(user);
+        return status(200).build();
+    }
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @PatchMapping("/att/email/{idUser}/{email}")
+    public ResponseEntity attEmail(@PathVariable Integer idUser,
+                                  @PathVariable String email){
+
+        if(!dbServiceUser.existsById(idUser)){
+            return status(404).build();
+        }
+
+        User user = dbServiceUser.findById(idUser).get();
+        user.setEmail(email);
+        dbServiceUser.saveUser(user);
+        return status(200).build();
+    }
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @GetMapping("/{idUser}")
+    public ResponseEntity<User> getUser(@PathVariable Integer idUser){
+        if(!dbServiceUser.existsById(idUser)){
+            return status(404).build();
+        }
+        return status(200).body(dbServiceUser.findById(idUser).get());
+    }
+
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/customer")
@@ -192,7 +247,7 @@ public class UserController {
         if (response.getStatusCodeValue() == 404 || response.getStatusCodeValue() == 204) {
             users = dbRepositoryService.UserHasSearchs(value).stream()
                     .map((user) -> new UserSearchQueryResult(user,
-                            dbRepositoryRating.getAvgRatingForWorker(user.getId()),
+                            dbRepositoryRating.getAvgWorker(user.getId()),
                             getDist(user.getCep(), dbServiceUser.findById(requestId.getId()).get().getCep()).getBody(),
                             getWorkerCategories(user.getId()).getBody().get(0).getName()))
                     .collect(Collectors.toList());
@@ -202,7 +257,7 @@ public class UserController {
                     .getBody()
                     .stream()
                     .map((item) -> new UserSearchQueryResult(item.getUser(),
-                            dbRepositoryRating.getAvgRatingForWorker(item.getUser().getId()),
+                            dbRepositoryRating.getAvgWorker(item.getUser().getId()),
                             getDist(item.getUser().getCep(), dbServiceUser.findById(requestId.getId()).get().getCep())
                                     .getBody(),
                             item.getCategory()))
@@ -237,7 +292,7 @@ public class UserController {
         if (!dbServiceUser.existsById(idUser)) {
             return status(404).build();
         }
-        Double rating = dbRepositoryRating.getAvgRatingForWorker(idUser);
+        Double rating = dbRepositoryRating.getAvgWorker(idUser);
 
         if (rating == null) {
             return status(204).build();
@@ -246,15 +301,17 @@ public class UserController {
         return status(200).body(rating);
     }
 
-    @GetMapping("/distance/cep1/cep2")
+    @GetMapping("/distance/{cep1}/{cep2}")
     public ResponseEntity<Double> getDist(@PathVariable String cep1,
             @PathVariable String cep2) {
 
-        ResponseEntity<Double> dist = distClient.getDist(cep1, cep2);
+        DistRequest distRequest = new DistRequest(cep1, cep2);
+
+        ResponseEntity<DistResponse> dist = distClient.getDist(distRequest);
         if (Objects.isNull(dist.getBody())) {
             return status(400).build();
         }
-        return status(200).body(dist.getBody());
+        return status(200).body(dist.getBody().getDistance());
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -267,7 +324,7 @@ public class UserController {
 
         List<UserSearchQueryResult> users = dbServiceUser.get3Workers().stream()
                 .map((user) -> new UserSearchQueryResult(user,
-                        dbRepositoryRating.getAvgRatingForWorker(user.getId()),
+                        dbRepositoryRating.getAvgWorker(user.getId()),
                         getDist(user.getCep(), dbServiceUser.findById(id).get().getCep()).getBody(),
                         getWorkerCategories(user.getId()).getBody().get(0)))
                 .collect(Collectors.toList());

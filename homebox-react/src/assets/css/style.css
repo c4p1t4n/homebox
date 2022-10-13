@@ -12,14 +12,17 @@
     background-size: cover;
     background-position: center;
     opacity: 100%;
+    place-content: center;
     background-repeat: no-repeat;
     height: 100vh;
 }
 
 .homebox_logo {
-    align-self: flex-end;
-    margin-right: 5%;
+    position: relative;
+    top: -80px;
+    right: -700px;
 }
+
 
 .homebox_logo img {
     height: 90px;
@@ -108,6 +111,9 @@
     justify-content: space-between;
 }
 
+#password:hover {
+    cursor: pointer;
+}
 
 .div_button {
     height: 500px;
@@ -192,7 +198,7 @@
     width: 500px;
     border-radius: 30px 0px 0px 30px;
     flex-direction: column;
-    height: 550px;
+    height: 620px;
     overflow: auto;
     align-items: center;
     margin: auto;
@@ -274,7 +280,7 @@
     border-radius: 30px;
 }
 
-.button_register:hover{
+.button_register:hover {
     cursor: pointer;
     background-color: rgb(255, 184, 52);
     color: black;
@@ -286,6 +292,80 @@
 
 
 
-a:hover{
+a:hover {
     text-decoration: underline;
+}
+
+
+
+/* esqueci a senha */
+
+
+.forgotPasswordDiv {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.47);
+    position: absolute;
+    z-index: 1;
+}
+
+.forgotPasswordDiv img {
+    position: absolute;
+    z-index: 1;
+    top: 220px;
+    right: 450px;
+}
+
+.forgotPasswordDiv img:hover {
+    height: 55px;
+    cursor: pointer;
+}
+
+.forgotPasswordDiv form {
+    background: white;
+    color: #0A3969;
+    width: 50%;
+    justify-content: space-between;
+    height: 400px;
+    border-radius: 20px;
+    padding: 1%;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputFormForgotPassword {
+    display: flex;
+    font-size: 28px;
+    width: 70%;
+    align-self: flex-start;
+    justify-content: space-between;
+    height: 90px;
+    flex-direction: column;
+}
+
+.inputFormForgotPassword input {
+    height: 30px;
+    border: none;
+    font-size: 20px;
+    border-bottom: black solid 1px;
+    border-radius: 3px;
+}
+
+#submitForgotPassword {
+    font-size: 28px;
+    background-color: #0A3969;
+    color: white;
+    border-radius: 20px;
+    padding: 1%;
+}
+
+#submitForgotPassword:hover {
+    background-color: orange;
+    color: black;
+    cursor: pointer;
 }
