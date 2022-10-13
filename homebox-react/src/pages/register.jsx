@@ -124,7 +124,7 @@ const register = e => {
     const inputPasswordConfirm = document?.querySelector("#passwordConfirm")
 
     const name = inputName?.value
-    const typeGenero = inputCategoryGenero?.selectedOptions?.[0]?.value
+    const gender = inputCategoryGenero?.selectedOptions?.[0]?.value
     const cpf = inputCPF?.value
     const birthDate = inputBirthDate?.value
     const cep = inputCEP?.value
@@ -135,7 +135,7 @@ const register = e => {
 
     if (
         !name ||
-        !typeGenero ||
+        !gender ||
         !cpf ||
         !birthDate ||
         !cep ||
@@ -155,7 +155,7 @@ const register = e => {
 
     api.post(`users/${type}`, {
         name,
-        typeGenero,
+        gender,
         email,
         password,
         cpf: cpf.trim().replace(".", "").replace(".", "").replace("-", ""),
