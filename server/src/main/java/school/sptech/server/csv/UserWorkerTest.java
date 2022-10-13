@@ -8,13 +8,13 @@ public class UserWorkerTest {
     public static void main(String[] args) {
 
         ListObj<User> userWorkerList = new ListObj<User>(5);
-        User user1 = new User(1, "José Silva", "jose@gmail.com", "senhaExemplo1",
+        User user1 = new User(1, "José Silva", "Masculino", "jose@gmail.com", "senhaExemplo1",
                 "00011122233", "tokenExemplo1", "worker", "foto.png",
                 "1234567");
-        User user2 = new User(2, "Lara Alves", "lara@gmail.com", "senhaExemplo2",
+        User user2 = new User(2, "Lara Alves", "Feminino", "lara@gmail.com", "senhaExemplo2",
                 "00011122244", "tokenExemplo2", "worker", "foto.png",
                 "1234577");
-        User user3 = new User(3, "Felipe Abreu", "felipe@gmail.com", "senhaExemplo3",
+        User user3 = new User(3, "Felipe Abreu", "Masculino", "felipe@gmail.com", "senhaExemplo3",
                 "00011122255", "tokenExemplo3", "worker", "foto.png",
                 "1234588");
 
@@ -23,7 +23,7 @@ public class UserWorkerTest {
         userWorkerList.add(user2);
 
         // System.out.printf("%5s %-14s %-20s %-14s %-14s %-14s %-10s %-14s %-14s\n",
-        // "ID", "NOME", "EMAIL", "SENHA", "CPF", "TOKEN", "TIPO", "FOTO", "CEP");
+        // "ID", "NOME", "GÊNERO", "EMAIL", "SENHA", "CPF", "TOKEN", "TIPO", "FOTO", "CEP");
         // userWorkerList.show();
 
         UserWorkerCsv.recordCsvFile(userWorkerList, "userWorker");

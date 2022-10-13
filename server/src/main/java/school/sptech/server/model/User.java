@@ -19,6 +19,8 @@ public class User implements ILogin {
 
     @Column(name = "name")
     private String name;
+    @Column(name = "gender")
+    private String gender;
     @Column(name = "email")
     @Email
     private String email;
@@ -63,10 +65,11 @@ public class User implements ILogin {
         this.id = id;
     }
 
-    public User(Integer id, String name, @Email String email, String password, String cpf, String token, String type,
+    public User(Integer id, String name, String gender, @Email String email, String password, String cpf, String token, String type,
                 String picture, LocalDate birthDate, String cep, Character authenticated) {
         this.id = id;
         this.name = name;
+        this.gender = gender;
         this.email = email;
         this.password = password;
         this.cpf = cpf;
@@ -78,10 +81,11 @@ public class User implements ILogin {
         this.authenticated = 'n';
     }
 
-    public User(Integer id, String name, @Email String email, String password, String cpf, String token, String type,
+    public User(Integer id, String name, String gender, @Email String email, String password, String cpf, String token, String type,
             String picture, String cep) {
         this.id = id;
         this.name = name;
+        this.gender = gender;
         this.email = email;
         this.password = password;
         this.cpf = cpf;
@@ -122,6 +126,14 @@ public class User implements ILogin {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public String getEmail() {
