@@ -39,6 +39,7 @@ CREATE TABLE media (
 CREATE TABLE "user" (
     id_user int PRIMARY KEY IDENTITY(1, 1),
     name VARCHAR(100) NOT NULL,
+    gender VARCHAR(50) NOT NULL,
     email VARCHAR(100) NOT NULL,
     PASSWORD CHAR(64) NOT NULL,
     cpf CHAR(11) NOT NULL,
@@ -249,6 +250,7 @@ VALUES
 INSERT INTO
     user(
         'name',
+        'gender',
         'email',
         'password',
         'cpf',
@@ -260,6 +262,7 @@ INSERT INTO
 VALUES
     (
         'José',
+        'Masculino',
         'jose@gmail.com',
         HASHBYTES("SHA2_256", "ExSenha1"),
         '12345678900',
@@ -270,6 +273,7 @@ VALUES
     ),
     (
         'Robson',
+        'Masculino',
         'jose@gmail.com',
         HASHBYTES("SHA2_256", "ExSenha1"),
         '12345678900',
@@ -280,6 +284,7 @@ VALUES
     ),
     (
         'Pedro',
+        'Masculino',
         'jose@gmail.com',
         HASHBYTES("SHA2_256", "ExSenha1"),
         '12345678900',
@@ -289,6 +294,7 @@ VALUES
     ),
     (
         'Bruna',
+        'Feminino',
         'jose@gmail.com',
         HASHBYTES("SHA2_256", "ExSenha1"),
         '12345678900',
@@ -299,6 +305,7 @@ VALUES
     ),
     (
         'Claudio',
+        'Masculino',
         'jose@gmail.com',
         HASHBYTES("SHA2_256", "ExSenha1"),
         '12345678900',

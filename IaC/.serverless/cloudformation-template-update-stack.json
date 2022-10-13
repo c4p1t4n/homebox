@@ -119,6 +119,40 @@
         ]
       }
     },
+    "SubnetPubAZ2": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "AvailabilityZone": "us-east-1c",
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "CidrBlock": "10.0.0.128/26",
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "sub-az2-pub-homebox"
+          }
+        ]
+      }
+    },
+    "SubnetPriAZ2": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "AvailabilityZone": "us-east-1c",
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "CidrBlock": "10.0.0.192/26",
+        "MapPublicIpOnLaunch": false,
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "sub-az2-pri-homebox"
+          }
+        ]
+      }
+    },
     "IgwHomebox": {
       "Type": "AWS::EC2::InternetGateway",
       "Properties": {
@@ -141,16 +175,58 @@
         }
       }
     },
-    "NATGatewayEIP": {
+    "NATGatewayEIPLoadBalancer": {
       "Type": "AWS::EC2::EIP",
       "Properties": {
         "InstanceId": {
-          "Ref": "EC2Private"
+          "Ref": "EC2LoadBalancerAZ1"
         },
         "Tags": [
           {
             "Key": "Name",
-            "Value": "eip-gateway-homebox"
+            "Value": "eip-pub-lb-homebox-az1"
+          }
+        ]
+      }
+    },
+    "SecurityGroupLBPub": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupName": "sg_lb_homebox_az1",
+        "GroupDescription": "sg_lb_homebox_az1",
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "SecurityGroupIngress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "IpProtocol": "tcp",
+            "FromPort": 22,
+            "ToPort": 22
+          },
+          {
+            "CidrIp": "0.0.0.0/0",
+            "IpProtocol": "tcp",
+            "FromPort": 80,
+            "ToPort": 80
+          },
+          {
+            "CidrIp": "0.0.0.0/0",
+            "IpProtocol": "tcp",
+            "FromPort": 443,
+            "ToPort": 443
+          }
+        ],
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "IpProtocol": -1
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "sg_lb_homebox_az1"
           }
         ]
       }
@@ -158,26 +234,40 @@
     "SecurityGroupPub": {
       "Type": "AWS::EC2::SecurityGroup",
       "Properties": {
-        "GroupName": "sg_pub_homebox",
-        "GroupDescription": "sg_pub_homebox",
+        "GroupName": "sg_pub_homebox_az1",
+        "GroupDescription": "sg_pub_homebox_az1",
         "VpcId": {
           "Ref": "VPC"
         },
         "SecurityGroupIngress": [
           {
-            "CidrIp": "0.0.0.0/0",
+            "SourceSecurityGroupId": {
+              "Ref": "SecurityGroupLBPub"
+            },
             "IpProtocol": "tcp",
             "FromPort": 22,
             "ToPort": 22
           },
           {
-            "CidrIp": "0.0.0.0/0",
+            "SourceSecurityGroupId": {
+              "Ref": "SecurityGroupLBPub"
+            },
+            "IpProtocol": "tcp",
+            "FromPort": 3000,
+            "ToPort": 3000
+          },
+          {
+            "SourceSecurityGroupId": {
+              "Ref": "SecurityGroupLBPub"
+            },
             "IpProtocol": "tcp",
             "FromPort": 80,
             "ToPort": 80
           },
           {
-            "CidrIp": "0.0.0.0/0",
+            "SourceSecurityGroupId": {
+              "Ref": "SecurityGroupLBPub"
+            },
             "IpProtocol": "tcp",
             "FromPort": 443,
             "ToPort": 443
@@ -192,7 +282,7 @@
         "Tags": [
           {
             "Key": "Name",
-            "Value": "sg_pub_homebox"
+            "Value": "sg_pub_homebox_az1"
           }
         ]
       }
@@ -200,8 +290,8 @@
     "SecurityGroupPri": {
       "Type": "AWS::EC2::SecurityGroup",
       "Properties": {
-        "GroupName": "sg_pri_homebox",
-        "GroupDescription": "sg_pri_homebox",
+        "GroupName": "sg_pri_homebox_az1",
+        "GroupDescription": "sg_pri_homebox_az1",
         "VpcId": {
           "Ref": "VPC"
         },
@@ -227,6 +317,14 @@
               "Ref": "SecurityGroupPub"
             },
             "IpProtocol": "tcp",
+            "FromPort": 8080,
+            "ToPort": 8080
+          },
+          {
+            "SourceSecurityGroupId": {
+              "Ref": "SecurityGroupPub"
+            },
+            "IpProtocol": "tcp",
             "FromPort": 443,
             "ToPort": 443
           }
@@ -240,7 +338,113 @@
         "Tags": [
           {
             "Key": "Name",
-            "Value": "sg_pri_homebox"
+            "Value": "sg_pri_homebox_az1"
+          }
+        ]
+      }
+    },
+    "SecurityGroupPubAz2": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupName": "sg_pub_homebox_az2",
+        "GroupDescription": "sg_pub_homebox_az2",
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "SecurityGroupIngress": [
+          {
+            "SourceSecurityGroupId": {
+              "Ref": "SecurityGroupLBPub"
+            },
+            "IpProtocol": "tcp",
+            "FromPort": 22,
+            "ToPort": 22
+          },
+          {
+            "SourceSecurityGroupId": {
+              "Ref": "SecurityGroupLBPub"
+            },
+            "IpProtocol": "tcp",
+            "FromPort": 3000,
+            "ToPort": 3000
+          },
+          {
+            "SourceSecurityGroupId": {
+              "Ref": "SecurityGroupLBPub"
+            },
+            "IpProtocol": "tcp",
+            "FromPort": 80,
+            "ToPort": 80
+          },
+          {
+            "SourceSecurityGroupId": {
+              "Ref": "SecurityGroupLBPub"
+            },
+            "IpProtocol": "tcp",
+            "FromPort": 443,
+            "ToPort": 443
+          }
+        ],
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "IpProtocol": -1
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "sg_pub_homebox_az2"
+          }
+        ]
+      }
+    },
+    "SecurityGroupPriAz2": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupName": "sg_pri_homebox_az2",
+        "GroupDescription": "sg_pri_homebox_az2",
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "SecurityGroupIngress": [
+          {
+            "SourceSecurityGroupId": {
+              "Ref": "SecurityGroupPubAz2"
+            },
+            "IpProtocol": "tcp",
+            "FromPort": 22,
+            "ToPort": 22
+          },
+          {
+            "SourceSecurityGroupId": {
+              "Ref": "SecurityGroupPubAz2"
+            },
+            "IpProtocol": "tcp",
+            "FromPort": 8080,
+            "ToPort": 8080
+          },
+          {
+            "SourceSecurityGroupId": {
+              "Ref": "SecurityGroupPubAz2"
+            },
+            "IpProtocol": "tcp",
+            "FromPort": 80,
+            "ToPort": 80
+          },
+          {
+            "SourceSecurityGroupId": {
+              "Ref": "SecurityGroupPubAz2"
+            },
+            "IpProtocol": "tcp",
+            "FromPort": 443,
+            "ToPort": 443
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "sg_pri_homebox_az2"
           }
         ]
       }
@@ -259,7 +463,41 @@
         "KeyType": "rsa"
       }
     },
-    "EC2FrontEnd": {
+    "EC2LoadBalancerAZ1": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "ImageId": "ami-08d4ac5b634553e16",
+        "KeyName": "ch28082022Publica",
+        "InstanceType": "t2.micro",
+        "SubnetId": {
+          "Ref": "SubnetPubAZ1"
+        },
+        "SecurityGroupIds": [
+          {
+            "Fn::GetAtt": [
+              "SecurityGroupLBPub",
+              "GroupId"
+            ]
+          }
+        ],
+        "BlockDeviceMappings": [
+          {
+            "DeviceName": "/dev/sda1",
+            "Ebs": {
+              "VolumeType": "gp2",
+              "VolumeSize": "8"
+            }
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "ec2-pub-lb-az1"
+          }
+        ]
+      }
+    },
+    "EC2FrontEndAZ1": {
       "Type": "AWS::EC2::Instance",
       "Properties": {
         "ImageId": "ami-08d4ac5b634553e16",
@@ -293,7 +531,7 @@
         ]
       }
     },
-    "EC2Private": {
+    "EC2PrivateAZ1": {
       "Type": "AWS::EC2::Instance",
       "Properties": {
         "ImageId": "ami-08d4ac5b634553e16",
@@ -323,6 +561,74 @@
           {
             "Key": "Name",
             "Value": "ec2-priv-back-bd-az1"
+          }
+        ]
+      }
+    },
+    "EC2FrontEndAZ2": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "ImageId": "ami-08d4ac5b634553e16",
+        "KeyName": "ch28082022Publica",
+        "InstanceType": "t2.micro",
+        "SubnetId": {
+          "Ref": "SubnetPubAZ2"
+        },
+        "SecurityGroupIds": [
+          {
+            "Fn::GetAtt": [
+              "SecurityGroupPubAz2",
+              "GroupId"
+            ]
+          }
+        ],
+        "BlockDeviceMappings": [
+          {
+            "DeviceName": "/dev/sda1",
+            "Ebs": {
+              "VolumeType": "gp2",
+              "VolumeSize": "8"
+            }
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "ec2-pub-front-end-az2"
+          }
+        ]
+      }
+    },
+    "EC2PrivateAZ2": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "ImageId": "ami-08d4ac5b634553e16",
+        "KeyName": "ch28082022Privada",
+        "InstanceType": "t2.micro",
+        "SubnetId": {
+          "Ref": "SubnetPriAZ2"
+        },
+        "SecurityGroupIds": [
+          {
+            "Fn::GetAtt": [
+              "SecurityGroupPriAz2",
+              "GroupId"
+            ]
+          }
+        ],
+        "BlockDeviceMappings": [
+          {
+            "DeviceName": "/dev/sda1",
+            "Ebs": {
+              "VolumeType": "gp2",
+              "VolumeSize": "8"
+            }
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "ec2-priv-back-bd-az2"
           }
         ]
       }
