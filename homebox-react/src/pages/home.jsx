@@ -31,7 +31,7 @@ function Home() {
     const data = {
         idChat: 1
     }
-    const info = {     
+    const info = {
     }
     sessionStorage.setItem("chat", JSON.stringify({...data}))
     sessionStorage.setItem("servicesInfo", JSON.stringify({...info}))
@@ -93,8 +93,8 @@ function Home() {
                                     img={item.user?.picture ?? profileImg}
                                     name={item.user?.name}
                                     category={item?.category}
-                                    rating={item.rating}
-                                    ratingStr={item.rating ?? "N/A"}
+                                    rating={item.rating ?? 0.0}
+                                    ratingStr={item.rating ?? 0.0}
                                     dist={item.distance ?? "N/A"}
                                 />
                             ))}
