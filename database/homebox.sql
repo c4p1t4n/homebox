@@ -413,46 +413,46 @@ VALUES
 INSERT INTO
     scheduling_status(service_status, status_date, scheduling_id_scheduling)
 VALUES
-    ('scheduled', now(), 1),('scheduled', now(), 2),('scheduled', now(), 3),        
-    ('scheduled', now(), 4),('scheduled', now(), 5),('scheduled', now(), 6),        
-    ('scheduled', now(), 7),('scheduled', now(), 8),('scheduled', now(), 9),        
-    ('scheduled', now(), 10),  
+    ('scheduled', '2022-01-10 14:15:47', 1),('scheduled', '2022-01-10 13:11:47', 2),('scheduled', '2022-01-10 11:11:47', 3),        
+    ('scheduled', '2022-02-11 01:22:47', 4),('scheduled', '2022-02-11 18:20:47', 5),('scheduled', '2022-02-11 19:12:47', 6),        
+    ('scheduled', '2022-02-12 12:41:47', 7),('scheduled', '2022-03-12 18:19:47', 8),('scheduled', '2022-03-12 12:13:47', 9),        
+    ('scheduled', '2022-04-13 11:31:47', 10),  
 
-    ('done', now(), 11),('done', now(), 12),('done', now(), 13),        
-    ('done', now(), 14),('done', now(), 15),('done', now(), 16),        
-    ('done', now(), 17),('done', now(), 18),('done', now(), 19),        
-    ('done', now(), 20),    
+    ('done', '2022-05-10 14:14:47', 11),('done', '2022-05-13 13:17:47', 12),('done', '2022-05-11 10:17:47', 13),        
+    ('done', '2022-06-11 16:13:47', 14),('done', '2022-06-18 16:17:47', 15),('done', '2022-06-19 11:17:47', 16),        
+    ('done', '2022-07-12 18:12:47', 17),('done', '2022-07-18 19:17:47', 18),('done', '2022-07-12 12:17:47', 19),        
+    ('done', '2022-08-13 12:11:47', 20),    
 
-    ('worker-cancelled', now(), 21),('worker-cancelled', now(), 22),('worker-cancelled', now(), 23),        
-    ('worker-cancelled', now(), 24),('worker-cancelled', now(), 25),('worker-cancelled', now(), 26),        
-    ('worker-cancelled', now(), 27),('worker-cancelled', now(), 28),('worker-cancelled', now(), 29),        
-    ('worker-cancelled', now(), 30),  
+    ('worker-cancelled', '2022-09-14 13:17:47', 21),('worker-cancelled', '2022-09-14 13:17:47', 22),('worker-cancelled', '2022-09-13 17:17:47', 23),        
+    ('worker-cancelled', '2022-10-01 14:17:47', 24),('worker-cancelled', '2022-10-12 12:17:47', 25),('worker-cancelled', '2022-10-13 17:17:47', 26),        
+    ('worker-cancelled', '2022-11-12 15:17:47', 27),('worker-cancelled', '2022-11-11 17:17:47', 28),('worker-cancelled', '2022-11-13 17:17:47', 29),        
+    ('worker-cancelled', '2022-12-11 16:17:47', 30),  
 
-    ('customer-cancelled', now(), 31),('customer-cancelled', now(), 32),('customer-cancelled', now(), 33),        
-    ('customer-cancelled', now(), 34),('customer-cancelled', now(), 35),('customer-cancelled', now(), 36),        
-    ('customer-cancelled', now(), 37),('customer-cancelled', now(), 38),('customer-cancelled', now(), 39),        
-    ('customer-cancelled', now(), 40),  
+    ('customer-cancelled', '2022-02-11 11:17:47', 31),('customer-cancelled', '2022-02-10 11:17:47', 32),('customer-cancelled', '2022-02-11 18:17:47', 33),        
+    ('customer-cancelled', '2022-03-19 14:17:47', 34),('customer-cancelled', '2022-03-11 10:17:47', 35),('customer-cancelled', '2022-03-14 16:17:47', 36),        
+    ('customer-cancelled', '2022-04-12 18:17:47', 37),('customer-cancelled', '2022-04-13 23:17:47', 38),('customer-cancelled', '2022-04-13 11:17:47', 39),        
+    ('customer-cancelled', '2022-05-13 19:17:47', 40),  
 
-    ('not-executed', now(), 41),('not-executed', now(), 42),('not-executed', now(), 43),        
-    ('not-executed', now(), 44),('not-executed', now(), 45),('not-executed', now(), 46),        
-    ('not-executed', now(), 47),('not-executed', now(), 48),('not-executed', now(), 49),        
-    ('not-executed', now(), 50),  
+    ('not-executed', '2022-06-13 11:17:47', 41),('not-executed', '2022-06-13 13:17:47', 42),('not-executed', '2022-10-10 16:17:47', 43),        
+    ('not-executed', '2022-07-19 14:17:47', 44),('not-executed', '2022-07-13 12:17:47', 45),('not-executed', '2022-10-11 12:17:47', 46),        
+    ('not-executed', '2022-08-11 17:17:47', 47),('not-executed', '2022-08-13 11:17:47', 48),('not-executed', '2022-10-12 15:17:47', 49),        
+    ('not-executed', '2022-09-12 20:17:47', 50),  
 
-    ('rated', now(), 51),('rated', now(), 52),('rated', now(), 53),        
-    ('rated', now(), 54),('rated', now(), 55),('rated', now(), 56),        
-    ('rated', now(), 57),('rated', now(), 58),('rated', now(), 59),        
-    ('rated', now(), 60),  
+    ('rated', '2022-10-12 17:17:47', 51),('rated', '2022-10-15 17:17:47', 52),('rated', '2022-10-11 17:17:47', 53),        
+    ('rated', '2022-10-13 17:17:47', 54),('rated', '2022-10-16 17:17:47', 55),('rated', '2022-10-12 17:17:47', 56),        
+    ('rated', '2022-10-14 17:17:47', 57),('rated', '2022-10-10 17:17:47', 58),('rated', '2022-10-13 17:17:47', 59),        
+    ('rated', '2022-10-15 17:17:47', 60),  
 
-    ('scheduled', now(), 61),('scheduled', now(), 62),('scheduled', now(), 63),        
-    ('scheduled', now(), 64),('scheduled', now(), 65),('scheduled', now(), 66),        
-    ('scheduled', now(), 67),('scheduled', now(), 68),('scheduled', now(), 69),        
-    ('scheduled', now(), 70), 
+    ('scheduled', '2022-10-14 17:17:47', 61),('scheduled', '2022-10-11 17:17:47', 62),('scheduled', '2022-10-14 17:17:47', 63),        
+    ('scheduled', '2022-10-15 17:17:47', 64),('scheduled', '2022-10-12 17:17:47', 65),('scheduled', '2022-10-15 17:17:47', 66),        
+    ('scheduled', '2022-10-16 17:17:47', 67),('scheduled', '2022-10-13 17:17:47', 68),('scheduled', '2022-10-16 17:17:47', 69),        
+    ('scheduled', '2022-10-10 17:17:47', 70), 
 
-    ('done', now(), 71),('done', now(), 72),('done', now(), 73),        
-    ('done', now(), 74),('done', now(), 75),('done', now(), 76),        
-    ('done', now(), 77),('done', now(), 78),('done', now(), 79),        
-    ('done', now(), 80),
-    ('done', now(), 81);
+    ('done', '2022-10-10 17:17:47', 71),('done', '2022-10-15 17:17:47', 72),('done', '2022-10-11 17:17:47', 73),        
+    ('done', '2022-10-11 17:17:47', 74),('done', '2022-10-16 17:17:47', 75),('done', '2022-10-11 17:17:47', 76),        
+    ('done', '2022-10-12 17:17:47', 77),('done', '2022-10-10 17:17:47', 78),('done', '2022-10-12 17:17:47', 79),        
+    ('done', '2022-10-13 17:17:47', 80),
+    ('done', '2022-10-14 17:17:47', 81);
 
 INSERT INTO
     accomplished_service(
