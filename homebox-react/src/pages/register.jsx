@@ -51,10 +51,10 @@ function Register() {
                         </div>
                         <div className="div_input">
                             <p>Genero</p>
-                            <select name="category" id="category">
+                            <select name="categoryGenero" id="categoryGenero">
                                 <option value="">Selecione</option>
-                                <option value="M">Masculino</option>
-                                <option value="F">Feminino</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Feminino">Feminino</option>
                                 <option value="NA">Prefiro não informar</option>
                             </select>
                         </div>
@@ -114,6 +114,7 @@ function Register() {
 const register = e => {
     e.preventDefault()
     const inputName = document?.querySelector("#name")
+    const inputCategoryGenero = document?.querySelector("#categoryGenero")
     const inputCPF = document?.querySelector("#cpf")
     const inputBirthDate = document?.querySelector("#birth_date")
     const inputCEP = document?.querySelector("#cep")
@@ -123,6 +124,7 @@ const register = e => {
     const inputPasswordConfirm = document?.querySelector("#passwordConfirm")
 
     const name = inputName?.value
+    const gender = inputCategoryGenero?.selectedOptions?.[0]?.value
     const cpf = inputCPF?.value
     const birthDate = inputBirthDate?.value
     const cep = inputCEP?.value
@@ -133,6 +135,7 @@ const register = e => {
 
     if (
         !name ||
+        !gender ||
         !cpf ||
         !birthDate ||
         !cep ||
@@ -152,6 +155,7 @@ const register = e => {
 
     api.post(`users/${type}`, {
         name,
+        gender,
         email,
         password,
         cpf: cpf.trim().replace(".", "").replace(".", "").replace("-", ""),
