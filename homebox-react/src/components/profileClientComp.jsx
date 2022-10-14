@@ -84,28 +84,28 @@ const onChange = e => {
 
     let fileName = uuidv4() + ".png";
     const url = '/users/att/img/' + user + '/' + fileName;
-    
+
     setTimeout(() => {
         api.patch(url)
         .then((response) => {
             console.log(response.status)
         })
     }, 690);
-    
+
     upload(state.file, fileName)
 }
 
 const upload = (file, name) => {
     const target = { Bucket: "homebox-files", Key: name, Body: file, ACL: 'public-read' }
-    const cred = {
-        accessKeyId: 'ASIA3XAZXQC6JOR4WL2T',
-        secretAccessKey: 'kY4qoCTb+5ou8hVPCbrCTpGY/6okZwNkzWm9IINy',
-        sessionToken: 'FwoGZXIvYXdzEKj//////////wEaDEm0mXBz1ogJbuawhyLPASjqh6v+vuIqADhqjfb1lTLKGzKDWKcRzmClL5sSGPLHQiVYHxYpxYTtBLtZTkgHDm9oz39MqAL1hj9ThIDZQDTGZ4Ii0CalpB3yB5RIGBxsRCqkVdBjIyktnGxtQ8iAyMx2NJ4mFGZaB1DoBGdcWDfszC/fOzuTeVeqvaW66udf6A25qVqU/5/URlU2FFOnE+w3ve1bxQRFG38/O/gztWSyoNDLbsMnKx6kOtmqfSlFp/gLMDtd71mzixO9yGBQae1t0iaw/3dDJbpBFzjFSijcw9iZBjItm/M4B6wDbkCZXnIMn2iq43NXLUK7xaKDYUR+CPcSlwkNfzTd3yePE0xEruxe'
-    }
+    // const cred = {
+    //     accessKeyId: 'ASIA3XAZXQC6JOR4WL2T',
+    //     secretAccessKey: 'kY4qoCTb+5ou8hVPCbrCTpGY/6okZwNkzWm9IINy',
+    //     sessionToken: 'FwoGZXIvYXdzEKj//////////wEaDEm0mXBz1ogJbuawhyLPASjqh6v+vuIqADhqjfb1lTLKGzKDWKcRzmClL5sSGPLHQiVYHxYpxYTtBLtZTkgHDm9oz39MqAL1hj9ThIDZQDTGZ4Ii0CalpB3yB5RIGBxsRCqkVdBjIyktnGxtQ8iAyMx2NJ4mFGZaB1DoBGdcWDfszC/fOzuTeVeqvaW66udf6A25qVqU/5/URlU2FFOnE+w3ve1bxQRFG38/O/gztWSyoNDLbsMnKx6kOtmqfSlFp/gLMDtd71mzixO9yGBQae1t0iaw/3dDJbpBFzjFSijcw9iZBjItm/M4B6wDbkCZXnIMn2iq43NXLUK7xaKDYUR+CPcSlwkNfzTd3yePE0xEruxe'
+    // }
 
     try {
         const parallelUploads3 = new Upload({
-            client: new S3Client({ region: 'us-east-1', credentials: cred }),
+            client: new S3Client({ region: 'us-east-1' }),
             params: target,
             leavePartsOnError: false,
         });
@@ -127,12 +127,12 @@ const updateEmail = () => {
     if(newEmail.indexOf('@')>-1 && newEmail.indexOf('.com')>-1){
         document.getElementById("changeEmail").value = ""
         const url = '/users/att/email/' + user + '/' + newEmail;
-    
+
         api.patch(url)
             .then((response) => {
                 console.log(response.status)
             })
-    
+
         alert("Email Alterado!!!!\n" + newEmail)
         document.getElementById("openDivAlterNameProvider").style.display = "none"
     }
