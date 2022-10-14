@@ -11,7 +11,6 @@ import { search } from "../assets/js/search"
 
 function SearchResult() {
 
-
     const queryString = window.location.search
     const parameters = new URLSearchParams(queryString)
     const searchValue = parameters.get("search")

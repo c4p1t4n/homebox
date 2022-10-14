@@ -29,8 +29,8 @@ public class ServicesScheduling implements Serializable {
     @Column(name = "address")
     private String address;
 
-    @Column(name = "reference_price")
-    private Double  referencePrice;
+    @Column(name = "price")
+    private Double  price;
 
     @Column(name = "date")
     private LocalDate date;
@@ -42,15 +42,15 @@ public class ServicesScheduling implements Serializable {
     }
 
     public ServicesScheduling(Integer id, Integer workerId, Integer customerId, String nameService,
-                              String serviceDescription, String address, Double referencePrice,
-                              LocalDate date, String status) {
+                              String serviceDescription, String address, Double price, LocalDate date,
+                              String status) {
         this.id = id;
         this.workerId = workerId;
         this.customerId = customerId;
         this.nameService = nameService;
         this.serviceDescription = serviceDescription;
         this.address = address;
-        this.referencePrice = referencePrice;
+        this.price = price;
         this.date = date;
         this.status = status;
     }
@@ -103,12 +103,12 @@ public class ServicesScheduling implements Serializable {
         this.address = address;
     }
 
-    public Double getReferencePrice() {
-        return referencePrice;
+    public Double getPrice() {
+        return price;
     }
 
-    public void setReferencePrice(Double referencePrice) {
-        this.referencePrice = referencePrice;
+    public void setPrice(Double price) {
+        this.price = price;
     }
 
     public LocalDate getDate() {

@@ -7,7 +7,6 @@ import Footer from "../components/footer"
 import iconLoading from "../assets/img/iconLoading.gif"
 
 import Header from "../components/header"
-import FrequentSearchCard from "../components/frequentSearchCard"
 import FrequentSearchCardDistance from "../components/frequentSearchCardDistance"
 
 import profileImg from "../assets/img/profileIcon.png"
@@ -15,17 +14,8 @@ import brushIcon from "../assets/img/brushIcon.png"
 import electrician from "../assets/img/electrician.png"
 import accessIcon from "../assets/img/accessIcon.png"
 import accessIconWhite from "../assets/img/arrow-right-circle.png"
-import arrowLeft from "../assets/img/arrowLeft.png"
-import arrowRight from "../assets/img/arrowRigth.png"
-import imgMaria from "../assets/img/MariaAntoniaCustumer.png"
-import imgJose from "../assets/img/joseRicardoCustumer.png"
-import imgLeo from "../assets/img/leonardoCustumer.png"
-import img5Stars from "../assets/img/fiveStarts.png"
-import img4Stars from "../assets/img/fourStars.png"
-import img3Stars from "../assets/img/threeStars.png"
 import VLibras from "@djpfs/react-vlibras"
 
-const frequent_search = "'pintor'"
 
 function Home() {
     const data = {
@@ -96,6 +86,7 @@ function Home() {
                                     rating={item.rating ?? 0.0}
                                     ratingStr={item.rating ?? 0.0}
                                     dist={item.distance ?? "N/A"}
+                                    id_user={item.user.id_user}
                                 />
                             ))}
                         </div>

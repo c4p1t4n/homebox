@@ -3,15 +3,9 @@ import { DynamicStar } from "react-dynamic-star"
 import CardSearchOpenClick from "../components/cardSearchOpenClick"
 
 function CardSearch(props) {
-    // const backgroundImg = {
-    //     backgroundImage: props.img
-    // }
     const styleRating = {
         display: "inline"
     }
-
-
-
 
     const [cardList, setCardList] = useState([])
 
@@ -27,10 +21,6 @@ function CardSearch(props) {
             rating={props.rating ?? 0.0}
         />))
     }
-
-
-
-
 
     return (
         <>
@@ -78,12 +68,3 @@ function CardSearch(props) {
 
 
 export default CardSearch
-
-
-// const openDivProviderCard = e => {
-
-//     e.preventDefault()
-//     const openDivProviderCardOpen = document.getElementById("cardSearchOpenID")
-
-//     openDivProviderCardOpen.style.display = "flex"
-// }
