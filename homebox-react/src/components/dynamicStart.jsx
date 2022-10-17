@@ -7,7 +7,7 @@ function dynamicStars(props) {
                 <DynamicStar
                     width={30}
                     height={30}
-                    rating={props.rating.toFixed(1)}
+                    rating={props?.rating?.toFixed(1) ?? 0}
                     emptyStarColor={"grey"} /> : ""}
         </>
     )

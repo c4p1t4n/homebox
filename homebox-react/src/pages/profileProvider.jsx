@@ -14,7 +14,7 @@ function profileProvider() {
     const data = {
         idChat: 1
     }
-    sessionStorage.setItem("chat", JSON.stringify({...data}))
+    sessionStorage.setItem("chat", JSON.stringify({ ...data }))
 
     function openCreateService() {
         document.getElementById("addServiceDiv").style.display = "flex"
@@ -29,6 +29,7 @@ function profileProvider() {
             referencePrice: document.getElementById("refValueId").value
         }).then((response) => {
             console.log(response.status)
+            window.location.reload()
         })
 
         document.getElementById("addServiceDiv").style.display = "none"
@@ -44,6 +45,7 @@ function profileProvider() {
             referencePrice: document.getElementById("editServiceDivRefValueId").value
         }).then((response) => {
             console.log(response.status)
+            window.location.reload()
         })
 
         document.getElementById("editServiceDiv").style.display = "none"
@@ -178,7 +180,7 @@ function profileProvider() {
             <div id="modalAlterMsgInitChat" className="modalAlterMsgInitChat">
                 <div className="modalAlterMsgInitChatDiv">
                     <p>Digite uma mensagem de saudação abaixo para o chat</p>
-                    <textarea placeholder="Exemplo: Olá, sou xxxxx, qual serviço gostaria de conversar ?"  id="textArea" cols="30" rows="8"></textarea>
+                    <textarea placeholder="Exemplo: Olá, sou xxxxx, qual serviço gostaria de conversar ?" id="textArea" cols="30" rows="8"></textarea>
                     <div className="divBotao10">
                         <button onClick={alterMsgInitChat} className="botao10">Salvar</button>
                         <button onClick={closeModalAlterMsgInitChat} className="botao10">Sair</button>
@@ -190,23 +192,23 @@ function profileProvider() {
 }
 
 function alterMsgInitChat() {
-    api.patch(`/chat/att/msg/${JSON.parse(sessionStorage.getItem("user")).id_user}/`+document.getElementById("textArea").value)
-    .then(({ status, data }) => {
-        if (status === 200) {
-            alert("Menssagem Alterada")
-            closeModalAlterMsgInitChat()
-        }
-    })
+    api.patch(`/chat/att/msg/${JSON.parse(sessionStorage.getItem("user")).id_user}/` + document.getElementById("textArea").value)
+        .then(({ status, data }) => {
+            if (status === 200) {
+                alert("Menssagem Alterada")
+                closeModalAlterMsgInitChat()
+            }
+        })
 
 }
 
 function openModalAlterMsgInitChat() {
     api.get(`/chat/msg/auto/${JSON.parse(sessionStorage.getItem("user")).id_user}`)
-    .then(({ status, data }) => {
-        if (status === 200) {
-            document.getElementById("textArea").innerHTML = data.message
-        }
-    })
+        .then(({ status, data }) => {
+            if (status === 200) {
+                document.getElementById("textArea").innerHTML = data.message
+            }
+        })
 
     document.getElementById("modalAlterMsgInitChat").style.display = "flex"
 }
@@ -223,6 +225,7 @@ function closeDeleteService() {
 function deleteService() {
     api.delete(`/services/delete/` + JSON.parse(sessionStorage.getItem("service")).idService).then((response) => {
         console.log(response.status)
+        window.location.reload()
     })
 
     document.getElementById("deleteServiceProvider").style.display = "none"
