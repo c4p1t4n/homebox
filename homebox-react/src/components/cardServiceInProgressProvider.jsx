@@ -1,6 +1,7 @@
 import api from "../api"
+import { useEffect, useState } from "react"
 
-function cardServiceInProgressProvider(props) {
+function CardServiceInProgressProvider(props) {
     
     function openEndServiceDiv() {
     const data = {
@@ -10,6 +11,16 @@ function cardServiceInProgressProvider(props) {
 
         document.getElementById("endServiceDiv").style.display = "flex"
     }
+
+    const [client, setClient] = useState([])
+    useEffect(() => {
+        api.get(`/users/` + props.client
+        ).then(({ status, data }) => {
+            if (status === 200) {
+                setClient(data)
+            }
+        })
+    }, [])
 
     return (
         <>
@@ -30,7 +41,7 @@ function cardServiceInProgressProvider(props) {
                 <div className="descriptionServiceInProgress">
                     <div className="clientServiceInProgress">
                         <p>Cliente</p>
-                        <p>:{props.client}</p>
+                        <p>:{client.name}</p>
                     </div>
                     <div className="local">
                         <p>Local</p>
@@ -42,4 +53,4 @@ function cardServiceInProgressProvider(props) {
     )
 }
 
-export default cardServiceInProgressProvider
+export default CardServiceInProgressProvider
