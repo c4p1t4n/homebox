@@ -13,6 +13,19 @@ FROM service JOIN scheduling
              JOIN scheduling_status 
              ON scheduling_status.scheduling_id_scheduling = scheduling.id_scheduling;
 
+CREATE VIEW services_status_recent
+AS
+SELECT worker_id_user AS worker_id, customer_id_user AS customer_id, scheduling.id_scheduling, name AS name_service, 
+service.description AS service_description, accomplished_service.description AS address,price, 
+tbl.status_date AS date, tbl.service_status AS status  
+FROM (SELECT * ,rank() OVER(PARTITION BY scheduling_id_scheduling ORDER BY status_date DESC)  AS rank_status
+      FROM scheduling_status) tbl JOIN scheduling 
+                                  ON tbl.scheduling_id_scheduling = scheduling.id_scheduling  
+                                  LEFT JOIN service on service.id_service = scheduling.service_id_service
+                                  LEFT JOIN accomplished_service 
+                                  ON accomplished_service.scheduling_id_scheduling = scheduling.id_scheduling
+WHERE rank_status = 1;        
+
 
 CREATE VIEW avg_rating
 AS

@@ -9,6 +9,7 @@ function ServicesList() {
         api.get(`/services/list/` + JSON.parse(sessionStorage.getItem("user")).id_user
         ).then(({ status, data }) => {
             if (status === 200) {
+                
                 setServices(data)
             }
         })
@@ -18,7 +19,7 @@ function ServicesList() {
         <>
             {services.map(item => (
                 <CardServiceInProgressProvider
-                    id={item.id}
+                    id={item.idScheduling}
                     service={item.nameService}
                     price={item.price}
                     client={item.customerId}

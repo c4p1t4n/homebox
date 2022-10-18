@@ -243,6 +243,12 @@ function getListService(){
                 sessionStorage.setItem("servicesInfo", JSON.stringify({ ...data }))
                 openModalCloseBusinessDiv()
             }
+            else{
+                const info = {
+                    
+                }
+                sessionStorage.setItem("servicesInfo", JSON.stringify({...info}))
+            }
         })
 }
 

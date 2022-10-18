@@ -3,14 +3,8 @@ package school.sptech.server.controllers;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import school.sptech.server.model.Category;
-import school.sptech.server.model.Service;
-import school.sptech.server.model.ServicesScheduling;
-import school.sptech.server.model.User;
-import school.sptech.server.repository.CategoryRepository;
-import school.sptech.server.repository.ServiceRepository;
-import school.sptech.server.repository.ServicesSchedulingRepository;
-import school.sptech.server.repository.UserRepository;
+import school.sptech.server.model.*;
+import school.sptech.server.repository.*;
 import school.sptech.server.request.ServiceCreationRequest;
 
 import static org.springframework.http.ResponseEntity.status;
@@ -43,6 +37,9 @@ public class ServiceController {
 
     @Autowired
     private ServicesSchedulingRepository dbRepositoryServicesScheduling;
+
+    @Autowired
+    private ServicesStatusRecentRepository dbRepositoryServicesStatusRecent;
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping
@@ -212,7 +209,7 @@ public class ServiceController {
     @GetMapping("/list/{id}")
     public ResponseEntity listServicesScheduled(@PathVariable Integer id) {
 
-        List<ServicesScheduling> services = dbRepositoryServicesScheduling.findByWorkerIdAndStatus(id,"scheduled");
+        List<ServicesStatusRecent> services = dbRepositoryServicesStatusRecent.findByWorkerIdAndStatus(id,"scheduled");
 
         if (services.isEmpty()) {
             return status(404).build();
@@ -226,7 +223,7 @@ public class ServiceController {
     @GetMapping("/list/client/{id}")
     public ResponseEntity listServicesScheduledClient(@PathVariable Integer id) {
 
-        List<ServicesScheduling> services = dbRepositoryServicesScheduling.findByCustomerIdAndStatusOrStatus(id,"scheduled","done");
+        List<ServicesStatusRecent> services = dbRepositoryServicesStatusRecent.findByCustomerIdAndStatusOrStatus(id,"scheduled","done");
 
         if (services.isEmpty()) {
             return status(404).build();

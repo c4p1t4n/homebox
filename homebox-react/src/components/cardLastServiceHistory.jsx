@@ -25,7 +25,9 @@ function cardLastServiceHistory(props) {
                     <p>:{props.date}</p>
                 </div>
                 <div className="cardLastServiceButton">
-                    <button onClick={openEndServiceDivClient}>Finalizar Serviço</button>
+                    {
+                     props.type==='scheduled' ? <button onClick={openEndServiceDivClient}>Finalizar Serviço</button> : 'Finalizado'
+                    }
                 </div>
             </div>
         </>
