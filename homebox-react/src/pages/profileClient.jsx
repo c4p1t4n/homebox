@@ -1,8 +1,11 @@
+import "../assets/css/profileClient.css"
+import profileImg from "../assets/img/profileIcon.png"
+import iconLoading from "../assets/img/iconLoading.gif"
 import Header from "../components/header";
 import ProfileClientComp from "../components/profileClientComp";
 import CardLastServiceHistory from "../components/cardLastServiceHistory";
 import CardDashboardCLient from "../components/cardDashboardClient";
-import "../assets/css/profileClient.css"
+import FrequentSearchCardDistance from "../components/frequentSearchCardDistance"
 
 import { useEffect, useState } from "react"
 import api from "../api"
@@ -30,6 +33,19 @@ function ProfileClient() {
         })
     }, [services])
 
+    const [worker, setWorker] = useState([])
+    useEffect(() => {
+        api.get(
+            `/users/recomendation/${JSON.parse(sessionStorage.getItem("user")).id_user
+            }`
+        ).then(({ status, data }) => {
+            document.getElementById("loadingDivHome").style.display = "none"
+            if (status === 200) {
+                console.log(data)
+                setWorker(data)
+            }
+        })}, [])
+
     
     api.get(`/users/` + JSON.parse(sessionStorage.getItem("user")).id_user
     ).then(({ status, data }) => {
@@ -52,10 +68,22 @@ function ProfileClient() {
                 />
             <div className="divDashboardClint">
                 <h4 className="dashH4">Outros moradores de(a) Vila Madalena se interessam por serviços de</h4>
+                <div id="loadingDivHome">
+                    <img src={iconLoading} alt="Carregando a pagina" />
+                </div>    
                 <div className="dashboard">
-                    <CardDashboardCLient />
-                    <CardDashboardCLient />
-                    <CardDashboardCLient />
+                    {worker.map(item => (
+                        <FrequentSearchCardDistance
+                            class={"cardCustumer3"}
+                            img={item.user?.picture ?? profileImg}
+                            name={item.user?.name}
+                            category={item?.category}
+                            rating={item.rating ?? 0.0}
+                            ratingStr={item.rating ?? 0.0}
+                            dist={item.distance ?? "N/A"}
+                            id_user={item.user.id_user}
+                        />
+                    ))}
                 </div>
             </div>
             <div className="historyOfServiceClientDiv">
