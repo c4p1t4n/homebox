@@ -74,6 +74,7 @@ public class PilhaLigada {
             atual = atual.getNext();
         }
         return null;
+    }
 
     /* Método removeNode - recebe o valor que será removido da lista
        Retorna true se conseguiu remover ou false caso contrário

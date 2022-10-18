@@ -123,22 +123,4 @@ public class SearchController {
         return ResponseEntity.status(200).body(list);
     }
 
-//    @CrossOrigin(origins = "*", allowedHeaders = "*")
-//    @GetMapping("pilha-ligada1/last/search")
-//    public ResponseEntity<HashTable> getLastSearchUsingPilhaLigada1() {
-////        List<String> list = new ArrayList<>(5);
-//        HashTable hashTable1 = new HashTable(5);
-//        int i = 0;
-//        while (!lastSearchPL.isEmpty()) {
-//            hashTable1.insere(i, lastSearchPL.peek());
-//            lastSearchPL.pop(lastSearchPL.peek());
-//            i++;
-//        }
-//        lastSearchPL.setTopo(4);
-//        if (lastSearchPL.isEmpty()) {
-//            return ResponseEntity.status(204).build();
-//        }
-//        return ResponseEntity.status(200).body(hashTable1);
-//    }
-
 }

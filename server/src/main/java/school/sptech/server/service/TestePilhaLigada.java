@@ -30,6 +30,4 @@ public class TestePilhaLigada {
         pilhaLigada1.exibe();
 
     }
-
-
 }
