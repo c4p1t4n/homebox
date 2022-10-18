@@ -15,6 +15,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
+
+import school.sptech.server.service.HashTable;
+import school.sptech.server.service.PilhaLigada;
 import school.sptech.server.service.PilhaObj;
 
 @RestController
@@ -29,6 +32,8 @@ public class SearchController {
     @Autowired
     private UserRepository dbRepositoryUser;
     PilhaObj<String> lastSearchs = new PilhaObj<>(5);
+    PilhaLigada lastSearchPL = new PilhaLigada();
+//    HashTable hashTable1 = new HashTable(5);
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping
@@ -91,7 +96,7 @@ public class SearchController {
     @GetMapping("/last/search")
     public ResponseEntity<List<String>> getLastSearchs() {
         List<String> list = new ArrayList<>(5);
-        while (!lastSearchs.isEmpty()) {
+        while (!lastSearchPL.isEmpty()) {
             list.add(lastSearchs.pop());
         }
         lastSearchs.setTopo(4);
@@ -100,4 +105,22 @@ public class SearchController {
         }
         return ResponseEntity.status(200).body(list);
     }
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @GetMapping("pilha-ligada/last/search")
+    public ResponseEntity<List<String>> getLastSearchUsingPilhaLigada() {
+        List<String> list = new ArrayList<>(5);
+        int i = 0;
+        while (!lastSearchPL.isEmpty()) {
+            list.add(lastSearchPL.peek());
+            lastSearchPL.pop(list.get(i));
+            i++;
+        }
+        lastSearchPL.setTopo(4);
+        if (list.isEmpty()) {
+            return ResponseEntity.status(204).build();
+        }
+        return ResponseEntity.status(200).body(list);
+    }
+
 }
