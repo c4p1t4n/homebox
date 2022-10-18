@@ -69,6 +69,8 @@ main {
     height: 100vh;
     background: rgba(18, 76, 134, 0.062);
     color: #0A3969;
+    display: flex;
+    justify-content: center;
 }
 
 .mainDiv {
@@ -78,8 +80,10 @@ main {
 
 .leftDivStaff {
     width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 2%;
-    height: 600px;
 }
 
 .rigthDivStaff {
@@ -111,19 +115,19 @@ main {
 }
 
 .serviceOfRegion {
-    width: 55%;
+    width: 60%;
     display: flex;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     background: white;
     border-radius: 20px;
     padding: 1%;
 }
 
 .serviceOfRegion p {
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .proporcaoStaff {
@@ -131,9 +135,9 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 32%;
     justify-content: space-between;
-    height: 380px;
-
+    height: 550px;
 }
 
 .proporcaoStaffDiv {
@@ -142,12 +146,13 @@ main {
     align-items: center;
     height: 140px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    width: 250px;
+    width: 100%;
     justify-content: space-between;
-
     background: #FFFFFF;
     border-radius: 20px;
 }
+
+.indiceAvgTime h1 {margin: 0;}
 
 .indiceProporcaoStaff {
     display: flex;
@@ -223,12 +228,18 @@ main {
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     padding: 1%;
+    height: 98%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
     font-size: 20px;
     text-align: center;
 }
 
 .chartLineStaff p {
-    margin-bottom: 38px;
+    font-size: 24px;
+    margin-bottom: 28px;
 }
 
 .visitsDivStaff {
@@ -261,24 +272,24 @@ main {
     background: white;
 }
 
-.visitsPropsStaff p{
+.visitsPropsStaff p {
     background: none;
     font-size: 19px;
     margin: 0;
 }
 
-.visitsPropsStaffIndice{
+.visitsPropsStaffIndice {
     display: flex;
     width: 100%;
     justify-content: space-around;
     align-items: center;
 }
 
-.visitsPropsStaffIndice h2{
+.visitsPropsStaffIndice h2 {
     margin: 0;
 }
 
-.visitsPropsStaffIndice p{
+.visitsPropsStaffIndice p {
     color: black;
     padding: 1%;
     background: #B9DCAC;

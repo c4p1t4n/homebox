@@ -39,7 +39,7 @@ function ProfileProvtderComp() {
                 <img className="imgPhotoProvider" src={JSON.parse(sessionStorage.getItem("user")).picture} alt="imagem do prestador" />
                 <div className="ratingProvider">
                     <p>{star.toFixed(1)}/5</p>
-                    <p><DynamicStars rating={star} /></p>
+                    <p><DynamicStars rating={star || 0.1} /></p>
                 </div>
             </div>
         </>

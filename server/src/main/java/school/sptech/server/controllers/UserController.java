@@ -62,6 +62,7 @@ public class UserController {
             e.printStackTrace();
         }
         newUser.setAuthenticated('n');
+        newUser.setPicture("https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png");
         User user = dbServiceUser.saveUser(newUser);
 
         return status(201).body(user);
@@ -71,13 +72,13 @@ public class UserController {
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PatchMapping("/att/img/{idUser}/{picture}")
     public ResponseEntity<Void> attImg(@PathVariable Integer idUser,
-                                 @PathVariable String picture){
-        if(!dbServiceUser.existsById(idUser)){
+            @PathVariable String picture) {
+        if (!dbServiceUser.existsById(idUser)) {
             return status(404).build();
         }
 
         User user = dbServiceUser.findById(idUser).get();
-        user.setPicture("https://homebox-files.s3.amazonaws.com/"+picture);
+        user.setPicture("https://homebox-files.s3.amazonaws.com/" + picture);
         dbServiceUser.saveUser(user);
         return status(200).build();
     }
@@ -85,8 +86,8 @@ public class UserController {
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PatchMapping("/att/name/{idUser}/{name}")
     public ResponseEntity<Void> attName(@PathVariable Integer idUser,
-                                 @PathVariable String name){
-        if(!dbServiceUser.existsById(idUser)){
+            @PathVariable String name) {
+        if (!dbServiceUser.existsById(idUser)) {
             return status(404).build();
         }
 
@@ -99,9 +100,9 @@ public class UserController {
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PatchMapping("/att/email/{idUser}/{email}")
     public ResponseEntity attEmail(@PathVariable Integer idUser,
-                                  @PathVariable String email){
+            @PathVariable String email) {
 
-        if(!dbServiceUser.existsById(idUser)){
+        if (!dbServiceUser.existsById(idUser)) {
             return status(404).build();
         }
 
@@ -113,13 +114,12 @@ public class UserController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/{idUser}")
-    public ResponseEntity<User> getUser(@PathVariable Integer idUser){
-        if(!dbServiceUser.existsById(idUser)){
+    public ResponseEntity<User> getUser(@PathVariable Integer idUser) {
+        if (!dbServiceUser.existsById(idUser)) {
             return status(404).build();
         }
         return status(200).body(dbServiceUser.findById(idUser).get());
     }
-
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/customer")
@@ -143,6 +143,7 @@ public class UserController {
                 e.printStackTrace();
             }
             newUser.setAuthenticated('n');
+            newUser.setPicture("https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png");
             User user = dbServiceUser.saveUser(newUser);
 
             return status(201).body(user);
@@ -208,22 +209,22 @@ public class UserController {
 
         return status(400).build();
     }
-//
-//    @CrossOrigin(origins = "*", allowedHeaders = "*")
-//    @GetMapping("worker/report")
-//    public ResponseEntity<StringBuilder> getReport() throws IOException {
-//
-//        ExportTxt ex = new ExportTxt();
-//
-//        List<User> users = dbServiceUser.getAll();
-//        List<Category> categories = categoryRepository.findAll();
-//
-//        return status(200)
-//                .header("content-type", "text/txt")
-//                // .header("content-length", "9999999999")
-//                .header("content-disposition", "filename=\"report.txt\"")
-//                .body(ex.gravaArquivoTxt(users, categories, "report.txt"));
-//    }
+    //
+    // @CrossOrigin(origins = "*", allowedHeaders = "*")
+    // @GetMapping("worker/report")
+    // public ResponseEntity<StringBuilder> getReport() throws IOException {
+    //
+    // ExportTxt ex = new ExportTxt();
+    //
+    // List<User> users = dbServiceUser.getAll();
+    // List<Category> categories = categoryRepository.findAll();
+    //
+    // return status(200)
+    // .header("content-type", "text/txt")
+    // // .header("content-length", "9999999999")
+    // .header("content-disposition", "filename=\"report.txt\"")
+    // .body(ex.gravaArquivoTxt(users, categories, "report.txt"));
+    // }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping(value = "/worker/categories/{id}")
@@ -332,29 +333,32 @@ public class UserController {
         return status(200).body(users);
     }
 
-//    @PatchMapping(value = "/report", consumes = "text/txt; charset: utf-8")
-//    public ResponseEntity<Object> importUsers(@RequestBody byte[] report) throws IOException {
-//        String document;
-//        try {
-//            document = new String(report, "UTF-8");
-//        } catch (UnsupportedEncodingException e) {
-//            return ResponseEntity.status(400).body("Codificação nao suportada");
-//        }
-//        PrintWriter writer = new PrintWriter("ImportReport.txt", "UTF-8");
-//        writer.println(document);
-//        writer.close();
-//        ExportTxt ex = new ExportTxt();
-//        FilaObj<Object> fila = ex.lerArquivoTxt("ImportReport.txt");
-//        while (!fila.isEmpty()) {
-//            if (fila.peek().getClass().toString().equals("class school.sptech.server.model.User")) {
-//                dbServiceUser.saveUser((User) fila.poll());
-//            }
-//            if (fila.peek().getClass().toString().equals("class school.sptech.server.model.Category")) {
-//                categoryRepository.save((Category) fila.poll());
-//            }
-//
-//        }
-//
-//        return ResponseEntity.status(200).build();
-//    }
+    // @PatchMapping(value = "/report", consumes = "text/txt; charset: utf-8")
+    // public ResponseEntity<Object> importUsers(@RequestBody byte[] report) throws
+    // IOException {
+    // String document;
+    // try {
+    // document = new String(report, "UTF-8");
+    // } catch (UnsupportedEncodingException e) {
+    // return ResponseEntity.status(400).body("Codificação nao suportada");
+    // }
+    // PrintWriter writer = new PrintWriter("ImportReport.txt", "UTF-8");
+    // writer.println(document);
+    // writer.close();
+    // ExportTxt ex = new ExportTxt();
+    // FilaObj<Object> fila = ex.lerArquivoTxt("ImportReport.txt");
+    // while (!fila.isEmpty()) {
+    // if (fila.peek().getClass().toString().equals("class
+    // school.sptech.server.model.User")) {
+    // dbServiceUser.saveUser((User) fila.poll());
+    // }
+    // if (fila.peek().getClass().toString().equals("class
+    // school.sptech.server.model.Category")) {
+    // categoryRepository.save((Category) fila.poll());
+    // }
+    //
+    // }
+    //
+    // return ResponseEntity.status(200).build();
+    // }
 }

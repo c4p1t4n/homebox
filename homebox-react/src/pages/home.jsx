@@ -85,7 +85,7 @@ function Home() {
                                     category={item?.category}
                                     rating={item.rating ?? 0.0}
                                     ratingStr={item.rating ?? 0.0}
-                                    dist={item.distance ?? "N/A"}
+                                    dist={item.distance ?? 0.0}
                                     id_user={item.user.id_user}
                                 />
                             ))}

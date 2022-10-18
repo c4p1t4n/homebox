@@ -15,10 +15,128 @@ import {
 } from 'chart.js';
 import { PolarArea } from 'react-chartjs-2';
 import { Line } from 'react-chartjs-2';
+import React, { useState, useEffect } from 'react';
+import api from "../api"
+
+
+function Staff() {
+
+    const [worker, setWorker] = useState(0)
+
+    const [costumer, setCostumer] = useState(0)
+    
+    const [avaliacaoMedia,setAvaliacaoMedia] = useState(0)
+
+    const [days,setDays] = useState([])
+
+    const [services,setServices] = useState([])
+    const [servicesDone,setServicesDone] = useState([])
+
+    const [scheduling,setScheduling] = useState(0)
+    const [chats,setChats] = useState(0)
+
+    const [ceps,setCep] = useState([])
+    const [countCeps,setCountCeps] = useState([])
 
 
 
-function staff() {
+    useEffect(() => {
+        api.get(
+            `/staff/count-ceps`
+        ).then(({ status, data }) => {
+            
+            if (status === 200) {
+                console.log(countCeps)
+                setCountCeps(data)
+            }
+        })
+    }, [])
+
+    useEffect(() => {
+        api.get(
+            `/staff/ceps`
+        ).then(({ status, data }) => {
+            
+            if (status === 200) {
+                console.log(`data${data}`)
+                setCep(data)
+            }
+        })
+    }, [])
+
+
+
+
+
+
+
+
+
+    useEffect(() => {
+        api.get(
+            `/staff/scheduling-chat`
+        ).then(({ status, data }) => {
+            
+            if (status === 200) {
+                console.log(data[0])
+                setScheduling(data[0])
+                setChats(data[1])
+            }
+        })
+    }, [])
+
+
+    useEffect(() => {
+        api.get(
+            `/staff/get-scheduling-last-seven-days`
+        ).then(({ status, data }) => {
+            
+            if (status === 200) {
+                setDays(data[0])
+            }
+        })
+    }, [])
+
+
+    useEffect(() => {
+        api.get(
+            `/staff/ratio-worker-customer`
+        ).then(({ status, data }) => {
+            
+            if (status === 200) {
+                setWorker(data[0])
+                setCostumer(data[1])
+            }
+        })
+    }, [])
+    
+
+    useEffect(() => {
+        api.get(
+            `/staff/get-count-last-seven-days`
+        ).then(({ status, data }) => {
+            
+            if (status === 200) {
+                setServicesDone(data[0])
+                setServices(data[1])
+            }
+        })
+    }, [])
+
+    useEffect(() => {
+        api.get(
+            `staff/avg-rating-worker`
+        ).then(({ status, data }) => {
+            
+            if (status === 200) {
+                setAvaliacaoMedia(data)
+            }
+        })
+    }, [])
+    
+
+    
+
 
 
     const options2 = {
@@ -34,20 +152,20 @@ function staff() {
         },
     };
 
-    const labels = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sabado'];
+    const labels = days;
 
     const data2 = {
         labels,
         datasets: [
             {
                 label: 'Agendamentos',
-                data: [100, 200, 300, 400, 500, 600],
+                data: services,
                 borderColor: 'rgb(255, 99, 132)',
                 backgroundColor: 'rgba(255, 99, 132, 0.5)',
             },
             {
                 label: 'Serviços finalizados',
-                data: [150, 250, 350, 450, 550, 650],
+                data: servicesDone,
                 borderColor: 'rgb(53, 162, 235)',
                 backgroundColor: 'rgba(53, 162, 235, 0.5)',
             },
@@ -70,7 +188,7 @@ function staff() {
         datasets: [
             {
                 label: 'Serviços finalizados por região',
-                data: [12, 19, 3],
+                data: countCeps,
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.5)',
                     'rgba(54, 162, 235, 0.5)',
@@ -128,7 +246,7 @@ function staff() {
                                 <p>Agendamentos e serviços finalizados</p>
                                 <Line options={options2} data={data2} />
                             </div>
-                            <div className="visitsDivStaff">
+                            {/* <div className="visitsDivStaff">
                                 <p>Visitantes</p>
                                 <div className="timeAvgDiv">
                                     <div className="visitsPropsStaff">
@@ -148,7 +266,7 @@ function staff() {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="rigthDivStaff">
                             <div className="divToprigthDivStaff">
@@ -162,7 +280,7 @@ function staff() {
                                         <p>Prestador : Cliente</p>
                                         <div className="indiceProporcaoStaff">
                                             <p className="pIndiceVerdeStaff">+x%</p>
-                                            <h1>x:x</h1>
+                                            <h1>{worker}:{costumer}</h1>
                                         </div>
                                     </div>
                                     <div className="proporcaoStaffDiv">
@@ -170,32 +288,40 @@ function staff() {
                                         <p>Prestador</p>
                                         <div className="indiceProporcaoStaff">
                                             <p className="pIndiceVerdeStaff">+x%</p>
-                                            <h1>x.x</h1>
+                                            <h1>{avaliacaoMedia.toFixed(2)}</h1>
+                                        </div>
+                                    </div>
+                                    <div className="proporcaoStaffDiv">
+                                        <p>Proporção</p>
+                                        <p>Chats : Agendamentos</p>
+                                        <div className="indiceAvgTime">
+                                            <p>-X%</p>
+                                            <h1>{chats}:{scheduling}</h1>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="divButrigthDivStaff">
-                                <p>Leads</p>
+                            {/* <div className="divButrigthDivStaff">
+                                <p>Leads</p> 
                                 <div className="timeAvgDiv">
-                                    <div className="timeAvg">
+                                     <div className="timeAvg">
                                         <p>Tempo médio</p>
                                         <p>Entre acesso e cadastro</p>
                                         <div className="indiceAvgTime">
                                             <p>-Xs</p>
                                             <h2>x.x min</h2>
                                         </div>
-                                    </div>
+                                    </div> 
                                     <div className="timeAvg">
                                         <p>Proporção</p>
                                         <p>Chats : Agendamentos</p>
                                         <div className="indiceAvgTime">
                                             <p>-X%</p>
-                                            <h2>x:x</h2>
+                                            <h2>{chats}:{scheduling}</h2>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>*/}
                         </div>
                     </div>
                 </div>
@@ -204,4 +330,4 @@ function staff() {
     )
 }
 
-export default staff
+export default Staff
