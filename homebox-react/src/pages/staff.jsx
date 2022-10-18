@@ -296,7 +296,7 @@ function Staff() {
                                         <p>Chats : Agendamentos</p>
                                         <div className="indiceAvgTime">
                                             <p>-X%</p>
-                                            <h2>{chats}:{scheduling}</h2>
+                                            <h1>{chats}:{scheduling}</h1>
                                         </div>
                                     </div>
                                 </div>
