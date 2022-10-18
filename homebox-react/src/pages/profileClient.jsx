@@ -4,14 +4,23 @@ import iconLoading from "../assets/img/iconLoading.gif"
 import Header from "../components/header";
 import ProfileClientComp from "../components/profileClientComp";
 import CardLastServiceHistory from "../components/cardLastServiceHistory";
-import CardDashboardCLient from "../components/cardDashboardClient";
 import FrequentSearchCardDistance from "../components/frequentSearchCardDistance"
 
 import { useEffect, useState } from "react"
 import api from "../api"
+import viaCep from "../api2"
 
 
 function ProfileClient() {
+    const [bairro, setBairro] = useState([])
+    useEffect(() => {
+        viaCep.get(JSON.parse(sessionStorage.getItem("user")).cep+`/json`
+        ).then(({ status, data }) => {
+            if (status === 200) {
+                console.log(data)
+                setBairro(data)
+            }
+        })}, [])
     
     function compare( a, b ) {
         if ( a.status < b.status ){
@@ -67,7 +76,7 @@ function ProfileClient() {
                 image = {img}
                 />
             <div className="divDashboardClint">
-                <h4 className="dashH4">Outros moradores de(a) Vila Madalena se interessam por serviços de</h4>
+                <h4 className="dashH4">Moradores de(a) Vila Madalena também contrataram</h4>
                 <div id="loadingDivHome">
                     <img src={iconLoading} alt="Carregando a pagina" />
                 </div>    
