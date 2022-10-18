@@ -246,7 +246,7 @@ function Staff() {
                                 <p>Agendamentos e serviços finalizados</p>
                                 <Line options={options2} data={data2} />
                             </div>
-                            <div className="visitsDivStaff">
+                            {/* <div className="visitsDivStaff">
                                 <p>Visitantes</p>
                                 <div className="timeAvgDiv">
                                     <div className="visitsPropsStaff">
@@ -266,7 +266,7 @@ function Staff() {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="rigthDivStaff">
                             <div className="divToprigthDivStaff">
@@ -291,19 +291,27 @@ function Staff() {
                                             <h1>{avaliacaoMedia.toFixed(2)}</h1>
                                         </div>
                                     </div>
+                                    <div className="proporcaoStaffDiv">
+                                        <p>Proporção</p>
+                                        <p>Chats : Agendamentos</p>
+                                        <div className="indiceAvgTime">
+                                            <p>-X%</p>
+                                            <h1>{chats}:{scheduling}</h1>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="divButrigthDivStaff">
-                                <p>Leads</p>
+                            {/* <div className="divButrigthDivStaff">
+                                <p>Leads</p> 
                                 <div className="timeAvgDiv">
-                                    <div className="timeAvg">
+                                     <div className="timeAvg">
                                         <p>Tempo médio</p>
                                         <p>Entre acesso e cadastro</p>
                                         <div className="indiceAvgTime">
                                             <p>-Xs</p>
                                             <h2>x.x min</h2>
                                         </div>
-                                    </div>
+                                    </div> 
                                     <div className="timeAvg">
                                         <p>Proporção</p>
                                         <p>Chats : Agendamentos</p>
@@ -313,7 +321,7 @@ function Staff() {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>*/}
                         </div>
                     </div>
                 </div>
