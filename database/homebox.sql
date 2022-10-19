@@ -1937,5 +1937,3 @@ VALUES (
         'n',
         'https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png'
     );
-UPDATE user
-SET picture = "https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png";
