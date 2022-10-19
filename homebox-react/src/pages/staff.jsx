@@ -37,20 +37,9 @@ function Staff() {
 
     const [ceps,setCep] = useState([])
     const [countCeps,setCountCeps] = useState([])
+    
 
-
-
-    useEffect(() => {
-        api.get(
-            `/staff/count-ceps`
-        ).then(({ status, data }) => {
-            
-            if (status === 200) {
-                console.log(countCeps)
-                setCountCeps(data)
-            }
-        })
-    }, [])
+  
 
     useEffect(() => {
         api.get(
@@ -59,7 +48,7 @@ function Staff() {
             
             if (status === 200) {
                 console.log(`data${data}`)
-                setCep(data)
+                setCountCeps(data)
             }
         })
     }, [])
@@ -175,7 +164,7 @@ function Staff() {
 
 
 
-
+    // classification_zones(ceps,countCeps)
 
     ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend, CategoryScale,
         LinearScale,
@@ -184,11 +173,11 @@ function Staff() {
         Title);
 
     const data = {
-        labels: ['Zona Central', 'Zona Sul', 'Zona Norte'],
+        labels: ['Zona Central', 'Zona Sul', 'Zona Norte',"Zona Leste","Zona Oeste"],
         datasets: [
             {
                 label: 'Serviços finalizados por região',
-                data: countCeps,
+                data:countCeps ,
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.5)',
                     'rgba(54, 162, 235, 0.5)',
