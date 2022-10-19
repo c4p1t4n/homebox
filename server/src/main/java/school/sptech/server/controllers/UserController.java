@@ -5,10 +5,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import school.sptech.server.client.CalcDistClient;
+import school.sptech.server.client.DistanceRecommendationClient;
 import school.sptech.server.model.Category;
 import school.sptech.server.model.User;
 //import school.sptech.server.service.ExportTxt;
 import school.sptech.server.service.FilaObj;
+import school.sptech.server.request.DistRecommendRequest;
 import school.sptech.server.request.DistRequest;
 import school.sptech.server.request.LoginRequest;
 import school.sptech.server.request.UserIdRequest;
@@ -17,6 +19,7 @@ import school.sptech.server.repository.RatingRepository;
 import school.sptech.server.repository.ServiceRepository;
 import school.sptech.server.response.DistResponse;
 import school.sptech.server.response.UserSearchQueryResult;
+import school.sptech.server.response.UsersDistance;
 import school.sptech.server.service.UserService;
 
 import static org.springframework.http.ResponseEntity.status;
@@ -40,6 +43,8 @@ public class UserController {
     private CategoryRepository dbRepositoryCategory;
     @Autowired
     private CalcDistClient distClient;
+    @Autowired
+    private DistanceRecommendationClient distRecommendationClient;
 
     @Autowired
     private ServiceRepository dbRepositoryService;
@@ -323,11 +328,15 @@ public class UserController {
             return status(404).build();
         }
 
-        List<UserSearchQueryResult> users = dbServiceUser.get3Workers().stream()
-                .map((user) -> new UserSearchQueryResult(user,
-                        dbRepositoryRating.getAvgWorker(user.getId()),
-                        getDist(user.getCep(), dbServiceUser.findById(id).get().getCep()).getBody(),
-                        getWorkerCategories(user.getId()).getBody().get(0)))
+        List<UsersDistance> usersDistance = distRecommendationClient.getDist(new DistRecommendRequest(id, 3)).getBody();
+
+        List<UserSearchQueryResult> users = usersDistance.stream()
+                .map((user) -> new UserSearchQueryResult(
+                    dbServiceUser.findById(user.getId_worker()).get(),
+                    dbRepositoryRating.getAvgWorker(dbServiceUser.findById(user.getId_worker()).get().getId()),
+                    user.getDistance(),
+                    getWorkerCategories(dbServiceUser.findById(user.getId_worker()).get().getId()).getBody().get(0))
+                )
                 .collect(Collectors.toList());
 
         return status(200).body(users);
