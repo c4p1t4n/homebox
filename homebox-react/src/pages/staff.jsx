@@ -268,7 +268,7 @@ function Staff() {
                                         <p>Proporção</p>
                                         <p>Prestador : Cliente</p>
                                         <div className="indiceProporcaoStaff">
-                                            <p className="pIndiceVerdeStaff">+x%</p>
+                                            {/* <p className="pIndiceVerdeStaff">+x%</p> */}
                                             <h1>{worker}:{costumer}</h1>
                                         </div>
                                     </div>
@@ -276,7 +276,7 @@ function Staff() {
                                         <p>Avaliação média:</p>
                                         <p>Prestador</p>
                                         <div className="indiceProporcaoStaff">
-                                            <p className="pIndiceVerdeStaff">+x%</p>
+                                            {/* <p className="pIndiceVerdeStaff">+x%</p> */}
                                             <h1>{avaliacaoMedia.toFixed(2)}</h1>
                                         </div>
                                     </div>
@@ -284,7 +284,7 @@ function Staff() {
                                         <p>Proporção</p>
                                         <p>Chats : Agendamentos</p>
                                         <div className="indiceAvgTime">
-                                            <p>-X%</p>
+                                            {/* <p>-X%</p> */}
                                             <h1>{chats}:{scheduling}</h1>
                                         </div>
                                     </div>

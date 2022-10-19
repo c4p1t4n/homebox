@@ -279,7 +279,7 @@ VALUES (
         '12345678900',
         NULL,
         'customer',
-        NULL,
+        "https://images.unsplash.com/photo-1489980557514-251d61e3eeb6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         DATE('1978-01-01'),
         '01310200',
         'y'
