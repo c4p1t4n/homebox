@@ -17,6 +17,8 @@
 
 .logoHomeboxDiv {
     width: 24%;
+    display: flex;
+    align-items: center;
 }
 
 .logoHomeboxDiv img {
@@ -152,7 +154,9 @@ main {
     border-radius: 20px;
 }
 
-.indiceAvgTime h1 {margin: 0;}
+.indiceAvgTime h1 {
+    margin: 0;
+}
 
 .indiceProporcaoStaff {
     display: flex;
