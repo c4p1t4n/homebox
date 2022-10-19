@@ -287,7 +287,7 @@ VALUES (
     (
         NULL,
         'Ana',
-        'Masculino',
+        'Feminino',
         'email@email.com',
         SHA2("senha123", 256),
         '12345678900',
@@ -301,7 +301,7 @@ VALUES (
     (
         NULL,
         'André',
-        'Feminino',
+        'Masculino',
         'email2@email.com',
         SHA2("ExSenha1", 256),
         '12345678900',
@@ -848,5 +848,4 @@ VALUES (
 -- ('Kaique', 'Masculino', 'kaiquecustomer32373@gmail.com', SHA2('ExSenha1', 256), '23457916080', 'customer', '1999-02-24', '02322100', 'n', 'https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png'),
 -- ('Giovanna', 'Feminino', 'giovannaworker12991@gmail.com', SHA2('ExSenha1', 256), '36281950712', 'worker', '2001-01-12', '02323270', 'n', 'https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png'),
 -- ('Isabella', 'Feminino', 'isabellacustomer35324@gmail.com', SHA2('ExSenha1', 256), '17638520408', 'customer', '1979-01-13', '02323280', 'n', 'https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png');
-UPDATE user
-SET picture = "https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png";
+
