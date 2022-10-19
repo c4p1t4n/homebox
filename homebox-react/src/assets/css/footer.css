@@ -7,6 +7,7 @@ footer {
     align-items: center;
     justify-content: space-between;
     font-size: 16px;
+    padding-bottom: 2%;
 }
 
 footer h2{
@@ -21,31 +22,33 @@ footer .lineFooter {
 
 .contact-div {
     display: flex;
+    height: 70%;
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    padding: 4%;
 }
 
 .social-media{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
     justify-content: space-between;
     width: 40%;
 }
 
 .social-media .logoHomebox{
-    height: 140px;
+    height: 100px;
 }
 
 .address{
     width: 45%;
+    font-size: 14px;
+    height: auto;
 }
 
 
 .img-social-media{
-    margin-top: 8%;
     display: flex;
     width: 55%;
     justify-content: space-between;

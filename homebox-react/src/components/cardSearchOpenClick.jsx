@@ -56,7 +56,7 @@ function cardSearchOpenClick(props) {
                             <div className="cardSearchOpenDivTopInfoInsideAvarage">
                                 <p>{props.rating.toFixed(1)}/5</p>
                                 <DynamicStars
-                                    rating={props.rating} />
+                                    rating={props.rating || 0.1} />
                             </div>
                         </div>
                     </div>
