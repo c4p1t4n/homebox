@@ -62,7 +62,7 @@ def lambda_handler(event, context):
             df_final = df_final.append(row)
 
     wr.s3.to_parquet(
-        df=df,
+        df=df_final,
         path=f's3://distancia/',
         dataset=True,
         mode='append'
