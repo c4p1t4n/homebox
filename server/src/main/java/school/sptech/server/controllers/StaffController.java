@@ -125,20 +125,54 @@ public class StaffController {
         return ResponseEntity.status(200).body(arrayCount);
     }
 
+
+    private List<Integer> getRegions(List<String> list_ceps,List<Integer> valores_do_cep){
+        Integer centro = 0;
+        Integer zona_norte = 0;
+        Integer zona_leste = 0;;
+        Integer zona_sul = 0;
+        Integer zona_oeste = 0;
+        List<Integer> list_count_per_region= new ArrayList<>();
+        System.out.println(list_ceps);
+        System.out.println(valores_do_cep);
+        for (Integer i = 0; i < list_ceps.size(); i++) {
+               if(Integer.parseInt(list_ceps.get(i).substring(0, 4)) >= 1000 && Integer.parseInt(list_ceps.get(i).substring(0, 4)) < 2000){
+                    centro+= valores_do_cep.get(i);
+               }else if(Integer.parseInt(list_ceps.get(i).substring(0, 4)) >= 2000 && Integer.parseInt(list_ceps.get(i).substring(0, 4)) < 3000){
+                    zona_norte+= valores_do_cep.get(i);
+               }else if((Integer.parseInt(list_ceps.get(i).substring(0, 4)) >= 3000 && Integer.parseInt(list_ceps.get(i).substring(0, 4)) < 4000)
+                        || (Integer.parseInt(list_ceps.get(i).substring(0, 4)) >= 8000 && Integer.parseInt(list_ceps.get(i).substring(0, 4)) < 8500)){
+                    zona_leste+= valores_do_cep.get(i);
+               }else if(Integer.parseInt(list_ceps.get(i).substring(0, 4)) >= 5000 && Integer.parseInt(list_ceps.get(i).substring(0, 4)) < 5900){
+                    zona_oeste+= valores_do_cep.get(i);
+               }else if(Integer.parseInt(list_ceps.get(i).substring(0, 4)) >= 4000 && Integer.parseInt(list_ceps.get(i).substring(0, 4)) < 5000){
+                    zona_sul+= valores_do_cep.get(i);
+               }else{
+                   centro+= valores_do_cep.get(i);
+               }
+        }
+        list_count_per_region.add(centro);
+        list_count_per_region.add(zona_sul);
+        list_count_per_region.add(zona_norte);
+        list_count_per_region.add(zona_leste);
+        list_count_per_region.add(zona_oeste);
+        return list_count_per_region;
+    }
+
+
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping(value = "/ceps")
-    public ResponseEntity<List<String>> getCep() {
-        List<String> scheduling =dbRepositoryScheduling.getCepGroup();
-
-        return ResponseEntity.status(200).body(scheduling);
+    public ResponseEntity<List<Integer>> getCeps(){
+        List<Integer> countIntegers =dbRepositoryScheduling.getCountIntegerGroupCep();
+        List<String> getCeps =dbRepositoryScheduling.getCepGroup();
+        List<Integer> final_list = getRegions(getCeps,countIntegers);
+        return ResponseEntity.status(200).body(final_list);
     }
 
-    @CrossOrigin(origins = "*", allowedHeaders = "*")
-    @GetMapping(value = "/count-ceps")
-    public ResponseEntity<List<Integer>> getCountCep() {
-        List<Integer> scheduling =dbRepositoryScheduling.getCountIntegerGroupCep();
-        return ResponseEntity.status(200).body(scheduling);
-    }
+
+
+
+
 
 
 
