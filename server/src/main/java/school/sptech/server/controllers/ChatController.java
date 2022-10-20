@@ -109,8 +109,15 @@ public class ChatController {
 
         for (UserHasChat chat : chats) {
             ChatHasMsg chm = dbRepositoryChatHasMsg.findTop1ByChatIdChatOrderBySendDateDesc(chat.getChat().getIdChat());
+            if (chm == null){
+                chatsPerUser.add(new ChatsPerUser(chat.getId(), chat.getUser(), chat.getChat(), new Msg("Olá, prazer em te conhecer", chat.getUser()),
+                        LocalDateTime.now(), 'n'));
+
+            }
+            else{
             chatsPerUser.add(new ChatsPerUser(chat.getId(), chat.getUser(), chat.getChat(), chm.getMsg(),
                     chm.getSendDate(), chm.getSeen()));
+            }
         }
 
         chatsPerUser = quickSort(chatsPerUser, 0, chatsPerUser.size() - 1);
