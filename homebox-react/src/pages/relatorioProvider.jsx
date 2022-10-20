@@ -193,13 +193,13 @@ class relatorioProvider extends Component {
 }
 
 const geraVisitas = () => {
-    const { id_user } = JSON.parse(sessionStorage.getItem('user'))
-    if (!sessionStorage.getItem(`visitas-${id_user}`)) {
+    const { id_user } = JSON.parse(localStorage.getItem('user'))
+    if (!localStorage.getItem(`visitas-${id_user}`)) {
         let visitas = Math.round((Math.random() * 20) + 5)
-        sessionStorage.setItem(`visitas-${id_user}`, visitas)
+        localStorage.setItem(`visitas-${id_user}`, visitas)
         return visitas
     }
-    return sessionStorage.getItem(`visitas-${id_user}`)
+    return localStorage.getItem(`visitas-${id_user}`)
 
 }
 
