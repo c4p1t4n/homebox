@@ -44,7 +44,7 @@ class SendMsg extends Component {
         let user = JSON.parse(sessionStorage.getItem("user")).id_user
         let chat = JSON.parse(sessionStorage.getItem("chat")).idChat;
 
-        const url = '/upload/uploadFile/'+chat+"/"+user;
+        const url = '/upload/uploadFile/' + chat + "/" + user;
         let fileName = uuidv4() + ".mp3"
 
         const formData = new FormData();
@@ -60,9 +60,9 @@ class SendMsg extends Component {
 
         setTimeout(() => {
             api.post(url, formData, config)
-            .then((response) => {
-                console.log(response.status)
-            })
+                .then((response) => {
+                    console.log(response.status)
+                })
             sessionStorage.setItem("sendMsg", true)
         }, 620);
     };
@@ -73,20 +73,21 @@ class SendMsg extends Component {
         return (
             <>
                 <input id="inputMsg" placeholder="Digite aqui ..." type="text" className="msg"
-                onKeyPress={(e) => {
-                    if(e.key === "Enter"){
-                        sendMsg()
-                    }}}/>
+                    onKeyPress={(e) => {
+                        if (e.key === "Enter") {
+                            sendMsg()
+                        }
+                    }} />
                 <button onClick={sendMsg}><img src={iconSendMsg} alt="Icone para enviar mensagem" className="sendMsg" /></button>
                 <button onClick={getFile}>
-                    <img src={paperclip} alt="Icone para anexar foto ou video"/>
+                    <img src={paperclip} alt="Icone para anexar foto ou video" />
                 </button>
                 <button onClick={this.condition ? this.start : this.stop}>
                     <img id="imgMic" src={iconSendMp3} alt="Icone para enviar audio" className="iconMic" />
                 </button>
                 <div className="recorder">
                     <AudioReactRecorder state={recordState} onStop={this.onStop} />
-                    <input type="file" onChange={onChange} id="inputFile"/>
+                    <input type="file" onChange={onChange} id="inputFile" />
                 </div>
             </>
         )
@@ -106,9 +107,9 @@ const onChange = e => {
     state = ({ file: e.target.files[0] })
     console.log(state.file)
 
-    let fileName = uuidv4()+".png";
+    let fileName = uuidv4() + ".png";
 
-    const url = '/upload/uploadFile/'+chat+"/"+user;
+    const url = '/upload/uploadFile/' + chat + "/" + user;
     const formData = new FormData();
     formData.append("file", state.file, fileName);
     const config = {
@@ -126,16 +127,16 @@ const onChange = e => {
             .then((response) => {
                 console.log(response.status)
             })
-            sessionStorage.setItem("sendMsg", true)
+        sessionStorage.setItem("sendMsg", true)
     }, 620);
 
 }
 
-const getFile = e =>{
+const getFile = e => {
     document.getElementById("inputFile").click();
 }
 
-const sendMsg = e =>{
+const sendMsg = e => {
     let chat = JSON.parse(sessionStorage.getItem("chat")).idChat;
     let user = JSON.parse(sessionStorage.getItem("user")).id_user;
 
@@ -146,10 +147,10 @@ const sendMsg = e =>{
     console.log(msg);
     document.getElementById("inputMsg").value = "";
 
-    api.post('chat/msg/'+chat+'/'+user, msg)
+    api.post('chat/msg/' + chat + '/' + user, msg)
         .then((response) => {
             console.log(response.status)
-    });
+        });
     document.getElementById(JSON.parse(sessionStorage.getItem("chat")).idChat).innerHTML = msg.message;
     sessionStorage.setItem("sendMsg", true)
 }
@@ -163,17 +164,17 @@ const upload = (file, name) => {
     }
     try {
         const parallelUploads3 = new Upload({
-          client: new S3Client({region:'us-east-1'}),
-          params: target,
-          leavePartsOnError: false,
+            client: new S3Client({ region: 'us-east-1', credentials: cred }),
+            params: target,
+            leavePartsOnError: false,
         });
 
         parallelUploads3.on("httpUploadProgress", (progress) => {
-          console.log(progress);
+            console.log(progress);
         });
 
         parallelUploads3.done();
-      } catch (e) {
+    } catch (e) {
         console.log(e);
-      }
+    }
 }

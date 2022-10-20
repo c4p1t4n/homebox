@@ -105,7 +105,7 @@ const upload = (file, name) => {
 
     try {
         const parallelUploads3 = new Upload({
-            client: new S3Client({ region: 'us-east-1' }),
+            client: new S3Client({ region: 'us-east-1', credentials: cred }),
             params: target,
             leavePartsOnError: false,
         });
