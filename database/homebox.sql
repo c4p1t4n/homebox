@@ -262,10 +262,10 @@ VALUES (
         'Feminino',
         'bruna@gmail.com',
         SHA2("ExSenha1", 256),
-        '12345678900',
+        '12345678900',  
         NULL,
         'customer',
-        NULL,
+        "https://images.unsplash.com/photo-1533674689012-136b487b7736?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         DATE('1993-01-01'),
         '01310200',
         'y'

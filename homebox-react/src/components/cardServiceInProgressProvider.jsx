@@ -41,7 +41,7 @@ function CardServiceInProgressProvider(props) {
                 <div className="descriptionServiceInProgress">
                     <div className="clientServiceInProgress">
                         <p>Cliente</p>
-                        <p>:{client.name}</p>
+                        <p>: {client.name}</p>
                     </div>
                     <div className="local">
                         <p>Local</p>

@@ -131,7 +131,7 @@ class relatorioProvider extends Component {
                                                 <img src={questionMark} alt="Informações sobre visitas ao seu perfil" />
                                             </div>
                                             <div className="visitsYourProfileBut">
-                                                <p id="indice">13%</p>
+                                                {/* <p id="indice">13%</p> */}
                                                 <div className="indiceDiv2">
                                                     <p id="indice2">{this.state.visitas_semana}</p>
                                                     <p>nessa semana</p>
@@ -144,7 +144,7 @@ class relatorioProvider extends Component {
                                                 <img src={questionMark} alt="Informações sobre visitas ao seu perfil" />
                                             </div>
                                             <div className="visitsYourProfileBut">
-                                                <p id="indice">+10</p>
+                                                {/* <p id="indice">+10</p> */}
                                                 <div className="indiceDiv2">
                                                     <p id="indice2">{this.state.avg}</p>
                                                     <DynamicStars
@@ -155,10 +155,10 @@ class relatorioProvider extends Component {
                                         </div>
                                     </div>
                                     <br />
-                                    <div className="divRightProfileProviderTopLeftBut">
+                                    {/* <div className="divRightProfileProviderTopLeftBut">
                                         <p>Sua nota média é maior que a dos outros Pintores da nossa plataforma (4.0 X 3.8)</p>
                                         <p className="indiceDiv3">+0.20</p>
-                                    </div>
+                                    </div> */}
                                 </div>
                                 <div className="divRightProfileProviderTopRight">
 
@@ -178,8 +178,8 @@ class relatorioProvider extends Component {
                 </div>
                 <div id="endServiceDiv" className="endServiceDiv">
                     <div className="endServiceDivIn">
-                        <p>Enviamos um código para o email do cliente, insira este código abaixo</p>
-                        <input id="pin" type="text" />
+                        <p>Deseja finalizar este serviço ?</p>
+                        {/* <input id="pin" type="text" /> */}
                         <div className="endServiceDivInButton">
                             <button onClick={finishService}>Finalizar serviço</button>
                             <button onClick={closeendServiceDiv}>Sair</button>
