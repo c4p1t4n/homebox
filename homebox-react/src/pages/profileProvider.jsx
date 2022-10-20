@@ -294,11 +294,11 @@ const updateName = () => {
 
 const upload = (file, name) => {
     const target = { Bucket: "homebox-files", Key: name, Body: file, ACL: 'public-read' }
-    // const cred = {
-    //     accessKeyId: 'ASIA3XAZXQC6JOR4WL2T',
-    //     secretAccessKey: 'kY4qoCTb+5ou8hVPCbrCTpGY/6okZwNkzWm9IINy',
-    //     sessionToken: 'FwoGZXIvYXdzEKj//////////wEaDEm0mXBz1ogJbuawhyLPASjqh6v+vuIqADhqjfb1lTLKGzKDWKcRzmClL5sSGPLHQiVYHxYpxYTtBLtZTkgHDm9oz39MqAL1hj9ThIDZQDTGZ4Ii0CalpB3yB5RIGBxsRCqkVdBjIyktnGxtQ8iAyMx2NJ4mFGZaB1DoBGdcWDfszC/fOzuTeVeqvaW66udf6A25qVqU/5/URlU2FFOnE+w3ve1bxQRFG38/O/gztWSyoNDLbsMnKx6kOtmqfSlFp/gLMDtd71mzixO9yGBQae1t0iaw/3dDJbpBFzjFSijcw9iZBjItm/M4B6wDbkCZXnIMn2iq43NXLUK7xaKDYUR+CPcSlwkNfzTd3yePE0xEruxe'
-    // }
+    const cred = {
+        accessKeyId: 'ASIA3XAZXQC6KN2WGQC2',
+        secretAccessKey: 'M7YBBXQHDwYiSUu9E0PIwbI1Px+YMNuPEFj+XwCY',
+        sessionToken: 'FwoGZXIvYXdzEJ7//////////wEaDAESbkwcAgBSabH+0yLPAblKf5Pka8Ny0oDUBqeulnhv8r20W8GOFK1bglUFN+HeQRDb2q876YOK7b6fEhhI7cleeJ8aewPTSe/BL5xSpCKCIuQdvQpkmazWsJiqkba5xMdo7heT5cOHoKbXWq96mpn7Lmx5EABrmOlpdoHgW01yMXXliYY6o3Rmz3MfUktxNOnI4b6NlBYyTKMepFeO+0IgLEuT+BQjDr4Bpfinpg5Bu8/93lbWKRAKDvEJsOD3VgeJRS/vTTqwG871x3POTj5jPs6sEvRpzBcdBSr0tijQ38aaBjItoF8wioZ47qmGSHYXFXLJmY2wC22iF/qoNGbqQhHAxxKAInGxoa8h18gK/eH1'
+    }
 
     try {
         const parallelUploads3 = new Upload({

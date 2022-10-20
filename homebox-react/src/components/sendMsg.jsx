@@ -156,10 +156,11 @@ const sendMsg = e =>{
 
 const upload = (file, name) => {
     const target = { Bucket:"homebox-files", Key:name, Body:file, ACL:'public-read'}
-    // const cred = { accessKeyId:'ASIA3XAZXQC6FNJ7AGZ5',
-    //                secretAccessKey:'+FbT1bbcbTcK/1N+H61ck7Wz6C67JtZ0aCiIDRu+',
-    //                sessionToken:'FwoGZXIvYXdzEOz//////////wEaDJxTp31VUR/AwCDh4iLPAQ0UeDeV/7tc3HyIGoOwrMyv9ETganyJiZvizepdUjgqwuWgbVafHqgrzJDf9AoHrgyCgD+xYrNU8tQmvzKKZlXorCw8KPZgbH5eTCgTvlq6ht9Fw3aZFneTMUYGm2d+Ku1Uh+XqaUf8tNemKfGJIyovmXxtOcnrLDAIEkFSjO11/5WxIOrJOiqR105PDb8JvZZ0toaM7OWEXuCNOfVqQpfeT7e/q+xq0UWFlkMQDwiSbKlmXSat7gmUuA0p6ieSshpU8vMrIYtoM53ivxF5WCijla+ZBjIt38x9f1BweKL2IlRxzsKMGXL8ENio2jYlK6kkm3qwG53IC/yb+kVvOj9fFlDd'}
-
+    const cred = {
+        accessKeyId: 'ASIA3XAZXQC6KN2WGQC2',
+        secretAccessKey: 'M7YBBXQHDwYiSUu9E0PIwbI1Px+YMNuPEFj+XwCY',
+        sessionToken: 'FwoGZXIvYXdzEJ7//////////wEaDAESbkwcAgBSabH+0yLPAblKf5Pka8Ny0oDUBqeulnhv8r20W8GOFK1bglUFN+HeQRDb2q876YOK7b6fEhhI7cleeJ8aewPTSe/BL5xSpCKCIuQdvQpkmazWsJiqkba5xMdo7heT5cOHoKbXWq96mpn7Lmx5EABrmOlpdoHgW01yMXXliYY6o3Rmz3MfUktxNOnI4b6NlBYyTKMepFeO+0IgLEuT+BQjDr4Bpfinpg5Bu8/93lbWKRAKDvEJsOD3VgeJRS/vTTqwG871x3POTj5jPs6sEvRpzBcdBSr0tijQ38aaBjItoF8wioZ47qmGSHYXFXLJmY2wC22iF/qoNGbqQhHAxxKAInGxoa8h18gK/eH1'
+    }
     try {
         const parallelUploads3 = new Upload({
           client: new S3Client({region:'us-east-1'}),
