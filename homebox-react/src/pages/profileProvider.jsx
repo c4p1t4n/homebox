@@ -293,7 +293,7 @@ const updateName = () => {
 }
 
 const upload = (file, name) => {
-    const target = { Bucket: "homebox-files", Key: name, Body: file, ACL: 'public-read' }
+    const target = { Bucket: "imagens-homebox", Key: name, Body: file, ACL: 'public-read' }
     const cred = {
         accessKeyId: 'ASIAUX6UXSFK5APUEVA2',
         secretAccessKey: 'd4gnEgUvRQ0SULA2XHRqIFQuA1a9kPUmCvfVuCTA',
