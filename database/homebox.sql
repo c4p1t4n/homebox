@@ -262,10 +262,10 @@ VALUES (
         'Feminino',
         'bruna@gmail.com',
         SHA2("ExSenha1", 256),
-        '12345678900',
+        '12345678900',  
         NULL,
         'customer',
-        NULL,
+        "https://images.unsplash.com/photo-1533674689012-136b487b7736?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         DATE('1993-01-01'),
         '01310200',
         'y'
@@ -848,8 +848,6 @@ VALUES (
 -- ('Kaique', 'Masculino', 'kaiquecustomer32373@gmail.com', SHA2('ExSenha1', 256), '23457916080', 'customer', '1999-02-24', '02322100', 'n', 'https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png'),
 -- ('Giovanna', 'Feminino', 'giovannaworker12991@gmail.com', SHA2('ExSenha1', 256), '36281950712', 'worker', '2001-01-12', '02323270', 'n', 'https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png'),
 -- ('Isabella', 'Feminino', 'isabellacustomer35324@gmail.com', SHA2('ExSenha1', 256), '17638520408', 'customer', '1979-01-13', '02323280', 'n', 'https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png');
-UPDATE user
-SET picture = "https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png";
 
 INSERT INTO service(worker_id_user,category_id_category,name,description,reference_price) VALUES
 ('8', '5', 'MediumPurple', 'Use money detail site maybe from ready.', '469.00'),

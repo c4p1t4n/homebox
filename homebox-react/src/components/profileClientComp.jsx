@@ -87,9 +87,9 @@ const onChange = e => {
 
     setTimeout(() => {
         api.patch(url)
-        .then((response) => {
-            console.log(response.status)
-        })
+            .then((response) => {
+                console.log(response.status)
+            })
     }, 690);
 
     upload(state.file, fileName)
@@ -124,7 +124,7 @@ const updateEmail = () => {
     let user = JSON.parse(sessionStorage.getItem("user")).id_user
 
     var newEmail = document.getElementById("changeEmail").value
-    if(newEmail.indexOf('@')>-1 && newEmail.indexOf('.com')>-1){
+    if (newEmail.indexOf('@') > -1 && newEmail.indexOf('.com') > -1) {
         document.getElementById("changeEmail").value = ""
         const url = '/users/att/email/' + user + '/' + newEmail;
 
