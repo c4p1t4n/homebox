@@ -128,7 +128,7 @@ function ProfileClient() {
 export default ProfileClient
 
 function finishService(){
-    var pin = document.getElementById("pin").value
+    // var pin = document.getElementById("pin").value
     var id = JSON.parse(sessionStorage.getItem("service")).idService
     
     api.patch(`/schedulings/status/${id}/done`

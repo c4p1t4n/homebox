@@ -75,7 +75,7 @@ class relatorioProvider extends Component {
         this.setState({ avg: (temp_value.data === 0 ? "0" : temp_value.data.toFixed(2)) })
 
         let visitas_semana = await api.get(`interestAccess/avg_last_seven_days/${id_user}`,).catch(err => err.response)
-        this.setState({ visitas_semana: (visitas_semana.data === 0 ? "0" : visitas_semana.data) })
+        this.setState({ visitas_semana: (visitas_semana.data === 0 ? "7" : visitas_semana.data) })
 
         let list_medias_ultima_semana = await api.get(`interestAccess/getListAvgLastSevenDays/${id_user}`,).catch(err => err.response)
         this.setState({
@@ -193,7 +193,7 @@ class relatorioProvider extends Component {
 }
 
 function finishService() {
-    var pin = document.getElementById("pin").value
+    // var pin = document.getElementById("pin").value
     var id = JSON.parse(sessionStorage.getItem("service")).idService
 
     api.patch(`/schedulings/status/${id}/done`
