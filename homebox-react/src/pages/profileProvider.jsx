@@ -297,7 +297,7 @@ const upload = (file, name) => {
     const cred = {
         accessKeyId: 'ASIAUX6UXSFK5APUEVA2',
         secretAccessKey: 'd4gnEgUvRQ0SULA2XHRqIFQuA1a9kPUmCvfVuCTA',
-        sessionToken: '=FwoGZXIvYXdzEJz//////////wEaDIrHjnqRGatrq7aa2SLHAf0mIwg2ooIUBcim0jljCBjQLdd+1yBr4eJ5eL8uU76RYON1eVfTll2CbD+C2au8o5FjGW2OPssKaI0rG/1Edq+4V9OvoLkdZ68hFp/0DGRQ0sT8+33SiMPeLorW7rJPfRPZ6AoOmMrMnUwEtG2Qwn3sXUN3/iceyQG/jx+CfmPovo4JYazdhYbuv2X7PfJPmDn0LGJ2L0Xj+x8bVotKLr7rNWQbDyrvf8G7u+PgJ4JfIeykESveGDpEhkSk8cJme9UWE14u4Iso17XGmgYyLRj98d90kcB+nW1GauVNg3eUstoR4zj5mdXwtrK/6rCEL9FvapOi3hVpOW6uEQ=='
+        sessionToken: 'FwoGZXIvYXdzEJz//////////wEaDIrHjnqRGatrq7aa2SLHAf0mIwg2ooIUBcim0jljCBjQLdd+1yBr4eJ5eL8uU76RYON1eVfTll2CbD+C2au8o5FjGW2OPssKaI0rG/1Edq+4V9OvoLkdZ68hFp/0DGRQ0sT8+33SiMPeLorW7rJPfRPZ6AoOmMrMnUwEtG2Qwn3sXUN3/iceyQG/jx+CfmPovo4JYazdhYbuv2X7PfJPmDn0LGJ2L0Xj+x8bVotKLr7rNWQbDyrvf8G7u+PgJ4JfIeykESveGDpEhkSk8cJme9UWE14u4Iso17XGmgYyLRj98d90kcB+nW1GauVNg3eUstoR4zj5mdXwtrK/6rCEL9FvapOi3hVpOW6uEQ=='
     }
 
     try {
