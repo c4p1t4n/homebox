@@ -24,7 +24,7 @@
 }
 
 .visitsYourProfile {
-    width: 32%;
+    width: 25%;
     padding: 1%;
     border-radius: 20px;
     background-color: whitesmoke;
@@ -44,8 +44,8 @@
 }
 
 .indiceDiv2 {
-    text-align: end;
     color: #174574;
+    text-align: center;
 }
 
 .visitsYourProfileTOP {
@@ -208,7 +208,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 30vh;
+    height: 20vh;
     justify-content: space-between;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -238,7 +238,7 @@
     color: white;
 }
 
-.endServiceDivInButton button:hover{
+.endServiceDivInButton button:hover {
     cursor: pointer;
     background-color: orange;
     color: black;

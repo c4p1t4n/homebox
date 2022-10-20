@@ -113,8 +113,8 @@ function ProfileClient() {
             </div>
             <div id="endServiceDivClient" className="endServiceDiv">
                 <div className="endServiceDivIn">
-                    <p>Enviamos um código para o seu email, insira este código abaixo</p>
-                    <input id="pin" type="text" />
+                    <p>Tem certeza que deseja finalizar este serviço ?</p>
+                    {/* <input id="pin" type="text" /> */}
                     <div className="endServiceDivInButton">
                         <button onClick={finishService}>Finalizar serviço</button>
                         <button onClick={closeendServiceDiv}>Sair</button>
