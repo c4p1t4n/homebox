@@ -265,7 +265,7 @@ VALUES (
         '12345678900',  
         NULL,
         'customer',
-        "https://images.unsplash.com/photo-1533674689012-136b487b7736?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "https://images.unsplash.com/photo-1546961333-449e0af7b5db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
         DATE('1993-01-01'),
         '01310200',
         'y'
@@ -747,12 +747,12 @@ VALUES (
         '1996-11-26',
         '03034070',
         'n',
-        'https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png'
+        'https://images.unsplash.com/photo-1506863530036-1efeddceb993?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=744&q=80'
     ),
 ('Rafael', 'Masculino', 'rafaelcustomer69811@gmail.com', SHA2('ExSenha1', 256), '09587143205', 'customer', '1978-06-02', '02112000', 'n', 'https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png'),
 -- ('Danilo', 'Masculino', 'danilocustomer60803@gmail.com', SHA2('ExSenha1', 256), '83017425690', 'customer', '1994-01-29', '01047904', 'n', 'https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png'),
 -- ('Ana Laura', 'Feminino', 'anacustomer87967@gmail.com', SHA2('ExSenha1', 256), '05169437820', 'customer', '1999-05-09', '01047905', 'n', 'https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png'),
-('Gustavo Henrique', 'Masculino', 'gustavoworker49521@gmail.com', SHA2('ExSenha1', 256), '90537216812', 'worker', '1997-09-25', '01014020', 'n', 'https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png'),
+('Gustavo Henrique', 'Masculino', 'gustavoworker49521@gmail.com', SHA2('ExSenha1', 256), '90537216812', 'worker', '1997-09-25', '01014020', 'n', 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=848&q=80'),
 ('Isis', 'Feminino', 'isisworker12584@gmail.com', SHA2('ExSenha1', 256), '63589140224', 'worker', '1983-12-04', '04007004', 'n', 'https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png'),
 -- ('Bárbara', 'Feminino', 'bárbaraworker99757@gmail.com', SHA2('ExSenha1', 256), '36580419270', 'worker', '2003-03-17', '02034900', 'n', 'https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png'),
 ('Vicente', 'Masculino', 'vicenteworker84539@gmail.com', SHA2('ExSenha1', 256), '40392658747', 'worker', '1994-05-24', '04263000', 'n', 'https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png'),
@@ -762,7 +762,7 @@ VALUES (
 -- ('João Gabriel', 'Masculino', 'joãocustomer16009@gmail.com', SHA2('ExSenha1', 256), '37561429061', 'customer', '2009-11-04', '01050901', 'n', 'https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png'),
 -- ('Matheus', 'Masculino', 'matheusworker68796@gmail.com', SHA2('ExSenha1', 256), '58327604171', 'worker', '1993-01-05', '01050903', 'n', 'https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png'),
 -- ('Vinicius', 'Masculino', 'viniciuscustomer39532@gmail.com', SHA2('ExSenha1', 256), '80971623422', 'customer', '2002-07-26', '01050904', 'n', 'https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png'),
-('Mirella', 'Feminino', 'mirellaworker11181@gmail.com', SHA2('ExSenha1', 256), '09274835132', 'worker', '1995-12-14', '01222000', 'n', 'https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png');
+('Mirella', 'Feminino', 'mirellaworker11181@gmail.com', SHA2('ExSenha1', 256), '09274835132', 'worker', '1995-12-14', '01222000', 'n', 'https://images.unsplash.com/photo-1525186492356-0fe09a5831df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=743&q=80');
 -- ('Francisco', 'Masculino', 'franciscocustomer95390@gmail.com', SHA2('ExSenha1', 256), '42653198070', 'customer', '1995-09-06', '01222001', 'n', 'https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png'),
 -- ('Luiz Gustavo', 'Masculino', 'luizworker50575@gmail.com', SHA2('ExSenha1', 256), '18243095705', 'worker', '1996-02-22', '01222901', 'n', 'https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png'),
 -- ('Enzo', 'Masculino', 'enzoworker74045@gmail.com', SHA2('ExSenha1', 256), '93708641566', 'worker', '2009-03-30', '01222902', 'n', 'https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png'),
