@@ -45,7 +45,7 @@ public class ChatController {
         }
         System.out.println(idCustomer + " " + idWorker);
 
-        if(!dbChatsRepository.existsByUserIdAndUserId2(idWorker,idCustomer)){
+        // if(!dbChatsRepository.existsByUserIdAndUserId2(idWorker,idCustomer)){
             LocalDate today = LocalDate.now();
             Chat newChat = dbRepositoryChat.save(new Chat(today));
 
@@ -66,8 +66,8 @@ public class ChatController {
             dbRepositoryUserHasChat.save(WorkerChatAccess);
 
             return ResponseEntity.status(201).build();
-        }
-        return ResponseEntity.status(400).build();
+        // }
+        // return ResponseEntity.status(400).build();
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")

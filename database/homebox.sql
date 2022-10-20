@@ -287,7 +287,7 @@ VALUES (
     (
         NULL,
         'Ana',
-        'Masculino',
+        'Feminino',
         'email@email.com',
         SHA2("senha123", 256),
         '12345678900',
@@ -301,7 +301,7 @@ VALUES (
     (
         NULL,
         'André',
-        'Feminino',
+        'Masculino',
         'email2@email.com',
         SHA2("ExSenha1", 256),
         '12345678900',
@@ -850,3 +850,17 @@ VALUES (
 -- ('Isabella', 'Feminino', 'isabellacustomer35324@gmail.com', SHA2('ExSenha1', 256), '17638520408', 'customer', '1979-01-13', '02323280', 'n', 'https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png');
 UPDATE user
 SET picture = "https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png";
+
+INSERT INTO service(worker_id_user,category_id_category,name,description,reference_price) VALUES
+('8', '5', 'MediumPurple', 'Use money detail site maybe from ready.', '469.00'),
+('8', '2', 'CornflowerBlue', 'Trip generation film price.', '291.00'),
+('9', '1', 'Purple', 'Note fly write many.', '609.00'),
+('11', '2', 'LightSlateGray', 'Matter trade respond exist resource.', '562.00'),
+('11', '1', 'LightSalmon', 'Young expert structure hold family lay paper.', '499.00'),
+('12', '5', 'DarkTurquoise', 'Eye easy theory responsibility pay.', '323.00'),
+('12', '1', 'PeachPuff', 'Send summer enter research dinner.', '286.00'),
+('13', '1', 'NavajoWhite', 'Anything return north realize age energy.', '154.00'),
+('13', '2', 'Beige', 'Buy federal whom chair.', '547.00'),
+('14', '3', 'Navy', 'Culture political economic plant establish.', '472.00'),
+('14', '5', 'Aqua', 'Story director check image.', '149.00'),
+('9', '2', 'CornflowerBlue', 'Indicate daughter each range heart career even national.', '666.00');
