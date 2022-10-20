@@ -21712,3 +21712,30245 @@ Lake Charlesville, NE 43613', '2022-9-18 00:00:00' ),
 FPO AP 08518', '2022-10-23 00:00:00' ),
 ('10081', '497.00', '3838 Hampton Lakes Suite 024
 Leonshire, GA 46482', '2022-9-16 00:00:00' );
+
+INSERT INTO rating(fk_accomplished_service, rating, description) VALUES
+('1', '5', 'Distrito Mendes, 4
+Jardim Atlntico
+81518-481 Novaes / PB'),
+('2', '1', 'Stio Cardoso, 54
+Serra Verde
+33176-149 Carvalho Paulista / BA'),
+('3', '4', 'Recanto de Souza
+Belmonte
+09179569 Nunes do Norte / PA'),
+('4', '2', 'Praia de Arago, 999
+Vila Sesc
+23941-692 Pires do Sul / PA'),
+('5', '1', 'Largo da Cunha, 6
+Leticia
+94540087 da Mata de Minas / RR'),
+('6', '3', 'Fazenda de Ramos, 90
+Vila Do Pombal
+35343322 Farias / AC'),
+('7', '3', 'Viaduto Melo, 18
+Vila Nossa Senhora Do Rosrio
+55773501 Ramos dos Dourados / RO'),
+('8', '5', 'Avenida Martins, 366
+Betnia
+68002282 Rezende de Ribeiro / RN'),
+('9', '4', 'Jardim de Rezende, 65
+Vila Vista Alegre
+51007-806 Peixoto / RR'),
+('10', '1', 'Ncleo Joo Felipe Ramos, 33
+Tiradentes
+75383871 da Cruz do Sul / DF'),
+('11', '3', 'Alameda de Melo, 3
+Petropolis
+21298-245 da Mota da Mata / MA'),
+('12', '2', 'Jardim Nogueira, 59
+Vila Minaslandia
+17430-808 Costela / MA'),
+('13', '4', 'Rua Silveira, 5
+Aparecida 7 Seo
+18474-619 Gomes da Mata / GO'),
+('14', '4', 'Colnia da Luz, 36
+Concrdia
+40302153 Correia / PE'),
+('15', '1', 'Campo Bianca Fogaa, 1
+Vila Real 1 Seo
+82362386 Viana do Oeste / RR'),
+('16', '4', 'Recanto Marcos Vinicius Freitas, 35
+Campo Alegre
+35615661 Gonalves do Amparo / PB'),
+('17', '1', 'Feira Teixeira, 55
+Corumbiara
+08247-662 da Costa de Ramos / RS'),
+('18', '2', 'Vereda Murilo Monteiro, 54
+Minas Brasil
+02564783 Oliveira / MG'),
+('19', '5', 'Vale de Almeida, 45
+Santo Agostinho
+37782870 Caldeira / MG'),
+('20', '5', 'Travessa Moreira, 94
+Alta Tenso 2 Seo
+98465671 Cavalcanti / PR'),
+('21', '3', 'Travessa Rodrigues, 560
+Parque So Jos
+21921-904 Alves / MS'),
+('22', '2', 'Ptio Azevedo, 126
+Conjunto Jatoba
+32441-686 Silva / TO'),
+('23', '1', 'Colnia de Costa, 86
+Vila Aeroporto
+90696-868 Nascimento / SC'),
+('24', '5', 'Travessa de da Mota, 61
+Caiaras
+82568858 Dias das Flores / SC'),
+('25', '4', 'Campo Valentina Porto, 70
+Santa Terezinha
+96715-987 Mendes do Campo / RR'),
+('26', '3', 'Campo de Castro, 33
+Tres Marias
+69814750 Arago / AC'),
+('27', '4', 'Alameda Caldeira, 361
+Vila Madre Gertrudes 1 Seo
+28689-534 Oliveira / RO'),
+('28', '3', 'Chcara de da Luz, 5
+Distrito Industrial Do Jatoba
+30922712 Melo / MS'),
+('29', '5', 'Praa Henrique da Rocha, 42
+Vitoria
+39930019 Oliveira / PI'),
+('30', '3', 'Recanto de da Rosa, 458
+Conjunto Santa Maria
+50527253 Azevedo do Campo / BA'),
+('31', '3', 'Viaduto Noah Almeida, 495
+Vila Jardim So Jos
+22805150 Gonalves / RR'),
+('32', '5', 'Condomnio Rafaela Lima, 62
+Vila Santa Rosa
+17041-641 Costela / AC'),
+('33', '3', 'rea de Monteiro, 191
+Garas
+68178601 Cunha de Gois / PB'),
+('34', '4', 'Estao de Dias, 96
+Vila Santa Rosa
+85650-165 Dias / MG'),
+('35', '3', 'Via da Costa, 94
+Santa Amelia
+56214-164 da Rosa / ES'),
+('36', '4', 'Praa Ceclia Castro
+Anchieta
+48778-590 Gonalves / MG'),
+('37', '4', 'Esplanada de Novaes, 70
+Branas
+15104099 Nascimento das Pedras / ES'),
+('38', '1', 'Viaduto de Fogaa
+Novo Tupi
+89385-977 Vieira / PE'),
+('39', '5', 'Conjunto da Mota, 846
+Vila Nova Gameleira 3 Seo
+25683214 Ramos do Oeste / DF'),
+('40', '2', 'Quadra Nina Freitas, 635
+Madre Gertrudes
+31906-374 da Conceio de Rocha / MT'),
+('41', '2', 'Vereda Barros
+Beira Linha
+74841-549 Silva da Prata / SE'),
+('42', '2', 'Passarela de Silva, 92
+Vila So Geraldo
+82124003 Barbosa / RO'),
+('43', '5', 'Largo de Azevedo, 166
+Leticia
+16564-327 Gonalves / RJ'),
+('44', '3', 'Campo de Viana
+So Bernardo
+64036694 Jesus / RS'),
+('45', '4', 'Campo de Pires
+Nova Cintra
+15858-009 Alves do Sul / SE'),
+('46', '4', 'Praia Gonalves, 56
+Santa Cruz
+85525141 Campos / AP'),
+('47', '5', 'Morro de Carvalho, 96
+Garas
+54381330 Ferreira / MG'),
+('48', '3', 'Ptio da Conceio, 47
+Unidas
+58636-096 Peixoto / MA'),
+('49', '2', 'Avenida de Barros, 76
+Dona Clara
+04587759 Vieira da Mata / CE'),
+('50', '3', 'Chcara Heitor Rezende, 9
+Etelvina Carneiro
+39877-621 Lopes de Gois / MT'),
+('51', '4', 'Recanto Levi Melo
+Vila Batik
+26347-956 Fernandes Verde / PE'),
+('52', '5', 'Fazenda de Jesus
+Minas Brasil
+32580934 Arajo / AM'),
+('53', '1', 'Vale de Jesus, 37
+Mirtes
+52541990 da Cunha / MG'),
+('54', '5', 'Rua Ana Beatriz Castro, 193
+Gameleira
+23276-355 Barbosa das Flores / RN'),
+('55', '4', 'Campo Luiz Otvio da Conceio, 53
+Aparecida
+90008-871 Ferreira / TO'),
+('56', '2', 'Travessa de Fernandes, 87
+Pousada Santo Antonio
+58931-953 Arago Paulista / CE'),
+('57', '5', 'Loteamento Las Jesus, 95
+Cidade Jardim Taquaril
+33896625 da Luz / GO'),
+('58', '1', 'Praia de Ferreira, 6
+Betnia
+55983194 Ramos / PA'),
+('59', '1', 'Chcara Nogueira, 48
+Guarani
+99757-213 Jesus do Oeste / AP'),
+('60', '2', 'Passarela Moreira, 49
+Vila So Gabriel
+86119-453 Moura de Pereira / CE'),
+('61', '5', 'Trecho Nunes, 76
+Alto Vera Cruz
+05783558 Arajo de Ribeiro / AC'),
+('62', '3', 'Passarela Barbosa, 8
+Solar Do Barreiro
+70711-700 da Mata / AL'),
+('63', '4', 'Ptio Ana Julia Pereira, 478
+Vila Paris
+82440317 Campos de Gois / PE'),
+('64', '1', 'Setor Dias, 80
+Vila Coqueiral
+59329-967 Oliveira de Minas / TO'),
+('65', '1', 'Setor Julia Fernandes, 40
+Atila De Paiva
+12631132 Lopes do Galho / RS'),
+('66', '1', 'Rua Sales, 3
+Nova Gameleira
+43023803 Freitas / PB'),
+('67', '2', 'Colnia Gabriela da Rosa, 719
+Maraj
+06361-474 Pires da Prata / RR'),
+('68', '3', 'Ncleo de Fernandes, 8
+Santa Rita
+10628022 Rodrigues do Amparo / BA'),
+('69', '2', 'Largo Vieira
+Ouro Preto
+78042012 Ribeiro / PE'),
+('70', '2', 'Passarela Cardoso, 366
+Baro Homem De Melo 2 Seo
+39165103 Rocha do Norte / AM'),
+('71', '1', 'Ladeira da Cruz, 95
+Eymard
+74185-549 Silva das Flores / MS'),
+('72', '4', 'Stio Duarte, 92
+Vila Sesc
+09852-351 Martins das Pedras / RO'),
+('73', '5', 'Vereda Ana Beatriz Gonalves, 40
+Santo Andr
+12464-234 da Mata / DF'),
+('74', '4', 'Loteamento Lopes
+Vila Boa Vista
+42287366 da Conceio do Campo / MT'),
+('75', '4', 'Jardim Augusto Cardoso
+Aparecida 7 Seo
+36065260 Dias Verde / RN'),
+('76', '2', 'Setor de da Rosa
+Santa Sofia
+47700-676 Moraes / GO'),
+('77', '3', 'Avenida de Oliveira, 81
+Itapoa
+39426-677 Viana da Prata / DF'),
+('78', '3', 'Feira Emanuelly Melo, 551
+Gameleira
+49095900 da Mota / BA'),
+('79', '2', 'Ncleo Arajo, 33
+Jardim Guanabara
+57370-633 Moraes de Gomes / AP'),
+('80', '3', 'Loteamento de Pereira, 3
+Senhor Dos Passos
+05606422 Arago da Praia / SC'),
+('81', '5', 'Stio Monteiro, 93
+Vila Da Luz
+55263293 Castro de Minas / AC'),
+('82', '4', 'Rodovia Rodrigues, 57
+Jardim Leblon
+60986766 Cunha de Moura / RR'),
+('83', '3', 'Passarela Pinto, 65
+Serra
+17593-572 da Mota / PB'),
+('84', '4', 'Morro Jesus, 818
+Vila Ipiranga
+85823-670 Santos / MA'),
+('85', '4', 'Colnia Giovanna da Rosa, 6
+So Tomaz
+22927420 Caldeira de Moraes / PR'),
+('86', '5', 'Residencial de da Cunha, 12
+So Paulo
+90202982 Nogueira / SP'),
+('87', '1', 'Vereda Martins, 31
+Vitoria
+99677452 Gonalves de Minas / AP'),
+('88', '5', 'Ncleo Eloah Correia, 68
+So Joo Batista
+94426-921 Costela da Prata / RJ'),
+('89', '5', 'Lagoa Rodrigo Dias, 274
+Corumbiara
+28359-065 Moreira / ES'),
+('90', '5', 'Ncleo Lucas Dias
+Nazare
+26299-932 Rodrigues das Pedras / BA'),
+('91', '2', 'Condomnio da Paz, 61
+Vila Canto Do Sabi
+98032720 Martins do Sul / AM'),
+('92', '5', 'rea de Rodrigues, 82
+Vitoria
+13184940 da Cunha da Prata / ES'),
+('93', '2', 'Recanto Porto, 44
+So Marcos
+25531-838 da Rosa de Rodrigues / PE'),
+('94', '1', 'rea Pinto, 15
+Vila Ecolgica
+90574300 Silva do Amparo / MA'),
+('95', '2', 'Aeroporto Farias, 142
+Conjunto Taquaril
+85724724 Peixoto Alegre / PR'),
+('96', '2', 'Favela de Pinto
+So Francisco Das Chagas
+69606-441 Cavalcanti / RO'),
+('97', '5', 'Condomnio Arago, 16
+Vila Antena
+62478564 Lima da Serra / AL'),
+('98', '1', 'Setor Lima, 12
+lvaro Camargos
+47399-007 Monteiro do Norte / BA'),
+('99', '3', 'Lagoa Olivia Azevedo, 73
+Cidade Jardim Taquaril
+76985114 Silva do Amparo / SE'),
+('100', '4', 'Praia de Nogueira, 7
+Miramar
+70324-600 Monteiro Alegre / PB'),
+('101', '4', 'Lago de Cardoso, 172
+So Jos
+56114488 Gonalves / PI'),
+('102', '1', 'Via de da Rocha, 44
+Acaiaca
+21957719 da Cunha Paulista / BA'),
+('103', '4', 'Praia Valentina Nogueira, 10
+Ipiranga
+14743-357 Novaes Paulista / SP'),
+('104', '4', 'Largo Moura
+Vila Santa Monica 1 Seo
+49351-644 Barros / MG'),
+('105', '5', 'Vale Cavalcanti, 8
+Jardinpolis
+88064-193 da Rosa / SP'),
+('106', '5', 'Chcara de Gomes, 917
+Centro
+65001194 Almeida / AL'),
+('107', '1', 'Fazenda Ana Sophia Novaes, 85
+Vila Independencia 2 Seo
+11415-984 Pires / PI'),
+('108', '2', 'Favela Dias, 27
+Vila Santa Rosa
+93422-727 Porto / GO'),
+('109', '2', 'Stio Ryan Fogaa, 83
+Estoril
+37024860 Moraes / MS'),
+('110', '1', 'Travessa Bianca Barbosa, 367
+Conjunto Capito Eduardo
+10010-952 Pinto / MS'),
+('111', '1', 'Vale de Freitas, 54
+Corumbiara
+50187900 Dias de Duarte / AP'),
+('112', '5', 'Vila Isadora Monteiro, 2
+Lajedo
+66806019 Nascimento de Minas / RS'),
+('113', '3', 'Avenida Brenda da Cunha, 197
+Itaipu
+57012065 Ferreira / PA'),
+('114', '1', 'Trecho Rezende, 8
+Vila So Francisco
+14439-267 Almeida do Galho / MT'),
+('115', '4', 'Ladeira Joaquim Ribeiro, 58
+Vila Ouro Minas
+79526556 da Rosa do Oeste / RR'),
+('116', '2', 'Favela de Novaes, 26
+Maraj
+23001-369 Caldeira das Pedras / BA'),
+('117', '3', 'Largo de Farias, 99
+Bernadete
+05025-630 Cardoso Alegre / RJ'),
+('118', '5', 'Campo Otvio da Paz, 643
+Cdi Jatoba
+56890-691 Vieira Verde / MT'),
+('119', '2', 'Jardim de Rezende, 249
+Caiaras
+82647574 Nunes / GO'),
+('120', '2', 'Ptio Sabrina Fogaa, 34
+Dom Joaquim
+06302773 Cunha / MA'),
+('121', '4', 'Praia Pedro Barbosa, 50
+Vila Jardim Montanhes
+12391-437 Cardoso / BA'),
+('122', '3', 'Lagoa Dias, 708
+So Jorge 2 Seo
+13077060 Cavalcanti de Gois / PE'),
+('123', '5', 'Favela Ramos, 435
+Vila Nova Cachoeirinha 3 Seo
+07467-188 Alves das Pedras / GO'),
+('124', '5', 'Aeroporto de da Paz, 808
+Estrela
+30556659 Fogaa da Serra / SE'),
+('125', '4', 'Ptio de Carvalho, 247
+Calafate
+87358-256 da Mata / DF'),
+('126', '1', 'Rodovia Thales Duarte, 1
+Bernadete
+04043895 Farias / PR'),
+('127', '1', 'Largo Silveira, 70
+Alta Tenso 2 Seo
+17899-272 Nunes do Galho / PI'),
+('128', '5', 'Parque Alana Pereira, 1
+Jardim Alvorada
+06000426 Freitas / SC'),
+('129', '3', 'Ncleo Arajo, 204
+Das Industrias I
+29606138 Campos / RS'),
+('130', '2', 'Avenida de Vieira, 774
+Conjunto Paulo Vi
+65318091 Santos Paulista / PB'),
+('131', '5', 'Viela Maria Luiza Fernandes, 53
+Conjunto Jardim Filadlfia
+47066-859 da Mata / GO'),
+('132', '4', 'Ncleo Felipe Porto, 51
+Vila Do Pombal
+17679740 Rocha do Norte / AP'),
+('133', '4', 'Ncleo Santos, 39
+Maria Goretti
+80960926 Costa do Campo / TO'),
+('134', '3', 'Morro da Conceio, 52
+Corao De Jesus
+44757-691 Vieira de Farias / PB'),
+('135', '2', 'Morro Nunes, 97
+Aguas Claras
+87479-902 Souza / RN'),
+('136', '5', 'Loteamento Ana Beatriz Teixeira, 9
+Boa Esperana
+11829-196 Barbosa / SC'),
+('137', '5', 'Vale Otvio Pereira, 120
+Vila Da Luz
+20556982 Moreira do Oeste / RJ'),
+('138', '5', 'Setor Lorena da Rosa, 233
+Universitrio
+33435-436 Freitas das Flores / PE'),
+('139', '1', 'Ncleo Bruna Cunha, 621
+Boa Unio 1 Seo
+54084-976 Rocha / SP'),
+('140', '1', 'Vila de Silva, 37
+Glria
+93863978 Martins de Minas / MS'),
+('141', '4', 'Travessa Pires, 7
+Silveira
+11834-660 Carvalho de da Mata / AP'),
+('142', '3', 'Rua de da Mota, 855
+Santa Cecilia
+97405-911 Silveira Alegre / RS'),
+('143', '4', 'Vale de da Cruz, 99
+Campo Alegre
+49993095 Correia / AP'),
+('144', '1', 'Aeroporto Gabrielly Azevedo, 18
+Boa Unio 2 Seo
+75861340 Freitas Alegre / MT'),
+('145', '2', 'Recanto Pereira, 20
+Corao De Jesus
+56662-835 Duarte do Amparo / RO'),
+('146', '2', 'Largo de Martins, 6
+Gameleira
+78827-961 Ramos Verde / GO'),
+('147', '5', 'Rua Campos, 27
+Marieta 1 Seo
+81902-368 Gomes dos Dourados / BA'),
+('148', '1', 'Lago Silveira, 21
+Anchieta
+30176176 Nunes / TO'),
+('149', '4', 'Praa de Monteiro, 663
+Boa Esperana
+88851988 Gomes / AL'),
+('150', '1', 'Alameda de Peixoto, 787
+Apolonia
+29047451 Moreira / CE'),
+('151', '5', 'Via Gabriela Gonalves, 587
+Nova Cachoeirinha
+88565004 da Mota do Norte / MT'),
+('152', '2', 'Favela de Arajo, 3
+Vila Jardim Alvorada
+22584108 Sales / PE'),
+('153', '4', 'Vereda de da Mata, 6
+Nova Sua
+28528030 Castro de Fernandes / DF'),
+('154', '4', 'Setor de Santos, 88
+Esperana
+08523-426 Mendes das Flores / SP'),
+('155', '1', 'Chcara de Melo
+Flavio De Oliveira
+89233418 Correia da Mata / RR'),
+('156', '2', 'Ladeira de Correia
+Ferno Dias
+56170023 Lopes / MS'),
+('157', '1', 'Passarela Moraes, 29
+Maria Helena
+69956645 Mendes do Oeste / AP'),
+('158', '4', 'Stio Guilherme Costa, 98
+Garas
+60462-212 Campos de Pereira / RO'),
+('159', '4', 'Distrito Alves, 2
+Vila Satlite
+25845768 Silva / RN'),
+('160', '2', 'Condomnio de Arajo, 5
+Sion
+68881-942 Santos Verde / AL'),
+('161', '2', 'Trevo Rodrigues, 18
+Petropolis
+53288-160 Dias das Flores / AP'),
+('162', '3', 'Condomnio Castro, 41
+Joo Pinheiro
+47135-767 Moura / PA'),
+('163', '4', 'Trecho Alves
+Caiara - Adelaide
+14614022 Silva / ES'),
+('164', '5', 'Lagoa Cunha, 25
+Sion
+75732-925 Nascimento / PI'),
+('165', '1', 'Via Freitas, 16
+So Jorge 1 Seo
+58662140 Nunes / PR'),
+('166', '5', 'Alameda Rodrigo da Rosa, 5
+Pilar
+81676-428 Gomes Verde / MT'),
+('167', '3', 'rea Maria Eduarda Dias, 53
+Ribeiro De Abreu
+11653105 Ribeiro da Praia / BA'),
+('168', '2', 'Estao Ceclia Gonalves, 967
+Ouro Preto
+17686846 Ferreira / SE'),
+('169', '1', 'Morro Nina Ribeiro, 82
+Virgnia
+52344024 Melo de Gois / AC'),
+('170', '4', 'Travessa de Arago, 33
+Grota
+42528-852 Moreira / AL'),
+('171', '3', 'Ncleo Theo Jesus, 304
+Graa
+86247449 Pinto / RO'),
+('172', '2', 'Quadra Bencio Rodrigues, 56
+So Vicente
+31573213 Alves de Castro / MG'),
+('173', '2', 'Lagoa Ana Beatriz Rocha
+So Gonalo
+47869-865 Freitas / MT'),
+('174', '3', 'Trecho Isabella da Mata
+Nova Cachoeirinha
+45615320 Duarte dos Dourados / MT'),
+('175', '4', 'Morro Luna Porto, 304
+Jardinpolis
+65123-441 Freitas de Pereira / ES'),
+('176', '2', 'Praa Maria Caldeira, 57
+Buraco Quente
+13618044 Costela / AM'),
+('177', '1', 'Jardim Monteiro, 1
+Vila So Dimas
+81964639 Farias / AM'),
+('178', '2', 'Rodovia Moura, 56
+Granja De Freitas
+71946-521 Santos de Barbosa / SC'),
+('179', '4', 'Travessa Henrique Moura
+Alto Das Antenas
+86382914 Arago / MA'),
+('180', '4', 'rea de Cavalcanti, 17
+Trevo
+19457165 da Paz / RR'),
+('181', '1', 'Conjunto Pires, 804
+Vila Paquet
+72338276 Nunes / BA'),
+('182', '3', 'Vereda Ana Lvia da Cunha
+Vila Sesc
+32856-344 Viana de Arago / RO'),
+('183', '3', 'Distrito Raul Barbosa, 44
+Ventosa
+19862-017 Nascimento / PR'),
+('184', '1', 'Ladeira Emanuelly da Mota
+Petropolis
+52106-958 Moraes / RJ'),
+('185', '1', 'Colnia de Monteiro, 66
+Bom Jesus
+33783-443 Barros / GO'),
+('186', '5', 'Avenida de da Mata, 92
+Vila So Joo Batista
+77852-444 Costa / RS'),
+('187', '2', 'Vereda Vieira, 24
+Corumbiara
+85132-526 Teixeira do Norte / PR'),
+('188', '3', 'Loteamento de Nunes, 71
+Horto
+03914-496 Carvalho / AM'),
+('189', '4', 'Ladeira Silveira
+Vila Calafate
+58708468 da Rocha Paulista / AC'),
+('190', '2', 'Condomnio Ana Laura Alves, 628
+Cidade Nova
+31570-381 Lopes / RJ'),
+('191', '5', 'Recanto das Neves, 27
+Antonio Ribeiro De Abreu 1 Seo
+52771-678 Lima das Flores / RJ'),
+('192', '4', 'Feira de Lima, 33
+Hava
+01592213 Porto / BA'),
+('193', '1', 'Stio Freitas, 9
+Monte Azul
+51811681 Duarte dos Dourados / SE'),
+('194', '3', 'Estao Sophie Cunha, 40
+Pindura Saia
+27402-151 da Mata Paulista / AL'),
+('195', '4', 'Praa de Pereira, 477
+Xodo-Marize
+92083572 Peixoto do Oeste / ES'),
+('196', '2', 'Condomnio Vitor Arajo
+Nazare
+83193731 Dias / SP'),
+('197', '4', 'Aeroporto de Melo, 66
+Jardim Do Vale
+64948909 Oliveira / ES'),
+('198', '5', 'Vereda de da Rocha, 590
+Parque So Jos
+93880962 Pinto / PA'),
+('199', '5', 'Vila de Oliveira, 54
+Senhor Dos Passos
+02914-500 da Mata da Praia / AM'),
+('200', '2', 'Colnia Juan Almeida, 61
+Pirineus
+09556-249 Nogueira de Martins / PE'),
+('201', '1', 'Campo de da Conceio, 846
+Nova Cintra
+46718708 Pires da Praia / RS'),
+('202', '4', 'Travessa Joo Guilherme Ramos, 54
+Marmiteiros
+97360-856 Gomes das Pedras / PR'),
+('203', '3', 'Trecho Ribeiro
+Santa Maria
+27060-921 Rodrigues do Norte / MS'),
+('204', '1', 'Quadra de Rocha, 411
+Pompia
+87424091 Barbosa da Mata / MS'),
+('205', '5', 'Favela Ceclia Porto, 716
+Laranjeiras
+18420-828 Costa Grande / RO'),
+('206', '2', 'Largo de Souza, 49
+Vila Nova Paraso
+43726-730 Lima / ES'),
+('207', '2', 'Estao de Rezende, 4
+Alpes
+42810807 Martins de Minas / GO'),
+('208', '5', 'Chcara de Moreira
+Parque So Jos
+76629-046 Rocha do Amparo / PI'),
+('209', '5', 'Lago Pedro Lucas Mendes, 39
+Vila Ouro Minas
+45128-757 da Conceio / RR'),
+('210', '5', 'Avenida Monteiro, 74
+Vila Jardim So Jos
+79700735 da Rocha / MS'),
+('211', '2', 'Jardim de Barros, 2
+Vila Esplanada
+43813-470 Correia de Moraes / MA'),
+('212', '1', 'Trecho Costela, 44
+Vila Santa Rosa
+21287148 Vieira / AL'),
+('213', '2', 'Esplanada da Rocha, 697
+Pantanal
+37354835 Costela / TO'),
+('214', '3', 'Favela Gonalves, 23
+Conjunto Lagoa
+11402444 Jesus / AP'),
+('215', '4', 'Via Sofia Caldeira, 35
+Bacurau
+86388-428 Carvalho / PI'),
+('216', '1', 'Rodovia Ramos, 8
+Penha
+02210136 da Luz / PR'),
+('217', '4', 'Vereda Milena Fogaa, 10
+Santa Ins
+32350823 Barros / MA'),
+('218', '5', 'Parque Cau Gonalves, 128
+Vila Da Amizade
+62928135 Vieira / RN'),
+('219', '5', 'Viela Lucas Moura, 8
+Miramar
+19740049 Ribeiro / TO'),
+('220', '1', 'Distrito Maria Vitria Azevedo, 27
+Nova Gameleira
+69489042 Monteiro / AC'),
+('221', '4', 'Alameda Viana, 880
+Jardim Montanhs
+80804850 Ferreira do Galho / PB'),
+('222', '1', 'Praia da Mata, 80
+Taquaril
+97357-904 Freitas Alegre / RS'),
+('223', '4', 'Travessa de Dias, 244
+Heliopolis
+03641267 Cardoso / MG'),
+('224', '5', 'Loteamento da Mota, 12
+Monsenhor Messias
+03145-680 da Luz / BA'),
+('225', '5', 'Lago de da Conceio, 71
+Cnego Pinheiro 2 Seo
+67197179 Azevedo Alegre / ES'),
+('226', '1', 'Ncleo Rocha, 3
+Venda Nova
+50810220 Fernandes / RJ'),
+('227', '2', 'Fazenda da Cruz, 2
+Novo Santa Cecilia
+98970-900 Cavalcanti / AP'),
+('228', '3', 'Lagoa de Correia, 70
+Vila Santa Monica 2 Seo
+40233-214 Fernandes / RS'),
+('229', '4', 'Vila Samuel da Mota, 22
+Pedreira Padro Lopes
+63066591 Monteiro dos Dourados / DF'),
+('230', '4', 'Praa Bianca da Cunha
+Jaqueline
+99021-060 Lopes Alegre / RO'),
+('231', '1', 'Rua Caroline Gonalves
+Aeroporto
+11703-871 da Paz / BA'),
+('232', '1', 'Jardim Fogaa, 46
+Outro
+56648784 da Cruz / SE'),
+('233', '1', 'Passarela da Cruz, 74
+Maria Virgnia
+38773-298 Cardoso / PE'),
+('234', '2', 'Loteamento de Gomes, 27
+Madri
+60019-692 Ribeiro / SE'),
+('235', '4', 'Condomnio da Rocha, 33
+Vila Santa Monica 1 Seo
+26233932 Souza de Correia / PR'),
+('236', '5', 'Ladeira Porto, 43
+Ouro Preto
+46998016 Ferreira Grande / TO'),
+('237', '1', 'Ladeira Oliveira
+Santa Tereza
+20696-585 Gonalves do Amparo / PB'),
+('238', '3', 'Avenida Joo Pedro Silva
+Bonsucesso
+31779-218 Novaes / RO'),
+('239', '2', 'Vereda Ana Jlia Nogueira, 68
+Cardoso
+32740-850 Jesus do Oeste / DF'),
+('240', '1', 'Aeroporto de Silveira, 4
+Vila Primeiro De Maio
+11605-065 Pinto / BA'),
+('241', '2', 'Trevo da Luz, 741
+Mineiro
+11308192 da Conceio / RO'),
+('242', '3', 'Esplanada Gustavo das Neves, 57
+So Paulo
+43364478 da Conceio / RS'),
+('243', '1', 'Residencial de Duarte, 86
+Calafate
+64792485 Silveira do Campo / TO'),
+('244', '5', 'Conjunto de Farias, 9
+Senhor Dos Passos
+26052-211 Castro / SE'),
+('245', '2', 'Viaduto Eduardo Gonalves, 492
+Bairro Das Indstrias Ii
+90305-120 Pereira / AP'),
+('246', '2', 'Praa Alice Cunha, 40
+Jonas Veiga
+79331317 Peixoto / RN'),
+('247', '1', 'Jardim Moreira, 40
+So Geraldo
+95716436 Peixoto / RN'),
+('248', '3', 'Condomnio Sabrina Gomes, 98
+Luxemburgo
+59909439 Pires / SP'),
+('249', '2', 'Via de da Luz
+Cnego Pinheiro 1 Seo
+69198798 Silveira do Galho / RN'),
+('250', '2', 'Jardim de Cardoso, 81
+Cenaculo
+81913417 Ribeiro Grande / PR'),
+('251', '5', 'Setor Cunha, 92
+Barreiro
+59883-186 Campos Paulista / RS'),
+('252', '4', 'Trevo de Nunes, 94
+Conjunto Providencia
+09841-872 Martins / RJ'),
+('253', '3', 'Feira de Pereira, 54
+Conjunto Bonsucesso
+19798084 Nogueira / BA'),
+('254', '5', 'Chcara Santos, 7
+Vila So Joo Batista
+63511521 Jesus / RO'),
+('255', '1', 'Viela de Moraes, 91
+So Gabriel
+77278086 Arajo das Pedras / MA'),
+('256', '4', 'rea Rafael da Costa, 81
+Vila Madre Gertrudes 4 Seo
+99612-028 da Luz / DF'),
+('257', '2', 'Stio Danilo Pires, 54
+Novo Santa Cecilia
+33175-268 Silveira das Flores / MS'),
+('258', '4', 'Rua das Neves, 84
+Baro Homem De Melo 3 Seo
+73919-241 Gonalves / RS'),
+('259', '5', 'Feira das Neves, 62
+So Francisco
+61332201 Pereira / PE'),
+('260', '4', 'Trecho Peixoto, 635
+Outro
+24321283 Arago dos Dourados / MT'),
+('261', '3', 'Recanto de Costa, 97
+Jardim Dos Comerciarios
+05896-451 Moreira / GO'),
+('262', '3', 'Recanto Noah Nascimento, 76
+Marieta 2 Seo
+87287842 Costela / PE'),
+('263', '4', 'Fazenda Isaac Ribeiro, 27
+Vila Paquet
+81161-417 Gomes de Minas / MA'),
+('264', '4', 'Alameda de Nascimento, 9
+Vila Paquet
+48673974 Alves / PB'),
+('265', '5', 'Travessa de Cardoso, 8
+Cnego Pinheiro 1 Seo
+61172829 Moraes / GO'),
+('266', '4', 'Avenida Oliveira, 67
+So Tomaz
+05872-439 Souza / RS'),
+('267', '2', 'Rua Bruna Sales
+Xodo-Marize
+80281-373 Porto / ES'),
+('268', '1', 'Loteamento de Martins, 4
+Mariano De Abreu
+78515-091 da Cunha / RO'),
+('269', '2', 'Fazenda de Silva, 2
+So Pedro
+90824-952 Nascimento / MA'),
+('270', '5', 'Favela Carvalho, 636
+Universitrio
+11955729 Arajo da Serra / AL'),
+('271', '1', 'Ncleo de Ferreira, 570
+Alto Barroca
+31717-153 Nunes / GO'),
+('272', '4', 'Estao de da Mata
+So Damio
+12177349 da Mota Grande / SE'),
+('273', '3', 'Esplanada Miguel Barros, 60
+So Salvador
+59912-051 Vieira / GO'),
+('274', '5', 'Stio Lvia Viana, 83
+Vila Dos Anjos
+31602-397 Mendes Verde / AC'),
+('275', '4', 'rea Moura, 11
+Vera Cruz
+43084207 Campos da Mata / RR'),
+('276', '4', 'Fazenda da Cruz, 94
+Jardim Amrica
+77270798 Fogaa de Moura / ES'),
+('277', '1', 'Praa Rodrigo Nunes, 40
+Engenho Nogueira
+00543766 Cunha / MA'),
+('278', '1', 'Ptio Pedro Henrique Rocha, 3
+Alpes
+24531-929 da Paz de Nunes / MG'),
+('279', '5', 'Estao de Fogaa, 3
+Das Industrias I
+69568-420 Oliveira / AM'),
+('280', '2', 'Chcara Guilherme Gonalves, 672
+Nova America
+79267-114 Correia / AP'),
+('281', '3', 'Rodovia Sales, 95
+Santa Rita
+90652966 Carvalho / AC'),
+('282', '4', 'Ncleo de das Neves, 526
+Vila Santo Antnio Barroquinha
+52241035 Moraes / GO'),
+('283', '5', 'Distrito da Rosa, 13
+Cinquentenrio
+11751199 Souza do Amparo / MA'),
+('284', '3', 'Viela Rodrigues, 76
+Vila Nova Gameleira 3 Seo
+52088-299 Farias do Campo / DF'),
+('285', '4', 'Estrada da Paz, 878
+Vila Independencia 3 Seo
+41430-002 Costa / MA'),
+('286', '5', 'Alameda Letcia Duarte, 1
+Aparecida
+23303088 Farias de Rocha / CE'),
+('287', '1', 'Conjunto de Alves, 953
+Unio
+29683-216 Carvalho / PB'),
+('288', '3', 'Loteamento de Moreira, 775
+Universo
+96729-774 Nascimento do Sul / PB'),
+('289', '2', 'Ncleo de Dias, 844
+Itatiaia
+28346-945 Dias / RN'),
+('290', '1', 'Condomnio Sales, 51
+Liberdade
+93267847 Farias / AL'),
+('291', '1', 'rea de Farias, 212
+Bacurau
+11320-306 Nunes / SC'),
+('292', '3', 'Fazenda Isabella Moraes, 88
+Jardim Montanhs
+53531180 Arago / RN'),
+('293', '2', 'Colnia Novaes, 49
+Vila Dos Anjos
+20612844 Nogueira / PB'),
+('294', '1', 'Jardim Yasmin Melo, 42
+Esplanada
+49856276 Caldeira / MA'),
+('295', '3', 'Via Arajo, 67
+Aaro Reis
+43028013 Vieira das Flores / AL'),
+('296', '2', 'Distrito Maria Eduarda Nascimento, 9
+Santa Efignia
+76953-350 Fernandes / PR'),
+('297', '2', 'Alameda Isis Monteiro, 80
+Vila De S
+80375-090 Porto do Galho / RN'),
+('298', '1', 'Trevo Isis Moraes, 69
+Monte So Jos
+64550046 Pinto / RR'),
+('299', '4', 'Ladeira Marcela Dias, 43
+Ouro Minas
+77462823 Porto da Serra / RO'),
+('300', '2', 'Via de Melo, 2
+Vista Do Sol
+86055466 da Cruz / PB'),
+('301', '1', 'Largo Juan da Paz
+Camponesa 1 Seo
+08311-103 Sales / ES'),
+('302', '2', 'Viaduto Maysa Cardoso, 38
+Jaragu
+61313-858 Martins / RN'),
+('303', '1', 'Feira de da Rosa, 6
+Tiradentes
+74313-123 Pinto da Prata / PA'),
+('304', '4', 'Praa Lvia Pereira, 139
+Vila Nova Cachoeirinha 1 Seo
+16042709 Peixoto dos Dourados / CE'),
+('305', '1', 'Rua de Dias, 3
+Camponesa 2 Seo
+24072483 Pereira / DF'),
+('306', '5', 'Praa Lorenzo Azevedo, 90
+Vila Batik
+87099-288 da Cunha / GO'),
+('307', '4', 'Vale de Nascimento, 46
+Alto Dos Pinheiros
+68768-620 Campos / MT'),
+('308', '4', 'Colnia Sales, 79
+Jardinpolis
+46636779 Correia de Oliveira / GO'),
+('309', '5', 'Recanto Raquel Azevedo, 99
+Lorena
+32085-803 Almeida / SE'),
+('310', '3', 'Jardim Luiz Fernando Farias
+Vila Paris
+65209880 Campos / MS'),
+('311', '3', 'Praia Amanda Costa, 75
+Vila So Rafael
+46456-034 Viana dos Dourados / RN'),
+('312', '5', 'Fazenda de Cavalcanti, 86
+Anchieta
+47945689 Ribeiro Paulista / RS'),
+('313', '2', 'Vereda Oliveira, 70
+Vila Nova Cachoeirinha 2 Seo
+59257-872 Novaes / PB'),
+('314', '2', 'Stio Melo, 46
+Conjunto Califrnia I
+12864886 Pereira / AM'),
+('315', '2', 'Ladeira Maysa Gomes
+Venda Nova
+09015101 Cardoso Alegre / AL'),
+('316', '4', 'Ptio Gomes
+Cdi Jatoba
+36304-551 Cardoso / RS'),
+('317', '3', 'Condomnio Ferreira, 179
+Custodinha
+30782-369 Melo / RR'),
+('318', '2', 'Lago de Pires, 3
+Belvedere
+45685797 da Mata / MS'),
+('319', '4', 'Estrada de Gonalves, 74
+Nossa Senhora De Ftima
+31502026 Porto / BA'),
+('320', '4', 'Ncleo de Nunes, 39
+Nova Floresta
+03447253 Monteiro Verde / GO'),
+('321', '3', 'Campo de Caldeira, 978
+Cinquentenrio
+76682-840 Jesus / AC'),
+('322', '3', 'Alameda Teixeira, 652
+Conjunto Lagoa
+16759678 Caldeira / DF'),
+('323', '2', 'Lagoa de Gonalves
+Nova Esperana
+31573-671 Rocha / SC'),
+('324', '5', 'Estrada de da Paz
+Jardim Atlntico
+82749-227 da Costa de Melo / MG'),
+('325', '5', 'Condomnio Eduardo Fogaa, 76
+Santa Isabel
+78707-438 Ferreira das Flores / AM'),
+('326', '3', 'Via Almeida, 41
+Tres Marias
+44034-750 Correia Verde / SE'),
+('327', '3', 'Viaduto de Lopes, 96
+Camponesa 1 Seo
+40925208 Azevedo de Gois / GO'),
+('328', '4', 'Rua Rebeca Mendes, 10
+Aaro Reis
+29780-229 Gonalves / MG'),
+('329', '1', 'Lago Calebe Nunes, 75
+Calafate
+11020951 Lopes / MT'),
+('330', '4', 'Passarela Mirella da Rocha, 9
+Vista Do Sol
+25585606 da Rosa / RJ'),
+('331', '3', 'Trevo de Lopes, 773
+Ipe
+59509421 Nascimento do Galho / AL'),
+('332', '3', 'Residencial Beatriz Sales, 61
+Conjunto Jatoba
+90413487 Teixeira do Sul / RO'),
+('333', '4', 'Vale Santos, 181
+Boa Viagem
+06530158 Cardoso de Souza / RO'),
+('334', '3', 'Passarela Teixeira
+Tupi B
+31768-876 da Cruz Verde / AL'),
+('335', '3', 'Chcara de Oliveira, 55
+Vila Suzana Segunda Seo
+11488-748 da Mata do Norte / BA'),
+('336', '5', 'Estrada de da Costa
+Alto Das Antenas
+43232-789 Nascimento / RS'),
+('337', '1', 'Estrada Maria Vitria Barros, 94
+Santa Isabel
+67981122 Freitas / RO'),
+('338', '4', 'Jardim Stephany Nogueira
+Estoril
+91711063 Costa de Gois / CE'),
+('339', '2', 'Favela Calebe Silveira, 20
+Santa Helena
+33117429 Rocha da Serra / PI'),
+('340', '5', 'Stio Gustavo Gomes
+Nossa Senhora De Ftima
+75265-385 Moraes de Duarte / ES'),
+('341', '1', 'Alameda Helena da Costa, 20
+Diamante
+44765476 Lima / PI'),
+('342', '5', 'Favela Helena Nunes, 8
+Tupi B
+01915062 Campos do Oeste / RR'),
+('343', '3', 'Travessa Valentina Silva, 31
+Maravilha
+21440-080 Gonalves / PA'),
+('344', '1', 'Colnia de Almeida, 92
+Vila Rica
+46767-478 Pereira / PB'),
+('345', '2', 'Feira Azevedo, 79
+Frei Leopoldo
+53024-661 da Cunha do Oeste / PR'),
+('346', '5', 'Praia de Santos, 53
+Mangabeiras
+10817-728 Ramos dos Dourados / GO'),
+('347', '1', 'Ladeira Pires, 423
+Pantanal
+68691929 Dias de Minas / MG'),
+('348', '5', 'Praa Castro, 22
+Vila Independencia 2 Seo
+61641-518 Pires / RO'),
+('349', '1', 'Conjunto de Arago, 38
+Tres Marias
+68727033 da Cruz / SE'),
+('350', '2', 'Lagoa Rocha, 885
+Calafate
+48396-047 Rezende / MT'),
+('351', '5', 'Lago Kamilly Teixeira, 401
+Vila Santa Monica 1 Seo
+15806414 Fogaa Verde / PB'),
+('352', '4', 'Trevo Porto, 7
+Vila Independencia 1 Seo
+07947-765 Freitas / SP'),
+('353', '1', 'Fazenda Laura da Mata, 7
+Leonina
+27274-699 Ramos das Pedras / BA'),
+('354', '3', 'Largo da Mata, 2
+Mariano De Abreu
+52417-606 Monteiro da Serra / MG'),
+('355', '1', 'Via Nascimento, 2
+Estoril
+27075-865 Monteiro Alegre / AP'),
+('356', '5', 'Via Ribeiro, 166
+Xodo-Marize
+91127978 Alves de Santos / SC'),
+('357', '2', 'Rua Luiza Correia, 7
+Nova Granada
+63777-414 Cardoso da Prata / PE'),
+('358', '3', 'Feira de Vieira, 106
+Nova Cachoeirinha
+99545-901 Cunha / ES'),
+('359', '1', 'Rua de Martins, 53
+Conjunto Jardim Filadlfia
+03995213 Duarte Alegre / RO'),
+('360', '3', 'Praa de Moura, 12
+Savassi
+67602018 Azevedo / DF'),
+('361', '1', 'Jardim de Rezende, 162
+Vila Barragem Santa Lcia
+86428880 da Mata dos Dourados / RS'),
+('362', '3', 'Travessa de Cardoso, 59
+Vila Ipiranga
+43206371 Silva do Galho / MS'),
+('363', '1', 'Vereda de Arajo, 12
+So Lucas
+38230803 Cunha da Prata / MT'),
+('364', '2', 'Vereda Maria Alice Novaes
+So Joo
+20660883 Arajo do Campo / SP'),
+('365', '5', 'Feira Emanuel Ramos, 45
+Providencia
+18455-199 Castro Paulista / AM'),
+('366', '1', 'Setor Henrique Ribeiro, 16
+Lorena
+86129-236 Campos da Serra / DF'),
+('367', '2', 'Conjunto Souza, 9
+Alto Das Antenas
+92401-995 Correia dos Dourados / SP'),
+('368', '5', 'Lago de Dias, 46
+Bom Jesus
+10808273 Nogueira / PB'),
+('369', '1', 'Colnia Cardoso, 7
+Vila Dos Anjos
+41254046 da Cunha / AP'),
+('370', '4', 'Recanto de Caldeira, 29
+Vila Mantiqueira
+32651999 da Conceio Alegre / AC'),
+('371', '4', 'Vila de Pereira, 7
+Barroca
+60390-954 da Paz das Pedras / AP'),
+('372', '3', 'Distrito Santos, 74
+Pirineus
+24107454 Lopes de Minas / SC'),
+('373', '2', 'Viaduto Rodrigo Caldeira, 4
+Estrela Do Oriente
+33464739 da Conceio / MS'),
+('374', '2', 'Ncleo Ryan Correia, 40
+Vila Aeroporto Jaragu
+92287146 Correia / PB'),
+('375', '5', 'Viela Leonardo Mendes, 211
+Vila Satlite
+80452-170 Vieira das Flores / RO'),
+('376', '5', 'Passarela de Azevedo, 63
+Lagoinha
+87808-591 das Neves do Sul / RS'),
+('377', '3', 'Residencial Gustavo Nogueira, 30
+So Tomaz
+58232134 Caldeira da Praia / PA'),
+('378', '2', 'Vila Felipe Mendes, 9
+Nova Cachoeirinha
+88488128 Moura / GO'),
+('379', '3', 'Stio Lavnia Moreira, 48
+Pousada Santo Antonio
+97752-490 Azevedo / DF'),
+('380', '3', 'Praa Murilo Novaes, 42
+Vila Aeroporto Jaragu
+76163-777 Pereira / PR'),
+('381', '2', 'Esplanada Freitas, 72
+Santa Maria
+03289772 Arajo / RJ'),
+('382', '3', 'Rodovia Ana Carolina Viana, 7
+pia
+67689770 Fogaa de Cardoso / ES'),
+('383', '2', 'Conjunto Arajo, 12
+Campo Alegre
+21606-340 Fogaa / SP'),
+('384', '1', 'Rua da Conceio, 3
+pia
+98728016 Viana / RN'),
+('385', '2', 'Stio Luiz Fernando Oliveira
+Jonas Veiga
+32525-310 da Mota / PE'),
+('386', '3', 'Viela de Rodrigues, 902
+Vila Ipiranga
+02706723 Castro / PI'),
+('387', '1', 'Loteamento Gonalves, 22
+Colgio Batista
+40795732 Arago / RO'),
+('388', '5', 'Morro de Arajo, 39
+Sport Club
+90985693 da Mota Grande / RN'),
+('389', '2', 'Residencial da Cruz, 60
+Vila Vista Alegre
+70447314 Monteiro / AM'),
+('390', '4', 'Jardim das Neves, 77
+Maria Virgnia
+12952-145 Farias dos Dourados / PR'),
+('391', '1', 'Viela Cavalcanti, 436
+Boa Esperana
+78455-697 Novaes / PI'),
+('392', '2', 'Travessa Luiz Felipe Campos, 43
+So Joo Batista
+66369-951 da Mata / ES'),
+('393', '3', 'Recanto Rebeca Castro, 25
+Novo Aaro Reis
+03549512 Almeida Grande / MT'),
+('394', '1', 'Chcara Daniel Monteiro, 945
+Boa Unio 2 Seo
+30483-496 Duarte Paulista / AM'),
+('395', '5', 'Passarela Pietra Nogueira, 679
+Vila So Paulo
+62782474 Moreira / RS'),
+('396', '1', 'Colnia Joo da Paz, 49
+Conjunto Lagoa
+25386-559 Mendes da Prata / PE'),
+('397', '5', 'Passarela de da Cruz, 251
+Biquinhas
+40608014 Sales de Silva / RN'),
+('398', '4', 'Feira Pereira, 2
+Novo Aaro Reis
+02044-091 Campos / RO'),
+('399', '1', 'Distrito Almeida, 291
+Nossa Senhora Aparecida
+59424-681 Arago / RO'),
+('400', '1', 'Praia Otvio da Conceio, 35
+Marola
+76614-069 Fernandes de Arajo / AM'),
+('401', '5', 'Rodovia Alice Melo
+Pedreira Padro Lopes
+57419-815 Gomes Grande / RS'),
+('402', '4', 'Loteamento Luna Pires, 5
+Vila So Francisco
+67408556 Peixoto do Galho / RR'),
+('403', '4', 'Residencial de Cardoso, 8
+Mantiqueira
+70919604 Ramos Verde / SP'),
+('404', '5', 'Passarela de da Cruz, 62
+Novo Ouro Preto
+74505522 da Costa / PA'),
+('405', '2', 'Ladeira Ceclia Moraes, 362
+Solimoes
+48049204 Duarte da Prata / BA'),
+('406', '1', 'Recanto Correia, 36
+Trevo
+42134722 Barbosa / RJ'),
+('407', '2', 'Condomnio Gabriela da Conceio, 312
+Venda Nova
+08398-485 Fernandes / PR'),
+('408', '3', 'Jardim da Costa, 113
+Vila Bandeirantes
+38955-623 Silveira / BA'),
+('409', '1', 'Via Gustavo Mendes
+Carlos Prates
+71280-790 Rezende dos Dourados / PA'),
+('410', '3', 'Vale de da Luz, 1
+Santa Branca
+13072-724 Pires / RJ'),
+('411', '5', 'Estrada Brenda Oliveira
+Engenho Nogueira
+65362834 Mendes / AP'),
+('412', '2', 'Ncleo Ferreira, 75
+Ambrosina
+43865-064 Silva / MA'),
+('413', '1', 'Trecho Azevedo
+Novo Santa Cecilia
+50879016 Ferreira / SP'),
+('414', '3', 'Ncleo Pires, 72
+Santo Andr
+30248336 Freitas do Galho / SE'),
+('415', '4', 'Feira Mendes
+Vila De S
+74386-784 das Neves / TO'),
+('416', '2', 'Rua Joo Pedro Cavalcanti
+Vila Primeiro De Maio
+13347101 Teixeira / PA'),
+('417', '5', 'Trevo Costela, 27
+Vila Nova
+37423663 Teixeira do Norte / RJ'),
+('418', '2', 'Favela de Carvalho, 73
+Lagoinha Leblon
+36028-872 Farias de Gois / RN'),
+('419', '1', 'Chcara de Barbosa, 7
+Santa Sofia
+49263439 Lopes de da Paz / RO'),
+('420', '1', 'Alameda de Duarte, 174
+Vila Ecolgica
+81902-811 Carvalho do Norte / PI'),
+('421', '4', 'Residencial Pietro Mendes, 51
+Solimoes
+08713-257 Santos Alegre / AC'),
+('422', '4', 'Vale de da Costa, 79
+Boa Unio 2 Seo
+20799099 Gomes da Mata / SP'),
+('423', '1', 'Viaduto de Rodrigues, 483
+Miramar
+91190-113 Dias / TO'),
+('424', '5', 'Lagoa Nina Almeida, 13
+Leonina
+20021533 Gomes do Sul / BA'),
+('425', '5', 'Trecho Maria Clara Viana, 697
+Vila So Joo Batista
+28106-042 Barbosa de Vieira / PR'),
+('426', '2', 'Rodovia de Lima, 18
+Alto Barroca
+38794270 Costa de Arajo / DF'),
+('427', '3', 'Recanto Maysa Vieira, 43
+Bonsucesso
+51125-653 Rezende / GO'),
+('428', '3', 'Viaduto Costa, 723
+Corao De Jesus
+29071661 da Conceio da Praia / MA'),
+('429', '2', 'Vale de Porto, 86
+Ipiranga
+56530-973 Correia / AC'),
+('430', '2', 'Feira Diego Monteiro, 41
+Santa Cruz
+66467-811 Duarte / AM'),
+('431', '3', 'Praia Letcia Azevedo, 44
+Marmiteiros
+70147-913 Barbosa de Gois / GO'),
+('432', '5', 'Feira Noah Rocha, 63
+Palmares
+37044-541 Pereira / MS'),
+('433', '1', 'Quadra Guilherme Sales
+Vila Jardim Montanhes
+97887-275 da Cruz / TO'),
+('434', '1', 'Trevo Moreira, 99
+Vila Puc
+86456397 Barros de da Rosa / MG'),
+('435', '2', 'Residencial Pires, 95
+Vitoria
+37168426 Ferreira / SP'),
+('436', '4', 'Trecho de Jesus
+Vila Bandeirantes
+99297757 Arago / BA'),
+('437', '5', 'Via de Azevedo, 5
+Anchieta
+29145667 da Mota / PB'),
+('438', '4', 'Praa de Novaes, 91
+Canaa
+62926398 da Cruz Grande / PI'),
+('439', '1', 'Trevo de da Paz, 12
+Jardim Leblon
+19758268 Pinto das Pedras / CE'),
+('440', '5', 'Aeroporto Moura, 19
+Mangabeiras
+51646052 Sales / MA'),
+('441', '3', 'Ncleo Nascimento, 56
+Leticia
+64820-826 Lima das Flores / PB'),
+('442', '1', 'Aeroporto de Gomes, 51
+Vila Sesc
+76476780 Sales / ES'),
+('443', '4', 'Viaduto Lima, 338
+Joo Alfredo
+47387695 Ramos / PA'),
+('444', '5', 'rea Lucas Gabriel Rodrigues, 94
+Vila So Rafael
+12193-948 Correia de Gois / MA'),
+('445', '3', 'Stio Maria Alice Dias, 86
+Alto Dos Pinheiros
+50924649 Azevedo Paulista / AC'),
+('446', '1', 'Estao Augusto Ferreira
+Alta Tenso 1 Seo
+03941855 Azevedo / ES'),
+('447', '5', 'Viela Vitor Hugo Lima, 42
+Oeste
+75141732 da Luz Paulista / RJ'),
+('448', '4', 'Alameda Joo Caldeira, 13
+Ermelinda
+01776-042 Santos de Gonalves / AL'),
+('449', '5', 'Praa Luigi Porto, 85
+Serrano
+68326581 Arago da Mata / PR'),
+('450', '2', 'Residencial de Moura, 98
+Juliana
+44673-383 da Cunha / AC'),
+('451', '2', 'Setor Stephany Gonalves, 94
+Ermelinda
+51598704 Ramos / RR'),
+('452', '1', 'Campo de Silveira, 90
+Nossa Senhora Do Rosrio
+42001-896 Caldeira do Sul / ES'),
+('453', '2', 'Condomnio Gustavo Nogueira, 55
+Vila Primeiro De Maio
+83249007 Caldeira Grande / PE'),
+('454', '3', 'Favela de Cavalcanti, 9
+Cabana Do Pai Toms
+42058-649 Monteiro Grande / AM'),
+('455', '3', 'Viela de Vieira, 937
+Vista Alegre
+69856367 Nogueira / DF'),
+('456', '1', 'Vila Rezende, 8
+Venda Nova
+47547824 Caldeira / SC'),
+('457', '1', 'Vila Joo Guilherme Ramos, 2
+Vila Nova Paraso
+49689133 Souza Paulista / RS'),
+('458', '2', 'Condomnio de Dias, 5
+Leonina
+46677343 Gonalves / PI'),
+('459', '2', 'Ladeira de Azevedo, 2
+Monte So Jos
+98442202 da Costa de Rocha / RS'),
+('460', '1', 'Quadra de das Neves, 74
+Paquet
+27668-142 Gomes / SP'),
+('461', '4', 'Largo de Arago, 62
+Vila Inestan
+82872442 Farias / PA'),
+('462', '3', 'Quadra Duarte, 76
+So Marcos
+77682-854 Dias / SC'),
+('463', '3', 'Conjunto Silveira
+Conjunto Minas Caixa
+07809349 Nogueira de Martins / AC'),
+('464', '1', 'Jardim de Moraes, 69
+Goiania
+53699-105 Campos / RN'),
+('465', '1', 'Chcara de Cardoso, 93
+So Sebastio
+63950-893 da Mata / AM'),
+('466', '3', 'Ptio de Barbosa, 41
+Jardim Dos Comerciarios
+46997877 Barros / TO'),
+('467', '2', 'Viaduto Sophie da Rocha, 613
+Vila Independencia 2 Seo
+09903-025 Mendes de Minas / PB'),
+('468', '1', 'Viaduto Davi Ferreira, 15
+Vila Fumec
+75782-831 da Cruz Paulista / MG'),
+('469', '2', 'Campo Fogaa, 51
+Vila Do Pombal
+13345-836 Cardoso / AL'),
+('470', '5', 'Quadra Pinto, 96
+Ernesto Nascimento
+21491080 Gomes do Oeste / RO'),
+('471', '4', 'Estao Nascimento, 56
+Vila Madre Gertrudes 2 Seo
+43487-928 da Rosa da Prata / DF'),
+('472', '3', 'Esplanada Vicente Caldeira, 73
+Morro Dos Macacos
+64677484 Vieira / MG'),
+('473', '3', 'Distrito Oliveira, 646
+Boa Unio 2 Seo
+32030-653 Arago da Prata / GO'),
+('474', '1', 'Viaduto Almeida, 668
+Jardim Felicidade
+91965692 Costa de Gonalves / SE'),
+('475', '5', 'Estao Nathan Azevedo, 55
+Vila Independencia 1 Seo
+43113720 Barbosa / PR'),
+('476', '2', 'Favela de das Neves, 99
+So Paulo
+65327816 Viana da Serra / SP'),
+('477', '2', 'Feira Luiz Miguel Pinto, 53
+Vila Boa Vista
+12090335 Rodrigues do Amparo / MA'),
+('478', '4', 'Lago Ana Clara Nascimento, 4
+Luxemburgo
+85654-758 Moreira / RN'),
+('479', '2', 'Via Yasmin Arajo, 32
+Pindorama
+69053823 da Costa / PI'),
+('480', '4', 'Praia Alexia Teixeira, 96
+Senhor Dos Passos
+10921-775 Mendes / PI'),
+('481', '5', 'Residencial Nicole Costela, 825
+Nova Gameleira
+58730861 da Rosa do Campo / MT'),
+('482', '2', 'Residencial Joo Gabriel Melo, 758
+Alta Tenso 1 Seo
+47233205 Freitas / SC'),
+('483', '4', 'Quadra Sales, 72
+So Pedro
+02972889 da Rocha de Fogaa / RJ'),
+('484', '2', 'Quadra Theo Caldeira
+Parque So Pedro
+13559485 Cardoso / RS'),
+('485', '2', 'Colnia Bruno Cavalcanti, 67
+Renascena
+05409-714 Moreira de da Cunha / RJ'),
+('486', '2', 'Largo Pereira, 51
+Vila Copasa
+41785-323 Peixoto / PA'),
+('487', '2', 'Parque Rafael Oliveira, 40
+Urca
+91506598 Moreira das Flores / MA'),
+('488', '4', 'Viaduto Carvalho, 5
+Alto Dos Pinheiros
+10371143 Novaes de Gois / AM'),
+('489', '4', 'Esplanada Monteiro, 9
+Vila Olhos 
+57167908 Almeida / PA'),
+('490', '4', 'Alameda Azevedo, 87
+Baleia
+68016779 Almeida / AM'),
+('491', '3', 'Via Marcos Vinicius Viana, 78
+Brasil Industrial
+97874-508 Freitas / SE'),
+('492', '2', 'Rua de Ribeiro, 73
+Pantanal
+54037441 Nascimento / MS'),
+('493', '5', 'Favela de Mendes, 28
+Dom Bosco
+46878578 da Costa / PE'),
+('494', '4', 'Morro Nogueira, 315
+Vila Independencia 2 Seo
+27093-211 Nogueira do Sul / SC'),
+('495', '2', 'Residencial de Azevedo
+Ambrosina
+50643-056 da Paz dos Dourados / CE'),
+('496', '1', 'Vale de da Conceio, 27
+Vila Copasa
+74117684 Ribeiro / PI'),
+('497', '3', 'Fazenda Pinto, 4
+Esplanada
+15493139 da Costa / AM'),
+('498', '3', 'Feira de da Mota, 544
+Vila Real 2 Seo
+06331057 Nogueira do Norte / MT'),
+('499', '2', 'Ladeira de Duarte, 6
+Jardim Alvorada
+03356115 Martins de Gois / MA'),
+('500', '4', 'Vereda de Castro
+Cruzeiro
+44357996 Barbosa da Prata / MS'),
+('501', '2', 'Colnia Silveira, 54
+Aparecida 7 Seo
+57183-859 Costela das Pedras / MS'),
+('502', '3', 'Via de Moraes, 33
+Flavio Marques Lisboa
+48488-377 Costa da Serra / RO'),
+('503', '3', 'Trevo de Pires, 422
+Conjunto Jardim Filadlfia
+01726621 Fogaa do Campo / RR'),
+('504', '5', 'Vale Maria Clara Rezende, 768
+Etelvina Carneiro
+13593539 Cardoso de Teixeira / DF'),
+('505', '2', 'Favela Alexia Gomes, 9
+Vila Santa Monica 2 Seo
+87827-341 Santos dos Dourados / CE'),
+('506', '1', 'Chcara Lucca Porto, 57
+Santa Cecilia
+11881-457 Alves / GO'),
+('507', '5', 'Quadra de Fogaa, 364
+Esplanada
+51110903 da Luz de Almeida / RO'),
+('508', '4', 'Vale Nunes, 969
+Vila Independencia 1 Seo
+25907228 Nogueira do Amparo / GO'),
+('509', '5', 'Setor de Santos, 695
+Sagrada Famlia
+02896-652 Moreira / TO'),
+('510', '3', 'Trecho de Cavalcanti, 22
+Centro
+85780-188 das Neves Paulista / PE'),
+('511', '3', 'Loteamento Pereira, 57
+Floramar
+06074-817 da Rocha da Praia / RJ'),
+('512', '5', 'Quadra Isabella Moura, 87
+Vila So Gabriel Jacui
+79572458 Souza de da Costa / PB'),
+('513', '2', 'Lagoa de Rezende, 8
+Cachoeirinha
+02754-553 Jesus / BA'),
+('514', '5', 'Ladeira de Almeida, 24
+Vila Jardim Montanhes
+29442-212 da Mota / BA'),
+('515', '2', 'Viaduto Costa, 49
+Campo Alegre
+47952-186 Farias das Flores / RJ'),
+('516', '3', 'Ncleo Ana Vitria Moraes, 811
+Bairro Das Indstrias Ii
+14459055 da Conceio / AM'),
+('517', '1', 'Rua Bernardo Correia, 23
+Cabana Do Pai Toms
+86987-568 Moura de Moreira / PI'),
+('518', '4', 'Passarela Campos, 746
+So Jos
+69347-315 Gonalves dos Dourados / RN'),
+('519', '5', 'Colnia de Viana, 589
+Vila Suzana Primeira Seo
+98903684 Gomes de Peixoto / GO'),
+('520', '3', 'Parque de Dias, 49
+Monte Azul
+66459-127 Cavalcanti / BA'),
+('521', '1', 'Esplanada Thales Ribeiro, 925
+Vila Independencia 1 Seo
+66642321 Lima / TO'),
+('522', '1', 'Loteamento de Caldeira
+So Benedito
+88095-342 Jesus / RO'),
+('523', '1', 'Conjunto Arajo, 73
+So Cristvo
+11328-634 Rodrigues da Praia / AP'),
+('524', '3', 'Stio Mirella Gonalves, 25
+Santa Tereza
+25613855 Peixoto / SE'),
+('525', '1', 'Fazenda Cavalcanti, 8
+Padre Eustquio
+61221154 da Mota de Gois / RN'),
+('526', '1', 'Distrito Joo Lucas Novaes, 51
+Cinquentenrio
+38608-338 da Conceio / RR'),
+('527', '2', 'Rua de Fogaa, 1
+Vila Atila De Paiva
+75037690 Nogueira da Mata / CE'),
+('528', '5', 'Alameda Carvalho, 4
+Universo
+85152-359 Nogueira / RO'),
+('529', '2', 'Favela Lucas Gabriel Sales, 81
+Ademar Maldonado
+34768-176 Carvalho da Serra / RN'),
+('530', '2', 'Rodovia Andr Silveira, 637
+Santa Rita
+61228-438 Rodrigues do Sul / RN'),
+('531', '4', 'Rodovia Freitas, 301
+Santa Sofia
+99215299 da Costa Alegre / AC'),
+('532', '1', 'Recanto de Monteiro, 26
+Embabas
+12173711 Oliveira de Barbosa / SP'),
+('533', '2', 'Fazenda de das Neves
+Joo Paulo Ii
+46434-433 Sales / TO'),
+('534', '4', 'Avenida Gomes, 984
+Vila Mantiqueira
+00875740 Costa / RR'),
+('535', '2', 'Lagoa de Dias
+Alto Vera Cruz
+20320907 Cunha / MS'),
+('536', '3', 'rea Lucas Souza, 22
+Nova Gameleira
+82107-236 Alves / AP'),
+('537', '4', 'Ncleo de Moura, 4
+Boa Unio 1 Seo
+31238267 Sales da Praia / GO'),
+('538', '3', 'Estao Laura Rodrigues, 28
+Jatob
+32035-709 Ribeiro de Cavalcanti / AL'),
+('539', '5', 'Alameda da Rosa, 760
+Dom Bosco
+52881-464 Almeida / RJ'),
+('540', '5', 'Trevo Ana Caldeira, 85
+Conjunto Capito Eduardo
+41710-920 Alves / AC'),
+('541', '3', 'Trecho de Pires, 5
+Maria Goretti
+74634-509 Santos / MT'),
+('542', '5', 'Largo Novaes
+Paulo Vi
+61258230 Correia / AL'),
+('543', '5', 'Colnia de Alves, 50
+Vila Madre Gertrudes 3 Seo
+19452652 Arago Verde / RS'),
+('544', '1', 'Conjunto Freitas, 337
+Grota
+10919-747 Teixeira / CE'),
+('545', '1', 'Esplanada Cau Caldeira, 90
+Vitoria Da Conquista
+66493-298 Almeida / PE'),
+('546', '1', 'Distrito de Silveira, 64
+Vila Coqueiral
+33280121 Silveira / TO'),
+('547', '5', 'Trecho de Freitas, 17
+Anchieta
+67135-478 Arago / DF'),
+('548', '3', 'Aeroporto Sales, 57
+Suzana
+03576-926 Viana das Pedras / PR'),
+('549', '3', 'Passarela Ramos, 5
+Paulo Vi
+21846-926 da Mota / MG'),
+('550', '4', 'Chcara de Vieira, 85
+Vila So Gabriel
+82265037 da Rosa das Pedras / PE'),
+('551', '5', 'Trecho Isabelly Oliveira, 1
+Solimoes
+58294794 Sales / RS'),
+('552', '1', 'Chcara Arajo, 405
+Trevo
+02320694 Porto Grande / AL'),
+('553', '3', 'Vila Almeida, 983
+Vila Madre Gertrudes 3 Seo
+12119-315 da Mata / RN'),
+('554', '4', 'Trevo de Peixoto, 14
+Califrnia
+71668-496 Silva das Pedras / PA'),
+('555', '1', 'Largo de Pereira, 82
+Vila Independencia 2 Seo
+58106602 Nogueira / PA'),
+('556', '3', 'Ncleo de Gomes, 654
+Mariano De Abreu
+22271474 Costela Verde / MS'),
+('557', '3', 'Loteamento Campos, 7
+Etelvina Carneiro
+20206305 Santos / AL'),
+('558', '5', 'Vale Cardoso, 189
+Laranjeiras
+75928702 Novaes da Mata / RO'),
+('559', '2', 'Jardim de Silva, 74
+Castanheira
+99776784 Lopes da Praia / PR'),
+('560', '3', 'Stio Sabrina das Neves, 16
+Vila Antena
+34933671 Porto de Teixeira / MA'),
+('561', '2', 'Aeroporto de Cunha, 49
+Vila Copasa
+85961-973 Silva / AM'),
+('562', '2', 'Stio Nogueira, 522
+Camponesa 2 Seo
+50911-621 Lopes / AM'),
+('563', '1', 'Fazenda Valentina Pires, 56
+Cnego Pinheiro 1 Seo
+82393-527 Costela Grande / MG'),
+('564', '3', 'Parque de Castro, 78
+Vila Jardim So Jos
+94489-433 Costela de Santos / PI'),
+('565', '3', 'Viela Rocha, 9
+Lindia
+92771538 Correia / RN'),
+('566', '5', 'Praia Emanuella Pires, 662
+Tirol
+22272-074 Cardoso / MS'),
+('567', '5', 'Parque de Ramos, 42
+Ventosa
+35894-523 da Rosa do Sul / MG'),
+('568', '3', 'Rua Moura
+Liberdade
+05042-620 da Conceio / PI'),
+('569', '1', 'Loteamento Emanuel Martins
+Alto Caiaras
+96342813 Souza / AL'),
+('570', '2', 'Jardim de Dias, 42
+Xodo-Marize
+62374-130 Vieira Verde / AL'),
+('571', '4', 'Estrada Cavalcanti, 53
+Vila Da Paz
+28336577 Moreira de Cavalcanti / SC'),
+('572', '2', 'Largo Davi Lucca Carvalho, 73
+Engenho Nogueira
+99435-373 Melo de Gois / DF'),
+('573', '1', 'Distrito de Caldeira, 99
+Vila Independencia 1 Seo
+96307-784 Duarte de Jesus / PI'),
+('574', '4', 'Favela Nogueira, 5
+Conjunto Califrnia I
+21481-507 Cardoso de Martins / RO'),
+('575', '5', 'Trevo de Arajo, 7
+Corumbiara
+19781655 da Conceio Grande / RN'),
+('576', '5', 'Viela Fernando Pires, 713
+Vila Madre Gertrudes 4 Seo
+98667519 Gomes / MS'),
+('577', '4', 'Vereda de da Mota
+Satelite
+72224-158 Freitas do Amparo / PI'),
+('578', '2', 'Campo Nicole Costela
+Vila Suzana Segunda Seo
+97607198 da Costa / RO'),
+('579', '1', 'Distrito Nogueira, 26
+Lagoinha Leblon
+66027-135 Cardoso / MG'),
+('580', '5', 'Trevo Barbosa, 80
+Diamante
+61614839 da Rocha de Rodrigues / SE'),
+('581', '2', 'Lago Daniel Melo, 56
+Boa Unio 1 Seo
+13513-955 Castro de Arago / TO'),
+('582', '1', 'Campo Maria Souza, 36
+Horto Florestal
+53235862 da Paz do Galho / MG'),
+('583', '3', 'Rua Rezende, 52
+Vila Independencia 3 Seo
+23246-127 Barros de Moraes / CE'),
+('584', '1', 'Ptio da Mota
+Nova Sua
+23653-370 Novaes Verde / GO'),
+('585', '1', 'Stio Martins, 55
+Vila Inestan
+55249-474 Costa Paulista / ES'),
+('586', '5', 'Ncleo Sales, 72
+Marmiteiros
+06609-611 Lopes de da Luz / TO'),
+('587', '5', 'Residencial Nina Correia, 3
+Primeiro De Maio
+24956878 da Paz Grande / MS'),
+('588', '2', 'Condomnio Maria Eduarda Correia, 38
+Nova Esperana
+76768270 Peixoto / CE'),
+('589', '3', 'Alameda de Dias, 801
+So Paulo
+92954579 Almeida / PR'),
+('590', '1', 'Vila Julia da Luz, 29
+Padre Eustquio
+41183-349 Novaes da Mata / AM'),
+('591', '4', 'Stio Cunha, 58
+Mariano De Abreu
+94259739 Teixeira / RN'),
+('592', '3', 'Lago Porto, 55
+Sion
+12263-367 Souza / PB'),
+('593', '2', 'Quadra Marcos Vinicius da Luz, 20
+Casa Branca
+81147060 das Neves de Nunes / ES'),
+('594', '2', 'Chcara de Nunes, 7
+Brasil Industrial
+13713797 Costa Alegre / AL'),
+('595', '5', 'Via Cau Fernandes, 30
+Cidade Jardim
+24462430 da Cruz de Dias / RN'),
+('596', '5', 'Colnia de Santos, 8
+Padre Eustquio
+16770-024 Gonalves da Praia / MS'),
+('597', '2', 'Feira Eloah Viana, 3
+Alto Das Antenas
+83642679 Campos do Sul / PB'),
+('598', '3', 'Ncleo Duarte, 928
+Nova Gameleira
+15758151 da Mata de da Costa / MA'),
+('599', '2', 'Conjunto Nina da Costa, 2
+Maria Goretti
+74651-637 Teixeira do Galho / RS'),
+('600', '2', 'Ncleo de Porto, 34
+Jardim So Jos
+35719515 Gonalves do Norte / PB'),
+('601', '3', 'Distrito Nogueira
+So Salvador
+59766-274 Carvalho Paulista / SE'),
+('602', '4', 'Fazenda Rezende, 623
+Vila Pilar
+67324077 Pereira / SP'),
+('603', '5', 'Rua de Ribeiro, 6
+Olhos 
+51282-272 Campos / ES'),
+('604', '1', 'Rua Silva, 78
+Coqueiros
+84952-232 Nascimento / AL'),
+('605', '3', 'Conjunto Farias, 625
+Canaa
+05134118 Mendes / PR'),
+('606', '3', 'rea da Rocha, 44
+Coqueiros
+57290-531 da Rosa do Sul / RS'),
+('607', '2', 'Passarela Arago
+Lindia
+48343733 Moura de Gois / RR'),
+('608', '2', 'Estao de Santos, 13
+Lourdes
+97353598 Moreira / AC'),
+('609', '4', 'Vila Santos
+Jardim Montanhs
+67621503 da Cruz / DF'),
+('610', '3', 'Aeroporto Duarte, 18
+Boa Viagem
+51071-319 Dias de Santos / AL'),
+('611', '3', 'Travessa Moraes, 77
+Leticia
+69223-823 Peixoto da Serra / BA'),
+('612', '1', 'Setor das Neves, 85
+Santa Rita
+66024-088 da Rocha Verde / SP'),
+('613', '5', 'Distrito Benjamin Arajo, 79
+Santa Maria
+66185958 Freitas / MS'),
+('614', '2', 'Ladeira Larissa Nascimento, 508
+Vila Nova Cachoeirinha 1 Seo
+22123-789 da Rosa de Vieira / BA'),
+('615', '3', 'Campo Bernardo Rocha, 72
+Jardim Montanhs
+11667-603 Barbosa / RR'),
+('616', '4', 'Rodovia de Cunha, 82
+Santa Branca
+25890698 da Conceio Verde / RS'),
+('617', '4', 'Vila de Fogaa, 36
+Nazare
+13996146 Porto de Gois / GO'),
+('618', '2', 'Parque Heitor da Mata, 922
+Pompia
+43701308 da Rocha Paulista / RN'),
+('619', '1', 'Recanto Lima, 47
+Jardim Montanhs
+81601892 Martins / RO'),
+('620', '5', 'Residencial Alcia Teixeira, 2
+Novo Santa Cecilia
+31396512 Sales de da Paz / TO'),
+('621', '2', 'Largo Mait Santos, 16
+Vila Mantiqueira
+58946288 Ferreira de Minas / TO'),
+('622', '1', 'Jardim Bencio Freitas, 75
+Conjunto Novo Dom Bosco
+54746256 Caldeira / PB'),
+('623', '2', 'Lago de Souza, 92
+Pindura Saia
+92438-791 Costa de da Rosa / AC'),
+('624', '4', 'Jardim de da Luz, 62
+Alto Barroca
+88307-137 Gonalves / MT'),
+('625', '4', 'Recanto Ana Carolina Barros, 572
+Vila Minaslandia
+95423310 Ferreira / AP'),
+('626', '2', 'Estrada Maria Ceclia Gonalves, 261
+Primeiro De Maio
+84096-410 Cunha / GO'),
+('627', '2', 'Estrada Gomes, 72
+Morro Dos Macacos
+67465931 Cardoso do Amparo / AC'),
+('628', '2', 'Trevo Alice da Cunha, 757
+Santo Antnio
+12253-910 Costa / ES'),
+('629', '1', 'Avenida Arago, 19
+Vila Hava
+13842-664 Sales / AM'),
+('630', '4', 'Campo de Rezende, 70
+Bairro Das Indstrias Ii
+68873084 Martins / AP'),
+('631', '4', 'Condomnio Otvio Moura, 17
+So Jorge 3 Seo
+68971-069 Ramos da Prata / PR'),
+('632', '1', 'Esplanada de Pires, 973
+So Joo Batista
+77271714 da Costa / AC'),
+('633', '3', 'Trevo Sales, 6
+Vila Copacabana
+93921064 Farias de Arajo / SE'),
+('634', '3', 'Recanto Vinicius Ferreira, 49
+Vila Da Amizade
+64836-316 Santos / PI'),
+('635', '1', 'Lagoa de Gomes, 63
+Vila Unio
+57138248 da Cunha de Mendes / SP'),
+('636', '2', 'Viela Barbosa
+Vila Pinho
+69142-193 das Neves de Castro / SE'),
+('637', '3', 'Campo de Almeida, 21
+Mala E Cuia
+11918-354 Teixeira Verde / SP'),
+('638', '1', 'Praa Martins, 590
+Graja
+83958-330 da Paz do Oeste / BA'),
+('639', '3', 'Condomnio da Paz
+Novo Tupi
+74429473 Novaes das Flores / ES'),
+('640', '4', 'Residencial Murilo Cardoso, 41
+Dom Cabral
+50375523 Arajo de Gois / PA'),
+('641', '4', 'Rua Peixoto, 7
+Acaiaca
+11942-009 Costela de Gois / PB'),
+('642', '5', 'Rua de Ramos, 17
+Pousada Santo Antonio
+62466-876 Teixeira / BA'),
+('643', '1', 'Estao Amanda das Neves, 5
+Vila Madre Gertrudes 3 Seo
+31478-183 Dias / MT'),
+('644', '4', 'Trevo Moura, 65
+So Jos
+02957982 Ferreira das Flores / PI'),
+('645', '1', 'rea Renan Cardoso, 21
+Vila So Joo Batista
+88723-652 Silveira Paulista / PB'),
+('646', '5', 'rea Eduardo Carvalho, 65
+Solar Do Barreiro
+72084-087 Campos do Oeste / MS'),
+('647', '2', 'rea de Duarte, 12
+Marilandia
+41064362 Oliveira / SP'),
+('648', '2', 'Condomnio de Caldeira, 3
+Cruzeiro
+78678542 Pinto da Praia / RJ'),
+('649', '5', 'Chcara de Lopes, 81
+Vila So Paulo
+16282102 Moura / GO'),
+('650', '2', 'Colnia Luana Souza, 1
+Providencia
+88158-916 Silveira / AC'),
+('651', '1', 'Via das Neves, 48
+Juliana
+73097656 da Mata de Teixeira / PE'),
+('652', '5', 'Alameda Carvalho, 74
+Vila Jardim Montanhes
+97231-923 Jesus Verde / DF'),
+('653', '5', 'Ncleo de Silva, 99
+Cnego Pinheiro 1 Seo
+86789732 Freitas do Sul / PA'),
+('654', '2', 'Jardim Rezende
+Cinquentenrio
+33779-652 Gomes / RN'),
+('655', '3', 'Campo Oliveira, 60
+Itapoa
+31429837 Oliveira da Praia / CE'),
+('656', '3', 'Rodovia Francisco Nogueira, 1
+Santa Isabel
+15682-840 Cavalcanti de Santos / RR'),
+('657', '2', 'Travessa Gonalves, 20
+Vila Batik
+60633686 Santos da Praia / RJ'),
+('658', '3', 'Fazenda da Luz, 46
+Jardim Leblon
+75778-571 Oliveira do Norte / RJ'),
+('659', '2', 'Praa Cunha
+Vila Dos Anjos
+51634685 Silva de Barbosa / RS'),
+('660', '1', 'Rodovia Moura, 98
+Vila So Paulo
+64616353 Barbosa / PI'),
+('661', '2', 'Alameda Jesus, 17
+lvaro Camargos
+43763600 Fogaa / SC'),
+('662', '4', 'Colnia Rafaela Teixeira, 42
+Vila Formosa
+46870273 Melo / RR'),
+('663', '5', 'Avenida Giovanna Porto, 78
+Estrela Do Oriente
+79467-133 Martins Paulista / RR'),
+('664', '4', 'Residencial Helena Almeida, 618
+Vitoria Da Conquista
+26046-425 da Cunha / CE'),
+('665', '2', 'Distrito Carvalho, 510
+Jardim Vitoria
+21318-984 Cunha Paulista / AL'),
+('666', '3', 'Lagoa Giovanna da Costa
+Unidas
+42125264 Farias / RO'),
+('667', '5', 'Lagoa Silveira, 5
+So Tomaz
+57111-374 Gomes / PI'),
+('668', '3', 'Favela Ramos, 620
+Cardoso
+12068-178 Nascimento / PE'),
+('669', '3', 'Chcara de Lima, 41
+Vila Paquet
+82431-055 Silva das Flores / BA'),
+('670', '4', 'Quadra Joo Gabriel Barros, 78
+Taquaril
+48912-141 Cardoso / SC'),
+('671', '4', 'Campo Yago Mendes
+Conjunto Serra Verde
+69264-446 da Luz / PE'),
+('672', '3', 'Morro de Freitas, 37
+Dom Cabral
+15933-402 Teixeira / RO'),
+('673', '3', 'Favela Nunes, 496
+Graa
+57383-225 da Conceio / CE'),
+('674', '5', 'Fazenda de Alves, 37
+Jaqueline
+46002-891 Nunes / PE'),
+('675', '3', 'Ptio de Rocha, 7
+Colgio Batista
+25693-606 da Rocha / RR'),
+('676', '4', 'Parque da Rosa, 34
+So Francisco
+16549576 Costa / AM'),
+('677', '4', 'Travessa Mendes
+Confisco
+39874089 Nascimento do Amparo / MT'),
+('678', '2', 'Trecho Gonalves
+Mariquinhas
+90403648 Costela / RR'),
+('679', '2', 'Distrito da Costa, 551
+Virgnia
+85666024 Silva Verde / CE'),
+('680', '3', 'Via de Moura, 969
+Antonio Ribeiro De Abreu 1 Seo
+18950925 da Luz / SC'),
+('681', '5', 'Travessa Barros, 78
+Esplanada
+01721-860 Ramos / RR'),
+('682', '5', 'Avenida Bianca Porto, 34
+Vila Nova Paraso
+85911-770 Silveira Paulista / RN'),
+('683', '5', 'Vila Ribeiro, 14
+Vila Nova Cachoeirinha 2 Seo
+92300-440 Correia Paulista / MT'),
+('684', '1', 'Esplanada Dias, 2
+Santa Branca
+06718388 Santos Grande / AL'),
+('685', '2', 'Stio Maria Fernanda Nascimento
+Cinquentenrio
+48241378 Porto Alegre / ES'),
+('686', '4', 'Lagoa de Cavalcanti, 14
+Gutierrez
+42012125 Fernandes do Sul / AC'),
+('687', '4', 'Jardim de Gonalves, 8
+Nossa Senhora Da Conceio
+67350249 Teixeira / SE'),
+('688', '4', 'Favela Ana Lvia Viana, 6
+Liberdade
+96309-365 Costa / MS'),
+('689', '1', 'Colnia Lima, 25
+Baleia
+09991-469 Souza do Galho / MA'),
+('690', '3', 'Via Jesus, 81
+Vila Bandeirantes
+75872514 da Cunha do Sul / SE'),
+('691', '5', 'Quadra da Cruz, 16
+Vila Jardim So Jos
+60804-814 Ramos Paulista / BA'),
+('692', '3', 'Vereda das Neves, 610
+Palmeiras
+29317705 Pinto de Nascimento / SC'),
+('693', '2', 'Quadra Novaes, 51
+Joo Alfredo
+00576029 Mendes / PA'),
+('694', '2', 'Via Guilherme Fernandes
+Palmares
+04603451 Alves de Minas / PI'),
+('695', '1', 'Parque de Fogaa, 563
+Pilar
+97220-876 Santos / BA'),
+('696', '4', 'Ladeira Fernanda Moura, 20
+Trevo
+18464-412 Jesus / PE'),
+('697', '2', 'Vereda de da Cruz
+Vila Copacabana
+73496-894 Arago da Mata / MA'),
+('698', '1', 'Aeroporto Pietra Teixeira
+Bonfim
+93551-897 Azevedo da Serra / PB'),
+('699', '4', 'Quadra Alice da Luz, 198
+Coqueiros
+27468154 Viana da Mata / RJ'),
+('700', '1', 'Viela Teixeira, 63
+Mangabeiras
+46599031 Rodrigues / RS'),
+('701', '5', 'Feira Rodrigo Campos
+Belmonte
+32541292 Porto / AP'),
+('702', '5', 'Stio de Castro, 183
+Teixeira Dias
+98810-116 Arajo do Galho / MG'),
+('703', '2', 'Residencial Emanuella Pinto, 27
+Unio
+94670-960 da Paz / MS'),
+('704', '2', 'Stio de Moreira, 54
+Aparecida 7 Seo
+00216-945 Viana de da Mota / PI'),
+('705', '2', 'Lago Campos, 75
+Renascena
+39392-517 Melo de Gois / TO'),
+('706', '4', 'Alameda Ryan Costa, 60
+Vila Mantiqueira
+61114-849 Moreira / AL'),
+('707', '4', 'Vereda Arago, 20
+So Cristvo
+78322-556 Gonalves do Amparo / ES'),
+('708', '4', 'Praia Arajo, 6
+Santa Branca
+92148-792 Novaes / TO'),
+('709', '1', 'Rodovia Ramos, 920
+Vila Mantiqueira
+29383479 Martins de Fogaa / TO'),
+('710', '3', 'Vila de Rodrigues, 861
+Conjunto Providencia
+46286-294 Pereira da Prata / PI'),
+('711', '1', 'Estao de Nunes, 4
+Pongelupe
+12010363 Cardoso / AC'),
+('712', '5', 'Stio Enzo Peixoto, 3
+Nossa Senhora Aparecida
+63643-135 Barros da Mata / PB'),
+('713', '1', 'Estrada de Gomes, 1
+So Damio
+80783990 Rocha dos Dourados / MS'),
+('714', '5', 'Conjunto Joo Pinto, 77
+Luxemburgo
+46695932 Pires do Oeste / RS'),
+('715', '2', 'Travessa Marcela Santos, 112
+Conjunto Celso Machado
+78328-260 das Neves de Gois / PE'),
+('716', '3', 'Vila Larissa da Paz, 61
+Jardim So Jos
+62928529 da Rocha de Ribeiro / SC'),
+('717', '3', 'rea de Ferreira, 96
+pia
+94364-604 Nunes da Prata / PB'),
+('718', '5', 'Estao Isabel Cavalcanti
+Marmiteiros
+09976785 da Rocha / MS'),
+('719', '4', 'Distrito Luiz Henrique Alves, 43
+Bonsucesso
+87123944 da Paz / RR'),
+('720', '3', 'Alameda Emanuelly Alves
+Bonfim
+04942-524 Azevedo do Oeste / MT'),
+('721', '3', 'Via Rocha, 97
+Nova Floresta
+20733821 Arago / SE'),
+('722', '1', 'Lagoa Silva, 38
+Vila Jardim Montanhes
+13359262 Nascimento de Viana / RR'),
+('723', '1', 'Trecho Isadora Castro, 86
+Pantanal
+09919-225 Carvalho / RR'),
+('724', '2', 'Stio de Nunes, 24
+Santa Isabel
+48991823 da Rocha / RN'),
+('725', '3', 'Fazenda Pereira, 5
+Conjunto So Francisco De Assis
+42500336 Porto da Praia / AM'),
+('726', '5', 'Condomnio de Moraes, 7
+Conjunto So Francisco De Assis
+32705013 Barros / SC'),
+('727', '1', 'Praia de Gomes, 43
+Novo So Lucas
+76955165 Lopes Grande / BA'),
+('728', '1', 'Estrada Jesus, 47
+Das Industrias I
+82166816 Viana / PB'),
+('729', '4', 'Passarela Enzo Pereira, 758
+Conjunto Santa Maria
+31841740 Moraes de Correia / SE'),
+('730', '1', 'Condomnio Santos, 52
+Palmeiras
+83967-729 da Rosa do Amparo / GO'),
+('731', '5', 'Vale Marcela Freitas, 9
+Centro
+67815110 Ferreira de Arago / MS'),
+('732', '5', 'Residencial Thales da Conceio, 2
+Taquaril
+16232770 Moraes do Sul / RR'),
+('733', '4', 'Trevo de da Cunha
+Vila Unio
+72313646 Cardoso Grande / MS'),
+('734', '2', 'Vale Ana Beatriz Teixeira, 147
+So Paulo
+93962592 Carvalho / SC'),
+('735', '1', 'Loteamento Ramos, 43
+Teixeira Dias
+49182234 Lopes / MS'),
+('736', '5', 'Jardim Pires, 83
+Jardim Dos Comerciarios
+07332-130 Ferreira de Nascimento / SP'),
+('737', '1', 'Vereda de Duarte, 92
+Santa Helena
+52968744 Alves / RN'),
+('738', '2', 'Vale Vitor Hugo Rezende, 537
+Floresta
+55165-894 Vieira / BA'),
+('739', '4', 'Vereda Gomes, 45
+Vila Nova Gameleira 2 Seo
+38294-786 Gonalves da Mata / RO'),
+('740', '1', 'Conjunto de da Mata
+Conjunto Minas Caixa
+65377557 Souza / BA'),
+('741', '4', 'Trevo Fernanda Viana
+pia
+78107552 Jesus do Amparo / RO'),
+('742', '4', 'Condomnio Lima, 407
+Hava
+23387-444 Rezende / RR'),
+('743', '1', 'Loteamento das Neves, 83
+Vitoria
+53961-149 Cardoso / PB'),
+('744', '5', 'Setor Silva, 36
+Lagoa
+93371-952 Campos da Prata / PI'),
+('745', '1', 'Viaduto da Rocha, 5
+Mangabeiras
+03704-410 Teixeira de Arajo / SC'),
+('746', '3', 'Condomnio Luiz Fernando Viana, 31
+Barreiro
+81375-617 Cardoso de Azevedo / CE'),
+('747', '1', 'Esplanada Gonalves, 373
+Serrano
+24801-138 Silva / RR'),
+('748', '1', 'Condomnio de Cardoso, 68
+Apolonia
+09701-888 da Rosa / MG'),
+('749', '1', 'Aeroporto de Arajo, 26
+Acaiaca
+13294-072 da Paz / MA'),
+('750', '3', 'Vila de Teixeira
+Minaslandia
+18738-113 Cunha Alegre / MA'),
+('751', '4', 'Passarela Lopes, 83
+Nova Cintra
+41539-834 Costela da Mata / PI'),
+('752', '4', 'Lago Pereira, 2
+Vila Esplanada
+33461723 Costela de da Mata / AM'),
+('753', '5', 'Chcara Yuri Castro
+Branas
+28470294 Ribeiro / AP'),
+('754', '2', 'Vila Cardoso, 36
+Novo Tupi
+63420775 Rodrigues dos Dourados / PR'),
+('755', '2', 'Praa da Mota, 71
+Vista Do Sol
+11077-894 da Costa / PI'),
+('756', '3', 'rea Mendes, 72
+Comiteco
+45448265 Castro / RR'),
+('757', '2', 'Fazenda Vieira
+Nova Esperana
+00841835 da Mata da Praia / DF'),
+('758', '1', 'Vila Kaique da Conceio, 50
+Lajedo
+61688-817 da Mota de Barros / PI'),
+('759', '5', 'Estao de Cardoso, 59
+Vila Nova
+01227-972 Lopes / SP'),
+('760', '2', 'Distrito de Correia
+Vila So Paulo
+49334741 Lima / RO'),
+('761', '1', 'Esplanada Maria Ceclia da Cruz, 994
+Lagoinha Leblon
+21775209 Correia da Praia / RS'),
+('762', '1', 'Esplanada de Castro, 430
+Vila Trinta E Um De Maro
+23168-026 Rodrigues Paulista / MT'),
+('763', '3', 'Esplanada de da Mota
+Santa Lcia
+79110-591 Sales / ES'),
+('764', '4', 'Vila Silva, 800
+Santa Monica
+37682891 Duarte de Novaes / SP'),
+('765', '2', 'Condomnio Peixoto
+Copacabana
+40528505 Duarte / RO'),
+('766', '5', 'Feira Felipe das Neves, 84
+Serra Verde
+31417-027 Santos da Prata / RR'),
+('767', '2', 'Avenida Almeida, 90
+Cabana Do Pai Toms
+50765126 Cardoso / MG'),
+('768', '3', 'Largo da Conceio, 2
+Vila So Gabriel
+01791281 Lima / MS'),
+('769', '1', 'Stio Pires, 53
+Monsenhor Messias
+78292-205 Correia / SC'),
+('770', '1', 'Aeroporto de Ferreira, 90
+Cardoso
+23469-246 Souza das Pedras / CE'),
+('771', '5', 'Colnia de Ferreira, 493
+Planalto
+03078219 Martins / RN'),
+('772', '3', 'Distrito de da Costa, 641
+Vista Do Sol
+92598458 Barros de Minas / DF'),
+('773', '3', 'Passarela de Peixoto, 97
+So Bento
+09930694 Carvalho / PB'),
+('774', '5', 'Vale Rezende
+Conjunto Providencia
+32096-148 Correia Grande / MT'),
+('775', '1', 'Morro Brbara Nogueira, 3
+Heliopolis
+95357-819 Silva do Norte / MG'),
+('776', '4', 'Travessa de da Costa, 48
+So Bernardo
+88545-718 Rodrigues das Flores / ES'),
+('777', '2', 'Trevo de Pires, 61
+Vila Olhos 
+24586-857 Moura / GO'),
+('778', '1', 'Rodovia Maria Julia Ribeiro, 41
+Renascena
+54025-102 da Mata do Galho / DF'),
+('779', '4', 'Fazenda Barbosa, 238
+Santa Monica
+39368117 da Cunha / MT'),
+('780', '2', 'rea Helosa Moura, 7
+Maravilha
+07280883 da Rocha / MT'),
+('781', '4', 'Vale de Costela, 6
+Vila Suzana Primeira Seo
+65013732 da Cruz / PR'),
+('782', '3', 'Trevo de Santos, 32
+Horto Florestal
+17458-870 Almeida de Cavalcanti / PB'),
+('783', '3', 'Morro Rezende
+Boa Viagem
+46309951 Moura Alegre / RN'),
+('784', '5', 'Colnia Ryan Monteiro, 370
+Xangri-L
+40015183 Moraes da Prata / MS'),
+('785', '3', 'Rua Novaes, 22
+Aparecida
+49361-067 Monteiro do Amparo / RS'),
+('786', '5', 'Lago de Moraes, 72
+Vila Primeiro De Maio
+86134225 Silveira de Pinto / PI'),
+('787', '5', 'rea de Almeida, 4
+Vila Primeiro De Maio
+65976-865 Nascimento / RO'),
+('788', '4', 'Ptio da Rocha, 13
+Aeroporto
+45026648 Castro do Oeste / PR'),
+('789', '1', 'Ncleo de Cavalcanti, 48
+Solar Do Barreiro
+08114784 da Cunha / TO'),
+('790', '5', 'Via Beatriz da Conceio, 15
+Capito Eduardo
+72546492 Arago dos Dourados / RJ'),
+('791', '4', 'Stio Raul da Cunha, 77
+Novo Tupi
+36184221 Jesus / RS'),
+('792', '2', 'Trevo da Cunha, 71
+So Francisco Das Chagas
+65253281 Alves / AC'),
+('793', '1', 'Stio Davi Luiz Rocha, 19
+Hava
+60396904 Ribeiro / TO'),
+('794', '2', 'Estao Dias, 54
+Marilandia
+50475-716 Farias / PB'),
+('795', '3', 'Stio Alice Monteiro, 8
+Ferno Dias
+36318507 Ribeiro / PE'),
+('796', '5', 'Feira Pereira, 76
+Vila Esplanada
+09645-467 Duarte / DF'),
+('797', '4', 'Esplanada Henrique Castro, 662
+Nova Cachoeirinha
+11399-616 Freitas Verde / RJ'),
+('798', '1', 'Feira de Moura, 773
+Vila Canto Do Sabi
+75902-757 Jesus das Pedras / SE'),
+('799', '4', 'Trecho Emanuel Arajo
+Conjunto Santa Maria
+62428-695 Gomes / DF'),
+('800', '3', 'Vale Correia, 84
+Novo Das Industrias
+70356-461 Carvalho da Serra / DF'),
+('801', '1', 'Quadra Cunha, 86
+Cinquentenrio
+55427-806 Pereira / RS'),
+('802', '1', 'Conjunto Martins, 29
+Conjunto Floramar
+50266798 Peixoto / AM'),
+('803', '2', 'Jardim Ana Clara da Rosa, 309
+Vila Rica
+98077279 Caldeira / MS'),
+('804', '2', 'Parque de Costa
+Vila Piratininga
+76198009 Oliveira de Gois / PE'),
+('805', '1', 'Travessa Santos, 50
+Barreiro
+34373-566 Correia do Sul / MT'),
+('806', '1', 'Esplanada Correia, 664
+Vila Nossa Senhora Do Rosrio
+46049-463 Cavalcanti / PB'),
+('807', '3', 'Trecho Luiza Pereira, 19
+Barroca
+36307968 Lima / PI'),
+('808', '1', 'Campo Cunha
+So Jorge 2 Seo
+18647472 Alves / PI'),
+('809', '2', 'Chcara Pietra Moraes, 703
+Alto Dos Pinheiros
+93306075 Porto da Mata / RN'),
+('810', '2', 'Setor Levi da Rosa, 40
+Vila Mangueiras
+64981-049 Porto / PE'),
+('811', '3', 'Viaduto da Cruz, 69
+Pousada Santo Antonio
+20171-808 Oliveira / PA'),
+('812', '1', 'Fazenda de Duarte, 3
+Monte Azul
+72439-715 Porto / MT'),
+('813', '3', 'Vereda Nicolas Pereira, 69
+Boa Unio 1 Seo
+10128-468 Melo / AM'),
+('814', '5', 'Conjunto Ryan Monteiro, 6
+Vila Nova Dos Milionarios
+96062958 Fogaa da Serra / TO'),
+('815', '1', 'Vale Pedro Miguel Costa, 36
+Cidade Jardim
+74525745 da Paz do Norte / SE'),
+('816', '4', 'Lagoa de Santos, 92
+So Vicente
+22316525 Caldeira do Amparo / RS'),
+('817', '5', 'Campo Pietra da Cunha, 48
+Lagoinha
+15631-504 da Luz do Norte / DF'),
+('818', '3', 'Morro da Cruz, 98
+So Damio
+96364-924 Cardoso / AC'),
+('819', '4', 'Ptio Ceclia Freitas, 12
+Conjunto Bonsucesso
+97010503 Nunes das Flores / RJ'),
+('820', '3', 'rea da Mata, 29
+Luxemburgo
+40823-565 Teixeira / DF'),
+('821', '3', 'Lagoa de Gomes, 3
+Vila So Francisco
+73919490 Monteiro / AP'),
+('822', '5', 'Ladeira Matheus Azevedo, 519
+Santa Efignia
+84907398 Pereira / CE'),
+('823', '3', 'Setor Silva, 2
+Marieta 1 Seo
+22893-923 Costela de Cavalcanti / MS'),
+('824', '3', 'Alameda Farias, 82
+Pantanal
+58087-887 da Luz / PE'),
+('825', '5', 'Alameda de Jesus, 293
+Vila Piratininga Venda Nova
+19465474 Jesus da Serra / GO'),
+('826', '2', 'Ptio Barbosa, 481
+Vila Petropolis
+55024432 Monteiro da Prata / PE'),
+('827', '2', 'Distrito de Cavalcanti, 519
+Indai
+64940679 Pires de Moraes / PI'),
+('828', '1', 'Setor Silva, 7
+Conjunto Califrnia Ii
+42563-131 da Luz Grande / AL'),
+('829', '4', 'Praa de da Cunha, 49
+Cdi Jatoba
+97355563 Cavalcanti / SE'),
+('830', '2', 'Esplanada Arajo, 6
+Jardim Amrica
+13517964 Silveira de Freitas / MA'),
+('831', '2', 'Estao de Campos
+Vila Independencia 2 Seo
+29394-670 Costela de Minas / AC'),
+('832', '5', 'Favela Novaes
+Nova Cintra
+96538017 Nogueira do Amparo / RN'),
+('833', '4', 'Ncleo de Correia, 43
+Conjunto Capito Eduardo
+14301944 Arajo do Amparo / RJ'),
+('834', '3', 'Esplanada de Lima
+Serrano
+65997713 Pires / ES'),
+('835', '2', 'Condomnio Carvalho, 75
+Vitoria
+34962574 Lima de Gois / RR'),
+('836', '1', 'Rodovia de da Conceio, 512
+Vila Independencia 2 Seo
+23554577 Jesus dos Dourados / AL'),
+('837', '1', 'Chcara Ribeiro, 10
+Colgio Batista
+26679-818 Dias da Mata / TO'),
+('838', '4', 'Trecho Novaes, 4
+Nova Granada
+03259647 Arajo de Santos / MG'),
+('839', '1', 'Lago de da Cunha
+Vila Paquet
+27287-238 da Rosa / PA'),
+('840', '2', 'Morro Emanuella da Paz, 5
+Vitoria
+17371-901 Gomes do Sul / PE'),
+('841', '2', 'Travessa Bryan Caldeira, 40
+Colgio Batista
+10463658 Silveira / PB'),
+('842', '4', 'Praia de Melo, 72
+Vila Puc
+26046-008 Dias / PE'),
+('843', '5', 'Stio Souza, 520
+Conjunto Califrnia I
+14010-387 da Rosa / PA'),
+('844', '2', 'Ptio Lucca Cunha, 69
+Jardim Guanabara
+06043039 da Mota / MG'),
+('845', '2', 'Ncleo Costa, 69
+Vila Coqueiral
+23033-848 Viana da Prata / SE'),
+('846', '3', 'Distrito Duarte, 78
+Palmares
+71190-589 da Mata do Oeste / PA'),
+('847', '2', 'Passarela Enzo Barbosa
+Vila Nova Cachoeirinha 1 Seo
+94554548 Correia / PR'),
+('848', '1', 'Ptio Souza, 4
+Jaqueline
+66014555 Cavalcanti / PA'),
+('849', '5', 'Estrada de Cardoso, 34
+Esplanada
+55075566 Arago dos Dourados / SC'),
+('850', '2', 'Estao Alice Teixeira, 25
+Mirante
+04252304 Ferreira / PI'),
+('851', '2', 'Stio de das Neves, 21
+Concrdia
+65428705 Lima Verde / PR'),
+('852', '2', 'Stio de Santos, 44
+Bandeirantes
+38919042 Gonalves / MG'),
+('853', '5', 'Ncleo Nicolas Fernandes, 32
+Caetano Furquim
+68738-467 da Rocha do Sul / MG'),
+('854', '5', 'Conjunto de Mendes
+Zilah Sposito
+92142538 Gomes / DF'),
+('855', '2', 'Viela de Souza, 66
+Aparecida
+48490918 Teixeira / MT'),
+('856', '4', 'Viaduto Pereira
+Flavio Marques Lisboa
+68141-424 da Conceio / AC'),
+('857', '1', 'Feira de da Luz, 455
+Vila Da Paz
+61019661 Farias dos Dourados / AL'),
+('858', '2', 'Stio da Cruz, 442
+Garas
+97029-719 Santos Paulista / RR'),
+('859', '5', 'Condomnio de da Cruz, 32
+Vila So Geraldo
+14904-437 Costa de Gois / AM'),
+('860', '4', 'Residencial Marcos Vinicius Fogaa, 16
+Jardim Atlntico
+89685-674 Fernandes / RN'),
+('861', '5', 'Quadra Kamilly da Paz, 3
+Ouro Minas
+47770187 Silva / MS'),
+('862', '4', 'Viaduto Dias
+Conjunto Serra Verde
+96554-604 Ramos / MT'),
+('863', '1', 'rea Bruna Rezende, 2
+Vila Aeroporto Jaragu
+32994-828 Ramos / MT'),
+('864', '5', 'Ladeira Mariana da Cruz
+Vila De S
+59013-172 Caldeira / PB'),
+('865', '3', 'Esplanada de Carvalho, 48
+So Jorge 1 Seo
+12312-668 Alves de Minas / TO'),
+('866', '5', 'Stio Cau Almeida, 646
+Boa Vista
+59427533 da Paz / RJ'),
+('867', '1', 'Condomnio Levi Monteiro, 371
+Jardim Dos Comerciarios
+37128-421 Sales de Oliveira / MG'),
+('868', '5', 'Stio Carvalho, 46
+Vila Unio
+46961-824 Cavalcanti Verde / DF'),
+('869', '4', 'Parque Fogaa, 95
+Estrela Do Oriente
+49411-740 Ferreira / MS'),
+('870', '2', 'Stio Rodrigues, 31
+Tupi A
+30569869 Melo de Silveira / BA'),
+('871', '4', 'Trevo da Cunha, 279
+Caiaras
+50282364 da Conceio de Oliveira / SC'),
+('872', '2', 'Vale da Rosa, 13
+Corao De Jesus
+56277-935 Gonalves dos Dourados / BA'),
+('873', '2', 'Conjunto de Farias, 33
+pia
+23655-239 da Rosa / RN'),
+('874', '5', 'Condomnio Oliveira, 46
+Vila Fumec
+19950250 Dias / AP'),
+('875', '3', 'Largo Giovanna Moraes
+Calafate
+13087-728 Carvalho da Prata / TO'),
+('876', '4', 'Morro Oliveira, 5
+Sagrada Famlia
+91049428 Silveira dos Dourados / PE'),
+('877', '1', 'Chcara de Fogaa, 54
+Santa Monica
+31510013 Cavalcanti / BA'),
+('878', '2', 'Avenida Rocha, 908
+Garas
+85114-822 da Conceio do Campo / PR'),
+('879', '1', 'Rua de Pires, 69
+So Joo
+55201555 Arajo da Serra / PB'),
+('880', '5', 'Residencial de Castro, 67
+Vila Santo Antnio
+93980-772 Nunes / GO'),
+('881', '2', 'Fazenda Ramos, 12
+Alto Das Antenas
+05000348 Castro / SP'),
+('882', '3', 'Vila Lucas Gabriel Rezende, 522
+Silveira
+56490167 Monteiro do Oeste / SC'),
+('883', '1', 'Jardim de da Mata, 76
+Vila Antena
+36169-078 Pereira do Amparo / DF'),
+('884', '3', 'Alameda Manuela Cardoso, 3
+Heliopolis
+57335593 Peixoto de da Mata / PE'),
+('885', '2', 'Trevo Rodrigues, 39
+Vila Da Luz
+24118636 Moraes / RJ'),
+('886', '4', 'Ptio de Porto, 939
+Goiania
+61027849 Ramos / CE'),
+('887', '4', 'Rua Matheus Mendes, 184
+Ambrosina
+61431-529 Oliveira Verde / AL'),
+('888', '4', 'Trevo Carvalho, 158
+Vila Suzana Primeira Seo
+19701524 Freitas / GO'),
+('889', '5', 'Morro Moraes, 217
+Salgado Filho
+28856334 da Cruz da Serra / RN'),
+('890', '2', 'Stio de da Cruz, 38
+Bandeirantes
+33525153 Costa Verde / MG'),
+('891', '2', 'Praia de das Neves, 58
+Savassi
+31697200 Nogueira das Pedras / MA'),
+('892', '4', 'Via Moraes
+Satelite
+00801-094 Costa do Galho / MS'),
+('893', '1', 'Viaduto de Lima, 61
+Jardim Dos Comerciarios
+89667-684 das Neves / ES'),
+('894', '4', 'Avenida de Moura, 3
+Palmeiras
+10295-380 Santos / MG'),
+('895', '2', 'Quadra Cavalcanti, 2
+Frei Leopoldo
+65014949 Dias / AC'),
+('896', '2', 'Vale Lopes, 6
+Bernadete
+46067161 Costela de Silveira / SP'),
+('897', '2', 'Viela Carlos Eduardo Duarte, 237
+Conjunto Celso Machado
+61444329 Barbosa / PE'),
+('898', '5', 'Lago de da Rocha
+Ernesto Nascimento
+58553-659 Ferreira de Ribeiro / RJ'),
+('899', '1', 'Viela Mendes, 4
+Aeroporto
+26634587 Lopes / AM'),
+('900', '4', 'Aeroporto da Luz
+Vila Mantiqueira
+91150127 Martins de Lima / AL'),
+('901', '1', 'Viaduto de Moreira, 5
+Jardim Felicidade
+80989-708 Barbosa da Serra / RR'),
+('902', '3', 'Residencial de Moraes, 7
+Dona Clara
+73889842 da Paz de Gomes / MT'),
+('903', '4', 'Vale de Fernandes, 17
+Venda Nova
+24607-150 Nascimento / AC'),
+('904', '2', 'Colnia Isaac Barros
+Planalto
+92740-391 Cardoso das Flores / MS'),
+('905', '1', 'Trevo Ribeiro, 59
+Jardim Do Vale
+10944-912 da Paz / RS'),
+('906', '3', 'Recanto Alves, 351
+Vila Nova Paraso
+03499-001 Cardoso / MA'),
+('907', '5', 'Loteamento de Nogueira, 6
+Flavio Marques Lisboa
+35651-032 da Mota Paulista / AC'),
+('908', '3', 'Setor Moura, 250
+Conjunto Novo Dom Bosco
+15697620 Martins / RJ'),
+('909', '5', 'Stio Luiz Gustavo Lima, 95
+Jardim Amrica
+89698-367 Gomes do Amparo / MG'),
+('910', '3', 'Conjunto Cavalcanti
+Santa Maria
+81095-826 Moreira / TO'),
+('911', '2', 'Alameda Cardoso
+Inconfidncia
+16062-013 Mendes de da Cruz / RS'),
+('912', '4', 'Rodovia Ana da Luz, 59
+Vila Madre Gertrudes 3 Seo
+70554-042 da Rocha / PR'),
+('913', '3', 'Distrito Francisco Viana, 1
+Paraso
+98733338 Farias de Gois / MT'),
+('914', '4', 'Lago Emanuelly Oliveira, 84
+Aparecida 7 Seo
+75427-299 Rocha das Pedras / AM'),
+('915', '4', 'Feira Moura, 48
+Novo Tupi
+42445491 Pereira da Prata / PR'),
+('916', '3', 'Avenida Lima, 761
+Conjunto Capito Eduardo
+47774895 Farias / MG'),
+('917', '4', 'Estrada Moraes, 92
+Conjunto Lagoa
+05022160 Nascimento de Gois / RJ'),
+('918', '2', 'Lago Fernando Oliveira, 61
+Vila Santa Monica 1 Seo
+70132223 Melo Paulista / PR'),
+('919', '5', 'Chcara Gustavo Barbosa, 67
+Lindia
+78654722 da Luz Alegre / SE'),
+('920', '2', 'Viela Vitor Gabriel da Costa, 12
+Marola
+30147-570 Arajo / SC'),
+('921', '1', 'Largo de Barbosa, 76
+Piratininga
+41515642 Costela / SE'),
+('922', '3', 'Passarela de Moreira, 33
+Vila Paquet
+40504427 Peixoto / MG'),
+('923', '2', 'Alameda de Gonalves
+Piraja
+92326695 Costela do Sul / PI'),
+('924', '3', 'Jardim Catarina Moura, 31
+Vale Do Jatoba
+17418175 Porto Grande / RN'),
+('925', '1', 'Viela Nascimento, 6
+Boa Viagem
+84108130 da Cruz de Correia / AC'),
+('926', '3', 'Vale de Santos, 5
+Marola
+20896-170 Lima / MA'),
+('927', '2', 'Passarela Mendes, 3
+Conjunto Celso Machado
+68693903 Moreira / AL'),
+('928', '4', 'Esplanada Luiz Miguel da Rosa, 79
+Providencia
+95745123 Cavalcanti / PE'),
+('929', '1', 'Vale Jesus, 12
+Castelo
+25809-043 Moreira / RN'),
+('930', '2', 'Travessa Vinicius Duarte, 34
+Capito Eduardo
+50765241 Barros / GO'),
+('931', '5', 'Rua Bernardo Porto, 886
+Santo Andr
+07918630 Rodrigues / PB'),
+('932', '3', 'Conjunto Emilly Ribeiro, 755
+Bairro Das Indstrias Ii
+22711-759 Pires / SE'),
+('933', '2', 'Passarela Raquel Nogueira
+Maria Tereza
+38083246 Novaes / SP'),
+('934', '1', 'Alameda Pereira, 54
+Vila Boa Vista
+69522-176 Pereira do Sul / PA'),
+('935', '1', 'Rodovia de Rodrigues, 41
+Primeiro De Maio
+32601680 Gonalves / BA'),
+('936', '1', 'Travessa Julia Alves, 742
+Palmeiras
+32345-389 da Rocha Verde / BA'),
+('937', '3', 'Avenida da Rocha, 37
+Estrela
+13436-990 da Conceio / PI'),
+('938', '1', 'Estrada de Viana
+Vila Copacabana
+40780022 Carvalho do Norte / SC'),
+('939', '4', 'Loteamento Lucca das Neves, 5
+Pantanal
+27657-126 Peixoto / RO'),
+('940', '1', 'Distrito de Sales, 28
+Marola
+27687-584 Rezende da Prata / GO'),
+('941', '1', 'Vale Cardoso, 32
+Vila Madre Gertrudes 3 Seo
+95479812 Teixeira / ES'),
+('942', '1', 'rea Ramos, 13
+Engenho Nogueira
+18741-910 da Cruz das Pedras / PI'),
+('943', '2', 'Viaduto Nogueira, 861
+Califrnia
+76758383 Nunes / CE'),
+('944', '3', 'Chcara Correia
+Concrdia
+51829-385 Melo Grande / SC'),
+('945', '3', 'Distrito Helosa Farias, 10
+Concrdia
+60485456 Pinto / AM'),
+('946', '4', 'Viela Pires, 408
+Vila Independencia 3 Seo
+54412771 Freitas / MT'),
+('947', '5', 'Feira Campos, 131
+Vila Santa Monica 2 Seo
+72824-190 Nogueira Paulista / MG'),
+('948', '4', 'Recanto da Mata, 91
+Joo Alfredo
+52627-494 Nascimento da Prata / DF'),
+('949', '1', 'Aeroporto de Ferreira, 250
+Tnel De Ibirit
+78849-936 Fogaa / MG'),
+('950', '1', 'Viaduto de Mendes, 45
+Serra
+12710583 Rocha da Prata / BA'),
+('951', '4', 'Ncleo de Almeida, 82
+Alto Dos Pinheiros
+13683769 Ribeiro de Moreira / RS'),
+('952', '5', 'Avenida de Arago
+Juliana
+88067-795 Freitas / TO'),
+('953', '5', 'Passarela Monteiro, 790
+Lorena
+44736473 Barros / TO'),
+('954', '5', 'Aeroporto Igor Fogaa, 373
+Confisco
+52363599 Barros dos Dourados / PB'),
+('955', '1', 'Lagoa de Gomes, 74
+Camponesa 1 Seo
+11158-530 Santos / RR'),
+('956', '4', 'Alameda Ramos, 54
+Vila Paraso
+12389-759 Nascimento / RR'),
+('957', '3', 'Viaduto Isaac Nunes, 39
+Conjunto Serra Verde
+46184-586 Silveira de Caldeira / ES'),
+('958', '2', 'Ncleo de Campos, 69
+Novo Aaro Reis
+97183-436 da Rocha / TO'),
+('959', '1', 'Campo de Novaes, 6
+Guarat
+21769532 da Cruz das Pedras / MT'),
+('960', '1', 'Favela Carvalho, 4
+Bairro Das Indstrias Ii
+16589019 Duarte de Almeida / RN'),
+('961', '3', 'Residencial de da Rocha, 3
+Jatob
+62863476 da Cunha / MT'),
+('962', '2', 'Fazenda de Mendes
+Vila Santa Monica 2 Seo
+51165331 Oliveira / SP'),
+('963', '5', 'Rua Castro, 5
+Petropolis
+02317-734 Pinto das Flores / MS'),
+('964', '2', 'Largo Maria da Rocha
+Bairro Das Indstrias Ii
+19093-770 Peixoto Paulista / RN'),
+('965', '3', 'Viela de Costela, 20
+Chcara Leonina
+35371821 Cardoso dos Dourados / MT'),
+('966', '3', 'rea Rebeca Dias, 72
+Vila Satlite
+85751-625 da Luz de Gois / SP'),
+('967', '2', 'Recanto Vieira, 68
+Madri
+41013217 Costa / SE'),
+('968', '2', 'Trevo de Moreira, 62
+Nossa Senhora Da Aparecida
+66454-858 Duarte / AC'),
+('969', '3', 'Largo da Luz
+So Bernardo
+93737-255 da Conceio / DF'),
+('970', '5', 'rea de Costa, 44
+Xodo-Marize
+40681052 Fernandes / RO'),
+('971', '2', 'Avenida Rezende
+Baro Homem De Melo 2 Seo
+45115-154 Arago de da Cunha / SC'),
+('972', '4', 'Ptio de Castro, 98
+Solar Do Barreiro
+66429-644 Campos de Nascimento / PI'),
+('973', '1', 'Distrito Dias, 783
+Guarat
+83338-992 Dias Paulista / SE'),
+('974', '1', 'Vale Luiz Otvio Silva, 26
+Camponesa 2 Seo
+97346-609 Monteiro do Oeste / CE'),
+('975', '3', 'Aeroporto Lopes, 7
+Vila Antena Montanhs
+70526-182 Ferreira de Arago / RO'),
+('976', '1', 'Viaduto Eduarda Monteiro, 215
+Guarat
+76879-748 Moraes / TO'),
+('977', '5', 'Fazenda Maria Silveira, 526
+Vila Suzana Segunda Seo
+47457701 Campos Verde / SC'),
+('978', '4', 'Quadra de Nascimento, 20
+Vila Formosa
+33522-359 Nunes de Fogaa / SE'),
+('979', '5', 'Parque Vitria Teixeira, 900
+Ribeiro De Abreu
+80489172 Viana da Serra / GO'),
+('980', '4', 'Lago Clara Carvalho, 7
+Barroca
+88245-140 Rodrigues do Campo / BA'),
+('981', '4', 'Campo da Conceio, 2
+Novo Ouro Preto
+63310-431 Moraes da Praia / PI'),
+('982', '1', 'Trecho de das Neves, 665
+Vera Cruz
+15603-329 Campos da Mata / CE'),
+('983', '4', 'Viela Gustavo da Mata, 41
+Primeiro De Maio
+24599-127 Pereira do Amparo / SC'),
+('984', '1', 'Avenida Augusto Souza, 27
+So Bento
+80526755 Almeida / PE'),
+('985', '5', 'Largo Barbosa, 11
+Conjunto Jatoba
+37038670 Viana das Pedras / RJ'),
+('986', '3', 'rea Azevedo
+Vila Boa Vista
+57817883 Costa de Gois / RJ'),
+('987', '5', 'Praia Joaquim Costela, 49
+Milionario
+52519098 Martins / SC'),
+('988', '4', 'Esplanada Sofia Nunes, 43
+Vila Primeiro De Maio
+85403-034 Fogaa / PI'),
+('989', '5', 'Vale de da Mata, 97
+Nova Gameleira
+05491399 Correia / AL'),
+('990', '2', 'Trecho de Barros
+Antonio Ribeiro De Abreu 1 Seo
+82850473 Lopes / AL'),
+('991', '5', 'Feira de da Mota
+Monsenhor Messias
+32190-655 Nascimento / CE'),
+('992', '1', 'Trevo Melo, 9
+Vila Nova Cachoeirinha 1 Seo
+79101110 Novaes / GO'),
+('993', '5', 'Viela de Cardoso, 71
+Diamante
+81671166 Cardoso de Martins / RJ'),
+('994', '3', 'Alameda da Rosa, 15
+Vila Barragem Santa Lcia
+66485-035 Ramos / PB'),
+('995', '1', 'Vila Eduardo Cavalcanti, 45
+Vila Copacabana
+73097-892 Pires das Pedras / DF'),
+('996', '2', 'Rua de Campos, 850
+Vila Hava
+37259-130 Arajo da Praia / MS'),
+('997', '1', 'Quadra de Gonalves, 37
+Santa Sofia
+50132-445 da Cruz / DF'),
+('998', '2', 'Trecho de Martins, 2
+Jardim Alvorada
+69951-872 Castro / AL'),
+('999', '3', 'Lagoa Raul Carvalho, 90
+Vila Calafate
+95006-795 Gomes / AC'),
+('1000', '3', 'Estrada Caio Ribeiro, 4
+Taquaril
+42909-859 Rodrigues das Flores / PE'),
+('1001', '1', 'Residencial Ana Luiza Cavalcanti, 172
+Jardim Guanabara
+74991560 Costela / PI'),
+('1002', '2', 'Aeroporto Dias
+Boa Unio 2 Seo
+32657887 Gonalves / PI'),
+('1003', '3', 'Stio Ana Carolina Arago
+Vila Paquet
+48187162 Melo / SE'),
+('1004', '1', 'Praa da Conceio, 885
+Maria Helena
+40333-374 Barbosa / PA'),
+('1005', '1', 'Vereda Lucca Rocha, 35
+Sagrada Famlia
+11277-088 Costela / PR'),
+('1006', '3', 'Parque Rafael Costa, 26
+Madre Gertrudes
+26214-607 Novaes de Cavalcanti / PB'),
+('1007', '5', 'Fazenda Castro, 13
+Vila Canto Do Sabi
+51452-840 Oliveira de Souza / SE'),
+('1008', '5', 'Aeroporto Luigi Castro, 862
+Itapoa
+61343676 das Neves das Flores / BA'),
+('1009', '4', 'Fazenda de Barros, 58
+Vila Do Pombal
+68167-611 Ramos do Sul / TO'),
+('1010', '1', 'Via de Farias, 97
+Vila Das Oliveiras
+58103541 Campos / MG'),
+('1011', '5', 'Vila de Santos, 65
+Belmonte
+83398670 Carvalho / RO'),
+('1012', '4', 'Ptio Sarah Vieira, 91
+Conjunto Serra Verde
+70319316 Ferreira / RJ'),
+('1013', '3', 'Residencial Campos, 80
+Camargos
+12587-325 Viana / AM'),
+('1014', '2', 'Loteamento Silveira, 2
+Jardim So Jos
+77093-806 da Mata da Mata / BA'),
+('1015', '5', 'Viela de Santos, 73
+Calafate
+36451-822 Silveira dos Dourados / RJ'),
+('1016', '1', 'Rua de Moura, 79
+Prado
+66724-724 Freitas / TO'),
+('1017', '1', 'Trevo Raul Fernandes, 57
+So Francisco Das Chagas
+05258-920 Santos / ES'),
+('1018', '1', 'Lago da Cunha, 23
+Conjunto So Francisco De Assis
+07417-796 Moraes do Norte / AL'),
+('1019', '4', 'Campo de da Rocha
+Copacabana
+23695595 da Paz Alegre / AC'),
+('1020', '2', 'Rodovia Lima, 99
+Canad
+38104349 Viana dos Dourados / AC'),
+('1021', '1', 'Recanto Freitas, 25
+Vila So Rafael
+61719296 Pinto / RJ'),
+('1022', '4', 'Alameda de Nunes, 9
+Taquaril
+66448-555 Silveira de Minas / SE'),
+('1023', '2', 'Viela da Conceio, 2
+Santa Rita De Cssia
+99213-885 Rocha do Campo / AL'),
+('1024', '1', 'Estao Vieira, 655
+Santa Cecilia
+17314-415 da Cruz / CE'),
+('1025', '4', 'Campo de Viana
+Satelite
+38123-665 Melo do Oeste / MG'),
+('1026', '4', 'Viela Melo, 73
+Engenho Nogueira
+39622-474 Caldeira / AC'),
+('1027', '2', 'Vila Oliveira, 74
+Maravilha
+73622-414 Barbosa do Norte / MT'),
+('1028', '4', 'Campo de Nascimento, 41
+Estrela Do Oriente
+79349034 Mendes de Minas / AL'),
+('1029', '1', 'Quadra Monteiro, 29
+Castanheira
+79335959 da Conceio de Minas / AC'),
+('1030', '2', 'Esplanada de Cardoso, 8
+Ribeiro De Abreu
+81536436 da Cruz das Pedras / AP'),
+('1031', '2', 'Estrada Kevin da Luz
+Conjunto So Francisco De Assis
+45220-885 Pereira / AM'),
+('1032', '2', 'Avenida da Paz, 980
+Betnia
+82454-201 Silveira / DF'),
+('1033', '4', 'Fazenda de Nunes, 4
+Heliopolis
+39521-256 da Luz / AC'),
+('1034', '5', 'Passarela Sophia Sales
+Vila Jardim Montanhes
+48362723 Ribeiro / AL'),
+('1035', '4', 'Praia Ana Sophia Gomes, 40
+Santa Terezinha
+36263203 Costela de Gois / RR'),
+('1036', '5', 'Quadra de Carvalho, 41
+Beira Linha
+74179-186 Rezende da Praia / RR'),
+('1037', '2', 'Praa de Barros, 54
+Conjunto So Francisco De Assis
+32208971 Costa / DF'),
+('1038', '4', 'Stio da Luz, 82
+Conjunto Capito Eduardo
+80928026 Moreira / RR'),
+('1039', '4', 'Alameda Campos, 18
+Camargos
+89427342 Moreira de Gois / MS'),
+('1040', '3', 'Parque de Fernandes, 612
+Outro
+21892-319 Rezende / AC'),
+('1041', '4', 'Recanto de Caldeira, 633
+Vila Da Amizade
+56675132 Fogaa Verde / PI'),
+('1042', '5', 'Via Daniel Porto, 45
+Parque So Pedro
+05135723 da Paz / PR'),
+('1043', '5', 'Ladeira Maria Fernanda Arajo, 60
+Piraja
+12911-917 Rodrigues de Vieira / MT'),
+('1044', '1', 'Trevo Enzo Gabriel Vieira, 96
+Vitoria
+08211-293 Silva / CE'),
+('1045', '2', 'Rodovia da Cruz, 55
+Paquet
+99503349 Monteiro / AL'),
+('1046', '3', 'Conjunto Maria Sophia Costa, 30
+Vila Jardim Leblon
+45692492 Jesus de Souza / GO'),
+('1047', '2', 'Loteamento da Mota
+Nossa Senhora Aparecida
+84841-999 Peixoto do Norte / PR'),
+('1048', '5', 'Setor Nina Dias
+Camargos
+71479876 Melo / PR'),
+('1049', '2', 'Aeroporto da Rosa, 43
+Parque So Pedro
+23959548 Cavalcanti / AL'),
+('1050', '3', 'Alameda de Castro, 434
+Aaro Reis
+98825-813 das Neves da Serra / MA'),
+('1051', '3', 'Esplanada Nogueira, 99
+Ouro Minas
+53581-714 Monteiro de Cunha / AP'),
+('1052', '1', 'Loteamento da Rocha, 3
+Vila Sumar
+07389123 Souza / SC'),
+('1053', '1', 'Distrito Luiz Fernando Pinto, 95
+Piratininga
+35449-044 Lima do Oeste / RR'),
+('1054', '3', 'Praa de Cavalcanti
+Marieta 3 Seo
+21542587 Castro do Sul / SP'),
+('1055', '3', 'Feira de da Rocha, 76
+Canaa
+76006654 da Cruz / PI'),
+('1056', '5', 'Viaduto Luigi Moreira, 59
+Paulo Vi
+47788858 Teixeira de Melo / RR'),
+('1057', '4', 'Jardim de Cardoso
+Conjunto Taquaril
+29466958 Sales da Praia / RJ'),
+('1058', '4', 'Favela de Moreira, 13
+Conjunto Bonsucesso
+18185682 Costa de da Rosa / PB'),
+('1059', '1', 'Lago de Barbosa, 252
+Fazendinha
+42726075 Arajo das Pedras / PA'),
+('1060', '4', 'Largo de Barros, 55
+Santo Agostinho
+63483-703 Mendes / AM'),
+('1061', '4', 'Feira da Luz, 41
+Santa Cecilia
+35256-457 da Paz / SP'),
+('1062', '2', 'Jardim Noah Silveira, 52
+Taquaril
+59320778 Almeida / MT'),
+('1063', '2', 'Esplanada de Dias
+Vila Minaslandia
+67086-557 Rodrigues / RS'),
+('1064', '1', 'Estrada de Campos, 80
+Outro
+07883666 Novaes / DF'),
+('1065', '4', 'Chcara Cunha, 28
+Saudade
+10407093 Fernandes Grande / CE'),
+('1066', '4', 'Passarela de Ramos
+Jardim Felicidade
+17428934 Lopes Verde / PA'),
+('1067', '3', 'Favela de Carvalho, 7
+Dom Joaquim
+34574592 Barros de das Neves / MG'),
+('1068', '4', 'Conjunto de Campos
+Coqueiros
+59404611 Pinto da Prata / PB'),
+('1069', '2', 'Conjunto das Neves
+Vila Copacabana
+96840-606 Dias / PE'),
+('1070', '2', 'Parque Luana Novaes, 35
+Estrela Do Oriente
+03944513 Monteiro / PB'),
+('1071', '5', 'Favela de Costela, 9
+Trevo
+27852902 Lopes / SP'),
+('1072', '2', 'Viela Paulo da Cruz, 2
+Beija Flor
+89228573 Caldeira / AM'),
+('1073', '2', 'Fazenda de Ribeiro, 30
+So Joo
+97756892 Martins da Serra / MA'),
+('1074', '4', 'Favela da Conceio, 75
+Graa
+03809-169 da Rocha Grande / RN'),
+('1075', '2', 'Rodovia de Cunha, 64
+Alto Vera Cruz
+43247428 Lima do Oeste / AM'),
+('1076', '5', 'Campo Valentina Rodrigues
+Parque So Pedro
+22287-763 da Rosa de Fogaa / RS'),
+('1077', '3', 'Fazenda Peixoto, 79
+Palmares
+00495-590 Nunes de Melo / BA'),
+('1078', '2', 'Trevo Moreira, 28
+Santa Rita
+27242283 Moreira / MT'),
+('1079', '5', 'Trevo Porto, 38
+Branas
+82861-750 Teixeira da Serra / PR'),
+('1080', '1', 'Recanto Luiz Fernando da Costa, 28
+Santo Andr
+90672-882 Nunes das Flores / RO'),
+('1081', '2', 'Jardim de Silveira, 1
+Vila Santo Antnio
+39289643 da Paz da Praia / MG'),
+('1082', '4', 'Campo Peixoto, 87
+Conjunto Novo Dom Bosco
+29918-331 da Rosa Verde / AC'),
+('1083', '5', 'Morro Stephany Porto, 5
+Frei Leopoldo
+71961689 da Mata / ES'),
+('1084', '1', 'Vila de Castro, 245
+Andiroba
+05395995 Cavalcanti da Mata / RO'),
+('1085', '1', 'Residencial Maria Julia Pereira, 52
+Colgio Batista
+89081521 Santos / BA'),
+('1086', '1', 'Vereda de Rodrigues, 597
+Vila Vista Alegre
+03026-609 Ferreira Alegre / RN'),
+('1087', '4', 'Campo Julia Teixeira, 572
+Santo Agostinho
+90609-508 da Rocha / PE'),
+('1088', '2', 'Praia Campos, 9
+Vitoria Da Conquista
+77650-134 Souza / MT'),
+('1089', '2', 'Praia Eloah Cunha
+Vila Minaslandia
+19619300 da Luz / PI'),
+('1090', '5', 'Morro da Cunha, 42
+Santa Lcia
+59469190 Carvalho de Cardoso / RS'),
+('1091', '5', 'Passarela de Costela, 9
+Beija Flor
+93561-472 Alves Paulista / CE'),
+('1092', '1', 'Ncleo Caroline Dias, 1
+Itaipu
+41427-873 Silva de Gois / PB'),
+('1093', '5', 'Largo de das Neves, 59
+Vila Mangueiras
+06610-645 Viana Verde / RO'),
+('1094', '3', 'Recanto de Almeida, 37
+Barroca
+10242844 Castro de Barbosa / BA'),
+('1095', '2', 'Vale Cavalcanti, 626
+Sagrada Famlia
+22932544 da Mota / MS'),
+('1096', '4', 'Estrada Mendes
+Boa Esperana
+93224-000 Melo / PB'),
+('1097', '3', 'Trevo Sofia Peixoto
+Vila So Gabriel
+57419-919 da Rocha do Galho / AL'),
+('1098', '4', 'Travessa Brenda da Conceio
+Ventosa
+45409137 Moraes / RR'),
+('1099', '4', 'Ladeira Luiza Gomes, 509
+Camponesa 2 Seo
+53894-725 Mendes / MT'),
+('1100', '4', 'Recanto Joo Lucas Castro, 54
+Paquet
+21805001 Rodrigues / SP'),
+('1101', '2', 'Ncleo de da Rocha, 3
+Nova Granada
+23854293 Campos do Campo / PR'),
+('1102', '2', 'Vale de Rocha, 95
+Vila Barragem Santa Lcia
+19151692 Monteiro das Flores / MS'),
+('1103', '4', 'Praia Moraes, 4
+Buritis
+12933712 Fogaa / RR'),
+('1104', '1', 'Loteamento Monteiro, 4
+Vila Independencia 1 Seo
+17614938 Cunha de Martins / SP'),
+('1105', '4', 'Largo Luiz Henrique Moura, 489
+Santa Margarida
+33614-656 Fogaa / PA'),
+('1106', '1', 'rea Levi Cardoso, 31
+Conjunto Celso Machado
+10130-247 Nogueira do Campo / SC'),
+('1107', '5', 'Vereda de Oliveira, 831
+Boa Unio 1 Seo
+09024848 Mendes / AL'),
+('1108', '4', 'Aeroporto Vicente Lopes, 350
+Vila Paris
+80130247 da Mata da Prata / MA'),
+('1109', '4', 'Viaduto Castro
+Taquaril
+22712-367 Silveira / MG'),
+('1110', '5', 'Feira Alice Pires, 48
+So Bernardo
+44148773 Novaes / RO'),
+('1111', '4', 'Estrada Stephany Melo, 74
+Granja Werneck
+59762547 Ramos das Pedras / CE'),
+('1112', '1', 'Viaduto de Souza, 61
+Vila Vista Alegre
+78153575 Azevedo / TO'),
+('1113', '3', 'Ladeira Oliveira, 994
+Cenaculo
+81329-507 Arajo / ES'),
+('1114', '1', 'Via de da Rocha, 107
+Vila Nova Cachoeirinha 3 Seo
+20220-721 Rodrigues / MG'),
+('1115', '2', 'Fazenda Pires, 9
+Satelite
+96224096 Nunes Verde / AC'),
+('1116', '2', 'Lago Enzo Nunes
+Maria Helena
+14335-610 Cardoso de da Mota / BA'),
+('1117', '1', 'Aeroporto de da Rocha, 6
+Aguas Claras
+11724-528 Cavalcanti da Serra / MT'),
+('1118', '4', 'Viaduto Nunes
+Vila Vista Alegre
+77157-099 Santos / GO'),
+('1119', '2', 'Passarela de da Rocha, 977
+Capito Eduardo
+24013-226 Cavalcanti das Pedras / PA'),
+('1120', '5', 'Vila Sophia Novaes, 972
+Leticia
+07592998 da Cunha / GO'),
+('1121', '3', 'Passarela Rocha, 95
+Vila Engenho Nogueira
+56602041 Moraes do Norte / PI'),
+('1122', '2', 'Estao de Moura, 627
+Vila Paquet
+71395-401 Nogueira de Gois / TO'),
+('1123', '5', 'Praia Davi Luiz Moreira, 26
+Conjunto Jatoba
+95265-423 Moraes / PA'),
+('1124', '2', 'Feira de da Mata, 16
+Estrela
+77314659 Cardoso do Amparo / SP'),
+('1125', '3', 'Feira Rocha
+Vila Independencia 1 Seo
+39643-982 Gomes / MA'),
+('1126', '2', 'Ptio de Rocha, 89
+Vila Rica
+87719638 Cardoso / AM'),
+('1127', '5', 'Conjunto Lorenzo Moura, 5
+Vila Madre Gertrudes 1 Seo
+42730-351 Cardoso das Pedras / RS'),
+('1128', '4', 'Praa Rafaela Barros, 5
+Ouro Minas
+63483-528 Moreira da Praia / PR'),
+('1129', '1', 'Ncleo de Castro, 615
+Barroca
+66326-587 Ramos das Pedras / TO'),
+('1130', '3', 'Recanto de Teixeira, 8
+Pirineus
+65574-303 da Paz Verde / PA'),
+('1131', '2', 'Residencial de Cavalcanti, 444
+Granja De Freitas
+82993889 Sales / MA'),
+('1132', '1', 'Aeroporto Davi Lucas Sales, 36
+Jardinpolis
+34172-904 Nascimento / RN'),
+('1133', '5', 'Via Mariana Jesus, 7
+Acaiaca
+26945263 da Luz de da Luz / MS'),
+('1134', '5', 'Vila de Lopes, 18
+Zilah Sposito
+28245-479 Moreira de da Mata / MA'),
+('1135', '4', 'Aeroporto Letcia Souza, 660
+Eymard
+98941-642 Silveira / MS'),
+('1136', '5', 'Praa Diego Castro, 17
+Nova America
+45907967 Lima das Flores / PR'),
+('1137', '1', 'Feira de Nascimento, 63
+Cenaculo
+94875780 Nunes / TO'),
+('1138', '1', 'Ptio Emanuelly Silveira, 78
+Alpio De Melo
+72936-503 Sales / PE'),
+('1139', '2', 'Alameda Rafaela Monteiro, 1
+Penha
+61328961 Ribeiro / MT'),
+('1140', '2', 'Setor Marina Moura, 28
+Diamante
+55470095 Castro / BA'),
+('1141', '2', 'Esplanada de Barros, 9
+So Jorge 3 Seo
+56306-783 Martins / TO'),
+('1142', '4', 'Setor Giovanna Alves, 52
+So Cristvo
+45178911 Lima de da Rosa / SP'),
+('1143', '4', 'Lago Davi Luiz Freitas, 903
+Nova Cintra
+79206136 Silva / PB'),
+('1144', '1', 'Rua Silveira, 8
+Planalto
+59856608 Porto / RJ'),
+('1145', '5', 'Praa de Melo, 19
+Horto
+73261844 Moraes de Minas / PA'),
+('1146', '3', 'Recanto de Moura, 5
+Vila Nova
+12265476 da Rocha da Serra / MS'),
+('1147', '5', 'Trevo Cardoso
+Floresta
+93705232 Monteiro / BA'),
+('1148', '3', 'Travessa Moraes, 383
+Camponesa 2 Seo
+55484962 Nascimento de Duarte / RR'),
+('1149', '2', 'Recanto Maysa Fernandes, 55
+Vila Independencia 2 Seo
+62502570 Costela / SE'),
+('1150', '2', 'Praa de Campos, 14
+So Cristvo
+95120-521 Nascimento / RO'),
+('1151', '4', 'Avenida Mariane Gonalves, 29
+Suzana
+46146-188 Cardoso / RO'),
+('1152', '5', 'Recanto das Neves, 58
+Pongelupe
+53081210 Teixeira da Serra / TO'),
+('1153', '4', 'Travessa Costela, 501
+Vila Santa Monica 1 Seo
+04829882 da Luz das Flores / SP'),
+('1154', '2', 'Vila Juan Moura, 8
+Goiania
+98052608 Arajo / SE'),
+('1155', '4', 'Campo Maria Clara Santos, 10
+Barro Preto
+97838387 Viana de Pinto / PE'),
+('1156', '2', 'Morro Pires, 60
+Castelo
+01964613 Nunes / AC'),
+('1157', '4', 'Rodovia de da Paz, 325
+Vila Ecolgica
+38025-401 Peixoto / PA'),
+('1158', '3', 'Lago Fogaa, 67
+Distrito Industrial Do Jatoba
+14302-240 Costa / AC'),
+('1159', '4', 'Trecho da Luz, 91
+Cdi Jatoba
+54653796 Cardoso / AC'),
+('1160', '4', 'Residencial Fernandes, 19
+Cu Azul
+69152570 Teixeira Verde / CE'),
+('1161', '4', 'Jardim de Azevedo
+Santa Lcia
+04489-512 Arajo / MA'),
+('1162', '5', 'Avenida Sales, 32
+Canad
+80870758 da Cruz das Flores / SE'),
+('1163', '2', 'Campo Ramos, 64
+Nova Granada
+36224005 Pinto / SE'),
+('1164', '3', 'Via de Rezende, 43
+Zilah Sposito
+19758525 Nascimento / SE'),
+('1165', '3', 'Feira Luiz Otvio Cardoso, 32
+Vila Nova Gameleira 1 Seo
+91927761 Costela do Oeste / AM'),
+('1166', '4', 'Ncleo de Ferreira
+Jardim Guanabara
+22612-063 da Cunha de Fernandes / MS'),
+('1167', '5', 'Morro da Luz, 95
+Vila Cloris
+17706628 Porto / PI'),
+('1168', '2', 'Fazenda Luiz Felipe Santos, 8
+So Bento
+02383096 Pereira / ES'),
+('1169', '3', 'Vila de Souza, 558
+Vila So Rafael
+37763329 da Conceio da Mata / PE'),
+('1170', '2', 'rea Isaac Lima, 3
+Maria Virgnia
+42454350 Freitas / AM'),
+('1171', '5', 'Stio Larissa Moreira, 965
+Vila Piratininga Venda Nova
+36256-635 Farias das Flores / PR'),
+('1172', '1', 'Fazenda de da Paz
+Caiaras
+49455800 Pereira do Galho / AC'),
+('1173', '5', 'Morro Luna Campos, 49
+Marieta 1 Seo
+76743-974 Martins Paulista / MA'),
+('1174', '4', 'Vale Amanda Viana, 9
+Araguaia
+42724000 Rezende / ES'),
+('1175', '2', 'Conjunto Dias
+Vila Nossa Senhora Do Rosrio
+02090-119 Souza / BA'),
+('1176', '1', 'Chcara de Viana, 2
+Alto Caiaras
+57845-115 Souza / TO'),
+('1177', '4', 'Vila de Barbosa, 94
+Vila Fumec
+40421-936 Castro do Sul / AP'),
+('1178', '5', 'Quadra de Dias, 466
+Santa Cecilia
+67603-687 Cavalcanti do Campo / MS'),
+('1179', '5', 'Rodovia Luiz Felipe Caldeira, 73
+Vila Barragem Santa Lcia
+48985023 Porto / RS'),
+('1180', '3', 'Vila Arago
+Boa Unio 1 Seo
+51031244 da Rocha de Gois / AP'),
+('1181', '2', 'Setor Jesus, 781
+Tupi A
+96195288 Arajo do Oeste / MA'),
+('1182', '5', 'Via de Mendes, 74
+Independncia
+40163720 Martins do Sul / PB'),
+('1183', '1', 'Lago Lucca Gomes
+Vila Nossa Senhora Do Rosrio
+83305619 Rocha / RJ'),
+('1184', '5', 'Quadra Fogaa, 156
+Olhos 
+60487-004 Mendes de Barros / MG'),
+('1185', '3', 'Campo da Paz, 523
+Vila Novo So Lucas
+78198183 Fogaa / MA'),
+('1186', '2', 'Ptio de Castro, 103
+Teixeira Dias
+85982-618 Azevedo / MS'),
+('1187', '3', 'Quadra de Fogaa, 83
+Barreiro
+79793-668 Lopes de Peixoto / SC'),
+('1188', '2', 'Conjunto Rodrigues, 7
+Maria Tereza
+16876-980 da Mata / ES'),
+('1189', '3', 'Alameda Isabella Oliveira, 763
+Santo Andr
+17274205 Pires / AC'),
+('1190', '5', 'Vila de Nunes
+Vila Nova Cachoeirinha 1 Seo
+62714-641 Santos Alegre / AP'),
+('1191', '2', 'Viaduto Cardoso, 76
+So Sebastio
+36671855 Viana da Serra / SC'),
+('1192', '5', 'Distrito de Peixoto, 34
+Apolonia
+64696171 Rocha do Norte / MA'),
+('1193', '4', 'Viela de Alves, 260
+Vila Da Luz
+13752279 Nogueira / AL'),
+('1194', '3', 'Viela Maria Dias, 20
+Pilar
+22015-034 Barbosa / PR'),
+('1195', '2', 'Alameda Campos, 4
+Joo Paulo Ii
+35714-145 Ramos de Gois / PE'),
+('1196', '1', 'Alameda de da Rocha, 5
+Jardim Montanhs
+70003-271 Dias da Serra / MS'),
+('1197', '3', 'Praia Lopes, 64
+Serra Do Curral
+97305510 Nogueira / DF'),
+('1198', '3', 'Ladeira Mait Rezende, 303
+Baro Homem De Melo 3 Seo
+03294896 da Mata da Praia / RN'),
+('1199', '3', 'Setor de Barbosa, 530
+Mantiqueira
+72445376 Oliveira das Flores / RN'),
+('1200', '4', 'Campo Oliveira, 57
+Universitrio
+42227215 Santos Paulista / BA'),
+('1201', '1', 'Rua Cardoso, 63
+Unio
+91773331 Nogueira / RJ'),
+('1202', '5', 'Condomnio Alves, 1
+Marieta 3 Seo
+43719458 Souza / SC'),
+('1203', '2', 'Conjunto Mendes, 772
+Madre Gertrudes
+20177858 da Conceio / RJ'),
+('1204', '2', 'Travessa Sofia Nascimento, 1
+Cdi Jatoba
+14452242 Fogaa / RS'),
+('1205', '4', 'Fazenda de da Rocha
+So Jorge 1 Seo
+28980450 Vieira / PA'),
+('1206', '1', 'Aeroporto Maria Alice Azevedo, 8
+Jaqueline
+83080674 Caldeira / MG'),
+('1207', '3', 'Residencial de Silveira, 22
+Jardim Felicidade
+92731-305 Martins / AM'),
+('1208', '1', 'Aeroporto Correia, 40
+lvaro Camargos
+49985-182 Ramos de Ferreira / BA'),
+('1209', '2', 'Estao Oliveira, 83
+Vila Madre Gertrudes 3 Seo
+08755443 Gomes / AL'),
+('1210', '5', 'rea de Carvalho, 870
+Vila Real 1 Seo
+88814-945 Arago do Galho / PB'),
+('1211', '1', 'Residencial Isis Ramos, 76
+Laranjeiras
+97513751 Sales / ES'),
+('1212', '4', 'Colnia Davi Lucca Costa, 1
+Candelaria
+23010597 Cunha / MT'),
+('1213', '4', 'Rua de Vieira, 68
+Marola
+61175221 Dias de Gois / RJ'),
+('1214', '3', 'Colnia Joo Vitor Castro, 976
+Marieta 1 Seo
+32733092 Sales do Campo / AC'),
+('1215', '3', 'Viaduto Silva, 91
+Nova Gameleira
+00524720 Nogueira do Amparo / RN'),
+('1216', '2', 'Feira Lorenzo Rocha, 96
+Ouro Preto
+07859889 Nascimento / RN'),
+('1217', '2', 'Ncleo da Rocha, 86
+Esperana
+31624799 Cavalcanti do Campo / AL'),
+('1218', '3', 'Campo Moura, 69
+Vila Nova Gameleira 1 Seo
+21857757 Oliveira Grande / AC'),
+('1219', '5', 'Estao Lopes, 42
+Boa Esperana
+57128-437 Duarte de Arago / AM'),
+('1220', '3', 'Ladeira Gabriel Arajo, 40
+Vila Coqueiral
+64478565 Peixoto / RN'),
+('1221', '4', 'Condomnio Moraes, 66
+Jardim Guanabara
+22885-250 Souza / RJ'),
+('1222', '1', 'Chcara Anthony Rezende, 273
+Camponesa 2 Seo
+00510-946 Santos / MG'),
+('1223', '1', 'Estrada de Nunes, 18
+Vila Engenho Nogueira
+04996129 Freitas de Oliveira / RJ'),
+('1224', '5', 'Vereda de Pinto, 71
+Guarat
+17460-764 Nascimento / MS'),
+('1225', '2', 'Passarela de Teixeira, 94
+Ambrosina
+55857662 Campos do Oeste / BA'),
+('1226', '5', 'Alameda Gomes, 54
+Vila Piratininga Venda Nova
+14265-803 Gonalves Grande / SC'),
+('1227', '4', 'Largo Barros, 339
+Mariano De Abreu
+14365-981 Cunha / BA'),
+('1228', '1', 'Favela de Pereira, 42
+Vila Minaslandia
+13294-721 Souza / RS'),
+('1229', '5', 'Conjunto Letcia da Rocha, 19
+Planalto
+03834307 da Cunha / AM'),
+('1230', '4', 'Viaduto Alves, 43
+Santa Amelia
+73778-925 da Rocha dos Dourados / AM'),
+('1231', '5', 'Setor Pereira, 97
+Vila Trinta E Um De Maro
+82614437 Moraes / MS'),
+('1232', '2', 'Travessa de Monteiro, 12
+Cidade Nova
+16951-548 Novaes da Prata / RS'),
+('1233', '4', 'Viela Sales, 374
+Conjunto Capito Eduardo
+32469134 da Mota / PA'),
+('1234', '3', 'Praia Martins, 6
+Zilah Sposito
+87694-246 da Costa Paulista / MA'),
+('1235', '1', 'Parque Azevedo, 40
+So Pedro
+91338-940 Moreira das Flores / BA'),
+('1236', '3', 'Viela Nunes, 1
+Alta Tenso 1 Seo
+74027266 da Rocha dos Dourados / PB'),
+('1237', '2', 'Esplanada Barros, 32
+Vila Fumec
+15913765 Martins do Amparo / TO'),
+('1238', '5', 'Estao de Cardoso, 34
+Vila Piratininga
+79107-478 Novaes do Oeste / BA'),
+('1239', '4', 'Viela Nogueira, 51
+Vila Real 2 Seo
+31768-507 Nascimento Alegre / ES'),
+('1240', '3', 'Vale de Moreira
+Flamengo
+20547-985 Azevedo de Duarte / TO'),
+('1241', '5', 'Via de Nogueira, 236
+Tiradentes
+92636-660 Moreira de da Costa / MT'),
+('1242', '1', 'Residencial Rezende, 8
+Jardim Do Vale
+35241219 Caldeira / ES'),
+('1243', '2', 'Campo Anthony Azevedo, 709
+Santa Amelia
+49232-287 Ramos Grande / RO'),
+('1244', '2', 'Residencial de Pereira, 240
+Vila Unio
+61741-153 Dias de Monteiro / AM'),
+('1245', '2', 'Vale Cardoso, 67
+Dona Clara
+30278-372 Rezende de da Rocha / AP'),
+('1246', '2', 'Praa Brenda da Rocha
+Beija Flor
+62968100 da Cruz / PE'),
+('1247', '3', 'Favela Maria Alice Monteiro, 432
+Atila De Paiva
+41282-284 Melo do Sul / PI'),
+('1248', '3', 'Quadra Nina Fogaa, 17
+Vila Jardim Leblon
+06365138 Dias / RN'),
+('1249', '2', 'Colnia de Oliveira, 37
+Nossa Senhora De Ftima
+36022-542 Lima / PE'),
+('1250', '4', 'Recanto Barbosa, 99
+Conjunto Paulo Vi
+66602-898 da Cunha / PE'),
+('1251', '3', 'Via Farias, 4
+Olaria
+41119955 da Cunha Alegre / PI'),
+('1252', '1', 'Trecho de Fogaa, 6
+So Francisco Das Chagas
+35919008 da Mota / PR'),
+('1253', '5', 'Colnia Martins, 18
+Leonina
+44179-773 Carvalho / AC'),
+('1254', '2', 'Estrada Pereira, 47
+Itaipu
+10574-733 Arago da Serra / SE'),
+('1255', '4', 'Lagoa das Neves, 9
+Santa Cruz
+04249-445 Nogueira Paulista / AL'),
+('1256', '2', 'Jardim Nicole Moura
+Jardinpolis
+08268-083 das Neves / PR'),
+('1257', '2', 'Chcara Dias, 7
+Vila Independencia 2 Seo
+39481481 Fernandes de Cunha / PE'),
+('1258', '3', 'Condomnio de Campos, 73
+Varzea Da Palma
+04795-470 Fernandes do Oeste / ES'),
+('1259', '4', 'Rodovia Vieira, 14
+Camponesa 1 Seo
+76318-243 Barbosa de Duarte / PB'),
+('1260', '5', 'Trecho de Moraes, 48
+Jatob
+93033552 Freitas da Prata / BA'),
+('1261', '3', 'Trevo de Jesus
+Novo Ouro Preto
+49952440 Rezende de Duarte / DF'),
+('1262', '1', 'Praa de Castro, 27
+Pantanal
+20092004 Freitas do Galho / RS'),
+('1263', '3', 'Vereda Santos, 35
+pia
+24563-826 Rezende do Norte / TO'),
+('1264', '1', 'Rodovia de Pires, 78
+Jardim Leblon
+82037-550 Nascimento do Amparo / PR'),
+('1265', '3', 'Chcara Arago, 33
+Vitoria
+94537-665 Campos do Campo / ES'),
+('1266', '2', 'Rua Souza, 68
+Minas Brasil
+16534-476 Nunes / SE'),
+('1267', '4', 'Travessa Ana Jlia Moreira
+Cachoeirinha
+86463488 Silva da Serra / SP'),
+('1268', '2', 'Trevo de Almeida, 1
+Maraj
+60865-771 Nascimento / PR'),
+('1269', '2', 'Aeroporto de Costela, 41
+Satelite
+65157165 Moura / PA'),
+('1270', '2', 'Trevo Murilo Moreira, 9
+Vitoria Da Conquista
+62023037 Duarte / AC'),
+('1271', '5', 'Chcara Jesus, 755
+Vila Atila De Paiva
+12911030 Gonalves de da Paz / SE'),
+('1272', '1', 'Lago da Mata, 627
+Vila Barragem Santa Lcia
+20350439 da Rosa / AL'),
+('1273', '2', 'Largo Duarte, 90
+Europa
+88427-403 Gomes do Norte / RN'),
+('1274', '5', 'Estrada Castro, 8
+Conjunto Lagoa
+16060-599 Carvalho / DF'),
+('1275', '5', 'Fazenda de Fernandes, 456
+Madri
+47231-857 Rocha / GO'),
+('1276', '5', 'Viaduto de Teixeira, 11
+Varzea Da Palma
+12317989 Viana Alegre / MS'),
+('1277', '5', 'Setor Pedro Gomes, 6
+Vila Nova Gameleira 2 Seo
+26045-098 Barbosa das Flores / AP'),
+('1278', '1', 'Travessa de da Cunha, 2
+Conjunto Jatoba
+41347-318 Pinto Verde / MS'),
+('1279', '4', 'Condomnio de Teixeira, 22
+Ventosa
+60783-098 da Rocha de Rezende / PA'),
+('1280', '2', 'Campo de da Mata, 19
+Barreiro
+87945-095 Monteiro / RR'),
+('1281', '5', 'Trecho de Rocha, 74
+Conjunto Minas Caixa
+61192-918 Moraes / TO'),
+('1282', '2', 'Rua Helosa Dias, 7
+Monte So Jos
+87118-179 Mendes / ES'),
+('1283', '5', 'Ncleo Campos, 50
+Vila So Geraldo
+42158818 Fogaa / MG'),
+('1284', '4', 'Travessa de Oliveira, 245
+Santa Efignia
+78081204 Moura do Amparo / PR'),
+('1285', '3', 'Ladeira Oliveira, 4
+Maria Goretti
+43941966 Castro / DF'),
+('1286', '3', 'Largo Pedro Miguel Silva, 95
+Prado
+62252832 Nascimento de Almeida / PR'),
+('1287', '5', 'Stio de da Mota, 49
+Providencia
+37932-260 Viana / AP'),
+('1288', '3', 'Ncleo Cavalcanti, 3
+Boa Vista
+33316-278 Mendes / SE'),
+('1289', '3', 'Morro Rodrigues
+Vila Madre Gertrudes 4 Seo
+20898755 da Rosa / ES'),
+('1290', '3', 'Recanto Luiz Miguel da Costa
+Concrdia
+82105714 Caldeira / DF'),
+('1291', '3', 'Campo da Conceio, 748
+Frei Leopoldo
+16404653 Farias Verde / CE'),
+('1292', '5', 'Ladeira Pietro Cavalcanti, 349
+Jardim So Jos
+01283-639 Arago de da Paz / CE'),
+('1293', '4', 'Trecho de Pires, 67
+Satelite
+46824-538 Caldeira de Lopes / RN'),
+('1294', '1', 'Passarela Davi Rocha, 113
+Corao Eucarstico
+53938-753 Souza do Norte / RO'),
+('1295', '5', 'Distrito de Martins, 25
+Tnel De Ibirit
+18661-474 Souza Alegre / MS'),
+('1296', '5', 'Trevo Barbosa, 4
+Jatob
+25355-844 Martins das Flores / TO'),
+('1297', '3', 'Ladeira Maria Gonalves, 2
+Camargos
+75934-749 Duarte / PR'),
+('1298', '3', 'Residencial de Cunha, 15
+Ouro Preto
+77037693 da Rocha / RN'),
+('1299', '2', 'Feira de Ferreira
+Flavio De Oliveira
+82700-293 Carvalho Grande / SP'),
+('1300', '5', 'Aeroporto Catarina Silveira
+Vila Mantiqueira
+31875996 Silveira do Amparo / RO'),
+('1301', '3', 'Loteamento Melo, 54
+Vila Copasa
+91703-765 da Costa do Norte / MA'),
+('1302', '1', 'Ladeira Oliveira
+Santa Tereza
+11542-673 Arajo / PI'),
+('1303', '1', 'Chcara Martins, 40
+Santa Helena
+62614-514 da Cruz das Flores / ES'),
+('1304', '1', 'Via de Costela, 61
+Vila Atila De Paiva
+51476-919 Sales Alegre / RS'),
+('1305', '1', 'Fazenda de Cardoso, 38
+Trevo
+60609832 Cardoso / TO'),
+('1306', '4', 'Passarela Cunha
+Pedreira Padro Lopes
+93755895 Silva da Serra / PA'),
+('1307', '2', 'Stio de Nunes, 136
+Itaipu
+46152120 Correia / SC'),
+('1308', '3', 'Passarela Vitria Porto, 31
+Parque So Jos
+76125-469 Arajo / RS'),
+('1309', '3', 'Viaduto Evelyn da Cruz, 27
+Vila Da Luz
+79305632 da Mata da Mata / AM'),
+('1310', '1', 'Conjunto de Gomes, 21
+Liberdade
+39460-777 Viana de Alves / RR'),
+('1311', '4', 'Vereda Clara das Neves, 626
+Nossa Senhora Aparecida
+25938475 Barros / AL'),
+('1312', '2', 'Viela da Luz, 18
+Conjunto Bonsucesso
+87653606 Moraes de Cardoso / RR'),
+('1313', '3', 'Estao de da Cruz, 85
+Santana Do Cafezal
+45785292 Barbosa Grande / PI'),
+('1314', '4', 'Jardim Fernandes
+Funcionrios
+83954776 da Mata de Rocha / AP'),
+('1315', '1', 'Ladeira Costa, 1
+Calafate
+17847419 Alves / PE'),
+('1316', '1', 'Campo da Paz, 60
+Das Industrias I
+11939-261 Moraes / DF'),
+('1317', '2', 'Vila Pinto, 59
+Minas Caixa
+70907-820 Gomes da Serra / SE'),
+('1318', '1', 'Parque de Almeida, 13
+Ademar Maldonado
+41176381 Martins / RS'),
+('1319', '3', 'Ncleo Eduardo Fernandes
+Acaba Mundo
+36519-225 Peixoto das Pedras / AL'),
+('1320', '5', 'Praia Moraes, 73
+Ribeiro De Abreu
+55495-265 Fogaa Paulista / SE'),
+('1321', '2', 'Conjunto Sophia Rocha, 180
+So Salvador
+09970-307 Duarte da Praia / RR'),
+('1322', '2', 'Ladeira de da Paz
+Belmonte
+96336338 Ramos / BA'),
+('1323', '3', 'Favela de Novaes
+Maria Helena
+91662-024 Peixoto do Norte / PB'),
+('1324', '1', 'Esplanada Teixeira, 796
+Planalto
+04652408 Viana / RJ'),
+('1325', '4', 'Recanto de da Cunha, 70
+Conjunto Califrnia Ii
+60297589 da Paz / AP'),
+('1326', '2', 'Largo Vitor Gabriel Cardoso, 85
+Itatiaia
+01244-772 Nunes / MG'),
+('1327', '1', 'Rua de Mendes, 29
+Gameleira
+89653705 Alves / BA'),
+('1328', '3', 'rea de da Costa, 27
+Bonfim
+46777513 Rocha / PA'),
+('1329', '3', 'Esplanada Moraes, 57
+Vitoria Da Conquista
+63336778 Nogueira da Praia / MT'),
+('1330', '5', 'Passarela de da Cunha, 50
+Copacabana
+77290328 Barbosa / RR'),
+('1331', '4', 'Viela da Cruz, 83
+Vila Paquet
+49087623 Vieira da Mata / AM'),
+('1332', '5', 'Setor da Costa, 48
+So Joo Batista
+69681473 Souza / GO'),
+('1333', '5', 'Trecho Miguel Rodrigues, 358
+Nossa Senhora Do Rosrio
+61116-916 Nascimento / RS'),
+('1334', '4', 'Rua Costela
+So Luiz
+57345-952 Sales de Duarte / PR'),
+('1335', '1', 'Travessa Nathan Silveira
+Solar Do Barreiro
+62532262 Barros / RO'),
+('1336', '4', 'Rodovia Eduarda Mendes, 82
+Vila Copacabana
+42995313 Melo / DF'),
+('1337', '5', 'Estao Juliana Farias, 12
+Maraj
+07980-437 Ramos / AM'),
+('1338', '4', 'Vila de Duarte, 39
+Cu Azul
+80633571 Freitas / AL'),
+('1339', '2', 'Condomnio Diogo Martins, 56
+Tupi A
+67867-962 Almeida / PR'),
+('1340', '4', 'Morro de Melo
+Graja
+53826148 Novaes dos Dourados / DF'),
+('1341', '5', 'Via Marcela Rodrigues, 59
+Laranjeiras
+25803-963 Duarte / AM'),
+('1342', '4', 'Trecho de Rodrigues
+Vila Nova Dos Milionarios
+91578-624 Rezende / RJ'),
+('1343', '1', 'Estao Levi da Cunha, 28
+So Francisco Das Chagas
+05565-854 Castro do Galho / AM'),
+('1344', '2', 'Viela Silva, 177
+Novo Aaro Reis
+35372-513 Moreira / MT'),
+('1345', '4', 'Morro Pedro Pinto, 49
+Savassi
+92950-438 Dias da Serra / BA'),
+('1346', '5', 'Aeroporto Pedro Henrique Nogueira, 20
+Alto Barroca
+05744-786 Moreira de Cavalcanti / TO'),
+('1347', '4', 'Condomnio da Luz, 48
+Conjunto Jardim Filadlfia
+75803-159 Porto do Galho / SP'),
+('1348', '5', 'Passarela de Correia, 56
+Lindia
+86341887 Vieira de Jesus / RO'),
+('1349', '2', 'Condomnio Ribeiro, 9
+Suzana
+54565-862 Castro / PR'),
+('1350', '3', 'Trecho Arajo, 65
+Vila Ecolgica
+85431-412 Ribeiro / CE'),
+('1351', '3', 'Vila Noah Freitas, 12
+Conjunto Paulo Vi
+27215955 Dias / DF'),
+('1352', '4', 'Passarela Santos, 38
+Novo Glria
+00331278 Barbosa / AP'),
+('1353', '3', 'Vila Isis da Paz, 442
+Conjunto Califrnia Ii
+63578243 Oliveira / RO'),
+('1354', '1', 'Alameda Isabella Barros, 94
+Conjunto Califrnia I
+12702-876 Ribeiro de Gois / TO'),
+('1355', '2', 'Passarela da Rocha, 44
+Ipe
+38654026 Viana / PR'),
+('1356', '2', 'Aeroporto de Lopes, 885
+Jardim Guanabara
+95495-322 Cardoso / DF'),
+('1357', '5', 'Travessa de Nogueira, 16
+Vila Da ria
+38926275 Melo de da Mota / GO'),
+('1358', '2', 'Conjunto Gomes, 955
+Vila Inestan
+02591399 Gomes de Lima / ES'),
+('1359', '4', 'Passarela de da Paz, 538
+Conjunto Paulo Vi
+41452-136 Almeida de Nogueira / PA'),
+('1360', '2', 'Vereda de Correia
+Cruzeiro
+11922622 Martins / AC'),
+('1361', '4', 'Rua Pereira
+Santo Agostinho
+85198-461 Nascimento / AL'),
+('1362', '2', 'Avenida da Mata, 81
+Luxemburgo
+17347-605 Azevedo Verde / GO'),
+('1363', '5', 'Viela Joo Miguel da Paz, 378
+Buraco Quente
+55214-264 da Mata / MS'),
+('1364', '5', 'Trecho Freitas, 18
+Cidade Nova
+40025-677 Pires / RN'),
+('1365', '3', 'Lagoa Costela, 46
+Unio
+01134-966 Novaes / MG'),
+('1366', '5', 'Travessa Arajo, 61
+Caiaras
+42759-612 Gonalves Paulista / CE'),
+('1367', '5', 'Setor Ribeiro, 2
+Jardinpolis
+56891824 da Conceio / DF'),
+('1368', '5', 'Trecho Vicente Fogaa, 112
+Ribeiro De Abreu
+90071-828 Correia / PA'),
+('1369', '4', 'Morro de Sales
+Aaro Reis
+96261328 Lima / RJ'),
+('1370', '3', 'Estrada de Ramos
+Chcara Leonina
+10755-986 Rodrigues / MT'),
+('1371', '2', 'Largo Vieira, 46
+So Paulo
+71642644 Pires / RN'),
+('1372', '1', 'Morro de das Neves, 15
+Petropolis
+52552566 Cardoso de Nogueira / DF'),
+('1373', '5', 'Aeroporto de Jesus, 72
+So Benedito
+39974-862 Farias de Gois / MA'),
+('1374', '4', 'Morro Noah Nogueira, 39
+Cenaculo
+49572708 Lima / PI'),
+('1375', '3', 'Loteamento de Cardoso, 95
+Tiradentes
+97233714 Cardoso de Porto / AC'),
+('1376', '4', 'Ladeira de Santos
+Flamengo
+42476180 Ferreira de das Neves / SE'),
+('1377', '2', 'Fazenda de Souza, 8
+Vila Da Luz
+17804-216 Carvalho do Norte / AM'),
+('1378', '5', 'Vereda Amanda Castro, 82
+Mirtes
+71914-271 Gomes / SP'),
+('1379', '5', 'Trevo Silva, 853
+Renascena
+56950047 Mendes do Oeste / MT'),
+('1380', '2', 'Lago Pereira, 13
+Jatob
+37929511 Gomes de Gois / AL'),
+('1381', '3', 'Estao de Teixeira, 532
+Vila De S
+19492-671 da Mata / MA'),
+('1382', '4', 'Esplanada de Cardoso, 6
+So Jos
+54815658 Rezende Verde / DF'),
+('1383', '1', 'Feira da Costa, 86
+Itaipu
+35342210 Nunes das Pedras / MS'),
+('1384', '5', 'Feira Lopes, 424
+Vila Independencia 3 Seo
+10417915 Silva / AL'),
+('1385', '2', 'Campo Maria Fernanda Barbosa
+Camponesa 1 Seo
+19651638 Cavalcanti de Novaes / AP'),
+('1386', '2', 'Conjunto Isabel Moura, 90
+Vila Independencia 1 Seo
+38603928 Correia das Flores / CE'),
+('1387', '1', 'Ncleo de Vieira, 94
+Vila Cloris
+38463-550 Rezende Alegre / RS'),
+('1388', '2', 'Ptio de Pereira, 8
+Chcara Leonina
+85568-527 Moraes do Amparo / AC'),
+('1389', '4', 'Conjunto Marcelo Rodrigues, 22
+Nossa Senhora De Ftima
+51828954 da Paz / RR'),
+('1390', '3', 'Viela Enzo Gabriel Sales, 65
+Vila Santa Monica 1 Seo
+43209-904 Gomes / PI'),
+('1391', '2', 'Praa de Fogaa, 33
+Santa Efignia
+25395-837 Porto de da Mota / RR'),
+('1392', '5', 'Parque Maria Alice Santos, 78
+Lagoinha
+09713609 da Conceio Grande / PB'),
+('1393', '5', 'Residencial de Castro, 31
+Vista Do Sol
+77630970 da Rocha / MS'),
+('1394', '3', 'Colnia Maria Vitria Cardoso, 78
+Milionario
+28060-900 Fernandes do Sul / TO'),
+('1395', '3', 'Vale Cunha, 1
+Vila Madre Gertrudes 3 Seo
+62939898 Martins / RO'),
+('1396', '3', 'Vale Nathan Almeida
+Cdi Jatoba
+64483-865 Ribeiro / PE'),
+('1397', '5', 'Aeroporto de Nascimento, 43
+Satelite
+10813151 Gomes / RJ'),
+('1398', '5', 'Condomnio Joaquim da Rosa
+Graa
+59805307 Carvalho da Serra / MS'),
+('1399', '1', 'Residencial de Costela, 99
+Miramar
+80382-466 Almeida / CE'),
+('1400', '3', 'Stio de Novaes
+Satelite
+04350734 da Cruz / AM'),
+('1401', '2', 'Avenida Diogo Santos
+Maravilha
+31921233 Carvalho Alegre / GO'),
+('1402', '4', 'Largo Arajo, 8
+So Geraldo
+73255586 Fogaa / SE'),
+('1403', '4', 'Ncleo Lima, 54
+Santo Antnio
+99365919 Porto / BA'),
+('1404', '3', 'Quadra Pereira, 74
+So Jorge 1 Seo
+92696-697 Lima da Serra / SP'),
+('1405', '3', 'Favela Cardoso, 3
+Cdi Jatoba
+86137-768 da Rosa de Gois / CE'),
+('1406', '5', 'Estrada de Novaes, 51
+Vila Aeroporto
+59149-500 Ferreira das Pedras / TO'),
+('1407', '5', 'Ptio Joaquim Freitas, 76
+Vila Da Luz
+90237-032 Sales / RS'),
+('1408', '1', 'Trecho de Pires
+Santa Helena
+96810-581 Moreira do Norte / MG'),
+('1409', '3', 'Morro Castro, 69
+Distrito Industrial Do Jatoba
+66062-141 Pinto / PE'),
+('1410', '5', 'Trevo de Farias, 70
+Paraso
+86112-361 da Mota de da Paz / PR'),
+('1411', '5', 'Praia das Neves, 37
+Zilah Sposito
+69515926 Melo / AL'),
+('1412', '2', 'Trevo Pereira, 74
+Ipe
+07097-229 Pinto / GO'),
+('1413', '5', 'Rodovia Martins, 58
+Santa Cruz
+54489-417 Ferreira Alegre / MS'),
+('1414', '5', 'Colnia Gustavo Henrique Vieira, 407
+Vila Antena Montanhs
+83206-169 Caldeira / CE'),
+('1415', '3', 'Setor de Pires, 7
+Planalto
+97314-888 Cunha / SP'),
+('1416', '2', 'Estrada Castro
+Barroca
+08607559 Nogueira de Oliveira / TO'),
+('1417', '1', 'Fazenda Arthur Rezende, 7
+Marieta 3 Seo
+69293754 das Neves da Prata / MT'),
+('1418', '1', 'Avenida Lucas da Mota, 96
+Dom Cabral
+83052458 Pires / MA'),
+('1419', '4', 'Travessa Elisa Rocha, 79
+Venda Nova
+49089-838 da Rosa do Sul / AL'),
+('1420', '3', 'Praia Correia
+Corumbiara
+14212697 Arajo / MG'),
+('1421', '5', 'Recanto de Monteiro, 16
+Salgado Filho
+61689560 da Paz da Prata / RS'),
+('1422', '3', 'Travessa de Cardoso
+Vila Satlite
+47481886 da Rosa / RJ'),
+('1423', '1', 'Ladeira Pedro Lucas Nogueira, 70
+Olhos 
+07044992 Pereira / RN'),
+('1424', '4', 'Residencial Felipe Viana, 6
+Ouro Minas
+79689-983 da Cruz / PR'),
+('1425', '4', 'Praia da Mota, 890
+Vila Santa Rosa
+95073765 Melo da Prata / RS'),
+('1426', '2', 'Setor Rezende, 82
+Vila Engenho Nogueira
+11117-533 da Rosa / PA'),
+('1427', '5', 'Colnia Rezende
+Santa Tereza
+83377025 Freitas dos Dourados / SC'),
+('1428', '3', 'Praa da Mata, 89
+So Vicente
+50513462 Arago / RR'),
+('1429', '1', 'Quadra Danilo Lima, 16
+Granja Werneck
+43174-819 Pereira de Duarte / TO'),
+('1430', '5', 'Praa Ana Correia
+lvaro Camargos
+13374-047 Arajo / ES'),
+('1431', '1', 'Lagoa Caroline Castro, 82
+Garas
+41067-543 Nascimento / BA'),
+('1432', '1', 'Viaduto Fernandes
+Santa Terezinha
+28630732 Lopes do Galho / RS'),
+('1433', '2', 'Praa Maysa Rodrigues, 97
+Vila Atila De Paiva
+77654696 Moura de Moura / PB'),
+('1434', '4', 'Praa Carvalho, 13
+Marmiteiros
+13638857 Cardoso do Amparo / MG'),
+('1435', '5', 'Lago Mendes, 88
+Indai
+57642-515 da Luz Verde / MT'),
+('1436', '2', 'Conjunto de Silveira, 58
+Mirante
+28172-799 Nascimento do Norte / RS'),
+('1437', '1', 'Travessa Isabel da Paz, 29
+Nova Gameleira
+70160204 Peixoto do Oeste / SE'),
+('1438', '5', 'Morro Antnio Moura, 7
+Tiradentes
+98456-931 da Cruz de Rodrigues / RN'),
+('1439', '5', 'Estrada da Mota, 13
+Conjunto Santa Maria
+84644-698 Almeida / PB'),
+('1440', '5', 'Stio Porto, 57
+Vista Do Sol
+68755505 Fernandes / MG'),
+('1441', '4', 'Aeroporto Teixeira
+Vila Formosa
+51668-574 da Mota / RO'),
+('1442', '1', 'Alameda Stephany Silveira, 469
+Vila Olhos 
+19701320 Caldeira de Minas / DF'),
+('1443', '3', 'Stio de Barbosa, 87
+Conjunto Califrnia Ii
+71079-808 Castro dos Dourados / MS'),
+('1444', '1', 'Colnia de Nascimento, 7
+Santa Cecilia
+87110-711 Teixeira / RN'),
+('1445', '2', 'Condomnio Carvalho, 48
+Vila Inestan
+62838-839 Almeida / SP'),
+('1446', '1', 'Recanto Paulo Carvalho, 81
+Nova Floresta
+14501-824 Pinto Paulista / SE'),
+('1447', '5', 'Colnia Natlia Cavalcanti, 6
+Vila Canto Do Sabi
+86024197 Rocha de Fogaa / SE'),
+('1448', '4', 'Ptio Pietro Rocha, 50
+Cruzeiro
+33819-551 Castro de Mendes / MA'),
+('1449', '2', 'Trevo Azevedo, 97
+Petropolis
+44035869 Martins / RR'),
+('1450', '4', 'Rodovia de Almeida, 3
+Serra Do Curral
+56746-152 Cardoso do Campo / SC'),
+('1451', '2', 'Ncleo de Rocha, 12
+Vila Sumar
+87167-331 Alves / MS'),
+('1452', '3', 'Campo Marcos Vinicius Teixeira
+Confisco
+08320-066 Nunes / RR'),
+('1453', '2', 'Ncleo da Cruz, 3
+Copacabana
+37497439 Gonalves da Prata / SC'),
+('1454', '4', 'Estao Renan Barbosa, 94
+Laranjeiras
+63645-542 Viana da Serra / MA'),
+('1455', '4', 'Avenida Teixeira, 30
+Sion
+08120-931 Carvalho / RS'),
+('1456', '3', 'Viela de Oliveira, 737
+Joo Alfredo
+75202-422 Costa / MG'),
+('1457', '4', 'Ladeira Sales
+Alto Barroca
+52076-957 Rezende das Flores / AP'),
+('1458', '4', 'Distrito Moreira
+Nova America
+48343-798 Rezende / GO'),
+('1459', '2', 'Lagoa Eduarda Pereira, 30
+Colgio Batista
+65080-627 Pires do Galho / MS'),
+('1460', '1', 'Campo Isadora Porto, 66
+Nova Pampulha
+76989598 Duarte / PB'),
+('1461', '2', 'Setor Diogo Alves, 100
+Vila Santo Antnio
+52383-519 Lopes da Prata / AP'),
+('1462', '4', 'Condomnio Emanuel Castro, 40
+Distrito Industrial Do Jatoba
+55031-436 das Neves de Viana / PE'),
+('1463', '5', 'Estrada da Rosa, 9
+Paulo Vi
+99538-081 Costela / MS'),
+('1464', '4', 'Avenida de Duarte, 39
+Alpio De Melo
+68799-390 Correia / MA'),
+('1465', '5', 'Travessa Mendes, 87
+Olhos 
+31532-576 Gonalves / RJ'),
+('1466', '1', 'Favela Pires, 6
+Casa Branca
+84189-653 da Conceio / DF'),
+('1467', '2', 'Ladeira de Ribeiro, 16
+Vila Copasa
+03951-499 Silva / AP'),
+('1468', '2', 'Rua Joo Felipe Fogaa, 18
+Caiaras
+67747199 Almeida de Caldeira / PA'),
+('1469', '5', 'Praa de da Rocha, 3
+Lourdes
+01221-863 Rodrigues / PR'),
+('1470', '2', 'Ncleo de Cavalcanti, 7
+Maravilha
+62241806 Costela de Minas / BA'),
+('1471', '4', 'Distrito de Souza, 95
+Vila Satlite
+57228767 da Rocha da Praia / RS'),
+('1472', '1', 'Travessa Dias, 51
+So Francisco Das Chagas
+46153-990 da Luz / RJ'),
+('1473', '3', 'Via Vitor Gabriel da Cunha
+Boa Esperana
+38439-907 Alves de Gois / MS'),
+('1474', '1', 'Morro Valentina Caldeira, 67
+Campo Alegre
+89372950 Arajo Alegre / RJ'),
+('1475', '4', 'Favela Ana Ferreira, 73
+Nova Cachoeirinha
+63873-626 da Mata de Rezende / TO'),
+('1476', '3', 'Passarela Fogaa, 34
+Laranjeiras
+46047040 Teixeira / PE'),
+('1477', '5', 'Quadra Arajo, 26
+Alto Das Antenas
+43060148 Barbosa / PR'),
+('1478', '1', 'Trevo Farias, 4
+Vila Suzana Primeira Seo
+32056-280 Peixoto / PR'),
+('1479', '2', 'Feira Novaes, 249
+Conjunto Taquaril
+48792-481 Nunes / RJ'),
+('1480', '3', 'Rua Elisa Souza, 2
+Marieta 1 Seo
+27556097 Martins da Serra / AC'),
+('1481', '2', 'Lagoa Vieira, 61
+Boa Esperana
+92698554 Campos / PI'),
+('1482', '5', 'Ncleo de Caldeira, 575
+Nossa Senhora De Ftima
+28527-870 Lima do Amparo / RS'),
+('1483', '5', 'Ncleo Rafaela Arago, 17
+Madre Gertrudes
+57734-797 Rezende Verde / PR'),
+('1484', '1', 'Largo da Cruz, 27
+Nossa Senhora Da Conceio
+93076790 Vieira / MS'),
+('1485', '3', 'Viaduto de Costa
+Jardim Felicidade
+62478619 Costela / RN'),
+('1486', '4', 'Esplanada Gomes
+Vila Pinho
+43524-975 Novaes / PI'),
+('1487', '2', 'Conjunto Olivia Barbosa, 334
+Cnego Pinheiro 1 Seo
+89804-964 Nogueira de Nunes / SC'),
+('1488', '1', 'Ladeira Luigi Nogueira, 57
+Caiaras
+25654330 Arago Verde / RO'),
+('1489', '4', 'Rodovia de Fernandes, 7
+Leonina
+79590718 Correia da Prata / BA'),
+('1490', '4', 'Vila Pietra da Mata, 48
+So Tomaz
+79595608 Monteiro de Moura / PB'),
+('1491', '2', 'Lago Beatriz Gomes
+Santo Agostinho
+46377929 da Mata do Oeste / TO'),
+('1492', '4', 'Largo Ana Vitria da Paz
+Beira Linha
+46846-296 Barbosa dos Dourados / CE'),
+('1493', '3', 'Avenida Carvalho, 21
+Jardim Montanhs
+85215-088 Caldeira / SP'),
+('1494', '3', 'Estao Silva, 14
+Nova Floresta
+79297967 Almeida / AL'),
+('1495', '3', 'Vila de Nunes, 88
+Dom Joaquim
+57524871 Santos / ES'),
+('1496', '1', 'Fazenda de da Luz, 24
+Santo Antnio
+05742551 Lopes / RN'),
+('1497', '1', 'Morro de Porto, 54
+Coqueiros
+92802315 Mendes / TO'),
+('1498', '1', 'Alameda Luana Cardoso, 43
+Primeiro De Maio
+85717-719 Barros / SC'),
+('1499', '1', 'Aeroporto da Luz, 43
+Nova Esperana
+34127415 Cunha / AP'),
+('1500', '3', 'Campo Amanda Arago, 10
+Vila Da Luz
+58846775 Pinto / AL'),
+('1501', '3', 'Recanto da Costa, 26
+Mirante
+42233259 Cardoso do Galho / PB'),
+('1502', '3', 'Residencial Duarte, 11
+Santa Efignia
+01746-023 Vieira / ES'),
+('1503', '2', 'Campo de das Neves, 662
+Conjunto Jardim Filadlfia
+36722113 Arago / RS'),
+('1504', '2', 'Quadra Maria Luiza Melo, 875
+Horto Florestal
+13290-118 Peixoto Alegre / AC'),
+('1505', '5', 'Recanto Raquel Moreira, 84
+Conjunto Paulo Vi
+49584-016 Correia dos Dourados / SP'),
+('1506', '4', 'Recanto de da Paz
+Ouro Minas
+59030408 Pinto / BA'),
+('1507', '5', 'Stio Almeida, 71
+Piratininga
+89798281 Caldeira de Pires / AC'),
+('1508', '4', 'Feira de da Paz, 57
+Das Industrias I
+41319724 Cunha / MT'),
+('1509', '2', 'Residencial de Vieira
+Parque So Pedro
+54295850 Viana de Jesus / RJ'),
+('1510', '2', 'Setor Thales Cunha, 66
+Casa Branca
+59233378 Azevedo / AM'),
+('1511', '2', 'Ncleo Azevedo, 92
+Pongelupe
+39489574 Barros / BA'),
+('1512', '5', 'Setor da Cunha, 39
+Parque So Jos
+36894-864 da Conceio do Campo / RR'),
+('1513', '2', 'Passarela Cunha, 62
+Caetano Furquim
+66599618 Cavalcanti Verde / SP'),
+('1514', '5', 'Aeroporto de da Cruz
+Serrano
+25814-591 Silva Alegre / TO'),
+('1515', '3', 'Condomnio de Lopes, 746
+Belmonte
+43650-741 Cavalcanti da Mata / PR'),
+('1516', '1', 'Lagoa de Barros, 62
+Suzana
+34665-568 da Mota da Prata / RJ'),
+('1517', '5', 'Lago da Rocha, 81
+Renascena
+17470-654 Almeida / RJ'),
+('1518', '5', 'Colnia Gonalves, 46
+Cachoeirinha
+41785837 Martins do Galho / ES'),
+('1519', '3', 'Lagoa Emilly Correia
+Vitoria Da Conquista
+03182838 Sales de Minas / RR'),
+('1520', '5', 'Chcara Helena Ferreira, 8
+Conjunto Bonsucesso
+27828-048 Duarte / MG'),
+('1521', '4', 'Rodovia Almeida, 64
+Cinquentenrio
+32687736 Pires do Campo / CE'),
+('1522', '5', 'Quadra Sabrina Rezende, 36
+Teixeira Dias
+03401-626 Cunha da Praia / MA'),
+('1523', '1', 'Quadra Luiza Vieira, 513
+Buraco Quente
+34468-604 Sales / DF'),
+('1524', '1', 'Chcara Luiz Gustavo Rodrigues, 63
+Jatob
+81788342 Correia da Prata / MA'),
+('1525', '5', 'Trevo Maria Fernanda Jesus
+Jardim Do Vale
+74426-197 Lopes / SP'),
+('1526', '3', 'Aeroporto Ana Beatriz Viana, 91
+Vila Da Luz
+72323400 Ferreira do Oeste / DF'),
+('1527', '2', 'Passarela Nogueira, 67
+Concrdia
+90875959 Farias / RO'),
+('1528', '1', 'Stio Lucas Castro, 601
+Bandeirantes
+59508-667 Gomes / PA'),
+('1529', '4', 'Travessa Pinto, 89
+Vila Novo So Lucas
+28892682 Jesus / RS'),
+('1530', '3', 'Lagoa Lvia Pires, 91
+Vila Antena Montanhs
+61537-887 da Luz do Galho / AL'),
+('1531', '3', 'Chcara Sofia Castro, 29
+Luxemburgo
+53719-234 da Mota / MG'),
+('1532', '2', 'Parque de Gonalves, 303
+Vila Calafate
+35054652 Pinto de Almeida / RR'),
+('1533', '1', 'Parque de Dias, 33
+Santa Maria
+51472-033 Correia de da Paz / MS'),
+('1534', '3', 'Via Santos, 76
+Vila Novo So Lucas
+57774598 Costa de Minas / RN'),
+('1535', '5', 'Estrada Lavnia Peixoto, 7
+Pousada Santo Antonio
+76381-616 Rocha da Praia / AC'),
+('1536', '3', 'Parque Elisa da Conceio, 78
+Mariano De Abreu
+14983-424 Cardoso da Praia / MS'),
+('1537', '2', 'Condomnio Larissa Melo, 19
+Jaragu
+57487-826 Cavalcanti / RO'),
+('1538', '5', 'Residencial Joo Vitor Cardoso, 2
+Vila Satlite
+14864572 Jesus da Mata / DF'),
+('1539', '5', 'Via Costa, 98
+Cardoso
+40235482 Martins / CE'),
+('1540', '1', 'Loteamento Freitas, 4
+Conjunto Jardim Filadlfia
+00421959 Cunha / CE'),
+('1541', '2', 'Parque Gabriela Gonalves, 1
+Boa Viagem
+46968858 da Mota / RS'),
+('1542', '1', 'Morro Stephany Almeida, 32
+Vila Santa Rosa
+34490833 da Cruz Alegre / TO'),
+('1543', '5', 'Favela de Costela
+Caiaras
+62215392 Lima da Serra / AM'),
+('1544', '1', 'Lagoa da Paz, 24
+Vila Antena
+36258-822 da Costa Verde / AL'),
+('1545', '4', 'Ncleo Almeida
+Aparecida 7 Seo
+45006-819 da Rocha / DF'),
+('1546', '3', 'Passarela Cardoso, 70
+Unidas
+96045-497 Viana das Flores / SC'),
+('1547', '5', 'Vale Viana, 5
+Cardoso
+29708-025 Rodrigues de Minas / SE'),
+('1548', '3', 'Setor Souza
+Nossa Senhora Aparecida
+83942096 Pinto de Freitas / AL'),
+('1549', '4', 'Alameda Novaes, 194
+Lagoa
+27241-936 da Cruz / PE'),
+('1550', '2', 'Chcara de Peixoto, 55
+Laranjeiras
+60192468 Alves do Oeste / MS'),
+('1551', '5', 'Lagoa Luana Pinto, 44
+Jardim So Jos
+67497-586 Viana / TO'),
+('1552', '4', 'Avenida Cunha, 319
+Custodinha
+73867-494 Rodrigues / PI'),
+('1553', '1', 'Colnia de da Conceio
+Prado
+64265-070 Novaes de Lima / PR'),
+('1554', '1', 'Residencial Gonalves
+Delta
+57716211 Nunes de Minas / BA'),
+('1555', '2', 'Trecho Maria Ceclia Costela, 71
+Oeste
+30648-353 Arago / RR'),
+('1556', '5', 'Residencial Mendes, 5
+Serra Verde
+09581-801 Arago de Minas / RS'),
+('1557', '5', 'Parque Nogueira, 959
+Vila Madre Gertrudes 4 Seo
+49290561 da Rosa / RN'),
+('1558', '2', 'Stio de Moraes, 97
+Oeste
+20242983 da Cruz Alegre / DF'),
+('1559', '3', 'Residencial de da Cruz, 84
+Sagrada Famlia
+62895884 Correia / SP'),
+('1560', '3', 'Favela Evelyn Campos, 317
+Vila Sumar
+41160341 Souza / PB'),
+('1561', '4', 'Praia Peixoto, 37
+Bernadete
+78923-688 da Cunha / RO'),
+('1562', '5', 'Residencial Brenda Nogueira, 5
+Atila De Paiva
+69211-984 Ramos das Flores / MT'),
+('1563', '4', 'Fazenda de Correia, 15
+Tnel De Ibirit
+93737187 Almeida / AC'),
+('1564', '3', 'Alameda Joana Freitas, 97
+Atila De Paiva
+41525739 das Neves / ES'),
+('1565', '4', 'rea Vitria Silveira, 13
+Conjunto Capito Eduardo
+38223050 Viana de Rocha / ES'),
+('1566', '5', 'rea Sales, 1
+Vila Suzana Primeira Seo
+88471-307 Farias / AC'),
+('1567', '4', 'Travessa de Barbosa, 633
+So Bernardo
+21475101 Teixeira / MS'),
+('1568', '4', 'rea Silveira, 60
+Cnego Pinheiro 1 Seo
+73704-947 Fernandes de Fogaa / RJ'),
+('1569', '1', 'Stio Guilherme Oliveira, 87
+Maravilha
+07426-980 Vieira / AM'),
+('1570', '3', 'Trecho Pedro Nunes, 6
+Aparecida
+48652247 Freitas da Prata / RJ'),
+('1571', '2', 'Distrito de Rocha, 50
+Pirineus
+48634-968 Jesus Grande / PA'),
+('1572', '2', 'rea Viana, 571
+Penha
+88843-491 Mendes de da Conceio / SC'),
+('1573', '3', 'Rua de Cunha, 4
+Camargos
+19750570 Vieira / MT'),
+('1574', '3', 'Largo Gabriela da Paz, 24
+Vila Cemig
+46307620 Oliveira / MT'),
+('1575', '5', 'Distrito de Novaes, 37
+Santa Tereza
+21850-102 Viana do Galho / TO'),
+('1576', '4', 'Feira de da Conceio, 22
+Vila Santo Antnio Barroquinha
+06081-984 Silveira Paulista / RJ'),
+('1577', '3', 'Estrada de da Costa, 95
+Santa Rita De Cssia
+27726675 Monteiro de Minas / RR'),
+('1578', '3', 'Setor Pedro Miguel Cardoso, 13
+Universo
+55405-413 Cardoso das Pedras / AP'),
+('1579', '3', 'Lago Eduardo Silva, 57
+Marilandia
+81642-357 Martins de Minas / TO'),
+('1580', '4', 'Passarela Porto
+Horto Florestal
+98244-734 Oliveira / BA'),
+('1581', '1', 'Condomnio de Oliveira, 789
+Santa Lcia
+58890-908 da Costa Alegre / TO'),
+('1582', '3', 'Lago Vieira, 446
+So Marcos
+66953378 Pires Alegre / RN'),
+('1583', '2', 'Campo Correia, 8
+Boa Esperana
+39637853 da Paz de Gois / AP'),
+('1584', '3', 'Trevo de Cavalcanti
+Jardim Guanabara
+73998-987 da Costa / PE'),
+('1585', '2', 'Setor da Mota, 137
+Lajedo
+08842514 da Conceio / MA'),
+('1586', '1', 'Setor de Arajo
+Mangueiras
+57830828 Gonalves do Oeste / AP'),
+('1587', '1', 'Lagoa Arajo, 6
+Ernesto Nascimento
+60295-290 Arago / PE'),
+('1588', '3', 'Estao Pinto
+Novo Glria
+48027217 Arajo / PB'),
+('1589', '1', 'Jardim Yago Nunes
+Barro Preto
+88852627 Campos do Amparo / RN'),
+('1590', '3', 'Fazenda Mendes, 251
+Monte So Jos
+38191941 Silveira de Moreira / SE'),
+('1591', '2', 'Setor das Neves, 94
+Santa Margarida
+45300-224 Moura do Oeste / PE'),
+('1592', '4', 'Setor Costela, 17
+Jardim Vitoria
+63046114 Jesus / RO'),
+('1593', '5', 'Vila Peixoto, 22
+Santa Rita
+33570603 Lopes / RN'),
+('1594', '2', 'Loteamento Gonalves, 267
+Vila Antena Montanhs
+87346-637 Duarte do Galho / RN'),
+('1595', '3', 'Vereda Eduarda Nunes
+Pindorama
+16463835 Correia / PA'),
+('1596', '4', 'Ptio de Santos, 34
+Vila Aeroporto
+29940-531 Pinto Verde / AC'),
+('1597', '1', 'Rodovia de Ferreira, 29
+Conjunto Paulo Vi
+17902-200 Santos das Flores / PB'),
+('1598', '5', 'Chcara Moura, 61
+Fazendinha
+25117012 da Luz Alegre / RO'),
+('1599', '4', 'rea Santos, 7
+Cinquentenrio
+07737-869 Azevedo / SE'),
+('1600', '2', 'rea Duarte
+Cruzeiro
+33537-813 Vieira / PI'),
+('1601', '5', 'Jardim Felipe Correia
+pia
+96450-961 Monteiro / RR'),
+('1602', '3', 'Recanto Moura, 99
+Calafate
+03081-937 Freitas / TO'),
+('1603', '1', 'Largo Farias, 2
+Cidade Nova
+07178-196 Moura do Oeste / AL'),
+('1604', '5', 'Colnia Moreira, 22
+So Gabriel
+90316-770 Mendes / RN'),
+('1605', '3', 'Condomnio de Costa, 46
+Novo Glria
+69277210 da Mata das Pedras / CE'),
+('1606', '2', 'Praa de Duarte, 65
+Esplanada
+25749-000 das Neves / SP'),
+('1607', '1', 'Travessa Lucca Martins, 639
+Lourdes
+48373886 Souza / AM'),
+('1608', '3', 'Ncleo Vitor Gabriel Novaes, 81
+Vila Dos Anjos
+08195421 Moraes / SE'),
+('1609', '5', 'Morro Beatriz Lopes, 74
+Pindura Saia
+70803-488 Duarte de Cardoso / CE'),
+('1610', '5', 'Morro de Viana, 3
+So Jorge 1 Seo
+68187210 Oliveira / AC'),
+('1611', '1', 'Alameda de Jesus, 51
+So Salvador
+08952-651 Correia Verde / GO'),
+('1612', '5', 'Vereda de Ferreira, 703
+Conjunto Capito Eduardo
+17201168 Pires do Galho / SP'),
+('1613', '4', 'Distrito Davi Lucas Melo
+Pousada Santo Antonio
+58859-335 Cardoso Paulista / DF'),
+('1614', '4', 'Lago Isis Souza, 39
+So Jorge 3 Seo
+42560-066 Correia / RR'),
+('1615', '5', 'Lagoa Francisco Arago, 944
+Nova Granada
+99911655 Moura de Barros / AM'),
+('1616', '4', 'Parque de Nunes, 85
+Cinquentenrio
+32357-514 Porto / RR'),
+('1617', '4', 'Feira Porto, 573
+Copacabana
+47228-052 Moreira / MT'),
+('1618', '4', 'rea Rafael da Rosa, 51
+Alto Caiaras
+81472-189 Dias / RR'),
+('1619', '3', 'Aeroporto de Lopes, 365
+Vila Jardim Alvorada
+27405184 das Neves / PA'),
+('1620', '3', 'Alameda Benjamin Ribeiro, 439
+Vila Bandeirantes
+98480306 Gomes de Castro / SC'),
+('1621', '3', 'Vila Nascimento, 55
+Vila Paris
+68261-897 Rocha Grande / RO'),
+('1622', '3', 'Ptio de Santos, 14
+Cidade Jardim
+53786925 da Costa / SC'),
+('1623', '2', 'Chcara Maria Eduarda Costa, 68
+Outro
+38586182 Melo / RN'),
+('1624', '2', 'Distrito de da Rocha, 94
+Joo Alfredo
+26219072 da Conceio / AC'),
+('1625', '5', 'Chcara Marcelo Dias, 9
+Engenho Nogueira
+90922-154 Silveira Alegre / MS'),
+('1626', '5', 'Aeroporto Luiz Gustavo Castro, 9
+Outro
+98789-284 das Neves do Oeste / GO'),
+('1627', '5', 'Via Melo, 66
+Monte So Jos
+23665-117 Pires da Prata / CE'),
+('1628', '3', 'Estrada Cavalcanti, 96
+Califrnia
+65885657 Teixeira / ES'),
+('1629', '2', 'Trecho Ribeiro, 12
+Baro Homem De Melo 2 Seo
+61979-706 Vieira / MS'),
+('1630', '4', 'Distrito Moraes
+Indai
+34930-826 da Rocha / ES'),
+('1631', '4', 'Via de Lopes, 29
+Maria Goretti
+34614-940 da Rosa / AM'),
+('1632', '4', 'Residencial de Castro
+Ferno Dias
+81748-090 da Rocha da Prata / PI'),
+('1633', '3', 'Campo de Nogueira, 15
+Distrito Industrial Do Jatoba
+26439-926 Oliveira Grande / GO'),
+('1634', '2', 'Fazenda Nogueira, 78
+Alto Caiaras
+08017-682 Lima do Sul / RS'),
+('1635', '4', 'Estao Daniel Santos
+Beija Flor
+92428182 Duarte / AL'),
+('1636', '4', 'Chcara da Rosa
+Conjunto Capito Eduardo
+24705-131 Fernandes / PE'),
+('1637', '5', 'Rua de das Neves, 63
+Santa Lcia
+94277224 Silveira / MA'),
+('1638', '1', 'Fazenda de Gonalves, 495
+Cdi Jatoba
+83533883 Nunes da Serra / PR'),
+('1639', '1', 'Parque de Fogaa, 925
+Morro Dos Macacos
+83065841 Almeida / SC'),
+('1640', '4', 'Recanto Lucca Novaes, 3
+Jonas Veiga
+55676-146 Arago / BA'),
+('1641', '5', 'Condomnio Luiz Fernando Rodrigues, 26
+So Francisco Das Chagas
+50573121 Cavalcanti das Pedras / PA'),
+('1642', '3', 'Chcara da Mata, 271
+Flavio Marques Lisboa
+36017096 Castro das Flores / RN'),
+('1643', '5', 'Largo de Pinto, 15
+Santa Helena
+36596-989 Gomes / DF'),
+('1644', '2', 'Quadra Catarina Santos, 14
+Sagrada Famlia
+31750881 Alves de Minas / MS'),
+('1645', '1', 'Lago Kevin Almeida
+Vila Sesc
+47850-948 da Mota / BA'),
+('1646', '2', 'Vereda Castro
+So Jorge 3 Seo
+67886-027 da Mata / AL'),
+('1647', '1', 'Estao Gonalves, 9
+Vila So Dimas
+41517821 Novaes / AL'),
+('1648', '2', 'Favela Rodrigues, 2
+Belvedere
+50145-111 Moraes de Jesus / AP'),
+('1649', '1', 'Parque Rodrigues, 49
+Boa Unio 1 Seo
+67165-256 da Mota de Martins / AC'),
+('1650', '3', 'Alameda Davi Lucca Monteiro, 3
+Lagoa
+87465005 Fogaa / MS'),
+('1651', '1', 'Rodovia Sofia Moreira, 73
+Pedreira Padro Lopes
+25889-670 Jesus do Galho / PB'),
+('1652', '5', 'Trecho de da Cruz, 94
+Cardoso
+99297-079 Barros de Gomes / MT'),
+('1653', '3', 'Viaduto de Vieira, 81
+Conjunto Minas Caixa
+55885339 Fernandes do Oeste / PR'),
+('1654', '2', 'Via de Jesus, 189
+So Francisco Das Chagas
+47986-031 Azevedo / PR'),
+('1655', '1', 'Residencial Caldeira, 53
+Ademar Maldonado
+04095884 da Conceio / PI'),
+('1656', '5', 'Estrada de Santos, 4
+Vila So Joo Batista
+51024-043 Fernandes Verde / PI'),
+('1657', '2', 'Ladeira de das Neves, 430
+Olaria
+05868-759 da Costa das Flores / BA'),
+('1658', '2', 'Vale de Nascimento, 52
+Vila Santa Monica 2 Seo
+15884-539 Rezende / SC'),
+('1659', '3', 'Lago de Arajo, 492
+So Joo
+07719101 Pires / RS'),
+('1660', '3', 'Recanto Nunes, 77
+Vila Trinta E Um De Maro
+19937-566 Nogueira / GO'),
+('1661', '5', 'Jardim Moreira, 56
+Distrito Industrial Do Jatoba
+94495177 Alves de Minas / SC'),
+('1662', '4', 'Fazenda de Freitas, 36
+Penha
+07042449 Castro da Praia / PE'),
+('1663', '3', 'Praia de Melo, 27
+Vila Nova Gameleira 1 Seo
+11110275 Freitas / SC'),
+('1664', '3', 'Conjunto Mendes, 681
+Vera Cruz
+11805-013 da Cruz / RR'),
+('1665', '1', 'Condomnio Brbara Costa, 8
+Ipe
+84242828 Melo de Arajo / SC'),
+('1666', '3', 'Largo Maria Clara Fogaa, 70
+So Gonalo
+10490904 Barros da Serra / SC'),
+('1667', '2', 'Esplanada Isaac Melo
+Serra
+62037-966 Nascimento da Mata / SP'),
+('1668', '3', 'Distrito Alana da Luz, 3
+Miramar
+57951331 das Neves / PR'),
+('1669', '5', 'Morro de Novaes, 60
+Vista Alegre
+52813-679 da Paz / RN'),
+('1670', '1', 'Ladeira de Pinto
+Vila Santo Antnio Barroquinha
+61966-097 Moreira Verde / AM'),
+('1671', '5', 'Jardim de Pinto, 523
+Vila Independencia 1 Seo
+73239426 Azevedo / RJ'),
+('1672', '2', 'Via de Novaes, 530
+Vila Das Oliveiras
+00917-979 da Paz de Cunha / CE'),
+('1673', '4', 'Recanto Luiz Fernando Sales, 883
+So Jorge 2 Seo
+23998905 da Mata / MA'),
+('1674', '3', 'Trevo Costa
+Alto Dos Pinheiros
+04485971 Fernandes / PI'),
+('1675', '2', 'Largo Barbosa
+Jardim Vitoria
+73434489 Alves da Praia / AM'),
+('1676', '2', 'Lago Moura, 88
+Vila Esplanada
+46870302 Moreira / PE'),
+('1677', '2', 'Estao Vieira, 5
+Minas Caixa
+37172786 da Mata / MG'),
+('1678', '3', 'Chcara Gomes, 4
+Eymard
+69900-537 Cardoso / MS'),
+('1679', '3', 'Vereda Mendes, 8
+So Jorge 1 Seo
+39062285 da Rocha de Ribeiro / MA'),
+('1680', '3', 'Setor Samuel da Cunha, 655
+Nossa Senhora Do Rosrio
+50224-333 Carvalho do Amparo / PA'),
+('1681', '5', 'Viela Arajo, 242
+Frei Leopoldo
+21017-283 Azevedo / MT'),
+('1682', '1', 'Rua Ana Jlia Arajo, 7
+Cdi Jatoba
+28629457 Cardoso / MA'),
+('1683', '1', 'Viela Joana Silva, 44
+Nossa Senhora Do Rosrio
+50170-559 Mendes / CE'),
+('1684', '5', 'Lago Isis Ramos, 97
+Vila Vista Alegre
+50601063 da Conceio de Fernandes / SP'),
+('1685', '4', 'Esplanada de Nunes, 39
+Vila Sumar
+84800047 Silva Grande / MG'),
+('1686', '5', 'Parque Barbosa, 58
+Lagoinha
+89308194 Silva de Minas / PR'),
+('1687', '5', 'Setor Martins, 13
+Heliopolis
+41474-919 da Paz do Oeste / MG'),
+('1688', '3', 'Quadra de da Mota, 47
+Vila Formosa
+75831-815 Barbosa da Mata / AP'),
+('1689', '5', 'Via de Barbosa, 50
+Maraj
+85672-440 da Luz / CE'),
+('1690', '1', 'Ladeira Yago Lopes, 11
+Eymard
+99009023 da Paz / MA'),
+('1691', '5', 'Distrito Santos, 3
+So Luiz
+52500-555 Duarte do Campo / ES'),
+('1692', '1', 'Fazenda Moreira, 7
+Vila So Geraldo
+49904889 Fogaa de Porto / SC'),
+('1693', '2', 'Chcara Silveira, 541
+Boa Unio 2 Seo
+58959-753 Azevedo do Galho / TO'),
+('1694', '4', 'Stio Lima, 93
+Lagoa
+05496-363 Porto da Praia / MA'),
+('1695', '1', 'Parque de Alves, 1
+Vila So Paulo
+91952065 Nascimento da Serra / RO'),
+('1696', '2', 'Rodovia Jesus, 67
+Mineiro
+84546139 Cardoso da Mata / RS'),
+('1697', '1', 'Via Moraes, 55
+Vila Nova Gameleira 1 Seo
+61340728 Rodrigues da Serra / RR'),
+('1698', '3', 'Residencial Enzo Gabriel Ferreira, 12
+Vila So Francisco
+70607325 Rezende da Mata / RR'),
+('1699', '5', 'Estrada Fogaa, 79
+Santa Cruz
+14324-921 Gonalves / SP'),
+('1700', '4', 'Estao de Vieira, 15
+Sport Club
+24209-397 da Rosa / RS'),
+('1701', '4', 'Largo de Carvalho, 13
+Zilah Sposito
+54686-209 da Cruz / PR'),
+('1702', '4', 'Viela Camila Correia, 31
+Joo Paulo Ii
+31828852 da Luz dos Dourados / ES'),
+('1703', '3', 'Jardim Gonalves
+Pindorama
+85106521 Viana / TO'),
+('1704', '2', 'Trevo Moura, 2
+Alto Das Antenas
+56724377 Pereira / GO'),
+('1705', '4', 'Favela Cunha, 62
+So Jos
+87585876 Dias / MA'),
+('1706', '2', 'Passarela Helosa Cardoso, 572
+Santa Helena
+75577454 da Mata de Rezende / AP'),
+('1707', '3', 'Estrada Marcos Vinicius Pereira, 91
+Esplanada
+22758071 Dias de Teixeira / TO'),
+('1708', '4', 'Praa Nathan Porto, 979
+Grota
+70254322 Dias de Sales / PA'),
+('1709', '2', 'Viela Pedro Henrique Costa, 94
+Corumbiara
+90390548 Viana / PB'),
+('1710', '2', 'Parque Costela, 8
+Santa Maria
+49390-083 Viana / PI'),
+('1711', '2', 'Residencial Monteiro, 39
+So Sebastio
+00985363 Castro Verde / PI'),
+('1712', '1', 'Alameda Fogaa, 20
+Serra Verde
+87234960 Azevedo do Amparo / PB'),
+('1713', '3', 'Vale Duarte, 30
+Brasil Industrial
+73673867 Melo / SE'),
+('1714', '3', 'Setor Cavalcanti, 93
+Novo Santa Cecilia
+23338-670 Porto / PI'),
+('1715', '4', 'Trevo de Freitas, 83
+Universo
+82160807 Nogueira da Praia / PI'),
+('1716', '3', 'Loteamento Erick Cavalcanti, 758
+Vila Nova Cachoeirinha 3 Seo
+39503-567 Barbosa / SE'),
+('1717', '1', 'Condomnio Renan Almeida, 2
+Olhos 
+30913-525 da Luz / BA'),
+('1718', '3', 'Fazenda Souza, 6
+So Benedito
+92092-340 Teixeira / PI'),
+('1719', '2', 'Morro Freitas, 47
+Floramar
+14645-114 Ramos do Norte / TO'),
+('1720', '3', 'Rodovia Eduardo Barros, 62
+Jardim Montanhs
+14374226 Ferreira / SC'),
+('1721', '3', 'Rodovia Davi Lucca Correia, 64
+So Gonalo
+03812-635 Arago / MG'),
+('1722', '2', 'Ncleo Theo Nogueira, 4
+Graja
+00315020 Dias de Gois / RR'),
+('1723', '1', 'Fazenda Azevedo, 1
+Mirante
+54671373 Costela / RN'),
+('1724', '4', 'Largo da Luz, 42
+Flavio De Oliveira
+35102492 Barbosa de Gois / MT'),
+('1725', '4', 'Vale Cunha, 24
+Nazare
+61684-731 Moreira / DF'),
+('1726', '4', 'Viela de Pereira
+Santa Efignia
+49347052 Caldeira de Martins / AM'),
+('1727', '1', 'Colnia Kamilly Nascimento, 41
+Barreiro
+23007336 Nascimento / GO'),
+('1728', '4', 'Viaduto Teixeira, 88
+Vila Canto Do Sabi
+36691777 Nascimento / AL'),
+('1729', '1', 'Vale Ana Jlia Martins, 57
+Bacurau
+96755-713 Silveira dos Dourados / RS'),
+('1730', '4', 'Travessa de Souza
+Boa Esperana
+47566-893 Arago das Flores / PR'),
+('1731', '4', 'Recanto Lvia Sales, 75
+Mala E Cuia
+14681-355 Mendes / SC'),
+('1732', '2', 'Rodovia de Campos, 30
+Alto Barroca
+43704577 Souza / SC'),
+('1733', '5', 'Praa Porto, 15
+Vila Aeroporto Jaragu
+46509-546 Cardoso / SE'),
+('1734', '2', 'Campo Alice Azevedo, 324
+Caetano Furquim
+07635-378 da Cruz do Sul / CE'),
+('1735', '5', 'Lagoa Esther Santos, 762
+Vera Cruz
+01261293 Gomes / DF'),
+('1736', '4', 'Chcara Santos
+Califrnia
+86753172 Rocha / MT'),
+('1737', '2', 'Setor de Lima, 723
+Gameleira
+05866-945 Arajo / MT'),
+('1738', '5', 'Travessa de Dias, 51
+So Marcos
+29235-831 Moreira / GO'),
+('1739', '4', 'Condomnio Fernandes, 76
+Vila Santa Monica 2 Seo
+52671514 Ribeiro / ES'),
+('1740', '1', 'Estrada Isadora Ramos, 146
+Vila Inestan
+55188-767 Mendes do Galho / AP'),
+('1741', '4', 'Passarela de da Costa, 5
+Silveira
+88239607 Rodrigues / RR'),
+('1742', '4', 'Vale Caldeira, 37
+Madri
+98746-089 Mendes / RS'),
+('1743', '3', 'Rodovia Bruna da Costa, 2
+Vila Paraso
+80471-762 da Conceio / MA'),
+('1744', '2', 'Estao Carvalho, 21
+Garas
+01343294 Ramos / PA'),
+('1745', '1', 'Jardim de Cardoso, 99
+Conjunto Jatoba
+48676178 Ferreira / PE'),
+('1746', '4', 'Aeroporto de Monteiro, 9
+Dom Silverio
+52518-162 da Rocha / AM'),
+('1747', '3', 'Vereda Melo, 552
+Vila Pinho
+30300619 da Paz / CE'),
+('1748', '3', 'Lagoa Nunes
+Jardim Do Vale
+90891-655 Pereira / SP'),
+('1749', '4', 'Fazenda de Souza, 7
+Bom Jesus
+51876478 Santos Paulista / PR'),
+('1750', '5', 'Lago de Monteiro, 223
+Baro Homem De Melo 3 Seo
+37319-957 da Cruz / MG'),
+('1751', '3', 'Lago Agatha Gomes, 91
+Aaro Reis
+18896-265 Arago / MG'),
+('1752', '3', 'Aeroporto Gomes
+Piraja
+27320377 Ramos dos Dourados / AL'),
+('1753', '1', 'Alameda Castro, 64
+Concrdia
+11105-619 Fernandes / MS'),
+('1754', '4', 'Aeroporto Vicente da Rosa
+Jardim Dos Comerciarios
+21152-996 Martins da Serra / RS'),
+('1755', '4', 'Campo Sarah da Luz, 37
+Vila Cemig
+51301-034 da Rocha de Peixoto / AC'),
+('1756', '4', 'Favela de Teixeira, 490
+Ferno Dias
+99258-752 da Paz das Pedras / MS'),
+('1757', '1', 'Praia de Teixeira, 64
+Renascena
+51533490 Ramos da Serra / CE'),
+('1758', '2', 'Feira Isabel Almeida, 5
+Heliopolis
+12101495 da Cruz de Gois / RN'),
+('1759', '1', 'Ladeira Maria da Cunha, 51
+Mariano De Abreu
+32351880 Moraes / AL'),
+('1760', '3', 'Stio de Pereira, 11
+Corao Eucarstico
+10324148 Cavalcanti / MG'),
+('1761', '1', 'Lago de Moura, 4
+Acaba Mundo
+53739542 da Cunha Paulista / PI'),
+('1762', '4', 'Residencial de Rocha, 56
+Novo So Lucas
+62638-904 Fernandes / RR'),
+('1763', '3', 'Setor de das Neves, 31
+Bonfim
+16478-387 Silveira / RJ'),
+('1764', '3', 'Viaduto da Cruz, 225
+Unio
+49183-481 Castro / PA'),
+('1765', '3', 'Trevo Maria Sophia Melo, 49
+Acaiaca
+26390599 Arago dos Dourados / MG'),
+('1766', '2', 'Via Alves, 71
+So Paulo
+78282571 Fernandes / DF'),
+('1767', '1', 'Estao Raquel da Costa, 1
+Vila Jardim Montanhes
+97704-636 Lima / CE'),
+('1768', '1', 'Rodovia Matheus Cunha, 79
+Vila Formosa
+13665228 Mendes / SC'),
+('1769', '2', 'Colnia Barbosa, 84
+Vila Canto Do Sabi
+71875-797 Vieira / PE'),
+('1770', '5', 'Vale Caroline Cunha, 69
+Santa Terezinha
+24722375 Carvalho Verde / MA'),
+('1771', '2', 'Vila Ribeiro, 69
+Beija Flor
+55383030 Nogueira de Teixeira / AC'),
+('1772', '1', 'Condomnio de Cunha, 362
+Vila Mangueiras
+98718080 Gonalves Alegre / AL'),
+('1773', '1', 'Rodovia Mendes, 870
+Vila Cemig
+07976424 Barros de Novaes / SP'),
+('1774', '4', 'Praa Emilly Ferreira, 34
+Ipiranga
+70302-433 Azevedo de Martins / MT'),
+('1775', '4', 'Lago Ana Beatriz Monteiro
+Baro Homem De Melo 1 Seo
+43795-122 da Conceio / PB'),
+('1776', '5', 'Stio Farias, 82
+Cdi Jatoba
+23787-228 Alves / AP'),
+('1777', '3', 'Rodovia de Arajo, 25
+Vila Engenho Nogueira
+29909894 Azevedo / PE'),
+('1778', '5', 'Residencial Silva, 2
+Vila Maria
+63484387 Moreira da Praia / SE'),
+('1779', '4', 'Parque Luiz Gustavo Pereira, 3
+Maria Goretti
+28633-956 Ramos de Gois / RJ'),
+('1780', '5', 'Ladeira de Ferreira, 57
+Camponesa 2 Seo
+15967-135 Souza de Gois / MS'),
+('1781', '2', 'Estao Pires, 16
+Mala E Cuia
+09247489 Castro / MT'),
+('1782', '5', 'Ptio da Mota, 44
+Vila Petropolis
+04476037 Martins / PI'),
+('1783', '3', 'Chcara Vitor Gabriel Rodrigues, 59
+So Jorge 2 Seo
+79638606 Vieira dos Dourados / RS'),
+('1784', '1', 'Morro Matheus Lopes, 68
+Conjunto Jardim Filadlfia
+80520-250 Santos da Praia / DF'),
+('1785', '2', 'Estrada de Azevedo, 3
+Leticia
+85275-647 Mendes / RO'),
+('1786', '2', 'Alameda das Neves, 682
+So Francisco
+09547-108 Novaes / PB'),
+('1787', '2', 'Rodovia da Paz, 88
+Brasil Industrial
+20527786 Pinto / AP'),
+('1788', '2', 'Stio Ferreira, 721
+Europa
+99792630 Mendes da Mata / PA'),
+('1789', '3', 'Avenida de da Paz
+Alpes
+44713-251 Pereira da Serra / CE'),
+('1790', '1', 'Colnia Eduardo Freitas, 64
+Santa Branca
+94495-807 Vieira da Serra / PB'),
+('1791', '2', 'Vila de Oliveira
+Cu Azul
+50276922 Rocha / AC'),
+('1792', '3', 'Setor Pedro Miguel Moreira, 55
+Cnego Pinheiro 2 Seo
+28180512 Alves / AP'),
+('1793', '5', 'Rua Lucca Jesus
+So Gabriel
+84854-627 Almeida da Praia / SC'),
+('1794', '1', 'Lagoa Lopes, 24
+Mangabeiras
+56815-996 Sales / SE'),
+('1795', '3', 'Trecho da Paz
+Liberdade
+92574-915 Fernandes / RN'),
+('1796', '4', 'Esplanada Gabrielly Duarte, 60
+So Jorge 2 Seo
+39286-197 Moura de Nascimento / RR'),
+('1797', '3', 'Viaduto de Ribeiro, 292
+Vila Boa Vista
+02262-357 da Mata de Gonalves / AM'),
+('1798', '1', 'Quadra Peixoto, 30
+Conjunto Novo Dom Bosco
+76506-970 Pereira do Galho / TO'),
+('1799', '3', 'Parque da Rocha, 37
+Ernesto Nascimento
+63893091 Teixeira / RS'),
+('1800', '5', 'Praia de Monteiro, 77
+So Damio
+71819-582 Costela / AL'),
+('1801', '1', 'Stio Pinto
+Bonsucesso
+10082390 Rezende / RN'),
+('1802', '2', 'Stio Freitas, 49
+Pindura Saia
+54494-077 Costa de Gois / RS'),
+('1803', '2', 'Setor de Cardoso, 66
+Hava
+45081184 Almeida / MS'),
+('1804', '1', 'Avenida de Teixeira, 202
+Vila Oeste
+13339740 Costela de Novaes / MG'),
+('1805', '5', 'Viela Melissa da Cruz, 7
+Santa Lcia
+47109302 Barbosa do Sul / RN'),
+('1806', '5', 'Campo de Martins, 7
+Cardoso
+21191-213 Alves / PR'),
+('1807', '1', 'Esplanada Maria Julia Moraes, 243
+Santa Ins
+33527-383 Correia / RR'),
+('1808', '2', 'Praia Fernandes, 77
+Sagrada Famlia
+14362-907 Farias de Minas / RN'),
+('1809', '5', 'Parque Maria Eduarda Ferreira, 4
+Ambrosina
+82961-266 Souza / SP'),
+('1810', '5', 'Viela Rezende
+Heliopolis
+55161686 da Mata de da Rosa / PR'),
+('1811', '1', 'Ncleo Cardoso, 6
+Maraj
+79608483 Azevedo do Oeste / PR'),
+('1812', '4', 'Viaduto Henrique Porto, 14
+Vila Petropolis
+27973059 da Cruz Verde / AM'),
+('1813', '5', 'Jardim Vieira, 68
+Esplanada
+94649-843 Cunha Verde / SC'),
+('1814', '1', 'Travessa Helena da Cruz, 5
+Parque So Jos
+23948276 Nunes Verde / PB'),
+('1815', '5', 'Rua Yasmin Moraes, 8
+Santa Helena
+70474632 Gomes Grande / RJ'),
+('1816', '5', 'Largo de Carvalho, 803
+Maria Helena
+49771105 Fogaa de da Rosa / PA'),
+('1817', '5', 'Residencial Cavalcanti, 25
+Alpes
+45880-744 Ferreira / TO'),
+('1818', '5', 'Ptio de Costela
+Vila Barragem Santa Lcia
+39451-408 Nascimento de Minas / AC'),
+('1819', '5', 'Vila de da Cruz, 67
+Vila Bandeirantes
+83671-221 Barbosa / RO'),
+('1820', '2', 'Residencial de Freitas, 60
+Santo Agostinho
+65697756 da Paz da Serra / AP'),
+('1821', '2', 'Avenida Maria Vitria da Mota
+Lagoinha
+81206717 da Rosa da Praia / PB'),
+('1822', '2', 'Residencial de Jesus, 71
+Vila Nossa Senhora Do Rosrio
+11930982 Rocha / PR'),
+('1823', '5', 'Quadra Vitria Cardoso, 87
+Solimoes
+02799-279 Ribeiro / PR'),
+('1824', '5', 'Vila Azevedo, 36
+Sagrada Famlia
+21363-417 Moraes / TO'),
+('1825', '1', 'Fazenda Sophie Ferreira
+Delta
+56743-986 Gomes / MT'),
+('1826', '1', 'Jardim Vieira, 46
+Liberdade
+52331356 Jesus Alegre / SP'),
+('1827', '5', 'Viela de Rezende, 794
+Vila Da Paz
+22837-176 Monteiro / SP'),
+('1828', '1', 'Setor Juliana Teixeira, 9
+Bacurau
+88298773 Fogaa de Vieira / SP'),
+('1829', '5', 'Stio Luiz Fernando Sales, 3
+Jaqueline
+16286864 Souza / RR'),
+('1830', '4', 'Lago Maria da Conceio
+Vila Fumec
+86492-768 Gomes / DF'),
+('1831', '3', 'Quadra Otvio Silveira, 619
+Santa Cruz
+56049-445 Moraes / PB'),
+('1832', '5', 'Ncleo Leonardo Martins, 1
+Cnego Pinheiro 1 Seo
+48627750 Melo / SC'),
+('1833', '5', 'Viaduto Luna Nunes, 32
+Olhos 
+13788028 da Luz / PI'),
+('1834', '5', 'Fazenda da Paz, 2
+Vila Nova Cachoeirinha 1 Seo
+26291-895 Farias de Dias / AL'),
+('1835', '4', 'Ladeira Luiz Felipe Mendes, 1
+Jaragu
+68058723 Correia Verde / RR'),
+('1836', '1', 'Recanto de Sales, 472
+Pedreira Padro Lopes
+40082-384 da Cruz de Dias / MA'),
+('1837', '4', 'Estao Maria Clara da Rocha
+Corumbiara
+63391039 Barbosa Paulista / RR'),
+('1838', '3', 'Conjunto de Teixeira, 3
+So Gonalo
+14552-022 Moraes / PB'),
+('1839', '2', 'Ladeira Theo Vieira
+Cu Azul
+40848-085 Almeida / RR'),
+('1840', '1', 'Rodovia Bryan Costa, 62
+Joo Alfredo
+48811-376 Pereira / MS'),
+('1841', '1', 'Ncleo da Conceio, 51
+Vila Betnia
+91347439 Sales do Campo / RN'),
+('1842', '3', 'Via Costa
+Ouro Preto
+91634523 Duarte de Cardoso / PA'),
+('1843', '5', 'Loteamento Vinicius Oliveira, 35
+Jardim Felicidade
+73310680 Ribeiro da Praia / PI'),
+('1844', '4', 'Jardim Benjamin da Cruz, 749
+Penha
+93202-913 Duarte / BA'),
+('1845', '5', 'Estao Breno Dias, 897
+Lagoinha
+74341462 Ribeiro / GO'),
+('1846', '1', 'Recanto Vieira
+Alta Tenso 2 Seo
+79469747 Nunes Alegre / CE'),
+('1847', '5', 'Avenida Alexandre Arajo, 14
+Acaba Mundo
+44560-754 Rodrigues / CE'),
+('1848', '1', 'Favela de Viana
+Vila Dos Anjos
+70816719 Cavalcanti / AL'),
+('1849', '4', 'Avenida Arago, 46
+Minas Brasil
+48916537 Correia / RR'),
+('1850', '3', 'Colnia Brbara Cavalcanti, 2
+Miramar
+83834928 Rocha / RO'),
+('1851', '4', 'Lagoa Farias, 45
+Pousada Santo Antonio
+01902-480 Peixoto / PI'),
+('1852', '3', 'Fazenda de Silveira
+Goiania
+07368-790 Porto Verde / ES'),
+('1853', '4', 'Praia Bruna Pereira
+Vila Da Luz
+43690-784 Lima dos Dourados / AM'),
+('1854', '1', 'Ncleo Porto, 32
+Santa Efignia
+53133-273 das Neves de Gois / GO'),
+('1855', '3', 'Largo Pinto, 960
+Vila So Joo Batista
+29982-879 Melo / RN'),
+('1856', '5', 'Morro Bernardo Melo
+Vila Santa Monica 2 Seo
+08823-656 Moreira do Norte / RJ'),
+('1857', '4', 'Morro Melo
+Vera Cruz
+01458106 Peixoto Paulista / AP'),
+('1858', '3', 'Setor Lvia Pinto, 6
+Dom Bosco
+44828112 da Luz de Farias / MS'),
+('1859', '2', 'Viela Pires, 56
+Vila Jardim Alvorada
+72185-627 Martins / AP'),
+('1860', '4', 'Rua Isabelly Rezende, 96
+So Sebastio
+34316880 Silva / SC'),
+('1861', '3', 'Loteamento de Moraes, 49
+Pirineus
+46311672 Arago / RR'),
+('1862', '3', 'Trecho Ribeiro
+Vila Satlite
+83332-836 Gomes de Melo / BA'),
+('1863', '2', 'Trecho de da Paz, 48
+So Salvador
+28363181 Moura / ES'),
+('1864', '5', 'Setor Arajo, 604
+Ermelinda
+31495814 da Cunha / BA'),
+('1865', '3', 'Parque de Campos, 73
+Atila De Paiva
+95378-228 Peixoto / PI'),
+('1866', '1', 'Rodovia de Lima, 81
+Marieta 3 Seo
+64380-122 Almeida / PE'),
+('1867', '1', 'Estrada Noah Carvalho, 54
+Vila Suzana Segunda Seo
+38744375 Sales / PI'),
+('1868', '2', 'Estao Cunha, 74
+Apolonia
+70088-942 Viana dos Dourados / MG'),
+('1869', '3', 'Feira Azevedo, 746
+So Paulo
+47337-925 Rodrigues / RN'),
+('1870', '1', 'Via Isis Freitas, 90
+Nova Cachoeirinha
+96590-944 Silva de da Cunha / RR'),
+('1871', '3', 'Lago Silveira, 34
+Vila Aeroporto Jaragu
+46835-929 da Conceio da Praia / MG'),
+('1872', '3', 'Lago Carvalho, 11
+Belmonte
+54576760 Cardoso / PB'),
+('1873', '2', 'Estao de Barros, 38
+Vila So Rafael
+73408971 da Rocha Grande / RN'),
+('1874', '3', 'Quadra Helosa Cunha, 27
+Nazare
+43269-914 Martins do Amparo / DF'),
+('1875', '1', 'Esplanada de Ribeiro, 904
+Xangri-L
+17965-397 Teixeira dos Dourados / SC'),
+('1876', '5', 'Lago de da Rocha, 805
+Vila Dos Anjos
+90629714 Gomes / PI'),
+('1877', '1', 'Quadra Leonardo Almeida, 784
+Santa Efignia
+51837-925 Nunes / AP'),
+('1878', '4', 'Feira da Cruz, 61
+Zilah Sposito
+90122146 Porto / MT'),
+('1879', '1', 'rea de Nogueira, 51
+Juliana
+24384-921 da Mata / CE'),
+('1880', '4', 'Vereda de Teixeira, 307
+Alto Das Antenas
+77248695 Pereira das Pedras / SC'),
+('1881', '2', 'Colnia de Carvalho, 589
+Canaa
+00364079 Silva Verde / PA'),
+('1882', '5', 'Parque de Mendes, 9
+Paulo Vi
+94801731 Porto do Norte / RJ'),
+('1883', '4', 'Trecho Joo Miguel da Conceio, 201
+Mantiqueira
+32782-174 Oliveira das Flores / PA'),
+('1884', '4', 'Vale Mariane da Mata
+Parque So Jos
+81609-115 Azevedo / PR'),
+('1885', '5', 'Chcara Diego Vieira
+Alpes
+46023-588 Ramos / MG'),
+('1886', '4', 'Rua Carvalho, 27
+Maria Virgnia
+94499320 Sales do Galho / AL'),
+('1887', '4', 'Vereda de da Cruz
+So Damio
+07208-784 da Cunha / ES'),
+('1888', '4', 'Estao Bruno da Conceio, 93
+Brasil Industrial
+33228-376 Nunes dos Dourados / BA'),
+('1889', '1', 'Largo de Farias, 64
+Baro Homem De Melo 3 Seo
+42667-170 Santos / SE'),
+('1890', '3', 'Feira Costela, 8
+Vila Cloris
+25859-296 da Cunha de Almeida / SE'),
+('1891', '4', 'Chcara Gomes, 8
+Branas
+76252-678 Rocha / RS'),
+('1892', '1', 'Praa Lorena Vieira
+Nova America
+00923997 Vieira / MA'),
+('1893', '4', 'Avenida Pereira, 664
+Marieta 3 Seo
+29494-961 Duarte Alegre / PR'),
+('1894', '3', 'Praa Arthur da Mata, 493
+Vila Nova Dos Milionarios
+66751006 da Luz / ES'),
+('1895', '2', 'Largo Porto, 93
+Vila Trinta E Um De Maro
+61462-809 Barbosa / PR'),
+('1896', '2', 'Ladeira Pereira, 70
+Marmiteiros
+09134639 Pires / RR'),
+('1897', '3', 'Vila Vitria Castro, 5
+Vila Paraso
+71548158 Ramos de das Neves / SC'),
+('1898', '1', 'Vila de Arajo, 30
+Antonio Ribeiro De Abreu 1 Seo
+68871-503 Martins / SE'),
+('1899', '3', 'Stio de Moreira, 79
+Vila Nova Paraso
+25979874 Gomes do Sul / RJ'),
+('1900', '3', 'Distrito Arajo, 2
+Cdi Jatoba
+59704-712 Fogaa Alegre / ES'),
+('1901', '1', 'Distrito de Alves
+Santa Margarida
+84958840 Ribeiro / AL'),
+('1902', '3', 'Recanto Arajo, 5
+Teixeira Dias
+63055116 da Mota de Sales / SP'),
+('1903', '3', 'Rua Felipe Alves, 46
+Primeiro De Maio
+75129521 Alves Verde / MG'),
+('1904', '3', 'rea de Dias, 676
+Vila Boa Vista
+73292257 Fogaa / RR'),
+('1905', '5', 'Esplanada Pereira, 7
+Alto Caiaras
+87310871 Costa / MS'),
+('1906', '4', 'Travessa Correia, 53
+Garas
+42706062 Cardoso do Galho / MG'),
+('1907', '4', 'Conjunto Cau Costa, 4
+Vila Maria
+76064412 Vieira de Ribeiro / RO'),
+('1908', '1', 'Fazenda Pereira, 72
+Tupi B
+02362265 da Mata / RJ'),
+('1909', '2', 'Ncleo de da Paz, 5
+Confisco
+91221-856 Arago de Gois / AL'),
+('1910', '2', 'Praa Gonalves, 7
+Pousada Santo Antonio
+06743421 Arajo / RO'),
+('1911', '1', 'Vale de Santos, 868
+Jardinpolis
+67251-943 Ferreira / AM'),
+('1912', '2', 'Loteamento das Neves
+Glria
+57158220 Caldeira Verde / ES'),
+('1913', '5', 'Viaduto de da Cruz, 4
+Dom Joaquim
+26310061 Mendes de Minas / AP'),
+('1914', '5', 'Campo de da Cunha, 1
+Monte So Jos
+19987-490 Costa / AL'),
+('1915', '3', 'Praa de Vieira, 8
+Ouro Minas
+98028579 Campos / MA'),
+('1916', '1', 'Praia de Cardoso, 12
+Vila Paquet
+97807-082 Costela / RS'),
+('1917', '2', 'Praia Pedro Henrique Oliveira, 40
+pia
+23112-173 Gomes / PE'),
+('1918', '2', 'Viela Campos, 9
+Jardim Alvorada
+40063-779 Duarte / MS'),
+('1919', '3', 'Loteamento Azevedo, 63
+Petropolis
+00627795 Nunes do Campo / AC'),
+('1920', '5', 'Colnia Cavalcanti, 86
+Lourdes
+61102-317 Silveira / PR'),
+('1921', '3', 'Ladeira Ana Laura da Rocha, 6
+Milionario
+02051-955 Barbosa / PA'),
+('1922', '2', 'Fazenda Marina Mendes, 76
+Jardim Dos Comerciarios
+38681-463 Lopes de Sales / AL'),
+('1923', '1', 'Loteamento Erick Costela, 220
+So Jos
+19265-489 Cavalcanti / RN'),
+('1924', '2', 'Estrada Porto, 782
+Marieta 3 Seo
+33765668 Silveira / RJ'),
+('1925', '2', 'Trecho de Nunes, 226
+Marilandia
+14174223 Costa de Gois / RN'),
+('1926', '1', 'Vila de Cardoso, 7
+Vila Piratininga Venda Nova
+34293857 Nogueira Grande / RS'),
+('1927', '2', 'Travessa Daniel da Costa, 30
+Urca
+80223478 Ribeiro do Norte / PE'),
+('1928', '1', 'Morro de Porto, 93
+Vila Santa Rosa
+84792718 Novaes / RJ'),
+('1929', '5', 'Morro Noah Sales
+Vila Sumar
+98303-840 Dias Alegre / RS'),
+('1930', '3', 'Ptio Pereira
+So Joo Batista
+82372420 Oliveira de Gois / RO'),
+('1931', '3', 'Jardim de Barros, 66
+Vila Da ria
+52760429 Farias Paulista / PI'),
+('1932', '3', 'Lagoa de Correia
+Petropolis
+96877281 Correia / AP'),
+('1933', '3', 'Praia Andr Arajo, 516
+Pompia
+48637460 Santos do Campo / GO'),
+('1934', '2', 'Recanto de Viana, 90
+Taquaril
+96827664 Vieira de Peixoto / AL'),
+('1935', '2', 'Quadra de Arago
+Vila Da ria
+68910-354 Peixoto das Pedras / ES'),
+('1936', '4', 'Jardim Mariane Arajo, 16
+Vila Aeroporto
+93914-601 Barros de Ramos / SC'),
+('1937', '1', 'Parque de Azevedo
+Vila Nova Gameleira 3 Seo
+70850-413 Arajo / GO'),
+('1938', '1', 'Trevo Samuel Ribeiro, 723
+Vila Pinho
+15809-043 Fernandes da Mata / PA'),
+('1939', '5', 'Quadra Pinto, 60
+Vila Canto Do Sabi
+79834984 Barbosa / RS'),
+('1940', '4', 'Loteamento Sarah Arago, 87
+Joo Alfredo
+25795-000 Costa da Praia / RS'),
+('1941', '5', 'Ncleo de Arajo, 26
+Vila Atila De Paiva
+50495846 da Rocha de da Luz / TO'),
+('1942', '5', 'Trecho Carvalho, 38
+Marmiteiros
+49961802 da Rocha / GO'),
+('1943', '4', 'Travessa Pedro Miguel Castro, 61
+Baleia
+64904526 Duarte da Prata / TO'),
+('1944', '1', 'Esplanada de Ribeiro, 58
+Santana Do Cafezal
+08587350 Cavalcanti das Pedras / SC'),
+('1945', '3', 'rea de Pereira, 53
+Graja
+93176468 Nogueira das Flores / SC'),
+('1946', '4', 'Viaduto Melissa da Costa, 44
+Baro Homem De Melo 3 Seo
+80243142 Novaes / MA'),
+('1947', '2', 'Trecho de Lopes, 11
+Alpes
+51264875 Carvalho do Sul / MA'),
+('1948', '3', 'Chcara Carvalho, 64
+Joo Alfredo
+32453-211 Rodrigues / DF'),
+('1949', '1', 'Ptio de Moraes, 14
+Vila Engenho Nogueira
+13537-501 Alves / RO'),
+('1950', '4', 'Passarela Barbosa, 58
+Bandeirantes
+07687504 Rezende do Campo / RO'),
+('1951', '3', 'Parque Eloah Arago, 41
+Inconfidncia
+25744-828 Duarte da Serra / PI'),
+('1952', '2', 'Viaduto Murilo Oliveira, 55
+Saudade
+39085-737 Gonalves / RN'),
+('1953', '4', 'Morro Ana Carolina Teixeira, 840
+Jardim Alvorada
+12526281 Gonalves / DF'),
+('1954', '5', 'Ptio Diego Caldeira, 12
+Nova Sua
+46704398 Vieira / PE'),
+('1955', '1', 'Praia Cunha, 82
+Vila Paraso
+89867868 Novaes / RR'),
+('1956', '3', 'Ptio Rocha, 718
+So Vicente
+78587-564 Nascimento / MG'),
+('1957', '1', 'Lagoa Peixoto, 61
+Camponesa 1 Seo
+22657-255 Moura Grande / PB'),
+('1958', '2', 'Vale Emanuel Arajo, 64
+Nova Floresta
+37082-353 Jesus / AC'),
+('1959', '5', 'Quadra de Cavalcanti
+Santa Monica
+47787893 Silveira / MT'),
+('1960', '2', 'Condomnio Teixeira, 887
+Flavio Marques Lisboa
+51333321 Caldeira / ES'),
+('1961', '5', 'Via de Silva, 92
+Aeroporto
+92994237 Barbosa / AP'),
+('1962', '1', 'Rua Joo Lucas Porto, 25
+Piratininga
+55212788 Fogaa / MS'),
+('1963', '5', 'Setor Joana Mendes, 91
+Vila Barragem Santa Lcia
+74081-245 Cunha do Oeste / MT'),
+('1964', '5', 'Estao de Moraes
+Mariquinhas
+27374126 Gonalves / AM'),
+('1965', '2', 'Jardim Nascimento, 795
+So Bernardo
+52061842 Martins do Sul / AL'),
+('1966', '4', 'Campo Cunha, 912
+Santa Rosa
+96629681 Arago de Carvalho / MS'),
+('1967', '2', 'Morro Heitor Fogaa
+Graja
+67412-576 Cardoso / TO'),
+('1968', '5', 'Viaduto de Duarte, 68
+lvaro Camargos
+06577-144 Cavalcanti da Praia / AM'),
+('1969', '3', 'Travessa Las Azevedo, 47
+Rio Branco
+62022868 Dias Alegre / RR'),
+('1970', '1', 'Esplanada de Cardoso, 20
+Vila Nova Gameleira 1 Seo
+62937-826 Ramos / AM'),
+('1971', '3', 'Morro Teixeira, 85
+Dom Bosco
+51359230 da Paz da Mata / AL'),
+('1972', '4', 'Travessa Pedro Miguel Azevedo, 76
+Mirante
+84569469 da Rosa / MA'),
+('1973', '2', 'Campo Isabelly Cardoso
+Concrdia
+24720039 Barros do Galho / RJ'),
+('1974', '5', 'Ladeira Luiz Otvio Dias, 91
+Santa Branca
+55345-267 Jesus do Oeste / AC'),
+('1975', '3', 'Lagoa Enzo Gabriel Alves, 823
+Vila Tirol
+74717188 Costa / RR'),
+('1976', '3', 'Recanto Benjamin Lopes, 31
+Cnego Pinheiro 2 Seo
+74689191 Pires de Fogaa / MA'),
+('1977', '2', 'rea de Dias, 18
+Olaria
+70311-850 da Costa do Galho / ES'),
+('1978', '3', 'Aeroporto de Oliveira, 12
+Joo Alfredo
+61731721 Barros / SE'),
+('1979', '4', 'Ncleo de Ribeiro, 882
+Zilah Sposito
+95769640 Moreira do Galho / RS'),
+('1980', '2', 'Trecho Rodrigues, 277
+Pindorama
+75874-507 Rocha / TO'),
+('1981', '5', 'Stio Fernando da Mata, 594
+Marieta 1 Seo
+39168127 da Cunha do Campo / GO'),
+('1982', '4', 'Distrito Yasmin Martins, 1
+Piratininga
+76028-007 Almeida / PA'),
+('1983', '1', 'Fazenda Kamilly Rocha, 820
+Conjunto Capito Eduardo
+63990965 Cunha de Gois / MG'),
+('1984', '1', 'Vereda Moreira, 89
+Barro Preto
+67994400 Viana / RO'),
+('1985', '2', 'Viela de Campos, 180
+Lorena
+68759-442 Silveira / AM'),
+('1986', '1', 'Chcara Arajo, 93
+Pompia
+62446948 das Neves / AP'),
+('1987', '4', 'Feira Luiz Fernando Caldeira, 57
+Varzea Da Palma
+28096559 da Cunha de Silva / PA'),
+('1988', '2', 'Recanto Cardoso, 381
+Petropolis
+05058-059 Correia / DF'),
+('1989', '4', 'Setor Rocha
+Cachoeirinha
+50394980 das Neves / AC'),
+('1990', '1', 'Morro Enzo Gabriel Rocha, 3
+Nossa Senhora Do Rosrio
+30305629 Gonalves / CE'),
+('1991', '2', 'Ncleo de Farias, 24
+Vila So Gabriel
+36556362 Silveira da Praia / PR'),
+('1992', '5', 'Vereda Duarte, 81
+Vila Real 1 Seo
+23383892 Souza de Gois / GO'),
+('1993', '3', 'Stio da Rosa, 8
+Novo So Lucas
+64111827 Moura / SP'),
+('1994', '3', 'Esplanada Moura
+Carmo
+23111-699 Ramos de Gois / PR'),
+('1995', '1', 'Loteamento Cardoso, 95
+Oeste
+93734-690 da Paz / PI'),
+('1996', '4', 'Rua Luiz Gustavo Moura, 21
+Providencia
+06723710 Santos / MS'),
+('1997', '4', 'Condomnio Silveira
+Conjunto Capito Eduardo
+02845-859 Porto do Sul / PE'),
+('1998', '5', 'Aeroporto Samuel Oliveira, 11
+Padre Eustquio
+35558918 Caldeira / MA'),
+('1999', '1', 'Colnia de Barros
+Novo Glria
+89856153 Moreira de Rocha / RJ'),
+('2000', '2', 'Travessa Joo Pedro Castro, 78
+Distrito Industrial Do Jatoba
+64479-466 da Cunha Grande / RS'),
+('2001', '4', 'Condomnio Stephany Viana, 470
+Ipe
+26207-825 Barbosa / MA'),
+('2002', '2', 'Alameda Rocha
+Coqueiros
+90378-352 Ferreira / PB'),
+('2003', '4', 'Residencial de Pereira, 66
+Das Industrias I
+85408838 Moreira / MS'),
+('2004', '5', 'Trecho de Gonalves, 738
+Caiaras
+54147999 Vieira / SP'),
+('2005', '2', 'Via Erick da Rocha, 9
+Joo Paulo Ii
+17713-203 Sales do Sul / MG'),
+('2006', '2', 'Residencial Vitor Gabriel Souza, 28
+Graja
+44431381 Silveira / AM'),
+('2007', '5', 'Vila Rodrigues, 71
+Cardoso
+33701-215 Monteiro / PA'),
+('2008', '3', 'Distrito Gabriel Sales, 93
+Varzea Da Palma
+68932714 Freitas do Amparo / RO'),
+('2009', '4', 'Distrito Rodrigues, 19
+Vila So Gabriel Jacui
+82050275 Ramos / MG'),
+('2010', '2', 'Vila Teixeira, 76
+Paquet
+62852-986 Almeida / GO'),
+('2011', '1', 'Aeroporto Sarah Nogueira
+Santa Efignia
+77746295 Carvalho / SP'),
+('2012', '5', 'Parque Lima, 21
+Vila Madre Gertrudes 2 Seo
+07203-753 Fernandes / AP'),
+('2013', '4', 'Passarela Bernardo Oliveira, 48
+Alto Das Antenas
+37300-659 da Mota de Minas / AP'),
+('2014', '1', 'Viela Emanuel Souza, 25
+Renascena
+65978-377 Cavalcanti / AL'),
+('2015', '1', 'Praia de da Mota, 10
+Capito Eduardo
+79419854 Barros / AC'),
+('2016', '1', 'Travessa de Pinto, 5
+Europa
+75204056 Costela / DF'),
+('2017', '3', 'Viela Peixoto
+Cachoeirinha
+37535769 da Mata do Campo / RO'),
+('2018', '5', 'Aeroporto Porto, 80
+Solimoes
+55086812 Fernandes de Martins / MG'),
+('2019', '1', 'rea Otvio Costa, 503
+Conjunto Providencia
+82945-427 Rezende / SE'),
+('2020', '3', 'Distrito Theo Nunes, 84
+Cabana Do Pai Toms
+78001-434 Peixoto / PA'),
+('2021', '5', 'Viaduto de Porto
+Vila Unio
+48504212 da Rocha / AL'),
+('2022', '2', 'Vale Fernanda Novaes, 276
+Tupi A
+85426-623 Porto de Rezende / RS'),
+('2023', '2', 'Ladeira Freitas, 26
+Jardim Atlntico
+38728372 Martins Alegre / DF'),
+('2024', '2', 'Largo de da Conceio, 67
+Vila Santa Monica 2 Seo
+27322-760 Carvalho / SC'),
+('2025', '3', 'Conjunto Rocha, 59
+Piraja
+68037827 Correia do Galho / SC'),
+('2026', '2', 'Rua de Sales, 76
+Dom Cabral
+63234539 Fernandes / SP'),
+('2027', '2', 'Aeroporto de Martins, 19
+Vila So Gabriel Jacui
+06034-186 da Costa / CE'),
+('2028', '2', 'Ptio Duarte, 442
+Mirante
+66471193 Moreira / PE'),
+('2029', '4', 'Via de da Cruz, 58
+Pedreira Padro Lopes
+78373-649 Teixeira / BA'),
+('2030', '2', 'Viela de Farias, 90
+Barroca
+80837516 Silveira / DF'),
+('2031', '1', 'Ptio Costa, 2
+So Gonalo
+21794-770 Gomes de Gois / AM'),
+('2032', '3', 'Quadra Alves, 43
+Independncia
+76381-797 Souza / RS'),
+('2033', '4', 'Vale Costa
+Colgio Batista
+10056-202 da Rocha / AM'),
+('2034', '2', 'Colnia de da Paz, 19
+Parque So Jos
+58323-002 Souza / GO'),
+('2035', '4', 'Estao de Ferreira, 408
+Santa Rosa
+30604994 das Neves da Praia / AP'),
+('2036', '2', 'Praa Souza, 59
+Vila Bandeirantes
+86060967 Carvalho / AC'),
+('2037', '5', 'rea de Lopes, 48
+Parque So Pedro
+58360-104 Rodrigues da Praia / MS'),
+('2038', '1', 'Esplanada Gomes
+Santa Maria
+01947-273 Moura do Sul / DF'),
+('2039', '2', 'Colnia Beatriz Arajo, 98
+Vila Cemig
+36753-898 da Mota das Pedras / SE'),
+('2040', '3', 'Favela Fernandes, 10
+Miramar
+92783-649 Cardoso / PE'),
+('2041', '1', 'Lagoa de Costa, 979
+Vitoria
+98087723 Costela / MA'),
+('2042', '5', 'Praia Moreira, 66
+So Salvador
+98367-816 Oliveira da Serra / PI'),
+('2043', '4', 'Travessa Maria Eduarda Arago, 10
+Conjunto Jatoba
+46318582 Alves / ES'),
+('2044', '5', 'Residencial de Martins
+Graa
+72153834 Ramos de Minas / SE'),
+('2045', '2', 'Viaduto Jesus, 87
+Universo
+91401-684 Almeida / PR'),
+('2046', '4', 'Trecho de Arago, 14
+Vila Novo So Lucas
+84089-496 Viana / PR'),
+('2047', '5', 'Praia Milena Moreira, 1
+Santa Helena
+31367169 Rodrigues do Oeste / MS'),
+('2048', '2', 'Conjunto Fernandes, 38
+Branas
+54551-517 da Rosa de Melo / MS'),
+('2049', '3', 'Estrada Martins
+Bonsucesso
+56421873 Sales / BA'),
+('2050', '3', 'Ncleo Monteiro, 23
+Santa Maria
+03200307 Freitas / RS'),
+('2051', '5', 'Feira Caio Arajo, 92
+Beira Linha
+00597103 Silva / SE'),
+('2052', '5', 'Morro Pinto, 551
+Boa Esperana
+58841-179 Dias de Barros / RJ'),
+('2053', '3', 'Feira Emanuelly da Rosa
+Cu Azul
+93796-409 da Mota de Minas / PI'),
+('2054', '3', 'Feira de da Mata, 1
+Flamengo
+62448479 Campos do Amparo / RR'),
+('2055', '4', 'Vila de da Conceio, 23
+Virgnia
+69189314 Novaes / AP'),
+('2056', '5', 'Setor Carvalho, 732
+Vila Maloca
+80929460 Cunha / PI'),
+('2057', '4', 'Rua Sofia Pereira, 960
+Alto Vera Cruz
+69274-943 das Neves de Rezende / GO'),
+('2058', '2', 'Avenida de Pereira, 265
+Funcionrios
+00946662 da Mata de Jesus / CE'),
+('2059', '2', 'Lagoa Rocha
+Santa Amelia
+21123997 Lopes / AM'),
+('2060', '5', 'Alameda de Arago
+Nova Cintra
+15885-874 Arajo de Gois / PI'),
+('2061', '5', 'Favela Yasmin da Mota, 24
+Mirtes
+42967862 Pinto de Teixeira / GO'),
+('2062', '5', 'Lago Helena Porto, 7
+Vila Engenho Nogueira
+56041-410 Nascimento da Praia / MG'),
+('2063', '1', 'Rodovia Ribeiro, 760
+Vila So Rafael
+11133-129 Arago / MT'),
+('2064', '4', 'Passarela de Oliveira
+Vila So Gabriel Jacui
+02591528 Santos de Rodrigues / BA'),
+('2065', '3', 'Rua Alexia Peixoto, 497
+Liberdade
+01017-097 Silveira do Norte / SP'),
+('2066', '1', 'Esplanada Marcos Vinicius da Paz, 2
+Embabas
+92719732 Almeida da Praia / PB'),
+('2067', '5', 'Rua Valentina Melo, 79
+Independncia
+60949-580 Dias / RR'),
+('2068', '2', 'Parque Helosa Rodrigues, 9
+Mariquinhas
+24939542 Rocha / BA'),
+('2069', '3', 'Viaduto Nascimento
+Distrito Industrial Do Jatoba
+38201255 Pinto / RJ'),
+('2070', '5', 'Travessa da Rocha, 21
+Estoril
+17248-057 Oliveira / SE'),
+('2071', '2', 'Esplanada Erick Correia, 80
+Vila Aeroporto
+87791210 Costela / RO'),
+('2072', '1', 'Conjunto Beatriz Rezende, 65
+Vila Barragem Santa Lcia
+41951-709 da Rocha do Campo / SC'),
+('2073', '4', 'Via Nathan Melo, 125
+Vila Primeiro De Maio
+69619-509 Jesus / GO'),
+('2074', '5', 'Loteamento de Viana, 37
+Vila Nova Dos Milionarios
+13680536 Silveira do Campo / RJ'),
+('2075', '5', 'Alameda Porto, 2
+Sion
+76407-452 Cardoso / PA'),
+('2076', '2', 'Lago de Vieira, 148
+Jardim Leblon
+66303-343 Freitas do Oeste / CE'),
+('2077', '4', 'Via Thales Jesus, 85
+Serra Do Curral
+85322-699 Almeida da Mata / AM'),
+('2078', '4', 'Lago Maria Vieira, 64
+Cachoeirinha
+67603574 Novaes / ES'),
+('2079', '1', 'Residencial Mendes
+Vila Bandeirantes
+11826027 Oliveira Grande / AL'),
+('2080', '4', 'Fazenda de Rocha, 65
+Vila Real 1 Seo
+55826206 Dias / PE'),
+('2081', '3', 'Residencial Maria Fernanda Moreira, 5
+Branas
+53932086 Arago de Carvalho / CE'),
+('2082', '1', 'Ladeira Theo Barbosa, 171
+Serra
+25163838 Peixoto / AM'),
+('2083', '5', 'Estao de Gomes, 20
+Sagrada Famlia
+63948-801 Arago do Galho / RR'),
+('2084', '4', 'Feira de Fogaa, 42
+Pongelupe
+15446466 Monteiro / RJ'),
+('2085', '1', 'Lago Emanuel Melo, 67
+Conjunto Paulo Vi
+27536581 Sales de Minas / PE'),
+('2086', '4', 'Loteamento de Nogueira
+Vila Jardim So Jos
+85202033 Farias do Amparo / PE'),
+('2087', '3', 'Passarela Nunes, 813
+Confisco
+44628-631 Souza do Galho / MG'),
+('2088', '5', 'Condomnio Luigi Martins, 27
+Itapoa
+50744-043 Correia da Praia / CE'),
+('2089', '4', 'Passarela Yuri Nogueira, 57
+Salgado Filho
+11887-667 Pereira da Praia / SC'),
+('2090', '4', 'Condomnio da Rosa
+Outro
+40352-383 Ribeiro dos Dourados / AM'),
+('2091', '4', 'Jardim Leonardo Costa, 47
+Vila Califrnia
+11427-160 Moraes de Nunes / RR'),
+('2092', '1', 'Estrada Fernandes, 9
+Aaro Reis
+27913-030 Almeida de Castro / MT'),
+('2093', '1', 'Distrito Ramos, 61
+So Cristvo
+30023545 Moura / PR'),
+('2094', '3', 'Distrito de Almeida, 3
+Novo Tupi
+30108208 Vieira Verde / MT'),
+('2095', '2', 'Trecho de Lima, 77
+Vila Da ria
+66323-913 da Cunha / DF'),
+('2096', '5', 'Viela da Paz, 50
+Confisco
+65790-445 da Mata / AM'),
+('2097', '4', 'Stio de Nogueira, 70
+Santa Ins
+85913-271 Moreira / PB'),
+('2098', '1', 'Passarela Kaique Costela, 27
+Califrnia
+07428413 Nascimento do Norte / DF'),
+('2099', '2', 'Chcara de Mendes, 46
+Piraja
+71882013 Caldeira das Pedras / PE'),
+('2100', '1', 'Praia de Monteiro, 70
+Vila Paquet
+77539-384 Vieira do Oeste / DF'),
+('2101', '5', 'Setor de Vieira, 16
+Vila Real 2 Seo
+64278-834 Moreira da Serra / PR'),
+('2102', '3', 'Trevo Gomes
+Santa Rita
+75188189 Monteiro / AL'),
+('2103', '1', 'Ptio de das Neves, 5
+Vila Do Pombal
+90088358 Caldeira / AL'),
+('2104', '1', 'Feira de Rodrigues, 50
+Ernesto Nascimento
+69694-668 da Luz de Lima / RO'),
+('2105', '1', 'Vale Diego Caldeira, 41
+Lajedo
+02381-864 Costela Paulista / PR'),
+('2106', '5', 'Aeroporto Cavalcanti, 9
+Vila Nova Cachoeirinha 2 Seo
+88712610 Moraes / TO'),
+('2107', '4', 'Distrito de Rocha, 34
+Madri
+38084-194 Oliveira / RN'),
+('2108', '4', 'Rua Larissa Caldeira, 165
+Vila Madre Gertrudes 2 Seo
+52116249 Duarte / SE'),
+('2109', '4', 'Viaduto Farias, 32
+Centro
+41910402 Carvalho / MG'),
+('2110', '2', 'Estao Fernandes, 46
+Vila Da Paz
+89695115 Sales de da Paz / SP'),
+('2111', '2', 'Residencial Ian da Luz, 51
+Vila Suzana Primeira Seo
+29776353 Nascimento / PR'),
+('2112', '4', 'Estrada Maria Alice Souza
+Boa Viagem
+93372260 Moreira das Flores / AL'),
+('2113', '5', 'Trevo de Lima
+Alta Tenso 2 Seo
+13703-763 Silveira / AM'),
+('2114', '2', 'Viela da Cunha, 96
+Novo So Lucas
+60201-247 Cardoso / RS'),
+('2115', '1', 'Distrito de Teixeira
+Marola
+86501201 Almeida / MA'),
+('2116', '4', 'Jardim Freitas, 77
+Pindorama
+59363719 Farias / TO'),
+('2117', '5', 'Favela Ana Luiza Campos, 61
+Vila So Gabriel Jacui
+14497-916 Novaes / SC'),
+('2118', '5', 'Recanto Maria Campos, 40
+Minas Brasil
+86306-495 Cardoso de Gois / RJ'),
+('2119', '1', 'Conjunto Nathan Barros, 77
+Vila Nova Cachoeirinha 2 Seo
+49786-417 Caldeira / SE'),
+('2120', '2', 'Campo de Peixoto, 310
+Luxemburgo
+17881172 Melo / SP'),
+('2121', '4', 'Ladeira de Novaes, 84
+Floresta
+80850-669 Freitas / AP'),
+('2122', '1', 'Morro Otvio Melo, 5
+Tupi A
+40573282 Carvalho do Oeste / ES'),
+('2123', '4', 'Alameda Correia, 27
+Bonfim
+01363-513 Costela / PI'),
+('2124', '4', 'Estrada Laura Santos, 182
+Santa Tereza
+22014874 Duarte de Lima / AC'),
+('2125', '4', 'Alameda Maria Clara Viana, 82
+Santa Terezinha
+50302-937 da Rosa Paulista / SP'),
+('2126', '2', 'Campo Heitor da Luz, 169
+Ademar Maldonado
+78466612 Ramos / TO'),
+('2127', '2', 'Jardim Ana Lvia da Rocha, 13
+Nova America
+34490-379 Lima / TO'),
+('2128', '4', 'Viela de Lopes, 907
+Suzana
+21733-581 Moraes do Oeste / AP'),
+('2129', '3', 'Aeroporto Ramos, 203
+So Lucas
+47708-892 Alves da Serra / RJ'),
+('2130', '3', 'Vila Vieira, 12
+Boa Esperana
+70303-767 Ramos / PI'),
+('2131', '2', 'Favela Mendes, 82
+Vila Da ria
+84916-527 Mendes / RJ'),
+('2132', '2', 'Stio Nunes, 67
+Cnego Pinheiro 1 Seo
+85951399 Nogueira / GO'),
+('2133', '5', 'Passarela de Barros
+Vila Independencia 3 Seo
+20186-166 Cunha / BA'),
+('2134', '3', 'Rua Moreira, 47
+Jardim Leblon
+28126-052 Costela / DF'),
+('2135', '1', 'Distrito Alcia Farias, 800
+Vila Santa Monica 1 Seo
+48409106 Campos / RR'),
+('2136', '3', 'Aeroporto Lopes
+Granja Werneck
+26689947 Novaes da Prata / RJ'),
+('2137', '5', 'Setor Lima, 3
+Piratininga
+59672-935 Moraes do Oeste / BA'),
+('2138', '2', 'Recanto Freitas, 927
+Jardim Dos Comerciarios
+76077780 Viana / AP'),
+('2139', '4', 'Residencial Souza, 831
+Vila So Gabriel Jacui
+24256-360 da Mota das Pedras / DF'),
+('2140', '2', 'Praia de Arajo, 19
+So Joo Batista
+83863913 Lima das Flores / PA'),
+('2141', '3', 'Via Rodrigues, 12
+Olhos 
+84572861 Lima / MA'),
+('2142', '3', 'Aeroporto Marcela Monteiro, 26
+Alto Das Antenas
+77762-156 Porto do Sul / PB'),
+('2143', '1', 'Ptio Davi Luiz Fogaa
+Vila Piratininga Venda Nova
+93477-773 Duarte / DF'),
+('2144', '5', 'Estao Alves, 1
+Ribeiro De Abreu
+95977756 Santos das Flores / PI'),
+('2145', '2', 'Campo Teixeira, 13
+Camargos
+16404434 Rocha / GO'),
+('2146', '5', 'Morro Daniela Rezende, 88
+Acaiaca
+19801749 Freitas de da Cunha / ES'),
+('2147', '1', 'Estao Azevedo, 474
+Vila Trinta E Um De Maro
+81155-993 Martins de Oliveira / SC'),
+('2148', '3', 'Conjunto Augusto Barros, 87
+Cruzeiro
+68997-537 Moreira Alegre / MG'),
+('2149', '3', 'Travessa de da Mota, 868
+Vila Minaslandia
+30222051 Cunha de Fernandes / RN'),
+('2150', '2', 'Trevo Theo da Mota, 8
+Novo So Lucas
+41587-659 Oliveira / CE'),
+('2151', '2', 'Estao Carlos Eduardo da Paz, 728
+Belvedere
+59569-707 Freitas da Mata / PI'),
+('2152', '2', 'Alameda Alice Martins, 1
+Corao Eucarstico
+25299779 da Paz / ES'),
+('2153', '2', 'Fazenda de Caldeira, 53
+Carmo
+31100258 Farias / SE'),
+('2154', '5', 'Feira de Moura, 65
+Tupi B
+98396-454 Melo / PE'),
+('2155', '3', 'Morro de Teixeira
+Carlos Prates
+95399-959 Oliveira Alegre / RS'),
+('2156', '1', 'Parque Carvalho, 59
+Nova Esperana
+85878-295 Costela / AM'),
+('2157', '4', 'Ncleo das Neves, 7
+Vila Nova Paraso
+23257-867 da Mata / SE'),
+('2158', '3', 'Estrada Noah Fogaa, 89
+Itaipu
+71878872 Sales / PE'),
+('2159', '1', 'Viela Nascimento, 393
+Boa Unio 1 Seo
+54160-792 Dias / TO'),
+('2160', '1', 'Chcara da Mata, 85
+Nova Esperana
+56764-943 Arago do Oeste / RS'),
+('2161', '1', 'Campo da Luz, 39
+Baro Homem De Melo 2 Seo
+84687934 Sales dos Dourados / SP'),
+('2162', '3', 'Viela Luiz Otvio das Neves, 37
+Custodinha
+11573-586 Jesus Grande / PA'),
+('2163', '3', 'Rua Fogaa, 45
+Horto Florestal
+39647-217 Almeida / AL'),
+('2164', '1', 'Setor de Porto, 390
+Paquet
+25938785 Caldeira dos Dourados / GO'),
+('2165', '1', 'Viela Eloah Carvalho, 20
+Pompia
+29407-361 Melo Paulista / GO'),
+('2166', '4', 'Morro Joo Gabriel Barbosa, 42
+Acaiaca
+99007-299 Farias / RJ'),
+('2167', '2', 'Setor Viana
+Jardim Montanhs
+87086051 Arajo / MA'),
+('2168', '3', 'Avenida de Cunha, 12
+Vila Da Paz
+12696135 Cunha / SP'),
+('2169', '5', 'Lagoa Santos, 79
+Vila Maloca
+41024225 Moraes / TO'),
+('2170', '3', 'Estrada Davi Lucas Mendes, 770
+Tnel De Ibirit
+95657-792 Santos das Flores / PE'),
+('2171', '4', 'Esplanada Alice Moraes, 2
+Vila Petropolis
+12677154 da Mota / BA'),
+('2172', '4', 'Recanto de Sales, 2
+Maria Virgnia
+24036861 Nogueira do Norte / PE'),
+('2173', '5', 'Praia Maria Eduarda Nunes, 59
+Comiteco
+80393221 Ferreira / PR'),
+('2174', '2', 'Viaduto Pereira, 48
+Vila Nossa Senhora Do Rosrio
+26661-587 Duarte / AC'),
+('2175', '4', 'Campo da Cruz, 59
+Jardim So Jos
+25094-333 Moreira / SC'),
+('2176', '4', 'Vale de da Costa, 8
+Morro Dos Macacos
+09032145 Lima / PI'),
+('2177', '5', 'Vereda de da Cruz, 17
+Santa Rosa
+35189724 Carvalho / SC'),
+('2178', '3', 'Travessa de Souza, 45
+Serrano
+35272518 Mendes do Galho / CE'),
+('2179', '3', 'Condomnio Peixoto, 41
+Santa Maria
+63273254 Carvalho da Prata / RS'),
+('2180', '3', 'Chcara de Rezende, 36
+Universitrio
+54183-473 Almeida / PA'),
+('2181', '5', 'Aeroporto Isabella Pereira, 36
+Jaragu
+83567-225 Arago Alegre / DF'),
+('2182', '4', 'Favela Helena Farias, 293
+Tres Marias
+79052153 Almeida da Praia / RJ'),
+('2183', '1', 'Morro Raquel Rezende, 84
+Cachoeirinha
+96219-745 da Costa / RJ'),
+('2184', '2', 'Largo de Novaes
+Floresta
+98803684 Novaes / ES'),
+('2185', '2', 'Conjunto de Almeida, 36
+Pousada Santo Antonio
+75913789 da Conceio de Barbosa / RR'),
+('2186', '1', 'Favela Peixoto, 30
+Vila Betnia
+06888161 Mendes da Mata / PI'),
+('2187', '4', 'Morro Calebe Silveira
+Padre Eustquio
+65859884 Fernandes / ES'),
+('2188', '1', 'Loteamento de da Cruz, 48
+Flavio Marques Lisboa
+56847-995 Cavalcanti / DF'),
+('2189', '3', 'Morro Mariana Rodrigues, 23
+Vila Jardim Leblon
+09171601 Moura / RR'),
+('2190', '2', 'Recanto Souza, 4
+Vila Unio
+55135-786 das Neves / PA'),
+('2191', '5', 'Lagoa Bianca Vieira, 70
+Jardim Alvorada
+91821346 Novaes / MT'),
+('2192', '5', 'Ptio Silva, 15
+Tirol
+17429-760 Carvalho / AC'),
+('2193', '3', 'Lago de da Cruz, 15
+Conjunto Celso Machado
+36357-925 Arago Verde / AM'),
+('2194', '2', 'Vereda Isabella Gomes, 5
+Gutierrez
+88562917 Dias de Gois / MT'),
+('2195', '2', 'Aeroporto Freitas, 75
+Nova Cachoeirinha
+94742-224 Teixeira do Oeste / PI'),
+('2196', '2', 'Stio da Cunha, 94
+Santo Antnio
+02625-237 Monteiro / AM'),
+('2197', '1', 'Feira Isabel Gomes, 45
+Manacas
+92421-862 Nunes do Oeste / RN'),
+('2198', '3', 'Travessa de da Cunha, 31
+Palmares
+26335774 da Paz / RO'),
+('2199', '1', 'rea Vieira
+Vila Mantiqueira
+37045-119 Costa da Praia / SC'),
+('2200', '5', 'Setor Thales da Conceio, 39
+Olhos 
+22587-195 Ribeiro de Gois / PI'),
+('2201', '1', 'Setor das Neves
+Pongelupe
+21310-355 Moreira de Duarte / AP'),
+('2202', '1', 'Praa Ana Clara Oliveira, 86
+Vila Antena Montanhs
+75342-721 Jesus / AL'),
+('2203', '4', 'Feira Pedro Miguel Moraes, 82
+Santa Branca
+52496129 das Neves de Silva / ES'),
+('2204', '1', 'Lago Camila Arajo, 1
+Nova Gameleira
+56561829 Moura da Serra / PE'),
+('2205', '5', 'Vila de Rocha, 37
+Santa Tereza
+45061086 da Mota / RS'),
+('2206', '4', 'Lagoa da Conceio, 14
+Conjunto Paulo Vi
+74449768 Arajo da Mata / GO'),
+('2207', '3', 'Lagoa Joo Lucas Vieira, 96
+Anchieta
+32072210 Oliveira / RJ'),
+('2208', '3', 'Colnia de Monteiro, 94
+Santa Terezinha
+13567958 da Mata / AM'),
+('2209', '1', 'Travessa de da Rocha, 3
+Rio Branco
+03652-666 Ribeiro do Galho / AM'),
+('2210', '1', 'Trecho Daniela Martins, 81
+Aaro Reis
+85865-582 Arago / CE'),
+('2211', '3', 'Lagoa de Fogaa, 274
+Pindorama
+23911999 Farias de Costa / AC'),
+('2212', '3', 'Ladeira Costa, 175
+Conjunto Bonsucesso
+65775-125 Rocha de Monteiro / AL'),
+('2213', '5', 'Trecho Porto, 74
+Acaiaca
+41626-254 da Cruz de Rodrigues / BA'),
+('2214', '3', 'Largo da Mota, 3
+Pedreira Padro Lopes
+30100221 Arajo das Flores / MT'),
+('2215', '5', 'Praia da Costa
+Santa Ins
+30588-342 Mendes da Prata / MA'),
+('2216', '5', 'Vereda de Lima, 66
+Oeste
+76095836 Barros / AL'),
+('2217', '3', 'Chcara Dias
+Bairro Das Indstrias Ii
+35909-239 da Rocha / AP'),
+('2218', '1', 'Favela Cardoso, 79
+So Jorge 1 Seo
+55339068 Barros de Minas / AP'),
+('2219', '2', 'Vila Teixeira
+Vila Mantiqueira
+17886-140 Almeida / GO'),
+('2220', '2', 'Viela de das Neves, 42
+Mangabeiras
+95960688 Caldeira de Freitas / SP'),
+('2221', '5', 'Morro Davi Gonalves, 57
+Serrano
+89642-258 Almeida / MG'),
+('2222', '4', 'Parque de Pires, 71
+Campo Alegre
+43515-516 da Cunha do Galho / RN'),
+('2223', '4', 'Setor Luiz Henrique da Cruz, 43
+Marmiteiros
+26554-719 da Rosa Grande / PI'),
+('2224', '1', 'Estrada de Moreira, 78
+Bom Jesus
+34606473 Ferreira dos Dourados / MG'),
+('2225', '1', 'Residencial Cavalcanti, 2
+Nova Gameleira
+22839-343 Pires de Santos / SE'),
+('2226', '2', 'Morro Pedro Henrique Costela, 33
+Vila Rica
+15879694 Lima de Cunha / RS'),
+('2227', '5', 'Loteamento Jlia Fogaa, 4
+Cnego Pinheiro 1 Seo
+48640194 Gonalves / SE'),
+('2228', '1', 'Estao de Costa
+Vila Paris
+54807-000 Martins / AC'),
+('2229', '1', 'Rodovia Daniel Azevedo
+Beira Linha
+54610-872 Peixoto de Minas / RR'),
+('2230', '2', 'Alameda Giovanna Rezende, 34
+Palmares
+61769863 Nogueira / RJ'),
+('2231', '2', 'Viaduto de da Mata, 5
+Vila So Paulo
+23414257 Lima Paulista / AL'),
+('2232', '2', 'Alameda de Gonalves, 23
+Vila Satlite
+49568721 da Conceio de da Rocha / CE'),
+('2233', '1', 'Rua Silva, 34
+Estrela Do Oriente
+05096150 Souza / AC'),
+('2234', '2', 'Viaduto Freitas, 676
+Vila Satlite
+06898-918 Moura das Pedras / RO'),
+('2235', '5', 'Feira Jesus, 722
+Canad
+93563795 Lima das Flores / PB'),
+('2236', '2', 'Alameda Ferreira, 527
+Vila So Joo Batista
+72411-033 Gomes / RJ'),
+('2237', '1', 'Stio Isaac Carvalho, 22
+Vila Unio
+25822-807 Lima de Minas / RJ'),
+('2238', '4', 'Vale Isabelly Martins, 2
+Corao Eucarstico
+26751893 Porto de Fogaa / AL'),
+('2239', '2', 'Largo Leandro Fogaa, 61
+Sport Club
+58151944 da Rosa / RS'),
+('2240', '5', 'Passarela Silva, 90
+Ventosa
+17739-753 Mendes do Oeste / PA'),
+('2241', '2', 'Colnia de da Cunha, 7
+Vila Tirol
+86398693 Fernandes / PI'),
+('2242', '5', 'Praa Arajo, 8
+Vila Sumar
+00787-359 da Rosa / RR'),
+('2243', '5', 'Via de Martins
+Vila Nova Gameleira 3 Seo
+18638-877 Oliveira do Norte / AM'),
+('2244', '1', 'Avenida Beatriz Almeida, 11
+Cabana Do Pai Toms
+96418693 Cunha / RS'),
+('2245', '4', 'Setor de Mendes, 46
+Conjunto Providencia
+73579-174 Ferreira / ES'),
+('2246', '2', 'Favela Enzo da Conceio, 2
+So Gabriel
+44818-557 Silva do Oeste / RN'),
+('2247', '4', 'Loteamento Castro, 19
+Ernesto Nascimento
+33036955 Silveira / AM'),
+('2248', '1', 'Rua de Caldeira, 10
+Vila Petropolis
+12366954 Silva do Oeste / BA'),
+('2249', '2', 'Residencial Leandro Alves, 96
+Vila Paris
+40026-391 Melo de Minas / MS'),
+('2250', '2', 'rea de Pires, 801
+Sport Club
+69409438 Melo Alegre / PI'),
+('2251', '3', 'Largo da Rosa, 95
+Conjunto Novo Dom Bosco
+36325-956 Martins Alegre / RR'),
+('2252', '5', 'Vale Pereira
+Esplanada
+32241484 Costela de Gois / AP'),
+('2253', '4', 'Praia de Freitas, 98
+Leticia
+09092931 da Mota / PA'),
+('2254', '4', 'Ncleo Cardoso, 34
+Dom Joaquim
+37937744 Viana / RR'),
+('2255', '1', 'Alameda Porto, 19
+Serra Do Curral
+40613-741 Gonalves / MA'),
+('2256', '1', 'Ladeira Souza, 97
+Vila Hava
+39356580 Silva do Campo / BA'),
+('2257', '4', 'Vereda Castro, 775
+Paquet
+70854-166 da Costa da Praia / GO'),
+('2258', '5', 'Ncleo Levi Moraes, 36
+Providencia
+05837348 Barros / DF'),
+('2259', '2', 'Distrito Arago
+Vila Boa Vista
+81974-025 da Rocha / TO'),
+('2260', '2', 'Trevo Nascimento, 57
+Vila Fumec
+17029-057 Duarte / RJ'),
+('2261', '5', 'Estao Farias, 284
+Cidade Jardim
+91132-349 Costa de Gois / AM'),
+('2262', '1', 'Praa de da Mata
+Nazare
+57096-761 da Cunha de da Mata / AC'),
+('2263', '4', 'Vale Fernandes, 2
+Indai
+12187088 Pereira de Novaes / SC'),
+('2264', '3', 'Vale Silva
+Vila Nova
+84857-016 Silveira de Cardoso / SC'),
+('2265', '5', 'Colnia Samuel Barbosa, 64
+Leticia
+59914-567 Duarte / MA'),
+('2266', '2', 'Esplanada de Oliveira, 52
+Laranjeiras
+03881549 Oliveira do Sul / RS'),
+('2267', '2', 'Aeroporto Calebe Rodrigues, 2
+Jardinpolis
+56476489 Nascimento / PA'),
+('2268', '4', 'Vila de Costela, 450
+Vila Santo Antnio
+86490107 Campos de Fogaa / MA'),
+('2269', '1', 'Residencial Marcelo Arajo, 5
+Vila Trinta E Um De Maro
+22915192 Costela de Minas / RJ'),
+('2270', '3', 'Distrito de Vieira, 1
+Santo Agostinho
+70871-312 Moura de Caldeira / PI'),
+('2271', '5', 'Residencial de da Luz
+Custodinha
+86120210 Cunha de Lopes / MS'),
+('2272', '5', 'Recanto Monteiro, 797
+Alto Das Antenas
+88248-151 Fogaa do Norte / AP'),
+('2273', '3', 'Viela de Nogueira, 436
+So Benedito
+25754-964 da Conceio / RR'),
+('2274', '1', 'Favela Viana, 57
+So Bento
+37308404 Nascimento / GO'),
+('2275', '5', 'Morro Caldeira, 43
+Minas Caixa
+94720315 Farias da Serra / RR'),
+('2276', '5', 'Praa Ana Clara Freitas, 40
+Lajedo
+07110-093 Costela / PR'),
+('2277', '1', 'Conjunto Sofia da Mota, 45
+Cidade Jardim
+77596-776 Ribeiro de Vieira / RR'),
+('2278', '4', 'Lago das Neves, 84
+Vila Nova Gameleira 2 Seo
+34092996 Santos / SP'),
+('2279', '4', 'Trevo de Lopes, 422
+Vila Santa Monica 1 Seo
+54756046 Castro de Barros / SC'),
+('2280', '5', 'Vila de Farias, 86
+Inconfidncia
+52118272 da Costa / SP'),
+('2281', '4', 'Alameda Castro, 295
+Trevo
+96570-537 Cavalcanti dos Dourados / PA'),
+('2282', '3', 'Largo Arajo, 57
+Conjunto Taquaril
+37164440 Gomes da Prata / AM'),
+('2283', '2', 'Morro de Silveira, 799
+Minaslandia
+97017-737 Correia / AC'),
+('2284', '3', 'Fazenda Arago, 6
+Horto Florestal
+78892542 Gomes dos Dourados / PB'),
+('2285', '5', 'Praa de Caldeira
+Conjunto Califrnia I
+74190-797 Ribeiro Paulista / PE'),
+('2286', '3', 'Parque de Ramos, 76
+Mariano De Abreu
+98578774 Campos / PR'),
+('2287', '5', 'Parque Las Moraes, 1
+Maria Goretti
+79888-761 Monteiro / PI'),
+('2288', '1', 'Stio de Barbosa, 90
+Baro Homem De Melo 2 Seo
+26762-652 Fernandes da Mata / BA'),
+('2289', '2', 'Recanto Pietra Nogueira, 37
+Ambrosina
+99100564 Pinto / PR'),
+('2290', '1', 'Feira de Correia, 88
+Mantiqueira
+61259-525 Carvalho de Minas / MG'),
+('2291', '3', 'Ladeira Correia, 2
+Apolonia
+20233-697 Melo / RR'),
+('2292', '5', 'Fazenda Otvio Novaes
+Santa Lcia
+71962192 Moraes / SE'),
+('2293', '3', 'Lagoa Cardoso, 18
+Barreiro
+88140176 Costela / TO'),
+('2294', '4', 'Praa Joo Vitor Teixeira, 98
+Vila Rica
+20260437 Azevedo do Amparo / MS'),
+('2295', '2', 'Parque Larissa Silva, 93
+Minaslandia
+55503-112 da Conceio / AP'),
+('2296', '3', 'Trevo de Moraes, 47
+Tirol
+74590-772 Nogueira da Praia / PE'),
+('2297', '1', 'Trevo de Sales, 79
+Mariquinhas
+52992-574 Gonalves / ES'),
+('2298', '4', 'Loteamento da Luz, 48
+Liberdade
+33169291 Cardoso da Praia / MA'),
+('2299', '3', 'Estrada de Almeida, 996
+Jardim Do Vale
+15296-066 da Cunha / SP'),
+('2300', '5', 'Vereda de Carvalho
+Vila Piratininga
+13008350 Arago da Praia / MA'),
+('2301', '2', 'Ptio Correia, 80
+Serra Do Curral
+28847327 Ramos / AC'),
+('2302', '4', 'Condomnio Brbara Rezende, 75
+Planalto
+74170994 da Luz Verde / DF'),
+('2303', '1', 'Viela Luiz Fernando Silveira, 48
+Bela Vitoria
+07122-262 Silva da Serra / SE'),
+('2304', '1', 'Residencial de Farias, 5
+Suzana
+87132-772 Fogaa / RS'),
+('2305', '2', 'Morro de Santos
+Santa Monica
+47881-045 Fernandes de Barbosa / PA'),
+('2306', '4', 'Largo de Freitas, 58
+Nova Pampulha
+36377880 da Paz / PA'),
+('2307', '5', 'Vale de Oliveira, 920
+Alta Tenso 1 Seo
+21188-206 Fernandes / PI'),
+('2308', '1', 'Estrada Henrique Melo, 54
+Venda Nova
+54822-775 Gonalves / SE'),
+('2309', '1', 'rea Fernandes
+Conjunto Califrnia Ii
+55390-214 Silveira / PE'),
+('2310', '1', 'Setor Isabel Azevedo, 12
+Solar Do Barreiro
+19689-252 Farias / PB'),
+('2311', '2', 'Feira Novaes, 58
+Unidas
+59177-708 Barros de da Mata / MS'),
+('2312', '3', 'Esplanada de Fogaa, 89
+Alto Das Antenas
+67712950 Nascimento / RJ'),
+('2313', '5', 'Residencial Benjamin Pereira, 8
+Conjunto Taquaril
+01984-376 Porto / RN'),
+('2314', '5', 'Campo Freitas, 56
+Flamengo
+17559593 Monteiro das Pedras / PE'),
+('2315', '1', 'Lagoa de Castro
+So Pedro
+47908-473 Mendes / SP'),
+('2316', '1', 'Chcara Noah da Mata, 88
+Vila Antena Montanhs
+84163-280 da Costa / PA'),
+('2317', '2', 'Favela de Freitas, 47
+Vila Da Paz
+41857557 Dias Alegre / DF'),
+('2318', '4', 'Rodovia Campos, 527
+Mangabeiras
+21215-995 Pires / SE'),
+('2319', '5', 'Loteamento de Rezende, 80
+Corumbiara
+27586-934 Rezende de Dias / RN'),
+('2320', '3', 'Parque de Rocha
+Paulo Vi
+73883575 Almeida / AC'),
+('2321', '3', 'Trevo Breno Barros, 40
+Vila Jardim Alvorada
+75017-289 Martins / AL'),
+('2322', '2', 'Estrada de da Paz, 23
+Vila Minaslandia
+06103674 Mendes da Prata / CE'),
+('2323', '5', 'rea de Azevedo
+Nova Cintra
+40301767 da Luz / TO'),
+('2324', '3', 'Travessa Helena Barros, 7
+Cnego Pinheiro 2 Seo
+72705-824 Duarte / SC'),
+('2325', '2', 'Conjunto de Porto, 67
+Joo Pinheiro
+50080873 da Conceio / BA'),
+('2326', '4', 'Largo Davi Santos
+Vila Santo Antnio Barroquinha
+98061-766 Novaes / SC'),
+('2327', '5', 'rea Lopes
+Conjunto Paulo Vi
+68626-067 Silveira / PE'),
+('2328', '5', 'Loteamento Davi Lucca Jesus, 2
+Vila Do Pombal
+16826960 Azevedo / PR'),
+('2329', '2', 'Residencial Arago, 8
+Ambrosina
+08835641 da Cunha / TO'),
+('2330', '5', 'Rodovia de Sales, 425
+Satelite
+50673603 Mendes / PR'),
+('2331', '5', 'Alameda da Rocha, 4
+Dom Silverio
+02588480 Santos / GO'),
+('2332', '4', 'Recanto Luiz Miguel Rodrigues, 43
+Maria Goretti
+77485864 Melo de Teixeira / CE'),
+('2333', '3', 'Viela de Ferreira, 88
+Estoril
+28283-331 Nunes Alegre / BA'),
+('2334', '5', 'Quadra Eduardo Teixeira, 3
+Bom Jesus
+99264-060 da Mata de Barros / SE'),
+('2335', '5', 'Estao Cardoso, 51
+Marilandia
+46893-037 da Rosa de Fogaa / AL'),
+('2336', '3', 'Feira de Cavalcanti, 8
+Tupi A
+29669605 Rocha das Pedras / RJ'),
+('2337', '2', 'Fazenda Daniela Carvalho, 749
+Vila Canto Do Sabi
+82435206 Vieira Paulista / RJ'),
+('2338', '4', 'Colnia Thomas Souza, 25
+Embabas
+62220-300 Gonalves / PA'),
+('2339', '1', 'Chcara Marcelo Viana, 18
+Marieta 2 Seo
+25449-276 Almeida de Cavalcanti / SE'),
+('2340', '1', 'Aeroporto Maria Luiza Pires, 4
+Bairro Das Indstrias Ii
+75618132 Moraes / MG'),
+('2341', '2', 'Fazenda de Silveira
+Vila Santo Antnio
+27097-137 Dias / PB'),
+('2342', '5', 'Trecho de Mendes, 48
+Nova Vista
+68751-583 Barros / GO'),
+('2343', '2', 'Alameda Enrico da Luz, 5
+Renascena
+85954-260 Alves / AL'),
+('2344', '1', 'Fazenda Mendes, 2
+Lourdes
+04898-810 Ribeiro do Amparo / CE'),
+('2345', '2', 'Ladeira Rafaela Arajo, 894
+Vila Mangueiras
+28334-965 Costela / PI'),
+('2346', '2', 'Recanto Mendes, 49
+Aaro Reis
+82229-716 Duarte da Praia / MT'),
+('2347', '5', 'Conjunto da Rocha, 35
+Das Industrias I
+29044486 Vieira / PE'),
+('2348', '4', 'Ncleo Danilo Cunha, 7
+Vila Bandeirantes
+23467647 Cavalcanti / RN'),
+('2349', '5', 'Viaduto de da Costa
+Cinquentenrio
+03940-756 da Mota / PI'),
+('2350', '5', 'Rodovia de da Cunha, 89
+Maria Tereza
+29299575 Nunes de Pereira / RO'),
+('2351', '5', 'Ptio Cardoso, 248
+Vila So Gabriel
+52177910 da Cunha de Campos / MT'),
+('2352', '4', 'Lagoa Isis da Mata, 907
+Vila Nova Dos Milionarios
+51325113 Cunha / AC'),
+('2353', '3', 'Ncleo Catarina Ribeiro, 40
+Conjunto Santa Maria
+01472730 Nogueira do Norte / AM'),
+('2354', '4', 'Esplanada de Correia, 73
+Cidade Jardim
+47545-465 Cardoso / GO'),
+('2355', '3', 'Estrada Renan Fogaa, 11
+Lagoinha
+31336-552 Souza / MS'),
+('2356', '1', 'Passarela de Moraes, 3
+Santo Antnio
+30353514 Castro / CE'),
+('2357', '3', 'Loteamento Mendes
+Bonfim
+34888-889 Alves do Campo / TO'),
+('2358', '2', 'rea Lorena Lopes, 40
+Joo Paulo Ii
+12281-429 Teixeira de Gois / MS'),
+('2359', '4', 'Viaduto de Cunha
+Gameleira
+99792888 Teixeira / RS'),
+('2360', '3', 'Parque Isaac Pires, 39
+Luxemburgo
+98156-401 Nunes / PR'),
+('2361', '4', 'Via Vinicius Alves, 63
+Nova Sua
+45554638 Nunes / AC'),
+('2362', '3', 'Lago Mait Jesus, 50
+Comiteco
+57589896 Fogaa / RN'),
+('2363', '2', 'Rua da Paz, 1
+Caiaras
+08494383 da Conceio / GO'),
+('2364', '3', 'Rua de Pinto, 23
+Vila Ecolgica
+42628-704 Souza / MA'),
+('2365', '1', 'Condomnio Arago, 7
+Vila Olhos 
+60665853 Pereira das Pedras / ES'),
+('2366', '3', 'Rodovia Vitor Gabriel da Rosa, 91
+Vila Vista Alegre
+07266022 Carvalho / RO'),
+('2367', '1', 'Via Cardoso, 33
+Coqueiros
+23122-942 Martins / PA'),
+('2368', '3', 'Condomnio Otvio da Paz, 63
+Vila Primeiro De Maio
+38791-408 Moreira / ES'),
+('2369', '4', 'Rodovia Evelyn Nunes, 3
+Bairro Das Indstrias Ii
+72289-619 Souza do Galho / RN'),
+('2370', '3', 'Distrito Sophia Almeida, 97
+Suzana
+24863-989 Ferreira / MG'),
+('2371', '2', 'Praa de Fogaa, 21
+Joo Paulo Ii
+62952-258 Souza / MA'),
+('2372', '3', 'Distrito de Peixoto
+Minas Caixa
+19473-914 da Mota / AM'),
+('2373', '2', 'Rodovia de da Conceio, 97
+Garas
+69278532 Farias do Sul / PI'),
+('2374', '1', 'Vereda Rodrigues, 49
+Monte So Jos
+13784966 Ribeiro do Amparo / BA'),
+('2375', '3', 'Passarela Rodrigues, 67
+Jardim Montanhs
+17351-204 Pinto / AL'),
+('2376', '3', 'Quadra Teixeira, 95
+Araguaia
+72713708 Melo / SP'),
+('2377', '5', 'Ladeira de Moura, 18
+Santa Efignia
+96021-771 Dias Alegre / TO'),
+('2378', '3', 'Trecho Ana Lvia Costa, 13
+Atila De Paiva
+19480864 Azevedo do Oeste / PA'),
+('2379', '1', 'Condomnio de Santos, 32
+Santa Rosa
+87402-855 Barros / PR'),
+('2380', '3', 'Favela de Vieira, 82
+Vila So Geraldo
+15504494 das Neves / RJ'),
+('2381', '5', 'Alameda Francisco Castro, 1
+Acaiaca
+81414-867 Oliveira de Arajo / PB'),
+('2382', '2', 'Parque de Correia, 73
+Vila Das Oliveiras
+51601282 Mendes dos Dourados / MA'),
+('2383', '5', 'Largo de da Cruz, 2
+So Vicente
+56219-901 Gonalves / GO'),
+('2384', '3', 'Esplanada da Mata, 93
+Vila Da Amizade
+73987688 Moreira / MS'),
+('2385', '4', 'Ptio Farias, 8
+Vila Primeiro De Maio
+52928-645 Dias Alegre / SP'),
+('2386', '5', 'Campo de das Neves, 10
+Jardim Do Vale
+08397-373 Cardoso da Praia / PB'),
+('2387', '2', 'Parque Levi Cavalcanti, 85
+Cnego Pinheiro 2 Seo
+72684554 Duarte de Duarte / AL'),
+('2388', '1', 'Jardim de das Neves, 5
+Madri
+66014-732 Alves / CE'),
+('2389', '2', 'Ladeira de Silveira, 69
+Minas Caixa
+65293-521 Ferreira Paulista / AM'),
+('2390', '5', 'Lago Amanda Oliveira, 31
+So Bento
+88405178 da Mata / RN'),
+('2391', '2', 'Lagoa de Azevedo, 38
+Zilah Sposito
+25710-120 Lima / RO'),
+('2392', '3', 'Colnia Barros, 4
+Milionario
+94145-432 Carvalho / AM'),
+('2393', '4', 'Rua da Paz, 54
+Paquet
+01741521 Rodrigues / MT'),
+('2394', '3', 'Conjunto Ana Laura Castro, 21
+Jardim Atlntico
+14308-332 Gomes de Minas / RJ'),
+('2395', '1', 'Favela de Ramos, 60
+Baro Homem De Melo 3 Seo
+09317127 Viana Grande / BA'),
+('2396', '3', 'Viaduto Barros
+Nazare
+09135-824 da Paz da Mata / DF'),
+('2397', '3', 'Stio Guilherme Teixeira, 94
+Solimoes
+07361-933 da Cruz / SE'),
+('2398', '2', 'Ladeira Bruna Lima, 74
+Nazare
+14861-299 Arajo / AP'),
+('2399', '4', 'Via de Pereira, 1
+Aaro Reis
+81391857 Nascimento do Campo / SE'),
+('2400', '1', 'Vila de Azevedo, 584
+Padre Eustquio
+25007435 Azevedo / SE'),
+('2401', '2', 'Lagoa de Peixoto, 1
+Santa Margarida
+77618-301 Jesus de Pires / RJ'),
+('2402', '4', 'Residencial Novaes, 34
+Cinquentenrio
+82266941 Melo / RS'),
+('2403', '3', 'Condomnio Arajo, 2
+Vila Ouro Minas
+55866-640 Peixoto / PR'),
+('2404', '3', 'Quadra Ceclia Nogueira, 625
+Barroca
+69301472 Costela / BA'),
+('2405', '4', 'Distrito Ana Sophia Nascimento, 17
+Antonio Ribeiro De Abreu 1 Seo
+25867-861 Cardoso Verde / RJ'),
+('2406', '5', 'Stio de Arajo, 799
+Mantiqueira
+21163444 Arajo / MA'),
+('2407', '5', 'Campo de Dias, 30
+Alta Tenso 1 Seo
+31795828 Arago / RO'),
+('2408', '4', 'Praia de Silva, 45
+Serrano
+58358-905 Viana / ES'),
+('2409', '4', 'Alameda Arajo, 424
+Santa Sofia
+36311-240 Costa do Galho / MA'),
+('2410', '1', 'Aeroporto de Silveira, 460
+Maria Goretti
+73825107 Jesus / RS'),
+('2411', '2', 'Conjunto Costela
+Hava
+52754-301 Rodrigues de Gois / DF'),
+('2412', '4', 'Conjunto de da Conceio, 31
+Sagrada Famlia
+36780-906 Souza / AL'),
+('2413', '1', 'Colnia Joo Miguel Carvalho
+Lindia
+52982-151 Fernandes das Pedras / PR'),
+('2414', '1', 'Passarela Moraes
+So Lucas
+86152-159 Rezende / MA'),
+('2415', '1', 'Trevo Melo, 9
+Boa Vista
+21671-702 Nascimento de Gois / SP'),
+('2416', '3', 'Recanto de Farias, 9
+Bela Vitoria
+83934-868 da Rosa / RN'),
+('2417', '5', 'Rodovia Nascimento
+Distrito Industrial Do Jatoba
+74689004 Castro do Amparo / SC'),
+('2418', '2', 'Trecho de Cardoso, 6
+Vila Copasa
+74580-559 Porto do Oeste / PA'),
+('2419', '3', 'Aeroporto de Almeida, 82
+Itaipu
+81676989 da Conceio Verde / PI'),
+('2420', '4', 'Feira Moraes, 1
+So Bento
+63013-764 Rodrigues de Minas / AC'),
+('2421', '1', 'Campo Marcela Monteiro, 99
+Alpes
+30581-225 Duarte da Mata / SE'),
+('2422', '1', 'Loteamento de Azevedo, 5
+Camponesa 2 Seo
+44063-971 Castro / AC'),
+('2423', '3', 'Quadra Costela
+Minaslandia
+61758138 Cunha / MS'),
+('2424', '5', 'Colnia Noah Ferreira, 60
+Mangueiras
+58432919 Pinto Verde / TO'),
+('2425', '2', 'Praa Eduardo Nogueira, 364
+Alta Tenso 2 Seo
+22737410 Ramos de Silveira / DF'),
+('2426', '4', 'Praa de Pinto, 666
+So Tomaz
+63406581 da Cruz / DF'),
+('2427', '2', 'Setor Fernandes, 32
+Heliopolis
+38997921 Silveira de Barros / TO'),
+('2428', '5', 'Esplanada de Castro, 828
+Vila Ouro Minas
+13419154 Ribeiro Verde / RJ'),
+('2429', '1', 'Via de Silva
+Hava
+97075-143 Pinto / AL'),
+('2430', '5', 'Stio Alice Souza, 6
+Vila Paraso
+08429943 Alves de Minas / RR'),
+('2431', '3', 'Rodovia de da Cruz, 89
+Santa Cecilia
+80264757 Caldeira / SE'),
+('2432', '1', 'Ptio Kaique Barros, 80
+Vila Da Paz
+53696984 Barbosa do Sul / SP'),
+('2433', '2', 'Setor Noah Porto, 45
+Nova Floresta
+78260-972 Silveira / AC'),
+('2434', '2', 'Travessa Yasmin Correia, 20
+Corao Eucarstico
+23466-641 Rocha Verde / PA'),
+('2435', '5', 'Jardim de da Rosa, 84
+Lagoinha
+54126432 Lopes do Campo / RO'),
+('2436', '4', 'Stio Leandro Costa, 73
+Acaiaca
+56332478 Farias / MG'),
+('2437', '5', 'Condomnio Maria Sophia da Cunha, 622
+Planalto
+90831-431 Cunha do Norte / SE'),
+('2438', '3', 'Estao Danilo Cavalcanti, 2
+Vila So Dimas
+86738-427 Dias / PI'),
+('2439', '1', 'Viaduto Joo Gabriel Santos
+Savassi
+24405558 Moraes da Mata / RN'),
+('2440', '3', 'Trevo Andr Costela, 557
+Belvedere
+59944-601 Arajo / AC'),
+('2441', '5', 'Setor Arago, 71
+Santa Rosa
+31013505 da Rocha das Flores / RJ'),
+('2442', '1', 'Setor de Cavalcanti, 982
+Parque So Jos
+96857527 Nogueira / MG'),
+('2443', '3', 'Loteamento Viana
+Caiara - Adelaide
+18218367 Cunha da Mata / AL'),
+('2444', '5', 'Jardim de da Cunha, 73
+Caiaras
+21838-041 Silveira / RR'),
+('2445', '1', 'Chcara de Castro, 44
+Novo So Lucas
+27581265 Nascimento / TO'),
+('2446', '4', 'Lagoa de Santos, 6
+Vila Minaslandia
+91006720 Silveira / RO'),
+('2447', '2', 'Ptio Pedro Miguel Fogaa, 11
+Vila Da Luz
+88988317 Moura / AL'),
+('2448', '5', 'Residencial Luiz Felipe Pires, 76
+Comiteco
+87503-813 Caldeira / PI'),
+('2449', '3', 'Avenida Gabriel da Conceio, 2
+Belvedere
+65181-541 Costa de Ramos / RR'),
+('2450', '3', 'Trecho Fernando Azevedo, 79
+Gutierrez
+81463-325 Arago do Galho / MS'),
+('2451', '2', 'Estrada de Lopes, 47
+Unidas
+67285-026 Oliveira / DF'),
+('2452', '2', 'Avenida Novaes, 29
+Vila Real 2 Seo
+34582-166 Cardoso / GO'),
+('2453', '1', 'Condomnio de Cavalcanti, 259
+Mangabeiras
+57596-078 da Costa / ES'),
+('2454', '1', 'Quadra Fogaa, 5
+Estoril
+44244-427 Nogueira do Norte / RO'),
+('2455', '4', 'Esplanada Alexia Cardoso, 999
+Novo Ouro Preto
+94235193 Correia / RR'),
+('2456', '5', 'Praia Amanda Castro, 437
+Vila Nova Paraso
+26606131 Santos / AC'),
+('2457', '2', 'Via Breno Correia, 86
+Penha
+46527-134 Moura / PA'),
+('2458', '5', 'rea de Duarte, 2
+Vila Batik
+44846852 Cardoso das Pedras / MT'),
+('2459', '5', 'Trecho Lara Melo, 64
+Vitoria Da Conquista
+58194394 Azevedo / MA'),
+('2460', '4', 'Loteamento de Freitas, 917
+Cabana Do Pai Toms
+94054453 da Cunha / DF'),
+('2461', '4', 'Lago Cau Jesus, 167
+Leonina
+50956-148 Silveira de Santos / AP'),
+('2462', '2', 'Esplanada Bernardo Pinto
+Vila Paris
+83750-636 Castro / BA'),
+('2463', '2', 'Feira de Lima, 52
+Unio
+17977-611 Castro / RS'),
+('2464', '1', 'Praa de da Rocha, 207
+Vila Canto Do Sabi
+75990-314 Arago / MA'),
+('2465', '4', 'Alameda Danilo Farias, 409
+Guarani
+76636-061 Azevedo / MS'),
+('2466', '2', 'Aeroporto de Ramos, 4
+Vila Formosa
+39000-476 Rocha do Galho / PI'),
+('2467', '4', 'Ptio Marcela Teixeira, 64
+Solar Do Barreiro
+69110-145 Campos / RJ'),
+('2468', '2', 'Viela de Cardoso, 75
+Andiroba
+79535-081 Nascimento Alegre / PA'),
+('2469', '1', 'Distrito Olivia Cavalcanti, 13
+Lorena
+44349468 Moraes / MS'),
+('2470', '2', 'Trecho Barros, 5
+Baro Homem De Melo 3 Seo
+03633061 Moura / RS'),
+('2471', '5', 'Colnia Costa, 3
+Gutierrez
+99969448 Porto da Mata / AL'),
+('2472', '3', 'Chcara Melo, 45
+Vila So Geraldo
+05595-459 Nascimento Paulista / RN'),
+('2473', '1', 'Vereda das Neves, 24
+Santa Ins
+77271039 Moreira / PR'),
+('2474', '3', 'Colnia de Alves, 59
+Vila Coqueiral
+79891649 Porto / RJ'),
+('2475', '4', 'Estrada de da Mata, 31
+Oeste
+58165358 da Rocha de Alves / RO'),
+('2476', '5', 'Fazenda Gabriela da Mata, 94
+Vila Nossa Senhora Do Rosrio
+03430523 Nascimento / PA'),
+('2477', '1', 'Trecho de Costela, 11
+Pindura Saia
+69585874 Cavalcanti / PR'),
+('2478', '1', 'Praia Raul Sales, 65
+Cu Azul
+06524127 Freitas Verde / MT'),
+('2479', '2', 'Viaduto Emanuella Ramos
+So Jorge 1 Seo
+48314358 Pires da Prata / ES'),
+('2480', '3', 'Residencial de Novaes, 63
+So Lucas
+44383-168 da Rosa / RJ'),
+('2481', '2', 'rea Nathan Lima, 49
+Buraco Quente
+36096-946 Costela / BA'),
+('2482', '1', 'Condomnio Luiz Miguel Jesus, 96
+Frei Leopoldo
+42030-992 Martins das Pedras / MG'),
+('2483', '1', 'rea Silva, 61
+Santa Monica
+09588617 Martins / SC'),
+('2484', '3', 'Via de Sales
+Vila Suzana Segunda Seo
+01886-299 da Paz da Serra / MS'),
+('2485', '1', 'Esplanada Cardoso, 8
+Baro Homem De Melo 2 Seo
+30636-276 Freitas / AC'),
+('2486', '1', 'Setor Marina Pinto, 1
+Liberdade
+68959-981 Pinto Grande / RO'),
+('2487', '3', 'Stio Stella Almeida, 77
+Vila Independencia 3 Seo
+19764148 Costa / RJ'),
+('2488', '5', 'Largo Correia
+Esplanada
+96719923 Mendes Verde / CE'),
+('2489', '5', 'Ncleo Nicolas Moura, 675
+Vista Alegre
+35905-776 da Costa / PR'),
+('2490', '3', 'Lago de Peixoto, 67
+Buraco Quente
+77125896 Souza / AC'),
+('2491', '1', 'Condomnio Pedro Lucas Nascimento, 26
+Vila Fumec
+17247764 Nunes / MA'),
+('2492', '5', 'Ptio Alexia Freitas, 28
+Vila Mangueiras
+52228319 Rocha do Oeste / SC'),
+('2493', '2', 'Travessa Luna Duarte, 17
+Hava
+45439790 da Rocha / MG'),
+('2494', '1', 'Stio Azevedo, 42
+Solimoes
+00845379 Dias das Flores / DF'),
+('2495', '2', 'Chcara Guilherme Dias
+Manacas
+69245480 Martins do Campo / PA'),
+('2496', '1', 'Aeroporto de Viana, 8
+Sion
+26982-556 Caldeira de Gois / SE'),
+('2497', '2', 'Praa de Peixoto, 81
+Vila Jardim Montanhes
+76501726 Nascimento do Galho / GO'),
+('2498', '1', 'Condomnio da Luz, 69
+Lajedo
+78559294 Arago de Cavalcanti / CE'),
+('2499', '3', 'Setor de Silveira, 13
+Mariano De Abreu
+69059-451 Silva de Souza / PR'),
+('2500', '3', 'Lago de Nunes
+Dom Silverio
+58542-125 Vieira / AM'),
+('2501', '1', 'Campo Almeida, 78
+Vila Jardim Leblon
+85879687 Silveira da Mata / AP'),
+('2502', '4', 'Vale de da Rocha, 45
+Vila Coqueiral
+58079042 da Mota / MT'),
+('2503', '3', 'Favela Juliana Rezende, 51
+Jardim So Jos
+61999-030 Caldeira da Serra / AC'),
+('2504', '3', 'Esplanada Martins, 74
+Corao Eucarstico
+34365972 da Mota da Serra / AP'),
+('2505', '4', 'Favela de Nascimento
+Tiradentes
+08268-434 Cavalcanti de Viana / SC'),
+('2506', '4', 'Passarela Stephany Lima, 82
+Califrnia
+09349161 Jesus das Pedras / RO'),
+('2507', '5', 'Ladeira Thomas das Neves, 131
+Bernadete
+97686662 Moreira do Oeste / MS'),
+('2508', '3', 'Quadra Maria Clara Souza, 43
+Trevo
+49187773 Nunes / MA'),
+('2509', '1', 'Condomnio de Moraes, 716
+Laranjeiras
+85506-280 da Mota / RJ'),
+('2510', '2', 'Morro Lucca Moura, 96
+Alto Dos Pinheiros
+41002-846 Rocha / DF'),
+('2511', '3', 'Alameda Nogueira, 48
+Vila Independencia 2 Seo
+19418631 Campos da Serra / RO'),
+('2512', '3', 'Parque Lopes
+Dom Joaquim
+25188601 Martins do Galho / RR'),
+('2513', '2', 'Via Fogaa
+Vila Nossa Senhora Do Rosrio
+53302-660 Ribeiro da Mata / MS'),
+('2514', '2', 'Colnia Caio Duarte, 587
+Vila Barragem Santa Lcia
+40000664 das Neves do Norte / RO'),
+('2515', '4', 'Recanto Souza
+Estoril
+05793044 da Mata / PE'),
+('2516', '4', 'Estao Lima, 24
+Nossa Senhora Aparecida
+55997674 Santos / MG'),
+('2517', '4', 'Viela Maria Fernanda Ferreira, 284
+Mirtes
+00110966 Gonalves / AP'),
+('2518', '4', 'Ptio Freitas, 334
+Nova Cintra
+72617-066 Pereira de Gois / SP'),
+('2519', '1', 'Recanto Mirella da Paz, 71
+Pedreira Padro Lopes
+34516-051 Dias de Sales / SC'),
+('2520', '4', 'Quadra Rodrigo Peixoto, 20
+Universitrio
+86226322 Rodrigues / CE'),
+('2521', '3', 'Aeroporto Silveira, 601
+Urca
+48904-299 da Rosa do Sul / MA'),
+('2522', '5', 'Aeroporto Porto, 26
+Vila So Paulo
+76719541 Duarte / GO'),
+('2523', '1', 'Praia Joo Gabriel Lopes, 36
+Vila Pilar
+79519-203 Ramos de Pinto / SE'),
+('2524', '1', 'Trevo de Pires, 24
+Itapoa
+73626-667 da Mata / PI'),
+('2525', '2', 'Jardim de Pereira, 340
+Castanheira
+09853048 Campos / RO'),
+('2526', '1', 'Largo de Souza, 4
+Ouro Preto
+52541-914 Peixoto / PI'),
+('2527', '5', 'Avenida de Oliveira, 92
+Vila Fumec
+71778-647 Teixeira de Costa / AP'),
+('2528', '5', 'Via Lucca Silva, 47
+So Geraldo
+03429-200 Farias da Praia / RJ'),
+('2529', '4', 'Chcara de Teixeira, 874
+Alto Das Antenas
+02340-102 Vieira / PB'),
+('2530', '3', 'Estrada Sophia Lima, 3
+Conjunto Minas Caixa
+51364429 Barros / RR'),
+('2531', '5', 'Distrito da Mata, 27
+Vila Cemig
+75038104 Nunes / RN'),
+('2532', '4', 'Fazenda Rodrigo Campos, 26
+Tupi A
+60127-875 Barbosa de Minas / RS'),
+('2533', '2', 'Rua Novaes, 86
+Mariano De Abreu
+20076-151 da Costa da Mata / RR'),
+('2534', '3', 'rea Cavalcanti, 6
+Vila Canto Do Sabi
+12203-903 Gonalves Paulista / PE'),
+('2535', '3', 'Chcara de da Cruz, 468
+Mirtes
+54887-714 Oliveira / PR'),
+('2536', '3', 'rea Nathan Azevedo, 58
+Cruzeiro
+21144-098 Barros de da Rocha / RN'),
+('2537', '4', 'Praia Clara Farias, 944
+Mala E Cuia
+44375-923 da Mota / PI'),
+('2538', '3', 'Loteamento Helosa Viana, 27
+Estoril
+14557287 Azevedo do Campo / RR'),
+('2539', '4', 'Avenida Vitor Hugo Cunha
+Vila Atila De Paiva
+67514663 Pinto / CE'),
+('2540', '1', 'Rodovia Maysa das Neves, 88
+Leticia
+21666933 Nunes / SE'),
+('2541', '1', 'Ncleo Gonalves, 33
+So Francisco Das Chagas
+39636-062 Monteiro da Serra / DF'),
+('2542', '2', 'Aeroporto Beatriz Porto, 58
+Monsenhor Messias
+87943-637 Castro de Mendes / PI'),
+('2543', '5', 'Avenida de Pinto, 37
+Santa Efignia
+60153848 Arajo / MT'),
+('2544', '5', 'Jardim Lima, 45
+Satelite
+75252-347 Moraes do Campo / DF'),
+('2545', '5', 'Chcara Ribeiro, 550
+Mangueiras
+37625331 Rezende / CE'),
+('2546', '3', 'Estao Emanuelly das Neves, 8
+Universitrio
+91444823 Melo / RO'),
+('2547', '4', 'Lago Eloah Fogaa
+Vila Da Amizade
+06802-796 Costela / BA'),
+('2548', '1', 'Via Moreira, 31
+Jonas Veiga
+19192124 Rodrigues / TO'),
+('2549', '4', 'Praia de Pires
+Jonas Veiga
+85467198 da Costa de da Mata / RS'),
+('2550', '2', 'Jardim de Cardoso, 58
+Bonsucesso
+64197887 Nascimento de Arago / PB'),
+('2551', '4', 'Praa de Costela, 556
+Carmo
+29177-410 Costela / PR'),
+('2552', '1', 'Feira Joo Guilherme Castro, 7
+So Luiz
+99397-616 Jesus / PI'),
+('2553', '1', 'Ladeira Felipe Vieira, 722
+Mariquinhas
+25560513 Nunes / PI'),
+('2554', '1', 'Jardim de Pinto
+Vila So Paulo
+30684-011 Farias / MG'),
+('2555', '4', 'Condomnio de Souza, 942
+Cnego Pinheiro 1 Seo
+03488-581 Cavalcanti das Pedras / AL'),
+('2556', '2', 'Largo Vieira, 698
+Urca
+68924-418 Porto / PR'),
+('2557', '2', 'Via Raul Arajo, 79
+Lajedo
+85549739 da Luz Grande / MA'),
+('2558', '1', 'Colnia Igor da Mata, 7
+Pousada Santo Antonio
+37058-784 Souza / ES'),
+('2559', '4', 'Avenida de Moreira
+Primeiro De Maio
+80535-538 Fernandes das Flores / PA'),
+('2560', '4', 'Parque Sophia da Paz, 95
+Bandeirantes
+00098-926 Martins / SP'),
+('2561', '2', 'Jardim Novaes, 38
+Ventosa
+54559-301 Cardoso do Oeste / DF'),
+('2562', '2', 'Passarela Barbosa, 66
+Delta
+49215-046 da Paz da Mata / SE'),
+('2563', '3', 'Condomnio de Pires, 1
+Senhor Dos Passos
+67001-209 Viana de da Paz / MA'),
+('2564', '4', 'Feira Moreira, 98
+Camponesa 2 Seo
+96164-812 Teixeira / GO'),
+('2565', '2', 'Colnia Gomes, 65
+Buraco Quente
+43932114 da Cruz / RS'),
+('2566', '3', 'Rua de Ribeiro, 87
+Vila Vista Alegre
+11461-137 Cunha / MT'),
+('2567', '1', 'Vale Lucca Campos, 476
+Ernesto Nascimento
+34683-562 Cavalcanti do Sul / BA'),
+('2568', '2', 'Lago Bencio Jesus, 95
+So Sebastio
+44657422 Azevedo Grande / ES'),
+('2569', '1', 'Viaduto Pinto
+Outro
+83061429 Pinto / PE'),
+('2570', '5', 'Estao Alice Almeida, 4
+Mantiqueira
+56563-592 Ramos / DF'),
+('2571', '2', 'Rua Joo Pedro Monteiro, 862
+Providencia
+99214237 Correia / PE'),
+('2572', '3', 'Jardim Amanda Alves, 460
+Eymard
+32604-523 Alves / ES'),
+('2573', '5', 'Via de Caldeira, 11
+Califrnia
+57293217 Santos da Praia / MT'),
+('2574', '3', 'Colnia Maria Sophia da Cunha, 435
+Ouro Preto
+33568-569 da Luz do Sul / RJ'),
+('2575', '1', 'Esplanada Stella da Mata, 71
+Grota
+38752-721 Vieira / PA'),
+('2576', '1', 'Rodovia Ribeiro, 26
+Campo Alegre
+77368-505 Mendes Paulista / GO'),
+('2577', '2', 'Ptio Breno Cavalcanti, 904
+Zilah Sposito
+06536-954 Farias / TO'),
+('2578', '1', 'Lago Daniel da Mata
+Pirineus
+14161992 da Paz / MT'),
+('2579', '2', 'Feira Emanuelly da Paz, 17
+So Jorge 2 Seo
+08623255 Rezende / RN'),
+('2580', '3', 'Praa Marina das Neves
+Vila Unio
+75785-882 Teixeira / PA'),
+('2581', '4', 'Vale Evelyn Peixoto, 635
+Floresta
+91565-679 Farias / AC'),
+('2582', '4', 'Chcara Teixeira, 10
+Jardim Atlntico
+03088073 Rocha / ES'),
+('2583', '3', 'Stio de Costela, 29
+pia
+31155-182 Pinto / RR'),
+('2584', '3', 'Setor da Rocha
+Estrela Do Oriente
+86180317 Rocha / SC'),
+('2585', '1', 'Vila Rodrigo Castro, 749
+Mangueiras
+98028-767 Moraes / PB'),
+('2586', '2', 'Parque Isaac Monteiro, 33
+Betnia
+54974-143 da Paz / MT'),
+('2587', '5', 'Esplanada Cunha, 15
+Paraso
+92278879 Fernandes / MS'),
+('2588', '3', 'Ptio de Martins, 95
+Conjunto Serra Verde
+31414266 Fernandes Paulista / AP'),
+('2589', '4', 'Fazenda Arajo, 97
+Gameleira
+88192-033 Alves de Castro / AL'),
+('2590', '2', 'Parque de das Neves, 310
+Graa
+87946191 Melo do Oeste / DF'),
+('2591', '2', 'Largo de Pereira
+Graja
+07584504 Rocha / SP'),
+('2592', '5', 'Rodovia de Arago, 527
+Boa Viagem
+83874-713 Costela / SC'),
+('2593', '2', 'Setor Arago, 176
+Conjunto So Francisco De Assis
+36932145 Alves de Peixoto / ES'),
+('2594', '5', 'Favela de Ferreira, 1
+Mariano De Abreu
+61709026 Lima / PB'),
+('2595', '2', 'Praa Porto, 4
+So Jos
+02560-120 Fernandes Paulista / TO'),
+('2596', '2', 'Campo Lopes, 137
+Santa Rita De Cssia
+29827-443 Costela / AP'),
+('2597', '4', 'Ladeira de Silveira, 78
+Aeroporto
+25806-980 Costela de Gois / RJ'),
+('2598', '1', 'Esplanada de Teixeira, 30
+Horto Florestal
+07727326 Arajo do Sul / MT'),
+('2599', '4', 'Setor Fogaa
+Centro
+35259-601 Ribeiro / PI'),
+('2600', '3', 'Distrito de Oliveira, 72
+Nazare
+41742-823 Dias / MS'),
+('2601', '2', 'Praia Samuel Campos, 56
+Pilar
+53310-520 Silva de Rezende / PR'),
+('2602', '5', 'Viela de Pires, 8
+Carmo
+92389312 Souza dos Dourados / PE'),
+('2603', '2', 'Vila Alves, 19
+Cenaculo
+28881310 Pereira / PR'),
+('2604', '1', 'Ncleo de da Paz
+Branas
+61986-459 Ferreira / PA'),
+('2605', '4', 'Residencial Enzo da Rocha, 745
+Flamengo
+84066-469 Martins de Ribeiro / PR'),
+('2606', '2', 'Chcara Sophie Castro, 93
+Milionario
+97608-959 Pires / ES'),
+('2607', '2', 'Lagoa Guilherme Souza
+Novo Aaro Reis
+77854-201 Correia do Amparo / CE'),
+('2608', '4', 'Quadra de Souza, 5
+Vila Barragem Santa Lcia
+22565283 Pereira / MT'),
+('2609', '2', 'Praia de Monteiro, 99
+Antonio Ribeiro De Abreu 1 Seo
+13737806 Cunha da Prata / RS'),
+('2610', '3', 'Vale Sales, 912
+Pilar
+31813716 Monteiro / RR'),
+('2611', '4', 'Ncleo de da Conceio, 29
+Jardim Felicidade
+90844918 Rocha da Mata / AP'),
+('2612', '4', 'Quadra de Cardoso, 23
+Vila Antena Montanhs
+31626-023 Fernandes de Ferreira / AC'),
+('2613', '4', 'Viaduto Helosa Azevedo, 620
+Monte So Jos
+45217389 Arajo / SC'),
+('2614', '2', 'Estao de Ramos, 84
+So Gonalo
+58372985 Pereira / CE'),
+('2615', '2', 'Via de Dias, 558
+Vila So Geraldo
+18548476 Fogaa / RO'),
+('2616', '5', 'Passarela Carvalho, 3
+Universo
+58774390 Barros / MA'),
+('2617', '2', 'Stio Ferreira, 464
+Monsenhor Messias
+82854-156 Campos / AC'),
+('2618', '2', 'Quadra de Arajo, 17
+Vila Maloca
+07929850 Oliveira do Campo / PA'),
+('2619', '1', 'Setor Viana, 95
+So Gonalo
+52471-779 Moreira / AC'),
+('2620', '3', 'Viela de Gomes, 8
+Vila Da Luz
+43400856 Oliveira / BA'),
+('2621', '4', 'Passarela de Nogueira, 88
+Zilah Sposito
+46883-451 Almeida / RN'),
+('2622', '1', 'Estao Pereira, 90
+Mariano De Abreu
+24332-979 Fogaa do Campo / AP'),
+('2623', '1', 'Rodovia Evelyn da Mota, 27
+Granja De Freitas
+53373774 Melo / BA'),
+('2624', '3', 'Alameda de Rocha, 926
+Vila Nova Gameleira 2 Seo
+83345498 da Cruz / RO'),
+('2625', '3', 'Trecho Cardoso
+Alto Vera Cruz
+05609932 Caldeira / MS'),
+('2626', '1', 'Campo Brenda Silva
+Vila Coqueiral
+05402967 Costa dos Dourados / AM'),
+('2627', '4', 'Loteamento da Rocha, 47
+Jardim Do Vale
+80971359 Teixeira / PA'),
+('2628', '5', 'Trevo de Novaes
+Manacas
+85410085 Moreira / PB'),
+('2629', '1', 'Chcara de Pinto, 76
+Vila So Rafael
+77736203 Pereira do Campo / RN'),
+('2630', '5', 'Residencial Igor Nascimento, 6
+Graja
+99651-158 Nascimento Paulista / RJ'),
+('2631', '5', 'Viaduto de Lima, 88
+Copacabana
+10225-746 Arajo / MS'),
+('2632', '4', 'Viaduto Sales, 21
+Nova Pampulha
+86495756 da Cruz de Gois / RO'),
+('2633', '3', 'Loteamento de Costa, 298
+Marieta 2 Seo
+39663-938 Jesus / RR'),
+('2634', '1', 'Estrada Caio Jesus, 210
+Camponesa 2 Seo
+76285900 Pereira / AM'),
+('2635', '4', 'Ncleo Lorenzo Farias, 31
+Embabas
+56603-404 Silva Paulista / MA'),
+('2636', '2', 'Recanto Nunes, 88
+Maria Virgnia
+38679129 da Cruz / MS'),
+('2637', '5', 'Vale Melissa Arago, 48
+Vila Cloris
+75071-338 Gomes / PE'),
+('2638', '3', 'Distrito Alexandre Vieira, 98
+Distrito Industrial Do Jatoba
+73652-406 Jesus de Minas / ES'),
+('2639', '2', 'Quadra Maria Vitria Nunes, 34
+Santa Margarida
+56368164 da Cunha de da Cruz / RN'),
+('2640', '3', 'Estrada Porto
+Vila Nova Gameleira 2 Seo
+44817-371 Castro / DF'),
+('2641', '4', 'Distrito de Santos, 9
+Tupi B
+36282-140 Novaes do Campo / RO'),
+('2642', '1', 'Praia de da Cruz, 74
+Granja Werneck
+93829-137 Cunha de Duarte / RO'),
+('2643', '3', 'Estao Augusto da Rosa, 13
+Vila Nova Gameleira 3 Seo
+44953698 da Rosa da Praia / TO'),
+('2644', '5', 'Largo Ribeiro, 807
+Santa Cruz
+83040-533 Gonalves / PR'),
+('2645', '1', 'Jardim Duarte, 8
+Minas Brasil
+52579950 Fernandes do Amparo / MT'),
+('2646', '4', 'Praia Lorenzo da Cruz, 468
+Miramar
+61779-797 da Mota / BA'),
+('2647', '2', 'Aeroporto Gabriela Cardoso, 506
+Outro
+44697514 da Rocha / RS'),
+('2648', '1', 'Via Arthur Novaes
+Liberdade
+29897-933 Cunha / SP'),
+('2649', '2', 'Trecho Cardoso, 117
+Nova Granada
+14973916 Sales de Minas / AM'),
+('2650', '5', 'Travessa Bruna Vieira, 8
+Vila Satlite
+85081852 da Conceio de Gois / RO'),
+('2651', '2', 'Estao Maria Alice da Mata
+Santa Monica
+57161-574 Cardoso Grande / SE'),
+('2652', '4', 'Vereda Alcia Moura, 44
+Maravilha
+43856085 Ribeiro / MA'),
+('2653', '5', 'Ptio Maysa Cardoso, 28
+Carlos Prates
+16578280 Nogueira / BA'),
+('2654', '4', 'Favela Sales, 1
+Cidade Jardim
+63061066 Melo / AL'),
+('2655', '1', 'Estao Paulo da Costa, 24
+Biquinhas
+58332-041 Lima / SE'),
+('2656', '4', 'Trevo Castro
+Vila So Paulo
+96724269 Lima / PB'),
+('2657', '1', 'Ncleo Jesus, 53
+Olaria
+93319-789 Duarte do Sul / CE'),
+('2658', '1', 'Viaduto de da Paz, 12
+Jardim Montanhs
+32538-873 Pereira / GO'),
+('2659', '2', 'Rodovia Ana Beatriz Lopes, 56
+Jardinpolis
+00997-060 Silva de Nogueira / MS'),
+('2660', '2', 'Loteamento Lara Pereira, 35
+Conjunto Celso Machado
+43539-130 Lopes de Nascimento / RS'),
+('2661', '1', 'Fazenda Dias, 96
+Indai
+00111898 Alves / TO'),
+('2662', '2', 'Lagoa Isabel Correia, 747
+Conjunto Lagoa
+76103-114 da Luz da Prata / SE'),
+('2663', '4', 'Campo Souza, 3
+Vila So Gabriel
+55647-557 Oliveira / RN'),
+('2664', '5', 'Aeroporto da Cunha, 7
+Vila So Gabriel Jacui
+67078697 Viana do Sul / DF'),
+('2665', '1', 'Distrito Leonardo da Cunha, 94
+Maria Goretti
+86354-106 Moraes de Gois / DF'),
+('2666', '3', 'rea Alana Nascimento, 2
+Colgio Batista
+20304-829 Rezende de Cardoso / SP'),
+('2667', '1', 'Avenida da Cruz, 71
+Sion
+46772581 Mendes dos Dourados / GO'),
+('2668', '2', 'Vila de Barbosa, 14
+Casa Branca
+79403645 Fernandes / AL'),
+('2669', '2', 'Stio de da Rosa, 27
+Beira Linha
+89572-979 Vieira das Pedras / BA'),
+('2670', '3', 'Ladeira Paulo da Rocha, 57
+Vila Califrnia
+94979715 Gonalves da Prata / RO'),
+('2671', '4', 'Distrito Castro, 7
+Vista Alegre
+54677-133 Viana / PE'),
+('2672', '4', 'Recanto de Gomes, 96
+Mariano De Abreu
+80241-506 da Rosa / RS'),
+('2673', '4', 'Rua de Dias, 169
+Comiteco
+40926419 Silva / MA'),
+('2674', '3', 'Chcara Silveira, 20
+Acaba Mundo
+28998845 Souza Grande / RS'),
+('2675', '3', 'Colnia de Lima, 31
+Luxemburgo
+76873-867 Pinto Grande / SE'),
+('2676', '3', 'Stio de Freitas, 52
+Universo
+20703-027 Azevedo / MA'),
+('2677', '5', 'Jardim Campos, 97
+Jonas Veiga
+08706-549 Cavalcanti / ES'),
+('2678', '3', 'Viaduto Isabelly Castro, 61
+So Vicente
+44430-757 Viana de da Rosa / ES'),
+('2679', '4', 'Stio de Rodrigues, 39
+Inconfidncia
+22827-836 Monteiro de Carvalho / MT'),
+('2680', '4', 'Viaduto de Vieira, 39
+Vila Maloca
+94339911 Ribeiro / PE'),
+('2681', '5', 'Lago Sophia Ferreira, 98
+Estrela Do Oriente
+64504-521 da Rocha de Pinto / RR'),
+('2682', '2', 'Alameda de Dias
+Bernadete
+23989571 Castro da Mata / AM'),
+('2683', '3', 'Via da Rocha, 845
+Corao Eucarstico
+85343-249 da Mota / PR'),
+('2684', '2', 'Feira de da Conceio, 390
+So Sebastio
+44479110 Moreira da Praia / AL'),
+('2685', '5', 'Aeroporto Pedro Henrique Ribeiro, 5
+Maria Helena
+55751-917 Cunha / RO'),
+('2686', '4', 'Esplanada de da Rosa, 62
+Mariano De Abreu
+61819-861 Freitas / SE'),
+('2687', '1', 'Parque de Novaes, 6
+Branas
+70823685 Martins / DF'),
+('2688', '1', 'Vereda Maria Eduarda da Rocha
+Piratininga
+58141-852 Nogueira do Campo / MT'),
+('2689', '4', 'Ncleo Moreira, 11
+Conjunto Serra Verde
+05830039 Oliveira / MG'),
+('2690', '4', 'Via Nogueira, 45
+Vila Real 2 Seo
+01723953 Moreira / AC'),
+('2691', '1', 'Chcara Enzo Gabriel Moreira, 55
+Conjunto Califrnia Ii
+57841-637 Barbosa da Prata / DF'),
+('2692', '2', 'Alameda Peixoto, 4
+Vila Nova Cachoeirinha 3 Seo
+80889-555 Sales / AC'),
+('2693', '3', 'Trevo Fogaa, 657
+Bairro Das Indstrias Ii
+30343-419 Novaes de Pires / MS'),
+('2694', '5', 'Esplanada de da Luz, 55
+Frei Leopoldo
+67199759 Carvalho / DF'),
+('2695', '1', 'Feira da Mota, 36
+Vila Barragem Santa Lcia
+76656-462 Pinto / GO'),
+('2696', '1', 'Estao de Silveira, 691
+Miramar
+77003711 Sales / AM'),
+('2697', '5', 'Aeroporto de Peixoto, 859
+Antonio Ribeiro De Abreu 1 Seo
+56099-186 Nogueira de Fogaa / RJ'),
+('2698', '5', 'Parque Thomas Ferreira, 8
+Boa Esperana
+44090304 Martins dos Dourados / GO'),
+('2699', '3', 'Viela de Peixoto, 8
+Santa Rita De Cssia
+33721373 Porto / AL'),
+('2700', '2', 'Alameda Caio Barros
+Pongelupe
+49689-766 Ferreira Paulista / RR'),
+('2701', '2', 'Travessa Marina Rocha
+Inconfidncia
+22530-428 Nunes / MA'),
+('2702', '5', 'Vereda de Rezende, 84
+Zilah Sposito
+88038-899 Lima Paulista / SE'),
+('2703', '2', 'Vila Oliveira, 47
+Etelvina Carneiro
+31029972 Mendes das Pedras / TO'),
+('2704', '3', 'Colnia de Porto, 8
+Itatiaia
+69617-700 Costa / SP'),
+('2705', '3', 'Vereda de Almeida, 90
+Santa Amelia
+99748901 Castro de Santos / PR'),
+('2706', '3', 'Feira de Nunes, 57
+Belvedere
+78022342 Porto Alegre / MG'),
+('2707', '1', 'Via Alves, 58
+So Francisco Das Chagas
+86528-895 Costa da Serra / PI'),
+('2708', '5', 'Passarela da Conceio, 260
+Zilah Sposito
+19601877 das Neves / MS'),
+('2709', '3', 'Ladeira de Souza, 66
+Olhos 
+84501208 Costa Alegre / MT'),
+('2710', '1', 'Residencial Luiz Felipe Sales
+Pantanal
+77019223 Barbosa / SP'),
+('2711', '1', 'Alameda da Costa, 596
+Lagoinha Leblon
+97751-222 Rodrigues / GO'),
+('2712', '1', 'Travessa Luiza Barros, 5
+Vila Sesc
+49508-547 Santos de Minas / RS'),
+('2713', '4', 'Rua de Ferreira
+Brasil Industrial
+90585-416 Pinto da Serra / CE'),
+('2714', '2', 'Aeroporto de Pereira, 57
+Maraj
+03365-642 Lopes das Pedras / RO'),
+('2715', '2', 'Aeroporto de da Cruz, 59
+Vila Petropolis
+84753930 Alves da Prata / AP'),
+('2716', '2', 'Distrito Pedro Lucas Lima, 81
+Fazendinha
+07642512 Sales / MA'),
+('2717', '5', 'Esplanada Catarina Freitas, 491
+Tirol
+63329-275 Sales de Sales / PB'),
+('2718', '1', 'Fazenda Alcia Teixeira, 66
+Acaiaca
+86497-279 Moura / PR'),
+('2719', '2', 'Largo Peixoto, 5
+Glria
+61613-407 Gomes do Oeste / RO'),
+('2720', '5', 'Setor de Porto, 33
+Vila Independencia 1 Seo
+55789649 da Luz de Minas / SC'),
+('2721', '4', 'Fazenda Antnio Melo
+So Jos
+17412334 Gonalves / TO'),
+('2722', '1', 'Praia de da Rocha, 20
+Joo Pinheiro
+40628728 Moreira / RJ'),
+('2723', '1', 'Aeroporto Ana Lvia das Neves, 995
+Graja
+57832815 Silva / MG'),
+('2724', '1', 'Chcara Lima, 7
+Minas Brasil
+10850752 Nunes de Ferreira / PB'),
+('2725', '4', 'Condomnio Azevedo, 75
+Vila Paquet
+05037-770 Cunha / RJ'),
+('2726', '5', 'Ptio Peixoto
+Carmo
+56350-019 Sales / DF'),
+('2727', '3', 'Alameda de Pires, 98
+Vila Pilar
+20506434 Vieira / PI'),
+('2728', '5', 'Trecho Mendes, 585
+Horto Florestal
+25677525 Cardoso / ES'),
+('2729', '4', 'Fazenda de Moraes, 19
+Bonfim
+02491241 Gomes / MT'),
+('2730', '2', 'Passarela de Souza, 7
+Vila Ecolgica
+11755-520 Oliveira de Rodrigues / MG'),
+('2731', '1', 'Quadra Noah da Cruz, 7
+Vila Jardim Alvorada
+09425-200 Pires da Praia / AM'),
+('2732', '2', 'Estao de da Rosa, 21
+Santa Cruz
+38393-548 Peixoto de da Mota / PR'),
+('2733', '4', 'Trevo Monteiro, 65
+Nossa Senhora Do Rosrio
+15962-621 Monteiro / CE'),
+('2734', '5', 'Residencial Azevedo
+Madri
+11037-857 Gomes / MS'),
+('2735', '5', 'Lago Cau Azevedo, 5
+Nova Granada
+81702-792 da Cunha / AP'),
+('2736', '5', 'Recanto Fernandes, 422
+Novo Glria
+86575-870 Cardoso / AM'),
+('2737', '4', 'Quadra Costa
+So Jorge 2 Seo
+68354969 Pinto de Carvalho / PA'),
+('2738', '1', 'Stio Marcela Vieira, 89
+So Joo Batista
+32225-409 Castro da Serra / PB'),
+('2739', '5', 'Travessa de Jesus, 225
+Canad
+53662417 Viana / SP'),
+('2740', '4', 'Recanto de Martins, 5
+Vila Suzana Primeira Seo
+43286026 Mendes / MS'),
+('2741', '4', 'Fazenda Barbosa, 68
+Confisco
+64769-427 Duarte Verde / RN'),
+('2742', '4', 'Parque de Barbosa
+Silveira
+84736684 Souza / AL'),
+('2743', '2', 'Via de Barros, 94
+Vila Independencia 1 Seo
+72035590 Teixeira Verde / AL'),
+('2744', '3', 'Distrito Juan Barbosa
+Santa Cruz
+63270418 Correia / PI'),
+('2745', '4', 'Setor Heitor Nogueira, 52
+Palmeiras
+09664-288 Cunha da Prata / MG'),
+('2746', '4', 'Jardim de Lima, 88
+Cardoso
+15515-394 Barros / SE'),
+('2747', '1', 'Jardim de Jesus, 6
+Vila Madre Gertrudes 3 Seo
+68352347 Oliveira Grande / RR'),
+('2748', '2', 'Distrito Cardoso, 446
+Jardim Vitoria
+90245733 Rocha / BA'),
+('2749', '5', 'Loteamento de Ramos, 68
+Padre Eustquio
+78439-827 Souza / MA'),
+('2750', '3', 'Rodovia de Novaes, 41
+Castanheira
+00244-616 Dias / MS'),
+('2751', '3', 'Lago Vitor Arajo, 64
+Santa Isabel
+63956639 Melo / RO'),
+('2752', '3', 'Rua Alexia Pinto, 95
+Vila Da Paz
+04329-248 Fogaa do Amparo / SE'),
+('2753', '3', 'rea Gomes, 147
+Biquinhas
+76715-927 Nunes Verde / PA'),
+('2754', '4', 'Fazenda Bernardo da Costa, 96
+So Salvador
+34331544 da Costa / PI'),
+('2755', '2', 'Stio Las Ribeiro, 60
+Graa
+75983529 Silva das Pedras / AP'),
+('2756', '1', 'Vale Porto, 40
+Cenaculo
+61624-756 Lopes da Mata / PI'),
+('2757', '5', 'Fazenda Juliana das Neves, 4
+Vila Petropolis
+52471322 Santos / MG'),
+('2758', '4', 'rea de Gomes, 45
+Das Industrias I
+55120572 Ribeiro de Caldeira / RJ'),
+('2759', '2', 'Avenida de Barbosa, 50
+Vila So Dimas
+12748-566 Barros Verde / SC'),
+('2760', '1', 'Jardim de Viana, 3
+Vila So Paulo
+81625683 Gomes / MS'),
+('2761', '2', 'Rua Moreira, 20
+Vila Bandeirantes
+28645409 Teixeira do Sul / SC'),
+('2762', '1', 'Quadra Ian Caldeira, 43
+Das Industrias I
+09799-265 Novaes do Norte / AM'),
+('2763', '2', 'Viaduto Nogueira, 438
+So Geraldo
+34575026 Nascimento do Campo / PR'),
+('2764', '3', 'Parque de Barros
+Funcionrios
+47085-562 Fogaa do Galho / PI'),
+('2765', '2', 'Distrito Lara Rodrigues, 43
+So Jorge 1 Seo
+26956-590 da Conceio / AM'),
+('2766', '4', 'Fazenda Silveira
+Vila Do Pombal
+62351-450 Jesus / AL'),
+('2767', '3', 'Condomnio Cavalcanti, 32
+Santo Agostinho
+31709-574 Ribeiro das Flores / MS'),
+('2768', '5', 'Stio Rafael das Neves, 945
+So Pedro
+09753-939 Campos Alegre / MT'),
+('2769', '4', 'Favela Rezende, 5
+Aparecida
+41643957 Correia / ES'),
+('2770', '4', 'Distrito Pedro Miguel Moreira, 41
+Floresta
+32283-862 Peixoto / PB'),
+('2771', '4', 'Vale Melo, 143
+Monsenhor Messias
+81755-639 Rezende / SC'),
+('2772', '4', 'Praa Francisco Arajo
+So Jorge 3 Seo
+37895224 Nascimento de Teixeira / MS'),
+('2773', '5', 'Stio Ryan Moraes, 5
+Santa Lcia
+25281-157 Silva do Galho / PR'),
+('2774', '3', 'Aeroporto de Barros, 3
+Calafate
+82481-446 da Costa / AC'),
+('2775', '1', 'Feira de Martins, 5
+Baleia
+67851-923 Castro do Galho / ES'),
+('2776', '3', 'Favela Rezende, 832
+Maria Tereza
+11633-525 da Paz dos Dourados / RS'),
+('2777', '1', 'Viela Viana, 49
+Branas
+62683492 Monteiro / SC'),
+('2778', '1', 'Viaduto Porto, 697
+Conjunto Taquaril
+87076-656 Fogaa / PE'),
+('2779', '4', 'Condomnio Moraes, 755
+Vila Jardim Alvorada
+00084559 Pires / PA'),
+('2780', '5', 'Aeroporto Pinto, 864
+So Francisco
+05905-023 Farias da Praia / SC'),
+('2781', '4', 'Ladeira Castro, 34
+Senhor Dos Passos
+49313100 Duarte / CE'),
+('2782', '2', 'Fazenda de Ramos, 64
+Novo Ouro Preto
+90230-878 da Mota do Galho / SP'),
+('2783', '3', 'Aeroporto de Santos, 15
+Conjunto Santa Maria
+88869650 Gomes Paulista / AP'),
+('2784', '2', 'Colnia de Martins, 92
+Cdi Jatoba
+52453913 Porto / SC'),
+('2785', '4', 'Rua Azevedo, 620
+Jardim Vitoria
+39357-525 Rezende / ES'),
+('2786', '5', 'Trecho Matheus Barbosa, 5
+Vila Sesc
+46923111 Gonalves / RR'),
+('2787', '3', 'Praia Milena Rezende
+Novo So Lucas
+65137-754 Ribeiro / RR'),
+('2788', '3', 'Ladeira Duarte
+Universo
+75091-470 da Cruz / MT'),
+('2789', '2', 'Passarela de Pinto, 59
+So Cristvo
+40472417 Moraes / ES'),
+('2790', '4', 'Passarela de Martins, 556
+Silveira
+93307-929 Melo Alegre / PA'),
+('2791', '3', 'Via Costela, 85
+Vila Antena
+20237442 Cardoso / RS'),
+('2792', '1', 'Stio de Caldeira, 71
+Varzea Da Palma
+04226084 Caldeira / MG'),
+('2793', '5', 'Aeroporto Matheus Nunes, 485
+Vila So Joo Batista
+00504161 Nunes / MA'),
+('2794', '4', 'Travessa Silva
+Buritis
+13605401 Nogueira da Prata / SE'),
+('2795', '2', 'Chcara Ceclia Arajo, 36
+Diamante
+19926-942 Gonalves / AP'),
+('2796', '5', 'Estrada de Moraes, 346
+Camponesa 1 Seo
+25531-521 Barbosa do Galho / MG'),
+('2797', '5', 'Chcara de Dias, 58
+Conjunto Minas Caixa
+84398-516 Cavalcanti de Melo / PI'),
+('2798', '3', 'Travessa Fogaa, 51
+Satelite
+37843-546 Gonalves / PR'),
+('2799', '4', 'Praa de Nogueira, 489
+Jardim So Jos
+93857-007 Mendes / GO'),
+('2800', '2', 'Residencial Pires, 53
+Vila Da Amizade
+86217934 Correia Paulista / MS'),
+('2801', '3', 'Ptio Oliveira
+Dona Clara
+91714-966 Dias / PE'),
+('2802', '4', 'Parque Arajo
+Esplanada
+00967970 Almeida / TO'),
+('2803', '3', 'Vila Joo Felipe Duarte, 10
+Jardim Montanhs
+62974861 Azevedo Verde / PI'),
+('2804', '3', 'Trecho de Oliveira, 23
+Varzea Da Palma
+09922-781 Martins / ES'),
+('2805', '1', 'Lagoa Maysa Gomes, 4
+Vila Independencia 2 Seo
+65628-402 Caldeira de Azevedo / PI'),
+('2806', '3', 'Via de Lopes, 34
+Pousada Santo Antonio
+24074-498 Moraes / MA'),
+('2807', '1', 'Lagoa de Pinto, 25
+Vila Oeste
+72133-266 Moreira das Pedras / CE'),
+('2808', '3', 'Lago Sofia da Mata, 3
+Candelaria
+02086-946 Campos / MA'),
+('2809', '5', 'Lagoa Porto, 64
+Vila Copasa
+81794-095 Fogaa / AM'),
+('2810', '3', 'Distrito de Costa
+Vila Independencia 2 Seo
+54281-261 da Mota Paulista / SE'),
+('2811', '5', 'Colnia da Mata, 8
+Vila Primeiro De Maio
+33222743 da Mata / CE'),
+('2812', '3', 'Vila de Moraes, 4
+Canaa
+84132-632 Cavalcanti / DF'),
+('2813', '4', 'Stio de Farias, 57
+Maria Tereza
+44616811 Mendes / MG'),
+('2814', '1', 'Lago de Peixoto, 27
+Belmonte
+79202901 Almeida dos Dourados / BA'),
+('2815', '2', 'Fazenda Novaes, 23
+Jatob
+82857277 Monteiro do Campo / RN'),
+('2816', '2', 'Travessa de da Rosa, 273
+Monsenhor Messias
+06884-697 Cardoso / AC'),
+('2817', '2', 'Vila de Gomes
+Nova Cachoeirinha
+08441381 Peixoto de Moraes / BA'),
+('2818', '2', 'Trevo de Cardoso, 107
+Maria Virgnia
+35275-612 Vieira / MT'),
+('2819', '4', 'Vale Mendes, 21
+Urca
+62026362 Pires Paulista / AC'),
+('2820', '1', 'Praia Bryan da Luz, 164
+Granja Werneck
+16008383 Cardoso / SC'),
+('2821', '4', 'Ladeira das Neves, 20
+Vila Bandeirantes
+20638076 da Rosa Grande / PR'),
+('2822', '4', 'Praia Rocha, 37
+Vila Petropolis
+60680-844 Viana / RR'),
+('2823', '3', 'Trevo de Martins, 5
+Mineiro
+55138-366 Almeida / PR'),
+('2824', '3', 'Stio Cavalcanti, 2
+Ermelinda
+88702-886 Pinto / MS'),
+('2825', '1', 'Setor Lorenzo Mendes, 5
+Das Industrias I
+44772-659 da Cruz do Oeste / PR'),
+('2826', '2', 'Setor da Rosa
+Mineiro
+67841260 Costa / PI'),
+('2827', '5', 'Travessa de Porto, 384
+Vila Aeroporto Jaragu
+31570-228 Peixoto da Mata / MT'),
+('2828', '4', 'Estrada Cunha, 73
+Vila So Francisco
+03278-948 Duarte / AP'),
+('2829', '1', 'Lago Ribeiro, 97
+Vila Nova Gameleira 1 Seo
+19301058 Pereira / PE'),
+('2830', '3', 'Favela de Cavalcanti, 89
+Aparecida
+54338407 Pires do Campo / PE'),
+('2831', '5', 'Lago Lima, 23
+Vila Esplanada
+26928-095 Jesus da Serra / MA'),
+('2832', '5', 'Viaduto da Costa, 58
+Pedreira Padro Lopes
+82957-245 Viana / AL'),
+('2833', '2', 'Viela Ana Vitria Moura, 33
+Jardim So Jos
+92571-910 da Mota de Cavalcanti / PI'),
+('2834', '5', 'Colnia Barros, 52
+Mala E Cuia
+83804622 Sales de Nogueira / PB'),
+('2835', '3', 'Loteamento de Freitas
+So Francisco Das Chagas
+80969590 Santos das Pedras / PA'),
+('2836', '2', 'Estrada de Novaes, 18
+Lagoinha Leblon
+56133-200 Santos / PI'),
+('2837', '3', 'Conjunto Murilo Duarte, 256
+Baro Homem De Melo 2 Seo
+80602500 Dias / AL'),
+('2838', '3', 'Vila Calebe da Mata, 98
+Granja Werneck
+08300-123 Fernandes / MG'),
+('2839', '4', 'Recanto de Santos, 9
+Vila So Gabriel Jacui
+86846411 Duarte das Pedras / GO'),
+('2840', '4', 'Rodovia Freitas, 81
+Vila Madre Gertrudes 1 Seo
+35201-342 Duarte da Prata / TO'),
+('2841', '4', 'Estrada de Moraes, 90
+So Benedito
+98082932 da Conceio de Lopes / MS'),
+('2842', '3', 'Loteamento de Costa, 29
+Alto Dos Pinheiros
+02443841 Almeida / MA'),
+('2843', '3', 'Largo de Silva, 39
+Vila So Gabriel Jacui
+18711939 Fogaa / ES'),
+('2844', '1', 'Avenida de Arago, 63
+Graa
+10615-535 Vieira / TO'),
+('2845', '3', 'Passarela Cavalcanti, 23
+Pousada Santo Antonio
+65812755 Arajo / AC'),
+('2846', '3', 'Esplanada de Almeida, 359
+Santa Sofia
+58030-227 da Conceio do Sul / CE'),
+('2847', '3', 'Campo Freitas, 292
+Conjunto Santa Maria
+81939535 Nunes / AL'),
+('2848', '2', 'Largo Fernandes, 13
+Nova Gameleira
+31662893 da Rocha / SE'),
+('2849', '3', 'Esplanada de Rezende, 931
+Vila So Paulo
+50781200 Novaes do Amparo / SC'),
+('2850', '1', 'Praa Caldeira
+So Marcos
+80493048 Santos de Mendes / MA'),
+('2851', '5', 'Trevo Clara Nogueira, 11
+Floramar
+71876370 Barbosa / RR'),
+('2852', '3', 'Viela Alice Vieira, 568
+Bacurau
+06398-480 Santos / AM'),
+('2853', '1', 'Conjunto de Arago, 77
+Santa Rita
+14683-609 da Mata / BA'),
+('2854', '3', 'Chcara Alana Barbosa, 50
+Casa Branca
+47394044 Porto de da Luz / SP'),
+('2855', '1', 'Loteamento de Oliveira, 40
+Vila Minaslandia
+02267680 Jesus / CE'),
+('2856', '2', 'Vila de Cunha, 64
+Custodinha
+74018523 Costela / PE'),
+('2857', '1', 'Largo Joo Gonalves, 2
+Vila So Joo Batista
+46508928 Campos / PE'),
+('2858', '4', 'Chcara de Freitas, 8
+Santa Ins
+38472-096 Rezende / TO'),
+('2859', '3', 'rea Mirella Rezende, 78
+Vila Trinta E Um De Maro
+42633-139 Rocha da Serra / AL'),
+('2860', '3', 'Estrada de Viana, 40
+Santa Rita
+21831-727 Peixoto / RN'),
+('2861', '5', 'Estao Gomes, 35
+Jonas Veiga
+08157966 Cunha / SE'),
+('2862', '2', 'Residencial Milena da Mota, 50
+Laranjeiras
+43199-375 Lopes do Galho / PB'),
+('2863', '3', 'Residencial Felipe Arago, 63
+Nova Cintra
+85568-215 Jesus do Amparo / RO'),
+('2864', '2', 'Morro Marcelo Dias, 45
+Bonfim
+77615-522 Correia de Gois / AP'),
+('2865', '1', 'Rodovia Lima, 51
+Jardinpolis
+90491-969 da Cunha / PI'),
+('2866', '4', 'Esplanada Porto, 8
+Santa Isabel
+63109748 Ramos / DF'),
+('2867', '4', 'Ncleo Monteiro
+Sport Club
+79650549 Cardoso das Flores / BA'),
+('2868', '3', 'Conjunto Erick Arago
+Nova Cachoeirinha
+32112-441 Mendes dos Dourados / AM'),
+('2869', '4', 'Stio Giovanna da Rocha
+Cenaculo
+85283-049 Souza Grande / RS'),
+('2870', '5', 'rea de Santos, 66
+Vila So Gabriel
+29321-549 Rezende / SP'),
+('2871', '2', 'Praia de Viana
+Betnia
+59952244 Ramos do Norte / BA'),
+('2872', '2', 'Chcara Peixoto, 745
+Vila Betnia
+41357-960 Ferreira / RJ'),
+('2873', '2', 'Fazenda da Cunha, 30
+Vitoria Da Conquista
+49669-203 Nunes / AM'),
+('2874', '4', 'Condomnio de Correia, 5
+So Damio
+80608-584 Fogaa de Castro / AL'),
+('2875', '1', 'Travessa Cardoso, 76
+Juliana
+34267331 da Rocha Verde / TO'),
+('2876', '3', 'Trevo Marcela Mendes, 3
+Vila Cemig
+43554-071 Moura / AP'),
+('2877', '5', 'Colnia de Viana, 9
+Vila Paris
+95347-994 Souza do Campo / RO'),
+('2878', '1', 'Lago de Carvalho, 2
+Rio Branco
+04110055 Silva de da Cunha / DF'),
+('2879', '4', 'Viaduto Silveira, 40
+Ipiranga
+81137-245 Costela de Correia / SE'),
+('2880', '5', 'Trecho de Pires
+So Joo Batista
+61238906 Peixoto / MA'),
+('2881', '1', 'Conjunto Pereira, 4
+Cachoeirinha
+39965467 Nunes / PE'),
+('2882', '5', 'Ladeira Pedro Lucas da Luz, 36
+Mangabeiras
+03072-481 Souza / AC'),
+('2883', '2', 'Via de Porto, 8
+Vila Rica
+14981-540 Duarte / RS'),
+('2884', '4', 'Jardim de Nunes, 928
+Tupi B
+59553531 Souza de Castro / RN'),
+('2885', '1', 'Viela Ramos, 69
+Alta Tenso 2 Seo
+43619-072 Souza / MG'),
+('2886', '5', 'Passarela Arajo, 71
+Santa Rita
+37557400 Pinto / AL'),
+('2887', '5', 'Campo da Paz
+Cinquentenrio
+08342-118 Melo / AM'),
+('2888', '3', 'Chcara Kaique da Rocha, 21
+Marieta 2 Seo
+43735451 Pires / SP'),
+('2889', '5', 'Jardim Matheus Rocha, 68
+Nova Sua
+91735152 Ribeiro / RN'),
+('2890', '4', 'Vale Martins, 101
+Conjunto Celso Machado
+02267587 Monteiro / CE'),
+('2891', '3', 'Via Sales, 47
+Califrnia
+63304199 Fernandes / PB'),
+('2892', '1', 'Esplanada de Alves, 79
+Santa Rita De Cssia
+79325-172 Azevedo / BA'),
+('2893', '3', 'Conjunto Isabel Martins, 6
+Santa Isabel
+87787329 Cardoso Grande / RJ'),
+('2894', '3', 'Ladeira de Gonalves, 29
+Urca
+47965-957 Souza de da Rocha / AL'),
+('2895', '5', 'Esplanada Marcela Porto, 33
+Tupi B
+09185-006 Nunes da Praia / AC'),
+('2896', '1', 'Trecho de da Cunha, 62
+Conjunto Capito Eduardo
+48023-270 Fogaa / ES'),
+('2897', '5', 'Alameda de Campos, 8
+Vila Rica
+62273917 Rocha de Gois / RJ'),
+('2898', '3', 'Ncleo Luigi da Luz, 75
+Acaba Mundo
+94821100 Jesus / AM'),
+('2899', '4', 'Chcara de Jesus, 39
+Petropolis
+34036217 Pires da Prata / BA'),
+('2900', '3', 'Fazenda Costa, 33
+Vila Cemig
+59200-048 da Luz de da Mota / RR'),
+('2901', '5', 'Parque Nina Ramos, 433
+Boa Unio 2 Seo
+58208-015 das Neves / BA'),
+('2902', '1', 'Quadra Ramos, 39
+Vila Sumar
+68262-303 Rocha de Viana / RN'),
+('2903', '3', 'Rua de Oliveira, 247
+Santa Cruz
+66641-008 da Rocha / PE'),
+('2904', '5', 'Ptio de Cardoso, 157
+Vila Hava
+37893983 Oliveira Paulista / AP'),
+('2905', '2', 'Ncleo Samuel Correia, 55
+Frei Leopoldo
+72722-196 Pires de Souza / RR'),
+('2906', '2', 'Favela Gonalves, 71
+Virgnia
+87081-150 Caldeira / SC'),
+('2907', '4', 'Morro Lorena Nogueira, 903
+Betnia
+17613-611 Almeida Grande / PA'),
+('2908', '2', 'Favela Alice Cavalcanti, 38
+Nova America
+77096-827 da Cunha / MA'),
+('2909', '1', 'Travessa de da Rosa, 74
+So Paulo
+15159085 Sales / CE'),
+('2910', '4', 'Esplanada Castro, 75
+So Joo Batista
+13883-479 Gomes Alegre / PE'),
+('2911', '5', 'Jardim da Mota
+Vila Piratininga Venda Nova
+16166-433 Nunes Alegre / CE'),
+('2912', '5', 'Alameda de Silva, 68
+Acaba Mundo
+94214-382 Cavalcanti / PB'),
+('2913', '3', 'Estrada de Mendes, 84
+Minaslandia
+03207171 Duarte / DF'),
+('2914', '1', 'Vereda Sarah da Costa
+Savassi
+80063319 da Luz / CE'),
+('2915', '5', 'Alameda Ceclia Nunes, 75
+Campo Alegre
+63250-887 Nascimento / PE'),
+('2916', '3', 'Vale Nunes, 84
+Alpes
+18241415 Azevedo / ES'),
+('2917', '5', 'Lagoa de Ferreira
+Vila Da Paz
+47488363 Melo de Nogueira / DF'),
+('2918', '1', 'Viaduto Souza
+Jaqueline
+29218-990 Nascimento de Minas / SE'),
+('2919', '3', 'Ladeira Freitas, 13
+Pantanal
+79254676 Silva / SE'),
+('2920', '2', 'Rodovia Laura Moura, 833
+Santa Rosa
+73923099 Nascimento do Campo / RJ'),
+('2921', '3', 'Residencial de da Costa
+Monsenhor Messias
+98077-119 Rodrigues / PI'),
+('2922', '2', 'Vale da Luz, 648
+Paraso
+63301570 Gomes Verde / MS'),
+('2923', '2', 'Campo Mirella Cunha, 3
+Vila Copacabana
+95890610 Ribeiro / BA'),
+('2924', '5', 'Viela de da Rocha, 255
+Acaba Mundo
+17682-757 da Mata / RO'),
+('2925', '4', 'Rodovia Nicole Moura, 318
+Piraja
+80965012 Pereira / PE'),
+('2926', '4', 'Setor de Jesus, 55
+Nova Pampulha
+53723008 Costa / PR'),
+('2927', '4', 'Morro Silva, 8
+Carmo
+26620-944 Mendes / MG'),
+('2928', '1', 'Ladeira Monteiro, 86
+Cu Azul
+42547-624 Arago do Oeste / MA'),
+('2929', '5', 'Vila Ana Julia Oliveira, 1
+Providencia
+26638986 Castro / DF'),
+('2930', '4', 'Recanto Teixeira, 36
+Suzana
+86005988 da Luz / PE'),
+('2931', '3', 'Via Vitor Gabriel Freitas, 43
+Novo Tupi
+07337-616 Novaes / MS'),
+('2932', '1', 'Largo Barros, 64
+Suzana
+66097042 Cardoso Alegre / MT'),
+('2933', '5', 'Conjunto Eloah Martins
+Boa Vista
+63722424 Cardoso / MS'),
+('2934', '1', 'Passarela Ana Luiza Castro, 298
+Vila Piratininga Venda Nova
+95550643 da Paz / DF'),
+('2935', '1', 'Ptio Ana Jlia Rocha
+Mangueiras
+30494-601 da Luz de Porto / DF'),
+('2936', '2', 'Estrada Fogaa, 54
+Novo Glria
+77321-353 Freitas de Minas / RN'),
+('2937', '5', 'Rua Helosa Alves, 66
+Santa Margarida
+55219703 Pereira / CE'),
+('2938', '3', 'Ladeira Miguel Pires, 87
+lvaro Camargos
+79377-689 Pereira / ES'),
+('2939', '2', 'Via Natlia Melo
+Alta Tenso 1 Seo
+51627-356 Fernandes / AL'),
+('2940', '4', 'Conjunto de da Conceio
+Novo So Lucas
+28238-647 Arajo / RO'),
+('2941', '5', 'Fazenda Correia
+Vila Nova Gameleira 3 Seo
+02023132 Carvalho do Sul / ES'),
+('2942', '3', 'Vila Kamilly Farias, 6
+Pirineus
+46792-840 Martins / PR'),
+('2943', '2', 'Travessa de Ramos, 24
+Universitrio
+55572936 Gomes / TO'),
+('2944', '5', 'Ncleo de Lima, 743
+Ermelinda
+16386896 Cavalcanti / AP'),
+('2945', '1', 'Campo da Luz, 74
+Vila Sesc
+43727950 Carvalho / PE'),
+('2946', '4', 'Parque Melissa da Mata, 66
+Ferno Dias
+16116242 Nogueira / GO'),
+('2947', '1', 'Via de Caldeira, 93
+Corao De Jesus
+56496-781 da Rosa de Rezende / AM'),
+('2948', '5', 'Feira Ribeiro
+Buritis
+48227096 Novaes / SC'),
+('2949', '5', 'Travessa Monteiro, 246
+Grota
+84952176 das Neves / PB'),
+('2950', '2', 'Ptio de Fernandes, 298
+Europa
+12440-799 Arajo / PA'),
+('2951', '1', 'Largo Farias, 6
+Vila Jardim So Jos
+63074836 Gomes / RO'),
+('2952', '1', 'Praia Emanuelly Silveira, 3
+Estrela Do Oriente
+72737-909 Gomes de Gois / CE'),
+('2953', '2', 'Avenida Ana Lvia Duarte, 29
+Vila Cemig
+54675059 Fernandes de Porto / PB'),
+('2954', '2', 'Distrito Miguel Castro, 24
+Vila Vista Alegre
+78512935 Arajo de Gois / RJ'),
+('2955', '5', 'Quadra Larissa Lopes, 93
+Funcionrios
+80529523 da Cunha de Arago / AP'),
+('2956', '1', 'Colnia de Souza, 12
+So Tomaz
+03798991 Costa / CE'),
+('2957', '2', 'Conjunto Vinicius Cunha
+Mineiro
+49188-922 Porto / AM'),
+('2958', '4', 'Vila Leonardo Silva
+Conjunto Bonsucesso
+81728043 Porto / CE'),
+('2959', '1', 'rea de Freitas, 42
+Cidade Nova
+43125-280 Barbosa / SP'),
+('2960', '5', 'Lago Pedro Lima, 77
+Unio
+84358226 Fogaa / SP'),
+('2961', '2', 'Residencial Barbosa, 2
+Mirante
+43683-240 Sales de Nogueira / PI'),
+('2962', '5', 'Ptio de Silveira, 840
+Ademar Maldonado
+01360968 Nogueira da Prata / AP'),
+('2963', '1', 'Quadra Ana Lvia da Luz, 50
+So Gonalo
+21599-210 Farias / RR'),
+('2964', '2', 'Alameda Thomas Cardoso, 47
+Sport Club
+96885970 Freitas / AP'),
+('2965', '4', 'Feira Carvalho, 70
+Santa Helena
+73494-920 da Costa das Flores / GO'),
+('2966', '2', 'Feira Cau Azevedo
+Esperana
+53763641 Arajo de Minas / RR'),
+('2967', '1', 'Residencial da Cunha, 954
+Nossa Senhora Do Rosrio
+33358219 Campos do Amparo / AM'),
+('2968', '1', 'Stio Marcos Vinicius Barros, 3
+Grotinha
+48204530 Silva de Viana / PI'),
+('2969', '3', 'Trecho Arajo, 340
+So Pedro
+20855-576 Carvalho / RR'),
+('2970', '5', 'Conjunto Fernando Ramos, 1
+Santo Andr
+63939-039 Mendes / CE'),
+('2971', '2', 'Praia Pereira
+Minaslandia
+99439-461 Ribeiro / MG'),
+('2972', '1', 'Viaduto de Martins, 15
+Ouro Preto
+24674-068 das Neves / RO'),
+('2973', '5', 'Campo Ribeiro, 6
+Bacurau
+80553-263 Fogaa / MG'),
+('2974', '3', 'Morro Lorenzo da Cruz, 67
+Unidas
+43226076 Correia / SP'),
+('2975', '2', 'Recanto Thomas Moraes, 693
+Vila Olhos 
+05399733 Correia / PR'),
+('2976', '5', 'Distrito de Vieira, 3
+Jardim Vitoria
+32039068 Peixoto da Serra / BA'),
+('2977', '4', 'Conjunto de Monteiro, 71
+Teixeira Dias
+71504907 Pinto de da Cruz / PB'),
+('2978', '3', 'Favela Barbosa, 81
+Vila De S
+89875957 Viana / AM'),
+('2979', '3', 'Recanto Rocha, 796
+Jardim So Jos
+14170960 Silva / DF'),
+('2980', '1', 'Praia de Barbosa, 328
+Teixeira Dias
+27381-327 Mendes / DF'),
+('2981', '2', 'Vereda Cardoso, 846
+Corumbiara
+72438765 Carvalho Paulista / PA'),
+('2982', '5', 'Esplanada de Castro, 880
+Conjunto Providencia
+92398-388 Nogueira / ES'),
+('2983', '4', 'Lagoa de Santos, 6
+Vila Sumar
+16212-168 Caldeira / RS'),
+('2984', '3', 'Colnia Luiz Gustavo Barros, 8
+Vila Petropolis
+45469943 Peixoto / MA'),
+('2985', '4', 'Colnia de Novaes, 42
+Marieta 1 Seo
+41332546 Viana / RS'),
+('2986', '5', 'Ncleo Carvalho, 9
+Vila Inestan
+86763055 da Rosa do Sul / PA'),
+('2987', '2', 'Stio de da Rosa, 6
+Vila Das Oliveiras
+45768835 Vieira da Serra / PI'),
+('2988', '4', 'Conjunto de Cunha
+Vila Real 2 Seo
+26699-604 da Rocha do Norte / PA'),
+('2989', '3', 'rea de Jesus, 98
+Venda Nova
+69970-381 da Rocha de Souza / AL'),
+('2990', '1', 'Jardim Jesus, 10
+Olaria
+12613-957 Dias do Galho / RO'),
+('2991', '4', 'Avenida das Neves
+Castanheira
+42093218 Jesus / RS'),
+('2992', '1', 'Stio de Barros, 71
+Santa Rita
+00190-934 Melo / AL'),
+('2993', '3', 'Largo Marcelo Rodrigues, 95
+Serra Do Curral
+25951-520 Cunha / GO'),
+('2994', '5', 'Praa de Ribeiro, 19
+Conjunto So Francisco De Assis
+69761-326 Gonalves do Campo / RJ'),
+('2995', '1', 'Colnia Daniela Souza, 73
+So Gabriel
+05068961 Lopes Verde / DF'),
+('2996', '2', 'Colnia Farias, 79
+Itaipu
+33372071 Pinto / RS'),
+('2997', '4', 'Trevo Joana Correia, 83
+Vila Olhos 
+05926-576 Melo do Oeste / RN'),
+('2998', '4', 'Lagoa de Cunha, 46
+Branas
+22352245 Arajo / SE'),
+('2999', '3', 'Via de Silva, 25
+Vila Inestan
+31384-723 Azevedo / PR'),
+('3000', '2', 'Colnia de Gonalves, 8
+Urca
+02365384 Fernandes / CE'),
+('3001', '4', 'Stio Castro, 7
+Vila Jardim Montanhes
+72264-669 Monteiro / SP'),
+('3002', '4', 'Vale Caroline Moreira, 3
+Serra Do Curral
+68616-243 Arajo de Castro / PR'),
+('3003', '1', 'Campo de Moura, 833
+Vila Ecolgica
+99562-392 Lima das Pedras / AM'),
+('3004', '5', 'Feira de Nunes, 251
+Pilar
+22147-936 Costela / PA'),
+('3005', '2', 'Vila Thiago Carvalho, 89
+Vila Nossa Senhora Do Rosrio
+74011342 Santos Grande / DF'),
+('3006', '5', 'Estao Otvio Nogueira, 51
+Satelite
+68731779 Cunha / AM'),
+('3007', '4', 'Ptio Melo, 83
+Palmeiras
+39666-703 Vieira da Praia / CE'),
+('3008', '3', 'Via de Santos, 8
+Biquinhas
+64638165 Cavalcanti de Cardoso / RR'),
+('3009', '1', 'Praa Paulo Costela, 28
+Joo Alfredo
+02645154 Gonalves dos Dourados / AP'),
+('3010', '4', 'Aeroporto Emanuella Alves, 3
+Colgio Batista
+35198946 Souza Verde / MG'),
+('3011', '5', 'Campo Santos, 631
+Mariano De Abreu
+00113484 Duarte / RO'),
+('3012', '3', 'Campo de Teixeira, 64
+So Bernardo
+07586141 Rezende das Pedras / RS'),
+('3013', '2', 'Lagoa Maria Cardoso, 49
+Bonfim
+33206-000 da Paz das Pedras / MT'),
+('3014', '5', 'Avenida Monteiro, 299
+Silveira
+79995673 Oliveira / AL'),
+('3015', '1', 'Vila Freitas, 80
+Conjunto Celso Machado
+56055700 Silva Verde / PI'),
+('3016', '3', 'Viaduto Joo Pedro Silva, 65
+Cenaculo
+06732-749 Gonalves / PR'),
+('3017', '1', 'Condomnio de Farias, 140
+Aparecida
+40862-063 da Conceio do Galho / RJ'),
+('3018', '2', 'Campo Maria Fernanda Melo, 8
+Conjunto Capito Eduardo
+42129749 Duarte / AL'),
+('3019', '1', 'Quadra Gabrielly Ramos, 98
+Conjunto Providencia
+62609-368 Martins / BA'),
+('3020', '5', 'Estao Vitor Gabriel Dias, 89
+Ermelinda
+51731-409 Moura / TO'),
+('3021', '2', 'Ladeira de da Cunha, 66
+Vila Engenho Nogueira
+96845233 da Cunha da Mata / SP'),
+('3022', '5', 'Ladeira Ana Jlia Moraes, 79
+Glria
+42704-181 da Cruz Alegre / PE'),
+('3023', '1', 'Ladeira Dias, 2
+So Francisco
+47511621 Ramos / SC'),
+('3024', '3', 'rea de Rocha, 2
+Monte Azul
+27746-692 Costa / RR'),
+('3025', '2', 'Ladeira de Moura, 879
+Satelite
+27949120 Castro do Amparo / PI'),
+('3026', '1', 'Recanto de Cardoso, 4
+Vila Nova Dos Milionarios
+63726-006 Lopes de das Neves / PA'),
+('3027', '5', 'Esplanada Nogueira, 34
+Confisco
+45773514 Cunha de Gois / AL'),
+('3028', '2', 'Recanto Almeida, 81
+Jardim Do Vale
+33359-845 Alves do Galho / PE'),
+('3029', '4', 'Favela Breno Peixoto, 79
+Ermelinda
+32892-208 Sales / PI'),
+('3030', '3', 'Avenida Bryan da Conceio, 376
+Ferno Dias
+39787742 Cardoso do Sul / MA'),
+('3031', '5', 'Jardim Costela, 18
+Minaslandia
+92633-504 Castro dos Dourados / SC'),
+('3032', '5', 'Loteamento Porto, 35
+Castelo
+74485140 Costa da Mata / PE'),
+('3033', '3', 'Parque Leonardo da Cunha, 62
+Dona Clara
+69266-381 Costela / RO'),
+('3034', '1', 'Feira de Rodrigues, 486
+Mangabeiras
+80964-484 da Cruz do Oeste / GO'),
+('3035', '1', 'Alameda Carolina Rocha, 29
+Floramar
+73881462 Martins do Norte / SE'),
+('3036', '1', 'Praa de Barbosa, 21
+Vila Santa Monica 2 Seo
+39030022 Azevedo de Gois / PA'),
+('3037', '5', 'Chcara de Azevedo, 256
+Heliopolis
+98619-854 Novaes / CE'),
+('3038', '1', 'Aeroporto Maria Alice Peixoto, 419
+Alto Vera Cruz
+72933-069 Arajo do Norte / CE'),
+('3039', '3', 'Conjunto Teixeira, 762
+Conjunto Jardim Filadlfia
+65607-688 Pires Verde / DF'),
+('3040', '1', 'Viela Novaes, 9
+Alto Vera Cruz
+38587-954 Barros / PA'),
+('3041', '2', 'Via Maria Ceclia Arago, 49
+Conjunto Capito Eduardo
+54119486 Ramos do Oeste / ES'),
+('3042', '1', 'Aeroporto Melo, 34
+Nova America
+63579352 Melo / MA'),
+('3043', '2', 'Colnia de Cardoso, 29
+So Benedito
+96642153 Costa / TO'),
+('3044', '1', 'Estrada de Ribeiro, 7
+Morro Dos Macacos
+33999799 Ribeiro de Moraes / AM'),
+('3045', '4', 'Favela de Barros, 46
+Chcara Leonina
+70016-190 Castro / RS'),
+('3046', '5', 'Stio de Monteiro, 7
+Ventosa
+62598107 Melo / RS'),
+('3047', '3', 'Praa Costa, 60
+Minas Brasil
+75657132 Rocha / BA'),
+('3048', '5', 'Quadra Cunha, 94
+Dom Silverio
+61032-003 Farias do Amparo / TO'),
+('3049', '1', 'Vereda Felipe Ferreira
+So Jos
+20281777 Campos / MT'),
+('3050', '1', 'Travessa de Nogueira, 67
+Marieta 2 Seo
+29918206 Fogaa de Gois / AC'),
+('3051', '5', 'Viaduto Joo Felipe Silveira, 34
+Alto Caiaras
+52925-767 Gomes / RR'),
+('3052', '3', 'Aeroporto Nunes, 191
+Jardim Do Vale
+64980795 da Costa de Minas / GO'),
+('3053', '5', 'Ncleo Pinto, 233
+Virgnia
+92052-023 Freitas / PI'),
+('3054', '5', 'Largo Moura, 99
+Nossa Senhora Da Conceio
+17066-773 Dias do Norte / SP'),
+('3055', '4', 'Vereda de Alves, 92
+Vila Engenho Nogueira
+12531-612 da Mata Paulista / RS'),
+('3056', '1', 'Vila Leonardo Pereira
+Indai
+19730057 da Conceio do Campo / MS'),
+('3057', '4', 'Rua Souza, 4
+Jardim Vitoria
+47947-824 da Costa Grande / RO'),
+('3058', '4', 'Viela de Rodrigues, 9
+Tupi B
+88484-060 Moraes da Prata / RS'),
+('3059', '1', 'Praa Kevin Nascimento, 75
+Vera Cruz
+83238-876 Moraes Paulista / TO'),
+('3060', '3', 'Ladeira Davi Lucca da Luz, 89
+Mangueiras
+00732745 Viana do Oeste / CE'),
+('3061', '2', 'Distrito de Farias, 57
+Conjunto Celso Machado
+58315520 da Cunha / MA'),
+('3062', '3', 'Conjunto de Nogueira
+Engenho Nogueira
+26662836 da Luz de Fogaa / RN'),
+('3063', '1', 'Ncleo Costa
+Vila Nova Gameleira 1 Seo
+39991-876 Duarte dos Dourados / SE'),
+('3064', '4', 'Ncleo de Cardoso, 84
+Embabas
+12174912 Lopes do Amparo / AL'),
+('3065', '5', 'Loteamento de Lima, 60
+Camponesa 1 Seo
+77296793 Ramos / RO'),
+('3066', '3', 'Distrito de da Cunha
+Alto Barroca
+20475-112 Silveira Paulista / PA'),
+('3067', '3', 'Jardim de Lima, 76
+Apolonia
+22634885 Teixeira / MA'),
+('3068', '2', 'Praa Paulo Arago, 993
+Conjunto Taquaril
+35886861 Freitas da Mata / PA'),
+('3069', '3', 'Viela de Ferreira
+Cruzeiro
+88800644 Monteiro de da Conceio / ES'),
+('3070', '3', 'Parque Maria Alice Almeida, 49
+Santa Tereza
+02386-782 Duarte / SE'),
+('3071', '4', 'Vereda Souza
+Vila Santo Antnio Barroquinha
+29981-191 Cardoso da Praia / AC'),
+('3072', '2', 'Chcara Farias, 304
+Brasil Industrial
+02698-745 Correia das Flores / MG'),
+('3073', '1', 'Vale Pereira, 64
+So Geraldo
+55660266 Gonalves / SP'),
+('3074', '4', 'Vila da Mata
+Conjunto Capito Eduardo
+29614163 Cunha do Galho / AC'),
+('3075', '1', 'Estao Melo, 81
+Teixeira Dias
+19907523 Martins / RJ'),
+('3076', '1', 'Chcara Maria Fernanda Oliveira, 55
+Universo
+69073179 Correia de da Luz / PI'),
+('3077', '3', 'Esplanada Marina Pires, 6
+So Joo Batista
+61697478 Novaes da Mata / MT'),
+('3078', '1', 'Viela Yasmin Gomes, 10
+Jardim Dos Comerciarios
+75856466 Pires / MT'),
+('3079', '2', 'Trecho Peixoto, 89
+Vila So Paulo
+23379008 Correia Verde / AL'),
+('3080', '1', 'Praia de Rodrigues, 657
+So Damio
+11348437 das Neves de Cardoso / CE'),
+('3081', '2', 'Passarela de Oliveira, 38
+Novo Glria
+70170906 Silva de Rocha / GO'),
+('3082', '2', 'Fazenda Almeida, 485
+Guarat
+33677460 Barbosa / BA'),
+('3083', '5', 'Ncleo de Moreira, 382
+Ipe
+73795581 da Costa Grande / RR'),
+('3084', '2', 'Lagoa Nunes, 982
+Tiradentes
+52188-053 Santos das Flores / AP'),
+('3085', '2', 'rea de Barbosa, 717
+pia
+61904-001 Porto / MT'),
+('3086', '3', 'Quadra Luna Silveira, 9
+Ouro Minas
+23066418 da Mota / MS'),
+('3087', '5', 'Stio de da Cunha, 81
+Mangueiras
+85548-605 Campos / PB'),
+('3088', '4', 'Praa Renan Costa, 4
+So Bento
+12580643 Silva Grande / ES'),
+('3089', '4', 'Loteamento de Pinto, 4
+Engenho Nogueira
+49728-762 Moraes / TO'),
+('3090', '2', 'Rua Emanuel Teixeira, 96
+So Gonalo
+25137333 Ribeiro / SP'),
+('3091', '4', 'Passarela de Azevedo, 4
+Jaqueline
+71849596 Azevedo da Mata / PE'),
+('3092', '5', 'rea Emanuel Cardoso, 3
+Serra Verde
+74781131 Moura / PI'),
+('3093', '5', 'Viela Castro, 40
+Nova Pampulha
+04672776 Cardoso do Oeste / RS'),
+('3094', '3', 'Passarela Vicente Oliveira, 63
+Estrela Do Oriente
+29215-074 Barbosa do Galho / MG'),
+('3095', '4', 'Lagoa da Rosa, 3
+Delta
+68065-821 Barros / AM'),
+('3096', '4', 'Vila de Fernandes, 864
+Nova Vista
+89548225 Silveira / SC'),
+('3097', '2', 'Condomnio Paulo Martins, 69
+Jardim Amrica
+54983867 Peixoto / RN'),
+('3098', '2', 'Vereda Gonalves, 298
+Vila So Rafael
+73858668 Martins da Serra / RS'),
+('3099', '5', 'Praia Rezende, 56
+Nossa Senhora De Ftima
+22983621 Rezende do Oeste / DF'),
+('3100', '5', 'Recanto Augusto Fernandes, 23
+Solar Do Barreiro
+97373221 Costa / AC'),
+('3101', '4', 'Avenida de Barbosa, 7
+Camponesa 1 Seo
+87902-983 Santos / RS'),
+('3102', '5', 'Morro Souza, 506
+Vila So Gabriel
+23525477 da Cruz de da Paz / RN'),
+('3103', '5', 'Campo Sophie Peixoto, 73
+Santa Ins
+51478525 Nogueira do Oeste / GO'),
+('3104', '5', 'Travessa Cau Sales, 55
+Primeiro De Maio
+52121-244 da Paz / SE'),
+('3105', '1', 'Distrito de Almeida, 8
+Primeiro De Maio
+70975456 da Paz / TO'),
+('3106', '5', 'Aeroporto Gabriela Barros, 48
+Jardinpolis
+27660-034 Souza Grande / BA'),
+('3107', '2', 'Via Luiz Henrique Peixoto, 6
+Carlos Prates
+46923-276 Cardoso de Lopes / TO'),
+('3108', '1', 'Praa de da Cruz, 38
+Pompia
+23417-666 Silveira / TO'),
+('3109', '3', 'Estao da Rosa, 31
+Marieta 1 Seo
+52006439 Peixoto de Lima / AC'),
+('3110', '4', 'Esplanada Pedro Henrique da Paz, 96
+Luxemburgo
+22250933 Barbosa de Carvalho / PE'),
+('3111', '5', 'Colnia de Peixoto, 617
+lvaro Camargos
+45677-763 Oliveira de Sales / RJ'),
+('3112', '2', 'rea de da Cruz, 89
+Vila Nova Gameleira 2 Seo
+53501-413 Barbosa / AL'),
+('3113', '4', 'Ncleo Jesus, 32
+Jardim Alvorada
+24346-718 Pereira de Barros / PB'),
+('3114', '5', 'Travessa Mendes, 32
+Cidade Jardim
+38515367 Novaes de Cunha / SC'),
+('3115', '2', 'Morro Ana Clara da Rosa, 83
+Cidade Jardim
+42853-424 Cardoso / MS'),
+('3116', '1', 'Ncleo Vitor da Cunha, 175
+Novo Das Industrias
+12986-165 Pinto de Costela / DF'),
+('3117', '2', 'Feira Matheus Gomes, 83
+Venda Nova
+85930657 Castro de Gois / RJ'),
+('3118', '5', 'Lagoa Marcela Fogaa
+Vila Rica
+01509307 Rocha / TO'),
+('3119', '5', 'Jardim Gomes
+Estoril
+39692327 Gonalves de Gois / PI'),
+('3120', '3', 'Estao de da Mota, 963
+Jardim Do Vale
+85097925 Moura de Oliveira / AC'),
+('3121', '1', 'Praa da Mata, 4
+lvaro Camargos
+22819-986 Cardoso da Mata / AP'),
+('3122', '3', 'Estrada de da Rocha, 918
+Vila Olhos 
+16703-266 Monteiro da Serra / MG'),
+('3123', '4', 'Viela de das Neves, 553
+Santa Maria
+83551-826 Peixoto de Viana / MG'),
+('3124', '2', 'Trevo Nunes, 45
+Acaba Mundo
+76399668 Carvalho do Sul / CE'),
+('3125', '3', 'Estao Cardoso, 1
+Horto Florestal
+75034629 Duarte do Norte / ES'),
+('3126', '1', 'Praa de Azevedo, 800
+Vila Madre Gertrudes 4 Seo
+31569966 Sales / MS'),
+('3127', '3', 'Viela de Martins, 271
+Alpes
+46395-992 Fernandes / RO'),
+('3128', '5', 'Jardim de Pereira, 42
+Vista Alegre
+69208-140 Peixoto do Oeste / PA'),
+('3129', '5', 'Quadra de Oliveira, 939
+Palmeiras
+69300961 Monteiro Alegre / PB'),
+('3130', '2', 'Setor Vieira, 95
+Conjunto Bonsucesso
+91897-792 da Costa dos Dourados / AC'),
+('3131', '5', 'Loteamento Campos, 46
+Alta Tenso 1 Seo
+22284-863 Duarte / TO'),
+('3132', '4', 'Vila Oliveira, 25
+Vila Piratininga
+31170274 Gomes / PE'),
+('3133', '4', 'Fazenda Novaes, 3
+Lagoa
+12508-759 Arago / PI'),
+('3134', '2', 'Fazenda de Barros, 2
+Madre Gertrudes
+47325045 Sales / ES'),
+('3135', '4', 'Ladeira Las Freitas, 9
+Glria
+81864898 Ribeiro da Prata / PR'),
+('3136', '5', 'Distrito Pietra da Costa
+Boa Vista
+97808-685 Pires de da Costa / ES'),
+('3137', '2', 'Aeroporto Ramos, 13
+Vila Puc
+35569-345 Fernandes / GO'),
+('3138', '2', 'Parque de da Rosa, 38
+Belmonte
+06906633 Melo do Campo / SP'),
+('3139', '1', 'Lagoa de Gonalves, 80
+Aeroporto
+08868-066 Dias Alegre / SP'),
+('3140', '3', 'Loteamento Fernando Campos, 396
+Granja Werneck
+19689-945 Gonalves / AC'),
+('3141', '1', 'Aeroporto Castro, 86
+Nossa Senhora Do Rosrio
+88404-091 Ribeiro / AP'),
+('3142', '1', 'Loteamento Joo Pedro Pinto, 18
+Vila Satlite
+14917603 Rodrigues / RS'),
+('3143', '3', 'Stio de Moraes
+Vila So Geraldo
+98690512 Moreira das Pedras / AM'),
+('3144', '4', 'Chcara de da Costa, 54
+Bairro Das Indstrias Ii
+27153499 da Mata / CE'),
+('3145', '3', 'Rodovia da Rocha, 902
+Liberdade
+24131564 Lopes Paulista / RS'),
+('3146', '1', 'Estao Ana Barbosa, 15
+Venda Nova
+63551944 Pinto da Mata / MS'),
+('3147', '3', 'Quadra Ana Vitria Caldeira, 5
+Joo Pinheiro
+13743894 Cardoso de Gois / RJ'),
+('3148', '3', 'Ladeira Kevin Silva
+Palmeiras
+65347639 Castro do Norte / AC'),
+('3149', '2', 'Feira Porto, 17
+Maraj
+79364061 Nunes de Nunes / PB'),
+('3150', '1', 'Praa Cardoso, 75
+Pindorama
+69733-985 Fernandes / RS'),
+('3151', '3', 'Morro Farias, 29
+Aeroporto
+63973443 Silva Paulista / PB'),
+('3152', '1', 'Lago de Pinto, 34
+Vila Dos Anjos
+79360-331 Nogueira / CE'),
+('3153', '5', 'Estao Ryan Viana, 7
+Cidade Jardim
+30557-683 Costa Verde / MT'),
+('3154', '1', 'Fazenda Pinto, 67
+Vila Santa Rosa
+92904695 Mendes / RS'),
+('3155', '4', 'Passarela de Pires, 71
+Engenho Nogueira
+43766922 Nunes da Mata / CE'),
+('3156', '5', 'Loteamento Lucas Costela, 869
+Vista Alegre
+03762-322 Moreira da Prata / RJ'),
+('3157', '2', 'Campo de Souza
+Jardim Do Vale
+86417-009 Rodrigues Paulista / RN'),
+('3158', '3', 'Rodovia Farias
+Vila Mantiqueira
+56165-299 Campos / RS'),
+('3159', '4', 'Colnia de da Costa, 9
+Vila Ipiranga
+00837256 da Paz / PI'),
+('3160', '2', 'Praa de Pires, 52
+Silveira
+36713-680 Ramos / BA'),
+('3161', '1', 'Quadra de Dias, 7
+Santo Agostinho
+09524586 Oliveira de das Neves / SP'),
+('3162', '5', 'Praa de Rezende
+Sion
+09636885 da Luz / AC'),
+('3163', '4', 'Rodovia Raquel Barbosa, 89
+Caiaras
+07581011 Alves de Peixoto / AL'),
+('3164', '2', 'Vereda Luna Moura, 1
+Vila Jardim Alvorada
+09589-269 Nunes / BA'),
+('3165', '4', 'Praa Kamilly Vieira, 13
+Vila Maria
+36114360 da Cruz da Praia / MA'),
+('3166', '1', 'Rua Moura, 93
+Europa
+34373-418 Pereira das Flores / GO'),
+('3167', '4', 'Morro de da Rosa, 86
+Vila Santa Rosa
+91374-830 Cavalcanti Verde / SE'),
+('3168', '4', 'Avenida Gomes, 14
+Brasil Industrial
+67904-960 Fernandes do Galho / AM'),
+('3169', '2', 'Praia Azevedo, 31
+Nova Gameleira
+98554594 Souza do Galho / RS'),
+('3170', '5', 'Largo Antnio Freitas, 7
+Santa Branca
+68119909 Jesus / GO'),
+('3171', '4', 'Via Cardoso
+Nova America
+58288-191 Souza de da Mota / AL'),
+('3172', '1', 'Estrada Lavnia das Neves
+Alto Barroca
+87286-787 Lima do Oeste / DF'),
+('3173', '5', 'Largo Moreira, 35
+Caiaras
+99807167 Martins do Norte / AM'),
+('3174', '2', 'Viaduto Valentina Fogaa, 97
+Vila Mantiqueira
+36399195 Teixeira / RO'),
+('3175', '3', 'Estrada Freitas
+Conjunto Minas Caixa
+26411-175 Cavalcanti Paulista / PA'),
+('3176', '2', 'rea Barbosa, 486
+Vila Nova Gameleira 1 Seo
+61201-691 Ferreira / DF'),
+('3177', '5', 'Campo de Santos, 87
+Cardoso
+69480-382 Mendes das Pedras / SE'),
+('3178', '2', 'Praia de Almeida, 182
+Universitrio
+00772-538 Cunha de Caldeira / DF'),
+('3179', '5', 'Loteamento Ana Moura
+Vila Puc
+00231158 Melo de Peixoto / PR'),
+('3180', '2', 'Setor de Nascimento, 80
+Madre Gertrudes
+05764150 Castro / PI'),
+('3181', '3', 'Estao Sabrina Novaes, 50
+Vila De S
+74303416 Pires / AL'),
+('3182', '5', 'Largo de Lopes
+Vila Trinta E Um De Maro
+50946738 Ramos de Ribeiro / AL'),
+('3183', '1', 'Rodovia Caio da Rocha, 64
+Vila Formosa
+80946-459 Barbosa / SE'),
+('3184', '3', 'Condomnio Castro
+Santana Do Cafezal
+66594-865 da Cruz / DF'),
+('3185', '3', 'Jardim de Novaes, 181
+Brasil Industrial
+63136390 Pereira Grande / RS'),
+('3186', '1', 'Avenida de Caldeira, 46
+Jaragu
+61957758 Gomes / SE'),
+('3187', '2', 'Vereda de Santos, 94
+Zilah Sposito
+23665-123 Alves / MA'),
+('3188', '1', 'Lagoa Pinto
+Aeroporto
+89691-784 Pereira / CE'),
+('3189', '4', 'Praia Valentina Pereira, 91
+Indai
+60457-459 Martins / SC'),
+('3190', '5', 'Estao de Martins, 88
+Vila Rica
+02007064 Vieira / AP'),
+('3191', '3', 'Morro de Fernandes, 67
+Caiaras
+70470-434 Nunes / RS'),
+('3192', '5', 'Loteamento Davi Monteiro, 80
+So Jos
+27105668 Costa / SC'),
+('3193', '5', 'Ncleo Davi Luiz Barbosa
+Sagrada Famlia
+07459-346 Santos / PA'),
+('3194', '2', 'Praia Vitor Gabriel Silva, 90
+Santa Monica
+12708-283 Gomes / AC'),
+('3195', '5', 'Parque de Rodrigues, 29
+Diamante
+30483-998 Monteiro / AP'),
+('3196', '5', 'Vila Nascimento, 69
+Caetano Furquim
+61242-791 Moraes das Flores / PR'),
+('3197', '1', 'Largo Milena Moreira, 62
+Minas Caixa
+85806755 Pereira do Campo / RJ'),
+('3198', '4', 'Colnia Luiz Gustavo Lopes, 865
+Bela Vitoria
+54819608 Alves de Novaes / MT'),
+('3199', '5', 'Trecho Correia, 79
+So Geraldo
+61472-033 da Mota / MT'),
+('3200', '3', 'Conjunto Santos, 87
+Vila Inestan
+41715769 Pereira / RJ'),
+('3201', '5', 'Praa Joo Felipe da Mota, 72
+Boa Unio 2 Seo
+34172-790 Mendes / PR'),
+('3202', '2', 'Chcara Ferreira, 32
+Paquet
+20061-219 Sales do Campo / GO'),
+('3203', '5', 'Rua Beatriz Freitas, 25
+So Geraldo
+07185-996 Silveira de Lopes / RN'),
+('3204', '4', 'Via Mendes, 412
+Vitoria
+39312084 Nogueira do Amparo / GO'),
+('3205', '2', 'Praa Davi Luiz da Cruz, 331
+Nossa Senhora Da Aparecida
+63560562 Castro Paulista / PI'),
+('3206', '1', 'Jardim de Almeida, 65
+Marieta 1 Seo
+80922594 Pereira de Pires / DF'),
+('3207', '1', 'Parque de Mendes
+Ventosa
+79603653 Oliveira da Serra / SC'),
+('3208', '4', 'Conjunto de Castro, 69
+Unio
+10372-637 Dias / MA'),
+('3209', '3', 'Chcara de Nogueira, 2
+Juliana
+40887202 Duarte de Gonalves / GO'),
+('3210', '1', 'Colnia de Peixoto
+So Francisco Das Chagas
+59268475 Moreira de Gois / SP'),
+('3211', '5', 'Stio de Santos
+Vila Batik
+54629-002 da Cunha / PB'),
+('3212', '3', 'Lagoa de da Cruz
+Santa Terezinha
+97646-345 da Rosa / BA'),
+('3213', '2', 'Fazenda Maria Clara Nunes, 2
+So Francisco
+87211004 Pires da Serra / RO'),
+('3214', '1', 'Chcara de Jesus, 7
+Vila Dos Anjos
+76948-420 Viana / AL'),
+('3215', '2', 'Condomnio de Carvalho, 825
+Novo Ouro Preto
+66720491 da Mata de Peixoto / GO'),
+('3216', '5', 'Viela Valentina Ribeiro
+Mala E Cuia
+66887-380 Barbosa / MG'),
+('3217', '5', 'Setor Enzo Gabriel Cavalcanti
+Jardim Montanhs
+14424069 Pereira do Sul / RJ'),
+('3218', '1', 'Avenida Vieira, 249
+Vila Petropolis
+45760-933 Cavalcanti / ES'),
+('3219', '5', 'Estrada de Cardoso, 72
+Brasil Industrial
+46826-294 Farias do Campo / AL'),
+('3220', '1', 'rea da Costa, 13
+Ipiranga
+55499120 Martins / SE'),
+('3221', '2', 'Largo Gonalves, 43
+Vila Paris
+04325161 Gomes de Moura / RN'),
+('3222', '3', 'Aeroporto Nascimento, 721
+Santa Maria
+01301060 da Conceio de Gois / RN'),
+('3223', '1', 'Trecho Enzo Gabriel Dias, 89
+Estrela Do Oriente
+24572-678 Carvalho de Gois / RN'),
+('3224', '1', 'Aeroporto Costela, 22
+Ademar Maldonado
+75030-011 da Rosa / MS'),
+('3225', '1', 'Ladeira Costa
+Nova Gameleira
+50993916 Teixeira de da Conceio / GO'),
+('3226', '1', 'Setor Maria Souza, 96
+So Jos
+38860-266 Silveira / RR'),
+('3227', '2', 'Avenida de Melo, 9
+Vila Novo So Lucas
+40760-022 Arago / PE'),
+('3228', '4', 'Estao de Fogaa, 29
+Castelo
+98954988 Gonalves / RS'),
+('3229', '1', 'Vereda Kamilly Vieira, 5
+Beija Flor
+32885-730 Rodrigues / RO'),
+('3230', '3', 'Vale Gabriel da Conceio, 37
+Dom Bosco
+58550-904 Ribeiro / PB'),
+('3231', '5', 'Vila de Souza, 91
+Madri
+75030150 Santos das Pedras / RO'),
+('3232', '5', 'Chcara de da Mata, 18
+Alto Caiaras
+44452-763 Farias do Galho / PB'),
+('3233', '5', 'Colnia Fernandes, 8
+Petropolis
+99589-827 Cavalcanti / PE'),
+('3234', '4', 'Largo de Cardoso, 9
+Santa Cecilia
+00224421 da Mota Grande / ES'),
+('3235', '4', 'Ptio Eduarda Arajo, 946
+Oeste
+16086-548 Novaes / PA'),
+('3236', '4', 'Avenida Emanuel Sales
+Planalto
+86378418 das Neves / SP'),
+('3237', '1', 'Esplanada de Sales, 25
+Unidas
+00365199 Moreira / SP'),
+('3238', '2', 'Travessa de Pereira, 22
+Suzana
+59386589 Castro dos Dourados / MS'),
+('3239', '4', 'Ladeira Thomas Arago, 22
+Vila Trinta E Um De Maro
+93516567 Pinto de Gois / RJ'),
+('3240', '2', 'Residencial Moreira, 685
+Alto Barroca
+82829-598 Fernandes / RO'),
+('3241', '4', 'Lagoa Lopes, 81
+Vila Novo So Lucas
+95871-660 Gonalves / BA'),
+('3242', '1', 'Condomnio de Campos, 18
+Vila Vista Alegre
+33168339 Sales / RS'),
+('3243', '5', 'Colnia Gustavo Henrique Peixoto, 917
+Conjunto Lagoa
+31765846 Sales / SC'),
+('3244', '3', 'Recanto de Dias, 575
+Santa Cruz
+29606218 Ribeiro Verde / GO'),
+('3245', '4', 'Trecho Alice Cunha
+Vila Barragem Santa Lcia
+45059-499 da Cunha de Martins / PR'),
+('3246', '2', 'Feira Pires, 1
+Vila Atila De Paiva
+40686051 Azevedo / SC'),
+('3247', '4', 'Via de Azevedo, 4
+Engenho Nogueira
+89331107 Rodrigues / SE'),
+('3248', '1', 'Jardim Elisa Rezende
+Campo Alegre
+33923197 Carvalho das Flores / PE'),
+('3249', '3', 'Passarela Henrique Pires, 76
+Dom Joaquim
+28018-411 Peixoto da Prata / PA'),
+('3250', '4', 'Ncleo Laura Vieira, 7
+Flamengo
+29057895 Martins / MS'),
+('3251', '3', 'Stio Moura, 22
+Santo Antnio
+96694-600 Caldeira / PA'),
+('3252', '3', 'Praa de Mendes
+Caetano Furquim
+94341-962 Mendes de da Cunha / BA'),
+('3253', '5', 'Stio de Moreira, 5
+Ademar Maldonado
+55578-715 Carvalho / MG'),
+('3254', '3', 'Feira Breno Cunha, 52
+Camponesa 1 Seo
+92041-773 Vieira / RS'),
+('3255', '3', 'Esplanada de Martins, 94
+Funcionrios
+39710198 Pereira / RR'),
+('3256', '2', 'Ladeira de Caldeira
+Lorena
+75719479 Peixoto / MT'),
+('3257', '4', 'rea Moreira
+Silveira
+90915425 Ramos de Ramos / AM'),
+('3258', '2', 'Avenida de Ferreira
+Vila Maloca
+76615-746 Moreira de da Rocha / PB'),
+('3259', '5', 'Feira Raul Freitas
+Xangri-L
+59388827 Moraes de Farias / RS'),
+('3260', '1', 'Trecho Mait Ribeiro, 32
+Distrito Industrial Do Jatoba
+46212-980 Rezende / AC'),
+('3261', '4', 'Lagoa de Teixeira, 70
+Conjunto Celso Machado
+70805-200 Costela / PI'),
+('3262', '4', 'Viela Olivia Silveira, 86
+Pindura Saia
+06585-406 Viana / CE'),
+('3263', '4', 'rea de Nogueira, 20
+Guarani
+03795553 Barros Paulista / DF'),
+('3264', '5', 'Viaduto Mirella Campos, 85
+Alpes
+80690-748 da Cunha / DF'),
+('3265', '3', 'Feira de Campos, 74
+Barro Preto
+27643995 Castro de Caldeira / AM'),
+('3266', '4', 'Setor Fernandes, 62
+Vila Madre Gertrudes 1 Seo
+20151524 Barros / AL'),
+('3267', '4', 'Jardim de Silva, 165
+Buraco Quente
+87075-468 da Rosa do Campo / PA'),
+('3268', '5', 'Chcara Maria Julia Monteiro, 820
+Outro
+86469807 Teixeira / PI'),
+('3269', '2', 'Morro Danilo Viana, 446
+Vila Da ria
+95554075 Porto / AP'),
+('3270', '2', 'Ladeira de da Cunha, 55
+Graa
+57178849 da Costa de Dias / CE'),
+('3271', '5', 'Viaduto Azevedo, 60
+Conjunto Lagoa
+59903-050 Almeida do Oeste / AP'),
+('3272', '3', 'Parque Souza, 55
+Vila Suzana Primeira Seo
+64551095 Cunha / PE'),
+('3273', '5', 'Passarela Juliana da Paz, 8
+Boa Unio 1 Seo
+54958893 Mendes / GO'),
+('3274', '4', 'Avenida Brenda da Conceio, 67
+Ouro Preto
+92783880 Viana Alegre / SC'),
+('3275', '3', 'Loteamento Nicolas Rocha, 87
+Vila Aeroporto
+48459078 Cardoso da Praia / SE'),
+('3276', '2', 'Alameda de Almeida, 64
+Nossa Senhora Da Conceio
+30236-384 da Rosa de Cardoso / RN'),
+('3277', '2', 'Chcara da Conceio, 67
+Ambrosina
+59253-223 Campos Grande / CE'),
+('3278', '4', 'Aeroporto de Caldeira, 6
+Marieta 3 Seo
+46210066 Lopes de Mendes / SP'),
+('3279', '2', 'Jardim Cavalcanti, 10
+Vila So Joo Batista
+08384564 Nascimento / RR'),
+('3280', '5', 'Lago de Jesus, 93
+Cdi Jatoba
+25408210 Cardoso de Nunes / PA'),
+('3281', '2', 'Estrada Ribeiro
+Nova Floresta
+77205-436 da Conceio Verde / RO'),
+('3282', '2', 'Rua Nogueira, 99
+Cnego Pinheiro 1 Seo
+98307588 Cardoso de Rocha / ES'),
+('3283', '4', 'Rua de Arago
+Camponesa 1 Seo
+57216133 Oliveira de Azevedo / RO'),
+('3284', '2', 'Colnia Nina Almeida, 753
+Nova Gameleira
+00985-256 Lopes / SC'),
+('3285', '3', 'Largo Campos, 477
+Biquinhas
+24701265 Cunha de Oliveira / GO'),
+('3286', '2', 'Colnia Ana Carolina Moura
+Dom Silverio
+88980815 Nascimento das Pedras / MT'),
+('3287', '1', 'Vila Camila Pereira, 70
+Graa
+19567-631 Silva / PR'),
+('3288', '4', 'Setor de Ramos, 42
+Belvedere
+16305-272 Peixoto da Praia / SP'),
+('3289', '5', 'Feira Alexia Dias
+Santa Ins
+38926-841 Cavalcanti / PI'),
+('3290', '2', 'Feira Bryan da Costa, 777
+Vila Vista Alegre
+99488-016 da Costa de Moreira / PB'),
+('3291', '1', 'Distrito Fernandes, 836
+So Jorge 3 Seo
+86535-007 Alves de Moreira / GO'),
+('3292', '5', 'Colnia Correia, 338
+Calafate
+03226-761 da Rosa de Santos / SP'),
+('3293', '5', 'Chcara da Mata, 53
+Jaqueline
+56851751 Mendes / MG'),
+('3294', '2', 'Fazenda Barbosa, 9
+Vila So Rafael
+44063-290 Lopes de Teixeira / SP'),
+('3295', '3', 'Viaduto Ramos, 89
+Monte So Jos
+71143-657 Vieira Paulista / MS'),
+('3296', '4', 'Praa de Freitas, 23
+Vila Real 1 Seo
+09352-676 Silveira / PI'),
+('3297', '3', 'Praa de Castro
+Bela Vitoria
+16058356 Lopes de Rocha / MG'),
+('3298', '2', 'Quadra de Lima, 12
+Sagrada Famlia
+59344-655 Porto da Mata / RO'),
+('3299', '2', 'Vale Ana Sophia Jesus, 75
+Antonio Ribeiro De Abreu 1 Seo
+77930-186 Lopes / MG'),
+('3300', '3', 'Rua Nunes, 81
+Goiania
+73750924 Alves / AP'),
+('3301', '4', 'Estrada de da Cunha, 3
+Paulo Vi
+42095923 Dias do Campo / PI'),
+('3302', '4', 'rea Bianca Sales, 96
+Santa Isabel
+99745917 da Luz / PI'),
+('3303', '2', 'Estao de da Mata, 6
+Santa Rosa
+11046857 Viana de Minas / MA'),
+('3304', '1', 'Alameda Gonalves, 30
+Floresta
+19622483 Nascimento / PE'),
+('3305', '3', 'Estrada Stephany Nogueira, 545
+Santa Terezinha
+39342874 Novaes de Viana / PB'),
+('3306', '2', 'Praa Viana, 15
+Alto Dos Pinheiros
+73167-571 Cardoso do Campo / AP'),
+('3307', '2', 'Lago Peixoto, 53
+Vera Cruz
+69144-750 Cardoso / AP'),
+('3308', '5', 'Trecho Brbara Teixeira, 72
+Vila Batik
+23492067 Moura de Almeida / BA'),
+('3309', '2', 'Esplanada Teixeira, 12
+Conjunto Minas Caixa
+44213366 Fogaa de Teixeira / RR'),
+('3310', '5', 'Ptio Nogueira, 59
+Biquinhas
+51247938 Rocha / SE'),
+('3311', '4', 'Colnia Maria Clara da Rocha, 70
+Graa
+27005746 Lopes / AL'),
+('3312', '5', 'Estao Ana Luiza Farias, 8
+Horto
+05989-272 da Mata / SP'),
+('3313', '4', 'Trevo de Novaes, 36
+So Joo Batista
+31303-127 da Cruz de Oliveira / RJ'),
+('3314', '3', 'Stio Natlia Dias, 74
+Serra
+35912926 Carvalho / RS'),
+('3315', '1', 'Estrada Alana Jesus, 291
+Baro Homem De Melo 3 Seo
+30552005 Duarte / PR'),
+('3316', '1', 'Setor de Monteiro, 16
+Jardim Guanabara
+80120-694 Lima do Amparo / AC'),
+('3317', '4', 'Trevo de da Rosa, 71
+Santa Cecilia
+72517556 da Cruz / MS'),
+('3318', '4', 'Residencial da Cruz, 47
+Ribeiro De Abreu
+87388026 Santos da Serra / ES'),
+('3319', '3', 'Avenida Ana Beatriz Peixoto, 15
+Minaslandia
+00099-264 Barros / RR'),
+('3320', '5', 'Feira Davi Cardoso, 80
+Mala E Cuia
+65602-575 Lopes / MS'),
+('3321', '3', 'Ncleo de da Mota, 61
+Vila Copasa
+66720-965 da Conceio da Praia / MA'),
+('3322', '4', 'Estrada Felipe da Mata, 97
+Santa Branca
+63766-517 Farias / MS'),
+('3323', '5', 'Aeroporto de Barros, 8
+Itapoa
+56561-713 da Cruz do Sul / SP'),
+('3324', '2', 'Rodovia Joaquim Nunes, 14
+Corumbiara
+09966-469 Souza / AC'),
+('3325', '1', 'Viaduto Joo Vitor da Costa, 61
+Baro Homem De Melo 3 Seo
+30498-959 Farias / PB'),
+('3326', '2', 'Rodovia Azevedo, 59
+Planalto
+97276397 Carvalho / ES'),
+('3327', '4', 'Rua Letcia Lima, 946
+Fazendinha
+19822-471 Nascimento / PR'),
+('3328', '3', 'rea Moraes, 57
+Tiradentes
+70842808 Fernandes do Galho / AP'),
+('3329', '3', 'Setor Isaac Monteiro, 5
+Miramar
+51074904 da Mota de das Neves / TO'),
+('3330', '5', 'Rodovia Santos, 42
+Vila Real 2 Seo
+95388219 Arago Paulista / RJ'),
+('3331', '4', 'Trecho de Fogaa, 56
+Castelo
+14183499 Rocha Alegre / PI'),
+('3332', '5', 'Lago Lucca Barbosa, 72
+Vila Batik
+85386-970 Campos de Silva / PA'),
+('3333', '5', 'Ladeira Ana Beatriz da Paz, 60
+Tirol
+23705-610 Farias / RN'),
+('3334', '5', 'Ncleo Souza, 74
+Tupi A
+50317-298 da Cunha / GO'),
+('3335', '1', 'Distrito Camila Cardoso, 550
+Dom Joaquim
+59626914 Duarte da Prata / MS'),
+('3336', '5', 'Alameda Rezende, 42
+Ernesto Nascimento
+57153-199 Sales Grande / PB'),
+('3337', '2', 'Esplanada da Rosa, 72
+Distrito Industrial Do Jatoba
+88942681 Nascimento das Flores / RS'),
+('3338', '4', 'Avenida Alexandre Duarte, 57
+Vila Santa Rosa
+14146-958 Gonalves / BA'),
+('3339', '2', 'rea Teixeira, 10
+Jardim Montanhs
+17063-526 Pereira / AP'),
+('3340', '5', 'Estao Vieira, 657
+Rio Branco
+47794557 Jesus de da Rosa / RS'),
+('3341', '5', 'Alameda Oliveira, 75
+Liberdade
+26400-107 Almeida de Gois / AC'),
+('3342', '5', 'Conjunto Lopes, 191
+Jardim Montanhs
+51996-627 Carvalho do Amparo / MG'),
+('3343', '5', 'Distrito de Castro, 30
+Vila Canto Do Sabi
+53606-595 Lima / BA'),
+('3344', '5', 'Distrito de Nogueira, 17
+Madri
+97668470 Fogaa / DF'),
+('3345', '5', 'Ncleo de Rocha, 57
+Vila Jardim So Jos
+97480316 da Cruz / RS'),
+('3346', '5', 'Viela Bianca Caldeira, 995
+Vila Independencia 3 Seo
+59783897 Arago / PR'),
+('3347', '5', 'Ncleo de Barros, 9
+Milionario
+10673-551 da Mata da Prata / MT'),
+('3348', '1', 'Morro Nunes, 359
+Vera Cruz
+94501-652 da Rosa de Moreira / PI'),
+('3349', '1', 'Rodovia Freitas, 852
+Cabana Do Pai Toms
+51297-882 Nogueira / RN'),
+('3350', '4', 'Conjunto de da Mata, 29
+Conjunto Jatoba
+75357-646 da Conceio / SE'),
+('3351', '1', 'Vereda Mariana Arago, 909
+Santana Do Cafezal
+96613-046 da Cruz / RJ'),
+('3352', '4', 'Esplanada de Vieira, 5
+Xangri-L
+11016-723 Ribeiro / AC'),
+('3353', '2', 'Vale de Farias, 653
+Araguaia
+45749494 Ramos de Minas / PE'),
+('3354', '2', 'Recanto Carlos Eduardo Azevedo, 36
+Cu Azul
+72740109 Rodrigues do Norte / SE'),
+('3355', '5', 'Alameda Peixoto, 69
+Lagoinha
+54051-499 da Cruz / BA'),
+('3356', '3', 'Rodovia Clarice da Cruz, 10
+Santa Branca
+41368-069 Freitas das Pedras / PI'),
+('3357', '1', 'Aeroporto Costela, 64
+Fazendinha
+43922-064 Castro / CE'),
+('3358', '2', 'Vereda Lopes, 6
+Bacurau
+44515507 Nogueira / MS'),
+('3359', '1', 'Vereda Joo Felipe Nogueira
+Marola
+30839197 Costa Verde / ES'),
+('3360', '1', 'Travessa Larissa Barbosa, 7
+Santa Efignia
+62314-994 Gonalves de Souza / PR'),
+('3361', '4', 'Viaduto Martins, 67
+Esperana
+86255-897 da Cruz do Oeste / PR'),
+('3362', '4', 'Morro de Vieira, 62
+Cnego Pinheiro 1 Seo
+48380219 Pires / DF'),
+('3363', '4', 'Rua de Rocha, 429
+Planalto
+17681359 Souza / MS'),
+('3364', '1', 'Vale Almeida
+Colgio Batista
+52871-740 Rocha / RR'),
+('3365', '2', 'rea Silveira, 85
+Vitoria Da Conquista
+49926-273 Costa dos Dourados / AL'),
+('3366', '3', 'Trecho Moura, 714
+Calafate
+85097438 da Luz de Costela / MS'),
+('3367', '5', 'Alameda Calebe Nunes
+Vila Suzana Primeira Seo
+69792-215 Porto / AL'),
+('3368', '3', 'Praa de Silveira
+Nova America
+90906-832 Campos do Norte / PI'),
+('3369', '1', 'Parque Vitor Hugo Carvalho, 52
+Santa Helena
+27098-183 Viana da Praia / TO'),
+('3370', '3', 'Condomnio Campos, 6
+Santa Ins
+10724-185 Martins / TO'),
+('3371', '1', 'Lago de da Mota, 69
+Nova Granada
+08731-788 Silveira / PI'),
+('3372', '5', 'Via Porto, 34
+Pilar
+14277050 Almeida de da Mata / GO'),
+('3373', '3', 'Quadra de Porto, 5
+Inconfidncia
+60936093 Nogueira / ES'),
+('3374', '3', 'Quadra Ribeiro, 419
+Granja De Freitas
+52364552 Duarte / SC'),
+('3375', '5', 'Lago de Cardoso
+Rio Branco
+87122-053 Lima da Serra / GO'),
+('3376', '5', 'Distrito Arajo, 61
+So Jorge 3 Seo
+78795-190 Cunha da Serra / GO'),
+('3377', '5', 'Ptio Maria Ceclia da Mota
+Bandeirantes
+98412-481 Carvalho da Praia / RR'),
+('3378', '3', 'Setor Ribeiro, 6
+Aeroporto
+28412210 Cavalcanti de Pinto / PR'),
+('3379', '3', 'Feira Valentina Lima, 55
+Solimoes
+17488078 Barros / RO'),
+('3380', '3', 'Lagoa Barros, 69
+Alpes
+08145-741 Rodrigues / RJ'),
+('3381', '4', 'Campo Marcelo Fogaa, 80
+Vila Ecolgica
+52598-653 Melo / DF'),
+('3382', '4', 'Praia Cardoso, 35
+Maravilha
+70343-283 Costa de Minas / RO'),
+('3383', '2', 'Recanto Bianca Monteiro, 82
+Vila Suzana Segunda Seo
+07320234 Castro do Oeste / AM'),
+('3384', '4', 'Feira Pereira
+Candelaria
+48980124 Nogueira / MT'),
+('3385', '1', 'Trevo de das Neves, 68
+Graja
+84674028 Pinto / SP'),
+('3386', '2', 'rea Matheus Santos, 2
+Santa Sofia
+16446-162 Santos dos Dourados / ES'),
+('3387', '2', 'Trecho Moreira, 47
+Vila Paris
+96022500 Sales Grande / MT'),
+('3388', '3', 'rea de Jesus, 11
+Vera Cruz
+05710-151 Souza do Oeste / PE'),
+('3389', '3', 'Campo Miguel Almeida, 300
+Santa Rosa
+86720371 da Luz do Oeste / RO'),
+('3390', '1', 'Recanto de Almeida, 81
+Nova Pampulha
+73219399 Lopes de Dias / AC'),
+('3391', '5', 'Campo Pereira, 2
+Vila Puc
+17626818 Peixoto / AC'),
+('3392', '1', 'Conjunto Moraes, 97
+Vila Pinho
+09554057 Caldeira da Mata / MG'),
+('3393', '2', 'Ptio Rafael Novaes
+Santa Sofia
+26393-800 Ribeiro do Sul / GO'),
+('3394', '4', 'Aeroporto de da Cunha, 3
+So Jorge 3 Seo
+53408-725 Rocha da Praia / RR'),
+('3395', '3', 'Quadra de Pires, 86
+Conjunto Califrnia Ii
+60220560 da Mata das Flores / SP'),
+('3396', '3', 'Rodovia de Lima, 41
+Beira Linha
+66589404 Ribeiro Paulista / PE'),
+('3397', '1', 'Praia Vitor Gabriel da Mota
+Vila Madre Gertrudes 1 Seo
+36497-404 Cardoso da Praia / RO'),
+('3398', '2', 'Quadra de da Paz, 39
+Horto Florestal
+41536-363 Rezende / PB'),
+('3399', '2', 'Passarela Almeida, 84
+Castanheira
+44817547 da Rosa do Galho / DF'),
+('3400', '4', 'Favela de Ramos, 74
+Beira Linha
+79741611 Martins de Gois / AL'),
+('3401', '3', 'Conjunto Cardoso, 64
+Engenho Nogueira
+89947730 Martins de Freitas / SP'),
+('3402', '4', 'Estrada de Lima, 18
+Granja De Freitas
+24707199 Correia / DF'),
+('3403', '3', 'Praa de Monteiro, 64
+Buritis
+60164479 da Cunha / SC'),
+('3404', '1', 'Rua Kaique Ramos, 2
+Apolonia
+98021-252 Ramos de Novaes / MT'),
+('3405', '3', 'Colnia da Mata, 522
+Vila Suzana Segunda Seo
+91863-283 Pereira / DF'),
+('3406', '3', 'Ncleo Melo, 27
+Vila Nova Cachoeirinha 2 Seo
+94331562 Arago / MS'),
+('3407', '2', 'Trevo de Silveira, 95
+Vila Califrnia
+18621792 Silveira do Galho / TO'),
+('3408', '4', 'Trevo de da Cunha, 7
+Santo Andr
+22071146 Martins de Minas / PE'),
+('3409', '2', 'Avenida Cavalcanti, 858
+Vila Batik
+45363-780 Freitas do Norte / GO'),
+('3410', '5', 'Chcara Ana Clara Campos, 87
+Vila Aeroporto Jaragu
+98295133 Pereira / TO'),
+('3411', '1', 'Esplanada Vicente Oliveira, 61
+Nova Vista
+23292069 das Neves / TO'),
+('3412', '1', 'Setor Maria Vitria Correia, 12
+Vila Cemig
+80768-591 Rocha / ES'),
+('3413', '1', 'Favela Andr Nunes, 20
+Lagoa
+75368-464 Arago / RR'),
+('3414', '2', 'Vale de Barbosa
+Tnel De Ibirit
+38066754 Moraes dos Dourados / AC'),
+('3415', '2', 'Jardim Vitria Campos, 81
+So Francisco Das Chagas
+31846-872 Correia / MS'),
+('3416', '2', 'Alameda de Pires
+Piraja
+44415-117 Freitas / PR'),
+('3417', '2', 'Lagoa Teixeira, 92
+Funcionrios
+96507-220 da Rosa de Oliveira / MT'),
+('3418', '4', 'Largo de Novaes, 434
+Morro Dos Macacos
+02148-685 Sales de da Mata / SC'),
+('3419', '4', 'rea Isis Lopes
+Flavio Marques Lisboa
+75127-325 Sales do Oeste / PA'),
+('3420', '5', 'Rodovia Maria Julia Pinto, 888
+Gutierrez
+27612-178 Pereira / CE'),
+('3421', '3', 'rea Gomes, 45
+Pompia
+22138211 da Mata / RR'),
+('3422', '5', 'Quadra Costa, 893
+Caiara - Adelaide
+89508965 da Rocha de Minas / RN'),
+('3423', '4', 'Praa Farias, 79
+Vila Independencia 1 Seo
+33944-532 Silveira do Oeste / RO'),
+('3424', '2', 'Vila Barros, 42
+Ribeiro De Abreu
+59225-075 Vieira / PA'),
+('3425', '5', 'Feira de Costela, 45
+So Salvador
+61576-132 Carvalho / PR'),
+('3426', '2', 'Lagoa de da Conceio, 56
+Vila Ecolgica
+99337-081 Pinto / PB'),
+('3427', '3', 'Lagoa de Ramos, 87
+Jardim Felicidade
+65248-149 da Rocha da Serra / PR'),
+('3428', '5', 'Praa de Teixeira
+Goiania
+23769415 Sales / CE'),
+('3429', '3', 'Aeroporto Ferreira, 729
+Cidade Jardim
+41579-273 Ramos de da Cunha / CE'),
+('3430', '5', 'Vila de Lima, 74
+Vila Fumec
+25064985 Barros / RJ'),
+('3431', '4', 'Largo da Costa, 6
+Alto Dos Pinheiros
+48052-574 Azevedo de Teixeira / BA'),
+('3432', '2', 'Estrada Gomes, 63
+Piratininga
+07583636 Correia do Campo / DF'),
+('3433', '2', 'Stio Campos, 8
+Alto Dos Pinheiros
+50276548 da Paz / PI'),
+('3434', '1', 'Trevo de Ribeiro, 8
+Embabas
+35523-105 da Cruz / RS'),
+('3435', '2', 'Favela de Lopes, 38
+Nova Granada
+24974216 da Cunha de Cardoso / CE'),
+('3436', '2', 'Ladeira Nicolas da Paz, 16
+Silveira
+31440-029 Nogueira dos Dourados / CE'),
+('3437', '3', 'Quadra de Barros, 5
+Antonio Ribeiro De Abreu 1 Seo
+27999-082 Nogueira Grande / RS'),
+('3438', '2', 'Trecho Brbara Almeida, 36
+Serra
+63779310 da Conceio do Campo / MT'),
+('3439', '3', 'Residencial Cunha, 31
+Vila De S
+58309-509 Costa das Flores / PI'),
+('3440', '2', 'Distrito de Martins, 28
+Petropolis
+30399053 Melo / GO'),
+('3441', '5', 'Travessa de Gomes, 28
+Branas
+26807-353 Barros de Nogueira / MG'),
+('3442', '5', 'Setor de da Cruz, 25
+Vila Real 2 Seo
+99420-497 Nunes de Fernandes / SC'),
+('3443', '4', 'Vila Gomes, 16
+Vila Real 1 Seo
+23961-466 Monteiro das Pedras / BA'),
+('3444', '1', 'Estao Pedro Henrique Santos, 73
+Floresta
+77236-210 Azevedo / DF'),
+('3445', '5', 'Travessa Sales, 48
+Vila Jardim Alvorada
+09979-505 da Rosa / RS'),
+('3446', '1', 'Distrito de Fogaa, 1
+Conjunto Floramar
+68808621 da Rosa do Amparo / MT'),
+('3447', '2', 'Trevo de Alves, 5
+Jardim Felicidade
+20216-809 Cardoso / MA'),
+('3448', '4', 'Rua Alves, 57
+Conjunto So Francisco De Assis
+74649-000 Almeida de Costela / PR'),
+('3449', '3', 'Largo Evelyn Nascimento, 5
+Serra Do Curral
+96996580 Silveira / AC'),
+('3450', '2', 'Jardim de Barros, 8
+Vila Rica
+73325275 Ribeiro / DF'),
+('3451', '4', 'Chcara Luiz Miguel da Rosa, 72
+Conjunto Minas Caixa
+87340856 da Luz do Amparo / BA'),
+('3452', '1', 'Rua de Arajo, 17
+Aparecida 7 Seo
+72922-656 da Mata / RN'),
+('3453', '2', 'Residencial Fogaa, 73
+Apolonia
+32382-751 Alves / GO'),
+('3454', '5', 'Esplanada Teixeira, 492
+Jardim Montanhs
+95035-256 Dias da Mata / PR'),
+('3455', '2', 'Chcara Costela, 67
+Indai
+64848029 Ramos / PR'),
+('3456', '3', 'Conjunto de Dias, 31
+Universitrio
+62640208 Freitas / PA'),
+('3457', '5', 'Vale Joo Felipe Costa, 694
+Renascena
+57679-080 Mendes / SP'),
+('3458', '3', 'Fazenda de Barbosa, 47
+Alpes
+67156-880 da Conceio da Praia / BA'),
+('3459', '3', 'Largo Amanda Pires, 57
+Canaa
+34019-674 Cavalcanti / DF'),
+('3460', '3', 'Parque da Mota, 42
+Vila Coqueiral
+71145-147 da Conceio / GO'),
+('3461', '4', 'Praa Ferreira, 374
+Marola
+11517-620 Campos / TO'),
+('3462', '2', 'Passarela da Luz, 462
+Goiania
+06535690 Nogueira do Norte / RS'),
+('3463', '4', 'Conjunto de Dias, 69
+Alta Tenso 2 Seo
+43855126 Porto Alegre / GO'),
+('3464', '2', 'Setor Davi Novaes, 425
+Campo Alegre
+45613603 Barros dos Dourados / AL'),
+('3465', '5', 'Rua da Luz, 92
+Vila Pilar
+57807-273 Nogueira de Minas / MT'),
+('3466', '2', 'Quadra de Novaes, 87
+Santa Cruz
+92461353 Costela / SP'),
+('3467', '4', 'Praia Rocha
+Xodo-Marize
+96273-555 Caldeira de Costa / RR'),
+('3468', '4', 'Esplanada de Arajo, 4
+Glria
+58972-486 Rezende do Oeste / AP'),
+('3469', '5', 'Vale da Rocha
+So Sebastio
+65091-061 Jesus / AC'),
+('3470', '5', 'Vale Kamilly Rodrigues, 55
+Jaragu
+64636247 Martins de Moreira / AP'),
+('3471', '1', 'Conjunto Sales, 9
+Aparecida
+68596475 da Mata de Dias / RN'),
+('3472', '1', 'Avenida Miguel Souza, 51
+Cachoeirinha
+59821-774 Dias da Mata / PR'),
+('3473', '1', 'Rua de Carvalho, 34
+So Paulo
+54126-795 Teixeira / SE'),
+('3474', '5', 'Ncleo Ramos, 4
+Carmo
+23391238 Cavalcanti / ES'),
+('3475', '3', 'Residencial da Paz
+Minaslandia
+70899011 Teixeira de Barros / SC'),
+('3476', '5', 'Conjunto Lima, 4
+Leticia
+37980-188 da Cunha / RJ'),
+('3477', '1', 'Vereda de Costela, 2
+Pedreira Padro Lopes
+06464379 Moura / MA'),
+('3478', '1', 'Chcara Arago, 9
+Dom Cabral
+89858329 da Mota de Gois / DF'),
+('3479', '2', 'Avenida de Castro, 352
+Conjunto Serra Verde
+79638-864 Rezende Paulista / CE'),
+('3480', '1', 'Largo de Moura, 969
+Vila Independencia 2 Seo
+08510933 da Luz da Prata / SC'),
+('3481', '3', 'Jardim Isabelly Santos, 39
+Vera Cruz
+96788677 Gomes Verde / AP'),
+('3482', '5', 'Praa Bernardo Silva, 44
+Liberdade
+43704638 Cardoso / RR'),
+('3483', '1', 'Aeroporto de Barros, 69
+Vila Santa Rosa
+65910511 Rezende / ES'),
+('3484', '5', 'Residencial Vieira, 1
+Lagoa
+81755207 da Cruz / RO'),
+('3485', '2', 'Praia de Vieira, 68
+Vila Nova Cachoeirinha 3 Seo
+66355135 Correia de Ferreira / MG'),
+('3486', '5', 'Vereda de Souza, 9
+Outro
+41967596 Monteiro / PB'),
+('3487', '2', 'Aeroporto de Costa, 2
+So Joo Batista
+53839-240 Nunes de Cardoso / CE'),
+('3488', '1', 'Vale Maria Julia Moraes, 3
+Unio
+71368-413 Jesus de Teixeira / DF'),
+('3489', '4', 'Jardim Porto, 12
+Vila Independencia 3 Seo
+82384-594 da Luz / TO'),
+('3490', '3', 'Colnia Moraes, 95
+Itatiaia
+76431-372 Nogueira do Sul / GO'),
+('3491', '3', 'Rodovia Leonardo da Luz, 288
+Padre Eustquio
+99484482 Farias do Amparo / PE'),
+('3492', '4', 'Chcara Antnio Souza, 3
+Nova Cachoeirinha
+49744862 Silva da Praia / PB'),
+('3493', '2', 'Campo Ribeiro, 84
+Independncia
+21069259 Martins / MG'),
+('3494', '1', 'Estao de Moreira
+So Benedito
+06828930 Lopes / CE'),
+('3495', '5', 'Lagoa de Cardoso, 781
+Jonas Veiga
+23104028 Arago de Rezende / MS'),
+('3496', '5', 'Via Davi Azevedo, 15
+Varzea Da Palma
+65224-522 Nascimento de Fernandes / SE'),
+('3497', '4', 'Campo Mirella Dias, 31
+Baro Homem De Melo 1 Seo
+56634-431 da Paz Paulista / RN'),
+('3498', '4', 'Travessa Lavnia Nunes, 908
+Nova Gameleira
+60132-087 Rezende do Amparo / MS'),
+('3499', '3', 'Morro Noah Viana, 469
+Aaro Reis
+80515010 Arajo Verde / MG'),
+('3500', '5', 'Parque Oliveira, 216
+Baro Homem De Melo 3 Seo
+22809231 Vieira / SP'),
+('3501', '5', 'Residencial de Almeida, 88
+Pongelupe
+75383926 Rodrigues Grande / PI'),
+('3502', '5', 'Vila de Caldeira, 90
+Guarani
+92818235 Ramos / SP'),
+('3503', '3', 'Trevo Cardoso
+Branas
+88397931 Oliveira Verde / MA'),
+('3504', '3', 'Praa Arago, 39
+Vila Santa Monica 2 Seo
+49387542 Mendes / SC'),
+('3505', '1', 'Distrito de Gomes, 14
+Tres Marias
+60759293 Castro do Sul / TO'),
+('3506', '4', 'Largo de Rodrigues, 99
+Grotinha
+40301541 Melo / SC'),
+('3507', '4', 'Travessa de Silveira, 50
+Nova Pampulha
+79082866 Costela / SC'),
+('3508', '5', 'Ladeira de Moura, 2
+Lourdes
+29065-603 da Costa / TO'),
+('3509', '1', 'Esplanada Martins, 73
+Cenaculo
+95834608 Cardoso de Minas / BA'),
+('3510', '1', 'Ladeira de das Neves, 8
+Acaiaca
+74824-982 Oliveira / AL'),
+('3511', '4', 'Recanto de Lima
+Nova Gameleira
+87010527 Vieira do Norte / CE'),
+('3512', '3', 'Conjunto de Jesus, 91
+Milionario
+74503124 Lopes / PI'),
+('3513', '3', 'Fazenda Fernandes, 38
+Xodo-Marize
+74744-117 Pires da Serra / SP'),
+('3514', '5', 'Viela de Martins, 790
+Vila Inestan
+47243-454 Rocha de da Costa / SP'),
+('3515', '3', 'Praia Melo, 13
+Vila Nova
+75706-119 Cavalcanti / SP'),
+('3516', '2', 'Distrito Emanuel Gomes
+Liberdade
+63297-473 da Costa / RO'),
+('3517', '1', 'Stio Fernando Porto, 30
+Nova Cintra
+44061-890 Caldeira Grande / SE'),
+('3518', '5', 'Praia de da Cunha, 42
+Jaragu
+96527534 Castro / RO'),
+('3519', '4', 'Ncleo de Ferreira, 10
+Tres Marias
+33966-490 Silveira do Norte / AC'),
+('3520', '1', 'Largo de Pinto, 36
+Apolonia
+97356034 Cunha das Pedras / AL'),
+('3521', '3', 'Stio de Nunes, 95
+Itatiaia
+65732626 Oliveira / AM'),
+('3522', '1', 'Vila Manuela Moura, 51
+Vila Madre Gertrudes 1 Seo
+79873-065 Moura / RN'),
+('3523', '1', 'Vila Eduardo da Mota, 20
+So Lucas
+50073-013 Santos / PI'),
+('3524', '5', 'Stio da Cruz, 864
+Santa Sofia
+87135-598 Costela da Serra / MT'),
+('3525', '3', 'Lago de Fogaa, 2
+Vila Independencia 2 Seo
+02474889 da Rosa / ES'),
+('3526', '2', 'Trevo de Jesus
+Jaragu
+22809-201 Almeida Alegre / RO'),
+('3527', '5', 'Praia da Rocha, 85
+Santa Helena
+23367-176 Barros Paulista / PA'),
+('3528', '1', 'Travessa Cardoso, 9
+Baro Homem De Melo 1 Seo
+10271836 Nogueira de Minas / PB'),
+('3529', '5', 'Vereda Lima, 77
+Ademar Maldonado
+81437003 Correia Grande / PA'),
+('3530', '4', 'Lago Campos, 73
+Vila Minaslandia
+56443-658 Fernandes / TO'),
+('3531', '4', 'Rua Cavalcanti, 8
+Pirineus
+63498-627 Barbosa / DF'),
+('3532', '1', 'Conjunto Silva, 50
+Vila Dos Anjos
+39315-893 Vieira do Amparo / RN'),
+('3533', '2', 'Ptio da Cunha, 77
+Baro Homem De Melo 2 Seo
+00301-707 Dias da Praia / BA'),
+('3534', '2', 'Alameda Leandro Nascimento, 361
+Conjunto Providencia
+73720492 Azevedo / AM'),
+('3535', '3', 'Praia Alexia Carvalho, 1
+Ferno Dias
+78292887 Farias de Castro / MT'),
+('3536', '3', 'Trecho Maria Ceclia Alves, 57
+Delta
+29943298 da Rocha / MS'),
+('3537', '3', 'Trevo Lorenzo Gomes, 183
+Caetano Furquim
+90297-470 Moreira / ES'),
+('3538', '2', 'Morro Alexandre Santos, 19
+Boa Unio 2 Seo
+01598276 Porto de Rodrigues / BA'),
+('3539', '1', 'Campo de Pires
+Vila Fumec
+39803-129 Barros Paulista / PE'),
+('3540', '1', 'Ncleo Nascimento, 91
+Padre Eustquio
+74666662 Barbosa / PE'),
+('3541', '2', 'Rodovia Stella Ramos, 110
+Conjunto Lagoa
+96129-083 Lopes / RS'),
+('3542', '3', 'Alameda Nunes, 98
+Jardim Guanabara
+00380-139 Martins da Prata / ES'),
+('3543', '5', 'Morro de Duarte, 79
+Brasil Industrial
+16781-799 Moreira / RJ'),
+('3544', '2', 'Lago Maria Fernanda Barbosa, 24
+Santa Lcia
+09023435 Rodrigues / PE'),
+('3545', '1', 'Conjunto Ana Julia da Rosa, 86
+Engenho Nogueira
+00495-808 Arajo de Minas / CE'),
+('3546', '3', 'Jardim de Silveira
+Paquet
+71395658 Viana / AM'),
+('3547', '4', 'Via Moreira, 95
+Antonio Ribeiro De Abreu 1 Seo
+26354507 Gomes / PI'),
+('3548', '1', 'Travessa Costa, 45
+Das Industrias I
+72850302 Novaes das Pedras / SC'),
+('3549', '5', 'Recanto Theo Rocha
+Boa Viagem
+15144747 Arago / ES'),
+('3550', '4', 'Vila Manuela Correia, 30
+Nossa Senhora Aparecida
+00840501 Freitas / SC'),
+('3551', '1', 'Viela Maria Vitria da Cruz, 52
+Nova Gameleira
+78043-212 Novaes Verde / PB'),
+('3552', '3', 'Stio Gonalves, 626
+Santa Ins
+51767-054 Rodrigues do Galho / DF'),
+('3553', '3', 'Praia de da Mota, 187
+pia
+58126583 Novaes / BA'),
+('3554', '2', 'Praa Peixoto, 11
+So Pedro
+19781263 Cavalcanti do Oeste / AC'),
+('3555', '5', 'Estrada Santos, 98
+Conjunto Califrnia Ii
+43308-723 Vieira / AM'),
+('3556', '3', 'Vale Maria Luiza Rocha, 4
+Lagoinha
+93830247 Moraes Grande / MT'),
+('3557', '1', 'Ptio Ana Lvia da Rocha, 60
+Sport Club
+43185-756 da Luz do Campo / RS'),
+('3558', '1', 'Viaduto Luiz Gustavo Novaes, 86
+Dom Joaquim
+92572-516 Pires de Gois / GO'),
+('3559', '2', 'Viela da Luz, 4
+So Lucas
+94255-720 das Neves / PA'),
+('3560', '2', 'Estao Ramos
+Vila Nova Gameleira 1 Seo
+61062-505 Monteiro / BA'),
+('3561', '1', 'Trevo Marcelo Ribeiro, 61
+Paquet
+05548-253 Gomes / AL'),
+('3562', '4', 'Praa de Pinto, 231
+Vila Canto Do Sabi
+56332-076 Moura dos Dourados / AP'),
+('3563', '5', 'Stio Luana Santos, 88
+Jardim Amrica
+19192-303 Teixeira / PE'),
+('3564', '4', 'Morro Sofia Nunes, 50
+Vale Do Jatoba
+44635-422 Farias / AL'),
+('3565', '4', 'Recanto da Cunha, 45
+Ouro Preto
+45326-861 Pires / PB'),
+('3566', '1', 'Passarela Vieira, 58
+Vila Boa Vista
+17206-074 Porto / RJ'),
+('3567', '4', 'Trevo de da Luz, 64
+Vila Fumec
+78420282 Farias Paulista / DF'),
+('3568', '2', 'Chcara de Gonalves
+Araguaia
+80137030 das Neves / PA'),
+('3569', '4', 'Distrito Ana Clara Cavalcanti, 72
+Vila Nova Dos Milionarios
+76944004 Novaes / SC'),
+('3570', '1', 'Rua de Alves, 14
+Vila Jardim Leblon
+07069-956 Cavalcanti / RN'),
+('3571', '4', 'Esplanada da Paz, 78
+Vale Do Jatoba
+28527-112 da Paz de Costela / MA'),
+('3572', '3', 'Estao de da Cunha
+Sport Club
+26143754 Vieira da Serra / PA'),
+('3573', '3', 'Feira de Castro, 75
+Vila Das Oliveiras
+51654-270 das Neves / AM'),
+('3574', '3', 'Praa de Sales, 14
+Outro
+06251255 da Rosa Grande / AC'),
+('3575', '4', 'Passarela Pires, 33
+Vila Santa Monica 1 Seo
+58007462 Dias / PR'),
+('3576', '3', 'Rodovia Clarice da Costa, 84
+Engenho Nogueira
+95291-102 da Cruz / RR'),
+('3577', '4', 'Rua Silveira, 12
+Dom Silverio
+24610486 Sales / MT'),
+('3578', '1', 'Alameda de Farias, 85
+Novo Ouro Preto
+02096-265 Martins do Oeste / ES'),
+('3579', '5', 'Vila Pietro Ribeiro
+Inconfidncia
+36023470 Silva / RS'),
+('3580', '3', 'Trevo Arajo, 2
+Itaipu
+48439740 Campos / AL'),
+('3581', '5', 'Vila Farias, 88
+Alpio De Melo
+78922156 da Mata / PB'),
+('3582', '5', 'Distrito Oliveira, 92
+Santa Sofia
+86187823 da Rosa / AP'),
+('3583', '5', 'Estrada Nunes, 370
+Ademar Maldonado
+57658313 Arajo da Praia / BA'),
+('3584', '3', 'Vila Cardoso, 61
+Aparecida 7 Seo
+42707775 Silva / GO'),
+('3585', '4', 'Praa de Farias, 16
+Unio
+43131653 Pires / MT'),
+('3586', '2', 'Parque Mendes, 3
+Lajedo
+38175522 Barbosa de Correia / AL'),
+('3587', '1', 'Feira Nogueira, 73
+Indai
+95839006 Caldeira / ES'),
+('3588', '2', 'Condomnio da Luz, 67
+Cruzeiro
+04321051 Rodrigues / RJ'),
+('3589', '3', 'Largo de da Rosa, 2
+Planalto
+69115234 Castro de Gois / MT'),
+('3590', '1', 'Residencial de Cavalcanti, 2
+Vista Alegre
+01286903 Farias / DF'),
+('3591', '3', 'Chcara de Sales, 8
+Vila Nova
+44348479 Santos Alegre / PE'),
+('3592', '3', 'Viaduto de Alves, 188
+Esplanada
+32245-112 Cavalcanti do Norte / PE'),
+('3593', '5', 'Distrito Nunes, 20
+Tres Marias
+53454-375 Carvalho / PR'),
+('3594', '5', 'Stio de Silva, 83
+Funcionrios
+30541758 Novaes / PE'),
+('3595', '4', 'Vereda de Cavalcanti, 6
+Vila So Gabriel
+12862-368 Moreira do Amparo / TO'),
+('3596', '3', 'Conjunto Amanda Sales, 79
+Vera Cruz
+85483-816 Arajo / PR'),
+('3597', '2', 'Loteamento Rafael Alves, 751
+Ribeiro De Abreu
+34517306 das Neves / RN'),
+('3598', '2', 'Chcara Ryan da Luz, 404
+Minas Caixa
+58544-483 Souza / RS'),
+('3599', '1', 'Rodovia Peixoto, 1
+Nova Cintra
+23026-465 Melo do Galho / RO'),
+('3600', '3', 'Trecho Raul da Cunha, 572
+Vila Batik
+84915147 Silva de Campos / SC'),
+('3601', '5', 'Fazenda Pires, 39
+So Geraldo
+02913-286 Alves / AM'),
+('3602', '3', 'Distrito Oliveira, 29
+Madre Gertrudes
+91170129 Martins Paulista / AM'),
+('3603', '1', 'Viela de Carvalho, 11
+Jardim Alvorada
+37463-420 da Mata do Oeste / RS'),
+('3604', '2', 'Via Arajo, 58
+Baro Homem De Melo 2 Seo
+54337-301 Freitas / SE'),
+('3605', '4', 'Ladeira Azevedo
+Vila Batik
+66277928 Carvalho do Norte / AM'),
+('3606', '3', 'Trecho Alves, 2
+Corao Eucarstico
+87805044 Ferreira / RO'),
+('3607', '1', 'Aeroporto Nicolas Nogueira, 83
+Guarat
+23408024 Silveira Alegre / ES'),
+('3608', '5', 'Parque Ian da Luz, 39
+Lajedo
+30935-063 Ferreira da Praia / TO'),
+('3609', '4', 'Favela Fogaa, 43
+Engenho Nogueira
+84981-681 Cardoso / CE'),
+('3610', '4', 'Trecho Joo Guilherme Azevedo, 3
+Piratininga
+94655279 da Cunha Paulista / PA'),
+('3611', '2', 'Via Maria Eduarda Freitas, 1
+Tupi B
+08358-165 Ramos da Praia / AL'),
+('3612', '2', 'Praia Silveira, 831
+Vila Olhos 
+26278-970 Nunes da Mata / AP'),
+('3613', '3', 'Via Manuela Arajo, 49
+Dom Silverio
+09271-176 Santos de Rocha / SP'),
+('3614', '2', 'Via Ribeiro, 45
+Boa Vista
+80164172 Dias Verde / MT'),
+('3615', '3', 'Trecho Fernandes
+Jardim Alvorada
+96374-278 Arajo da Mata / RN'),
+('3616', '3', 'Chcara Almeida, 580
+Vila So Gabriel
+05758-885 Viana / SE'),
+('3617', '1', 'Rua Viana, 89
+Cnego Pinheiro 2 Seo
+46962176 Rezende / RJ'),
+('3618', '2', 'Recanto Castro, 578
+Vila Madre Gertrudes 4 Seo
+69112485 Sales de Minas / MA'),
+('3619', '2', 'Via de da Paz, 17
+Lourdes
+20150616 Lima / PB'),
+('3620', '3', 'Jardim Lorena Mendes, 372
+Vila Ouro Minas
+34595377 da Rosa do Oeste / GO'),
+('3621', '5', 'Recanto de da Luz, 1
+Vila Nova
+31857-245 da Cunha Paulista / MA'),
+('3622', '5', 'Viaduto Moreira, 8
+Palmeiras
+06776629 Rezende / PE'),
+('3623', '4', 'Setor Maria Sophia Barbosa, 5
+Vila Santo Antnio Barroquinha
+27901644 Pires do Galho / TO'),
+('3624', '4', 'Quadra Lopes, 35
+Goiania
+52745-992 Castro do Campo / RJ'),
+('3625', '4', 'Vale Teixeira, 8
+Alto Dos Pinheiros
+80352772 Vieira / SE'),
+('3626', '5', 'Residencial Gomes, 622
+Miramar
+07488-468 Almeida Grande / MS'),
+('3627', '2', 'Estrada Camila da Mota, 81
+Indai
+72339-137 Gomes do Sul / RS'),
+('3628', '4', 'Condomnio de Moreira, 42
+Conjunto Jatoba
+84235349 Fernandes Verde / MG'),
+('3629', '1', 'Passarela Leandro Mendes
+Nova Cintra
+61332859 Gonalves de Vieira / MA'),
+('3630', '1', 'Esplanada Ferreira
+Conjunto Celso Machado
+39330-223 Rodrigues do Campo / MA'),
+('3631', '3', 'Ladeira de Cavalcanti, 630
+Vila Aeroporto
+96196032 Silveira / PR'),
+('3632', '1', 'Feira de Carvalho, 147
+Acaiaca
+22533-260 das Neves da Mata / AM'),
+('3633', '2', 'Aeroporto Maria Julia Novaes, 3
+Vila Nossa Senhora Do Rosrio
+15295202 Ramos de Sales / PE'),
+('3634', '5', 'Travessa Cunha
+Nova Gameleira
+20675610 Souza / AC'),
+('3635', '5', 'Parque Moura, 83
+Parque So Jos
+73119-799 Nunes do Norte / SC'),
+('3636', '4', 'Rodovia de da Luz, 54
+Santa Sofia
+36183-772 da Luz do Sul / AM'),
+('3637', '4', 'Stio da Cunha
+Branas
+85093777 Barros / CE'),
+('3638', '4', 'Rua Ramos, 77
+Renascena
+59194-024 Rezende das Pedras / AM'),
+('3639', '1', 'Estrada de Rezende, 6
+pia
+83047-152 Silveira do Galho / SC'),
+('3640', '3', 'Conjunto de Silveira, 58
+Vila Formosa
+85157-095 Oliveira / CE'),
+('3641', '2', 'Via Maria Sophia da Rosa, 44
+Virgnia
+58490-379 Souza / MS'),
+('3642', '3', 'Feira de Gonalves, 1
+Conjunto Santa Maria
+56676-060 Moura / RN'),
+('3643', '2', 'Estrada de Viana, 68
+Penha
+58244-078 Viana Paulista / SP'),
+('3644', '3', 'Praia da Rosa, 5
+Leticia
+12412-846 Nogueira / PA'),
+('3645', '2', 'Esplanada Moraes, 1
+Conjunto Novo Dom Bosco
+82712-584 Barbosa da Prata / PI'),
+('3646', '1', 'Estrada Sales, 24
+Lorena
+16544-551 da Rosa / RN'),
+('3647', '3', 'Alameda Souza, 9
+Esplanada
+19703-610 Arajo / PA'),
+('3648', '3', 'Lagoa Maria Vitria Vieira, 29
+Vila Cloris
+58886-325 das Neves / RO'),
+('3649', '3', 'Campo Anthony Carvalho, 44
+Varzea Da Palma
+94804-745 Cunha do Oeste / RS'),
+('3650', '1', 'Quadra da Paz, 79
+Conjunto Novo Dom Bosco
+17919753 Vieira / RO'),
+('3651', '4', 'Campo Mendes, 52
+Vila Real 2 Seo
+62440265 Martins / PR'),
+('3652', '1', 'Ptio de Pereira, 936
+Vila Ipiranga
+28837-842 Cavalcanti de Lopes / DF'),
+('3653', '1', 'Recanto Teixeira, 1
+Conjunto Floramar
+80838-890 Novaes / GO'),
+('3654', '4', 'Vale Pereira, 40
+Alpes
+58266244 da Conceio / CE'),
+('3655', '1', 'Morro de Ferreira, 76
+Novo Aaro Reis
+61566921 Monteiro / DF'),
+('3656', '3', 'Recanto de Caldeira, 150
+Lagoinha
+73289315 Nogueira da Mata / MT'),
+('3657', '1', 'Trecho Castro, 51
+Cabana Do Pai Toms
+69818160 Barbosa / AC'),
+('3658', '4', 'Loteamento Isadora Martins
+Mantiqueira
+09277-407 da Mata / MT'),
+('3659', '5', 'Lagoa Mariana Arago
+Flavio Marques Lisboa
+15502-998 Costela / CE'),
+('3660', '3', 'Favela de da Costa, 61
+Prado
+57750379 Fogaa de Cavalcanti / AC'),
+('3661', '2', 'Rodovia de da Rocha, 906
+So Jorge 2 Seo
+54213351 Freitas / GO'),
+('3662', '2', 'Chcara Rezende, 6
+Santa Rita
+79979952 Correia / RJ'),
+('3663', '4', 'Trecho Ian Dias
+Vila Oeste
+31292-053 da Cruz / BA'),
+('3664', '1', 'Ncleo Sales, 64
+Mantiqueira
+32809899 Fernandes / CE'),
+('3665', '3', 'Vereda de da Conceio, 76
+Brasil Industrial
+74949119 Duarte de Lima / RS'),
+('3666', '2', 'Ncleo de Campos, 6
+Liberdade
+74135636 Fogaa / MS'),
+('3667', '3', 'Conjunto Thiago Rodrigues, 6
+Caetano Furquim
+37624-247 Lima / CE'),
+('3668', '3', 'Favela Ferreira, 836
+Nova Sua
+13441-977 Moura de Lopes / RO'),
+('3669', '2', 'Quadra de Monteiro, 30
+Cnego Pinheiro 2 Seo
+72950396 Martins da Mata / AP'),
+('3670', '2', 'Trevo Bencio Fogaa, 11
+Vila Rica
+22330-474 Martins / RR'),
+('3671', '4', 'Condomnio Peixoto, 19
+Vila De S
+83725-497 Barros da Praia / AP'),
+('3672', '5', 'Viela Maria Alice Moreira, 97
+Jatob
+17355-153 da Cunha de Minas / MA'),
+('3673', '5', 'Chcara Campos, 3
+Carlos Prates
+94793717 Freitas / PB'),
+('3674', '4', 'Ptio Teixeira, 54
+So Jorge 2 Seo
+93950540 Silveira da Serra / AC'),
+('3675', '4', 'Lagoa Joo Felipe Lima
+Santa Sofia
+94998-720 Castro / MA'),
+('3676', '4', 'Estao Amanda Cavalcanti, 7
+Cidade Jardim Taquaril
+89069373 Moreira / RN'),
+('3677', '1', 'Setor Gustavo Henrique Melo, 100
+Vila So Joo Batista
+61873571 Duarte / ES'),
+('3678', '1', 'Aeroporto de Cunha, 48
+Vila Cemig
+28089-874 Almeida / SC'),
+('3679', '3', 'Conjunto Silva, 5
+Vila Suzana Segunda Seo
+10819504 Almeida do Sul / TO'),
+('3680', '3', 'Jardim de da Cruz
+Ribeiro De Abreu
+47285-227 Duarte de Minas / PE'),
+('3681', '4', 'Vale Helosa Nogueira, 78
+So Paulo
+08101863 Lima / RR'),
+('3682', '2', 'Parque Fogaa, 39
+Vitoria
+27259846 Vieira / SP'),
+('3683', '1', 'Ladeira Joo Pedro Pinto, 727
+Maria Helena
+96216066 Cardoso / MA'),
+('3684', '5', 'Trevo Sophia Sales, 100
+Canad
+43225-500 Carvalho / CE'),
+('3685', '5', 'Campo Peixoto, 91
+Conjunto Lagoa
+56428-051 Nogueira do Campo / AL'),
+('3686', '3', 'Rua de Moraes, 43
+Mala E Cuia
+08191763 Monteiro / MT'),
+('3687', '5', 'Travessa de Fernandes, 315
+Morro Dos Macacos
+39025-150 Campos de Moraes / BA'),
+('3688', '5', 'Rodovia Amanda da Rocha, 12
+Vila Inestan
+96633-133 Nogueira Grande / BA'),
+('3689', '3', 'Morro de Campos, 58
+Conjunto Califrnia Ii
+39845-835 Carvalho do Sul / ES'),
+('3690', '4', 'Praia de Nunes, 8
+Urca
+14552566 Porto / MA'),
+('3691', '3', 'Avenida de Peixoto, 593
+Nossa Senhora De Ftima
+79585275 Rodrigues / GO'),
+('3692', '4', 'Largo Moraes, 8
+Vila Batik
+44184-483 Cavalcanti / PI'),
+('3693', '2', 'Conjunto de da Costa, 3
+Vila Santa Monica 2 Seo
+40932403 da Mata do Campo / AP'),
+('3694', '2', 'Vila Mirella Caldeira, 29
+Jaqueline
+22713-193 da Mata da Prata / BA'),
+('3695', '1', 'Vale de Cavalcanti, 4
+Vila Nova Cachoeirinha 2 Seo
+02393-526 Oliveira de Minas / MS'),
+('3696', '5', 'Vale Lavnia Barbosa, 60
+Vila Satlite
+77189-968 Ramos / RN'),
+('3697', '3', 'Quadra Luiz Felipe Pinto, 80
+Vila Inestan
+42782-307 Melo / AP'),
+('3698', '3', 'Ladeira de da Costa, 61
+Vila Betnia
+78598055 Cavalcanti de Monteiro / MA'),
+('3699', '1', 'Lagoa Arago, 52
+Vila Rica
+45716003 da Mata / AC'),
+('3700', '2', 'Fazenda de Rodrigues, 9
+Alta Tenso 1 Seo
+14683423 Nogueira Verde / SE'),
+('3701', '4', 'Vale de Silveira, 38
+So Joo
+71189282 Fernandes / SC'),
+('3702', '3', 'Passarela de Cardoso, 3
+Granja Werneck
+80584-649 Silveira / GO'),
+('3703', '3', 'Campo Almeida, 11
+Vila Canto Do Sabi
+25418-818 Fernandes / PE'),
+('3704', '2', 'Avenida de Cavalcanti, 46
+Jonas Veiga
+94443-787 Teixeira da Serra / AL'),
+('3705', '3', 'Ptio Santos, 51
+Santa Rita
+98726880 Ramos / SE'),
+('3706', '3', 'Vale Viana, 895
+Vila Mangueiras
+27777297 Duarte / RO'),
+('3707', '2', 'Via Sofia da Rosa, 810
+Vila Piratininga
+23767-558 Mendes da Mata / MG'),
+('3708', '2', 'Colnia de Arajo, 4
+Prado
+92446-679 Pires / SE'),
+('3709', '2', 'Feira de Barros, 307
+Minaslandia
+64473224 Jesus das Flores / PE'),
+('3710', '1', 'Campo Davi Luiz da Mota, 44
+Dom Joaquim
+02926-674 Peixoto do Sul / AP'),
+('3711', '2', 'Favela de Barros, 383
+Santa Amelia
+06877884 Arajo / TO'),
+('3712', '5', 'Vereda de Gonalves, 855
+Serrano
+80962-690 Barbosa de Sales / RO'),
+('3713', '2', 'Largo de Souza, 703
+Aeroporto
+61308402 Teixeira da Serra / RS'),
+('3714', '1', 'Ptio de Nascimento, 953
+Conjunto Celso Machado
+14221-305 Cunha da Prata / MT'),
+('3715', '5', 'Via Lucca Lopes, 44
+Unidas
+77654995 Vieira / AP'),
+('3716', '4', 'Travessa Bryan Campos, 15
+Jardim Do Vale
+21529960 Pinto / PR'),
+('3717', '5', 'Praa Enzo Souza, 16
+Estrela Do Oriente
+24086326 Cardoso do Norte / BA'),
+('3718', '3', 'Aeroporto Freitas, 42
+Padre Eustquio
+65690-496 Nunes / RO'),
+('3719', '3', 'Stio Raquel Castro, 38
+Brasil Industrial
+87434-420 da Cruz / DF'),
+('3720', '5', 'Viela Vinicius Gonalves, 17
+Vila So Joo Batista
+34727039 Dias de Fernandes / RJ'),
+('3721', '1', 'Quadra de das Neves, 174
+Coqueiros
+20944851 Alves / DF'),
+('3722', '2', 'Ptio Ana Lvia Cardoso, 20
+Betnia
+87538629 Cardoso do Oeste / SP'),
+('3723', '3', 'Condomnio Nascimento, 1
+Antonio Ribeiro De Abreu 1 Seo
+85709595 Correia / RR'),
+('3724', '1', 'Fazenda Nogueira
+Minas Caixa
+54458-591 Peixoto / RJ'),
+('3725', '4', 'Trecho de Almeida
+Cachoeirinha
+09005793 da Mata do Galho / RJ'),
+('3726', '4', 'Distrito de Pinto, 12
+Marola
+58558-461 Melo do Norte / RS'),
+('3727', '2', 'Feira Alice Rocha
+Estoril
+67086-765 Novaes do Campo / RN'),
+('3728', '1', 'Jardim de Monteiro, 74
+Fazendinha
+83963-594 Castro / RO'),
+('3729', '4', 'Feira Felipe Carvalho, 25
+So Geraldo
+76444-651 da Cunha do Amparo / SP'),
+('3730', '5', 'Loteamento de Gonalves, 3
+Nossa Senhora Da Conceio
+58767349 Martins / MG'),
+('3731', '4', 'Viela Maria Vitria Dias, 88
+Vila Califrnia
+72553958 Teixeira de Gois / AP'),
+('3732', '1', 'Alameda Jesus, 43
+Conjunto Lagoa
+72231-719 Souza das Flores / MA'),
+('3733', '5', 'Conjunto Lorenzo Moraes, 71
+Cabana Do Pai Toms
+27013-237 Nogueira / PI'),
+('3734', '1', 'Esplanada Joaquim Santos, 6
+Xodo-Marize
+26839-753 da Cunha / RJ'),
+('3735', '5', 'Chcara de Correia, 58
+Vila Suzana Primeira Seo
+11148734 da Rocha do Oeste / RJ'),
+('3736', '4', 'Conjunto da Rosa, 11
+Vila Mangueiras
+39373250 Moreira de Moura / PB'),
+('3737', '5', 'Esplanada Carlos Eduardo da Mota, 65
+Nova Granada
+15423150 Castro / RJ'),
+('3738', '3', 'Residencial de da Cruz, 911
+Vila Independencia 3 Seo
+73067443 da Mata da Praia / SP'),
+('3739', '4', 'Estao Maria Alice Moreira, 144
+Floramar
+45898215 Pires do Norte / RS'),
+('3740', '5', 'Vila Oliveira, 288
+Califrnia
+13379-600 Rezende / SP'),
+('3741', '3', 'Praa Ramos, 7
+Nova Cachoeirinha
+75032-597 Ribeiro / PI'),
+('3742', '2', 'Via Rodrigues, 80
+Vista Do Sol
+72434-062 Cunha / SC'),
+('3743', '3', 'Trevo de Almeida, 73
+Anchieta
+59546958 Campos / DF'),
+('3744', '5', 'Via Isis Silveira, 857
+Capito Eduardo
+23889000 Costa de da Mata / RO'),
+('3745', '3', 'Avenida Sofia Arajo, 666
+Universitrio
+95171985 Azevedo / CE'),
+('3746', '4', 'Trevo Pedro Miguel Santos, 8
+Vila Santo Antnio Barroquinha
+55547-516 Moura / PI'),
+('3747', '2', 'Vila Levi Silva, 295
+Vila Madre Gertrudes 2 Seo
+81144-636 Castro / PI'),
+('3748', '2', 'Setor de Porto, 96
+So Geraldo
+53642-127 Mendes do Oeste / SP'),
+('3749', '3', 'Fazenda de Pires, 37
+Madre Gertrudes
+52234-433 da Costa da Serra / MS'),
+('3750', '4', 'Praa de Jesus
+Biquinhas
+13103504 Peixoto Paulista / CE'),
+('3751', '2', 'Condomnio Silva, 9
+Vila So Geraldo
+12626596 Rezende / MG'),
+('3752', '2', 'Esplanada Augusto Correia, 172
+Anchieta
+12069801 Silveira de Gois / ES'),
+('3753', '2', 'Feira Campos, 1
+Granja Werneck
+04510852 da Cunha de Rocha / MT'),
+('3754', '3', 'Avenida Nogueira, 242
+Ambrosina
+46730-374 Cavalcanti / SE'),
+('3755', '3', 'Praa Rodrigues, 414
+Vila Da Luz
+88187785 Pereira Grande / MT'),
+('3756', '3', 'Ladeira de Nascimento
+Aparecida
+12881725 Nunes Verde / SE'),
+('3757', '3', 'Colnia Nunes, 47
+Santa Branca
+48848089 Lopes / ES'),
+('3758', '2', 'Vila Ana Carolina Rocha, 701
+Vila Do Pombal
+36299150 Rezende / AC'),
+('3759', '5', 'Fazenda Lopes, 9
+Baleia
+76503-264 Correia de Minas / DF'),
+('3760', '1', 'Distrito Mendes
+Cachoeirinha
+06094-001 Fernandes Grande / AP'),
+('3761', '2', 'Conjunto das Neves, 44
+Floresta
+60527-261 Nogueira / MA'),
+('3762', '2', 'Campo Fernandes, 5
+Vila Jardim Alvorada
+07648-429 Freitas / PA'),
+('3763', '5', 'Setor Felipe Lopes, 36
+Sport Club
+34085-728 Barros da Prata / PI'),
+('3764', '2', 'Trecho de Nogueira, 7
+Santa Branca
+17920994 Cavalcanti de Gois / SC'),
+('3765', '4', 'Recanto Arajo, 7
+Maria Goretti
+22538120 da Rosa / MG'),
+('3766', '5', 'Avenida de Lima, 46
+Jardim Dos Comerciarios
+18343941 da Luz de Freitas / PA'),
+('3767', '5', 'Alameda Jlia Castro, 32
+Vila Santa Rosa
+65685800 Almeida / PR'),
+('3768', '3', 'Vereda de Lopes, 300
+Jardim Guanabara
+10634-206 Novaes Alegre / AP'),
+('3769', '1', 'Vale Lavnia Cavalcanti, 84
+So Damio
+66997894 Pires / RN'),
+('3770', '1', 'Residencial Nogueira, 42
+Vila Unio
+65459-153 Campos / MA'),
+('3771', '1', 'Estao da Rocha, 288
+Vale Do Jatoba
+87998304 Caldeira do Campo / GO'),
+('3772', '5', 'Quadra Lima, 40
+Buraco Quente
+05347-393 Porto / DF'),
+('3773', '3', 'Favela de Gonalves, 7
+Vila Satlite
+41059-059 Costela / PA'),
+('3774', '4', 'Recanto Pinto, 26
+So Jos
+00995635 Rocha da Mata / PB'),
+('3775', '4', 'Largo de Silva, 5
+Monsenhor Messias
+36503961 Campos / RJ'),
+('3776', '1', 'Campo Joo Guilherme da Rocha, 21
+Renascena
+05320-189 Rezende Paulista / DF'),
+('3777', '1', 'Trevo Nunes, 32
+Caiaras
+26726-533 Teixeira / PE'),
+('3778', '4', 'Passarela Ribeiro, 40
+Alta Tenso 2 Seo
+40648-890 Sales / PB'),
+('3779', '4', 'Vila de Arajo, 44
+Canad
+78173-138 Campos da Mata / PI'),
+('3780', '5', 'Viela de Duarte, 902
+Beija Flor
+04512-325 Moraes / GO'),
+('3781', '4', 'Viaduto Heitor Fogaa, 8
+Joo Pinheiro
+36093605 Lima / PI'),
+('3782', '5', 'Viela Ferreira, 20
+So Gonalo
+98946-830 Monteiro dos Dourados / RR'),
+('3783', '4', 'Parque da Rosa, 27
+Glria
+42124-316 Moura de Ramos / BA'),
+('3784', '1', 'Conjunto Nicole Moraes, 5
+Marieta 3 Seo
+41029309 Pires / PE'),
+('3785', '2', 'Travessa de Fernandes, 10
+Maravilha
+74497-907 Lopes / MG'),
+('3786', '1', 'Trevo Heitor Cunha, 15
+Nova Pampulha
+18505-426 Nunes / SC'),
+('3787', '5', 'Praia de Melo, 86
+Floresta
+50351281 Vieira / TO'),
+('3788', '5', 'Trevo de da Costa, 6
+Parque So Jos
+56605728 Silva / PR'),
+('3789', '3', 'Passarela Correia, 79
+Graja
+79564870 Oliveira / PR'),
+('3790', '2', 'Colnia Vieira, 30
+Apolonia
+20631-853 Viana do Amparo / AP'),
+('3791', '5', 'Recanto Maria Clara Viana, 474
+Tirol
+41129-964 da Rosa de Teixeira / MA'),
+('3792', '1', 'Aeroporto Matheus Castro, 94
+Santa Ins
+05373281 Costela / AP'),
+('3793', '1', 'Viela Ana Sophia Peixoto, 418
+Santa Rita De Cssia
+22970728 Viana / SE'),
+('3794', '1', 'Conjunto Ana Luiza Silva, 56
+Vila Atila De Paiva
+58206-209 Nascimento / ES'),
+('3795', '5', 'Largo de Correia, 60
+Conjunto Capito Eduardo
+68466489 Monteiro de Silva / SE'),
+('3796', '3', 'Setor de da Costa, 98
+Inconfidncia
+09115-083 Rocha das Flores / RO'),
+('3797', '2', 'Ptio Camila Arajo, 50
+Jardim Atlntico
+87402193 das Neves / RN'),
+('3798', '5', 'Residencial Souza
+Vila Esplanada
+51426055 Mendes / PE'),
+('3799', '5', 'Estao da Rosa
+Antonio Ribeiro De Abreu 1 Seo
+28701-473 Alves da Mata / AC'),
+('3800', '1', 'Via Ramos
+Grotinha
+51214-689 Arajo da Mata / ES'),
+('3801', '3', 'Conjunto Mirella Ferreira
+Canad
+36011-725 Freitas Verde / SP'),
+('3802', '4', 'Fazenda Daniel Cardoso, 628
+Pompia
+75560-436 Cunha da Mata / PA'),
+('3803', '1', 'Esplanada Milena Melo, 32
+Flavio De Oliveira
+26887851 Ribeiro da Serra / AL'),
+('3804', '1', 'Colnia de Monteiro, 68
+So Damio
+05971-380 Moraes / ES'),
+('3805', '2', 'Aeroporto Eduardo Jesus, 4
+Bernadete
+96581-643 da Paz de Gois / CE'),
+('3806', '3', 'Loteamento de Fogaa, 437
+So Francisco Das Chagas
+77687-175 Fernandes / AM'),
+('3807', '5', 'Rua Barbosa, 71
+Vila Esplanada
+44248767 Caldeira / AC'),
+('3808', '1', 'Aeroporto de Cardoso, 77
+Minaslandia
+60917-822 Rodrigues do Galho / GO'),
+('3809', '3', 'Rua Enzo Pires
+Liberdade
+91037316 Rodrigues / SC'),
+('3810', '4', 'Conjunto de Martins, 90
+Itaipu
+42572529 Sales de Minas / MA'),
+('3811', '1', 'Rodovia Ana Sophia Rocha, 84
+Belvedere
+45182757 Rezende / RJ'),
+('3812', '3', 'Conjunto Maria Ceclia Alves, 45
+Vila Santo Antnio Barroquinha
+33263-053 Monteiro da Prata / MG'),
+('3813', '5', 'Conjunto Barbosa, 29
+Vila Piratininga
+39084047 Novaes / SC'),
+('3814', '1', 'Residencial Raul Nogueira, 633
+Liberdade
+80226287 Sales / DF'),
+('3815', '1', 'Stio de Pereira
+Cardoso
+48894056 Fernandes de Moreira / RO'),
+('3816', '4', 'Ladeira de Pereira, 77
+Tiradentes
+39302837 Rocha de Lima / BA'),
+('3817', '1', 'Ncleo Joana Campos, 8
+So Sebastio
+82287570 Arago da Praia / RO'),
+('3818', '3', 'Conjunto Correia, 22
+Monte So Jos
+21052-445 Moura da Serra / PB'),
+('3819', '5', 'Trevo de Pires
+Tiradentes
+21522-877 Nascimento do Sul / AP'),
+('3820', '1', 'Quadra de da Cunha, 56
+Santa Lcia
+78013-425 Azevedo / RJ'),
+('3821', '4', 'Travessa Bencio Moreira, 49
+Universitrio
+20235859 Moura / MG'),
+('3822', '4', 'Morro Mirella Dias, 7
+Santa Maria
+92205-917 Silveira / GO'),
+('3823', '4', 'Ptio Pereira, 43
+Vila Ipiranga
+72575661 Cunha de Minas / SE'),
+('3824', '2', 'Via de Fernandes, 36
+Vila Bandeirantes
+02166-641 Santos do Sul / MT'),
+('3825', '2', 'Conjunto de da Paz, 85
+Santo Agostinho
+26291-734 Ribeiro / SP'),
+('3826', '3', 'Praia de Moreira, 1
+Vitoria
+64373058 Fernandes / RO'),
+('3827', '4', 'Rua Santos, 75
+Universo
+59114491 Ribeiro do Amparo / RS'),
+('3828', '1', 'Stio de Ribeiro, 70
+So Pedro
+69951-487 Novaes / PI'),
+('3829', '3', 'Ladeira Campos, 7
+Ademar Maldonado
+66347-777 Melo do Sul / AP'),
+('3830', '5', 'Ptio Gabriela Cardoso, 836
+Serra Verde
+02627726 Viana / RJ'),
+('3831', '4', 'Travessa Sophia Nogueira, 92
+Comiteco
+32018-459 Oliveira da Serra / AP'),
+('3832', '2', 'Vale de Rezende, 7
+Copacabana
+40231-650 Martins das Pedras / CE'),
+('3833', '3', 'Trevo Rodrigo Castro, 93
+Califrnia
+68281-398 Caldeira de Correia / RR'),
+('3834', '2', 'Viaduto de Arajo, 6
+Camponesa 2 Seo
+62608772 Moraes Grande / ES'),
+('3835', '3', 'Ptio de da Cruz, 81
+Vila Santa Rosa
+91728929 Fogaa do Sul / MG'),
+('3836', '5', 'Aeroporto Almeida, 53
+Baleia
+86316-297 Vieira de Nascimento / SE'),
+('3837', '2', 'Ladeira de da Cruz, 1
+Vitoria
+24651-073 da Costa de da Rocha / BA'),
+('3838', '1', 'Ladeira Isabelly Vieira, 37
+Distrito Industrial Do Jatoba
+73248-690 Nascimento Paulista / PB'),
+('3839', '1', 'Aeroporto de Farias, 228
+Corao Eucarstico
+96182274 Costela de da Paz / RO'),
+('3840', '1', 'Feira Novaes, 26
+Ipe
+89798-071 Dias das Pedras / ES'),
+('3841', '3', 'Loteamento Enzo Gabriel Ribeiro, 334
+Vila Tirol
+48035684 Lopes da Praia / CE'),
+('3842', '4', 'Viela Letcia Nascimento, 352
+Pongelupe
+60264135 Nascimento / RJ'),
+('3843', '1', 'Condomnio Joo Pedro da Rocha, 5
+Vila Atila De Paiva
+86478619 Cardoso das Pedras / TO'),
+('3844', '3', 'Distrito Ribeiro, 228
+Pousada Santo Antonio
+55264-644 Viana / BA'),
+('3845', '3', 'Morro Farias, 28
+Ventosa
+33889899 Moura / RJ'),
+('3846', '4', 'Fazenda Daniel Lima
+Maravilha
+41579083 Nogueira das Flores / AP'),
+('3847', '2', 'Jardim de da Rosa, 57
+Acaba Mundo
+04144510 Melo / RN'),
+('3848', '4', 'Ptio de Moraes, 22
+So Joo Batista
+07924708 Dias Alegre / SC'),
+('3849', '2', 'Ncleo Nina da Mota, 64
+Vila So Paulo
+93839-607 Almeida / AP'),
+('3850', '3', 'Distrito de Carvalho, 80
+Santa Terezinha
+41157083 Gomes / SP'),
+('3851', '5', 'Lago Erick Castro, 64
+Nova Vista
+48941005 Lima / RN'),
+('3852', '5', 'Aeroporto Souza, 520
+Flamengo
+82835606 Cardoso da Mata / RS'),
+('3853', '1', 'Vereda Breno Viana
+Nova Pampulha
+88420885 Jesus / PA'),
+('3854', '4', 'Ncleo Lopes, 508
+Vila Do Pombal
+49986-309 da Rosa Alegre / RR'),
+('3855', '5', 'Quadra Joo Felipe Moura, 974
+Graa
+52919-355 Barros / AP'),
+('3856', '4', 'Estrada Ribeiro, 91
+Marmiteiros
+42264213 Lima de Cunha / MT'),
+('3857', '1', 'Travessa de Pires, 748
+Vila Nova Cachoeirinha 1 Seo
+14084775 Carvalho Alegre / PA'),
+('3858', '1', 'Viaduto de Martins, 8
+Ermelinda
+14983-598 Sales do Sul / RJ'),
+('3859', '4', 'Quadra Farias, 505
+Vila Independencia 2 Seo
+05831583 Peixoto / AC'),
+('3860', '3', 'Condomnio de Campos, 75
+So Gonalo
+84502435 da Mota / RO'),
+('3861', '5', 'Estao Pinto, 8
+Estoril
+30868962 Jesus da Prata / RO'),
+('3862', '2', 'Praia de Santos, 53
+Branas
+55153813 Fogaa de Gomes / PR'),
+('3863', '3', 'Colnia de Oliveira, 1
+Santa Margarida
+22527447 Porto das Flores / MG'),
+('3864', '2', 'Loteamento Barbosa, 6
+Vila Atila De Paiva
+66196350 Oliveira das Flores / BA'),
+('3865', '3', 'Via Yuri Duarte, 38
+Mineiro
+82084-937 Monteiro / SC'),
+('3866', '5', 'Campo de Oliveira, 285
+Novo Aaro Reis
+97318396 da Luz / RJ'),
+('3867', '3', 'Favela Eduarda Barbosa
+Vila Cloris
+53550-678 Silva / RS'),
+('3868', '2', 'Recanto de da Mota, 132
+Tupi B
+46028-361 da Rosa de Moura / RR'),
+('3869', '4', 'Estrada da Rocha, 673
+Antonio Ribeiro De Abreu 1 Seo
+85143518 Melo / AC'),
+('3870', '4', 'Praa Gonalves, 16
+Santa Cecilia
+20118-105 Monteiro / ES'),
+('3871', '1', 'Lago Melo, 35
+Dom Bosco
+67890348 Viana / MA'),
+('3872', '5', 'Estrada Ramos, 141
+Marieta 3 Seo
+77018174 Nascimento da Serra / PB'),
+('3873', '2', 'Vale Azevedo
+Comiteco
+74257071 Duarte da Prata / CE'),
+('3874', '3', 'Favela Campos, 8
+Conjunto Jatoba
+62215525 da Mata do Amparo / MS'),
+('3875', '1', 'Ncleo Cardoso, 88
+Vila Real 1 Seo
+99574-280 da Rocha / RO'),
+('3876', '1', 'Praa de Moreira, 20
+Acaba Mundo
+44090541 Correia / AL'),
+('3877', '1', 'Jardim Ramos, 840
+Saudade
+03820-554 Cavalcanti / MA'),
+('3878', '3', 'Setor Ribeiro, 95
+Nova Floresta
+22872-450 Ribeiro / TO'),
+('3879', '3', 'Estao Dias, 89
+Novo Ouro Preto
+98702442 Cunha do Norte / RJ'),
+('3880', '4', 'Vila Maria Clara Ferreira, 656
+Conjunto Jardim Filadlfia
+22724903 Mendes / TO'),
+('3881', '5', 'Rodovia de Freitas, 86
+Guarat
+32599824 da Luz dos Dourados / PA'),
+('3882', '3', 'Lagoa de da Cruz, 3
+Paulo Vi
+44956669 Melo / PI'),
+('3883', '1', 'Quadra Otvio Ferreira, 3
+Pompia
+89633631 Teixeira do Norte / RS'),
+('3884', '2', 'Recanto de Porto, 96
+Califrnia
+25363-150 Fernandes / MT'),
+('3885', '3', 'Ncleo Barros, 96
+Marieta 1 Seo
+53946-438 Moura / PA'),
+('3886', '1', 'Favela Alves, 992
+Pongelupe
+93140594 Freitas / AC'),
+('3887', '1', 'Travessa Marcela Silva
+Bonfim
+25962-180 Viana das Pedras / DF'),
+('3888', '5', 'Recanto de Ribeiro
+Vila Formosa
+15966864 Moreira / PI'),
+('3889', '1', 'Passarela Isabella Ferreira, 67
+Vila Inestan
+89246-200 Silveira / PB'),
+('3890', '3', 'Rodovia de Gomes, 28
+Atila De Paiva
+28583726 Fernandes de Dias / MT'),
+('3891', '1', 'Setor Castro, 77
+Conjunto Taquaril
+90443984 Caldeira / MA'),
+('3892', '2', 'Residencial Oliveira
+Custodinha
+32290-111 Freitas dos Dourados / ES'),
+('3893', '1', 'Residencial de Gonalves, 3
+Belvedere
+06174-401 Fogaa da Praia / MS'),
+('3894', '2', 'Lagoa Ana Vitria Nogueira, 53
+Teixeira Dias
+41128-959 Viana / AL'),
+('3895', '5', 'Lago Enzo da Rocha, 5
+Flavio Marques Lisboa
+09066076 Almeida da Praia / TO'),
+('3896', '5', 'Vila Fernandes, 81
+So Jorge 3 Seo
+92608628 Nascimento dos Dourados / SE'),
+('3897', '3', 'Colnia Giovanna da Rosa, 8
+Vila Santa Monica 2 Seo
+03808986 Silveira da Praia / PA'),
+('3898', '1', 'Esplanada Luigi Porto, 351
+Novo Santa Cecilia
+02105-972 Monteiro de Sales / MG'),
+('3899', '2', 'Travessa de Duarte
+Aguas Claras
+31680975 da Costa de Minas / DF'),
+('3900', '5', 'Rua de da Rocha, 3
+Conjunto Califrnia I
+36703-435 Duarte / SC'),
+('3901', '5', 'Praia Oliveira, 2
+Andiroba
+59066-015 Souza do Campo / SC'),
+('3902', '2', 'Loteamento Eduardo Alves, 57
+Boa Viagem
+36301-709 da Paz / MT'),
+('3903', '5', 'Condomnio de Alves, 34
+Aeroporto
+83742100 Melo da Praia / PA'),
+('3904', '1', 'Favela Mendes, 37
+Pantanal
+74876-539 Freitas de Gomes / SC'),
+('3905', '4', 'Estrada Camila da Mota, 54
+Vila Copasa
+87854-708 Moura de Minas / AM'),
+('3906', '1', 'Largo Gomes
+Nossa Senhora Da Conceio
+83792-049 Costa de Duarte / BA'),
+('3907', '3', 'Vila de Ferreira, 595
+Nazare
+36317388 Nogueira / TO'),
+('3908', '5', 'Trecho Pinto, 50
+Santana Do Cafezal
+19918323 Alves / TO'),
+('3909', '2', 'Aeroporto Santos, 2
+Conjunto So Francisco De Assis
+30861207 Azevedo / CE'),
+('3910', '5', 'Stio da Rosa, 92
+Maria Tereza
+95195-657 Sales / SE'),
+('3911', '2', 'Conjunto de Rezende, 9
+Jardinpolis
+60042553 da Luz de Cavalcanti / MG'),
+('3912', '2', 'Travessa Cunha, 691
+Novo Ouro Preto
+41558057 Peixoto / AM'),
+('3913', '4', 'Vila de Nogueira, 32
+Silveira
+87492192 Caldeira da Mata / AM'),
+('3914', '1', 'Estrada Fernandes, 55
+Unio
+42873368 Novaes da Praia / SC'),
+('3915', '2', 'Rodovia de Oliveira, 5
+Madri
+90366-842 da Mata de da Cruz / SP'),
+('3916', '4', 'Vereda Renan Correia, 77
+Flavio Marques Lisboa
+82030048 Jesus da Serra / RS'),
+('3917', '3', 'Ladeira de Fogaa, 83
+Vila Betnia
+18028642 da Rosa / PI'),
+('3918', '1', 'Recanto Viana, 27
+Joo Paulo Ii
+24972676 Melo de Monteiro / BA'),
+('3919', '3', 'Vale Rocha
+So Luiz
+60086-891 Carvalho do Oeste / MG'),
+('3920', '3', 'Praa Rodrigues, 21
+Vila Coqueiral
+70350-381 Fogaa / MA'),
+('3921', '3', 'Praia de Lima, 52
+Capito Eduardo
+82215-478 Nascimento do Sul / PB'),
+('3922', '2', 'Viela Gabrielly Jesus, 29
+Boa Vista
+79281603 Mendes do Oeste / PB'),
+('3923', '3', 'Trevo de da Mota, 6
+Santa Monica
+42948405 Costela / PA'),
+('3924', '4', 'Rua Las da Paz, 35
+Marieta 2 Seo
+16440470 Gonalves / ES'),
+('3925', '2', 'Colnia de Sales, 3
+Boa Vista
+32702-230 Arajo de das Neves / RS'),
+('3926', '5', 'Residencial Juliana das Neves, 7
+Nova Pampulha
+57443-092 Lima / RJ'),
+('3927', '4', 'Via Jesus, 235
+Vila Madre Gertrudes 1 Seo
+87689883 da Rocha / PA'),
+('3928', '4', 'Viaduto de Peixoto, 79
+Vila Unio
+79672090 Alves dos Dourados / PA'),
+('3929', '4', 'Travessa Lima, 27
+Parque So Jos
+07004-845 Moura da Serra / RO'),
+('3930', '3', 'Praia Rezende, 12
+Nova Granada
+00192-232 Viana / BA'),
+('3931', '4', 'Vale Amanda Almeida
+Bandeirantes
+16661883 Novaes / MG'),
+('3932', '1', 'Stio Mendes, 3
+Leticia
+17192884 Costela Grande / MT'),
+('3933', '2', 'Trevo Natlia Cardoso, 62
+Savassi
+33730849 Arago de Minas / RR'),
+('3934', '2', 'Estrada Lopes
+Parque So Pedro
+47626-748 Gonalves do Campo / TO'),
+('3935', '4', 'Ncleo Rodrigues, 50
+So Bernardo
+65359727 da Cunha / TO'),
+('3936', '1', 'rea Lara Carvalho, 47
+Cnego Pinheiro 2 Seo
+17659004 Moreira Verde / PA'),
+('3937', '1', 'Trecho de da Cunha, 98
+Castanheira
+03285710 da Mota Grande / BA'),
+('3938', '4', 'Favela de Barros, 67
+Novo Das Industrias
+68732-785 Rezende de Azevedo / PR'),
+('3939', '1', 'Praia de Fogaa, 99
+Nossa Senhora Da Conceio
+68147607 Viana / PA'),
+('3940', '1', 'rea de Nogueira
+Sion
+93325-536 Campos / TO'),
+('3941', '2', 'Colnia de Castro, 79
+Vila Paris
+79102155 Gonalves / RS'),
+('3942', '5', 'Loteamento Gomes, 31
+So Francisco Das Chagas
+12270432 Jesus / AC'),
+('3943', '1', 'Passarela Rodrigues, 40
+So Luiz
+85630728 Cavalcanti / DF'),
+('3944', '4', 'Loteamento de da Paz, 287
+Taquaril
+44665608 Arago / MA'),
+('3945', '4', 'Condomnio Eduardo Rezende, 90
+Penha
+69018-286 Moura de Almeida / MG'),
+('3946', '3', 'Vereda de Vieira, 52
+Vila Nova Paraso
+99600-746 Gonalves / TO'),
+('3947', '4', 'Quadra de Silveira, 21
+Engenho Nogueira
+83634-322 Oliveira do Oeste / AL'),
+('3948', '1', 'Morro de Melo, 4
+Granja Werneck
+13646611 Ramos do Oeste / RR'),
+('3949', '4', 'Vereda de Cardoso, 81
+Dom Silverio
+45175-776 Caldeira do Amparo / MT'),
+('3950', '5', 'Residencial Martins
+Santo Andr
+02773-911 Silveira / SP'),
+('3951', '2', 'Vereda Souza, 983
+Boa Unio 2 Seo
+91746-253 da Mota / MT'),
+('3952', '2', 'rea Moraes
+Vila Mantiqueira
+87723521 Novaes / RS'),
+('3953', '3', 'Morro de Mendes, 45
+Boa Vista
+24144-451 Rezende / DF'),
+('3954', '1', 'Setor Pedro Cardoso, 98
+So Francisco Das Chagas
+10072-696 Correia de da Conceio / GO'),
+('3955', '4', 'Via de da Cruz, 70
+Serrano
+63766-497 Nogueira / PI'),
+('3956', '4', 'Via Gabriel Dias, 3
+Ipe
+58141827 Barros de Costela / CE'),
+('3957', '2', 'Largo Camila Campos, 42
+Vila Suzana Primeira Seo
+48543724 da Costa do Norte / SP'),
+('3958', '2', 'Parque de Souza
+Antonio Ribeiro De Abreu 1 Seo
+54329249 Souza do Amparo / PR'),
+('3959', '3', 'Campo Rezende, 215
+Palmares
+05838231 Rodrigues / PA'),
+('3960', '5', 'Distrito de Moreira, 25
+So Luiz
+64574-478 Campos / SC'),
+('3961', '5', 'Praia de da Rocha, 87
+Vila Madre Gertrudes 2 Seo
+30044-544 Ferreira de Cardoso / MA'),
+('3962', '2', 'Jardim de Sales, 648
+Dom Silverio
+53883719 Campos Verde / DF'),
+('3963', '1', 'Esplanada de Freitas, 85
+Guarani
+91501839 Vieira de Fernandes / AL'),
+('3964', '2', 'Rua Cardoso
+Boa Viagem
+08185098 Ribeiro / SP'),
+('3965', '3', 'Conjunto de da Luz, 79
+Vila Trinta E Um De Maro
+10554-403 da Rocha Grande / BA'),
+('3966', '4', 'Viaduto de Costela, 55
+Lajedo
+06997-513 Barbosa / PR'),
+('3967', '5', 'Vereda Milena Silveira, 59
+Pousada Santo Antonio
+50396433 Castro / AP'),
+('3968', '5', 'Favela Ana Vitria da Mota, 91
+Jonas Veiga
+06750-700 Caldeira das Flores / AC'),
+('3969', '1', 'Viela de Peixoto, 19
+Vila Aeroporto
+06396-482 da Mota Grande / RO'),
+('3970', '3', 'Lagoa de Jesus, 9
+Palmares
+24733824 Monteiro da Praia / CE'),
+('3971', '2', 'rea da Costa, 9
+Vila Fumec
+27014-897 da Costa de Pires / AC'),
+('3972', '4', 'Travessa Olivia Mendes, 1
+Mariquinhas
+92735-138 Lima de Ramos / PR'),
+('3973', '2', 'Via Kevin Alves, 20
+Aeroporto
+59777-991 Silva dos Dourados / PR'),
+('3974', '2', 'Passarela de Rezende, 48
+Lagoinha Leblon
+37415-540 Teixeira dos Dourados / AP'),
+('3975', '3', 'Ptio Enzo Gabriel Arago, 926
+Morro Dos Macacos
+73527957 Oliveira do Galho / SE'),
+('3976', '2', 'Condomnio Daniela Correia, 37
+Jaragu
+58427-236 Campos de Moreira / AM'),
+('3977', '3', 'Viaduto de Silveira, 62
+Vila So Paulo
+77925486 Dias / RJ'),
+('3978', '3', 'Conjunto Clara da Luz, 306
+Conjunto Floramar
+09133171 Nogueira do Campo / PA'),
+('3979', '3', 'Conjunto de Castro, 47
+Vila Antena Montanhs
+31382-324 Azevedo / CE'),
+('3980', '2', 'Passarela da Luz, 24
+Inconfidncia
+78366013 Gonalves / ES'),
+('3981', '2', 'Viaduto Bernardo Caldeira, 52
+Vila Minaslandia
+39510-102 Lopes / PE'),
+('3982', '2', 'Praia Theo Moraes, 25
+Gameleira
+19420372 Sales / TO'),
+('3983', '4', 'Largo Beatriz da Luz
+So Marcos
+95370-422 Santos da Mata / AC'),
+('3984', '4', 'Avenida Lucca da Mota, 90
+Corao De Jesus
+38099706 Azevedo / PR'),
+('3985', '2', 'Conjunto Moreira, 2
+Padre Eustquio
+68144211 das Neves do Sul / PE'),
+('3986', '1', 'Estao de Novaes, 19
+Gutierrez
+49639810 Duarte / RR'),
+('3987', '1', 'Recanto Bencio Jesus, 84
+Nova Gameleira
+32440360 Monteiro / DF'),
+('3988', '1', 'Esplanada Alves, 581
+Barroca
+16963-932 Barbosa de Rezende / GO'),
+('3989', '5', 'Largo de Fernandes, 70
+Conjunto Celso Machado
+29523740 Teixeira / TO'),
+('3990', '4', 'Quadra Maria Ceclia Ribeiro, 7
+Jaragu
+09060-994 Rodrigues da Prata / TO'),
+('3991', '1', 'Jardim de Peixoto
+Savassi
+75951527 Pinto de Viana / RO'),
+('3992', '2', 'Rua Freitas, 96
+Vila Minaslandia
+00170962 Peixoto da Praia / RR'),
+('3993', '2', 'Quadra de Santos, 597
+Vila Suzana Primeira Seo
+85514-183 Azevedo / SP'),
+('3994', '3', 'Stio da Mata, 80
+Santa Rita De Cssia
+75289-231 Souza dos Dourados / AM'),
+('3995', '5', 'Alameda de Costela
+Leonina
+41288-940 Arago / SP'),
+('3996', '1', 'Trecho de Lopes, 90
+Vila Jardim Alvorada
+95333-411 Peixoto / MG'),
+('3997', '3', 'Esplanada de da Mota, 831
+Conjunto Floramar
+51269-651 Fernandes de Monteiro / AC'),
+('3998', '3', 'Rua Thiago da Luz, 9
+Santo Andr
+99866922 Cardoso / TO'),
+('3999', '1', 'Trevo de Barros
+Floresta
+70380774 da Rocha Paulista / MT'),
+('4000', '3', 'Campo Moura, 1
+Conjunto Jardim Filadlfia
+93321945 Correia dos Dourados / RN'),
+('4001', '5', 'Viaduto Monteiro, 79
+Copacabana
+72457-415 Lopes de Gois / MT'),
+('4002', '4', 'Setor de Fogaa, 20
+Luxemburgo
+53904-194 Moura do Campo / SC'),
+('4003', '2', 'Parque Mait Correia, 57
+So Cristvo
+88520-348 Melo / SE'),
+('4004', '2', 'Jardim das Neves, 84
+Santa Maria
+39946411 Novaes de da Rocha / PR'),
+('4005', '2', 'Ptio Castro, 9
+Vila Real 2 Seo
+48344418 da Cunha do Amparo / MS'),
+('4006', '4', 'Travessa de Pinto, 70
+Vila Pilar
+95100792 Oliveira / RJ'),
+('4007', '1', 'Ladeira Maria Luiza da Paz, 38
+Vila Fumec
+28418021 da Conceio Grande / MA'),
+('4008', '4', 'Parque Lopes, 522
+Santa Margarida
+12284490 Lopes da Prata / RO'),
+('4009', '4', 'Chcara Arago, 38
+Vista Alegre
+94107314 Ferreira de Silva / MS'),
+('4010', '1', 'Travessa de Farias, 1
+Vila Antena Montanhs
+98746719 Pires / TO'),
+('4011', '3', 'Campo Caldeira
+Conjunto Serra Verde
+82373240 Cunha Paulista / MG'),
+('4012', '3', 'Rodovia Heitor Barros, 59
+Santa Monica
+14647-725 Gonalves / ES'),
+('4013', '5', 'Rua de da Cruz, 232
+So Francisco Das Chagas
+24519-004 Campos de Peixoto / ES'),
+('4014', '2', 'Viela Francisco Correia, 9
+Tupi B
+08110-379 Ribeiro de Minas / ES'),
+('4015', '5', 'Estao Barbosa, 6
+Madri
+05499-780 Barros de Cardoso / AP'),
+('4016', '1', 'Lago Ribeiro
+Vila Jardim Montanhes
+57981-026 Silva / SE'),
+('4017', '2', 'Trevo Breno Oliveira, 7
+Vila Jardim Alvorada
+59503844 Costela de Novaes / AM'),
+('4018', '2', 'Chcara Lucas Gabriel Costela
+Teixeira Dias
+78820-275 Cavalcanti da Mata / TO'),
+('4019', '3', 'Praa Silva
+Vila Paris
+96890759 Nascimento / MT'),
+('4020', '2', 'Largo Vieira, 667
+Vila Jardim Leblon
+31141-636 Castro Alegre / GO'),
+('4021', '3', 'Quadra Moraes
+Tnel De Ibirit
+97049-155 Pires / AC'),
+('4022', '5', 'Conjunto Bianca Freitas, 46
+Antonio Ribeiro De Abreu 1 Seo
+49300603 Santos de Gois / AC'),
+('4023', '4', 'Viaduto Cardoso, 83
+Guarani
+69314965 Barros / PR'),
+('4024', '5', 'Loteamento de Freitas
+Pompia
+06256-990 Vieira de da Cruz / AP'),
+('4025', '1', 'Morro de Martins
+Fazendinha
+40674765 Freitas de Alves / CE'),
+('4026', '3', 'Via de da Costa, 62
+Vila Suzana Primeira Seo
+32055-430 da Rosa / CE'),
+('4027', '2', 'Estao de Pereira, 93
+Jardim Montanhs
+95827-146 Duarte / MS'),
+('4028', '1', 'Recanto Dias, 4
+Antonio Ribeiro De Abreu 1 Seo
+85852-596 da Paz de Minas / MG'),
+('4029', '2', 'Fazenda de Castro, 72
+Granja Werneck
+32151721 Moura / SC'),
+('4030', '4', 'Stio de da Rosa, 64
+Vila Fumec
+50715-076 Pereira / MT'),
+('4031', '3', 'Colnia Luiz Fernando Pinto, 92
+Vila Mangueiras
+83864021 Gomes / RN'),
+('4032', '2', 'Quadra de Rezende, 53
+Santa Isabel
+74698349 das Neves de Santos / MS'),
+('4033', '3', 'Esplanada Raul Almeida, 86
+Vila Trinta E Um De Maro
+50830-096 da Cruz de Minas / CE'),
+('4034', '1', 'Ptio de Campos, 75
+Boa Viagem
+83926-280 da Mota / BA'),
+('4035', '5', 'Vila Carvalho, 351
+lvaro Camargos
+18028-818 Pires de Gois / TO'),
+('4036', '2', 'Chcara Eloah Nunes, 32
+Jatob
+14802525 Cavalcanti de Silva / MT'),
+('4037', '5', 'Morro de Melo, 24
+Serra
+44999606 Pinto / PA'),
+('4038', '4', 'Viela Maria da Costa, 62
+Alta Tenso 2 Seo
+02449775 Viana do Sul / AC'),
+('4039', '5', 'Feira Gonalves, 661
+Vila Independencia 3 Seo
+25311587 Nogueira / SC'),
+('4040', '4', 'Viaduto Ana Laura Souza, 11
+Conjunto Providencia
+37687938 Teixeira da Mata / MT'),
+('4041', '4', 'Distrito Cavalcanti, 68
+Vila Atila De Paiva
+20776-956 Pires / RN'),
+('4042', '1', 'Passarela de Gonalves, 643
+Vila Nova Cachoeirinha 1 Seo
+18251-525 Pinto da Serra / MT'),
+('4043', '4', 'Trecho Cunha, 59
+Vila Bandeirantes
+06608-694 Martins / GO'),
+('4044', '1', 'Quadra de Cardoso, 858
+Vila Rica
+93543220 Moreira de Minas / PE'),
+('4045', '4', 'Vereda de Almeida, 771
+Das Industrias I
+88531-905 Cavalcanti / AM'),
+('4046', '2', 'Travessa Peixoto, 79
+Laranjeiras
+28883-611 da Rosa da Mata / RO'),
+('4047', '1', 'Loteamento da Cunha
+Mineiro
+02450814 Martins / PR'),
+('4048', '5', 'Avenida Joo Pedro Souza, 6
+Apolonia
+22434161 Nogueira / DF'),
+('4049', '4', 'Travessa Theo Sales, 25
+Conjunto Minas Caixa
+34735-863 Almeida / MG'),
+('4050', '1', 'Ptio de Duarte, 65
+Buritis
+74953-629 Fernandes de da Cunha / RO'),
+('4051', '1', 'Campo Laura Nunes
+Vitoria
+02325388 Cunha de Costela / ES'),
+('4052', '1', 'Favela Milena Rezende, 144
+Ambrosina
+44338559 Rezende / SE'),
+('4053', '5', 'Lago de Gonalves, 72
+Mangabeiras
+33435263 Vieira / SP'),
+('4054', '4', 'Travessa de da Rocha, 620
+Tirol
+32988351 Barros / PA'),
+('4055', '4', 'Via Ana Lvia Mendes, 624
+Nova Vista
+12344-583 Cardoso / AC'),
+('4056', '1', 'Via Melo, 10
+Serra Do Curral
+84739-960 Pereira de Pereira / PR'),
+('4057', '2', 'Jardim Emanuella Pereira, 90
+Vila Nova
+32427-278 Silva / PI'),
+('4058', '1', 'Vale Lopes, 11
+Dom Joaquim
+50218-434 Pereira do Sul / PE'),
+('4059', '2', 'Viaduto Vitor Almeida, 1
+Vila Satlite
+20263-200 Ferreira da Mata / PI'),
+('4060', '1', 'Estrada Luna Peixoto, 24
+Copacabana
+59410769 Novaes de Cunha / BA'),
+('4061', '3', 'Estao de Azevedo, 2
+Campo Alegre
+05094678 Azevedo da Praia / PE'),
+('4062', '1', 'Vila de Santos, 8
+Santa Efignia
+77731963 Fernandes / MS'),
+('4063', '2', 'Morro Heitor Farias, 1
+So Bernardo
+76117-228 Costela das Pedras / PI'),
+('4064', '5', 'Estrada Natlia Costa, 78
+Nossa Senhora Da Conceio
+10429921 Almeida de Sales / ES'),
+('4065', '3', 'Vale Pereira, 58
+Monte So Jos
+26846173 Melo / PI'),
+('4066', '3', 'Campo Igor Vieira
+Aaro Reis
+14426-390 da Cunha / DF'),
+('4067', '2', 'Campo Rafaela Costela, 725
+Comiteco
+33061-781 Silveira / RO'),
+('4068', '4', 'Via de Campos, 21
+Vila Paris
+35673-457 Cunha do Amparo / PA'),
+('4069', '5', 'Viaduto Joo Lucas Arajo, 60
+So Bernardo
+66347-305 Ferreira / MS'),
+('4070', '5', 'Viaduto Lima, 95
+Conjunto So Francisco De Assis
+41222-580 Arajo / AL'),
+('4071', '5', 'Esplanada Amanda da Cunha, 92
+So Lucas
+18836-852 Pereira / MS'),
+('4072', '4', 'Vale de da Rocha, 69
+Santa Rosa
+12975-146 Arago / SC'),
+('4073', '4', 'Aeroporto de da Paz, 422
+Boa Esperana
+06393-553 Almeida Paulista / AP'),
+('4074', '2', 'Morro de Silva, 89
+Jardim Amrica
+28360-748 da Cunha das Flores / SE'),
+('4075', '2', 'Estao de das Neves, 39
+Vila Pilar
+51496-086 Moraes / TO'),
+('4076', '1', 'Via Santos, 92
+Solimoes
+57956-726 Monteiro da Praia / MS'),
+('4077', '1', 'Distrito Carlos Eduardo Cardoso, 792
+Santa Margarida
+62766468 Lima de Gois / RN'),
+('4078', '4', 'Morro Laura Silveira, 55
+Suzana
+91018773 Cunha de Arago / AL'),
+('4079', '3', 'Viela de Costela, 9
+Conjunto Capito Eduardo
+71601887 Monteiro Verde / TO'),
+('4080', '2', 'Rua Davi Luiz Martins, 952
+Vila Formosa
+46335890 Pereira / MG'),
+('4081', '4', 'Aeroporto Silveira, 527
+So Vicente
+48158836 Dias das Pedras / SP'),
+('4082', '2', 'Praia Rezende, 67
+Vila Pinho
+26812813 Campos do Norte / PE'),
+('4083', '1', 'Chcara de Monteiro, 68
+Suzana
+04557986 Pereira / AP'),
+('4084', '5', 'Feira Caio Lopes, 1
+Horto
+56021-862 Ribeiro / BA'),
+('4085', '4', 'Distrito Monteiro
+Vila Inestan
+71922033 da Costa / CE'),
+('4086', '5', 'Estao Maria Gomes, 2
+Vila Nova Dos Milionarios
+19247030 Carvalho / MA'),
+('4087', '1', 'Loteamento de Ribeiro, 45
+Bairro Das Indstrias Ii
+73308-500 Porto do Sul / GO'),
+('4088', '2', 'Largo Ribeiro, 4
+Camponesa 2 Seo
+55638781 Peixoto / AM'),
+('4089', '4', 'Condomnio Matheus Azevedo, 97
+Lagoinha Leblon
+31318-680 Fogaa de da Cunha / RN'),
+('4090', '1', 'Avenida de Martins, 964
+Padre Eustquio
+84950820 Silveira / PA'),
+('4091', '2', 'Avenida de Almeida, 205
+Santo Andr
+73627-481 Porto de Gois / SP'),
+('4092', '5', 'Ncleo Luiz Henrique Novaes, 56
+Marmiteiros
+53616636 Souza / RJ'),
+('4093', '3', 'Lago de Gomes, 5
+Salgado Filho
+08517-469 Ramos de Minas / RJ'),
+('4094', '2', 'Condomnio Castro, 128
+Flavio De Oliveira
+23131097 Nunes das Flores / PB'),
+('4095', '5', 'Vila de Sales, 142
+Vista Alegre
+72335908 da Luz de Minas / MA'),
+('4096', '2', 'Distrito Erick Caldeira, 76
+So Jorge 3 Seo
+94150355 Almeida / RN'),
+('4097', '4', 'Avenida Nascimento, 83
+Camponesa 2 Seo
+99225815 Pires / PA'),
+('4098', '5', 'Chcara de Azevedo, 547
+Vila Pilar
+11180901 Barros de Arago / TO'),
+('4099', '4', 'Estao Gustavo Henrique da Cruz, 920
+Mantiqueira
+55388082 Costa / PR'),
+('4100', '1', 'Residencial da Luz, 17
+Vila So Geraldo
+93808041 Rocha do Amparo / PB'),
+('4101', '1', 'Favela Santos, 3
+Vila Paraso
+96031302 da Luz / BA'),
+('4102', '5', 'Estrada de da Rosa, 14
+Renascena
+69611-269 Lima / PB'),
+('4103', '5', 'Conjunto Juan Arago, 222
+Conjunto Jardim Filadlfia
+52396-387 Costa das Pedras / PB'),
+('4104', '2', 'Distrito Moura, 466
+Unio
+81626-698 Pires / TO'),
+('4105', '1', 'Parque de Cavalcanti, 12
+Jardim Amrica
+89082-116 Arajo do Norte / SE'),
+('4106', '4', 'Ladeira Maria Eduarda Melo, 383
+Nossa Senhora Do Rosrio
+80914-111 Fogaa Alegre / RN'),
+('4107', '4', 'Favela da Luz
+Minas Caixa
+29852-564 Freitas / PA'),
+('4108', '2', 'Vereda de da Conceio, 63
+Vila Maria
+25238807 Gonalves / PE'),
+('4109', '4', 'Feira de Cunha, 64
+Jardim Vitoria
+28038-550 Alves do Oeste / PB'),
+('4110', '4', 'Colnia de Cavalcanti
+Mariano De Abreu
+08910712 Cardoso / CE'),
+('4111', '5', 'Setor de Arago
+Vila Paraso
+28172-020 Ribeiro / RS'),
+('4112', '4', 'Ncleo Ana Sophia Carvalho
+Cidade Nova
+08983-757 da Rocha / MT'),
+('4113', '1', 'Ptio Campos, 33
+Bom Jesus
+67151035 Souza do Campo / AL'),
+('4114', '2', 'Quadra Freitas, 85
+Vila Suzana Primeira Seo
+00909-583 Sales do Campo / TO'),
+('4115', '2', 'Condomnio de Vieira, 2
+Solimoes
+88793-405 Gomes do Galho / RO'),
+('4116', '2', 'Vale Sales, 97
+Vila Esplanada
+98108925 Monteiro das Pedras / AC'),
+('4117', '4', 'Condomnio Ana Viana, 40
+Vila Independencia 2 Seo
+60741921 Campos do Amparo / AL'),
+('4118', '3', 'Praia Ribeiro, 92
+Vista Do Sol
+90034-484 das Neves das Pedras / MG'),
+('4119', '4', 'Favela Ana Vitria da Rosa, 78
+Nova Floresta
+02331-768 da Rocha / MA'),
+('4120', '1', 'Lagoa da Conceio
+lvaro Camargos
+88927893 Ribeiro das Flores / ES'),
+('4121', '2', 'Ncleo Moraes, 5
+Vila Antena
+98428392 Lima / AL'),
+('4122', '2', 'Avenida de da Rocha, 5
+Pindura Saia
+27568367 Arago / MG'),
+('4123', '4', 'Distrito de Melo, 50
+Vila Independencia 2 Seo
+81206-354 da Cruz / PA'),
+('4124', '3', 'Feira Rezende, 8
+Vila Antena
+32822230 Porto / TO'),
+('4125', '3', 'Feira Samuel Almeida
+Maria Tereza
+34788137 da Mota / TO'),
+('4126', '4', 'Vila Bencio Freitas, 87
+Heliopolis
+68041740 Souza Grande / SE'),
+('4127', '2', 'Ncleo de Lima, 43
+Dom Joaquim
+48071-811 Porto / RS'),
+('4128', '5', 'Conjunto Viana, 66
+Aguas Claras
+76741883 Barbosa / RR'),
+('4129', '4', 'Lago de Moreira
+Sport Club
+16896-072 da Cunha do Galho / MS'),
+('4130', '4', 'Quadra Fernanda Peixoto
+Vila Paquet
+56725-587 Vieira / MT'),
+('4131', '4', 'Aeroporto Lopes, 735
+Serra
+82081844 Peixoto / SP'),
+('4132', '2', 'Morro Santos
+Bandeirantes
+53769416 Arajo do Galho / GO'),
+('4133', '1', 'Ladeira Alves, 1
+Jardim Atlntico
+42862-944 Rocha Paulista / RO'),
+('4134', '2', 'Trecho de Duarte, 88
+Monsenhor Messias
+99630665 Ribeiro / TO'),
+('4135', '2', 'Recanto de Melo, 278
+Nossa Senhora Da Aparecida
+46778-069 Gomes / RN'),
+('4136', '3', 'Viaduto de Almeida, 55
+Coqueiros
+76537772 Souza / AL'),
+('4137', '5', 'Distrito Jlia Dias, 299
+Acaiaca
+24044-987 Peixoto de Alves / SE'),
+('4138', '4', 'Trevo Martins, 60
+Vila Suzana Segunda Seo
+54150350 Gomes da Mata / SP'),
+('4139', '2', 'Aeroporto de Alves
+Buritis
+44998-683 Correia / MA'),
+('4140', '5', 'Rua da Costa
+Madre Gertrudes
+31069-611 Pereira de Pinto / PI'),
+('4141', '1', 'Feira Lvia Ferreira, 29
+Jonas Veiga
+77007092 da Mota / RN'),
+('4142', '1', 'Travessa de Nogueira, 469
+So Marcos
+86357679 Melo do Norte / AC'),
+('4143', '5', 'Favela Ana Jlia da Conceio
+Cinquentenrio
+47504-960 da Mata / SC'),
+('4144', '3', 'Fazenda Novaes, 56
+Capito Eduardo
+77403-337 Santos das Pedras / MT'),
+('4145', '2', 'Trecho Lima, 12
+So Bento
+26573-874 Campos de Barros / DF'),
+('4146', '4', 'Campo de Nunes, 88
+Fazendinha
+81971793 da Luz / SC'),
+('4147', '4', 'Morro Rebeca Moraes, 32
+Santa Rosa
+64839-084 Teixeira / GO'),
+('4148', '5', 'Colnia Cardoso, 227
+Olhos 
+24045-176 Jesus / GO'),
+('4149', '3', 'Estao Costela, 805
+Alto Dos Pinheiros
+91490987 Ferreira das Flores / SE'),
+('4150', '1', 'Chcara Bencio Moreira, 2
+Tnel De Ibirit
+33744-248 Novaes / RN'),
+('4151', '4', 'Viela de Oliveira, 897
+Vila Real 1 Seo
+03182-925 Fogaa de Peixoto / DF'),
+('4152', '3', 'Passarela de Cavalcanti, 7
+Mala E Cuia
+21178940 Martins do Oeste / RO'),
+('4153', '1', 'Conjunto de Jesus, 319
+Funcionrios
+31408773 Silva / CE'),
+('4154', '3', 'Lago Maria Ribeiro, 573
+Vila Mantiqueira
+03734545 Castro / PR'),
+('4155', '2', 'Ncleo de Cavalcanti
+Vila Bandeirantes
+08151-174 Cardoso / PI'),
+('4156', '3', 'Fazenda Mendes, 317
+Graa
+24128-851 Martins Grande / RR'),
+('4157', '1', 'Residencial Nogueira, 60
+Vila Nova Dos Milionarios
+51714-133 Rodrigues de Souza / MS'),
+('4158', '3', 'Campo Azevedo
+Camargos
+15129449 Duarte / MA'),
+('4159', '5', 'Condomnio Nogueira, 79
+Santa Efignia
+20627-883 Martins das Flores / SP'),
+('4160', '2', 'Condomnio de da Cunha, 77
+Buritis
+16953-820 Cardoso / SP'),
+('4161', '4', 'Ncleo Theo Duarte, 17
+Varzea Da Palma
+42512-751 Barbosa da Serra / RR'),
+('4162', '3', 'Praia de Sales, 4
+Monte Azul
+64504302 Viana da Serra / RJ'),
+('4163', '4', 'Alameda Duarte
+Vila De S
+93967-052 Pires de da Luz / SP'),
+('4164', '3', 'Ladeira Campos, 6
+So Bernardo
+85649641 Barbosa / PR'),
+('4165', '5', 'Vereda de Silva, 678
+So Jorge 3 Seo
+20540103 Cavalcanti das Pedras / MT'),
+('4166', '2', 'Feira Arago
+Vila Minaslandia
+90264-411 Moreira / AC'),
+('4167', '4', 'Ladeira Yasmin Pereira
+Vila So Rafael
+97749555 Farias do Oeste / SP'),
+('4168', '1', 'Conjunto Silva, 2
+Jardim Do Vale
+56335-097 Freitas / AL'),
+('4169', '1', 'Aeroporto Ana Luiza Castro, 794
+Vila Sumar
+16242-743 Jesus da Mata / PA'),
+('4170', '4', 'Colnia Caroline Fogaa, 81
+Pantanal
+10787185 Monteiro / BA'),
+('4171', '2', 'Aeroporto de Arago, 46
+Cidade Jardim
+05768-935 Ribeiro / SP'),
+('4172', '1', 'Distrito Moreira, 882
+Juliana
+48030415 Freitas do Campo / TO'),
+('4173', '2', 'Residencial Lopes, 84
+Paulo Vi
+07526117 Moraes do Oeste / CE'),
+('4174', '4', 'Trecho de Viana, 51
+Nova Esperana
+12590-870 Pereira / AM'),
+('4175', '5', 'Passarela de Rezende, 55
+Centro
+03627-675 Caldeira de da Rosa / RN'),
+('4176', '2', 'Favela da Conceio, 9
+Caiara - Adelaide
+08169-449 Gomes / CE'),
+('4177', '1', 'Praa Martins
+So Gabriel
+50566417 Barbosa / DF'),
+('4178', '3', 'Morro de Vieira, 99
+Petropolis
+71554-160 da Mata / AM'),
+('4179', '4', 'Quadra Monteiro, 11
+Novo Aaro Reis
+57869338 Nunes / BA'),
+('4180', '5', 'Distrito Ana Beatriz Azevedo
+Candelaria
+82392212 Moreira / ES'),
+('4181', '1', 'Condomnio de Melo, 98
+Serra Verde
+34333109 Vieira de Minas / MT'),
+('4182', '3', 'Largo Bruna Costa, 8
+Vila Santa Monica 1 Seo
+25579-983 Gonalves / MS'),
+('4183', '3', 'Rodovia de Pires, 563
+Santa Isabel
+79924-155 Pereira / PB'),
+('4184', '3', 'Setor de Mendes, 192
+Bacurau
+52761-305 Cardoso Paulista / MT'),
+('4185', '3', 'Recanto Duarte
+Nova Floresta
+34792852 da Cunha de Gois / ES'),
+('4186', '4', 'Largo Lopes, 566
+Santana Do Cafezal
+61933555 Nascimento / AM'),
+('4187', '5', 'Loteamento da Cruz, 6
+Madri
+81853-026 Cavalcanti Alegre / DF'),
+('4188', '4', 'Quadra Pires, 3
+Grota
+89874773 Vieira / RS'),
+('4189', '4', 'Passarela de Nascimento, 93
+Vera Cruz
+31614-581 Cavalcanti / GO'),
+('4190', '5', 'Jardim de Lima, 97
+Planalto
+96061-156 Campos / BA'),
+('4191', '2', 'Parque de Castro, 2
+Cidade Nova
+12268-588 Pires / PR'),
+('4192', '5', 'Vale Nunes, 58
+Corao Eucarstico
+57906210 Cardoso / MS'),
+('4193', '4', 'Praia de Correia, 14
+Granja De Freitas
+38297-293 Silveira da Mata / MT'),
+('4194', '3', 'Rodovia de Ramos, 227
+Santo Andr
+53318488 Sales Paulista / AL'),
+('4195', '3', 'Trevo Pedro Lucas Duarte, 79
+Jardim Dos Comerciarios
+45674376 Alves / TO'),
+('4196', '3', 'Condomnio Natlia da Conceio, 72
+Anchieta
+29500759 Novaes do Galho / AC'),
+('4197', '1', 'Residencial Castro
+So Jorge 3 Seo
+77497-686 Cavalcanti / GO'),
+('4198', '1', 'Trecho de Rezende, 6
+Nova Pampulha
+95876023 Rodrigues / MS'),
+('4199', '3', 'Vila de Gomes, 8
+Vila Minaslandia
+60414-853 Almeida de Viana / PB'),
+('4200', '1', 'Conjunto Nunes, 36
+Nova Floresta
+76208-350 Peixoto do Amparo / SE'),
+('4201', '2', 'Favela de Jesus, 97
+Olaria
+57029155 Gomes de da Rosa / MG'),
+('4202', '4', 'Aeroporto Matheus Pinto, 17
+Beija Flor
+04995-568 Sales da Prata / RO'),
+('4203', '4', 'Trecho da Cruz, 73
+Teixeira Dias
+31604558 Rezende / AC'),
+('4204', '5', 'Aeroporto da Cruz, 79
+Carlos Prates
+41348689 Caldeira do Sul / MT'),
+('4205', '3', 'Fazenda Isadora Costela
+Novo Tupi
+71473-765 da Cruz dos Dourados / RO'),
+('4206', '3', 'Largo Freitas
+Embabas
+61001580 Gonalves de da Mata / ES'),
+('4207', '3', 'Lagoa Silva, 3
+Beira Linha
+89752043 Cavalcanti do Campo / MG'),
+('4208', '4', 'Vereda Ana Sophia Lima, 27
+Casa Branca
+13046823 Monteiro / ES'),
+('4209', '4', 'Avenida Lorena Cunha, 4
+Alto Dos Pinheiros
+15900-634 Moreira / PA'),
+('4210', '2', 'Favela Clara Cardoso, 80
+Vila Bandeirantes
+80388-990 Sales do Oeste / MA'),
+('4211', '4', 'Fazenda de Caldeira
+Vila Santa Monica 2 Seo
+00488-944 da Costa de Correia / RJ'),
+('4212', '5', 'Condomnio da Rosa, 17
+Vitoria
+43453-156 Alves / PI'),
+('4213', '3', 'Via Thales Freitas, 3
+Joo Paulo Ii
+30692-300 Pires Verde / BA'),
+('4214', '2', 'Campo Otvio Cardoso, 92
+Vila Inestan
+46858-837 da Mota / AC'),
+('4215', '3', 'Quadra Barros, 242
+Zilah Sposito
+75395435 Fernandes de Nunes / CE'),
+('4216', '4', 'Trecho Correia, 1
+Marola
+46475921 Carvalho / SE'),
+('4217', '4', 'Trecho de Silva, 1
+Mantiqueira
+06893-507 Cardoso de Gois / RO'),
+('4218', '5', 'Esplanada Joo Gabriel Rezende
+Acaba Mundo
+13107-007 Sales de Minas / AP'),
+('4219', '5', 'Esplanada de Pinto, 980
+Mariquinhas
+50385-413 Lopes dos Dourados / SP'),
+('4220', '4', 'Trecho de Moraes, 36
+So Sebastio
+59778532 Silveira Paulista / AL'),
+('4221', '1', 'Parque de da Cunha, 92
+Ferno Dias
+00941-837 Barbosa / SP'),
+('4222', '4', 'Estao Cavalcanti, 87
+Embabas
+14208773 da Paz / SC'),
+('4223', '1', 'Setor Olivia Monteiro, 35
+Senhor Dos Passos
+04960-817 Teixeira / AP'),
+('4224', '3', 'Lago de Barros
+Minaslandia
+79507-390 Farias das Pedras / PA'),
+('4225', '4', 'Aeroporto Costela, 99
+Calafate
+02316296 Rocha / PA'),
+('4226', '4', 'Morro de Gomes, 971
+Comiteco
+96011805 Melo / PI'),
+('4227', '4', 'Aeroporto de Dias, 50
+Vila De S
+39859172 Freitas / BA'),
+('4228', '2', 'Praa de Cavalcanti, 1
+Caetano Furquim
+33104-556 Nascimento Grande / AL'),
+('4229', '2', 'Parque de Costa, 53
+Buraco Quente
+15374897 Costela da Praia / MG'),
+('4230', '1', 'Vereda de Novaes
+Horto Florestal
+33716-647 Porto / SC'),
+('4231', '2', 'rea de Rocha, 87
+Jardim Do Vale
+24085155 Cunha da Prata / SC'),
+('4232', '3', 'Trevo Evelyn Arago, 598
+Esperana
+15188252 Correia das Pedras / PE'),
+('4233', '5', 'Rodovia de Cardoso, 9
+Marieta 3 Seo
+54539078 Barros da Praia / GO'),
+('4234', '5', 'Via de da Luz
+Buraco Quente
+21712254 Cardoso Alegre / PB'),
+('4235', '3', 'Aeroporto Oliveira, 18
+Boa Vista
+69343193 Moura / SP'),
+('4236', '1', 'Largo de Alves, 156
+Conjunto Paulo Vi
+82817263 Nascimento / PE'),
+('4237', '5', 'Largo de Azevedo, 98
+Vila Paraso
+81888531 Dias do Sul / PR'),
+('4238', '2', 'Aeroporto Thales Carvalho
+Vila Canto Do Sabi
+57679381 Arajo da Serra / MT'),
+('4239', '3', 'Alameda Barbosa, 66
+Canaa
+55537-189 da Mata / AM'),
+('4240', '2', 'Ladeira Gabriela Pires, 439
+Vila So Gabriel Jacui
+81012545 Ramos da Mata / MG'),
+('4241', '4', 'Colnia Castro, 70
+Vila Piratininga
+48199-813 Silva / MG'),
+('4242', '2', 'Ladeira Azevedo, 74
+Lagoa
+69449-901 Ferreira de Oliveira / DF'),
+('4243', '2', 'Avenida Pires, 14
+Estoril
+04792-828 Pereira de Viana / SE'),
+('4244', '3', 'Ladeira Fernandes
+Vila Oeste
+54563666 Rodrigues de Peixoto / RJ'),
+('4245', '4', 'Distrito de Pereira
+Vila Da Luz
+12168-362 Alves / PR'),
+('4246', '2', 'Ptio Gonalves, 108
+Pilar
+86673-904 Melo de Nogueira / CE'),
+('4247', '5', 'Residencial Erick Carvalho, 939
+Vila Novo So Lucas
+60075030 Nascimento / MT'),
+('4248', '1', 'Passarela de Pires, 41
+Biquinhas
+57768555 Nogueira de Cardoso / MG'),
+('4249', '4', 'Vale Alice da Mata, 6
+Boa Unio 1 Seo
+21571963 Freitas das Pedras / AP'),
+('4250', '4', 'Setor Fogaa
+Granja Werneck
+19548735 Novaes / MS'),
+('4251', '5', 'Distrito Pereira, 83
+Mariano De Abreu
+81667356 Farias / PE'),
+('4252', '1', 'Fazenda Fernandes, 57
+So Paulo
+40925617 da Cunha do Campo / CE'),
+('4253', '3', 'Fazenda Moreira, 4
+Primeiro De Maio
+46798-228 Azevedo / DF'),
+('4254', '4', 'Lago Lvia Costa
+Savassi
+74723711 da Costa das Flores / PI'),
+('4255', '2', 'Viaduto Henrique Novaes, 6
+Das Industrias I
+23358474 Fogaa / RO'),
+('4256', '1', 'Estao de Melo, 32
+Miramar
+79556124 Arajo / BA'),
+('4257', '4', 'Via de Farias, 1
+So Vicente
+67843291 Ferreira / RS'),
+('4258', '5', 'Fazenda de Lopes, 55
+Vila Cemig
+17085-443 Cavalcanti / SC'),
+('4259', '2', 'Travessa de Caldeira, 44
+Jaragu
+74491-660 Castro das Flores / RS'),
+('4260', '4', 'Recanto Arago, 82
+Alto Vera Cruz
+76038908 Peixoto da Serra / AC'),
+('4261', '1', 'Stio de Teixeira
+Conjunto Serra Verde
+32997982 Costa de Barbosa / PE'),
+('4262', '5', 'Residencial Maysa Ferreira, 13
+Camponesa 1 Seo
+94022347 Castro Verde / CE'),
+('4263', '3', 'Campo Rocha, 97
+Vila Formosa
+62619860 Pires da Praia / RS'),
+('4264', '2', 'Viela Correia, 20
+Vila Madre Gertrudes 3 Seo
+45331-555 da Mata / CE'),
+('4265', '5', 'Ladeira das Neves, 91
+Guarani
+35597-025 Dias do Campo / SP'),
+('4266', '1', 'Vila Costa, 875
+Brasil Industrial
+92877-694 Caldeira de Mendes / SC'),
+('4267', '3', 'rea Azevedo, 2
+Cu Azul
+84227349 Pereira do Sul / MA'),
+('4268', '5', 'Recanto de Melo, 46
+Bandeirantes
+05709377 Rodrigues do Sul / MA'),
+('4269', '3', 'Parque Ramos, 14
+Jardim Leblon
+35169-216 Ribeiro Verde / MS'),
+('4270', '5', 'Quadra Castro, 14
+Dom Cabral
+90036756 Teixeira da Serra / MG'),
+('4271', '4', 'Travessa de da Mota
+Camargos
+03283828 da Cunha / RR'),
+('4272', '1', 'Esplanada Gabriela Nogueira
+Nova Granada
+63009-238 Costela Grande / SC'),
+('4273', '3', 'Feira Rocha, 4
+Vila Santo Antnio
+57040243 da Rocha / MA'),
+('4274', '3', 'Praia Lima, 54
+Vila Pilar
+71537862 Alves / MG'),
+('4275', '3', 'Avenida Moreira
+Vila Santo Antnio
+53395451 Almeida / SC'),
+('4276', '5', 'Condomnio Lucas Jesus, 2
+Nova Floresta
+68486-721 da Luz / ES'),
+('4277', '1', 'Estrada Moreira, 72
+Ribeiro De Abreu
+99291-998 Porto do Galho / PE'),
+('4278', '3', 'Stio de Rodrigues, 43
+Alta Tenso 2 Seo
+09936-395 Mendes do Sul / CE'),
+('4279', '1', 'Vereda Oliveira, 174
+Tupi B
+94438118 Carvalho do Norte / PR'),
+('4280', '3', 'Alameda de Arajo, 72
+Minas Caixa
+62693-139 Barbosa / PE'),
+('4281', '4', 'Viela de da Costa, 28
+Fazendinha
+52004-584 Santos / SE'),
+('4282', '4', 'Ptio Rezende, 30
+Santa Maria
+37465-188 Cardoso / GO'),
+('4283', '3', 'Morro Jlia da Rosa, 86
+Alta Tenso 1 Seo
+89241483 Gonalves Alegre / MT'),
+('4284', '3', 'Estrada de Pereira, 28
+Barreiro
+36209-579 Costa / SE'),
+('4285', '4', 'Via Ribeiro, 85
+Carmo
+05895-072 Pinto / MT'),
+('4286', '3', 'Loteamento Enzo Sales, 45
+Nova Esperana
+13002168 Nunes do Sul / SE'),
+('4287', '2', 'Feira Gomes
+Chcara Leonina
+64169199 Correia / RR'),
+('4288', '3', 'Rodovia Cunha, 80
+Vila Copasa
+12759245 Arago / PI'),
+('4289', '3', 'Alameda Maria Eduarda da Luz, 5
+Conjunto Santa Maria
+52498404 Alves da Serra / RJ'),
+('4290', '1', 'Estao Ramos, 728
+Esperana
+33827-045 Fernandes / PR'),
+('4291', '2', 'Vila de Nunes, 90
+Jardim Alvorada
+70201-702 Freitas / RS'),
+('4292', '4', 'Travessa Luna Porto, 97
+Minaslandia
+76028-552 Novaes de da Conceio / SC'),
+('4293', '3', 'Quadra Freitas, 161
+Concrdia
+74135449 Pires / AC'),
+('4294', '1', 'Rodovia de Cavalcanti, 245
+Pedreira Padro Lopes
+36111-865 Barros / RR'),
+('4295', '1', 'rea de Oliveira, 74
+Cnego Pinheiro 1 Seo
+20688135 Cavalcanti do Oeste / SC'),
+('4296', '5', 'Colnia de da Cunha, 969
+Piratininga
+84075352 Ribeiro dos Dourados / PA'),
+('4297', '2', 'Vale Barbosa, 8
+So Cristvo
+40648-426 Rocha de Viana / PB'),
+('4298', '3', 'Avenida de Arajo, 72
+Novo Das Industrias
+14059053 Ramos de Nascimento / MT'),
+('4299', '2', 'Quadra Ana Sophia Cardoso, 4
+Vila Paraso
+90605731 Silva / MG'),
+('4300', '4', 'Campo Kamilly Costela, 36
+Tupi A
+64515-208 Correia Grande / RO'),
+('4301', '3', 'Largo de Costela, 335
+Estoril
+28131-015 Costa / PB'),
+('4302', '4', 'Lago Isadora Vieira, 95
+Jardim So Jos
+65583622 Lopes / RO'),
+('4303', '5', 'Viela Isis Lopes, 7
+Satelite
+49324296 Pinto do Sul / AC'),
+('4304', '2', 'Viela Luiz Henrique Silveira, 58
+Parque So Pedro
+49206700 Lima de Alves / AP'),
+('4305', '1', 'Campo Moura
+Joo Alfredo
+45793-321 Pereira / PB'),
+('4306', '1', 'Campo de Fernandes, 502
+Castelo
+72633661 Barros / ES'),
+('4307', '2', 'Morro de Lopes, 65
+Conjunto Providencia
+73495668 das Neves / PE'),
+('4308', '2', 'Campo Duarte, 68
+Guarani
+62845910 Silveira Verde / RN'),
+('4309', '3', 'Loteamento Ferreira
+Cardoso
+17480427 Sales Alegre / RJ'),
+('4310', '5', 'Vale Jesus, 41
+Conjunto Califrnia I
+11637-903 Arago Paulista / PR'),
+('4311', '3', 'Rua Maria Alice da Luz, 87
+Esperana
+70060595 da Rosa do Amparo / PE'),
+('4312', '2', 'Condomnio de Duarte, 47
+Boa Unio 1 Seo
+63173-095 Costela / TO'),
+('4313', '5', 'Aeroporto Maria Fernanda Viana, 15
+Vila Minaslandia
+91309384 Barros da Mata / AL'),
+('4314', '4', 'Esplanada Moura, 959
+Boa Unio 1 Seo
+60869-753 Vieira / PI'),
+('4315', '3', 'Largo Dias, 69
+Vitoria Da Conquista
+57240-948 Caldeira / ES'),
+('4316', '4', 'Morro Nascimento, 49
+Alta Tenso 2 Seo
+29031106 Campos do Amparo / SP'),
+('4317', '5', 'Praa de Silva, 40
+Manacas
+33535-745 Silva / MA'),
+('4318', '4', 'Distrito Cavalcanti, 547
+Garas
+27692152 Cardoso / CE'),
+('4319', '1', 'Alameda Fernando Fernandes, 97
+Goiania
+92658736 Peixoto / PE'),
+('4320', '4', 'Estrada Carvalho
+Comiteco
+56784872 Freitas Verde / PR'),
+('4321', '1', 'Ladeira de Arajo, 17
+Alta Tenso 2 Seo
+64357-603 Viana / AC'),
+('4322', '3', 'Morro de Nogueira, 227
+Vila Independencia 1 Seo
+64624-498 Arajo de Mendes / PA'),
+('4323', '2', 'Quadra Bruna Viana, 97
+Vitoria Da Conquista
+32880-942 Rezende dos Dourados / PE'),
+('4324', '5', 'Estrada Pereira, 39
+Copacabana
+10046-928 Souza / PE'),
+('4325', '5', 'Praa de Almeida, 305
+Floresta
+24880370 da Luz do Sul / PI'),
+('4326', '2', 'Travessa Costela, 58
+Nova Floresta
+25755370 Sales Grande / MG'),
+('4327', '2', 'Alameda da Rocha, 27
+Vila Nova Paraso
+70973848 Castro / RN'),
+('4328', '5', 'Largo de Alves
+So Paulo
+76151-058 da Mota / PR'),
+('4329', '4', 'Lago Correia, 4
+So Damio
+81919-000 Vieira / ES'),
+('4330', '1', 'Residencial de Ferreira, 676
+Nossa Senhora Do Rosrio
+23731307 da Paz de Santos / ES'),
+('4331', '3', 'Estao de Freitas, 86
+Dona Clara
+01020-024 Barros / AC'),
+('4332', '1', 'Vereda Monteiro
+Chcara Leonina
+67138489 Farias de Gois / PE'),
+('4333', '5', 'Viela Rezende
+Alto Dos Pinheiros
+16693-975 Viana Verde / BA'),
+('4334', '5', 'Esplanada Oliveira, 73
+Indai
+42475-461 Ribeiro / RS'),
+('4335', '4', 'Praa Joana Monteiro, 25
+Ernesto Nascimento
+93783277 Rocha Alegre / PB'),
+('4336', '4', 'Alameda de Alves, 77
+pia
+70835532 Monteiro / AP'),
+('4337', '5', 'Via de Azevedo, 66
+Campo Alegre
+72105136 da Luz de das Neves / RO'),
+('4338', '4', 'Morro Barros, 284
+Santana Do Cafezal
+47366-168 Rezende do Oeste / PR'),
+('4339', '3', 'Distrito de Campos, 47
+Cdi Jatoba
+01362-083 Porto / AC'),
+('4340', '5', 'Residencial de Carvalho
+Santa Maria
+88059-078 Oliveira de Gois / RJ'),
+('4341', '1', 'Travessa Mariana Ribeiro, 79
+Vila Madre Gertrudes 3 Seo
+18117-172 da Mata do Campo / PA'),
+('4342', '1', 'Largo Esther Lopes, 53
+Urca
+44956-496 Barros de Costa / SE'),
+('4343', '2', 'Condomnio Ana Beatriz Monteiro
+Guarat
+34375332 Nascimento de das Neves / SP'),
+('4344', '3', 'Setor Letcia Ramos, 86
+So Joo
+81194-955 Pinto / MG'),
+('4345', '1', 'Passarela de Sales, 102
+Vila Cloris
+80169-044 Caldeira do Oeste / PA'),
+('4346', '3', 'Passarela Enrico Nunes, 17
+Vila Esplanada
+22391949 Costa do Galho / PB'),
+('4347', '2', 'Viela de da Rocha, 79
+Vila Coqueiral
+93632955 Peixoto / RN'),
+('4348', '3', 'Conjunto Ana Cardoso
+Andiroba
+85007268 Arajo / TO'),
+('4349', '5', 'Ncleo Francisco Nunes, 39
+Indai
+19546-555 Pires / SP'),
+('4350', '4', 'Ncleo de Monteiro, 36
+Jonas Veiga
+79586-739 Cunha / MT'),
+('4351', '2', 'Praa Santos, 98
+Pirineus
+42870650 da Rocha Grande / AL'),
+('4352', '3', 'Conjunto de Rocha, 970
+Penha
+46450-346 Moura da Mata / PA'),
+('4353', '2', 'Avenida Helena Oliveira, 430
+Vila So Geraldo
+97195626 Farias / RJ'),
+('4354', '5', 'Campo Moura, 80
+Aeroporto
+73720-716 da Paz Alegre / RO'),
+('4355', '3', 'Estao Raquel da Paz, 72
+Vila So Francisco
+50159-682 Teixeira / PB'),
+('4356', '3', 'Passarela Daniel Ribeiro, 70
+Corao Eucarstico
+69784503 Souza / PI'),
+('4357', '2', 'Morro de Costela, 67
+Ermelinda
+02606866 Oliveira / PI'),
+('4358', '4', 'Lagoa de Oliveira, 31
+So Tomaz
+07440-733 Costela de Minas / AM'),
+('4359', '4', 'Conjunto Monteiro, 40
+Dom Cabral
+78007-878 Moreira do Amparo / TO'),
+('4360', '4', 'Loteamento de Martins, 3
+Jardim Alvorada
+32182755 Farias do Norte / AP'),
+('4361', '1', 'Colnia de Cardoso, 55
+Cidade Jardim Taquaril
+53122908 Costela / RO'),
+('4362', '1', 'Estrada Almeida, 94
+So Paulo
+45987275 da Cruz / SE'),
+('4363', '3', 'rea de Peixoto, 515
+Beija Flor
+63845-102 da Cruz da Prata / PE'),
+('4364', '1', 'Stio Almeida, 55
+Acaba Mundo
+26812-728 Gomes de Lopes / AM'),
+('4365', '2', 'Lago Campos, 35
+So Geraldo
+21580176 Mendes da Mata / PI'),
+('4366', '2', 'Travessa Igor Silva, 85
+Carmo
+64995-190 Lima / CE'),
+('4367', '5', 'Trevo Gonalves
+Caetano Furquim
+35751703 Campos do Amparo / RJ'),
+('4368', '2', 'Esplanada Juan da Cruz, 32
+Vila So Gabriel
+42812599 Santos / ES'),
+('4369', '3', 'Aeroporto Gonalves, 9
+Vila Cloris
+14026760 Correia do Galho / RR'),
+('4370', '5', 'Trevo de Melo, 71
+Ribeiro De Abreu
+12249-620 da Luz do Oeste / SE'),
+('4371', '2', 'Lagoa Joo Vitor Martins, 91
+Nova Sua
+97909726 Carvalho / SC'),
+('4372', '3', 'Aeroporto Thomas Caldeira, 915
+Centro
+11264-053 Oliveira dos Dourados / AM'),
+('4373', '5', 'Chcara Joo Felipe Silveira, 14
+Petropolis
+05708784 Viana / ES'),
+('4374', '2', 'Parque Daniela Cavalcanti, 332
+Vila Calafate
+22271-396 Nogueira da Serra / MS'),
+('4375', '1', 'Distrito Novaes
+Lagoa
+05963136 Arajo Alegre / AP'),
+('4376', '5', 'Setor Maria Clara Barbosa
+Santo Andr
+45030843 Nogueira de Lima / AL'),
+('4377', '2', 'Estao de Ferreira, 456
+Savassi
+00721750 Castro / GO'),
+('4378', '3', 'Campo Augusto Pinto
+Santa Rita
+38955-294 da Mata do Amparo / MG'),
+('4379', '5', 'Praa de Pereira, 95
+Saudade
+73347557 Viana / PE'),
+('4380', '5', 'Avenida Joo Guilherme Nascimento, 13
+So Cristvo
+18806390 Barros / AC'),
+('4381', '2', 'Praa Moura, 140
+Vila Madre Gertrudes 4 Seo
+97990169 Silva do Norte / AP'),
+('4382', '5', 'Residencial Brbara da Luz, 41
+Embabas
+59212-838 Monteiro / GO'),
+('4383', '4', 'Esplanada Kevin Fernandes, 84
+Carmo
+22977-901 Nascimento / RJ'),
+('4384', '1', 'Viela Enzo da Rosa, 46
+Caetano Furquim
+13035-556 Dias da Praia / RO'),
+('4385', '4', 'Jardim Monteiro, 79
+Conjunto Bonsucesso
+46251-461 Moura de Arago / RN'),
+('4386', '3', 'Recanto Santos, 66
+Maria Virgnia
+10976350 Santos / CE'),
+('4387', '1', 'Distrito Sabrina Peixoto, 76
+Vila Independencia 1 Seo
+83873458 Barbosa / GO'),
+('4388', '2', 'Travessa Ryan da Luz, 2
+Indai
+22321463 da Luz Verde / MG'),
+('4389', '1', 'Trevo Lima
+Vitoria
+17284611 da Paz Alegre / DF'),
+('4390', '1', 'Passarela Fogaa, 636
+Vila Nossa Senhora Do Rosrio
+66632-984 da Conceio / PE'),
+('4391', '5', 'Residencial de Duarte, 816
+Vila Piratininga
+41276-460 Pinto / RO'),
+('4392', '5', 'Praia Clarice Peixoto, 92
+Senhor Dos Passos
+49386-456 da Cunha do Campo / AL'),
+('4393', '5', 'Rodovia Enzo Castro
+Bonfim
+28086-033 da Cunha / ES'),
+('4394', '5', 'Colnia de Peixoto, 42
+Mariano De Abreu
+25959-359 Duarte da Mata / SC'),
+('4395', '4', 'Praia de da Luz, 19
+Solimoes
+20403943 Arajo / GO'),
+('4396', '3', 'Ladeira Almeida
+Primeiro De Maio
+10092-532 Fernandes do Amparo / MG'),
+('4397', '2', 'Loteamento de Nogueira, 51
+Santa Helena
+67133-706 Gonalves / MA'),
+('4398', '4', 'Avenida Rodrigues, 24
+Parque So Pedro
+94612-039 da Cunha / MG'),
+('4399', '2', 'Rua Breno Cunha, 573
+Tres Marias
+41430-111 Monteiro de Porto / MS'),
+('4400', '2', 'Ladeira da Rocha
+Jardim So Jos
+35105-934 Rocha / PB'),
+('4401', '2', 'Morro Maria Ceclia Martins, 49
+Rio Branco
+62453497 Nascimento de Sales / PB'),
+('4402', '3', 'Rua Nogueira, 33
+So Jorge 3 Seo
+21756-856 Moreira da Prata / SE'),
+('4403', '1', 'Chcara Duarte, 71
+Vila Nova Paraso
+84401-882 Cardoso do Norte / MA'),
+('4404', '2', 'Trevo de Santos, 46
+Cu Azul
+21124425 Ribeiro / TO'),
+('4405', '1', 'Morro Castro
+Aeroporto
+09510-024 Porto da Prata / MA'),
+('4406', '4', 'Passarela Vieira, 31
+Vila Coqueiral
+80374-238 Monteiro / PE'),
+('4407', '3', 'Trecho Mariana Silveira, 334
+Vila Nova Cachoeirinha 1 Seo
+89828-798 Barbosa / AM'),
+('4408', '4', 'Ptio Samuel Arajo, 6
+Vila Betnia
+83556115 Arajo / RO'),
+('4409', '3', 'Viela Stephany Azevedo
+So Joo
+36173428 Mendes / RS'),
+('4410', '5', 'Avenida de Oliveira, 553
+Vila Ecolgica
+41766-138 Oliveira de Barbosa / PB'),
+('4411', '4', 'Rodovia Ana Vitria Mendes, 18
+Vila Maloca
+95763442 Santos de Cunha / PE'),
+('4412', '5', 'Distrito Nicole das Neves, 5
+Vila Coqueiral
+19565-569 Gonalves / RR'),
+('4413', '5', 'Campo Alexandre Rezende, 36
+Vila Engenho Nogueira
+01762817 Teixeira / SP'),
+('4414', '1', 'Ncleo Melissa da Mota, 15
+Laranjeiras
+69095578 Costa Alegre / PI'),
+('4415', '1', 'Viaduto Theo Moura, 13
+Parque So Jos
+56643764 Lopes da Mata / RS'),
+('4416', '5', 'Ncleo Freitas, 21
+Estrela
+94259842 Lopes do Galho / MT'),
+('4417', '2', 'Lago Alves, 443
+So Joo Batista
+74683-597 Barros de Arajo / RO'),
+('4418', '4', 'Vale de Nunes, 32
+Jardinpolis
+77345950 Oliveira de Gois / MA'),
+('4419', '1', 'Ncleo Sales, 77
+Vista Do Sol
+74853-407 Silveira da Praia / CE'),
+('4420', '4', 'Rua de Cunha, 92
+Vila Antena Montanhs
+99380973 Moreira / MS'),
+('4421', '1', 'Passarela de Fogaa, 66
+Vila Mangueiras
+18535835 da Conceio de da Luz / RN'),
+('4422', '5', 'Esplanada de da Cunha
+Marieta 2 Seo
+24499208 Correia da Praia / PR'),
+('4423', '5', 'Lago Nathan Pinto, 36
+Europa
+14799-978 da Rocha das Flores / RS'),
+('4424', '1', 'Estao da Luz, 35
+Joo Paulo Ii
+33738060 Pinto Alegre / BA'),
+('4425', '5', 'Ladeira Silveira, 8
+Independncia
+98098796 Novaes das Pedras / TO'),
+('4426', '2', 'Residencial de Barbosa, 5
+Nova Esperana
+33935-848 Carvalho / PR'),
+('4427', '2', 'Largo Cau Moraes, 26
+Mariquinhas
+85898-175 Lopes Paulista / MG'),
+('4428', '4', 'Travessa de da Paz, 23
+Ouro Minas
+17922-268 Rodrigues de Campos / CE'),
+('4429', '1', 'Distrito Ribeiro, 16
+Canad
+77210892 da Luz / SC'),
+('4430', '2', 'Loteamento Viana, 11
+Alpio De Melo
+31379-498 da Mota / SP'),
+('4431', '5', 'Stio de da Paz, 415
+Bernadete
+81850-564 Farias de Lima / MA'),
+('4432', '3', 'Alameda de Lima
+Solar Do Barreiro
+25725906 Martins / MT'),
+('4433', '3', 'Largo de Rodrigues, 1
+Lagoinha
+86120-866 Dias do Sul / MA'),
+('4434', '2', 'Ptio de Gomes, 23
+So Tomaz
+05674723 Lima do Oeste / SP'),
+('4435', '2', 'Rodovia Laura Farias
+Copacabana
+10386549 da Paz / AP'),
+('4436', '3', 'Vila Novaes, 2
+Cachoeirinha
+99247-855 Almeida / DF'),
+('4437', '5', 'Ladeira Bryan da Conceio
+Branas
+37509-720 da Luz das Flores / ES'),
+('4438', '3', 'Praia Teixeira, 42
+Barreiro
+40704069 Campos / AC'),
+('4439', '4', 'Largo Kaique Cavalcanti, 625
+Vila Santo Antnio Barroquinha
+06563982 Farias / CE'),
+('4440', '1', 'Esplanada de Viana, 24
+So Bernardo
+87400-914 Dias de Rodrigues / RJ'),
+('4441', '2', 'Residencial Agatha Campos, 587
+Santo Agostinho
+19128969 Viana / CE'),
+('4442', '1', 'Recanto de da Conceio, 95
+Baleia
+21296437 Moreira das Pedras / MS'),
+('4443', '3', 'Morro Miguel Novaes, 1
+Monte Azul
+34263440 Ribeiro das Flores / AP'),
+('4444', '1', 'Vila Ribeiro, 55
+Nova Granada
+81295081 Pinto Paulista / TO'),
+('4445', '1', 'Setor Monteiro, 56
+Paraso
+41627-873 Melo do Galho / RR'),
+('4446', '2', 'Rua Laura da Mota, 77
+Jardim Amrica
+38226926 Barbosa do Sul / BA'),
+('4447', '2', 'Estrada de Oliveira, 59
+Beira Linha
+56158-316 Fernandes / SE'),
+('4448', '1', 'Rodovia de Arago, 3
+Xangri-L
+17809803 Fogaa de Minas / AC'),
+('4449', '5', 'Setor Pires, 27
+So Joo Batista
+53212646 Monteiro do Norte / AP'),
+('4450', '3', 'Trecho da Paz
+Vila Nova Gameleira 2 Seo
+22710081 Rezende de Minas / MA'),
+('4451', '1', 'Residencial Emilly Pires, 2
+Nova Pampulha
+50961-282 Ramos / SP'),
+('4452', '5', 'Rodovia Farias, 28
+Vila Minaslandia
+87069-754 Teixeira / AM'),
+('4453', '4', 'Praa da Luz, 28
+Vila So Rafael
+17943063 Cunha / GO'),
+('4454', '3', 'Rua Costa, 9
+Aaro Reis
+66164-782 Mendes / CE'),
+('4455', '5', 'Residencial Pietra Dias, 2
+Alto Caiaras
+02836442 Rodrigues dos Dourados / TO'),
+('4456', '3', 'Lagoa de Rezende, 203
+Vila Califrnia
+24892-234 Fogaa / RS'),
+('4457', '4', 'Vila Larissa Mendes, 34
+Heliopolis
+98064964 Ribeiro / BA'),
+('4458', '1', 'Loteamento Sales, 69
+Nova Cintra
+43261-518 Fogaa / TO'),
+('4459', '4', 'Loteamento Correia, 17
+Vila Satlite
+95242-950 Santos / TO'),
+('4460', '2', 'Recanto Sophia Ferreira
+Vila Santo Antnio Barroquinha
+61995031 Sales / SC'),
+('4461', '5', 'Alameda Daniela Ferreira, 7
+Trevo
+87046250 Oliveira das Pedras / PA'),
+('4462', '1', 'Loteamento de Alves, 81
+Vila Maria
+91573-535 Correia / DF'),
+('4463', '1', 'Rodovia da Rocha
+Floresta
+46902874 Novaes / RN'),
+('4464', '2', 'Setor Julia Pereira, 2
+Leticia
+29389-013 Pereira / SE'),
+('4465', '5', 'Ncleo de Melo, 70
+Alto Caiaras
+36377953 Lopes / PA'),
+('4466', '3', 'Largo Maysa Dias
+Alto Caiaras
+97205134 Freitas / DF'),
+('4467', '3', 'Conjunto Maysa Barbosa, 706
+Manacas
+49908289 Moraes de Barros / MT'),
+('4468', '5', 'Viela de Fernandes, 88
+Madre Gertrudes
+92064600 da Cruz / RN'),
+('4469', '3', 'Conjunto Teixeira, 46
+Comiteco
+60971-108 da Costa / AL'),
+('4470', '2', 'Vale Novaes, 120
+Vila Santa Rosa
+59795-762 Vieira / MA'),
+('4471', '5', 'Recanto Fernanda Freitas
+Vila Sumar
+82975-870 Moura / BA'),
+('4472', '4', 'Esplanada de Silveira, 458
+Garas
+81988-081 Rodrigues / PI'),
+('4473', '5', 'Distrito de Cavalcanti, 81
+Tnel De Ibirit
+75945578 da Cruz de Oliveira / MG'),
+('4474', '2', 'Vereda Maria Clara da Conceio, 48
+Vila Jardim Montanhes
+24574523 Barros de Dias / SC'),
+('4475', '2', 'Ncleo Pietro Novaes
+Vila Maria
+55709002 Azevedo / SC'),
+('4476', '1', 'rea de Moraes, 93
+Vila Mangueiras
+18995688 Costela do Campo / AP'),
+('4477', '5', 'Lagoa de Arago, 683
+Esplanada
+95460-157 Ribeiro / CE'),
+('4478', '3', 'Condomnio Jesus, 31
+Vila Trinta E Um De Maro
+03966033 Arago / RR'),
+('4479', '3', 'Alameda Cunha, 49
+Lagoinha
+72614475 Sales do Galho / RJ'),
+('4480', '4', 'Rodovia Pereira
+Centro
+79171-182 Azevedo Verde / PE'),
+('4481', '4', 'Estao de Cardoso, 394
+Embabas
+44282584 Gomes / PR'),
+('4482', '4', 'rea Oliveira
+Conjunto Santa Maria
+51099629 Cavalcanti do Galho / PA'),
+('4483', '1', 'Vereda Felipe Martins, 5
+Rio Branco
+87136612 Moreira de Pires / SC'),
+('4484', '3', 'Trecho Breno Barros, 25
+Santa Margarida
+56611354 das Neves da Mata / RS'),
+('4485', '3', 'Lagoa Renan Cardoso, 90
+Vila So Gabriel Jacui
+10130-424 Melo da Praia / SE'),
+('4486', '2', 'Parque de Moraes, 34
+Vila Santo Antnio Barroquinha
+41876504 Moraes / AP'),
+('4487', '5', 'Viela de Moraes, 84
+Palmeiras
+82844-708 Caldeira / MS'),
+('4488', '3', 'Loteamento Kaique Freitas, 51
+Nova Pampulha
+04591-690 Silva / PB'),
+('4489', '1', 'Rodovia Luiz Gustavo Fernandes, 897
+Vitoria Da Conquista
+79691-795 Rezende do Galho / MT'),
+('4490', '1', 'Distrito de Ribeiro, 83
+Joo Alfredo
+88637-907 Caldeira da Mata / MS'),
+('4491', '3', 'Estao de Melo, 60
+Bonfim
+34200-773 Monteiro de da Rocha / RN'),
+('4492', '2', 'Ladeira Vicente Arago, 64
+Jatob
+08748168 Vieira Verde / AC'),
+('4493', '4', 'Conjunto Nunes, 71
+Jaragu
+63906847 Vieira das Pedras / PI'),
+('4494', '2', 'Ptio Marcelo Gonalves, 64
+Vila Engenho Nogueira
+57855-541 Caldeira / AC'),
+('4495', '2', 'Travessa da Cruz
+Savassi
+60884-633 Rocha / AM'),
+('4496', '4', 'Condomnio de Teixeira, 857
+Vila Piratininga Venda Nova
+14548-186 Silva / CE'),
+('4497', '5', 'Quadra da Cunha, 93
+So Jos
+26457-655 Caldeira de Peixoto / SE'),
+('4498', '3', 'Via de Silveira, 66
+Flavio De Oliveira
+86875690 Silveira Verde / SC'),
+('4499', '3', 'Quadra de Novaes, 137
+Pousada Santo Antonio
+11994-149 da Rocha / PB'),
+('4500', '4', 'Aeroporto de Barbosa, 2
+Novo Das Industrias
+27256-229 Viana / DF'),
+('4501', '3', 'Vila de Costa, 84
+Cruzeiro
+78312826 Teixeira do Galho / PR'),
+('4502', '5', 'Rodovia Yuri Rodrigues, 80
+Ipe
+90432811 Farias Grande / MA'),
+('4503', '4', 'Trevo de Gomes, 60
+Barreiro
+38216-164 Barros dos Dourados / SE'),
+('4504', '5', 'Travessa Maria Sophia Melo, 96
+Suzana
+97865-471 Moura Grande / AC'),
+('4505', '3', 'Colnia Porto, 51
+Antonio Ribeiro De Abreu 1 Seo
+64539-385 Vieira / SE'),
+('4506', '2', 'Ncleo de Porto, 739
+Vila Aeroporto Jaragu
+32589-717 Oliveira dos Dourados / RR'),
+('4507', '5', 'Vereda de da Paz, 19
+Vila Canto Do Sabi
+99916545 Pires / RO'),
+('4508', '5', 'Parque Lopes, 46
+Jardim Montanhs
+05462240 Moreira / RO'),
+('4509', '5', 'Estrada Pinto
+Ambrosina
+01720-360 Nunes de Viana / MS'),
+('4510', '5', 'Morro Ana Vitria Farias, 1
+Vila Unio
+36266-897 Monteiro / RO'),
+('4511', '2', 'Quadra de Pereira, 51
+Conjunto Floramar
+30487595 da Cruz de Minas / MS'),
+('4512', '4', 'Residencial Jesus, 43
+So Joo Batista
+28914951 Rocha / SC'),
+('4513', '4', 'Passarela Gonalves
+Savassi
+39488616 Castro / AC'),
+('4514', '3', 'Conjunto de da Paz, 656
+Nova Granada
+99629-369 Pereira de Correia / SP'),
+('4515', '1', 'Estrada Castro, 556
+Beira Linha
+54791123 Costela / CE'),
+('4516', '4', 'Conjunto de Moraes, 43
+Vila Das Oliveiras
+54830484 Almeida dos Dourados / RS'),
+('4517', '1', 'Viela Ferreira, 82
+Cnego Pinheiro 2 Seo
+41555-063 Moura / RR'),
+('4518', '1', 'Esplanada de da Rocha, 90
+Marieta 3 Seo
+19695-928 Viana / AP'),
+('4519', '3', 'Trevo de da Rosa, 40
+Varzea Da Palma
+66898-300 Arago / SE'),
+('4520', '5', 'Rodovia de Nogueira, 55
+Nova America
+06165-477 Ribeiro da Prata / PE'),
+('4521', '1', 'Trevo de Lima, 22
+Solimoes
+67110-000 da Mota da Praia / RO'),
+('4522', '3', 'Fazenda de Caldeira, 55
+Bernadete
+19365-093 Rodrigues dos Dourados / GO'),
+('4523', '3', 'Condomnio Gustavo Henrique Barbosa
+Maria Helena
+19697539 Farias / ES'),
+('4524', '4', 'Aeroporto de Cardoso, 64
+Novo So Lucas
+92097-105 Moura / SP'),
+('4525', '1', 'Trevo de Oliveira, 7
+Penha
+48150-925 Mendes / AP'),
+('4526', '5', 'Ptio de Pires, 53
+So Joo Batista
+84060003 Nogueira / SP'),
+('4527', '5', 'Via Sarah Costa, 708
+Guarani
+92005637 Cardoso do Sul / ES'),
+('4528', '1', 'Parque Moreira, 22
+Vila Ipiranga
+08197-530 Gomes das Flores / TO'),
+('4529', '3', 'Via Farias, 3
+Vila Boa Vista
+50463-532 Silva da Serra / RR'),
+('4530', '2', 'Recanto Ana Vitria Castro, 91
+Candelaria
+77848-692 Costela / TO'),
+('4531', '3', 'Travessa de Teixeira, 51
+Maria Goretti
+28649248 Pinto / PA'),
+('4532', '4', 'Viaduto de Arajo, 548
+Vila Inestan
+11598291 Silveira / MG'),
+('4533', '3', 'Favela Santos, 7
+Joo Alfredo
+19967218 Nascimento / AP'),
+('4534', '2', 'Residencial de Arago, 91
+Maria Tereza
+20885-375 Almeida da Prata / AM'),
+('4535', '4', 'Alameda Brenda Costa
+Marieta 3 Seo
+07424-978 Ribeiro do Norte / AM'),
+('4536', '2', 'Travessa Monteiro, 664
+Pirineus
+90736654 Azevedo dos Dourados / PE'),
+('4537', '1', 'Ptio Catarina Teixeira, 55
+Marieta 1 Seo
+83234986 Caldeira / AC'),
+('4538', '1', 'Condomnio Fernando da Conceio, 88
+Boa Esperana
+16317-979 Cardoso / SC'),
+('4539', '2', 'Chcara Benjamin da Cruz
+Vila Aeroporto
+21062014 da Mata da Serra / CE'),
+('4540', '1', 'Aeroporto de Barbosa
+Estoril
+83815644 Peixoto das Flores / PR'),
+('4541', '3', 'Conjunto Farias, 46
+Jardim Felicidade
+77753129 Duarte da Prata / DF'),
+('4542', '3', 'Esplanada Eduarda Oliveira, 67
+Santa Amelia
+09289178 da Cunha / RN'),
+('4543', '2', 'Ladeira Isis Ferreira
+Carmo
+54298-479 Costela do Norte / RO'),
+('4544', '2', 'Recanto Julia Correia, 83
+Jardim Felicidade
+29558823 Correia / AP'),
+('4545', '5', 'Jardim Sofia Ferreira, 15
+Estoril
+62964-172 Costela das Flores / MS'),
+('4546', '4', 'Morro Andr Jesus, 51
+Corao Eucarstico
+04726-476 Viana / RR'),
+('4547', '4', 'Chcara Antnio Farias, 45
+Dom Joaquim
+21723-159 Cunha / AM'),
+('4548', '2', 'Quadra Luiz Felipe da Rosa, 10
+Vila Coqueiral
+16570797 Pereira / BA'),
+('4549', '1', 'Feira Evelyn Dias, 35
+Conjunto Paulo Vi
+34374-891 Carvalho / PR'),
+('4550', '5', 'Aeroporto de Peixoto, 84
+Bairro Das Indstrias Ii
+14903201 Rocha / RR'),
+('4551', '1', 'Aeroporto de Correia, 41
+Calafate
+31866-108 Ramos das Flores / MS'),
+('4552', '1', 'Viaduto Igor Santos, 50
+Vila Antena
+74494238 Monteiro Alegre / RJ'),
+('4553', '3', 'Ncleo de Campos, 44
+Cdi Jatoba
+16392-024 Azevedo / PA'),
+('4554', '1', 'Jardim Miguel da Rocha, 34
+Santa Ins
+43995901 Nunes do Sul / MG'),
+('4555', '5', 'Ncleo de Moraes, 56
+Morro Dos Macacos
+13730774 Cardoso / RS'),
+('4556', '5', 'Avenida Arago, 58
+Nova America
+87190771 Peixoto / RS'),
+('4557', '5', 'Campo Almeida, 43
+Conjunto Novo Dom Bosco
+92561314 da Conceio / SE'),
+('4558', '3', 'Morro Lopes, 50
+Luxemburgo
+70827179 da Cruz do Sul / MA'),
+('4559', '3', 'Passarela Raquel Oliveira
+Piraja
+05922835 Lima de Gonalves / MS'),
+('4560', '4', 'Passarela Jesus, 41
+Vila Puc
+61977-244 Peixoto de Gois / RO'),
+('4561', '2', 'Campo Ana Clara Alves, 67
+Lorena
+94578-077 Barros de Minas / PR'),
+('4562', '4', 'Recanto de Barbosa, 174
+Campo Alegre
+92923676 Nascimento / AC'),
+('4563', '4', 'Aeroporto de da Rosa, 33
+Pompia
+10675930 Fernandes dos Dourados / MA'),
+('4564', '3', 'Stio Vieira, 4
+Vila So Rafael
+34119084 Pinto / PI'),
+('4565', '4', 'Jardim de Martins, 620
+Vila Da ria
+26054284 Rodrigues de Carvalho / SE'),
+('4566', '2', 'Praia Pedro Miguel Gonalves, 21
+Leticia
+42936057 Gonalves / RS'),
+('4567', '5', 'Avenida Gonalves, 42
+Venda Nova
+67620-803 Nogueira / RS'),
+('4568', '1', 'Ncleo Castro, 444
+Nova Gameleira
+04808438 Moreira do Campo / AL'),
+('4569', '1', 'Trevo Arthur Ribeiro, 53
+Boa Esperana
+99181-556 da Mata de Minas / TO'),
+('4570', '1', 'Viaduto de Caldeira
+Vila Antena Montanhs
+64599054 Teixeira / GO'),
+('4571', '4', 'Avenida Cavalcanti, 32
+Serrano
+04376-015 Castro das Flores / AC'),
+('4572', '3', 'Esplanada Kevin Cavalcanti, 82
+Vila Real 1 Seo
+92904479 Lopes / DF'),
+('4573', '3', 'Stio de Peixoto, 620
+Dom Joaquim
+54836814 Cardoso / RO'),
+('4574', '4', 'Praa Yago Carvalho, 60
+Nazare
+10384-958 Costa / GO'),
+('4575', '3', 'Avenida Rezende, 45
+Zilah Sposito
+19225-342 da Rosa / BA'),
+('4576', '5', 'Colnia Beatriz Nogueira, 3
+Jaqueline
+00834-041 Nascimento / AP'),
+('4577', '3', 'Avenida de Silva, 72
+Vila Olhos 
+62345-914 Vieira / PE'),
+('4578', '2', 'Rodovia Vitria Silveira, 69
+Nova Granada
+70399579 Dias / CE'),
+('4579', '1', 'Campo de Viana, 96
+Vila Santo Antnio Barroquinha
+31797-795 da Mata / RS'),
+('4580', '4', 'Rua Sabrina Castro, 88
+So Jos
+42313373 Alves / PE'),
+('4581', '4', 'Stio de Azevedo, 66
+Itatiaia
+52997-253 da Cunha / SE'),
+('4582', '5', 'Viaduto Moura, 188
+Vila Dos Anjos
+27252048 Monteiro de Cavalcanti / SC'),
+('4583', '4', 'Recanto Cunha, 95
+Tirol
+26822-348 Cunha / PE'),
+('4584', '2', 'Distrito Rodrigo Santos, 60
+Vila Santa Rosa
+04976587 Vieira / TO'),
+('4585', '5', 'Fazenda de Souza, 216
+Solar Do Barreiro
+29580159 Gonalves / MG'),
+('4586', '1', 'Campo de da Luz, 4
+Vila Barragem Santa Lcia
+92168-787 Teixeira dos Dourados / SE'),
+('4587', '5', 'Largo de Costela, 54
+Santa Terezinha
+36334211 Cavalcanti Alegre / CE'),
+('4588', '1', 'Ladeira de Barros
+Estoril
+32872493 Costa do Sul / CE'),
+('4589', '2', 'Rua da Mata, 92
+Guarani
+37336563 Cavalcanti / AC'),
+('4590', '5', 'Ncleo de Gomes, 47
+Aparecida 7 Seo
+32489660 Viana de Rocha / PA'),
+('4591', '5', 'Rodovia de Rocha, 62
+Conjunto So Francisco De Assis
+54719754 Barbosa / PE'),
+('4592', '1', 'Rodovia de Dias
+Guarani
+42526-669 Castro da Praia / PE'),
+('4593', '4', 'Trecho Olivia Viana, 97
+Serra Do Curral
+35589-885 Freitas do Galho / RS'),
+('4594', '2', 'Quadra Costela, 9
+Cidade Nova
+57725-789 Moura / PR'),
+('4595', '1', 'Distrito Caldeira, 33
+Vila Santa Monica 1 Seo
+55928527 Souza / SC'),
+('4596', '4', 'Residencial de Carvalho
+Prado
+76446-463 Nogueira / RS'),
+('4597', '4', 'Aeroporto de Moreira, 914
+Nova America
+61826948 Arajo / PB'),
+('4598', '4', 'Lagoa de Moura
+Ernesto Nascimento
+32197-692 Nunes / PR'),
+('4599', '5', 'Viaduto de Santos, 456
+Pindura Saia
+75042359 Barros / MT'),
+('4600', '2', 'Rodovia Sales, 47
+Vila Da Luz
+62662-967 Duarte de Gomes / AP'),
+('4601', '4', 'Rodovia Cardoso, 22
+Serra Verde
+78065770 Martins / CE'),
+('4602', '1', 'Trecho Cavalcanti, 3
+Tiradentes
+97291513 da Rosa de Farias / RJ'),
+('4603', '5', 'Aeroporto de Barros
+Santa Maria
+42682-987 Caldeira / AP'),
+('4604', '4', 'Vereda de das Neves, 62
+Paraso
+00429-099 Caldeira / RJ'),
+('4605', '1', 'Distrito Maria Dias, 61
+Cidade Jardim
+89046-368 Moraes / AL'),
+('4606', '1', 'Ptio de Campos
+Juliana
+78735-816 Pereira / MA'),
+('4607', '3', 'Distrito de Nunes, 47
+Penha
+47071-836 da Paz / AM'),
+('4608', '2', 'Estao de Rodrigues
+Vila Barragem Santa Lcia
+73711-297 Martins / AP'),
+('4609', '1', 'Chcara Enrico Almeida, 89
+Granja Werneck
+70775164 Peixoto / GO'),
+('4610', '4', 'Ncleo de Monteiro, 26
+Olaria
+34700-175 Melo / RJ'),
+('4611', '5', 'Trecho Lopes, 536
+Maria Goretti
+71581-526 Nunes de Minas / TO'),
+('4612', '4', 'Feira de Martins, 1
+Vila Jardim So Jos
+37077346 da Cruz de da Cunha / CE'),
+('4613', '4', 'Fazenda Nogueira, 85
+Santa Rita De Cssia
+18620596 da Paz de Sales / MS'),
+('4614', '4', 'Feira Sofia da Rosa, 82
+Sagrada Famlia
+32984647 Souza / MA'),
+('4615', '4', 'Rodovia de Rocha, 40
+Campo Alegre
+87191097 Correia de Gomes / RS'),
+('4616', '2', 'Setor de Gonalves, 10
+Vila Nova Gameleira 1 Seo
+82754-728 Oliveira de Pereira / MT'),
+('4617', '2', 'Vila Luiz Gustavo Barbosa, 394
+Vila Hava
+09821-284 da Conceio / PI'),
+('4618', '5', 'Rua Elisa Freitas, 31
+Leticia
+32654276 Almeida / PI'),
+('4619', '2', 'Estrada de Cardoso, 8
+Maria Helena
+03882157 Porto da Serra / RR'),
+('4620', '1', 'Estao Pires, 150
+Corao Eucarstico
+17693-815 Rodrigues da Prata / MS'),
+('4621', '5', 'Feira de Ramos, 679
+Estoril
+76794-329 Cardoso do Norte / RJ'),
+('4622', '5', 'Estao de Teixeira, 324
+Piratininga
+78682-967 da Luz / CE'),
+('4623', '3', 'Loteamento de Porto, 831
+Graa
+97025028 Nascimento / AC'),
+('4624', '4', 'Feira Nathan Souza, 635
+Mariquinhas
+47749003 da Conceio do Norte / RO'),
+('4625', '1', 'Estao Pires, 8
+Vila So Gabriel Jacui
+59747-748 Duarte / AC'),
+('4626', '5', 'Vereda Giovanna Melo, 29
+Vila Madre Gertrudes 1 Seo
+24563-904 Cavalcanti / AL'),
+('4627', '2', 'Vereda de Oliveira, 52
+Centro
+01113448 Correia Alegre / ES'),
+('4628', '5', 'Ncleo Cavalcanti
+So Gonalo
+95302-564 Arago do Campo / SC'),
+('4629', '3', 'Fazenda de Jesus
+Cu Azul
+21532274 Moraes / AP'),
+('4630', '1', 'Estrada Barbosa, 987
+Apolonia
+59108-781 Souza / GO'),
+('4631', '2', 'Conjunto Brenda Cunha, 65
+Flavio Marques Lisboa
+56949821 Correia de Mendes / RN'),
+('4632', '3', 'Setor de da Costa, 35
+Conjunto Califrnia I
+74473120 Barros / RR'),
+('4633', '2', 'Fazenda Clara Rodrigues, 1
+Madri
+77450-582 Lopes / RR'),
+('4634', '5', 'Conjunto Lima, 73
+Vila Aeroporto Jaragu
+73527-657 Gonalves de Gois / DF'),
+('4635', '3', 'Favela de Porto, 64
+Cidade Jardim Taquaril
+46474942 Santos / AP'),
+('4636', '5', 'Lago Ian Cardoso, 2
+Vila Calafate
+29638026 Correia / AL'),
+('4637', '3', 'Loteamento Miguel Pereira
+Cachoeirinha
+20647610 Nogueira de Fernandes / MT'),
+('4638', '1', 'Condomnio Porto, 69
+Ferno Dias
+77130997 da Luz de Novaes / DF'),
+('4639', '3', 'Ptio Eloah Fogaa, 295
+Unio
+06708591 da Luz das Flores / SC'),
+('4640', '1', 'Largo Sophia da Rosa, 4
+Monte Azul
+94619-810 Cardoso de Gois / DF'),
+('4641', '4', 'Vereda Ribeiro, 16
+Flavio Marques Lisboa
+28220490 Cardoso das Pedras / SE'),
+('4642', '5', 'Campo Maria Ceclia Souza, 971
+Vila Piratininga
+48374-430 Gomes / MS'),
+('4643', '2', 'Colnia Levi Porto, 85
+Maria Tereza
+42550-307 Moreira do Amparo / SP'),
+('4644', '4', 'Vereda Freitas
+Suzana
+36474644 Fernandes de Ramos / RS'),
+('4645', '2', 'Rodovia Joaquim Dias, 99
+Vila Atila De Paiva
+35306-284 Silva / AL'),
+('4646', '5', 'Trecho Nathan Barros
+Acaiaca
+31506-003 Jesus / PI'),
+('4647', '4', 'Vereda de da Luz
+Vila Nova Cachoeirinha 2 Seo
+33390141 Nogueira / BA'),
+('4648', '2', 'Conjunto de Martins, 76
+Vila Esplanada
+55659-163 Dias do Campo / PR'),
+('4649', '3', 'Largo Carlos Eduardo Cunha, 2
+Santo Agostinho
+73281191 Rezende / AL'),
+('4650', '3', 'Trevo de Almeida, 947
+Ribeiro De Abreu
+16097-944 Rezende / CE'),
+('4651', '2', 'Rodovia Ribeiro, 16
+Pirineus
+71842-873 Fogaa / AL'),
+('4652', '2', 'Lago Sabrina Azevedo, 10
+Estoril
+03128903 Ramos do Sul / PI'),
+('4653', '4', 'Fazenda de Farias, 87
+So Sebastio
+10066037 da Paz / TO'),
+('4654', '2', 'Via Ana Beatriz Silveira, 88
+Pongelupe
+15903519 Monteiro da Mata / SP'),
+('4655', '4', 'Alameda de Caldeira
+Copacabana
+09929-743 Vieira do Galho / DF'),
+('4656', '3', 'Residencial Nascimento, 48
+Lindia
+09026079 Oliveira Grande / TO'),
+('4657', '3', 'Travessa de Moura
+Ermelinda
+32757673 da Cruz da Serra / MS'),
+('4658', '5', 'Aeroporto de da Mota, 766
+Boa Unio 1 Seo
+42511924 Ramos do Oeste / BA'),
+('4659', '3', 'Avenida Joo Felipe Fogaa
+Distrito Industrial Do Jatoba
+51797-241 Cardoso do Norte / RN'),
+('4660', '3', 'Estrada de Almeida, 33
+Vera Cruz
+89383-107 Silveira / BA'),
+('4661', '4', 'Vale Ana Sophia Sales, 1
+Lagoa
+43214-951 Vieira do Galho / RR'),
+('4662', '3', 'Alameda Lara Duarte, 50
+Serra
+23041799 Nascimento da Serra / CE'),
+('4663', '5', 'Conjunto Rocha, 18
+Nossa Senhora Aparecida
+00641-407 da Mata Alegre / MG'),
+('4664', '3', 'Parque de Viana, 58
+Tirol
+24679-157 Silva de Monteiro / PA'),
+('4665', '5', 'Alameda Maria Eduarda Gomes, 8
+Frei Leopoldo
+71735917 Novaes / RO'),
+('4666', '2', 'Esplanada da Mota, 21
+Maria Goretti
+63364-734 Campos dos Dourados / SP'),
+('4667', '1', 'Vale de Castro
+Nossa Senhora Aparecida
+19377-286 Dias de Oliveira / CE'),
+('4668', '1', 'Rodovia de Almeida, 21
+Mineiro
+76968-751 Ferreira / MT'),
+('4669', '3', 'Condomnio Joo Gabriel Ferreira
+Boa Vista
+82055455 Pereira / AP'),
+('4670', '3', 'Largo Isadora Azevedo, 57
+Tirol
+88405124 Moreira da Praia / MS'),
+('4671', '5', 'Chcara Martins, 50
+Itaipu
+94080353 Rezende da Mata / MT'),
+('4672', '3', 'Setor Carolina Farias, 60
+Planalto
+35786161 Farias / PB'),
+('4673', '4', 'Estrada de Nunes, 7
+Maria Virgnia
+87085357 Cavalcanti / SC'),
+('4674', '5', 'Via da Cunha, 178
+Grota
+34736243 Moraes / SE'),
+('4675', '1', 'Distrito Gabrielly Arajo, 18
+Leticia
+14608-248 Sales / SC'),
+('4676', '1', 'Campo Milena Barros, 3
+Horto
+49561-319 Alves / PB'),
+('4677', '5', 'Distrito de Duarte, 8
+Vila Petropolis
+27522888 Caldeira de Minas / AP'),
+('4678', '2', 'Chcara de Correia, 84
+Vila Jardim Alvorada
+78254-935 Moreira / AL'),
+('4679', '4', 'Aeroporto de Cardoso
+Granja De Freitas
+78545402 Souza / DF'),
+('4680', '2', 'Esplanada Souza, 63
+Vila Oeste
+38076425 Barros / AL'),
+('4681', '4', 'Viaduto de Teixeira, 36
+Piratininga
+19787297 Cardoso / TO'),
+('4682', '2', 'rea Valentina Monteiro, 191
+Pilar
+80521-996 Vieira / PE'),
+('4683', '2', 'Estrada de da Rocha
+Vila Boa Vista
+77992963 Barbosa / SP'),
+('4684', '5', 'Vereda Caio Ramos, 2
+Cdi Jatoba
+70685-621 Novaes de Minas / RN'),
+('4685', '1', 'Passarela Nicolas Correia, 5
+Lourdes
+88774-416 Ferreira / MS'),
+('4686', '3', 'Residencial de Cardoso, 924
+Pongelupe
+83634-214 Costa / CE'),
+('4687', '5', 'Alameda Moura
+Lorena
+97944608 Ramos do Oeste / DF'),
+('4688', '5', 'rea Nogueira, 85
+Xangri-L
+96093-344 da Paz dos Dourados / SC'),
+('4689', '1', 'Rua de Freitas, 32
+Rio Branco
+49895-717 Viana / AL'),
+('4690', '1', 'Viela Marcelo Dias, 44
+Teixeira Dias
+13132522 Campos / AC'),
+('4691', '5', 'Colnia da Cruz, 31
+Fazendinha
+10934-618 Gonalves da Serra / DF'),
+('4692', '5', 'Loteamento Gomes, 239
+Camponesa 2 Seo
+71792802 da Mota / BA'),
+('4693', '2', 'Avenida da Cruz, 71
+Pedreira Padro Lopes
+39706-561 da Mota / AC'),
+('4694', '2', 'Distrito de Vieira, 92
+Urca
+93235130 Moreira da Prata / BA'),
+('4695', '1', 'Distrito Ana Vitria Silva, 13
+So Vicente
+67947852 Jesus / PR'),
+('4696', '1', 'Chcara Isadora Nogueira, 95
+Vila So Joo Batista
+14271-085 Moreira / MG'),
+('4697', '4', 'Ncleo da Mota, 98
+Santana Do Cafezal
+52642654 Melo de da Conceio / SE'),
+('4698', '3', 'Vereda Joo Miguel Costa, 87
+Vila Esplanada
+67549961 da Mota do Campo / GO'),
+('4699', '4', 'Colnia da Cruz, 3
+Confisco
+93973-271 Farias do Norte / AP'),
+('4700', '2', 'Quadra Correia, 45
+Boa Esperana
+32570-373 Cavalcanti / MA'),
+('4701', '4', 'Morro Moraes, 62
+Tupi A
+91563356 Rodrigues do Amparo / RR'),
+('4702', '4', 'Vale de Almeida, 31
+Vila Da Luz
+25613000 Santos / MA'),
+('4703', '1', 'Alameda Cardoso, 15
+Horto Florestal
+02954992 Rocha de Fernandes / RJ'),
+('4704', '1', 'Praa Lima, 6
+Piraja
+30672646 da Rosa / PA'),
+('4705', '5', 'Stio de Gonalves, 2
+Palmeiras
+14481321 Peixoto / BA'),
+('4706', '3', 'Trecho de Rodrigues, 87
+Corao Eucarstico
+18961660 Moreira / CE'),
+('4707', '2', 'Quadra Rodrigues, 79
+Ventosa
+22321615 Castro de Ribeiro / SC'),
+('4708', '2', 'rea de Sales, 935
+Vale Do Jatoba
+19891-205 Nunes da Mata / ES'),
+('4709', '1', 'Praia Daniel Novaes, 99
+Vista Do Sol
+07733-722 Melo do Amparo / BA'),
+('4710', '4', 'Ladeira de Farias, 179
+Glria
+35117091 da Rocha do Galho / RR'),
+('4711', '1', 'Feira Maria Fernanda Fernandes, 57
+Sagrada Famlia
+22981050 Nogueira de Gois / BA'),
+('4712', '1', 'Ladeira de Silva, 1
+Concrdia
+12784-961 Arajo / SC'),
+('4713', '4', 'Quadra Ana Carolina Vieira, 15
+Vila Jardim Leblon
+85250359 Caldeira / PB'),
+('4714', '2', 'Passarela de Barbosa, 14
+Vila Calafate
+11341847 da Conceio do Sul / AC'),
+('4715', '4', 'Passarela de Rodrigues
+Miramar
+20649-700 da Cunha / RN'),
+('4716', '1', 'Viaduto Cunha, 16
+Santo Antnio
+93347165 Freitas / AM'),
+('4717', '4', 'Largo Anthony Freitas, 88
+Vila Califrnia
+51383020 Nogueira / RO'),
+('4718', '1', 'Viaduto Joo Felipe Ribeiro
+Ferno Dias
+08148-830 Nunes / BA'),
+('4719', '1', 'Lago Gonalves, 35
+Vila Jardim Montanhes
+54460885 Dias da Serra / RN'),
+('4720', '5', 'Vale Breno Campos, 29
+Carlos Prates
+46484297 Cardoso / ES'),
+('4721', '1', 'Lago Ana Lvia Martins, 67
+Lorena
+81802-299 Novaes / PB'),
+('4722', '4', 'Rua Henrique Moura, 37
+Liberdade
+60436-441 Arajo da Praia / MT'),
+('4723', '1', 'Lagoa Ana Luiza Rocha, 1
+Estrela Do Oriente
+44122852 Campos / RS'),
+('4724', '4', 'Rodovia Bryan Azevedo, 62
+Alto Caiaras
+05360013 Jesus / AM'),
+('4725', '4', 'Fazenda de Souza
+Esplanada
+53843545 Viana / BA'),
+('4726', '2', 'Passarela Ferreira, 935
+Vila Bandeirantes
+55992584 Duarte Paulista / PB'),
+('4727', '4', 'Morro Otvio Lima, 1
+Camponesa 2 Seo
+12150-498 da Mota Verde / AC'),
+('4728', '4', 'Via Natlia Correia, 75
+Caiaras
+56826-760 Fernandes / AM'),
+('4729', '4', 'Parque Freitas
+Petropolis
+21885933 Monteiro / GO'),
+('4730', '1', 'Alameda Jesus, 62
+Lourdes
+64793482 Lopes / TO'),
+('4731', '5', 'Praa Arajo, 3
+Vila Real 1 Seo
+89498-970 Azevedo da Praia / DF'),
+('4732', '3', 'Residencial de Pereira, 3
+Conjunto Taquaril
+31741-366 Teixeira Alegre / SC'),
+('4733', '5', 'Vereda de Jesus, 612
+Frei Leopoldo
+15399-371 Mendes / MS'),
+('4734', '1', 'Avenida Vicente Farias, 95
+Mangueiras
+22779295 Lima / PI'),
+('4735', '3', 'Praa de Ribeiro, 28
+Tupi A
+15273-186 Gonalves / PI'),
+('4736', '3', 'Estrada Maria Eduarda Costa, 30
+Atila De Paiva
+12625-959 Carvalho das Flores / RO'),
+('4737', '4', 'Stio da Cunha, 18
+Maria Tereza
+92227-299 Rocha / MT'),
+('4738', '4', 'Rodovia Davi Lucas Costela
+Marola
+02352-663 Viana da Mata / AC'),
+('4739', '3', 'Parque Martins, 323
+Santa Cruz
+95326-573 Novaes / RS'),
+('4740', '1', 'Via Maria Eduarda da Costa, 62
+Vila Rica
+39235-844 Vieira de Arago / RO'),
+('4741', '3', 'Morro de Silveira, 539
+Jardim Montanhs
+05431315 Correia / GO'),
+('4742', '1', 'Esplanada de Ramos
+Aguas Claras
+31902-862 Lima / ES'),
+('4743', '2', 'Ptio de Santos, 328
+Santa Ins
+06950-678 Jesus do Campo / TO'),
+('4744', '3', 'Colnia de Melo, 6
+Savassi
+22374848 Cardoso / CE'),
+('4745', '3', 'Rua Nascimento, 28
+Novo Tupi
+41962-025 Barbosa / MG'),
+('4746', '4', 'Feira Rodrigo Silva, 487
+Unio
+69865-059 Duarte de Gois / PR'),
+('4747', '4', 'Morro de da Paz, 55
+Conjunto Bonsucesso
+92351965 Fernandes / PI'),
+('4748', '4', 'Parque Ana Rocha, 56
+Vila Cemig
+93794-454 Nascimento / MS'),
+('4749', '3', 'Trecho Rezende, 63
+Ademar Maldonado
+60246-272 Silveira de da Cruz / AL'),
+('4750', '5', 'Jardim de da Luz, 85
+Universitrio
+92143-200 Dias do Campo / BA'),
+('4751', '3', 'Distrito Maria Jesus
+Santa Cecilia
+35711-567 Almeida / SC'),
+('4752', '5', 'Favela de Freitas, 47
+Vila Jardim Montanhes
+80677146 da Mota / SP'),
+('4753', '2', 'Feira Mait da Cunha
+Itapoa
+98235-051 Duarte da Prata / RN'),
+('4754', '1', 'Feira Rebeca Rodrigues
+Cinquentenrio
+19386-930 Teixeira do Galho / PB'),
+('4755', '2', 'Distrito Almeida
+Ademar Maldonado
+93964-705 Carvalho / SP'),
+('4756', '1', 'Trevo Caroline Fogaa, 13
+Beija Flor
+28472670 Cardoso / DF'),
+('4757', '5', 'Ladeira Caldeira, 78
+So Joo Batista
+16151763 da Costa / RS'),
+('4758', '3', 'Parque de Peixoto, 85
+Lajedo
+11779-527 Peixoto / BA'),
+('4759', '1', 'Trecho Luiz Gustavo da Cunha
+Funcionrios
+68162897 Monteiro / AP'),
+('4760', '3', 'Setor Correia
+Vila Piratininga
+27133-927 Correia / RS'),
+('4761', '5', 'Trevo Souza, 370
+Boa Vista
+80917187 Moura / AM'),
+('4762', '2', 'Estao de da Paz, 92
+Cinquentenrio
+28041023 Santos da Praia / RS'),
+('4763', '1', 'Lagoa Rocha, 67
+Vila Fumec
+00141207 Correia do Galho / MT'),
+('4764', '4', 'Recanto de da Conceio
+So Jorge 3 Seo
+05224575 Peixoto / PI'),
+('4765', '2', 'Ncleo Mendes, 73
+Lagoa
+63314-444 Jesus / RR'),
+('4766', '2', 'Ncleo Ana Julia Moreira, 2
+Vila So Dimas
+62462621 Ferreira / BA'),
+('4767', '4', 'Jardim Otvio Rodrigues, 31
+Sion
+87991396 Almeida / RJ'),
+('4768', '3', 'Parque Dias, 165
+Universo
+37348710 Farias Grande / MA'),
+('4769', '1', 'Colnia Alice Sales, 46
+Pantanal
+89655-555 Vieira / AC'),
+('4770', '2', 'Rodovia de Castro, 58
+Conjunto Lagoa
+49202028 Almeida Verde / PE'),
+('4771', '3', 'Aeroporto de Silva, 57
+Nova Sua
+38468-450 Moraes Alegre / RJ'),
+('4772', '1', 'Trevo Barbosa, 34
+Mangueiras
+07195-793 Almeida da Serra / DF'),
+('4773', '5', 'Vereda da Cruz, 810
+Canaa
+97146-239 Moraes / ES'),
+('4774', '5', 'Stio de da Cruz
+Vila So Paulo
+22694-115 Teixeira / PA'),
+('4775', '3', 'Feira Pires, 1
+Vila Ipiranga
+09816268 da Rosa do Amparo / SP'),
+('4776', '5', 'Lago Yasmin Rezende, 83
+Vila Nova Dos Milionarios
+37481-598 Mendes / MA'),
+('4777', '1', 'Trecho de Martins
+Vila Ipiranga
+53768516 Arago de Minas / BA'),
+('4778', '5', 'Viela da Paz, 98
+Santa Monica
+38859-733 da Cruz da Prata / RN'),
+('4779', '4', 'Quadra Cardoso, 7
+Vila Jardim So Jos
+84179095 Monteiro / AM'),
+('4780', '4', 'Travessa de Rezende, 7
+Vila Antena
+83473-701 Oliveira / RJ'),
+('4781', '4', 'Estrada da Cunha, 935
+Santa Tereza
+72404-317 Ramos / BA'),
+('4782', '5', 'Via de Nogueira, 61
+Cnego Pinheiro 2 Seo
+11812-952 Farias / MS'),
+('4783', '2', 'Fazenda Freitas
+Santa Cecilia
+70735-669 da Conceio / MT'),
+('4784', '2', 'Lagoa Fogaa, 30
+Vila Ipiranga
+63235-448 Arago da Mata / SP'),
+('4785', '1', 'Avenida Fogaa, 73
+Conjunto Califrnia Ii
+69386927 Sales / MS'),
+('4786', '2', 'Avenida de Porto, 33
+Betnia
+22819405 das Neves do Campo / AC'),
+('4787', '1', 'Ladeira Luiz Fernando Gomes
+Aeroporto
+46185-371 Azevedo / RR'),
+('4788', '3', 'Fazenda Catarina Lima, 383
+Cenaculo
+86708-389 Martins / BA'),
+('4789', '5', 'Chcara de da Conceio, 1
+Vila Tirol
+62453492 Arajo das Pedras / RN'),
+('4790', '5', 'Alameda da Rosa, 89
+Maravilha
+57678260 Azevedo / RJ'),
+('4791', '5', 'Ladeira Alves, 71
+Santa Isabel
+28073-103 Rodrigues / RN'),
+('4792', '1', 'Estao Cau Santos, 61
+Conjunto Celso Machado
+12156050 Gomes de da Cruz / MG'),
+('4793', '1', 'Chcara da Luz, 5
+Beira Linha
+49769475 Alves / ES'),
+('4794', '1', 'Favela de Moraes, 46
+Tnel De Ibirit
+80153-888 da Conceio / RR'),
+('4795', '5', 'Fazenda Alcia Ferreira, 737
+Vila De S
+86682-960 Vieira de Azevedo / RR'),
+('4796', '1', 'Favela de Peixoto, 73
+Santo Agostinho
+93763-426 Moraes de Gomes / RO'),
+('4797', '5', 'Lago Caldeira, 24
+Vitoria Da Conquista
+20329030 Caldeira / SC'),
+('4798', '5', 'Ladeira Moraes, 25
+Belvedere
+63628864 Cunha / GO'),
+('4799', '5', 'Favela Pinto
+Vila Unio
+37209729 Santos / DF'),
+('4800', '3', 'Avenida Elisa Silveira, 30
+Rio Branco
+26459564 Lopes das Flores / RJ'),
+('4801', '3', 'Favela de Barros, 33
+Aaro Reis
+00260-817 Campos / GO'),
+('4802', '2', 'Vila de Fernandes, 167
+Confisco
+74264550 Pereira do Norte / ES'),
+('4803', '2', 'Lagoa de Duarte, 45
+Califrnia
+39879354 Cavalcanti das Flores / PR'),
+('4804', '2', 'Largo Ramos, 85
+Santa Monica
+62336150 Silva / MA'),
+('4805', '2', 'Vila Porto, 686
+Das Industrias I
+78703852 Gonalves de Martins / AM'),
+('4806', '4', 'Morro Letcia Cavalcanti, 782
+Primeiro De Maio
+28758-286 Pires / PE'),
+('4807', '1', 'Vale de Caldeira, 5
+Vila Nova Cachoeirinha 2 Seo
+45750-032 Rezende / BA'),
+('4808', '2', 'Travessa Natlia Cunha, 7
+Vila Santo Antnio Barroquinha
+08185-270 Santos de Minas / DF'),
+('4809', '1', 'Trecho de Pires, 39
+Nova Cachoeirinha
+10849-406 Rocha Alegre / SP'),
+('4810', '2', 'Lagoa de Lima, 43
+Vila Do Pombal
+09823638 Moreira da Serra / TO'),
+('4811', '4', 'Trecho de Fogaa, 748
+Bacurau
+97725845 Jesus de Gois / PB'),
+('4812', '1', 'Ncleo Luiz Otvio Nascimento, 90
+Boa Unio 2 Seo
+54685492 Novaes do Campo / PI'),
+('4813', '5', 'Lago Lucca da Luz
+Vila Santo Antnio Barroquinha
+91867927 Silveira da Mata / RR'),
+('4814', '3', 'Residencial de da Rosa, 2
+Vila Primeiro De Maio
+18597635 Lima / SC'),
+('4815', '3', 'Largo Helena Arago, 99
+Floresta
+16242-422 Costela / BA'),
+('4816', '5', 'Condomnio de Dias, 11
+Concrdia
+08371629 Sales / DF'),
+('4817', '3', 'Passarela Maria Sophia Rezende, 838
+Bom Jesus
+60779661 Gonalves / GO'),
+('4818', '5', 'Stio de da Cunha, 4
+So Francisco
+10963681 Peixoto Alegre / TO'),
+('4819', '2', 'Ptio de da Luz, 6
+Bandeirantes
+33765633 Almeida Grande / PE'),
+('4820', '1', 'Setor Nascimento, 23
+Xangri-L
+12040283 Cardoso / TO'),
+('4821', '3', 'Praa Igor Rodrigues, 59
+Ipiranga
+65635-273 Santos / TO'),
+('4822', '3', 'Condomnio Nunes, 2
+Monte So Jos
+96824-768 Pinto de Nascimento / RO'),
+('4823', '1', 'Parque da Mata, 34
+Mirtes
+44771236 Campos / PR'),
+('4824', '1', 'Colnia de da Paz, 88
+Santa Amelia
+47512025 Arajo / RS'),
+('4825', '4', 'Favela de da Paz, 588
+Vila Santa Monica 2 Seo
+58869-720 Novaes do Galho / MG'),
+('4826', '2', 'Feira Barbosa, 440
+Frei Leopoldo
+86398-175 Sales / PE'),
+('4827', '2', 'Morro de da Luz, 90
+Parque So Jos
+60552-379 Duarte de Monteiro / AM'),
+('4828', '2', 'Vila da Cruz, 29
+Conjunto Celso Machado
+00099683 Cunha / MS'),
+('4829', '2', 'Avenida de da Conceio, 64
+Estrela Do Oriente
+90316411 Almeida / MA'),
+('4830', '5', 'Chcara Teixeira
+Jonas Veiga
+28515048 Azevedo Grande / SP'),
+('4831', '1', 'Conjunto Mendes, 76
+Nova Sua
+63725-700 Farias / RR'),
+('4832', '1', 'Rodovia Augusto Oliveira, 18
+Piratininga
+18163223 Pires / ES'),
+('4833', '5', 'Condomnio Cau Cardoso, 452
+Conjunto Celso Machado
+63090-221 Lima do Sul / AM'),
+('4834', '3', 'Praia de Pinto, 54
+Vila Petropolis
+46239-059 Nascimento da Mata / BA'),
+('4835', '1', 'Loteamento Lucas Gabriel Barros
+Gameleira
+44158-044 Rezende de Silveira / PE'),
+('4836', '2', 'Ncleo de Silveira, 54
+Independncia
+32425434 Ferreira / PB'),
+('4837', '4', 'Campo Teixeira, 59
+Vila Da Luz
+09293-761 Gomes / RO'),
+('4838', '3', 'Rua Gonalves, 60
+Vila Minaslandia
+75481-786 Silveira / PI'),
+('4839', '3', 'Viaduto Santos, 764
+Teixeira Dias
+97060554 Costa / GO'),
+('4840', '4', 'Chcara da Luz, 6
+Frei Leopoldo
+55097223 Gomes dos Dourados / MG'),
+('4841', '4', 'Conjunto Nascimento, 74
+Vera Cruz
+82896-819 Barbosa Paulista / RJ'),
+('4842', '5', 'Condomnio Camila Moraes
+Graja
+17526624 Azevedo / MG'),
+('4843', '1', 'Residencial Cunha, 90
+Vila Formosa
+30261520 Campos / PA'),
+('4844', '1', 'Praia Yago Silva, 419
+Tnel De Ibirit
+00639491 Costela / AP'),
+('4845', '2', 'Campo Ana Vitria Campos, 25
+Capito Eduardo
+93637501 Fernandes / AP'),
+('4846', '2', 'Recanto Manuela Nogueira, 98
+Olaria
+19033850 da Cruz / PR'),
+('4847', '1', 'Alameda de Cardoso, 75
+Cidade Jardim
+91461670 Fernandes de da Mata / TO'),
+('4848', '1', 'Ladeira de Gonalves, 4
+Jardim Vitoria
+84417634 Jesus do Campo / SC'),
+('4849', '2', 'Avenida Maria Clara Cardoso, 8
+Unio
+65074759 Cavalcanti / CE'),
+('4850', '4', 'Campo de Dias, 58
+Santa Ins
+67993-027 Vieira da Serra / SP'),
+('4851', '3', 'Campo Augusto Martins
+Belvedere
+70771613 Ferreira da Serra / AC'),
+('4852', '3', 'Fazenda de Azevedo, 79
+Jardim Montanhs
+21847-631 da Conceio / AL'),
+('4853', '2', 'Travessa Jesus, 26
+Conjunto Celso Machado
+67441443 Ribeiro / SP'),
+('4854', '5', 'Passarela Barros, 42
+Aparecida
+10159692 Novaes / SP'),
+('4855', '2', 'Estao Laura Rodrigues, 92
+Maraj
+47607-729 Gomes / BA'),
+('4856', '4', 'Parque Arajo, 4
+Santa Efignia
+14429083 Castro de Minas / RJ'),
+('4857', '2', 'Ptio Felipe Novaes, 49
+Santa Rita
+80142-935 Cardoso / ES'),
+('4858', '5', 'Colnia Noah Fernandes, 738
+Luxemburgo
+04635-360 Alves / PB'),
+('4859', '2', 'Estao de Almeida, 404
+Vila Nova Cachoeirinha 1 Seo
+49604477 Nascimento do Galho / MT'),
+('4860', '2', 'Travessa de Duarte, 82
+Vila Olhos 
+03464494 Fernandes / AM'),
+('4861', '3', 'Vereda Brbara Lopes, 36
+Vera Cruz
+57690-135 Melo / AM'),
+('4862', '2', 'Recanto de Ramos, 19
+Ferno Dias
+84369-533 Viana do Campo / MA'),
+('4863', '5', 'Recanto de Porto, 5
+Parque So Jos
+42600-947 Viana / AM'),
+('4864', '1', 'Morro da Mata, 958
+Cardoso
+93414-766 Pinto / SC'),
+('4865', '1', 'Via de Azevedo, 7
+Vila Oeste
+84258-345 Rodrigues da Praia / SP'),
+('4866', '5', 'Travessa de da Luz, 75
+Silveira
+12020187 Rezende de Gois / RJ'),
+('4867', '3', 'Quadra de Carvalho, 23
+Vista Alegre
+31801787 Arago / PE'),
+('4868', '1', 'Via Farias, 87
+Maravilha
+03579333 da Mota / MT'),
+('4869', '2', 'Vale da Cruz, 70
+Pilar
+77060-401 da Rocha / AM'),
+('4870', '1', 'Lagoa Davi Lucca da Paz, 7
+Planalto
+54668996 Fernandes / SP'),
+('4871', '3', 'Condomnio de Dias, 53
+Vila So Gabriel Jacui
+96201-803 Rodrigues do Sul / AP'),
+('4872', '3', 'Recanto Correia, 2
+Vila Inestan
+77844-834 Costa de Jesus / RN'),
+('4873', '3', 'Passarela Maria Alice Duarte, 8
+Tupi B
+14737-235 Campos das Flores / PB'),
+('4874', '4', 'Via Cardoso, 68
+Lajedo
+69737-973 das Neves / GO'),
+('4875', '1', 'Quadra Joana Azevedo, 696
+Custodinha
+56709-848 Nunes / RN'),
+('4876', '4', 'Viela Gabrielly da Conceio, 64
+Oeste
+36284730 Arajo de Gois / TO'),
+('4877', '5', 'Alameda Maria Luiza Farias, 347
+Jardim Alvorada
+16173804 da Rosa / MT'),
+('4878', '1', 'Passarela Correia, 37
+Mangueiras
+13372307 da Rosa de Minas / RR'),
+('4879', '3', 'Jardim Nascimento
+Funcionrios
+81234-414 Castro de Ramos / ES'),
+('4880', '1', 'Aeroporto de Nunes, 93
+Tnel De Ibirit
+16959446 Fogaa Grande / DF'),
+('4881', '2', 'Favela Felipe Monteiro, 279
+Bonsucesso
+79072-011 Fernandes dos Dourados / PB'),
+('4882', '2', 'Viela de Silveira, 5
+Vila Mangueiras
+75350-523 da Cunha / RJ'),
+('4883', '3', 'Trecho Isabelly Peixoto, 89
+Vila Rica
+46708831 Nunes / RR'),
+('4884', '3', 'Chcara de das Neves
+Candelaria
+10262279 Carvalho / PI'),
+('4885', '4', 'Ptio Fogaa, 55
+Xodo-Marize
+46147-111 Almeida / PA'),
+('4886', '3', 'Setor Marina Souza, 144
+Vila Sumar
+28967-893 Arago / ES'),
+('4887', '2', 'Colnia de Cavalcanti, 89
+Jardim Vitoria
+77725-652 Barbosa dos Dourados / AM'),
+('4888', '3', 'Viela Maria Sophia Arago, 34
+Vila Nova Dos Milionarios
+42717414 Carvalho / ES'),
+('4889', '3', 'Vale Enzo Nunes, 27
+Vila Nova Gameleira 2 Seo
+42766-278 Cardoso das Flores / MS'),
+('4890', '5', 'Setor Almeida, 15
+So Damio
+67564276 Martins / MG'),
+('4891', '4', 'Estao Carlos Eduardo Caldeira, 24
+Independncia
+93839214 Costa / SP'),
+('4892', '4', 'Conjunto Nicole da Cruz, 54
+Prado
+75236737 Costela / RR'),
+('4893', '3', 'Colnia de Alves, 3
+Jardim So Jos
+16151-114 Fernandes / ES'),
+('4894', '3', 'Distrito de Silveira
+Luxemburgo
+62935-293 Azevedo Verde / DF'),
+('4895', '3', 'Ncleo Yasmin Alves, 141
+Nova Granada
+92847182 Fernandes do Sul / SC'),
+('4896', '2', 'Stio de Lopes, 784
+Horto Florestal
+71985-318 Pinto / TO'),
+('4897', '2', 'Favela de Cardoso, 913
+Vila Do Pombal
+53761081 Caldeira / PI'),
+('4898', '5', 'Rua Cavalcanti, 9
+Alpes
+25803049 Melo de Gonalves / RS'),
+('4899', '4', 'Ptio de da Mota, 48
+Vila Independencia 1 Seo
+89828694 Arajo de Moraes / MG'),
+('4900', '2', 'Colnia Brenda Lopes
+Miramar
+68262422 Lima de Teixeira / SP'),
+('4901', '3', 'Vale de Souza, 26
+Vila Santa Rosa
+05173599 da Mota / DF'),
+('4902', '2', 'Stio Felipe Santos, 21
+Leticia
+26024772 Freitas / MT'),
+('4903', '1', 'Alameda de Correia, 88
+Vila Antena Montanhs
+98397148 Melo / DF'),
+('4904', '1', 'Largo Calebe Melo, 93
+Vila So Dimas
+86688030 da Cruz Alegre / RS'),
+('4905', '4', 'Travessa de Alves, 204
+Cnego Pinheiro 2 Seo
+40442-166 Ribeiro de Vieira / SC'),
+('4906', '5', 'Viaduto Joaquim Cardoso
+Alpes
+80029572 Mendes / PB'),
+('4907', '3', 'Ladeira Moreira, 95
+Vila Madre Gertrudes 3 Seo
+02011328 Oliveira / ES'),
+('4908', '5', 'Praia Brenda Alves, 33
+Paulo Vi
+57061662 Costa de Novaes / GO'),
+('4909', '1', 'Campo de Gonalves, 43
+Vila Independencia 2 Seo
+98225058 Rodrigues do Galho / MG'),
+('4910', '3', 'Via Sarah Almeida, 6
+So Joo
+05438173 Barros / TO'),
+('4911', '4', 'Trecho Alcia Fogaa, 46
+Liberdade
+87173-960 Freitas / MT'),
+('4912', '3', 'Morro Jesus, 37
+So Vicente
+20213-798 Rocha de Rezende / AC'),
+('4913', '5', 'Ptio Pedro Miguel da Mota
+Conjunto Taquaril
+72261399 Monteiro da Mata / PI'),
+('4914', '3', 'Feira de Fernandes, 84
+Vila Jardim Leblon
+76157132 da Cunha do Oeste / MA'),
+('4915', '5', 'Parque Moura, 20
+Santa Sofia
+97739049 Cardoso / SC'),
+('4916', '3', 'Quadra Melo, 129
+Vila Minaslandia
+40278-604 Azevedo / AC'),
+('4917', '5', 'Praa Pietra Dias, 65
+Corao De Jesus
+25869228 Jesus / DF'),
+('4918', '4', 'Chcara de Campos, 302
+Inconfidncia
+93630-531 Rocha / RO'),
+('4919', '2', 'Parque Maria Vitria da Conceio, 54
+Vila Nova Gameleira 1 Seo
+68237-428 Moreira de Silveira / MG'),
+('4920', '2', 'Conjunto da Cruz, 16
+Mirtes
+44519-196 Gomes / AC'),
+('4921', '4', 'Estao Lopes, 577
+Pantanal
+53241-082 Fernandes das Flores / RS'),
+('4922', '4', 'Vila Mariana Farias, 54
+Madri
+49970301 Vieira de Gois / SP'),
+('4923', '1', 'Setor Davi Luiz Campos
+Buraco Quente
+72336-420 Costela do Norte / PB'),
+('4924', '3', 'Residencial Elisa Novaes, 6
+Alpio De Melo
+10066-625 Alves / MG'),
+('4925', '5', 'Estao de Campos, 8
+Vila Santa Monica 1 Seo
+57248470 Costa / TO'),
+('4926', '1', 'Feira Maria Luiza Ribeiro, 3
+Vila Nova Dos Milionarios
+79681-308 Caldeira / PR'),
+('4927', '1', 'Travessa de Fernandes, 482
+Etelvina Carneiro
+42069-513 da Cruz dos Dourados / AM'),
+('4928', '5', 'Colnia de Silveira, 54
+Vila Do Pombal
+24475036 Arajo / CE'),
+('4929', '4', 'Chcara Porto, 9
+Santo Andr
+11902-783 Santos Verde / PA'),
+('4930', '5', 'Colnia Vitria Pires
+Pilar
+78458080 da Luz / BA'),
+('4931', '5', 'Rua de Monteiro, 38
+Flavio De Oliveira
+87787276 Porto de Freitas / AP'),
+('4932', '4', 'Ncleo de Viana, 36
+Floramar
+49817336 Dias do Campo / ES'),
+('4933', '1', 'Vila Arajo, 9
+Salgado Filho
+24427-450 Dias / RR'),
+('4934', '3', 'Stio de Castro
+Comiteco
+83872-033 Viana do Oeste / PE'),
+('4935', '3', 'Ladeira Fernandes
+Conjunto Novo Dom Bosco
+76817261 Ribeiro / RN'),
+('4936', '3', 'Vereda Emanuel Campos, 690
+Suzana
+48773577 Barbosa / CE'),
+('4937', '2', 'Ladeira Nunes, 578
+Vila Engenho Nogueira
+86239228 Vieira Verde / AC'),
+('4938', '4', 'Ladeira Levi Campos, 779
+Vila Santa Monica 1 Seo
+02201953 Silveira do Galho / PB'),
+('4939', '4', 'Largo Ana Laura da Mata, 63
+Vila Independencia 1 Seo
+19137-096 das Neves do Amparo / MT'),
+('4940', '1', 'Lagoa Martins, 70
+Novo Santa Cecilia
+41971-326 Dias / BA'),
+('4941', '4', 'Ncleo de Santos, 85
+Vila Paquet
+87790-846 Jesus de Gois / MS'),
+('4942', '1', 'Stio de Souza
+Sport Club
+75366592 Lima / PA'),
+('4943', '2', 'Quadra Larissa Campos, 713
+Independncia
+33183-407 Cardoso / PR'),
+('4944', '2', 'Distrito de Melo, 7
+Frei Leopoldo
+34273096 Costa de Caldeira / RS'),
+('4945', '3', 'Residencial Luiz Otvio da Rocha
+Vila Fumec
+60419661 da Luz da Praia / AC'),
+('4946', '5', 'Fazenda Pinto, 494
+Boa Vista
+50024969 Vieira da Praia / RR'),
+('4947', '4', 'Conjunto Vinicius da Rosa, 38
+So Luiz
+73824478 Porto de Moraes / PE'),
+('4948', '2', 'Passarela de Barbosa, 56
+Vila Pinho
+21160-376 Barros / RJ'),
+('4949', '5', 'Parque Pires, 4
+Jaragu
+27581391 Alves de Cardoso / DF'),
+('4950', '5', 'Praa de Peixoto, 441
+Buritis
+67518563 da Paz / RS'),
+('4951', '1', 'Lago Renan Correia, 18
+Milionario
+73568349 Rocha dos Dourados / RS'),
+('4952', '1', 'Esplanada Caldeira, 16
+Unio
+50571-473 Teixeira / AC'),
+('4953', '4', 'Distrito Theo Nunes, 25
+Nova Gameleira
+66042659 Costela / MS'),
+('4954', '3', 'rea Nunes, 71
+Santa Cecilia
+93300439 Azevedo de Moraes / GO'),
+('4955', '1', 'Stio de Rodrigues, 81
+Conjunto Paulo Vi
+39790555 Nogueira / MA'),
+('4956', '2', 'Avenida de Arago
+Joo Alfredo
+29728071 Ramos / MG'),
+('4957', '5', 'Vereda da Rocha
+Marieta 1 Seo
+35628487 Monteiro Alegre / PB'),
+('4958', '5', 'Vereda de Barros, 83
+So Damio
+38042200 Duarte / RR'),
+('4959', '2', 'Praia da Cruz, 683
+Conjunto Paulo Vi
+54412639 da Mata do Sul / SP'),
+('4960', '5', 'Ptio de Moura, 802
+Dom Joaquim
+26508702 Barros / BA'),
+('4961', '1', 'Favela Igor Castro
+Conjunto Santa Maria
+74545-993 Lima do Galho / TO'),
+('4962', '4', 'Passarela Luiz Henrique da Conceio, 1
+Alta Tenso 1 Seo
+40309570 Santos / BA'),
+('4963', '4', 'Loteamento de da Rocha, 56
+Providencia
+55014709 da Paz / AM'),
+('4964', '5', 'Campo Milena Almeida, 586
+Conjunto Celso Machado
+12238930 Sales da Mata / MS'),
+('4965', '1', 'Recanto de Viana
+Carlos Prates
+81314-551 Caldeira / PR'),
+('4966', '3', 'Passarela Ian Peixoto, 69
+Maria Tereza
+13148431 Novaes / PB'),
+('4967', '4', 'Fazenda Cunha, 40
+Boa Esperana
+88548-408 Correia / RR'),
+('4968', '2', 'Fazenda Arago, 31
+Solar Do Barreiro
+86428-436 Alves de Caldeira / ES'),
+('4969', '3', 'Conjunto Sarah Rodrigues, 914
+Cardoso
+24545-949 Gonalves / PI'),
+('4970', '4', 'Recanto Breno Moraes, 937
+Gameleira
+96035-922 Cardoso Verde / RJ'),
+('4971', '5', 'Rua Gabriela Jesus, 544
+Alto Barroca
+10750-212 Silva / SP'),
+('4972', '4', 'Stio Melo, 66
+Santa Rita De Cssia
+10758-432 Campos de Gois / ES'),
+('4973', '3', 'Largo de Costa, 22
+Esplanada
+57967-552 Cunha do Galho / AC'),
+('4974', '5', 'Estao Rafael Cardoso, 39
+Pindorama
+39038-721 Rodrigues / AM'),
+('4975', '2', 'Vale de Pinto, 6
+Alta Tenso 2 Seo
+93327021 Barros das Pedras / AP'),
+('4976', '3', 'Campo das Neves
+So Luiz
+72517-285 Souza / RN'),
+('4977', '1', 'Alameda Ana Laura Silva, 95
+Funcionrios
+58888-976 Nascimento / AL'),
+('4978', '3', 'Largo Pires
+Santa Isabel
+11615904 Duarte / RN'),
+('4979', '1', 'Trecho Carlos Eduardo Silva, 8
+Vila Madre Gertrudes 3 Seo
+34738-154 Arago do Oeste / RO'),
+('4980', '5', 'Jardim Cavalcanti, 9
+Barro Preto
+13987-489 da Conceio / AC'),
+('4981', '2', 'Viela Barros, 91
+Vila Das Oliveiras
+10849947 Silveira / PI'),
+('4982', '1', 'Viela Maria Fernanda Pinto, 24
+Chcara Leonina
+53925324 Ferreira do Galho / MT'),
+('4983', '1', 'Setor Marina Costa, 112
+Alto Dos Pinheiros
+48522601 Dias do Campo / MG'),
+('4984', '5', 'Setor de Ferreira
+Nossa Senhora Da Conceio
+44601-164 Gonalves do Sul / RN'),
+('4985', '2', 'Quadra de Cavalcanti, 49
+Casa Branca
+46383992 Mendes Alegre / CE'),
+('4986', '2', 'Lagoa Ana Julia Souza, 7
+Tres Marias
+38325902 Rodrigues / MA'),
+('4987', '1', 'Avenida de das Neves, 1
+Santa Amelia
+37559751 Santos dos Dourados / MS'),
+('4988', '3', 'Recanto Silveira, 53
+Joo Alfredo
+01225515 Barbosa / PA'),
+('4989', '2', 'Aeroporto Cau Jesus, 68
+Calafate
+32959931 Pereira da Prata / BA'),
+('4990', '3', 'Via Silveira, 16
+Taquaril
+46765-402 Rodrigues / AL'),
+('4991', '4', 'Parque de Rodrigues, 18
+Maria Virgnia
+49276545 da Rosa de Cardoso / SC'),
+('4992', '5', 'Aeroporto Ferreira, 86
+Cachoeirinha
+87490734 Peixoto / AM'),
+('4993', '1', 'Distrito Pires, 676
+Palmeiras
+19364-830 Souza / SE'),
+('4994', '3', 'Quadra de Correia, 330
+Vila Canto Do Sabi
+61775437 Caldeira Grande / AC'),
+('4995', '3', 'Viela Caio Castro, 45
+Vila Santa Monica 1 Seo
+97262717 Rodrigues do Galho / RJ'),
+('4996', '4', 'Colnia de Ribeiro
+Inconfidncia
+73053153 Rodrigues dos Dourados / RR'),
+('4997', '2', 'Colnia de Rodrigues, 174
+Vila Olhos 
+41657-924 da Cruz Paulista / RR'),
+('4998', '2', 'Rodovia de Correia, 73
+Vila Ecolgica
+54195-526 Nogueira / AL'),
+('4999', '3', 'Distrito Oliveira
+Flamengo
+15913-335 Costela / PE'),
+('5000', '3', 'Aeroporto Joo Felipe da Conceio
+So Joo Batista
+64175-576 da Luz do Oeste / AL'),
+('5001', '2', 'Trevo de Castro, 37
+Estrela
+14622-666 Alves / RN'),
+('5002', '4', 'Travessa de Arajo, 90
+Vila Unio
+46118437 Nogueira / RS'),
+('5003', '4', 'Distrito Joo Moura, 25
+Gutierrez
+83143-156 Silva Alegre / SE'),
+('5004', '2', 'Jardim Kamilly Santos, 61
+Manacas
+87391458 Castro / AL'),
+('5005', '5', 'Jardim de Correia, 31
+Vila Barragem Santa Lcia
+54444-039 Rezende / BA'),
+('5006', '2', 'Alameda Luna da Conceio, 27
+Caiara - Adelaide
+62228394 Rodrigues / PI'),
+('5007', '1', 'Jardim de Sales, 3
+Santa Cruz
+16313-200 Moura / RN'),
+('5008', '3', 'Trecho de Novaes, 5
+Beira Linha
+43516-048 Gomes Verde / ES'),
+('5009', '1', 'Ncleo de Melo, 7
+Unidas
+52716-549 Ribeiro das Pedras / PE'),
+('5010', '1', 'Campo de Freitas, 39
+Boa Viagem
+71553890 da Rosa / PI'),
+('5011', '1', 'Jardim Fernando Alves, 3
+Indai
+69284-490 Viana / ES'),
+('5012', '2', 'Favela Melo, 39
+Vila Nova Cachoeirinha 3 Seo
+70116-935 da Costa do Oeste / AM'),
+('5013', '4', 'Distrito de da Rocha, 12
+Mangabeiras
+18053032 da Cunha da Prata / RS'),
+('5014', '3', 'Conjunto de da Costa
+Vila Aeroporto Jaragu
+57464444 Silva de Oliveira / AL'),
+('5015', '3', 'Residencial Vinicius Alves, 11
+Estrela Do Oriente
+26630-489 Lima Verde / SC'),
+('5016', '2', 'Campo Duarte, 2
+So Marcos
+47959-433 Cardoso do Sul / PA'),
+('5017', '3', 'Conjunto Barbosa
+Miramar
+31688-183 Freitas de Rocha / RR'),
+('5018', '1', 'Lagoa de Souza, 41
+Vila Bandeirantes
+21307045 Monteiro / SE'),
+('5019', '5', 'Vereda Luigi da Rocha, 16
+Bela Vitoria
+90835879 das Neves do Amparo / AC'),
+('5020', '3', 'Largo de Costela, 9
+Santa Amelia
+12193-622 Castro / AL'),
+('5021', '2', 'Chcara de Souza, 1
+Maravilha
+23551331 Costela de Novaes / DF'),
+('5022', '4', 'Quadra Monteiro, 89
+Concrdia
+38395406 Novaes / RN'),
+('5023', '5', 'Travessa Moraes, 47
+Bela Vitoria
+40833-261 Arajo / PR'),
+('5024', '4', 'Fazenda Joo Miguel Silveira
+Vera Cruz
+59913994 Gonalves de Mendes / RO'),
+('5025', '1', 'Estrada Ferreira, 404
+Juliana
+72213-518 Gonalves da Prata / AP'),
+('5026', '1', 'Aeroporto de Teixeira, 70
+Mala E Cuia
+69857872 Souza do Sul / AC'),
+('5027', '3', 'Estao Costa, 890
+Vila Piratininga Venda Nova
+74321-649 Peixoto / SE'),
+('5028', '4', 'Fazenda Joo Felipe Jesus, 88
+Santa Tereza
+48445-286 Moreira / DF'),
+('5029', '5', 'Conjunto Theo da Mota, 25
+Marieta 2 Seo
+64490281 Gonalves / CE'),
+('5030', '5', 'Viela Helosa da Rocha, 47
+Lourdes
+57900412 Cunha das Pedras / SE'),
+('5031', '2', 'Fazenda Fernando Silveira, 22
+Guarat
+84974-610 Barros / PB'),
+('5032', '4', 'Trevo da Mata
+So Joo Batista
+78021-029 da Luz / DF'),
+('5033', '3', 'Recanto Viana, 190
+Conjunto Serra Verde
+48832-222 Silva / CE'),
+('5034', '4', 'Trevo da Luz
+Vila Nossa Senhora Do Rosrio
+16915836 Arago Verde / GO'),
+('5035', '2', 'Trecho Luiz Otvio Ferreira, 18
+Saudade
+78948205 Barbosa / BA'),
+('5036', '3', 'Vereda Luigi Jesus, 860
+Madre Gertrudes
+42321753 Lima / PA'),
+('5037', '1', 'Chcara Cardoso, 2
+Serra Do Curral
+98632641 Nunes de Farias / RO'),
+('5038', '2', 'Parque de da Costa, 2
+Pindura Saia
+00665708 Martins de Costa / ES'),
+('5039', '5', 'Fazenda de Souza, 48
+Cenaculo
+84951-662 Peixoto do Campo / TO'),
+('5040', '5', 'Ladeira de Mendes, 32
+Confisco
+36005-910 Nascimento / CE'),
+('5041', '1', 'Vila de Carvalho, 340
+Conjunto Capito Eduardo
+57244-310 Cardoso / PE'),
+('5042', '2', 'Vale de Cardoso, 89
+Boa Viagem
+74613379 Cardoso / MG'),
+('5043', '1', 'Residencial de Rodrigues, 18
+Mangueiras
+06108-473 Barbosa de Dias / RS'),
+('5044', '1', 'Ladeira Daniel Dias, 4
+Vila Mangueiras
+41779969 Fogaa do Oeste / BA'),
+('5045', '3', 'Distrito Fernandes, 701
+lvaro Camargos
+93868-468 Ramos / AC'),
+('5046', '5', 'Viaduto de da Conceio
+Vitoria
+71443-057 Cardoso / MA'),
+('5047', '2', 'Ladeira Elisa Melo, 62
+Horto Florestal
+10350-129 Farias do Oeste / SE'),
+('5048', '5', 'Praa Dias, 733
+Novo Aaro Reis
+68771-801 da Luz do Campo / RN'),
+('5049', '4', 'Esplanada Manuela Moraes, 8
+Santa Lcia
+68562-881 Jesus de da Costa / TO'),
+('5050', '1', 'Lago Davi Lucas da Cunha, 68
+Alto Das Antenas
+89314-445 Dias Verde / MG'),
+('5051', '2', 'Rodovia de Novaes, 922
+Ribeiro De Abreu
+14643374 Rodrigues de Duarte / GO'),
+('5052', '4', 'Viela Juliana da Conceio, 47
+Lindia
+06316-222 Santos / RO'),
+('5053', '4', 'Aeroporto Joaquim Fernandes, 785
+Tupi A
+57753871 Gomes / PR'),
+('5054', '4', 'Setor Costela, 98
+Floresta
+07283-772 da Mata / MT'),
+('5055', '3', 'Condomnio de Carvalho, 426
+Vila Santa Monica 1 Seo
+07552-317 Pinto / PA'),
+('5056', '5', 'Estao de Fogaa, 31
+Vila Rica
+21252-197 Cardoso / PA'),
+('5057', '2', 'Viaduto Thomas Barros
+Vila Suzana Segunda Seo
+60976-131 Peixoto / MA'),
+('5058', '2', 'Conjunto Calebe Rodrigues, 85
+Estrela
+02303-374 Silva das Pedras / SC'),
+('5059', '4', 'Fazenda de Teixeira, 9
+Baro Homem De Melo 3 Seo
+85450148 Nunes da Praia / PI'),
+('5060', '4', 'Praia Daniel Ramos, 75
+Santa Rita
+84285-766 Farias Alegre / SP'),
+('5061', '5', 'Viela Fogaa
+Garas
+85503400 Nogueira das Flores / PE'),
+('5062', '2', 'Praia Caroline Dias, 73
+Novo Santa Cecilia
+39871-964 das Neves / AP'),
+('5063', '5', 'Vale de Cardoso, 86
+Alto Das Antenas
+06989521 Cavalcanti do Sul / RN'),
+('5064', '5', 'Vereda Eloah Novaes, 76
+Mariano De Abreu
+11424-365 Costela / BA'),
+('5065', '2', 'Lago Souza, 9
+Buritis
+07943076 Barros do Galho / BA'),
+('5066', '1', 'Campo Viana, 679
+Novo Das Industrias
+22142475 Pires de Minas / AM'),
+('5067', '2', 'Estrada Kevin Oliveira
+Vila Califrnia
+23672161 Pereira Alegre / GO'),
+('5068', '1', 'Rua Jesus, 48
+Ribeiro De Abreu
+94632-531 Silveira Verde / AP'),
+('5069', '1', 'Rodovia de Melo, 269
+Vila Da Paz
+66861-386 da Rocha da Serra / PI'),
+('5070', '4', 'Ladeira Alcia Monteiro, 7
+Jatob
+90937-854 Costa / AL'),
+('5071', '1', 'Viela Maria Clara Lima, 75
+Vila Unio
+68010217 Porto de Pinto / DF'),
+('5072', '5', 'Estao Lopes, 9
+Rio Branco
+34873-596 Pinto do Norte / RR'),
+('5073', '2', 'Estrada Isabel Pereira
+Castelo
+75587459 Arajo do Amparo / RN'),
+('5074', '1', 'Condomnio Costa, 47
+Santa Terezinha
+34949340 Silva / SE'),
+('5075', '4', 'Via Nunes, 73
+Rio Branco
+14470-894 Rezende / TO'),
+('5076', '1', 'Feira Mait Viana
+Serra Verde
+49684-880 Ribeiro / PI'),
+('5077', '2', 'Via Farias, 1
+Pongelupe
+12269-723 Vieira / TO'),
+('5078', '1', 'Stio Teixeira, 6
+Conjunto Minas Caixa
+79885-398 Jesus do Oeste / SC'),
+('5079', '4', 'Vale de Nunes, 829
+Tirol
+54319735 da Costa do Campo / GO'),
+('5080', '2', 'Largo Maria Ceclia Peixoto, 73
+Carmo
+38685-223 Rocha / CE'),
+('5081', '3', 'Estao Pietra Gomes, 95
+Madri
+71578-770 Nunes / SC'),
+('5082', '4', 'Largo Nogueira, 87
+Garas
+14967-210 Carvalho da Mata / PA'),
+('5083', '2', 'Largo Peixoto
+Marilandia
+30112-730 Cardoso do Oeste / MT'),
+('5084', '3', 'Stio Alice Moura, 78
+Vila Coqueiral
+22156-659 Rezende / RO'),
+('5085', '1', 'Rua Pereira, 3
+Padre Eustquio
+34506880 da Luz / RO'),
+('5086', '1', 'Quadra de Peixoto, 151
+Vila So Geraldo
+50851-841 Ramos de da Rosa / MT'),
+('5087', '5', 'Via Carvalho, 6
+Vila Minaslandia
+19165-898 Nascimento de Campos / RN'),
+('5088', '5', 'Campo Alice Freitas, 22
+Santa Efignia
+42296398 Cardoso de Carvalho / SC'),
+('5089', '4', 'Largo da Rosa, 95
+Joo Paulo Ii
+90941-333 Souza / MS'),
+('5090', '5', 'Setor Enzo Gabriel Azevedo, 57
+Jardim Atlntico
+96984369 Santos do Sul / AL'),
+('5091', '5', 'Vereda Maria Vitria Teixeira, 14
+Dom Joaquim
+68695-027 da Cruz / SP'),
+('5092', '1', 'Vereda Diogo da Luz, 790
+Santa Lcia
+90715-546 Gonalves do Amparo / PE'),
+('5093', '1', 'Jardim de Correia, 8
+So Vicente
+97103-695 Alves da Serra / PR'),
+('5094', '5', 'Colnia da Costa, 526
+Minas Brasil
+80039754 Ribeiro de da Cruz / AL'),
+('5095', '2', 'Colnia de Melo, 634
+Parque So Pedro
+72844085 Almeida de Gois / SP'),
+('5096', '4', 'Fazenda Ana Carolina Arago, 1
+Ipe
+97092317 Costa / PB'),
+('5097', '4', 'Rodovia Thiago Souza, 9
+Alta Tenso 1 Seo
+21774652 Fogaa / AM'),
+('5098', '1', 'Aeroporto Barbosa, 27
+Maria Virgnia
+66648822 da Cruz / MA'),
+('5099', '5', 'Avenida Ferreira, 71
+Vale Do Jatoba
+80776321 da Paz de Gomes / AC'),
+('5100', '3', 'Praia Ana Vitria Fogaa, 943
+Jardim Guanabara
+76962768 Rezende / PA'),
+('5101', '3', 'Ladeira Maria Luiza da Cruz, 43
+Maria Helena
+48467079 Cardoso / MT'),
+('5102', '4', 'Rodovia Kaique Oliveira, 7
+Camponesa 2 Seo
+44391076 da Rocha de Moraes / MG'),
+('5103', '3', 'Trecho Maria Clara Moreira, 852
+Capito Eduardo
+17408881 da Paz das Flores / MS'),
+('5104', '3', 'Ncleo Sophie Silveira, 7
+Alpio De Melo
+90412773 da Mata do Sul / RO'),
+('5105', '3', 'Rodovia Leonardo da Conceio
+Baro Homem De Melo 1 Seo
+78747228 Silveira Grande / TO'),
+('5106', '2', 'Praa de Azevedo, 15
+Lagoinha
+58932-126 Moraes / SC'),
+('5107', '1', 'Praa de Almeida, 122
+Alto Das Antenas
+21626277 da Cruz do Oeste / MA'),
+('5108', '3', 'Vale da Luz, 77
+Nossa Senhora Da Conceio
+62443-760 Souza da Mata / MG'),
+('5109', '1', 'Residencial de Campos, 17
+Suzana
+33188476 Nascimento / GO'),
+('5110', '4', 'Feira de da Rosa, 758
+Minaslandia
+27060131 Azevedo das Pedras / GO'),
+('5111', '2', 'Conjunto Joaquim Porto, 6
+Marmiteiros
+58375-137 Cardoso / PR'),
+('5112', '2', 'Viaduto Moraes, 9
+Nova Pampulha
+61944916 Azevedo de Ferreira / SP'),
+('5113', '1', 'Estao Eduardo da Mata, 19
+Floresta
+41438-391 Moraes / RJ'),
+('5114', '3', 'Setor Diogo Arago, 4
+Vila Satlite
+90661-228 Pinto da Serra / PB'),
+('5115', '5', 'Via Souza, 9
+Vila Paquet
+49591-617 Dias / PB'),
+('5116', '1', 'Stio Barros, 4
+Vila Formosa
+45284-106 Cardoso / PI'),
+('5117', '4', 'Favela de Pinto, 28
+Belmonte
+82263372 Lima Alegre / PI'),
+('5118', '5', 'Esplanada de Costela, 4
+Vila Paquet
+36961-913 Pereira do Galho / PA'),
+('5119', '1', 'Ptio Natlia Moreira, 8
+Graja
+29755-610 Melo do Amparo / RR'),
+('5120', '5', 'rea de Barros, 2
+Santo Agostinho
+51332965 Silva / AL'),
+('5121', '1', 'Morro Freitas, 41
+Cabana Do Pai Toms
+02479-865 Cavalcanti / PI'),
+('5122', '4', 'Condomnio de Ferreira
+Santa Tereza
+56485939 da Conceio / AL'),
+('5123', '1', 'Colnia Ana Vitria da Paz, 58
+Bela Vitoria
+27964810 Pereira / AL'),
+('5124', '4', 'Parque de Azevedo, 49
+Vila Barragem Santa Lcia
+56039554 Farias das Flores / TO'),
+('5125', '2', 'Fazenda de da Costa
+Floresta
+31391-150 Ferreira / RO'),
+('5126', '4', 'Estao Mait Nascimento, 59
+Baro Homem De Melo 2 Seo
+62957-997 da Cunha do Oeste / ES'),
+('5127', '2', 'Viaduto de da Costa, 50
+Vila Independencia 2 Seo
+35259131 Carvalho de Moura / ES'),
+('5128', '3', 'Rua de Rocha, 1
+Nova Pampulha
+18057-099 da Cunha / MG'),
+('5129', '3', 'Largo de Fogaa, 1
+Tupi A
+55307946 Gonalves da Mata / AM'),
+('5130', '5', 'Ncleo de Peixoto, 8
+So Joo
+60296-308 Silveira / PA'),
+('5131', '5', 'Colnia Luana Rezende, 68
+Vila Paraso
+82768-612 da Rosa / DF'),
+('5132', '5', 'Rua de Silveira, 35
+Vila De S
+96437-081 da Rosa de Duarte / PA'),
+('5133', '4', 'Passarela Nunes, 18
+Baro Homem De Melo 1 Seo
+95325-649 Pires da Praia / AL'),
+('5134', '4', 'Estao Mirella Teixeira, 80
+Bom Jesus
+98435316 Melo / RS'),
+('5135', '3', 'Alameda Vieira, 8
+Cidade Nova
+18794282 Silva do Sul / RO'),
+('5136', '1', 'Praia Peixoto
+Bacurau
+51691-746 Rezende da Praia / AL'),
+('5137', '1', 'Esplanada Gomes, 28
+Nossa Senhora Do Rosrio
+97812-144 Rodrigues / AL'),
+('5138', '2', 'Esplanada Moraes, 297
+Conjunto Lagoa
+50210-184 Farias de Azevedo / RS'),
+('5139', '1', 'Aeroporto Campos, 65
+Minas Caixa
+67955284 Pinto da Prata / SC'),
+('5140', '2', 'Distrito Leandro Caldeira, 92
+Bom Jesus
+82431-258 Rezende da Mata / MS'),
+('5141', '4', 'Quadra Rodrigues, 80
+Lagoinha Leblon
+52673-771 Costela / AL'),
+('5142', '3', 'Stio Ferreira, 2
+Saudade
+54684700 Almeida / BA'),
+('5143', '4', 'Chcara Viana
+Itaipu
+25630-354 Viana Alegre / AP'),
+('5144', '2', 'Loteamento Lopes, 4
+Ribeiro De Abreu
+52442692 Campos / PE'),
+('5145', '2', 'Chcara Amanda Rodrigues
+Nossa Senhora Do Rosrio
+79201-533 Pires / AC'),
+('5146', '2', 'Praa de Fernandes, 3
+Vila Ecolgica
+01405-145 Mendes / PA'),
+('5147', '5', 'Trevo Laura Vieira, 643
+Vila Antena
+12291-798 Lopes / PE'),
+('5148', '3', 'Praia Evelyn Moura, 9
+Vila Santo Antnio
+64778-169 Mendes / MT'),
+('5149', '1', 'Setor de Correia, 697
+Coqueiros
+17081-152 Porto de Cavalcanti / ES'),
+('5150', '2', 'Recanto Leandro Silveira
+Monte Azul
+52993395 Dias de Farias / ES'),
+('5151', '1', 'Via Porto, 71
+Bom Jesus
+42533-313 da Luz de das Neves / PA'),
+('5152', '3', 'Recanto da Conceio, 729
+Vila Da Paz
+83320466 Fernandes do Sul / SP'),
+('5153', '1', 'Ladeira de Sales, 54
+Vila Nova Cachoeirinha 1 Seo
+66215-037 Santos / RR'),
+('5154', '5', 'Ladeira Agatha Moreira, 71
+Minaslandia
+65808-357 Freitas / AM'),
+('5155', '5', 'Avenida de Porto, 7
+Ipe
+58626-011 Rezende do Sul / PB'),
+('5156', '4', 'Ladeira Sabrina Castro, 169
+Vila Nova Gameleira 1 Seo
+96722-194 Nascimento de Nogueira / AL'),
+('5157', '2', 'Travessa Ana Julia Pinto, 84
+So Paulo
+56582-325 Alves / SC'),
+('5158', '1', 'Vereda Stephany Nascimento, 40
+Bom Jesus
+12865-065 da Paz de Nogueira / ES'),
+('5159', '5', 'Vereda de Silveira
+Satelite
+02618905 Vieira de Minas / SE'),
+('5160', '3', 'Praia de Monteiro, 865
+Chcara Leonina
+70881125 Dias / RR'),
+('5161', '3', 'Vereda de Ramos, 6
+Vila Cloris
+10839937 Sales Alegre / TO'),
+('5162', '2', 'Largo Cardoso
+Baleia
+52968-991 Vieira / PI'),
+('5163', '2', 'Vereda Valentina Melo, 357
+Cnego Pinheiro 1 Seo
+39342-817 Fernandes da Mata / SE'),
+('5164', '3', 'Estao de Moura, 9
+Santo Antnio
+88160-268 Azevedo Grande / GO'),
+('5165', '3', 'Loteamento Campos, 3
+Vila Esplanada
+28113834 Farias / AL'),
+('5166', '2', 'Rua Rocha, 600
+Corao Eucarstico
+38465038 Pinto / MT'),
+('5167', '3', 'Lago Gonalves, 6
+Rio Branco
+53047795 Campos da Praia / RR'),
+('5168', '2', 'Condomnio Lopes, 932
+Milionario
+60823-420 Caldeira do Galho / RN'),
+('5169', '2', 'Viela Isaac Monteiro, 70
+Hava
+01058-996 da Costa das Pedras / GO'),
+('5170', '4', 'Rua Rafael Carvalho, 97
+So Jorge 3 Seo
+55986230 Moraes de Gois / DF'),
+('5171', '4', 'Recanto de Ribeiro, 68
+Gameleira
+85153-684 Oliveira / CE'),
+('5172', '1', 'Quadra de Pinto, 7
+Vila Minaslandia
+64294951 Nogueira / SC'),
+('5173', '3', 'Praa Santos, 94
+Santa Isabel
+83481-541 Lima de Porto / PE'),
+('5174', '3', 'Vila de Melo, 6
+Petropolis
+72402383 Oliveira da Prata / ES'),
+('5175', '5', 'Aeroporto Freitas, 9
+Aguas Claras
+33082281 Pires da Mata / DF'),
+('5176', '2', 'Travessa Martins, 2
+Vila Antena
+30333391 Pinto / AC'),
+('5177', '2', 'Lago de Ramos, 62
+Santa Branca
+91391-940 Martins / RS'),
+('5178', '4', 'Rua de da Costa, 82
+Cachoeirinha
+95169181 Souza / GO'),
+('5179', '2', 'Viaduto Mendes, 539
+Garas
+55914-985 da Mota de Azevedo / GO'),
+('5180', '3', 'Trevo Cardoso, 7
+Delta
+38841-067 Mendes / MS'),
+('5181', '2', 'Rua Bruna Novaes, 64
+Vila Puc
+23690-194 Cardoso do Oeste / SP'),
+('5182', '4', 'Recanto Porto, 17
+Padre Eustquio
+16806-558 Nogueira da Praia / AP'),
+('5183', '5', 'Parque de Freitas
+Vila Nova Paraso
+00487-963 da Costa Grande / MS'),
+('5184', '1', 'Trevo da Costa, 8
+Serra
+62121-698 Dias / ES'),
+('5185', '2', 'Feira Luiza Castro, 3
+Vila So Joo Batista
+15586-124 da Cruz / PB'),
+('5186', '3', 'rea Stella Nogueira, 96
+Nazare
+39119144 Almeida / PR'),
+('5187', '2', 'Chcara da Costa, 72
+Brasil Industrial
+63770788 da Costa / MA'),
+('5188', '5', 'Quadra Pedro Miguel Souza, 78
+So Gabriel
+32018424 Ferreira / RS'),
+('5189', '4', 'Estao Ana Luiza Ribeiro, 44
+Nossa Senhora Aparecida
+76812922 Pires / RO'),
+('5190', '3', 'Loteamento de Cavalcanti, 462
+So Lucas
+48994249 Monteiro / AL'),
+('5191', '4', 'Distrito Arago
+Vila Barragem Santa Lcia
+81597829 Novaes Grande / PR'),
+('5192', '4', 'Aeroporto de das Neves, 20
+Nova Esperana
+63952208 Caldeira do Campo / RO'),
+('5193', '3', 'Praia de Barros, 1
+Cachoeirinha
+00090-121 Moura de Gois / MG'),
+('5194', '4', 'Praia Clarice Moreira, 34
+Vila So Dimas
+53863-493 Souza / RN'),
+('5195', '5', 'Aeroporto Isabelly Alves, 13
+Piraja
+50326-917 Carvalho da Praia / PB'),
+('5196', '1', 'Conjunto Daniela Cardoso, 87
+So Joo Batista
+66297631 Jesus / RR'),
+('5197', '1', 'Vila de Fogaa, 488
+Vila Paquet
+31930043 Rezende / RS'),
+('5198', '1', 'Esplanada de Ferreira, 51
+Vila Das Oliveiras
+52063393 Oliveira / BA'),
+('5199', '1', 'Recanto Joo Miguel Pires, 69
+Ademar Maldonado
+12678-139 Castro / PA'),
+('5200', '1', 'Jardim Joo Guilherme da Conceio, 12
+Vila Da Luz
+58980286 Correia / BA'),
+('5201', '1', 'Ptio de Rodrigues
+So Tomaz
+96317921 Rezende Verde / RR'),
+('5202', '5', 'Estao Cardoso
+Joo Paulo Ii
+84526-117 Cardoso da Prata / MT'),
+('5203', '2', 'Lago Alexandre da Mota, 1
+So Gabriel
+21540451 Mendes / DF'),
+('5204', '5', 'Vila de Gomes
+Vila Maloca
+94979730 Porto da Prata / ES'),
+('5205', '2', 'Quadra Nunes, 99
+Vila Mangueiras
+25478-030 Pires / MT'),
+('5206', '3', 'Praa da Paz, 91
+Taquaril
+30065068 Costa / RJ'),
+('5207', '3', 'Alameda de Farias, 462
+Boa Viagem
+91765805 Gomes / SE'),
+('5208', '3', 'Vereda Nina Pinto, 85
+Sagrada Famlia
+25568705 da Cruz / RO'),
+('5209', '1', 'Passarela de Ferreira, 2
+Caetano Furquim
+41068-264 Correia / PB'),
+('5210', '3', 'Aeroporto Arajo, 4
+Jardim Amrica
+00397103 Ferreira de Minas / AC'),
+('5211', '1', 'Viela Joana da Mata, 19
+So Jorge 1 Seo
+16399793 Duarte / PR'),
+('5212', '3', 'Alameda Isadora Cardoso
+Monte Azul
+36714-012 da Paz / AC'),
+('5213', '1', 'Parque Santos, 85
+Petropolis
+13570-790 Silveira / RS'),
+('5214', '4', 'Lagoa Joo Pedro Duarte, 10
+Mala E Cuia
+68925-399 Mendes / RR'),
+('5215', '5', 'Trecho Joo Gabriel Peixoto, 55
+Horto Florestal
+10225784 Freitas / AL'),
+('5216', '3', 'Jardim de Cardoso
+Belvedere
+71636546 Moraes de Peixoto / PR'),
+('5217', '2', 'Colnia Thomas da Luz, 708
+Vila Unio
+90373-705 da Costa dos Dourados / MG'),
+('5218', '2', 'Passarela Nascimento, 605
+Vila Pinho
+99798922 Moraes / AP'),
+('5219', '1', 'Viela de da Mota, 215
+Engenho Nogueira
+46094572 Cavalcanti / BA'),
+('5220', '1', 'Condomnio Marcelo Arajo, 43
+Parque So Pedro
+13707-610 Castro / MT'),
+('5221', '5', 'Colnia Bryan Vieira, 5
+Vila Nova Paraso
+29771554 Melo / AL'),
+('5222', '4', 'Viaduto de Nascimento, 3
+Vila Independencia 1 Seo
+66864739 Cunha de da Rocha / MA'),
+('5223', '3', 'Avenida Cardoso, 4
+Parque So Jos
+81107-571 Freitas do Campo / RR'),
+('5224', '2', 'Fazenda Ana Luiza Gomes
+Anchieta
+86104-524 Ribeiro / AM'),
+('5225', '4', 'Campo da Mota, 57
+Vila Canto Do Sabi
+91035413 Ramos / TO'),
+('5226', '3', 'Esplanada de Vieira
+Varzea Da Palma
+47050-990 da Cunha / MA'),
+('5227', '5', 'Esplanada Novaes, 151
+Baro Homem De Melo 1 Seo
+05231731 Ribeiro / PB'),
+('5228', '5', 'Morro Peixoto, 766
+Canad
+63252-184 Ramos da Prata / SE'),
+('5229', '5', 'Viaduto Antnio Fogaa, 62
+Europa
+35142934 Dias de Carvalho / MT'),
+('5230', '1', 'Morro Davi Luiz Viana
+Vila Mangueiras
+22672138 da Cunha Paulista / SP'),
+('5231', '3', 'Vale de Alves, 47
+Maria Tereza
+43174571 Dias / ES'),
+('5232', '4', 'Estrada de Azevedo
+Vila Fumec
+11412-716 Pires do Sul / BA'),
+('5233', '5', 'Distrito Paulo Teixeira, 738
+Barroca
+06991-165 Caldeira / RR'),
+('5234', '1', 'Parque de Fernandes, 2
+Novo Das Industrias
+39956-530 Farias do Campo / AL'),
+('5235', '4', 'Distrito Cau da Cruz, 85
+Santa Isabel
+74411-632 Rodrigues / RO'),
+('5236', '5', 'Rodovia Oliveira
+Silveira
+94781-918 Farias do Campo / RJ'),
+('5237', '5', 'Jardim Thiago Jesus, 2
+Tnel De Ibirit
+36983-172 Moura do Galho / RO'),
+('5238', '3', 'Rua Alexandre Martins
+Conjunto Paulo Vi
+96578097 Nogueira / RR'),
+('5239', '3', 'Via de Oliveira, 7
+Ouro Preto
+14220-071 Ribeiro / MG'),
+('5240', '3', 'Largo Gustavo Henrique Arago, 51
+Dom Cabral
+19691075 da Rosa / SE'),
+('5241', '3', 'Feira Heitor Moraes, 67
+Grota
+31387-853 da Cruz da Praia / SC'),
+('5242', '5', 'Recanto de Ramos, 8
+Caiara - Adelaide
+27632777 da Costa da Prata / ES'),
+('5243', '5', 'Trevo Nascimento, 55
+Serrano
+04445-141 Rezende do Galho / AC'),
+('5244', '2', 'Estao de Gonalves, 41
+Acaiaca
+28215-719 Castro / BA'),
+('5245', '2', 'Vereda de da Paz, 35
+Colgio Batista
+01502869 Arajo de Minas / SC'),
+('5246', '4', 'Quadra Ana Jlia Cunha
+Jardim Guanabara
+05793-458 Correia / MS'),
+('5247', '5', 'Travessa de da Cruz, 9
+Universo
+22435-287 da Conceio / DF'),
+('5248', '2', 'Ncleo Vinicius Nunes, 6
+Vila So Gabriel
+52406248 Silva / MT'),
+('5249', '5', 'Setor Gonalves
+Cidade Nova
+92116640 Porto Alegre / MG'),
+('5250', '5', 'Praa Leandro Pires, 13
+Mantiqueira
+27043-047 Cardoso de Moura / RR'),
+('5251', '3', 'Largo Gabriel Ferreira, 96
+Santa Efignia
+20484-769 Monteiro de Lima / AM'),
+('5252', '5', 'Campo de Farias, 17
+Sport Club
+37546875 Nunes / BA'),
+('5253', '3', 'Trevo Isis Cardoso, 49
+Diamante
+11398188 Correia do Norte / RR'),
+('5254', '5', 'Conjunto de Peixoto, 77
+Lagoa
+80634763 Rodrigues do Campo / MG'),
+('5255', '3', 'Morro Mait Martins, 94
+Beira Linha
+91553-675 Lopes / SE'),
+('5256', '3', 'Morro de Monteiro, 162
+Liberdade
+87015145 Moura / MA'),
+('5257', '1', 'Jardim Rezende, 23
+Vila Nova Cachoeirinha 1 Seo
+92469-642 das Neves / DF'),
+('5258', '3', 'Favela Sales, 36
+Santa Cecilia
+26474-391 Barbosa / DF'),
+('5259', '1', 'Distrito Moura, 4
+Joo Alfredo
+62692748 da Rosa do Amparo / PA'),
+('5260', '2', 'Vale Souza
+Santa Monica
+83174067 Lopes de Viana / PI'),
+('5261', '3', 'Praia Santos, 703
+Itaipu
+03169-342 Silva / MT'),
+('5262', '5', 'Avenida de Sales, 4
+Leonina
+50287043 Santos de Peixoto / PI'),
+('5263', '3', 'Avenida de Pereira, 91
+Nova Pampulha
+76778363 Freitas / ES'),
+('5264', '4', 'Passarela Sabrina Arajo
+Caetano Furquim
+86400103 Jesus de Nogueira / ES'),
+('5265', '4', 'Condomnio de Pereira, 3
+Vila Nova Cachoeirinha 1 Seo
+53287182 Almeida de Lima / PE'),
+('5266', '3', 'Estrada de Teixeira
+Paraso
+51488-515 Barbosa / AL'),
+('5267', '2', 'Vale de Viana
+Tnel De Ibirit
+03638032 Melo do Campo / SE'),
+('5268', '1', 'Praa de Ribeiro, 48
+Parque So Jos
+85028092 Farias da Prata / PE'),
+('5269', '1', 'Ncleo de Azevedo, 40
+Ventosa
+83841583 Mendes do Sul / PE'),
+('5270', '4', 'Vila Silva
+Vila Ouro Minas
+02912-148 Moreira / AM'),
+('5271', '2', 'Praia Alana da Rocha, 91
+Outro
+70717675 da Mota / ES'),
+('5272', '5', 'Ncleo Luiz Miguel Santos
+Alto Vera Cruz
+01832-074 Sales do Oeste / PA'),
+('5273', '1', 'rea Joo Lucas Castro, 228
+Carlos Prates
+63903299 da Cruz de da Cruz / PA'),
+('5274', '2', 'Distrito da Rocha
+Floramar
+50504-035 Teixeira do Amparo / AL'),
+('5275', '1', 'Campo de Costela, 91
+Baro Homem De Melo 1 Seo
+38503-935 Alves / RS'),
+('5276', '2', 'Loteamento de Almeida, 12
+Venda Nova
+79416153 Correia de Rezende / DF'),
+('5277', '1', 'Praia de Nunes, 49
+Minas Brasil
+38889283 da Costa / GO'),
+('5278', '4', 'Vereda Noah Moreira, 63
+Nazare
+16158510 Campos do Amparo / AM'),
+('5279', '3', 'Praia Raquel das Neves, 54
+Inconfidncia
+17237-784 Arajo de Minas / AM'),
+('5280', '1', 'Stio Vieira
+Santa Sofia
+72208-666 Cunha Grande / AC'),
+('5281', '5', 'Passarela Joo Guilherme Azevedo, 22
+Jardim Vitoria
+19214319 Moraes Alegre / AC'),
+('5282', '2', 'Conjunto Anthony Mendes, 8
+Santa Margarida
+85368228 Novaes da Serra / SC'),
+('5283', '2', 'Esplanada Emilly Farias, 619
+Maria Virgnia
+36637837 da Mata do Amparo / RR'),
+('5284', '4', 'Ladeira Maysa da Paz, 58
+Palmares
+66637963 Cunha / TO'),
+('5285', '2', 'Alameda Sales, 8
+Luxemburgo
+75844-888 Cardoso / SE'),
+('5286', '3', 'Rua da Paz, 55
+Vila Paris
+43097-007 Cardoso / AP'),
+('5287', '3', 'Estrada de Dias, 556
+Madri
+78911-266 Ferreira / PA'),
+('5288', '1', 'Setor de Moreira, 7
+Vila Primeiro De Maio
+37633581 Fernandes / RN'),
+('5289', '3', 'Ncleo Porto, 514
+Silveira
+75593-592 Silveira / RO'),
+('5290', '2', 'Conjunto Porto, 46
+Vila Aeroporto
+95048030 Pinto Grande / RR'),
+('5291', '5', 'Aeroporto de Costela, 517
+Ipiranga
+60475-036 Santos / AC'),
+('5292', '5', 'Trevo Costa, 5
+Glria
+60418-345 Oliveira / RS'),
+('5293', '3', 'Praa Pedro Dias, 418
+Juliana
+21764-686 Gonalves / MS'),
+('5294', '4', 'Estao Fernandes, 188
+Novo Ouro Preto
+92266-922 Farias / MT'),
+('5295', '2', 'Ptio Silva, 765
+Nova Gameleira
+72173-264 Arago Verde / RO'),
+('5296', '1', 'Estao de Jesus, 35
+Conjunto So Francisco De Assis
+95677394 Moreira / BA'),
+('5297', '1', 'Praia Porto, 7
+Conjunto Santa Maria
+38379-167 Gonalves do Amparo / TO'),
+('5298', '2', 'Travessa Sales, 647
+Madre Gertrudes
+38580-913 Farias de da Paz / AP'),
+('5299', '3', 'Distrito de da Cunha, 81
+Santa Branca
+90640-393 Barros de Porto / PI'),
+('5300', '2', 'Feira Gomes, 327
+Conjunto Jardim Filadlfia
+38828-298 da Luz do Norte / MG'),
+('5301', '5', 'Passarela de Moraes, 23
+Mantiqueira
+17804556 Monteiro / ES'),
+('5302', '4', 'Campo Moura, 33
+Anchieta
+28018895 Correia / AP'),
+('5303', '4', 'Trevo Alves, 85
+Alto Barroca
+18009248 Mendes das Pedras / AP'),
+('5304', '3', 'Viela de Arajo, 6
+Ernesto Nascimento
+10015-226 da Cunha de Ferreira / PR'),
+('5305', '3', 'Ncleo de Rezende, 33
+Estoril
+28506470 Campos do Amparo / PA'),
+('5306', '5', 'Ncleo Davi Lucas Monteiro, 7
+Santa Margarida
+28426-221 Arajo / AP'),
+('5307', '1', 'Ncleo Caroline Caldeira
+Baro Homem De Melo 1 Seo
+06751-452 da Mata / PR'),
+('5308', '2', 'Estrada Castro, 64
+Diamante
+58987-096 Ribeiro / SP'),
+('5309', '1', 'Alameda Gabriel da Conceio, 671
+Camponesa 1 Seo
+28162-159 Rocha / PI'),
+('5310', '5', 'Avenida Gabriela Melo, 43
+Inconfidncia
+53959576 Pires / TO'),
+('5311', '4', 'Fazenda da Cruz, 9
+Camargos
+42116618 da Cruz / MA'),
+('5312', '2', 'Vila Kevin Arajo, 90
+So Tomaz
+07641839 Porto / PA'),
+('5313', '4', 'Distrito de Rocha, 64
+Laranjeiras
+01395-763 Moreira / DF'),
+('5314', '5', 'Largo Sales, 7
+Glria
+06431-850 Gonalves Paulista / PR'),
+('5315', '4', 'Rodovia Kaique Costela, 31
+Europa
+53927-261 Jesus / SP'),
+('5316', '1', 'Conjunto Isabelly Correia, 33
+Vila Nova Gameleira 2 Seo
+56256270 da Rosa de Vieira / GO'),
+('5317', '5', 'Jardim de Moreira, 9
+Alpio De Melo
+93998-647 Caldeira / TO'),
+('5318', '2', 'Ladeira de Fogaa, 8
+Jardim Atlntico
+89622281 Pereira da Serra / AL'),
+('5319', '3', 'Viela Souza, 64
+Vila Jardim Alvorada
+92810-147 Costela de Caldeira / PI'),
+('5320', '4', 'Vale de Cunha, 53
+Vila Tirol
+85633128 Viana do Galho / AL'),
+('5321', '1', 'Distrito de Teixeira, 37
+Nova Cintra
+59586669 Ferreira / PE'),
+('5322', '1', 'Morro Barros, 89
+Nossa Senhora Do Rosrio
+19305-105 Jesus de Gois / MG'),
+('5323', '4', 'Avenida Marcela Sales
+Santa Sofia
+90716-228 Costa de Gois / RJ'),
+('5324', '2', 'Alameda Rocha, 71
+Xodo-Marize
+84353-283 Duarte / DF'),
+('5325', '5', 'Aeroporto de Almeida
+Belmonte
+74113446 Costela / RS'),
+('5326', '3', 'Loteamento de Fogaa, 7
+Vila Nova Cachoeirinha 2 Seo
+97172032 Silva de Fernandes / MA'),
+('5327', '2', 'Ncleo Souza, 98
+Silveira
+73772117 da Conceio / AP'),
+('5328', '3', 'Alameda das Neves, 19
+Camargos
+48356892 Silva de Monteiro / PE'),
+('5329', '4', 'Feira Monteiro
+Satelite
+22982943 Alves da Serra / AP'),
+('5330', '2', 'Colnia Novaes, 45
+Vila Paris
+25508712 Martins / MG'),
+('5331', '5', 'Largo de Oliveira
+Ambrosina
+73602-076 Arago de Carvalho / AP'),
+('5332', '4', 'Conjunto Arajo, 17
+Branas
+49760-011 Barbosa / PR'),
+('5333', '2', 'Estao Yuri Novaes, 7
+Dom Cabral
+88028-209 Viana das Flores / RN'),
+('5334', '2', 'Distrito Catarina Nunes, 734
+Vila Santo Antnio Barroquinha
+59398-311 Duarte / AL'),
+('5335', '1', 'Aeroporto Ramos, 49
+Betnia
+49823592 da Mata / CE'),
+('5336', '1', 'Avenida Novaes, 86
+Vila Jardim So Jos
+05256060 Freitas de Cavalcanti / PB'),
+('5337', '5', 'Vereda de Moraes
+So Jorge 1 Seo
+75808-161 Souza Grande / MT'),
+('5338', '4', 'Jardim de Duarte, 5
+Serra Verde
+86232-445 Caldeira / CE'),
+('5339', '2', 'Passarela Carvalho, 94
+Bandeirantes
+24257608 Sales da Praia / SC'),
+('5340', '1', 'Avenida de da Rocha
+Engenho Nogueira
+78220001 Rezende da Praia / RS'),
+('5341', '3', 'Campo Barros, 16
+Vila Bandeirantes
+35074-683 Gonalves / RS'),
+('5342', '5', 'Viela Cunha
+Barreiro
+84319848 Pinto / MG'),
+('5343', '1', 'Alameda Azevedo, 12
+Pilar
+38063-864 Alves do Campo / GO'),
+('5344', '1', 'Jardim de da Paz, 34
+Corao De Jesus
+92134232 da Costa do Norte / CE'),
+('5345', '5', 'Estrada Campos, 39
+Santa Monica
+12397891 Sales / MG'),
+('5346', '1', 'Residencial Luigi Costa, 860
+Cachoeirinha
+39872461 Fogaa / RR'),
+('5347', '3', 'Feira de Vieira, 14
+Lourdes
+33268521 Melo dos Dourados / PE'),
+('5348', '5', 'Ptio Ferreira, 26
+Alto Das Antenas
+21361-365 Jesus / BA'),
+('5349', '2', 'Condomnio Luiz Felipe Moreira
+So Salvador
+62351-006 Porto de Gomes / CE'),
+('5350', '3', 'Conjunto Juan Nunes, 83
+Nova Floresta
+27679-354 Viana do Norte / RO'),
+('5351', '4', 'Vale Cardoso, 2
+Marilandia
+65988953 Pereira dos Dourados / DF'),
+('5352', '1', 'rea Gomes, 36
+Vila Mangueiras
+64126219 Barbosa / PB'),
+('5353', '5', 'Travessa de da Mota, 94
+Liberdade
+49254-627 da Conceio de Dias / PE'),
+('5354', '1', 'Lago Sales, 501
+Beija Flor
+42622-016 Farias / PI'),
+('5355', '3', 'Distrito Olivia das Neves, 82
+Carmo
+93884954 Rezende de Ferreira / PB'),
+('5356', '2', 'Setor Teixeira, 7
+Alpes
+98251-022 da Cunha / PA'),
+('5357', '5', 'Aeroporto Arthur das Neves, 46
+Unidas
+18503609 Campos de Pinto / BA'),
+('5358', '5', 'Residencial Rocha, 29
+Cidade Jardim Taquaril
+77238-556 Vieira / CE'),
+('5359', '2', 'Esplanada Peixoto, 327
+Tupi B
+36903315 da Cruz de Minas / MA'),
+('5360', '4', 'Lagoa de Peixoto, 67
+Monsenhor Messias
+90844-564 Costela / SE'),
+('5361', '5', 'Ladeira da Rosa
+Flamengo
+38397-567 Alves / AL'),
+('5362', '1', 'Viaduto Diego Sales
+So Francisco
+27275360 Carvalho / ES'),
+('5363', '2', 'Lagoa de Moraes, 39
+Jardim So Jos
+65587529 Arago / SE'),
+('5364', '2', 'Rodovia de Nunes, 73
+Caetano Furquim
+18875-116 Mendes / PI'),
+('5365', '3', 'Travessa de da Costa, 8
+Alpes
+69260328 Cunha / AP'),
+('5366', '3', 'Alameda de Moreira, 27
+Dom Bosco
+43716-938 Fogaa de Pires / RS'),
+('5367', '4', 'Ptio da Paz, 8
+Universitrio
+76853200 Arajo da Mata / DF'),
+('5368', '5', 'Esplanada de Castro, 46
+Santo Andr
+22295-397 Peixoto / RO'),
+('5369', '2', 'Praa Nina Farias, 21
+Novo Aaro Reis
+56049-384 Porto / ES'),
+('5370', '5', 'Rodovia da Cunha, 7
+Bela Vitoria
+81054-049 Silva da Praia / AC'),
+('5371', '1', 'Aeroporto Samuel da Costa, 44
+Jardinpolis
+00875679 Barbosa / PA'),
+('5372', '2', 'Travessa da Cruz
+Graja
+87823731 Costela de Lopes / TO'),
+('5373', '3', 'Recanto de da Paz, 590
+Bernadete
+58068163 Azevedo / PI'),
+('5374', '3', 'Quadra de Martins, 54
+Solar Do Barreiro
+88901-890 Arajo / AC'),
+('5375', '2', 'Feira Sales, 77
+Bandeirantes
+85098893 Caldeira do Campo / AL'),
+('5376', '2', 'Vereda Augusto Cardoso, 1
+So Cristvo
+39601-162 Gonalves / PE'),
+('5377', '5', 'Travessa de da Rocha, 30
+Ouro Preto
+86668-642 Nunes de da Costa / MS'),
+('5378', '4', 'Favela Pires, 650
+Cidade Jardim
+22898-750 Gomes / AM'),
+('5379', '5', 'Morro de Arajo, 86
+Cnego Pinheiro 1 Seo
+50606320 Peixoto / RN'),
+('5380', '2', 'Loteamento Arago, 14
+Caiara - Adelaide
+33793-928 Nascimento Grande / PI'),
+('5381', '4', 'Rua Cardoso, 42
+Independncia
+32476-840 Gomes do Galho / MS'),
+('5382', '1', 'Ptio de da Mata, 75
+Saudade
+23382824 Viana / PA'),
+('5383', '1', 'Fazenda das Neves, 317
+Conjunto Lagoa
+30267619 Pires / PR'),
+('5384', '1', 'Largo Melo, 37
+Boa Unio 2 Seo
+90358074 Pereira dos Dourados / ES'),
+('5385', '1', 'Distrito de Souza
+So Lucas
+92602-924 Caldeira da Prata / ES'),
+('5386', '2', 'Lago Nascimento
+Cidade Nova
+49659-043 Cardoso / RS'),
+('5387', '3', 'Distrito da Costa, 37
+Buritis
+46813-401 Fernandes dos Dourados / PB'),
+('5388', '2', 'Vereda Erick Caldeira
+Jardim Amrica
+32079-598 Ribeiro / RS'),
+('5389', '1', 'Stio Melo, 53
+Vila Paraso
+66089467 Duarte / SE'),
+('5390', '4', 'Jardim Azevedo, 801
+Marieta 1 Seo
+22870-318 Azevedo de Minas / MT'),
+('5391', '4', 'Praia da Cruz, 70
+Candelaria
+62282734 Carvalho de Monteiro / SE'),
+('5392', '4', 'Praa de Nascimento, 64
+Caiaras
+94087820 Mendes Paulista / AL'),
+('5393', '3', 'Praia Cardoso, 274
+Antonio Ribeiro De Abreu 1 Seo
+52152-259 Nunes Grande / PB'),
+('5394', '1', 'Ncleo Cavalcanti, 52
+Vila Barragem Santa Lcia
+11071724 Costa / RS'),
+('5395', '2', 'Recanto Novaes, 2
+Castelo
+55045-611 Silva de Gois / PR'),
+('5396', '5', 'Jardim de Monteiro
+Guarat
+73913492 Teixeira / MG'),
+('5397', '2', 'Lago Natlia Barros
+Marola
+47184-768 Rezende / DF'),
+('5398', '1', 'Jardim Lopes
+Flamengo
+44005-081 Silva / MS'),
+('5399', '5', 'Vila Barros, 35
+Araguaia
+02963-274 Nunes / PI'),
+('5400', '2', 'Lagoa Gabrielly da Mata, 77
+Novo Santa Cecilia
+86770080 Pires / RR'),
+('5401', '2', 'Loteamento Ribeiro, 28
+So Salvador
+35026571 Silva / AL'),
+('5402', '5', 'Fazenda Silva
+Venda Nova
+70260-073 Nascimento do Oeste / SC'),
+('5403', '4', 'Fazenda Vitria Fogaa, 33
+Vila Coqueiral
+73753-168 Martins / PI'),
+('5404', '5', 'Jardim Emanuel Caldeira, 63
+Zilah Sposito
+89701182 Campos do Oeste / AM'),
+('5405', '3', 'Conjunto de Castro, 27
+Graa
+70464171 da Mata de Minas / SP'),
+('5406', '5', 'Avenida Moura, 1
+Boa Vista
+68348-220 Rezende de Minas / TO'),
+('5407', '5', 'Ladeira de Cardoso, 78
+Lagoinha Leblon
+58801-933 Fogaa do Amparo / CE'),
+('5408', '4', 'Campo Costela, 49
+Conjunto Jardim Filadlfia
+50745190 Duarte / BA'),
+('5409', '4', 'Lago de Costa
+Nossa Senhora Da Aparecida
+45768-543 da Mota / SE'),
+('5410', '3', 'Jardim Almeida
+Estoril
+81992-762 Rodrigues de Freitas / DF'),
+('5411', '5', 'Estao de da Mota, 1
+Vila Satlite
+47845518 Fogaa / SP'),
+('5412', '2', 'Stio Joo Vitor Monteiro, 8
+Etelvina Carneiro
+58294113 Costela de Farias / AP'),
+('5413', '3', 'Travessa de Barros, 31
+Cenaculo
+65669-531 Mendes / PI'),
+('5414', '4', 'Estrada Emanuella Rodrigues, 77
+Olaria
+60113600 Fogaa de Gomes / RR'),
+('5415', '1', 'Setor Cunha, 30
+Nossa Senhora Do Rosrio
+03292852 Arago de Arago / PB'),
+('5416', '3', 'Trevo de Oliveira, 58
+Santa Isabel
+47127-063 Castro das Flores / MT'),
+('5417', '1', 'Viaduto de da Cruz
+Jardim Atlntico
+55062535 Ramos de Carvalho / TO'),
+('5418', '1', 'Jardim Agatha Moura, 458
+So Francisco
+28663001 Porto / MS'),
+('5419', '3', 'Ptio de Lopes, 68
+Vila Nossa Senhora Do Rosrio
+48701-438 Arago da Praia / AL'),
+('5420', '1', 'Esplanada Lorena Duarte, 91
+So Sebastio
+59670268 Duarte da Serra / PR'),
+('5421', '4', 'Jardim Mendes, 58
+Saudade
+26609657 Oliveira de Rezende / RN'),
+('5422', '1', 'Passarela Gomes, 73
+Nossa Senhora Do Rosrio
+46001320 Gomes de Lima / BA'),
+('5423', '3', 'Quadra Almeida, 18
+Etelvina Carneiro
+37583-195 Freitas / CE'),
+('5424', '1', 'Recanto de Nogueira, 998
+Flavio De Oliveira
+92206221 Pires / SC'),
+('5425', '5', 'Favela de Vieira
+Jardim Atlntico
+28418837 Cunha das Pedras / SC'),
+('5426', '3', 'Esplanada Rezende, 34
+Vila Fumec
+71797-684 da Cruz do Norte / SC'),
+('5427', '4', 'Travessa Rodrigo Lima
+Novo Das Industrias
+68740-010 Porto Alegre / RJ'),
+('5428', '5', 'Colnia da Mota, 71
+Renascena
+58302-932 Dias / GO'),
+('5429', '1', 'Stio de da Costa
+Mariquinhas
+90321842 Silveira de Fernandes / AP'),
+('5430', '4', 'Passarela Cardoso, 281
+Vila Nova Cachoeirinha 2 Seo
+26479-525 Arajo da Praia / MA'),
+('5431', '3', 'Favela de Moreira, 81
+Piraja
+37052-109 Cardoso / SC'),
+('5432', '1', 'Viaduto de Jesus, 57
+Sagrada Famlia
+86145-739 Fogaa do Galho / SC'),
+('5433', '2', 'Vila de da Mata, 376
+Cidade Jardim Taquaril
+75805-494 Costa do Oeste / PB'),
+('5434', '5', 'Chcara Bencio Rezende, 37
+Savassi
+26949064 da Conceio / PI'),
+('5435', '3', 'Recanto da Mota, 342
+Anchieta
+58152119 da Rosa / RN'),
+('5436', '3', 'Distrito de Silveira, 834
+So Lucas
+62643365 Ferreira Paulista / RN'),
+('5437', '2', 'Recanto de Moura, 9
+Concrdia
+84632-879 Santos / BA'),
+('5438', '5', 'Rodovia Joo Gabriel Nascimento, 46
+Vila Maria
+35086-881 Barros / SC'),
+('5439', '5', 'Alameda Barbosa, 9
+Ipiranga
+97387-432 Castro / RR'),
+('5440', '1', 'Campo Ian Mendes, 57
+Marola
+79154533 da Rosa / MT'),
+('5441', '1', 'Ncleo Luigi Fogaa, 6
+Santa Tereza
+19632-217 da Cruz / PA'),
+('5442', '2', 'Ptio Marcos Vinicius Melo, 59
+Concrdia
+64298054 Pires da Mata / TO'),
+('5443', '1', 'Avenida de Arajo, 102
+Cidade Jardim
+82426-422 Moura de da Costa / PE'),
+('5444', '5', 'Trevo Nina Rocha, 37
+Graa
+62009342 Sales da Serra / RS'),
+('5445', '3', 'Loteamento Antnio Moura, 62
+Nova Sua
+61828-696 Costa / AM'),
+('5446', '5', 'Viela Theo da Cruz, 377
+Vila Rica
+34153-103 Barbosa / PA'),
+('5447', '3', 'Distrito Danilo Peixoto, 91
+Buritis
+39319260 Pinto do Sul / PB'),
+('5448', '3', 'Distrito Ana Julia Nascimento, 92
+Vila Hava
+74192991 Fogaa de da Paz / RR'),
+('5449', '5', 'Distrito Benjamin Vieira
+Vila Ipiranga
+04191881 Cunha do Norte / RJ'),
+('5450', '1', 'Vila de da Cruz, 61
+Xangri-L
+54968-606 Almeida / TO'),
+('5451', '2', 'Loteamento Joo Guilherme Moura, 649
+Vila Jardim So Jos
+27694112 Farias / AM'),
+('5452', '5', 'Rodovia de Arago, 90
+Ipe
+93123-718 Monteiro / BA'),
+('5453', '5', 'Largo de Nascimento, 38
+Vila Santa Monica 1 Seo
+86912996 Monteiro / SP'),
+('5454', '1', 'Stio Gonalves
+Rio Branco
+07668100 Moraes / PB'),
+('5455', '5', 'Quadra Moreira, 78
+Juliana
+71361157 Caldeira da Mata / AC'),
+('5456', '4', 'Passarela Ferreira, 50
+Gutierrez
+44865-685 Nogueira da Serra / CE'),
+('5457', '1', 'Jardim Fernandes, 54
+Pompia
+20659209 Campos de Rodrigues / RR'),
+('5458', '2', 'Loteamento Eduarda Carvalho, 270
+Vila Nova Cachoeirinha 1 Seo
+45812699 Almeida / AL'),
+('5459', '5', 'Distrito de Oliveira, 96
+Itaipu
+21916-381 Pinto Alegre / MT'),
+('5460', '5', 'Viela de Gonalves, 41
+Universitrio
+04884731 Barros Alegre / CE'),
+('5461', '5', 'Fazenda Ramos, 16
+Lourdes
+44445205 da Luz das Flores / RJ'),
+('5462', '4', 'Trecho Jesus, 34
+Ambrosina
+97528-207 Melo / PR'),
+('5463', '3', 'Feira Joaquim Lopes, 1
+Conjunto Novo Dom Bosco
+52494-760 Cardoso da Prata / AP'),
+('5464', '4', 'Passarela da Cunha
+Branas
+74314224 Cardoso / PI'),
+('5465', '1', 'Condomnio Almeida, 17
+Minaslandia
+75339-017 da Cunha da Mata / SP'),
+('5466', '4', 'Trecho Duarte, 59
+Cabana Do Pai Toms
+45416-950 Fogaa / MG'),
+('5467', '4', 'Residencial Arthur Vieira, 919
+Vila Ipiranga
+60843762 Cardoso / MT'),
+('5468', '2', 'Campo de Sales, 28
+Vale Do Jatoba
+32775137 Pereira / PB'),
+('5469', '1', 'Condomnio Beatriz Monteiro, 50
+Santo Andr
+62870739 Caldeira do Campo / AP'),
+('5470', '3', 'Feira Antnio Peixoto, 33
+Aguas Claras
+15576-530 Azevedo das Pedras / MT'),
+('5471', '2', 'Campo de Barros, 926
+Bom Jesus
+46774036 Sales / GO'),
+('5472', '4', 'Viela Julia Fernandes, 75
+Palmares
+34551584 Silva do Amparo / AM'),
+('5473', '5', 'Passarela de Carvalho
+Santa Helena
+33534-822 Silva / TO'),
+('5474', '3', 'Passarela Sarah Ramos, 71
+Aeroporto
+72402-187 Ferreira / PR'),
+('5475', '1', 'Colnia de Cavalcanti, 6
+Cenaculo
+65839611 Porto / SE'),
+('5476', '2', 'Setor Melo
+Buraco Quente
+14797-118 da Mata da Serra / BA'),
+('5477', '3', 'Ptio Silveira, 567
+Nova Cachoeirinha
+96285-914 Lopes / RN'),
+('5478', '1', 'Morro da Mata, 7
+Virgnia
+65511312 Barros de Fernandes / RO'),
+('5479', '4', 'Jardim de Cavalcanti, 113
+Jardim Leblon
+22634-796 Duarte de Cardoso / PI'),
+('5480', '4', 'Lago Davi Luiz Silva, 92
+Vila Copacabana
+85436-609 Monteiro do Campo / SP'),
+('5481', '4', 'Estrada Costela, 21
+Vila Piratininga
+24607539 Carvalho da Prata / AC'),
+('5482', '4', 'Esplanada Maria Clara Cardoso, 168
+Bom Jesus
+71576-731 da Mata do Sul / SP'),
+('5483', '2', 'Praia de Freitas, 40
+Mirtes
+59999-749 Cavalcanti Paulista / RN'),
+('5484', '5', 'Parque de Oliveira, 376
+Esplanada
+69925610 Cunha das Flores / MG'),
+('5485', '1', 'Passarela Bryan Pereira, 5
+Conjunto Floramar
+00386660 Nascimento / PA'),
+('5486', '3', 'Estrada Maria Luiza Cardoso
+Concrdia
+36704154 Monteiro de Gois / GO'),
+('5487', '2', 'Viaduto de Silveira, 55
+Vila Madre Gertrudes 1 Seo
+54948624 Lima de Sales / PA'),
+('5488', '2', 'Stio Paulo da Mota, 49
+Vila So Rafael
+56912-938 Novaes do Sul / RN'),
+('5489', '2', 'Morro de da Rocha, 35
+Sion
+72591-593 Moreira / PE'),
+('5490', '2', 'Quadra Diogo Novaes, 546
+So Paulo
+95543-736 da Rosa / AM'),
+('5491', '2', 'Feira Ribeiro, 13
+Vila Betnia
+68040625 Carvalho de da Rosa / AP'),
+('5492', '2', 'Ptio da Mata, 1
+Cachoeirinha
+39350779 da Rosa / SE'),
+('5493', '3', 'Stio Agatha Freitas, 85
+Nazare
+59465674 Fogaa / MA'),
+('5494', '5', 'Chcara Jlia Porto, 850
+Betnia
+48624-728 Nascimento de Rodrigues / AC'),
+('5495', '5', 'Alameda de Duarte, 40
+Beija Flor
+75453-568 Carvalho / AM'),
+('5496', '2', 'Fazenda Sofia Costa, 26
+Monsenhor Messias
+26774-034 da Mota / PI'),
+('5497', '4', 'Ptio Monteiro, 68
+Pindorama
+89663712 Correia / SC'),
+('5498', '3', 'Favela Nunes, 48
+Vila Piratininga Venda Nova
+79776791 Teixeira / AP'),
+('5499', '4', 'Chcara Joana Vieira, 577
+Vale Do Jatoba
+86002487 Carvalho das Pedras / TO'),
+('5500', '4', 'Ncleo Andr Pires, 5
+Gutierrez
+65350082 Cardoso da Serra / RN'),
+('5501', '3', 'Favela Mariane Ribeiro, 10
+Vila De S
+56313-766 Jesus das Pedras / RN'),
+('5502', '3', 'Ptio Oliveira
+Jardim So Jos
+09706-691 Ramos de Minas / TO'),
+('5503', '3', 'Viaduto Santos
+Vila Ouro Minas
+06632-687 Peixoto do Galho / SC'),
+('5504', '3', 'Lagoa de da Rocha, 35
+Camargos
+96702-586 Costa / MT'),
+('5505', '3', 'Ladeira de Mendes, 95
+Renascena
+22549148 Alves da Praia / SC'),
+('5506', '4', 'Vale Peixoto, 183
+Silveira
+70317621 Moreira da Prata / RR'),
+('5507', '3', 'Favela Pereira, 3
+Satelite
+26315-320 Oliveira do Oeste / MG'),
+('5508', '1', 'Ncleo Emanuella Rodrigues, 37
+Lajedo
+19923360 Souza Grande / RN'),
+('5509', '4', 'Favela Fernandes, 66
+Lajedo
+76489688 Campos do Galho / MA'),
+('5510', '2', 'Stio de Pires, 34
+Mantiqueira
+90583777 Cardoso de Nunes / MG'),
+('5511', '2', 'Campo Eloah Nogueira, 296
+Santa Rita De Cssia
+94682-018 Novaes / SC'),
+('5512', '3', 'Ladeira Eloah Oliveira, 40
+So Lucas
+07107708 Viana do Oeste / GO'),
+('5513', '2', 'Rua de Farias, 96
+Jardim Felicidade
+36769765 da Mata / MA'),
+('5514', '2', 'Vale Danilo Nunes, 83
+Oeste
+62503278 Fogaa / GO'),
+('5515', '2', 'Jardim Sofia Jesus, 57
+Vila Betnia
+39278000 da Rocha / MT'),
+('5516', '5', 'Via Pereira
+Vila Nova Dos Milionarios
+16094-817 da Luz da Mata / SP'),
+('5517', '1', 'Jardim de Azevedo, 2
+Vila Da Amizade
+60682964 Souza da Mata / RS'),
+('5518', '3', 'Recanto Silva, 65
+Aparecida
+96324200 da Rocha da Serra / RS'),
+('5519', '1', 'Rua de Porto, 11
+Pedreira Padro Lopes
+45315-292 Arago / RR'),
+('5520', '2', 'Morro da Mota, 3
+Conjunto Califrnia Ii
+91752295 Melo / SP'),
+('5521', '5', 'Alameda Gonalves, 35
+Vila Madre Gertrudes 4 Seo
+78189-039 Ramos Alegre / AM'),
+('5522', '5', 'Alameda de da Paz
+Vila Inestan
+37934092 da Mata de Mendes / MG'),
+('5523', '3', 'Estrada Gabriela da Paz, 8
+Lorena
+23568-575 da Rosa do Galho / CE'),
+('5524', '4', 'Vereda Davi Lucas Cardoso
+Jardim Vitoria
+22856-519 Cardoso de Gois / RR'),
+('5525', '5', 'Aeroporto Sales, 8
+So Cristvo
+52900491 Nascimento do Campo / PE'),
+('5526', '2', 'Trevo de Novaes, 26
+Xodo-Marize
+06684338 Silveira / MG'),
+('5527', '3', 'Travessa de da Cunha, 7
+Novo Santa Cecilia
+49254-169 Silva / AC'),
+('5528', '4', 'Rodovia Calebe Souza, 28
+Nova Granada
+44957097 Campos / AL'),
+('5529', '2', 'Ladeira Mait da Paz, 95
+Vila So Gabriel Jacui
+94049-046 Peixoto / PI'),
+('5530', '3', 'Ptio Rodrigo Almeida, 24
+Tirol
+32912-735 Nascimento Alegre / SE'),
+('5531', '5', 'Favela Duarte, 67
+Heliopolis
+46819760 Martins / RR'),
+('5532', '2', 'Conjunto Farias, 6
+Jatob
+18802700 da Costa de Lima / TO'),
+('5533', '1', 'Travessa Pinto, 163
+Cruzeiro
+36902208 Caldeira / DF'),
+('5534', '3', 'Via de Cunha, 88
+Monte So Jos
+89725606 Almeida / PA'),
+('5535', '5', 'Vila Vinicius Lima, 287
+Conjunto Taquaril
+02188930 Porto da Praia / PE'),
+('5536', '5', 'Vila Costela
+Tiradentes
+91679792 da Cunha Paulista / RO'),
+('5537', '4', 'Lago de Ferreira, 9
+Dom Cabral
+43058-341 Moraes / CE'),
+('5538', '1', 'Stio da Costa, 62
+Pompia
+73223-153 da Cruz / AL'),
+('5539', '2', 'Lagoa Caroline Barros, 597
+Lajedo
+79969480 da Mota / PE'),
+('5540', '4', 'Esplanada Campos
+Vila So Dimas
+83279-442 Pires / CE'),
+('5541', '4', 'Passarela Nogueira, 777
+Vila Olhos 
+93974-293 Silveira dos Dourados / SP'),
+('5542', '2', 'Avenida da Mata, 61
+Vila Coqueiral
+63579731 Pereira de Minas / CE'),
+('5543', '2', 'Distrito Calebe da Rocha, 73
+Alpio De Melo
+14093838 Ramos de Cardoso / SP'),
+('5544', '5', 'Trecho de Gonalves, 551
+Pantanal
+57483733 Fernandes da Mata / GO'),
+('5545', '5', 'Estao Pereira, 31
+Conjunto Santa Maria
+55743813 Cavalcanti de Almeida / MT'),
+('5546', '4', 'Recanto Gonalves, 80
+Delta
+30150840 Oliveira / MS'),
+('5547', '4', 'Vale de da Costa, 23
+Varzea Da Palma
+56332248 Ferreira de Minas / AP'),
+('5548', '3', 'Viela de Freitas
+Vila Do Pombal
+78958925 Oliveira da Prata / RS'),
+('5549', '1', 'rea Natlia Arajo, 43
+Jonas Veiga
+41184068 da Conceio da Serra / RJ'),
+('5550', '1', 'Alameda de Costa
+Lajedo
+25097-384 Dias de Mendes / GO'),
+('5551', '3', 'Campo Gonalves, 25
+Santo Agostinho
+59210-626 Dias / SE'),
+('5552', '3', 'Estao Moura, 75
+Parque So Pedro
+66786902 Pires / BA'),
+('5553', '4', 'Quadra de Caldeira, 864
+Cidade Jardim Taquaril
+95336857 da Mata da Mata / CE'),
+('5554', '2', 'Morro de Correia, 79
+Calafate
+58505-658 Costa da Mata / SC'),
+('5555', '2', 'Via Oliveira, 190
+Belmonte
+19387555 Ferreira do Amparo / PE'),
+('5556', '4', 'Recanto Andr da Rosa, 2
+Universo
+24342180 Castro / PE'),
+('5557', '3', 'Ncleo Vieira
+Bandeirantes
+77919-498 Silveira / CE'),
+('5558', '5', 'Feira Rafaela Correia, 9
+Ipe
+71726-799 Souza / ES'),
+('5559', '3', 'Rodovia de Barros
+Caiaras
+64312-069 Rezende / MA'),
+('5560', '5', 'Ladeira de Martins
+Nova Gameleira
+33192-048 Azevedo / PI'),
+('5561', '5', 'Ladeira Nathan Barbosa, 67
+Vila So Francisco
+43320-905 da Luz da Serra / ES'),
+('5562', '5', 'Campo de Costa, 51
+Vila Independencia 3 Seo
+20471-344 Azevedo / AL'),
+('5563', '5', 'Recanto de Gonalves, 99
+Cachoeirinha
+21890493 Rodrigues / GO'),
+('5564', '4', 'Jardim de Dias, 9
+Caetano Furquim
+25139401 da Luz / PA'),
+('5565', '3', 'Ladeira Cardoso, 15
+Serra
+59846-850 Melo / BA'),
+('5566', '4', 'Esplanada Ramos, 85
+Vila Ipiranga
+25683066 Alves do Oeste / RR'),
+('5567', '4', 'Travessa Matheus da Costa, 37
+Vila Bandeirantes
+14420-969 Farias de Campos / RJ'),
+('5568', '1', 'Chcara Arago
+Maria Tereza
+30308543 Fogaa / ES'),
+('5569', '3', 'Praa de Rezende, 48
+Teixeira Dias
+72320491 da Cruz / MA'),
+('5570', '4', 'rea Sabrina Moraes
+Aparecida
+95722941 Moreira de Minas / RS'),
+('5571', '4', 'Viela Bencio da Conceio, 17
+Caiaras
+20544-566 da Mota / PR'),
+('5572', '3', 'Lagoa da Costa
+Corao Eucarstico
+23245-160 Caldeira da Mata / RN'),
+('5573', '4', 'Ptio de da Cunha
+Maria Helena
+60732-625 Carvalho / AM'),
+('5574', '5', 'Praia de Souza
+Serrano
+53078-140 da Rosa do Galho / BA'),
+('5575', '3', 'Vila Enzo Azevedo
+Savassi
+43343000 Fernandes / RS'),
+('5576', '5', 'Estrada Arago, 981
+Estoril
+70623-065 Moraes de Ribeiro / SP'),
+('5577', '3', 'Viela de Azevedo, 5
+Horto
+89497495 Rocha / GO'),
+('5578', '5', 'Esplanada Lorena Santos, 328
+Esplanada
+78200-280 Vieira / RS'),
+('5579', '5', 'Parque de Costa, 666
+Mineiro
+87482-590 Nunes das Pedras / MG'),
+('5580', '2', 'Rodovia Duarte, 51
+Aparecida 7 Seo
+47269-705 Ramos / RS'),
+('5581', '5', 'Rodovia Joana Cardoso, 650
+Xodo-Marize
+83011290 Jesus de Nunes / SP'),
+('5582', '1', 'Alameda Thomas da Conceio
+Santa Efignia
+74434060 Cunha do Galho / ES'),
+('5583', '2', 'Recanto Lopes, 245
+Acaba Mundo
+66545107 da Costa do Galho / DF'),
+('5584', '4', 'Stio Melo, 51
+Vila Real 2 Seo
+69543791 da Cruz do Galho / PR'),
+('5585', '2', 'Stio de Dias, 76
+Ambrosina
+43555793 Duarte / AC'),
+('5586', '5', 'Viaduto Vicente Arago, 32
+Hava
+61753-041 Carvalho da Mata / SC'),
+('5587', '3', 'Trecho de Lima, 21
+Vila So Francisco
+01851-085 Rocha das Pedras / GO'),
+('5588', '4', 'Largo Daniel Campos, 2
+Paulo Vi
+51388-373 Monteiro / AP'),
+('5589', '5', 'Travessa Almeida, 21
+Cenaculo
+48130-247 Pinto da Mata / GO'),
+('5590', '3', 'Morro Luiz Gustavo Cardoso, 255
+Vila Cloris
+85842-827 da Cruz / BA'),
+('5591', '5', 'Fazenda Ana Luiza das Neves, 1
+Marmiteiros
+48896-842 Costela do Amparo / RS'),
+('5592', '4', 'Chcara Isabel Melo, 76
+Virgnia
+92730-580 Correia do Galho / MA'),
+('5593', '3', 'Conjunto da Conceio, 581
+Cabana Do Pai Toms
+34900137 Costa / RR'),
+('5594', '2', 'Viaduto de Monteiro, 4
+Santo Antnio
+03581996 Arajo / ES'),
+('5595', '1', 'Chcara Sales
+Estrela
+33670-373 Lopes / CE'),
+('5596', '4', 'Travessa Nathan Lopes, 32
+Vila Ipiranga
+91119-755 Jesus de Pires / MA'),
+('5597', '4', 'Ncleo Juliana Porto, 890
+Vila Piratininga Venda Nova
+58028-621 Porto do Oeste / AP'),
+('5598', '3', 'Trevo Moura, 890
+Pirineus
+62245218 Martins / MG'),
+('5599', '2', 'Colnia Ribeiro, 8
+Vila Batik
+55340-944 Dias da Praia / TO'),
+('5600', '2', 'Praia de da Conceio, 37
+Jardim So Jos
+10488447 Lopes de Minas / AC'),
+('5601', '2', 'Rua Fernandes, 41
+Colgio Batista
+58130560 Martins / MA'),
+('5602', '5', 'Lago Valentina Cardoso
+Vila Cloris
+61240-412 Azevedo da Prata / DF'),
+('5603', '5', 'Ncleo de Peixoto, 18
+Vila Piratininga Venda Nova
+19064848 Arago de da Mata / MA'),
+('5604', '3', 'Rodovia Vitor Gabriel Barros, 5
+So Bento
+08918-721 da Luz / PE'),
+('5605', '4', 'Aeroporto Thomas Fernandes, 51
+Vila Batik
+39221988 Correia / RJ'),
+('5606', '5', 'Loteamento de Cardoso, 89
+Nova Vista
+50014-968 Novaes do Galho / SP'),
+('5607', '1', 'Ptio de Costela, 95
+Vila Da ria
+31249-988 das Neves / ES'),
+('5608', '5', 'Esplanada da Cruz, 1
+Graja
+50676153 Pereira do Campo / SC'),
+('5609', '4', 'Conjunto Theo da Rocha
+Milionario
+51898427 Freitas / PI'),
+('5610', '2', 'Setor da Conceio, 83
+Mangabeiras
+26262-919 Melo / RS'),
+('5611', '2', 'Alameda Joaquim Oliveira, 2
+Santa Maria
+49679-812 Lima / GO'),
+('5612', '5', 'rea de Cunha, 17
+Mariano De Abreu
+85153451 da Cunha da Serra / AP'),
+('5613', '4', 'Loteamento Pietra Moura, 177
+So Jorge 2 Seo
+61548647 Monteiro da Serra / RN'),
+('5614', '4', 'Passarela Catarina da Mata, 34
+Santa Rosa
+19753-551 Rezende / MT'),
+('5615', '3', 'Aeroporto Bruna Castro, 65
+Vila Jardim So Jos
+92412497 Farias de Novaes / AM'),
+('5616', '1', 'Loteamento Ana Luiza Nogueira, 7
+Caiaras
+40371-982 da Paz / RJ'),
+('5617', '3', 'Ladeira Vieira, 76
+Virgnia
+40608-846 da Mota do Campo / AM'),
+('5618', '4', 'Viaduto de Ribeiro, 53
+Boa Viagem
+76937725 da Cunha dos Dourados / AM'),
+('5619', '3', 'Vale Lucas Fogaa, 57
+Miramar
+68309-692 Ribeiro / RO'),
+('5620', '2', 'Morro de Caldeira, 5
+Jardim Guanabara
+78128038 Martins / PI'),
+('5621', '2', 'Colnia de Gomes
+Mangueiras
+72135380 das Neves dos Dourados / CE'),
+('5622', '3', 'Campo de Arajo, 89
+Cidade Jardim
+90918-432 Viana do Galho / GO'),
+('5623', '2', 'Fazenda de Monteiro, 50
+Alpio De Melo
+01165-842 Rezende / RJ'),
+('5624', '3', 'Favela de Fernandes, 41
+Graja
+37923933 da Cruz da Praia / AC'),
+('5625', '3', 'Jardim de Gonalves, 57
+Piraja
+90145901 Arago Verde / TO'),
+('5626', '2', 'Conjunto Arago, 352
+Alpes
+51295-333 Costela / DF'),
+('5627', '3', 'Recanto Carvalho, 41
+Grota
+55337-275 Lima do Oeste / RS'),
+('5628', '1', 'Ptio de Rezende, 729
+Cinquentenrio
+86259-622 Caldeira do Norte / SE'),
+('5629', '2', 'Travessa de Santos, 9
+Cnego Pinheiro 2 Seo
+39761-798 Nascimento / SE'),
+('5630', '5', 'Trecho Porto, 4
+Esplanada
+02600163 Fogaa do Oeste / RO'),
+('5631', '1', 'Aeroporto Duarte
+Pirineus
+04408-756 Costela da Praia / AP'),
+('5632', '5', 'Lago de Azevedo, 795
+Unidas
+21968299 da Mata / SP'),
+('5633', '5', 'Praa Freitas, 34
+Rio Branco
+93558010 Santos / SE'),
+('5634', '1', 'Vale da Cruz, 40
+Vila Trinta E Um De Maro
+64316455 Gonalves / MA'),
+('5635', '2', 'Campo Melissa Vieira, 50
+Dom Bosco
+79349619 Caldeira do Amparo / RN'),
+('5636', '1', 'Avenida Ceclia Rodrigues, 97
+Vila Da Luz
+48817122 Fernandes / SE'),
+('5637', '2', 'Campo Jlia Barbosa, 5
+Vila Dos Anjos
+34308-962 Cunha do Oeste / MG'),
+('5638', '3', 'Avenida Isaac Arajo, 116
+Vila Mantiqueira
+50276646 Oliveira do Norte / RO'),
+('5639', '4', 'Stio de Arago, 56
+So Benedito
+41348-838 Caldeira das Flores / MA'),
+('5640', '2', 'Esplanada Caio Cardoso, 13
+Vila Formosa
+69763026 Gomes / RS'),
+('5641', '2', 'Ptio Marcos Vinicius Azevedo
+Ipiranga
+40566073 Moraes / SE'),
+('5642', '5', 'Ptio de Correia, 4
+Mineiro
+04553536 Pires Paulista / SP'),
+('5643', '2', 'rea Ramos, 224
+Biquinhas
+62527766 Silveira / AP'),
+('5644', '1', 'Avenida de Ferreira, 31
+So Francisco
+36575-931 Martins / GO'),
+('5645', '2', 'Travessa Joo Lucas da Conceio, 99
+Vila Madre Gertrudes 2 Seo
+52273203 da Conceio do Campo / MG'),
+('5646', '1', 'Ncleo Stella Pereira, 22
+Vila Primeiro De Maio
+03505695 Azevedo / DF'),
+('5647', '3', 'Aeroporto de Ribeiro, 534
+Apolonia
+52614519 Campos / TO'),
+('5648', '5', 'Colnia de Vieira, 72
+Camponesa 2 Seo
+41123598 Lima / SP'),
+('5649', '2', 'Ladeira das Neves, 48
+Primeiro De Maio
+35350-344 Viana Verde / TO'),
+('5650', '2', 'Feira Camila Cavalcanti, 26
+Boa Unio 1 Seo
+01206594 Rezende de Jesus / RR'),
+('5651', '1', 'Via Cavalcanti, 216
+Petropolis
+77135349 Ribeiro das Pedras / PR'),
+('5652', '2', 'Rua Caroline Cunha
+Guarani
+04795334 Mendes da Mata / PA'),
+('5653', '5', 'Rodovia Eloah Mendes, 1
+Santa Rosa
+95279214 Peixoto Verde / MA'),
+('5654', '5', 'Stio Silveira, 927
+Bela Vitoria
+09262-649 Rocha / RO'),
+('5655', '3', 'Quadra da Mota, 7
+Vila Paquet
+64390700 Caldeira / RS'),
+('5656', '3', 'Condomnio Isadora Cardoso, 994
+Belvedere
+71598066 Cunha / RN'),
+('5657', '5', 'Distrito Barbosa, 1
+So Gabriel
+50680071 Moura / PA'),
+('5658', '4', 'Estao Gabrielly Farias, 5
+Paquet
+67664-950 Correia / AP'),
+('5659', '1', 'Jardim de da Rocha, 46
+Aaro Reis
+89128929 Arago / SC'),
+('5660', '2', 'Via Laura Alves, 2
+So Cristvo
+58920-844 da Cunha de Azevedo / MG'),
+('5661', '1', 'Trecho de Gonalves, 73
+Novo So Lucas
+62470882 Alves / SP'),
+('5662', '2', 'Favela Alcia Barros, 1
+Vila Da Amizade
+92140-996 Monteiro / GO'),
+('5663', '1', 'Praa Viana, 89
+Nova Pampulha
+19301-244 Lopes / PB'),
+('5664', '3', 'Lagoa da Mota
+Vila Batik
+44881-162 Teixeira / PE'),
+('5665', '3', 'Largo de Melo, 80
+Bonfim
+32473237 da Mata / AC'),
+('5666', '3', 'Trecho de da Conceio, 98
+Santo Agostinho
+38623-870 Almeida da Mata / AP'),
+('5667', '1', 'Rua de Caldeira, 55
+Vila Da Luz
+18818-805 Cunha / PB'),
+('5668', '1', 'Lagoa Carolina Cunha, 58
+Conjunto Paulo Vi
+80403021 Porto de Moraes / SC'),
+('5669', '4', 'Aeroporto Nunes, 24
+Cachoeirinha
+74633225 Pinto da Prata / PB'),
+('5670', '5', 'Favela de Teixeira
+Paraso
+09644309 Jesus do Norte / BA'),
+('5671', '1', 'Fazenda Barros
+Estrela
+80787366 Arago do Norte / MA'),
+('5672', '5', 'Ladeira de da Cruz, 33
+Cnego Pinheiro 1 Seo
+80099738 Fogaa de Ferreira / MT'),
+('5673', '4', 'Morro Vieira, 832
+Pindorama
+49930-934 Rodrigues / RR'),
+('5674', '4', 'Favela de Alves
+Nova Cachoeirinha
+13499-940 da Mata de Moraes / PR'),
+('5675', '2', 'Distrito de Campos, 14
+Vila Aeroporto Jaragu
+85688739 Sales de Rodrigues / AC'),
+('5676', '5', 'Viela de Teixeira
+Santa Efignia
+51310297 Santos / MS'),
+('5677', '5', 'Feira Castro, 4
+Vila Olhos 
+23504723 Arago / RS'),
+('5678', '5', 'Avenida Silva, 71
+Novo Ouro Preto
+92055181 da Rosa de Cardoso / AL'),
+('5679', '4', 'Condomnio Cavalcanti, 13
+Guarani
+10476-795 da Rocha / RS'),
+('5680', '4', 'Via Teixeira
+Vila Jardim So Jos
+67260-767 Silva / PB'),
+('5681', '4', 'Praa de da Rosa, 66
+Horto
+40643-278 da Cunha do Norte / ES'),
+('5682', '4', 'Colnia de Rezende, 4
+Madre Gertrudes
+42890-508 Pereira de Minas / RR'),
+('5683', '1', 'Stio de Silva, 20
+Maria Tereza
+18141142 Viana das Flores / AP'),
+('5684', '4', 'Vila da Paz, 46
+Vila Unio
+23242897 Melo de Costa / MS'),
+('5685', '3', 'Viaduto Lima, 98
+Outro
+26849153 Nunes / RS'),
+('5686', '3', 'Distrito Barbosa, 1
+So Tomaz
+95831247 da Rosa / AM'),
+('5687', '4', 'Rua de Ferreira, 598
+Monte Azul
+17003963 da Rosa Alegre / GO'),
+('5688', '3', 'Fazenda Freitas, 56
+Nova Cachoeirinha
+95285-984 Oliveira do Galho / PE'),
+('5689', '2', 'Estao de Ramos, 25
+So Cristvo
+75178-380 Silveira / PI'),
+('5690', '3', 'Trevo Ana Clara Nunes, 36
+Vila Madre Gertrudes 3 Seo
+71115072 Cunha / RO'),
+('5691', '5', 'Estrada Lucca Barros, 477
+Xangri-L
+06248752 Ferreira Alegre / GO'),
+('5692', '5', 'Chcara Ana Julia Correia, 26
+So Paulo
+58359-031 Carvalho de Pires / ES'),
+('5693', '5', 'Rua Martins, 3
+Maria Virgnia
+23282-647 Sales / PR'),
+('5694', '3', 'Praa Mariane Azevedo, 38
+Maria Tereza
+21531-060 da Mota / ES'),
+('5695', '1', 'Fazenda de Gonalves, 918
+Vila Da ria
+43954-247 Novaes / AC'),
+('5696', '5', 'Rodovia da Luz, 89
+Marola
+46330-899 Teixeira do Campo / AM'),
+('5697', '5', 'Rodovia Maria Clara Sales, 88
+Savassi
+50075261 Viana / RO'),
+('5698', '3', 'Residencial Barros, 90
+Confisco
+00736-012 Pires do Galho / PB'),
+('5699', '2', 'Loteamento Otvio da Cruz, 38
+So Jorge 1 Seo
+45727857 Oliveira do Sul / PB'),
+('5700', '2', 'Passarela Melo, 178
+Mineiro
+30912193 das Neves / DF'),
+('5701', '1', 'Largo Freitas
+Aeroporto
+09371050 Arajo do Oeste / MT'),
+('5702', '3', 'Estrada Alcia Lopes, 79
+Estoril
+04900411 Nogueira / RN'),
+('5703', '5', 'Feira de da Mata, 43
+Jardim Vitoria
+43586552 Vieira do Sul / PR'),
+('5704', '3', 'Estrada Francisco Lima
+Sagrada Famlia
+50095-517 da Costa do Oeste / PA'),
+('5705', '2', 'Conjunto de Barros, 36
+Boa Unio 1 Seo
+20116021 Ramos de Porto / MA'),
+('5706', '3', 'Praa Caldeira, 84
+Vila Nova Gameleira 1 Seo
+80219-423 Ribeiro / GO'),
+('5707', '1', 'Feira Nascimento, 467
+Saudade
+47961355 Rezende / MS'),
+('5708', '1', 'Feira de Pires, 335
+Vila Nossa Senhora Do Rosrio
+92779802 Sales / SP'),
+('5709', '3', 'Chcara Souza, 824
+Custodinha
+60280263 Correia / DF'),
+('5710', '5', 'Praa Enzo Gabriel da Paz
+Alto Das Antenas
+58750094 Cardoso / PB'),
+('5711', '5', 'Praia Azevedo, 81
+So Tomaz
+10152-834 Alves / PI'),
+('5712', '4', 'Favela Oliveira, 933
+Mangabeiras
+04981-376 Pinto / SP'),
+('5713', '3', 'Distrito Carvalho, 76
+Pompia
+70632-882 Gonalves Alegre / GO'),
+('5714', '5', 'Jardim Duarte, 16
+Acaba Mundo
+87641-562 Costela / MT'),
+('5715', '5', 'Feira Costa, 6
+Calafate
+39351-080 Fernandes / SP'),
+('5716', '2', 'Lago Monteiro, 2
+Jardim Alvorada
+14819681 da Costa Grande / AM'),
+('5717', '2', 'rea Alcia Ribeiro, 353
+So Marcos
+91807-168 Costela de Gois / RO'),
+('5718', '5', 'rea Valentina Jesus, 89
+Graa
+73466-825 Caldeira / PB'),
+('5719', '3', 'Avenida de Ferreira, 5
+Penha
+66687-936 da Rocha de Novaes / RO'),
+('5720', '3', 'Rodovia Peixoto, 39
+Brasil Industrial
+02075-444 Freitas do Sul / RR'),
+('5721', '3', 'Conjunto Isaac Sales
+Serra
+74522387 Silva da Mata / RO'),
+('5722', '2', 'Jardim de Jesus, 27
+Engenho Nogueira
+80950-450 Santos / MS'),
+('5723', '1', 'Ladeira de Viana
+Casa Branca
+59252-866 Souza / CE'),
+('5724', '4', 'Fazenda de Mendes
+Vila Aeroporto
+66905-392 Arago do Amparo / DF'),
+('5725', '4', 'Praia de Viana, 30
+Apolonia
+00777998 Duarte / CE'),
+('5726', '5', 'Largo Nascimento
+Boa Viagem
+61279732 Pires Verde / AM'),
+('5727', '5', 'Alameda de da Mota, 24
+Joo Pinheiro
+80981-134 da Rosa / PE'),
+('5728', '5', 'Ncleo Giovanna Rodrigues, 310
+Vila So Rafael
+33673-699 Mendes / AP'),
+('5729', '3', 'Lagoa Pinto, 3
+Joo Alfredo
+40901601 da Cruz do Galho / PE'),
+('5730', '4', 'Vila de Martins, 414
+Conjunto Novo Dom Bosco
+08863-279 da Paz da Mata / RR'),
+('5731', '2', 'Fazenda de da Paz, 83
+Vila Canto Do Sabi
+37034-053 Lopes de Santos / CE'),
+('5732', '1', 'Estao Brenda Silveira, 62
+Jaqueline
+89605747 Rodrigues / RR'),
+('5733', '4', 'Viela de da Conceio, 7
+So Paulo
+93455657 Rezende / MS'),
+('5734', '1', 'Parque Joana da Luz, 46
+Canaa
+04403255 Ramos / SC'),
+('5735', '5', 'Colnia da Costa, 75
+Santa Lcia
+70081900 da Mata da Praia / TO'),
+('5736', '2', 'rea Yasmin Lopes
+Jardim Atlntico
+33356-890 Lima / SP'),
+('5737', '5', 'Travessa Rocha, 42
+Prado
+09424-122 Freitas do Norte / TO'),
+('5738', '2', 'Favela Pedro Duarte, 227
+Buritis
+05187350 Dias de Rocha / RJ'),
+('5739', '3', 'Alameda Alexandre Ribeiro, 403
+Santa Cecilia
+83889-848 Porto / AP'),
+('5740', '3', 'Viela de Novaes, 279
+Vila Petropolis
+86113268 Alves / SE'),
+('5741', '5', 'Trecho de da Costa, 2
+Joo Alfredo
+65512-220 Castro / PE'),
+('5742', '3', 'Lago Nogueira, 822
+Alta Tenso 1 Seo
+22675-443 da Rosa de Azevedo / MS'),
+('5743', '4', 'Quadra Carolina Correia, 82
+Milionario
+88953-360 Cavalcanti / RS'),
+('5744', '1', 'Vale Bruna Campos, 77
+Vila Nova
+95984-222 Alves / BA'),
+('5745', '1', 'Condomnio Santos
+Beira Linha
+40044208 Oliveira da Praia / PE'),
+('5746', '5', 'Passarela Joo Miguel Arago
+Ipiranga
+64614-102 Novaes / SE'),
+('5747', '5', 'Condomnio Daniel Porto, 78
+Heliopolis
+79195182 Arajo / RR'),
+('5748', '2', 'Campo de Alves
+Ouro Preto
+79539557 Caldeira da Serra / SC'),
+('5749', '5', 'Avenida de Viana, 8
+Minas Caixa
+68140305 Costela do Galho / SC'),
+('5750', '3', 'Viaduto de Arago
+Santa Lcia
+74668925 Azevedo / MG'),
+('5751', '1', 'Morro das Neves
+So Luiz
+72193-556 Ramos de Farias / SC'),
+('5752', '2', 'Feira de Gomes, 3
+Sion
+50361-140 Duarte da Prata / MS'),
+('5753', '3', 'Vila Amanda Monteiro, 777
+Estoril
+89761801 Peixoto / CE'),
+('5754', '2', 'Setor Teixeira, 53
+Barro Preto
+22598-246 Moreira / PR'),
+('5755', '3', 'Viaduto Emanuella Ferreira, 73
+Madri
+95565-440 Oliveira de da Paz / RO'),
+('5756', '2', 'Jardim de Ramos
+Bela Vitoria
+00919-898 da Costa / MS'),
+('5757', '4', 'Praa Fernanda Nogueira, 3
+Tirol
+70144-703 Moreira de Gois / PR'),
+('5758', '3', 'Ncleo Freitas, 809
+So Jorge 1 Seo
+34427870 Viana do Galho / MA'),
+('5759', '4', 'Esplanada Gabrielly Lima, 52
+Bacurau
+44019-367 Cunha / TO'),
+('5760', '2', 'Quadra Souza, 38
+Unio
+09583161 Costela de Gonalves / PA'),
+('5761', '1', 'Viaduto Maria Luiza da Costa, 39
+Vila Jardim Montanhes
+27053-863 Carvalho / CE'),
+('5762', '3', 'Distrito de Ribeiro
+Novo Das Industrias
+98974-467 Farias de Santos / MA'),
+('5763', '2', 'Largo Leonardo Lima, 5
+Europa
+73765385 Correia do Amparo / ES'),
+('5764', '5', 'Chcara Nogueira, 3
+Vila Engenho Nogueira
+16916-890 Cardoso da Prata / MT'),
+('5765', '4', 'Praia de Barros, 712
+Santo Antnio
+39205-795 Cardoso / DF'),
+('5766', '5', 'Estao Pires, 299
+Boa Esperana
+70483681 Dias Paulista / PA'),
+('5767', '4', 'Loteamento Rafael Rocha, 83
+Vila Primeiro De Maio
+35019-625 Cardoso de Jesus / RS'),
+('5768', '2', 'Stio Monteiro, 32
+Betnia
+29353-286 Porto / MT'),
+('5769', '1', 'Condomnio Ana Lvia Vieira, 161
+Luxemburgo
+81129615 Lima / AM'),
+('5770', '4', 'Ncleo Cunha, 2
+Granja De Freitas
+05055017 Barbosa / MG'),
+('5771', '2', 'Setor Luna Moura, 90
+Carlos Prates
+68363-967 Moreira de Gois / MA'),
+('5772', '1', 'Condomnio de Lima, 71
+Lagoa
+07947-297 Cunha do Campo / BA'),
+('5773', '1', 'Quadra da Mata, 982
+Maria Goretti
+27472-367 Nunes / RS'),
+('5774', '1', 'Esplanada Nascimento, 12
+Lagoinha Leblon
+21017622 Carvalho do Oeste / MT'),
+('5775', '1', 'Viela Correia, 9
+Cnego Pinheiro 2 Seo
+78215-938 Costa / AM'),
+('5776', '1', 'Ncleo Novaes, 582
+Vila Das Oliveiras
+07005340 Dias Paulista / MG'),
+('5777', '4', 'Parque da Costa, 77
+Aguas Claras
+17403375 Ribeiro / SC'),
+('5778', '5', 'Vale Moraes, 37
+Vila Suzana Primeira Seo
+72773260 Cunha / MA'),
+('5779', '5', 'Distrito de Porto, 1
+Silveira
+08404759 Lopes do Oeste / RJ'),
+('5780', '4', 'Rodovia Arago, 28
+Itapoa
+78929-074 Duarte / SE'),
+('5781', '2', 'Estao Kaique Carvalho, 68
+Comiteco
+72653-453 Barros / SE'),
+('5782', '4', 'Travessa Arago, 32
+Engenho Nogueira
+01963214 Lima / CE'),
+('5783', '1', 'rea de Pires, 80
+Varzea Da Palma
+01609806 da Paz / PA'),
+('5784', '2', 'Ncleo Gustavo da Luz, 1
+Granja Werneck
+76406702 Vieira / TO'),
+('5785', '3', 'Morro Joo Lucas da Cunha, 795
+Vila Olhos 
+18269121 Lopes / PA'),
+('5786', '4', 'Lago de da Paz
+Vila Da ria
+45587354 Rezende / GO'),
+('5787', '3', 'Stio de da Rocha, 60
+Vila Fumec
+62795189 Arago da Serra / RS'),
+('5788', '2', 'Vereda Bernardo Costela, 521
+Jatob
+90865824 Farias / MS'),
+('5789', '2', 'Aeroporto da Rocha
+So Vicente
+07667519 Viana / TO'),
+('5790', '2', 'Ladeira Kevin Farias, 32
+Santo Agostinho
+31696186 Barros do Sul / TO'),
+('5791', '4', 'Ptio Camila Rocha, 38
+Carmo
+55149-073 Nunes de Minas / RJ'),
+('5792', '3', 'Condomnio de Barbosa, 2
+Serra
+58027-769 da Cunha / PR'),
+('5793', '1', 'Vereda Maria Dias, 10
+Ribeiro De Abreu
+59787419 Moreira do Galho / DF'),
+('5794', '1', 'Rua de Mendes, 597
+Jardim Vitoria
+61534630 Alves de Costela / PA'),
+('5795', '3', 'Trecho Nascimento, 23
+Camargos
+88418-071 Sales Grande / TO'),
+('5796', '5', 'Ladeira Nicole Duarte, 11
+Conjunto Floramar
+41791645 da Mata de Novaes / ES'),
+('5797', '3', 'Via de da Rocha, 473
+Pantanal
+23596192 Sales / DF'),
+('5798', '2', 'Quadra Maria Ceclia Dias, 75
+Jardinpolis
+61964-394 Monteiro / RO'),
+('5799', '2', 'Praia Joaquim Arajo, 7
+Lourdes
+53390907 Pires / BA'),
+('5800', '4', 'Lagoa Lopes, 812
+Itaipu
+41608-102 Cardoso das Flores / TO'),
+('5801', '3', 'Viela Barros, 240
+Vale Do Jatoba
+66903-699 Fogaa do Norte / RS'),
+('5802', '3', 'Ptio Isadora Fogaa, 629
+Jardim Amrica
+02584-600 Vieira / MA'),
+('5803', '5', 'Travessa Fernandes, 18
+Estrela Do Oriente
+36432057 Moreira do Oeste / RN'),
+('5804', '5', 'Esplanada Amanda Rodrigues, 23
+So Benedito
+56098244 Ferreira / ES'),
+('5805', '3', 'Esplanada de Carvalho, 88
+Flavio De Oliveira
+50709-320 Gonalves / MG'),
+('5806', '2', 'Vereda Davi Vieira, 9
+Maria Virgnia
+20795217 Moura / AM'),
+('5807', '4', 'Rua de Campos, 3
+Ipe
+38475-033 Pires / AP'),
+('5808', '3', 'Trevo Isaac da Cruz, 48
+Alpio De Melo
+37170-221 Martins / CE'),
+('5809', '2', 'Lago de Jesus, 79
+Conjunto So Francisco De Assis
+97970-389 da Mota / AC'),
+('5810', '3', 'Quadra Ceclia Novaes, 6
+Vila So Geraldo
+75595-963 Ramos / MG'),
+('5811', '2', 'Parque de Cunha, 9
+Alta Tenso 1 Seo
+74418331 Rezende / MG'),
+('5812', '4', 'Parque Ana Laura Ribeiro, 74
+Santa Margarida
+89804-192 Fernandes / AP'),
+('5813', '5', 'Ncleo Juan da Rocha, 52
+Vila Calafate
+37704315 Teixeira do Galho / SP'),
+('5814', '5', 'Viela Joo Vitor Santos, 232
+Jardim Montanhs
+73082024 Porto / MG'),
+('5815', '3', 'Ladeira de Cardoso, 1
+Pirineus
+64682-634 Santos / RO'),
+('5816', '3', 'Jardim Almeida
+Tupi A
+29547-173 da Costa do Amparo / MG'),
+('5817', '3', 'Largo Santos, 55
+Diamante
+67714923 Costela Alegre / SE'),
+('5818', '2', 'Morro Rafael Moraes, 77
+So Bernardo
+45533599 Carvalho / CE'),
+('5819', '4', 'Viaduto de Costa, 34
+Baro Homem De Melo 1 Seo
+16499-349 Duarte de da Mata / BA'),
+('5820', '1', 'Colnia Fogaa, 92
+Vila Batik
+99839238 Moraes da Praia / RS'),
+('5821', '3', 'Quadra Sales, 24
+Vila Nova Gameleira 2 Seo
+03302-131 Peixoto / PI'),
+('5822', '1', 'Esplanada Ana Carolina Cardoso, 65
+Miramar
+46202-470 da Conceio do Amparo / AM'),
+('5823', '5', 'Aeroporto de Cardoso, 534
+Laranjeiras
+45817-425 Fernandes de Duarte / AC'),
+('5824', '2', 'Ladeira Souza, 89
+Novo Tupi
+69845577 Novaes / PA'),
+('5825', '5', 'Vila da Rosa, 78
+Chcara Leonina
+92840-273 Gonalves de Freitas / RS'),
+('5826', '2', 'Parque Maria Vitria Moreira, 12
+Nova Cachoeirinha
+15863229 Campos de Cardoso / RJ'),
+('5827', '5', 'Favela de Ribeiro, 541
+Nossa Senhora Aparecida
+90949293 Vieira / MS'),
+('5828', '1', 'Rua Mendes, 72
+Nova Esperana
+56623525 Cavalcanti / MG'),
+('5829', '5', 'Feira Duarte, 484
+Palmeiras
+98085-330 Monteiro / RR'),
+('5830', '5', 'Chcara da Costa, 549
+Cu Azul
+15350-466 da Mota de Pereira / RO'),
+('5831', '2', 'Morro Gustavo Santos, 22
+Ademar Maldonado
+03036-325 Pires / PR'),
+('5832', '2', 'Vale de Alves, 98
+Carlos Prates
+27161-735 Peixoto Verde / SC'),
+('5833', '5', 'Vale Leandro Pereira
+Parque So Jos
+36932-556 Rezende do Sul / RN'),
+('5834', '1', 'Estrada Nascimento, 96
+Rio Branco
+91381728 Pires das Pedras / SE'),
+('5835', '1', 'Lago da Mata, 2
+Ouro Preto
+81296752 Gonalves de Fernandes / RR'),
+('5836', '2', 'Viaduto de da Paz, 64
+Sport Club
+60578-769 Gonalves de Almeida / DF'),
+('5837', '5', 'Trecho Luana Monteiro, 6
+Floramar
+43449-341 Ramos / MG'),
+('5838', '2', 'Conjunto de Porto, 1
+Floresta
+26069667 da Mota / TO'),
+('5839', '4', 'Loteamento Henrique Oliveira, 2
+Frei Leopoldo
+91954-770 Lima do Galho / SC'),
+('5840', '3', 'Residencial de Azevedo, 247
+Santa Rita
+19910738 Rodrigues de Cavalcanti / PA'),
+('5841', '1', 'Conjunto Fogaa, 75
+Vila Da Amizade
+40709872 Teixeira / MA'),
+('5842', '5', 'Estao Maria Eduarda Cardoso, 51
+Nossa Senhora Do Rosrio
+89100-772 Carvalho do Amparo / AC'),
+('5843', '4', 'Rodovia de Pereira
+Nossa Senhora Aparecida
+01106-991 Almeida / AM'),
+('5844', '2', 'rea Stephany Duarte
+Castanheira
+43151-333 Caldeira de Almeida / MS'),
+('5845', '5', 'Avenida Vitor Gabriel Novaes, 30
+Belvedere
+38960-691 da Paz do Galho / DF'),
+('5846', '4', 'Travessa Agatha Farias, 82
+Vila Nova Dos Milionarios
+65092280 Vieira / RJ'),
+('5847', '4', 'Rua Melissa Novaes
+Vila Aeroporto
+63351553 Gonalves / MA'),
+('5848', '3', 'Setor Fernandes
+Silveira
+31711-770 Cardoso / AL'),
+('5849', '1', 'Viela de Campos, 69
+Dom Bosco
+59780977 Campos de Moraes / SP'),
+('5850', '3', 'Esplanada Maria Vitria Pinto, 193
+Santa Ins
+66843390 da Cunha do Amparo / AC'),
+('5851', '2', 'rea de Pinto, 446
+Taquaril
+04208-959 Costa / RJ'),
+('5852', '4', 'Residencial Diogo da Conceio, 82
+Horto
+89761073 das Neves / AL'),
+('5853', '3', 'Lagoa Nascimento, 774
+Monte Azul
+80671-944 Costela / PB'),
+('5854', '3', 'Recanto Ana Vitria Ramos, 56
+Ouro Preto
+59105-331 Nogueira / TO'),
+('5855', '3', 'Largo de da Conceio, 57
+Vila Madre Gertrudes 4 Seo
+42137-734 Lima Paulista / AL'),
+('5856', '4', 'Feira Vicente Martins, 4
+Castelo
+72636-302 Porto de Castro / TO'),
+('5857', '3', 'Rua de da Rocha, 872
+Nossa Senhora De Ftima
+90953-562 da Cruz do Amparo / AL'),
+('5858', '4', 'Loteamento Maria Julia Barros, 13
+Santa Margarida
+37849-268 Carvalho / PE'),
+('5859', '2', 'Viela de das Neves, 16
+Vila Santa Monica 2 Seo
+43232670 Cunha / AL'),
+('5860', '1', 'Morro Lvia Freitas, 909
+Cnego Pinheiro 1 Seo
+34300552 da Paz / PA'),
+('5861', '4', 'Lagoa Lucas Ramos, 20
+Betnia
+90781829 Oliveira / CE'),
+('5862', '2', 'Largo de Costela, 924
+Rio Branco
+67550-283 Mendes de Pinto / RJ'),
+('5863', '4', 'Via Rocha
+Aparecida
+20931-802 Peixoto de Viana / PI'),
+('5864', '2', 'Feira Letcia da Mata, 893
+Marieta 2 Seo
+51671429 Caldeira de Minas / MT'),
+('5865', '1', 'Recanto Luiza da Rocha, 8
+Chcara Leonina
+90467-641 Moraes / BA'),
+('5866', '3', 'rea Moraes, 84
+Vila Piratininga Venda Nova
+54795004 da Rosa / RJ'),
+('5867', '5', 'Rodovia Moraes, 87
+Dom Bosco
+95093-355 Viana do Galho / BA'),
+('5868', '2', 'Chcara de da Cruz, 7
+Zilah Sposito
+17854-491 Gonalves / PR'),
+('5869', '3', 'Recanto de Ribeiro, 204
+Vila So Joo Batista
+88272882 Cunha do Amparo / PR'),
+('5870', '4', 'Feira Jlia Moura, 88
+Horto
+54949-104 Sales / SE'),
+('5871', '3', 'Travessa Daniela Freitas, 66
+Vila Ouro Minas
+75718-957 Almeida de Minas / PI'),
+('5872', '3', 'Alameda Viana
+Santa Ins
+50492057 Silveira Alegre / RO'),
+('5873', '4', 'Lago Moreira, 9
+Marmiteiros
+79637-274 Mendes Paulista / MA'),
+('5874', '4', 'Colnia Nunes, 84
+So Geraldo
+78971862 Ferreira da Mata / TO'),
+('5875', '3', 'Lagoa Viana, 35
+Nossa Senhora Da Aparecida
+28283-306 da Rocha do Campo / MT'),
+('5876', '3', 'Avenida Nogueira, 18
+Hava
+38923-594 Silva / PA'),
+('5877', '5', 'Recanto Arajo, 376
+Guarani
+93022944 Costa de Gomes / RR'),
+('5878', '5', 'Vale Silveira, 48
+Conjunto Lagoa
+34284-700 Almeida de Gois / MG'),
+('5879', '3', 'Parque Cunha, 7
+Jardim Alvorada
+30021-373 Gonalves / AL'),
+('5880', '2', 'Viaduto Barbosa
+Jardim Felicidade
+06953-934 Moreira de Lopes / BA'),
+('5881', '2', 'rea de Barbosa, 7
+Pousada Santo Antonio
+88618068 Novaes de Pires / AM'),
+('5882', '5', 'Vale de Teixeira
+Santa Amelia
+97281244 Moraes / PR'),
+('5883', '1', 'Ptio Azevedo, 4
+Santa Cecilia
+76743-505 Pereira do Amparo / MT'),
+('5884', '2', 'Ptio Carvalho, 13
+Cidade Jardim Taquaril
+83355035 Rezende / PR'),
+('5885', '3', 'Praia de Pereira, 101
+Mirante
+78797-310 Moraes / RR'),
+('5886', '1', 'Chcara da Cruz, 282
+Apolonia
+23691-525 Mendes do Sul / GO'),
+('5887', '3', 'Fazenda de Gomes, 62
+Santa Cecilia
+40907-238 da Paz Grande / PE'),
+('5888', '1', 'Viela de Peixoto, 59
+Vila Aeroporto
+22870459 Fernandes / PI'),
+('5889', '1', 'Colnia Rocha, 1
+Corao De Jesus
+79851474 Cunha de Teixeira / MA'),
+('5890', '5', 'Campo de da Conceio, 784
+Fazendinha
+18719-455 Costela / GO'),
+('5891', '1', 'Aeroporto Joo Guilherme Gomes, 88
+Pindorama
+61149-118 Pinto do Galho / MT'),
+('5892', '1', 'Jardim de Lima, 93
+Paulo Vi
+47565120 Dias / AP'),
+('5893', '2', 'Trevo de Costa, 25
+Alpes
+55832906 Farias da Praia / ES'),
+('5894', '3', 'Ptio Barros, 96
+Parque So Jos
+04787-196 Gonalves de da Rosa / DF'),
+('5895', '5', 'Jardim Sofia Pires, 81
+Nazare
+37501-816 Novaes / TO'),
+('5896', '1', 'Residencial Pedro Carvalho, 461
+Flamengo
+47229426 Rocha / PR'),
+('5897', '3', 'Parque Pietra Novaes, 89
+Tupi B
+68241-621 Gonalves de Minas / PR'),
+('5898', '1', 'Lagoa Rezende, 424
+Lagoa
+59661362 Pires Grande / CE'),
+('5899', '5', 'Estrada Ribeiro, 50
+Itatiaia
+69559-085 Moraes / AL'),
+('5900', '3', 'Favela Sophie Novaes, 758
+Vila Ecolgica
+25978555 Cunha do Galho / MT'),
+('5901', '2', 'Recanto da Cunha
+Cidade Jardim
+23298143 Souza das Flores / PI'),
+('5902', '3', 'Aeroporto Carlos Eduardo Peixoto, 57
+Vila Mantiqueira
+17534-709 Arago da Mata / SC'),
+('5903', '2', 'Ncleo Isabelly Novaes, 18
+Vila De S
+93807-419 Barros dos Dourados / RS'),
+('5904', '3', 'Recanto Martins, 3
+Vila Jardim So Jos
+12627733 Campos de Pires / CE'),
+('5905', '3', 'Lago Rafael da Costa, 641
+Minaslandia
+92192-676 Cunha Grande / AM'),
+('5906', '1', 'Residencial Lara Rocha, 7
+Sion
+66526862 Melo da Mata / AP'),
+('5907', '4', 'Rua Barros, 1
+Lorena
+83162563 Monteiro de Minas / PB'),
+('5908', '3', 'Residencial Igor Correia, 486
+Itatiaia
+59374-881 da Conceio / SP'),
+('5909', '4', 'Ladeira de Cardoso
+Unidas
+45379-879 Costa da Serra / AM'),
+('5910', '1', 'Fazenda Vieira, 57
+Ventosa
+75256498 Caldeira de Nogueira / AM'),
+('5911', '1', 'Esplanada Matheus Carvalho, 48
+Goiania
+24221296 Arajo do Galho / RS'),
+('5912', '2', 'Conjunto de Jesus, 3
+Vila Independencia 3 Seo
+16979649 Souza / GO'),
+('5913', '5', 'rea Eduarda Gomes
+So Jos
+53081-649 Cardoso / RR'),
+('5914', '3', 'Viela Moraes
+Vila Nova Gameleira 1 Seo
+72743808 da Rocha de Minas / MS'),
+('5915', '1', 'Condomnio Amanda Novaes, 73
+Saudade
+98443073 Gomes da Prata / BA'),
+('5916', '2', 'Estrada de Pires, 53
+Rio Branco
+48991246 Lopes da Prata / DF'),
+('5917', '5', 'Trecho de Oliveira, 26
+Parque So Jos
+15230777 Jesus da Praia / PB'),
+('5918', '2', 'Estrada de Arajo, 9
+Vila Cloris
+02059587 Vieira / AL'),
+('5919', '1', 'Residencial Alves
+Conjunto Novo Dom Bosco
+40326438 Novaes do Norte / MA'),
+('5920', '3', 'Condomnio Moura, 12
+Vila Santo Antnio Barroquinha
+98834-017 Ribeiro da Praia / DF'),
+('5921', '5', 'Ncleo Ribeiro, 57
+Prado
+42404-779 Lopes / PA'),
+('5922', '4', 'Viela Elisa da Luz, 41
+Etelvina Carneiro
+36272-073 Gonalves / PA'),
+('5923', '1', 'Largo de Ferreira, 30
+Ipe
+07658590 Duarte / PA'),
+('5924', '2', 'Colnia Peixoto, 4
+Vila Rica
+46656-785 Fernandes Paulista / PR'),
+('5925', '3', 'Aeroporto de Novaes, 19
+Copacabana
+80078-177 da Costa / AM'),
+('5926', '4', 'Praia Cardoso, 12
+Vila Santa Monica 1 Seo
+02684-929 Carvalho / MG'),
+('5927', '1', 'Conjunto Nicolas Novaes, 52
+Guarat
+44889172 Gomes dos Dourados / PB'),
+('5928', '2', 'Esplanada Maria Eduarda Barros, 70
+Madri
+12679-838 Caldeira da Serra / SE'),
+('5929', '2', 'Via de Barros, 65
+Ipiranga
+64318345 Lopes / RJ'),
+('5930', '5', 'Largo Fernanda Cardoso, 882
+Cardoso
+53985800 Castro / AC'),
+('5931', '1', 'rea Joo Pedro Cavalcanti, 20
+Granja De Freitas
+56869235 Rezende Verde / RS'),
+('5932', '1', 'Favela Costa, 285
+Solimoes
+75416-468 Lopes / RN'),
+('5933', '3', 'rea de Arajo, 62
+Vila Boa Vista
+87733312 Duarte / RN'),
+('5934', '5', 'Feira de da Mota, 8
+Tres Marias
+47369-360 Moura / AP'),
+('5935', '4', 'Praia Nathan Alves, 2
+Vila Aeroporto Jaragu
+60744724 Martins / PE'),
+('5936', '2', 'Ladeira Peixoto, 8
+Conjunto Novo Dom Bosco
+32271893 Moraes / ES'),
+('5937', '3', 'Campo Alice Ferreira, 44
+Paulo Vi
+69727-141 Porto / AC'),
+('5938', '2', 'Viaduto Alice Monteiro, 5
+Conjunto So Francisco De Assis
+38960-862 Nogueira / SE'),
+('5939', '3', 'Residencial Cunha
+Vila Nova Dos Milionarios
+43762809 Ramos / PI'),
+('5940', '4', 'Trevo Rezende, 72
+So Marcos
+02875348 Barros / AC'),
+('5941', '2', 'Via Leandro Cardoso, 2
+Jardim Atlntico
+47906-433 Monteiro das Pedras / PA'),
+('5942', '3', 'Lagoa Antnio Azevedo, 84
+Santo Agostinho
+77078041 da Conceio Grande / RJ'),
+('5943', '4', 'Estao Nogueira, 59
+Santa Helena
+19650443 das Neves / BA'),
+('5944', '5', 'Vila Ferreira, 2
+Conjunto Serra Verde
+73283-145 Arajo / RO'),
+('5945', '1', 'Via Lavnia da Luz, 68
+So Joo
+93827443 Sales do Norte / MS'),
+('5946', '2', 'Chcara Larissa Martins, 20
+Jardim Leblon
+73798-031 Viana de Gois / AL'),
+('5947', '3', 'Setor de da Mota, 8
+Teixeira Dias
+16140723 Silva Verde / MT'),
+('5948', '3', 'Avenida de Azevedo, 35
+Ouro Minas
+30429-251 Fernandes do Campo / PA'),
+('5949', '3', 'Rodovia Nunes, 74
+Pantanal
+88241-693 Pinto da Serra / DF'),
+('5950', '3', 'rea Luiz Miguel da Rocha
+Nova Granada
+14592226 Castro / CE'),
+('5951', '2', 'Vale Amanda Rodrigues, 5
+Leticia
+31543-053 Rocha do Amparo / PE'),
+('5952', '3', 'Vereda Ramos, 397
+Boa Viagem
+99860-117 da Rocha / AP'),
+('5953', '3', 'Lago da Costa, 85
+Coqueiros
+44392006 Nogueira do Amparo / MS'),
+('5954', '3', 'Largo Caldeira, 86
+Horto
+25788-154 Duarte dos Dourados / SC'),
+('5955', '3', 'Estao Thales Viana, 1
+Vila Hava
+88658-719 Oliveira / PR'),
+('5956', '2', 'Ncleo de da Cruz, 78
+Vila Rica
+56253057 da Cunha / GO'),
+('5957', '4', 'Parque de Farias, 58
+Granja Werneck
+33452-486 da Rocha / PR'),
+('5958', '2', 'Passarela Porto, 50
+Venda Nova
+71418539 Campos da Praia / PA'),
+('5959', '4', 'Conjunto de Viana, 65
+Vila Mantiqueira
+94500-419 Gonalves / BA'),
+('5960', '4', 'Lago Rezende, 10
+Vila Da Luz
+31836-312 Teixeira de Gomes / AM'),
+('5961', '2', 'Loteamento Martins, 8
+Vila Cemig
+24059089 Cunha / BA'),
+('5962', '1', 'Recanto de da Costa, 25
+Aeroporto
+87634-161 da Rosa / MS'),
+('5963', '4', 'Morro de Rocha, 959
+Vila Boa Vista
+65440-818 Jesus das Flores / MS'),
+('5964', '4', 'Ladeira Nicolas da Rosa, 47
+Biquinhas
+82997128 Moreira / AL'),
+('5965', '3', 'rea Rocha, 2
+Vila Petropolis
+00003-648 Gonalves da Mata / PE'),
+('5966', '4', 'Conjunto Thomas Peixoto, 5
+Graja
+14709-142 Farias Verde / RN'),
+('5967', '4', 'Travessa Joana Alves, 3
+Palmeiras
+21310025 Caldeira / PR'),
+('5968', '3', 'Residencial Nascimento, 28
+Mariano De Abreu
+82523-783 Correia de da Conceio / RN'),
+('5969', '2', 'Lago Barros, 496
+Vila Nova Gameleira 1 Seo
+12948-732 Mendes de Correia / SE'),
+('5970', '5', 'Rua Alcia Pinto, 18
+Castelo
+90024-937 Teixeira da Mata / AC'),
+('5971', '1', 'Residencial Melissa Ramos, 21
+Novo Tupi
+10648-456 Vieira de Moreira / SC'),
+('5972', '1', 'Lagoa de Vieira, 351
+Jardim Leblon
+01262632 Moreira Alegre / CE'),
+('5973', '4', 'Chcara Cavalcanti, 82
+Vera Cruz
+40673-371 Nunes / TO'),
+('5974', '1', 'Passarela Igor Santos, 1
+Lagoa
+30398-127 Carvalho / AC'),
+('5975', '1', 'Stio Alexia Nunes
+Sion
+66759-686 da Mota de Fernandes / MS'),
+('5976', '2', 'Passarela de Moraes
+Conjunto Lagoa
+90892871 Alves de Farias / RJ'),
+('5977', '1', 'Fazenda de Jesus, 86
+Pompia
+22573514 Duarte de Ferreira / AC'),
+('5978', '2', 'Morro da Cunha, 583
+Petropolis
+88292-332 Cunha da Mata / RS'),
+('5979', '3', 'Colnia Letcia Dias, 48
+Estoril
+50795-562 Campos / RO'),
+('5980', '1', 'Travessa Nascimento
+Ipe
+95784990 Gonalves / MG'),
+('5981', '5', 'Vila das Neves
+Nova Cintra
+56038-811 Lopes de Gois / RS'),
+('5982', '4', 'Ncleo Rocha, 8
+Venda Nova
+31493-878 Moura / CE'),
+('5983', '2', 'Parque de Jesus
+Santa Rosa
+99350-455 Rezende de Rodrigues / MA'),
+('5984', '1', 'Praia Arajo, 88
+Morro Dos Macacos
+04082835 Carvalho / AL'),
+('5985', '3', 'Fazenda de Costa
+So Jorge 3 Seo
+76342-700 Souza / PE'),
+('5986', '5', 'Residencial Francisco Barros, 34
+Campo Alegre
+72562-774 Pinto / RS'),
+('5987', '3', 'rea da Mata, 742
+Caiaras
+29791763 Cavalcanti da Mata / TO'),
+('5988', '3', 'Ptio Raul Jesus, 372
+Vila Engenho Nogueira
+35943006 Monteiro / AL'),
+('5989', '3', 'Fazenda Clara Costa, 73
+Flamengo
+66241544 Viana da Prata / MA'),
+('5990', '1', 'Stio da Cunha, 64
+Delta
+51643272 da Rocha do Oeste / MA'),
+('5991', '1', 'Estrada da Conceio
+Minas Caixa
+47369-236 da Rosa / RS'),
+('5992', '4', 'Alameda Maria Alice Duarte, 26
+Goiania
+46623845 Jesus / RJ'),
+('5993', '5', 'Distrito Clarice das Neves, 4
+Andiroba
+28935-855 Rocha dos Dourados / AC'),
+('5994', '3', 'rea da Rocha, 98
+Unio
+52766-817 Arago / MT'),
+('5995', '4', 'Travessa de da Cunha
+Conjunto So Francisco De Assis
+78746-822 Ribeiro / SE'),
+('5996', '5', 'Fazenda Davi Lucas Fogaa, 71
+Vila Maria
+97667-984 da Mata do Galho / AC'),
+('5997', '1', 'Vale da Mata, 21
+Maravilha
+86067571 da Costa / RJ'),
+('5998', '5', 'Ptio Nascimento, 74
+Cardoso
+12403236 Pereira das Pedras / BA'),
+('5999', '2', 'Trecho Gabrielly Martins, 9
+Santana Do Cafezal
+01852255 Farias / PI'),
+('6000', '2', 'Viaduto Correia, 2
+Vila So Geraldo
+85286210 Cardoso Alegre / BA'),
+('6001', '2', 'Ladeira de Cardoso, 3
+Monte Azul
+54705-668 Cardoso de da Conceio / MT'),
+('6002', '1', 'Aeroporto de Duarte
+Cardoso
+15159654 Moreira da Mata / RO'),
+('6003', '1', 'Morro Costela, 68
+Granja De Freitas
+44772-916 Freitas do Galho / SE'),
+('6004', '3', 'Rodovia de Gonalves, 93
+Santo Agostinho
+17658-523 Cavalcanti / TO'),
+('6005', '5', 'Vila Costa, 77
+Anchieta
+59812815 Costa de Jesus / AC'),
+('6006', '4', 'Quadra Joaquim Cavalcanti, 1
+Confisco
+95062-869 Moraes Verde / AM'),
+('6007', '2', 'Quadra de Azevedo, 1
+Vila Nova Cachoeirinha 1 Seo
+71817-254 Nunes de Rezende / MG'),
+('6008', '3', 'Estrada de Porto, 7
+Santo Andr
+04814-016 Dias das Pedras / GO'),
+('6009', '3', 'Rodovia Raul Campos
+Paquet
+31520-710 Gonalves / MS'),
+('6010', '3', 'Morro Nascimento, 14
+Branas
+60722914 Rezende Alegre / PA'),
+('6011', '3', 'Condomnio de da Luz, 64
+Ventosa
+03934-931 Freitas / SP'),
+('6012', '2', 'Fazenda Campos, 40
+Sion
+62277-654 Novaes das Pedras / AP'),
+('6013', '4', 'Praia de Cavalcanti, 84
+Vila Nova Dos Milionarios
+20274463 Duarte / RN'),
+('6014', '5', 'Chcara Duarte, 588
+Morro Dos Macacos
+04022915 Martins Paulista / BA'),
+('6015', '3', 'Alameda Bencio Caldeira, 77
+Baro Homem De Melo 1 Seo
+35264-749 da Luz de Moreira / RR'),
+('6016', '2', 'Rodovia Breno Nascimento, 73
+Horto Florestal
+53942569 Sales / PE'),
+('6017', '4', 'Aeroporto de Viana, 192
+Alto Vera Cruz
+69037292 da Mata de Carvalho / RO'),
+('6018', '3', 'Passarela Diogo Cardoso, 93
+Beira Linha
+98411318 Fernandes da Prata / AM'),
+('6019', '1', 'Esplanada Carolina Santos, 735
+Candelaria
+63084-327 Pires do Oeste / SE'),
+('6020', '1', 'Conjunto Lima
+Lorena
+30430474 Fogaa / MG'),
+('6021', '4', 'Ladeira de Rodrigues, 484
+Camponesa 1 Seo
+14319444 Viana / RN'),
+('6022', '5', 'Fazenda Bruna Pinto, 46
+Etelvina Carneiro
+32502422 Mendes / MA'),
+('6023', '4', 'Alameda Maysa Cavalcanti, 69
+Apolonia
+69593-706 Carvalho de da Conceio / MA'),
+('6024', '3', 'Loteamento Fernandes, 27
+Vitoria
+07148924 Teixeira do Sul / AL'),
+('6025', '1', 'Largo de Rodrigues, 21
+Bonfim
+11805-435 Barros / SP'),
+('6026', '4', 'Alameda de Melo, 83
+Cinquentenrio
+87147712 Monteiro / DF'),
+('6027', '3', 'Viela Porto, 4
+Gutierrez
+30543-480 Silva / DF'),
+('6028', '4', 'Colnia Daniel da Costa, 30
+So Damio
+22411-027 Martins Grande / MT'),
+('6029', '5', 'Recanto Santos
+Marilandia
+62628-760 da Mota Verde / RN'),
+('6030', '5', 'Vereda Pietra Ferreira, 407
+Floramar
+37494-922 Pinto dos Dourados / AL'),
+('6031', '5', 'Jardim da Rocha, 2
+Indai
+39299-621 Cardoso / MA'),
+('6032', '1', 'Condomnio de Pinto, 71
+Calafate
+02746694 da Paz de Martins / MA'),
+('6033', '1', 'Trevo Marina da Mata, 2
+Conjunto Califrnia Ii
+95713-211 Carvalho de Carvalho / ES'),
+('6034', '3', 'Trecho Rodrigues, 911
+Vila Jardim Montanhes
+65415811 Farias / CE'),
+('6035', '3', 'Trecho Bernardo Ferreira, 28
+Custodinha
+57116-356 Fogaa dos Dourados / RN'),
+('6036', '1', 'Colnia Fogaa, 47
+Vila Nova Dos Milionarios
+71790-934 Ribeiro / GO'),
+('6037', '4', 'Stio Ian Fogaa, 99
+Bonsucesso
+64024-152 Monteiro do Campo / PE'),
+('6038', '1', 'Loteamento de Rezende
+Vila De S
+02359406 Vieira / PR'),
+('6039', '3', 'Esplanada Campos, 97
+Minas Brasil
+11243-886 Nunes / SP'),
+('6040', '2', 'Estao Davi Lucas Silva, 82
+Eymard
+89642422 Melo do Campo / SE'),
+('6041', '1', 'Largo de da Rosa, 3
+Buraco Quente
+64606697 da Mata do Galho / AP'),
+('6042', '5', 'Colnia Isaac Cardoso
+Jardim Felicidade
+47027-259 Lima / TO'),
+('6043', '5', 'Conjunto Novaes, 30
+Nova Floresta
+41401-686 Ribeiro da Prata / AC'),
+('6044', '3', 'Campo Almeida, 21
+Santa Tereza
+07419-305 da Luz da Prata / GO'),
+('6045', '4', 'Parque Gonalves, 79
+Corumbiara
+77053-138 Porto / AP'),
+('6046', '2', 'Parque de Gomes, 30
+So Cristvo
+25282554 Ferreira / PB'),
+('6047', '4', 'Morro Ana Julia Monteiro
+Varzea Da Palma
+67089-837 das Neves da Praia / PE'),
+('6048', '3', 'Loteamento Isaac da Rocha, 7
+Brasil Industrial
+11521721 das Neves Verde / CE'),
+('6049', '3', 'Ptio Martins, 80
+Hava
+13841-204 Dias de da Cunha / PI'),
+('6050', '4', 'Vila Moura, 51
+Solar Do Barreiro
+74378-075 Santos de Correia / PE'),
+('6051', '4', 'Parque de Melo, 172
+Vila Nova
+57008-200 da Cruz do Norte / MG'),
+('6052', '1', 'Distrito Monteiro, 38
+Serra Verde
+69069-579 Ferreira de Lima / AL'),
+('6053', '4', 'Lagoa Duarte, 11
+Boa Esperana
+12928-595 Nogueira / SC'),
+('6054', '4', 'Stio Matheus Rocha, 67
+Comiteco
+94339197 Porto do Amparo / PR'),
+('6055', '1', 'Vereda Cardoso, 41
+Vila Piratininga Venda Nova
+03060580 Almeida / SC'),
+('6056', '5', 'Recanto Stella Moura, 53
+Mirtes
+89853020 Cavalcanti de Ramos / RJ'),
+('6057', '3', 'Loteamento de Pires, 76
+Vila Barragem Santa Lcia
+98492294 Freitas de Vieira / PB'),
+('6058', '2', 'Condomnio Barbosa, 29
+Nossa Senhora Da Aparecida
+55339-292 Souza de Minas / MG'),
+('6059', '2', 'Setor Moraes, 27
+Vista Do Sol
+56039364 Barbosa / PA'),
+('6060', '2', 'Ncleo da Cruz, 73
+Universo
+19210725 Gomes de Novaes / MS'),
+('6061', '3', 'Stio de Alves, 6
+Luxemburgo
+77227-100 Pereira de Peixoto / PE'),
+('6062', '1', 'Estao Teixeira, 333
+Vila Nova Gameleira 1 Seo
+25943-532 Jesus / BA'),
+('6063', '4', 'Campo de Campos
+Califrnia
+43720984 Cardoso / PA'),
+('6064', '3', 'Loteamento de Fogaa
+Conjunto Santa Maria
+85899444 Viana / RO'),
+('6065', '1', 'Viaduto Caroline Monteiro
+Aparecida
+90725-691 da Cruz de Minas / MS'),
+('6066', '4', 'Esplanada da Rocha, 6
+Calafate
+00036-308 Viana de Duarte / CE'),
+('6067', '4', 'Rodovia Freitas, 82
+Ermelinda
+58210-454 Novaes de Cardoso / PE'),
+('6068', '1', 'Praia Sophia Monteiro, 79
+Beija Flor
+11618112 Freitas do Oeste / PA'),
+('6069', '4', 'Lago Ferreira, 82
+Cardoso
+72952938 Almeida / PI'),
+('6070', '2', 'Estrada de Ramos, 8
+Nazare
+24808-049 Ferreira do Oeste / SC'),
+('6071', '3', 'Fazenda Almeida, 2
+Vila Canto Do Sabi
+47237-535 Fernandes do Campo / PE'),
+('6072', '5', 'Viaduto Juan Nogueira, 73
+Confisco
+78841-633 Lopes / PI'),
+('6073', '3', 'Lagoa Peixoto
+Conjunto Bonsucesso
+83517-820 Dias / PI'),
+('6074', '4', 'Via da Luz, 1
+Coqueiros
+85832-521 Gomes de Sales / PR'),
+('6075', '1', 'Loteamento Dias, 359
+Jaragu
+10248563 da Paz / RJ'),
+('6076', '4', 'Passarela Pietra das Neves, 391
+Miramar
+57345962 das Neves de Souza / MS'),
+('6077', '5', 'Estao Vitor Gabriel Jesus, 65
+Nossa Senhora De Ftima
+87193390 Cardoso / PI'),
+('6078', '1', 'Stio da Rocha, 930
+Corao De Jesus
+59508248 Arajo / GO'),
+('6079', '4', 'Praa de Ramos, 9
+Palmares
+05319-974 Farias / RN'),
+('6080', '1', 'Quadra de Pinto, 99
+Vila Petropolis
+52861-740 Carvalho / SE'),
+('6081', '4', 'Condomnio de Moraes, 85
+Santa Isabel
+52805-143 Costela do Campo / SP'),
+('6082', '5', 'Vila de Silva, 45
+Tupi B
+93275-038 Porto / MS'),
+('6083', '4', 'Quadra de Dias, 467
+Ademar Maldonado
+52479576 Porto de Ribeiro / AC'),
+('6084', '1', 'Condomnio de Carvalho, 65
+lvaro Camargos
+31826590 da Mota / AP'),
+('6085', '3', 'Rua de Almeida
+Penha
+97564880 Ribeiro / RJ'),
+('6086', '2', 'Via Arajo, 31
+Vila Petropolis
+34708-683 da Mota do Galho / RR'),
+('6087', '4', 'Stio Levi Pereira
+Morro Dos Macacos
+83511-263 Pinto da Praia / BA'),
+('6088', '1', 'Vereda Bruna Rocha, 986
+Santa Terezinha
+16095246 da Rosa do Sul / AC'),
+('6089', '1', 'Trevo de Oliveira
+Califrnia
+85543-170 da Rosa / AL'),
+('6090', '5', 'Parque Emanuella da Rosa, 439
+Capito Eduardo
+30205-049 Freitas / RO'),
+('6091', '4', 'Jardim de da Rosa, 934
+Cabana Do Pai Toms
+97871-180 Nascimento / AL'),
+('6092', '3', 'Lago Raquel Novaes, 6
+Carmo
+28801108 Almeida / PR'),
+('6093', '5', 'Ptio Moreira, 35
+Vila Novo So Lucas
+29573428 Pereira de Sales / CE'),
+('6094', '5', 'Passarela de Ferreira
+Vila So Gabriel
+95735343 Moraes / PE'),
+('6095', '3', 'Conjunto Santos, 87
+Serrano
+87022652 Arago de Lima / RO'),
+('6096', '4', 'Quadra Santos, 851
+Vila Da Luz
+88170196 Moreira Paulista / CE'),
+('6097', '4', 'Feira de Ramos, 20
+Cenaculo
+76636401 Martins do Galho / GO'),
+('6098', '3', 'Aeroporto Carolina Monteiro, 388
+Flamengo
+36094086 da Luz Grande / AM'),
+('6099', '1', 'Lago Sophia Azevedo
+Bernadete
+38883831 Freitas / RO'),
+('6100', '2', 'Favela de Cavalcanti, 65
+Novo Ouro Preto
+24757-991 Ferreira / PE'),
+('6101', '1', 'Viela Ramos, 13
+Alto Das Antenas
+42080-041 da Rocha de Fernandes / PA'),
+('6102', '2', 'Travessa Emanuelly Barros
+Solar Do Barreiro
+64075-640 Cunha / PB'),
+('6103', '1', 'rea Silveira, 92
+Vila Nova Cachoeirinha 3 Seo
+55046490 Fogaa / AP'),
+('6104', '2', 'Esplanada Carvalho, 767
+Vila Trinta E Um De Maro
+08813014 Silva Verde / PA'),
+('6105', '2', 'Quadra Nogueira, 409
+Ribeiro De Abreu
+52128746 Fernandes / MA'),
+('6106', '2', 'Recanto Maria Ceclia Dias, 51
+Satelite
+02402177 Moreira / ES'),
+('6107', '3', 'Rodovia Stella Lima, 67
+So Pedro
+78345211 da Cruz / AP'),
+('6108', '2', 'Fazenda de Monteiro, 35
+Universitrio
+83527924 Correia do Amparo / PA'),
+('6109', '1', 'Morro Nicole da Cunha, 84
+So Luiz
+97948326 Farias / CE'),
+('6110', '5', 'Estao de Azevedo, 2
+Flamengo
+07964-295 Nogueira do Sul / GO'),
+('6111', '5', 'Vereda Souza, 33
+Tnel De Ibirit
+88687-541 Rezende / DF'),
+('6112', '3', 'Conjunto de Pires, 69
+So Pedro
+81700559 Dias Paulista / ES'),
+('6113', '5', 'Trecho Leandro Almeida
+Santa Branca
+39848-397 Fogaa / AL'),
+('6114', '3', 'rea de da Cruz, 88
+Guarat
+27385764 Dias / CE'),
+('6115', '5', 'Parque de Pinto, 56
+Serra
+76918-157 da Cruz / SP'),
+('6116', '2', 'Condomnio Mait Rezende, 9
+Vila Santo Antnio
+90600-018 das Neves / AP'),
+('6117', '4', 'Estrada de Lopes, 50
+Vila Copasa
+06460-265 Alves de da Cruz / MA'),
+('6118', '1', 'Estrada Thales Caldeira, 3
+Centro
+95014-236 Ferreira / MA'),
+('6119', '5', 'Lagoa de Oliveira, 9
+Vila Puc
+64589302 Pinto / AM'),
+('6120', '4', 'Residencial de Costa, 36
+Ferno Dias
+04487486 Almeida / MG'),
+('6121', '4', 'Vereda de Rocha
+Jonas Veiga
+35001-643 Fernandes do Sul / PR'),
+('6122', '5', 'Quadra Teixeira
+Vila Sumar
+39174623 Dias de Minas / GO'),
+('6123', '3', 'Passarela Vitor Gabriel Moraes, 28
+Salgado Filho
+75822177 da Mata das Flores / AC'),
+('6124', '5', 'rea de Souza, 6
+Colgio Batista
+06173-054 Teixeira / MA'),
+('6125', '1', 'Estrada de Castro, 2
+Vila Olhos 
+24405-550 Arago dos Dourados / PE'),
+('6126', '1', 'Fazenda Barbosa, 42
+Mantiqueira
+96628-442 Gomes das Pedras / GO'),
+('6127', '5', 'Estao Lima
+Antonio Ribeiro De Abreu 1 Seo
+52347-549 Almeida Verde / GO'),
+('6128', '1', 'Trevo da Cunha
+Jaragu
+86991-333 Nunes / SE'),
+('6129', '4', 'Via Pietra Viana, 727
+Bom Jesus
+23605529 Correia da Praia / AL'),
+('6130', '5', 'Jardim de Martins, 42
+Antonio Ribeiro De Abreu 1 Seo
+96385-829 Nascimento da Prata / PI'),
+('6131', '1', 'Travessa Pedro Lucas Sales
+Novo Glria
+49990774 Cardoso / PI'),
+('6132', '5', 'Estao de Novaes
+Zilah Sposito
+07215-273 Lima / PE'),
+('6133', '5', 'Chcara de Dias
+Monsenhor Messias
+80648-630 Barbosa / AL'),
+('6134', '4', 'Ptio de Cardoso, 5
+Conjunto Minas Caixa
+12821-721 Caldeira / PR'),
+('6135', '2', 'Estrada da Mota, 95
+Ferno Dias
+03026-013 da Mata / MS'),
+('6136', '5', 'Esplanada Bruna Novaes, 11
+Ipe
+02295-274 Santos / SP'),
+('6137', '1', 'Condomnio Farias, 69
+Lindia
+98888-165 Dias de da Mota / SE'),
+('6138', '3', 'Chcara da Rosa, 84
+Suzana
+66771-920 Cardoso / SP'),
+('6139', '1', 'Recanto de Gonalves, 31
+Calafate
+59970-217 da Mata do Sul / PR'),
+('6140', '3', 'Campo Campos, 56
+Jardim Do Vale
+65949-182 Azevedo do Norte / BA'),
+('6141', '3', 'Ladeira de Nunes, 3
+Vila So Rafael
+28562644 Rodrigues / CE'),
+('6142', '1', 'Campo Cau Rezende, 3
+Embabas
+88795550 Novaes de Silveira / RR'),
+('6143', '5', 'Travessa Silveira, 60
+Vila Madre Gertrudes 4 Seo
+00331366 Rocha da Mata / SE'),
+('6144', '2', 'Condomnio Ana Beatriz Monteiro, 66
+Vila Antena
+68010897 Castro / PB'),
+('6145', '4', 'Condomnio Joo Gabriel Souza, 69
+Nova Sua
+74995148 da Luz de Barros / SC'),
+('6146', '1', 'Viaduto Maria Clara Ribeiro, 30
+Goiania
+73477973 Rodrigues / RO'),
+('6147', '5', 'Trecho de Barbosa, 87
+Marilandia
+41655-178 Barros / AL'),
+('6148', '5', 'Residencial de Rezende, 97
+Vila Tirol
+67818-601 Campos / PB'),
+('6149', '3', 'Quadra Maria Ceclia Sales, 70
+Cnego Pinheiro 2 Seo
+37198332 Cunha / AL'),
+('6150', '4', 'Quadra Silveira, 3
+lvaro Camargos
+86091-358 Silva do Galho / AC'),
+('6151', '3', 'Condomnio Maria Vitria Farias
+Copacabana
+71562739 da Paz / MS'),
+('6152', '2', 'Vila das Neves, 88
+Vitoria Da Conquista
+23573-143 Fogaa dos Dourados / DF'),
+('6153', '3', 'Vila Pires, 44
+Jardim So Jos
+18310-671 Sales / AC'),
+('6154', '1', 'Praa Ramos, 61
+Vila Jardim Leblon
+40389615 Lopes da Praia / AL'),
+('6155', '2', 'Chcara da Mota, 57
+Alto Dos Pinheiros
+94174642 Farias / SP'),
+('6156', '5', 'Trevo Sophia da Rocha, 53
+Joo Paulo Ii
+76714-687 Martins / MA'),
+('6157', '4', 'Feira Joo Gabriel Vieira, 11
+Nova America
+46302-134 Oliveira / TO'),
+('6158', '4', 'Distrito de Duarte, 2
+Pompia
+97478741 Fernandes / AL'),
+('6159', '2', 'Viela Joana da Paz
+Vila De S
+60808259 Cavalcanti Verde / PI'),
+('6160', '3', 'Parque Azevedo, 6
+Califrnia
+55793566 Campos Paulista / ES'),
+('6161', '2', 'Alameda da Cunha, 40
+Vila Nova Paraso
+25762-751 Moraes / PA'),
+('6162', '1', 'Aeroporto de Cardoso, 47
+Conjunto Minas Caixa
+47674-286 Barros / SC'),
+('6163', '5', 'Stio da Rocha, 49
+Cachoeirinha
+77472-986 Campos / PA'),
+('6164', '4', 'Esplanada Campos, 96
+Monte So Jos
+82465796 Duarte Grande / RR'),
+('6165', '3', 'Feira Camila Duarte, 738
+Alpes
+86040667 da Cruz de da Paz / MT'),
+('6166', '2', 'Fazenda Viana, 862
+Vila Madre Gertrudes 4 Seo
+11647344 Caldeira / SP'),
+('6167', '5', 'Rodovia de Cardoso, 34
+Dona Clara
+30334-137 Vieira das Flores / PA'),
+('6168', '1', 'Estao Costa
+Nova Vista
+20188220 Costa / MT'),
+('6169', '5', 'Lagoa Pereira, 1
+Embabas
+60581-505 Teixeira de Costela / ES'),
+('6170', '1', 'Viela Pires, 2
+Bonfim
+44270-810 Porto de Duarte / AM'),
+('6171', '2', 'Parque de Peixoto, 67
+Vila So Geraldo
+92430394 Cavalcanti dos Dourados / BA'),
+('6172', '2', 'Estrada Lopes, 6
+Jonas Veiga
+08725-901 Pereira de Sales / PE'),
+('6173', '5', 'Jardim Joo Miguel da Paz, 51
+Vila So Rafael
+71530409 Sales de Gonalves / SP'),
+('6174', '2', 'Conjunto Vitria Viana, 83
+Lajedo
+41085-282 Mendes da Mata / PA'),
+('6175', '2', 'Viela Nina Lopes, 42
+Vila Nova
+74289-273 da Cunha de Teixeira / RS'),
+('6176', '4', 'Ptio Beatriz Nascimento, 92
+Vila Atila De Paiva
+82396319 Arajo / DF'),
+('6177', '2', 'Quadra Mendes
+So Jorge 2 Seo
+17110560 Silveira / PI'),
+('6178', '4', 'Stio de Pinto, 5
+Vila Minaslandia
+58193711 Monteiro do Norte / GO'),
+('6179', '5', 'Lago Augusto da Luz, 67
+Dom Bosco
+91423212 da Cunha / MA'),
+('6180', '3', 'Lago Diego Arago, 70
+Nova Floresta
+36421130 da Conceio / SP'),
+('6181', '5', 'Lagoa Davi Luiz Nogueira
+Alpio De Melo
+24865-953 Castro / DF'),
+('6182', '5', 'Colnia Yasmin Lima, 41
+Vila Fumec
+31052-628 Pires Paulista / CE'),
+('6183', '4', 'Travessa Luna Silveira, 9
+Flavio Marques Lisboa
+90745181 Peixoto da Praia / PA'),
+('6184', '5', 'Chcara Melo, 47
+Cardoso
+86849248 da Cunha de Souza / MS'),
+('6185', '1', 'Passarela Duarte, 5
+Alta Tenso 2 Seo
+38887035 Moura de da Luz / SE'),
+('6186', '4', 'Passarela Cunha, 53
+Araguaia
+09158308 Ribeiro de Correia / DF'),
+('6187', '4', 'Alameda de das Neves, 22
+Vila Boa Vista
+14648473 Ramos de Cunha / PI'),
+('6188', '1', 'Loteamento Paulo Vieira, 91
+Boa Viagem
+96480685 Dias Paulista / MT'),
+('6189', '5', 'Parque de Viana, 260
+Beira Linha
+43215-250 Almeida / DF'),
+('6190', '4', 'Favela Duarte, 42
+Ambrosina
+21340-277 Ferreira / GO'),
+('6191', '3', 'Vale da Luz, 70
+Barroca
+83828-611 Freitas / CE'),
+('6192', '2', 'Lagoa Sabrina Santos, 7
+Inconfidncia
+97765-106 da Conceio de Gois / AP'),
+('6193', '2', 'Largo Cardoso, 3
+Luxemburgo
+28236815 Cardoso / SP'),
+('6194', '4', 'Vereda Miguel Castro, 32
+Boa Unio 1 Seo
+18419299 Almeida / PI'),
+('6195', '2', 'Condomnio Dias, 20
+Padre Eustquio
+31581-566 Lopes da Praia / MG'),
+('6196', '4', 'Ladeira Rocha, 65
+Grotinha
+90334867 da Luz do Galho / PI'),
+('6197', '5', 'Condomnio Cardoso, 41
+Monte Azul
+48486310 Moraes / PR'),
+('6198', '1', 'Travessa de Costela, 30
+Unio
+33883-839 Rezende / MA'),
+('6199', '3', 'Travessa Otvio Cardoso
+Pilar
+18371-771 Moreira / RO'),
+('6200', '2', 'Chcara Maysa Arajo, 30
+Bonfim
+28423-723 Monteiro das Pedras / SC'),
+('6201', '4', 'Favela de Pereira, 4
+Eymard
+77887-942 Rezende / ES'),
+('6202', '4', 'Distrito Ana da Rocha, 6
+Boa Viagem
+49933409 Fogaa das Pedras / MG'),
+('6203', '3', 'Colnia Eloah Costela, 9
+Vila Suzana Primeira Seo
+84069-520 Rezende da Praia / AC'),
+('6204', '2', 'Via Nunes, 120
+Barreiro
+90750-333 Costela / TO'),
+('6205', '3', 'Recanto de Pires, 46
+Camargos
+01821282 Moura da Serra / AM'),
+('6206', '1', 'Viela Gomes, 92
+Marieta 2 Seo
+44436043 Rodrigues da Praia / AM'),
+('6207', '2', 'Conjunto Arthur Barros, 8
+Maria Goretti
+35253-105 Gonalves / AM'),
+('6208', '1', 'Rua Luiz Fernando Martins
+Horto
+36793201 Martins / ES'),
+('6209', '1', 'Estao Lima, 43
+Marieta 1 Seo
+14204893 Alves da Serra / MS'),
+('6210', '1', 'Favela Milena Silveira, 36
+Vila Pilar
+24281972 Ferreira de Cunha / MA'),
+('6211', '4', 'Fazenda Rodrigo Arago, 4
+Vila Paris
+81889-486 Melo / AC'),
+('6212', '2', 'Setor Pinto, 5
+Jardim Amrica
+18034-235 Silveira do Amparo / RN'),
+('6213', '4', 'Avenida Freitas, 54
+Floresta
+19965-137 Cavalcanti da Mata / PE'),
+('6214', '1', 'Stio de Oliveira, 8
+Floresta
+17153275 Cavalcanti das Pedras / MT'),
+('6215', '1', 'Praa de Rodrigues, 29
+Vila So Gabriel
+14909-043 Moreira / AP'),
+('6216', '1', 'Rua Yago Viana, 84
+Cenaculo
+25138304 Martins / PI'),
+('6217', '4', 'Rua Ribeiro, 91
+Joo Paulo Ii
+29397154 Dias da Mata / BA'),
+('6218', '4', 'Setor Lopes, 97
+Piratininga
+94591250 Arago da Prata / MT'),
+('6219', '4', 'Avenida Ribeiro, 29
+Bela Vitoria
+45914-345 Cardoso de Santos / SC'),
+('6220', '2', 'Distrito Novaes, 64
+Vila Calafate
+05870574 Gomes / PE'),
+('6221', '2', 'Lago Costa, 80
+pia
+69920-797 Moraes / RJ'),
+('6222', '5', 'rea de da Mata, 99
+Vitoria Da Conquista
+25259563 Sales das Flores / PR'),
+('6223', '3', 'Parque Joana da Conceio, 758
+Mirtes
+95586-781 Duarte Verde / MA'),
+('6224', '3', 'Praa Vieira, 82
+Santa Lcia
+88407-314 da Mota / AM'),
+('6225', '5', 'Rodovia de Campos, 2
+Vila Pilar
+59358-349 Gomes / PR'),
+('6226', '3', 'Stio de Fogaa, 56
+Santa Lcia
+23046-530 Moreira Alegre / GO'),
+('6227', '4', 'Avenida de Arajo, 8
+So Vicente
+74561515 Santos / AM'),
+('6228', '2', 'Praa Rocha, 382
+Dom Cabral
+21179-614 Pires / PB'),
+('6229', '3', 'Estrada da Rocha, 274
+Santa Helena
+34234-622 Lopes / PE'),
+('6230', '3', 'Ncleo Fernanda Almeida
+Outro
+67117-096 da Mota / PA'),
+('6231', '5', 'Esplanada de Arajo, 99
+Cidade Jardim Taquaril
+84730460 Oliveira / SE'),
+('6232', '5', 'Vila Joo Felipe da Cunha, 90
+Vila So Gabriel Jacui
+68326-876 Monteiro / RO'),
+('6233', '5', 'Setor de Arago, 121
+Nossa Senhora De Ftima
+47745450 Monteiro de Monteiro / MA'),
+('6234', '3', 'Condomnio Gomes, 41
+Vila Independencia 2 Seo
+02486-899 Teixeira de Nascimento / RS'),
+('6235', '5', 'Estao das Neves
+Savassi
+39265812 Santos de Minas / AC'),
+('6236', '2', 'Trecho Lorena Silva, 6
+Santa Sofia
+42805-075 Fogaa / MT'),
+('6237', '1', 'Jardim Nogueira, 58
+Santa Sofia
+72582542 Silva do Oeste / PR'),
+('6238', '1', 'Ptio de Moraes, 87
+Vila Mangueiras
+78144-261 Silva / ES'),
+('6239', '2', 'Loteamento Teixeira, 2
+Acaba Mundo
+65058255 da Luz / TO'),
+('6240', '3', 'Colnia da Paz, 52
+Oeste
+30823-005 Ribeiro / MA'),
+('6241', '3', 'Trevo de Silva
+Vila Mantiqueira
+53038260 Nogueira / ES'),
+('6242', '2', 'Praa de Rezende, 40
+Bairro Das Indstrias Ii
+44296-933 da Rocha / MA'),
+('6243', '4', 'Estrada Davi Luiz Moura, 16
+Maravilha
+24132-157 Arajo do Oeste / DF'),
+('6244', '4', 'Passarela Castro, 1
+Vila Canto Do Sabi
+35896-407 Porto Paulista / AC'),
+('6245', '3', 'Lagoa Milena Arago, 9
+Inconfidncia
+94310553 Rezende / RR'),
+('6246', '5', 'Ladeira Murilo Caldeira, 51
+Conjunto Santa Maria
+65280-452 Fogaa de Cardoso / AL'),
+('6247', '4', 'Praa da Rosa, 79
+Belvedere
+54233-085 Rezende / PE'),
+('6248', '4', 'Jardim Cardoso, 63
+Vila Nova Paraso
+70208-016 Santos / MG'),
+('6249', '4', 'rea de Monteiro, 85
+Prado
+87476650 Cardoso Paulista / BA'),
+('6250', '5', 'Loteamento Sofia Santos, 60
+Vila Copasa
+41574-876 Barros / AM'),
+('6251', '3', 'Campo Kamilly Caldeira, 8
+Jardim Atlntico
+45924-966 Rezende / PR'),
+('6252', '1', 'Feira Sofia Silveira
+Caetano Furquim
+86926480 Cavalcanti de Gois / MS'),
+('6253', '1', 'Morro Fogaa, 920
+So Jorge 1 Seo
+55428067 Silveira / RJ'),
+('6254', '5', 'Largo de Lopes, 36
+Mangueiras
+22823954 Nogueira / ES'),
+('6255', '4', 'Chcara de Carvalho, 955
+Vila So Dimas
+72221150 da Luz da Serra / BA'),
+('6256', '3', 'Esplanada de das Neves, 66
+Belmonte
+54798672 Melo do Galho / ES'),
+('6257', '4', 'Residencial Bencio Cardoso
+Paulo Vi
+29810104 da Conceio / PI'),
+('6258', '4', 'Vale de Novaes, 93
+Varzea Da Palma
+64055683 Campos / GO'),
+('6259', '4', 'Trecho Cau Santos, 6
+Etelvina Carneiro
+57842117 Pinto / PE'),
+('6260', '5', 'Rua Pietra Castro
+Vila Petropolis
+68352-873 Mendes Grande / RJ'),
+('6261', '4', 'Colnia da Rocha, 51
+Vila Da Amizade
+98824-774 da Costa / MG'),
+('6262', '1', 'Estao de Pires, 92
+Granja Werneck
+24078-821 Ramos / AL'),
+('6263', '2', 'Praa Ana Jlia Jesus, 84
+Palmares
+17195694 da Rosa / TO'),
+('6264', '5', 'Residencial Luiza Arajo, 17
+Vila Canto Do Sabi
+65705326 Correia / MS'),
+('6265', '4', 'Jardim Maria Alice Moura, 49
+Vila Da Amizade
+02423-897 Alves de Silva / PE'),
+('6266', '5', 'Estrada de Moraes, 96
+So Pedro
+91600007 Souza / SC'),
+('6267', '3', 'Lago Joo da Conceio
+Bonsucesso
+18625056 Farias do Norte / DF'),
+('6268', '1', 'Chcara Caio Viana, 54
+Mariano De Abreu
+02177-656 Cunha de Nunes / PR'),
+('6269', '1', 'Distrito Luiz Fernando Oliveira, 99
+Satelite
+99475-987 Correia / MA'),
+('6270', '5', 'Passarela Monteiro, 39
+So Pedro
+34097036 Lima / DF'),
+('6271', '2', 'Ladeira de Cardoso
+Graa
+88543009 Souza / PE'),
+('6272', '1', 'Favela Rocha, 835
+Trevo
+57215-780 Gomes / MA'),
+('6273', '1', 'Parque Peixoto, 24
+Alpes
+76267-583 Dias / MA'),
+('6274', '3', 'Trevo da Luz, 31
+Diamante
+16571-814 Arago de Gois / ES'),
+('6275', '4', 'Stio Duarte, 85
+Palmeiras
+78905369 da Costa / PR'),
+('6276', '5', 'rea Milena Nogueira, 11
+Marmiteiros
+23995-573 Farias de Silva / PB'),
+('6277', '3', 'Estrada da Luz, 58
+Pantanal
+49326-537 Alves de Minas / DF'),
+('6278', '2', 'Vila Diego da Cunha
+Bonsucesso
+65632361 Barros / MG'),
+('6279', '4', 'Rua de Novaes
+Vila Nova Gameleira 1 Seo
+05385068 Moreira Paulista / SE'),
+('6280', '3', 'Jardim Cavalcanti, 38
+So Joo Batista
+05939596 Moura / SP'),
+('6281', '4', 'Trevo Thomas Jesus, 8
+Conjunto Novo Dom Bosco
+85737-525 Ramos do Norte / AL'),
+('6282', '1', 'Recanto Mait Rodrigues, 46
+Vila Nova Gameleira 1 Seo
+00781698 Sales do Norte / RN'),
+('6283', '3', 'Rodovia Helena Gomes, 97
+Vila Jardim So Jos
+49654069 da Conceio / MA'),
+('6284', '3', 'Passarela de Moraes, 37
+Esperana
+45467711 Pereira / PE'),
+('6285', '4', 'Campo Lucas Pereira, 11
+Vista Do Sol
+89506-467 Rodrigues Paulista / MG'),
+('6286', '2', 'Vila da Luz, 440
+Concrdia
+64036-877 Arago do Campo / PE'),
+('6287', '5', 'Feira de da Rocha, 71
+Madre Gertrudes
+06090476 Azevedo / PE'),
+('6288', '3', 'Vale Juan Pereira
+Santa Branca
+74895364 Carvalho de Rodrigues / ES'),
+('6289', '3', 'Via de Santos, 76
+Palmeiras
+13416871 da Rocha do Amparo / MT'),
+('6290', '5', 'Campo de da Mata, 90
+Vila Jardim Alvorada
+35676-507 Carvalho / SE'),
+('6291', '4', 'Fazenda Maria Luiza Peixoto, 405
+Indai
+19767269 da Rocha da Mata / MS'),
+('6292', '1', 'Rua Barbosa, 31
+Serra Verde
+01592-156 Campos / RO'),
+('6293', '5', 'Stio de Cardoso, 22
+So Salvador
+05748516 Duarte Grande / PR'),
+('6294', '5', 'Trevo da Rocha, 26
+Vila Santo Antnio Barroquinha
+84460000 Costa / MT'),
+('6295', '2', 'Feira Almeida, 95
+Jardim Alvorada
+13207-071 Caldeira dos Dourados / SP'),
+('6296', '5', 'Vale Oliveira, 3
+Virgnia
+49116135 Pereira / MA'),
+('6297', '5', 'Rua de Ribeiro, 65
+Vila Formosa
+87140345 Nunes da Mata / DF'),
+('6298', '3', 'Rua da Paz, 49
+Boa Unio 1 Seo
+26756141 Moura / SP'),
+('6299', '5', 'Vila Isadora Barros, 81
+Marmiteiros
+89296220 da Conceio de Caldeira / DF'),
+('6300', '2', 'Vila Almeida, 9
+Esplanada
+24118125 Nascimento / TO'),
+('6301', '3', 'Residencial Mait Arago, 90
+Coqueiros
+05193-288 Rocha / PA'),
+('6302', '2', 'Conjunto Lopes, 980
+Vila Maria
+55431-285 Alves do Campo / AC'),
+('6303', '2', 'Quadra Silveira, 841
+Corao De Jesus
+71900082 Rezende / RO'),
+('6304', '5', 'Praia de Costela, 18
+Buraco Quente
+86558-352 Gomes / RS'),
+('6305', '5', 'Rua de Moura
+Granja Werneck
+66666-478 Fernandes / AM'),
+('6306', '1', 'Loteamento Teixeira, 60
+Tres Marias
+85755286 Fernandes / PI'),
+('6307', '3', 'Colnia Moraes, 89
+Itapoa
+39920854 Porto / RR'),
+('6308', '2', 'Conjunto de Viana, 14
+Alto Barroca
+57698681 Arago da Serra / RJ'),
+('6309', '2', 'Aeroporto Martins, 7
+Universitrio
+20087648 da Cruz / MA'),
+('6310', '1', 'Praa de Azevedo, 21
+Camponesa 2 Seo
+31193337 das Neves das Pedras / CE'),
+('6311', '5', 'Travessa Peixoto, 62
+So Joo
+96566-024 das Neves do Amparo / BA'),
+('6312', '5', 'Esplanada de Ramos, 93
+Vila Antena Montanhs
+65057665 Rocha da Prata / AC'),
+('6313', '4', 'Lago Ana Jlia da Cunha, 811
+Beira Linha
+83952653 Dias da Prata / RJ'),
+('6314', '5', 'Largo Nunes, 46
+Vila Da Paz
+62733505 da Luz Alegre / PR'),
+('6315', '2', 'Estrada de Nogueira, 20
+Dom Bosco
+16187-449 da Conceio do Sul / MS'),
+('6316', '2', 'Travessa Maria Ceclia Silveira, 814
+Vila Antena Montanhs
+07324665 Cunha do Galho / RS'),
+('6317', '4', 'Fazenda Ryan Fernandes, 85
+Conjunto Minas Caixa
+27192918 Nascimento / PI'),
+('6318', '4', 'Colnia de das Neves, 4
+Baro Homem De Melo 2 Seo
+51622706 Pinto das Flores / RN'),
+('6319', '4', 'Chcara Luiz Henrique da Cunha, 37
+So Bernardo
+01617-684 Campos / SC'),
+('6320', '1', 'Feira Costa, 666
+Europa
+23236400 Pereira da Mata / PI'),
+('6321', '3', 'Viaduto de Vieira, 58
+Vila Boa Vista
+40204-130 Pinto / RS'),
+('6322', '3', 'Campo de da Rocha, 345
+Vila Dos Anjos
+99265-712 Vieira / AP'),
+('6323', '3', 'Alameda Ana Jlia Mendes, 7
+Paraso
+57118704 da Luz do Oeste / PB'),
+('6324', '2', 'Trecho Sofia Santos, 8
+Bairro Das Indstrias Ii
+82004421 Peixoto / PE'),
+('6325', '1', 'Conjunto Silva, 2
+Bairro Das Indstrias Ii
+09573-839 Correia / MA'),
+('6326', '1', 'Via Helosa Rodrigues, 260
+Lagoinha
+51761-521 Castro / AM'),
+('6327', '1', 'Passarela Felipe Silva, 56
+Novo Ouro Preto
+41662062 da Cunha de Pinto / AM'),
+('6328', '3', 'Vila de Cardoso, 96
+Nazare
+35487773 Nascimento / MS'),
+('6329', '1', 'Favela Arajo, 91
+Dom Joaquim
+86581-609 Arago das Pedras / SP'),
+('6330', '3', 'Vila Leonardo Cunha, 197
+Baro Homem De Melo 2 Seo
+20667118 Nogueira / SC'),
+('6331', '1', 'Via Ana Carolina Ferreira, 31
+Embabas
+92399-436 Teixeira / RS'),
+('6332', '5', 'Rodovia de Azevedo, 77
+Xodo-Marize
+44667274 Carvalho de Castro / RO'),
+('6333', '1', 'Favela de da Cunha
+Santa Helena
+87467321 Dias / AC'),
+('6334', '2', 'Ladeira Teixeira, 282
+Santana Do Cafezal
+98224207 Pereira / AP'),
+('6335', '5', 'Distrito Otvio Duarte, 24
+Vista Alegre
+98107-695 Martins do Campo / MA'),
+('6336', '5', 'Feira de Gomes
+So Pedro
+83402-551 Novaes dos Dourados / AP'),
+('6337', '4', 'Fazenda de Ramos, 2
+Prado
+40369-907 Cunha do Campo / MG'),
+('6338', '4', 'rea de Castro, 3
+Corao De Jesus
+18208-808 da Rosa da Serra / PR'),
+('6339', '2', 'Vila Nascimento
+Mangueiras
+29093-014 Vieira Grande / SC'),
+('6340', '3', 'Conjunto Costela, 63
+Capito Eduardo
+28745520 Moraes / AM'),
+('6341', '3', 'Travessa Lucas Azevedo, 27
+Universitrio
+43703234 Dias de Monteiro / RR'),
+('6342', '2', 'Colnia Luiz Gustavo Mendes, 27
+Cidade Jardim Taquaril
+58633-220 Rodrigues / PR'),
+('6343', '3', 'Vale Maysa Sales
+Pantanal
+19142257 Correia / AM'),
+('6344', '5', 'Travessa de Sales
+Bairro Das Indstrias Ii
+06331629 Novaes Grande / RJ'),
+('6345', '3', 'Estrada de Melo, 906
+Santa Efignia
+60113055 Lopes / MA'),
+('6346', '1', 'Rodovia de Martins, 31
+Alpes
+77272-040 Silva de Barbosa / ES'),
+('6347', '3', 'Recanto de Fogaa
+Vila Nova Gameleira 2 Seo
+43141974 Oliveira de Minas / PB'),
+('6348', '2', 'Jardim Isadora Cardoso, 41
+Flavio Marques Lisboa
+94538-575 Souza das Pedras / RJ'),
+('6349', '5', 'Vale de Lima, 8
+Vila Real 1 Seo
+25817804 Pires do Oeste / MG'),
+('6350', '5', 'Estao Ramos, 2
+Providencia
+67913499 Ferreira / PB'),
+('6351', '3', 'Lago de Freitas, 36
+Anchieta
+04293-255 Costela / ES'),
+('6352', '5', 'Estao Costa, 694
+Flavio De Oliveira
+13843-825 Nunes / GO'),
+('6353', '3', 'Estrada de Peixoto, 65
+So Jorge 3 Seo
+60278-185 Nogueira da Praia / RN'),
+('6354', '1', 'Via Luiz Gustavo Correia, 2
+Vila Hava
+66180-769 da Mata / MG'),
+('6355', '3', 'Vila Martins, 27
+Novo Tupi
+81473723 da Luz de Souza / PR'),
+('6356', '2', 'Recanto Pires, 89
+Novo Aaro Reis
+78158515 da Costa Paulista / DF'),
+('6357', '4', 'Quadra Benjamin Alves, 31
+Vila Primeiro De Maio
+30451-105 Silva / BA'),
+('6358', '4', 'Distrito Isaac Lima, 82
+Luxemburgo
+18183743 Martins do Oeste / MA'),
+('6359', '5', 'Esplanada Sophie Freitas, 57
+Baro Homem De Melo 1 Seo
+24244-722 Jesus / RO'),
+('6360', '1', 'Fazenda Correia, 2
+Silveira
+59285884 da Conceio / DF'),
+('6361', '1', 'Vereda Bianca Silva, 2
+Vila Tirol
+82955243 da Costa de Vieira / AC'),
+('6362', '3', 'Praa de da Cruz, 500
+So Jorge 2 Seo
+79466-665 Rodrigues / SC'),
+('6363', '2', 'Rua de Silveira, 25
+Padre Eustquio
+03140932 Gonalves / RJ'),
+('6364', '5', 'Ladeira Lara Rodrigues, 4
+Vila Da Amizade
+25137-336 Teixeira / AL'),
+('6365', '3', 'Campo Porto, 2
+Nova Vista
+59013275 Santos / PB'),
+('6366', '1', 'Ptio Cardoso, 34
+Aguas Claras
+14069-170 Almeida / DF'),
+('6367', '3', 'Rua de Ribeiro, 17
+Cnego Pinheiro 2 Seo
+85645-004 Azevedo / PR'),
+('6368', '5', 'Jardim de das Neves, 2
+Vila De S
+39354117 Gomes / SP'),
+('6369', '3', 'Estrada Emanuella Almeida, 36
+Padre Eustquio
+01271-061 Sales de Gois / TO'),
+('6370', '3', 'Recanto Pires, 30
+Vila Santo Antnio
+07975572 Rocha / RJ'),
+('6371', '1', 'Largo Bryan Barros, 399
+Vila Calafate
+76228-178 da Conceio / AC'),
+('6372', '2', 'Viaduto Bianca Barbosa, 9
+Oeste
+68835381 Moreira / MT'),
+('6373', '1', 'Esplanada de Monteiro, 45
+Vila Bandeirantes
+02014-857 da Rosa / MG'),
+('6374', '3', 'Chcara da Cunha
+Castanheira
+56834-392 Dias / MA'),
+('6375', '4', 'Campo Caldeira, 74
+Dom Bosco
+13837-169 Moura de Silveira / AM'),
+('6376', '1', 'Estrada de da Mota, 88
+Grotinha
+31415-462 Cavalcanti de Ferreira / PE'),
+('6377', '4', 'Colnia Cardoso
+Floresta
+07138-518 Moraes / PI'),
+('6378', '2', 'Trevo da Rosa, 213
+Satelite
+07695-487 Rocha / BA'),
+('6379', '4', 'Passarela Moraes, 9
+Vila Ipiranga
+53533778 Lopes das Pedras / PI'),
+('6380', '3', 'Jardim de Almeida, 21
+Cidade Jardim Taquaril
+31945-440 Ribeiro de Ferreira / MS'),
+('6381', '2', 'Favela Gabriela da Luz, 7
+Jardim Atlntico
+85268-641 Costa / PI'),
+('6382', '1', 'Praa Rodrigues, 42
+Ademar Maldonado
+08066155 Lopes / BA'),
+('6383', '2', 'Setor de Carvalho
+Vila Hava
+91748244 Silveira do Norte / AC'),
+('6384', '3', 'Campo Luiz Felipe da Luz, 3
+Santa Cruz
+02061-191 da Luz / MT'),
+('6385', '4', 'Condomnio Brenda Freitas
+Cinquentenrio
+80977-014 Vieira / RR'),
+('6386', '1', 'Quadra de Cardoso, 98
+Granja De Freitas
+03472-526 Farias / MG'),
+('6387', '5', 'Rodovia da Luz
+Vila Da Amizade
+98262-069 Costela / MG'),
+('6388', '1', 'Feira Fernando Cardoso, 80
+Santa Rita De Cssia
+14430539 Moreira / MA'),
+('6389', '4', 'Distrito Otvio Arajo
+Cruzeiro
+80899-273 Silva do Galho / MT'),
+('6390', '3', 'Morro Pires, 254
+Palmares
+14349-708 Porto / AP'),
+('6391', '4', 'Estao de Cardoso, 19
+Brasil Industrial
+59114-176 Campos das Pedras / RS'),
+('6392', '1', 'Vale de Mendes, 67
+So Gonalo
+03710611 Martins da Serra / SC'),
+('6393', '4', 'Setor Gomes, 841
+Bonsucesso
+58008474 das Neves / AC'),
+('6394', '1', 'Stio de Nascimento, 51
+Embabas
+62069660 Nascimento / GO'),
+('6395', '2', 'Distrito de Fernandes, 57
+Parque So Pedro
+83096891 Cavalcanti / ES'),
+('6396', '1', 'Aeroporto de Silva
+Marieta 3 Seo
+25168655 Cardoso da Praia / PI'),
+('6397', '5', 'Trecho Nina Silva, 862
+Piraja
+21923-233 da Luz / RS'),
+('6398', '4', 'Colnia Luiza Nogueira, 58
+pia
+18217859 Azevedo da Serra / AP'),
+('6399', '5', 'Rodovia Sarah Ramos, 6
+Vila Mantiqueira
+97786709 da Rosa Alegre / PA'),
+('6400', '2', 'Stio de Castro, 160
+Belmonte
+18657259 Cardoso / ES'),
+('6401', '1', 'Ptio Moura, 33
+Conjunto Califrnia I
+12489989 Pires dos Dourados / PR'),
+('6402', '2', 'Rua Maria Fernanda Souza, 355
+Vila Do Pombal
+23113868 Moraes / RJ'),
+('6403', '3', 'Largo Maria Ceclia Oliveira, 130
+Leticia
+52524907 Correia do Sul / BA'),
+('6404', '2', 'Avenida Barros, 286
+Vila Sumar
+50589322 Barbosa do Sul / SP'),
+('6405', '1', 'Praia Diego Pinto, 25
+Xodo-Marize
+88600-704 Moraes / RN'),
+('6406', '2', 'Praa Isabelly Cardoso, 45
+Paquet
+42217036 Melo do Oeste / AC'),
+('6407', '5', 'Praia de da Mota, 225
+Baro Homem De Melo 2 Seo
+27956-820 Santos / PR'),
+('6408', '1', 'Recanto Silva
+Carmo
+68121-066 Lopes do Sul / MA'),
+('6409', '5', 'Rua de Castro, 16
+Jardinpolis
+06703720 da Mata do Amparo / AP'),
+('6410', '5', 'Stio Heitor Santos, 17
+Vila Satlite
+80939-283 Azevedo da Praia / RN'),
+('6411', '2', 'Ladeira de da Paz, 39
+Parque So Jos
+94027816 Novaes / PA'),
+('6412', '3', 'Lago Caldeira, 79
+Petropolis
+14335-968 Monteiro / PR'),
+('6413', '5', 'Estrada de Arago, 42
+Trevo
+69606-149 Rezende das Flores / ES'),
+('6414', '2', 'Ptio de Gomes
+Vitoria Da Conquista
+90567-200 Monteiro / RS'),
+('6415', '5', 'Fazenda Moraes, 90
+Jardim So Jos
+92468-962 Gonalves da Serra / RJ'),
+('6416', '1', 'Stio de Jesus, 641
+Vila Nova Gameleira 2 Seo
+93515641 Mendes / ES'),
+('6417', '5', 'Largo Pereira, 514
+Leonina
+23714-694 da Mata Paulista / RJ'),
+('6418', '1', 'Travessa Campos, 31
+Funcionrios
+73061415 Martins / MG'),
+('6419', '5', 'Lago Eduarda Gonalves, 28
+Boa Viagem
+40683076 da Rocha / CE'),
+('6420', '3', 'Rua da Paz, 70
+Ademar Maldonado
+34358-426 da Cunha / RS'),
+('6421', '3', 'Chcara de da Costa, 2
+Buraco Quente
+01074-132 Moura / MT'),
+('6422', '1', 'Favela de Dias, 53
+Vila Maria
+56175-846 Sales Alegre / PI'),
+('6423', '2', 'Distrito Emanuelly Alves, 74
+Minas Brasil
+74708-802 Campos / SP'),
+('6424', '3', 'Via de da Mata, 519
+Solar Do Barreiro
+14329-793 da Cunha da Praia / MA'),
+('6425', '2', 'Colnia Pedro Miguel Cardoso, 83
+Estoril
+93073913 Souza / SP'),
+('6426', '5', 'Fazenda de Costela, 686
+Vila Suzana Primeira Seo
+47848493 Farias / RN'),
+('6427', '4', 'Distrito de Gomes, 1
+Petropolis
+53415712 Mendes / RJ'),
+('6428', '2', 'Largo Juan Farias, 44
+Barreiro
+33140-735 Alves / PE'),
+('6429', '5', 'Vereda de Rezende, 734
+So Vicente
+48809578 Pereira Alegre / MT'),
+('6430', '2', 'Ncleo Porto, 863
+Cidade Nova
+54506-243 Ribeiro do Norte / ES'),
+('6431', '5', 'Loteamento Santos, 7
+Maria Helena
+10717-359 Martins das Flores / RR'),
+('6432', '1', 'Ncleo de Monteiro, 37
+Boa Esperana
+87967669 Ferreira / MA'),
+('6433', '3', 'Fazenda de Cardoso
+Maria Helena
+43691940 Cavalcanti da Serra / MT'),
+('6434', '4', 'Largo de Oliveira
+Vila Independencia 1 Seo
+64512-068 Melo de da Luz / SP'),
+('6435', '4', 'Fazenda Yuri Nogueira, 976
+Vila Madre Gertrudes 4 Seo
+19218-407 Castro do Sul / MG'),
+('6436', '5', 'Chcara de Campos, 68
+Renascena
+54607-573 Moraes de Pereira / MT'),
+('6437', '2', 'Alameda de Novaes, 13
+Vila Nova
+37667-943 Rocha / PE'),
+('6438', '5', 'Quadra de da Cunha
+Vila Nova Cachoeirinha 2 Seo
+29994342 da Costa de Minas / DF'),
+('6439', '2', 'Conjunto Nunes, 46
+Vila Do Pombal
+14357-309 Costela de Gois / ES'),
+('6440', '3', 'Viaduto de Nascimento
+Serra Do Curral
+60216843 Teixeira do Amparo / MS'),
+('6441', '3', 'Morro de Carvalho, 908
+So Bento
+50394-107 Silva / RS'),
+('6442', '1', 'Avenida de Azevedo, 3
+Itatiaia
+00803392 Arajo do Campo / CE'),
+('6443', '5', 'Chcara Alana Gomes, 15
+Alto Vera Cruz
+74457611 Pinto do Campo / DF'),
+('6444', '5', 'Colnia de Cardoso, 82
+Flavio Marques Lisboa
+74250-640 Pereira de Minas / SE'),
+('6445', '3', 'Trecho de Nunes, 91
+Olaria
+60097694 Silva das Pedras / AL'),
+('6446', '4', 'Viaduto Nicolas Pinto
+Calafate
+82576895 Cardoso de Minas / PB'),
+('6447', '4', 'Feira da Conceio, 87
+Mirante
+56054-954 Lima de Ferreira / GO'),
+('6448', '3', 'Estao de Pires, 3
+Castelo
+20409-025 Fernandes da Praia / RN'),
+('6449', '1', 'Viaduto Alexia Martins, 55
+Miramar
+26528-067 Campos / AL'),
+('6450', '3', 'Via Pietra Arajo, 788
+Boa Vista
+66946-365 da Costa de Gois / AM'),
+('6451', '5', 'Viela Moura, 43
+Marilandia
+65386614 Melo / MA'),
+('6452', '3', 'Estao Kaique Nogueira, 96
+Manacas
+73697917 Melo dos Dourados / PR'),
+('6453', '3', 'Vale Marcelo Lima, 3
+lvaro Camargos
+12615491 Campos da Prata / MT'),
+('6454', '2', 'Loteamento da Luz, 29
+Das Industrias I
+40252-630 da Rocha / RO'),
+('6455', '4', 'Parque Elisa Pereira, 21
+Cardoso
+75828564 Silveira / BA'),
+('6456', '4', 'Distrito de Porto
+Vila Nova Gameleira 2 Seo
+43700-138 Pinto das Pedras / RN'),
+('6457', '4', 'Colnia Jesus, 14
+Santa Sofia
+46022968 Ferreira / CE'),
+('6458', '3', 'Morro Monteiro, 51
+Vila Puc
+00083-772 da Costa / MT'),
+('6459', '1', 'Trevo de Farias, 38
+Vila Paquet
+56847207 da Rosa / AL'),
+('6460', '2', 'Vereda Kamilly Porto
+Vila Nova Gameleira 1 Seo
+51455601 Costela das Pedras / CE'),
+('6461', '1', 'Vereda de Alves, 80
+Lagoinha
+29032128 Arago / AL'),
+('6462', '4', 'Alameda Mariane Ribeiro, 675
+Cachoeirinha
+92875-354 Rezende da Prata / TO'),
+('6463', '2', 'Feira Alves, 45
+Vila Atila De Paiva
+31408939 Azevedo / PA'),
+('6464', '3', 'Viaduto Moraes, 392
+Aaro Reis
+74746-916 Dias de Souza / SE'),
+('6465', '5', 'rea Benjamin Teixeira
+Vila Engenho Nogueira
+21323-812 das Neves da Serra / SC'),
+('6466', '2', 'Praia da Rosa
+Vila Trinta E Um De Maro
+43591-697 Monteiro / PB'),
+('6467', '1', 'Morro de da Paz, 23
+Rio Branco
+65016643 da Cruz Alegre / PR'),
+('6468', '2', 'Conjunto Henrique Arajo, 39
+Vila Santo Antnio
+55303738 Castro / SE'),
+('6469', '2', 'Alameda da Costa
+Vila Madre Gertrudes 2 Seo
+94102193 Pinto do Amparo / SC'),
+('6470', '4', 'Feira Benjamin Pinto, 72
+Gutierrez
+05925-510 Teixeira das Flores / PR'),
+('6471', '4', 'Lagoa Melo, 7
+Manacas
+27874-447 Peixoto do Sul / RR'),
+('6472', '5', 'Lago de Vieira, 2
+Vila Primeiro De Maio
+81586516 Vieira / PE'),
+('6473', '3', 'Morro Sofia Novaes, 12
+Campo Alegre
+85176882 Almeida / AL'),
+('6474', '1', 'Praia Olivia das Neves
+Penha
+84549626 Arajo da Serra / SP'),
+('6475', '5', 'Praia Cau Almeida, 1
+Copacabana
+59184-935 Caldeira do Oeste / MT'),
+('6476', '1', 'Loteamento Agatha Rezende, 59
+Boa Viagem
+84934600 Monteiro de Gois / MA'),
+('6477', '5', 'Passarela de Costa, 46
+Vila Da Luz
+15114694 Rocha / MA'),
+('6478', '4', 'Chcara Moreira, 13
+Barroca
+35316499 Ferreira da Mata / SC'),
+('6479', '1', 'Vila de Teixeira, 65
+Eymard
+74742-856 Nunes de das Neves / TO'),
+('6480', '3', 'Alameda Cau Farias, 158
+So Gabriel
+66861-710 Monteiro / RR'),
+('6481', '1', 'Campo Costa, 208
+Santa Monica
+71975-995 Ferreira das Pedras / PE'),
+('6482', '2', 'Jardim Freitas, 84
+Nova Pampulha
+77296956 da Rocha / AP'),
+('6483', '3', 'Recanto de Pires, 6
+Comiteco
+52595494 Pires Grande / AM'),
+('6484', '2', 'Ncleo Kaique Cardoso, 28
+Vila Esplanada
+18482-035 da Paz das Pedras / AL'),
+('6485', '3', 'Colnia da Paz, 690
+Vila Dos Anjos
+98023-047 Dias / SE'),
+('6486', '5', 'Largo Raul Sales, 86
+So Marcos
+04824411 da Mota / MT'),
+('6487', '1', 'Fazenda Cunha, 4
+Cdi Jatoba
+87037135 Barbosa de Lima / SE'),
+('6488', '4', 'Viela de Ramos, 8
+Vera Cruz
+97909842 Cardoso / PR'),
+('6489', '4', 'Rodovia Vieira, 7
+Vila Olhos 
+19503109 Almeida do Norte / PE'),
+('6490', '3', 'Fazenda Dias, 65
+Chcara Leonina
+89275248 Almeida / PI'),
+('6491', '2', 'Aeroporto Pietra Moraes
+Buraco Quente
+87855-980 Nogueira de Santos / AM'),
+('6492', '4', 'Ptio Pedro Miguel Castro
+Caiaras
+86082416 Silva de Gois / PE'),
+('6493', '2', 'Praa Ana Laura Santos
+Madre Gertrudes
+14273-179 Teixeira de da Paz / RS'),
+('6494', '3', 'Distrito Silveira, 78
+Conjunto Lagoa
+98063512 Cavalcanti de Alves / CE'),
+('6495', '2', 'Stio Samuel da Costa, 571
+Conjunto Minas Caixa
+63610-575 Fernandes / SC'),
+('6496', '3', 'Stio Luiz Fernando Rodrigues
+Casa Branca
+73810608 Almeida / PE'),
+('6497', '2', 'Lago Fernandes
+Garas
+61641-200 Alves de da Cunha / DF'),
+('6498', '1', 'Chcara de Cavalcanti, 41
+Estoril
+82332063 da Cruz da Mata / PB'),
+('6499', '4', 'Jardim Sarah Rodrigues, 950
+Parque So Pedro
+63577185 Moraes Paulista / TO'),
+('6500', '4', 'Viela Maria Arajo, 48
+Vila Madre Gertrudes 1 Seo
+07898-381 Pires do Amparo / RR'),
+('6501', '4', 'Residencial Ana Luiza Lopes
+Vila Real 1 Seo
+81199848 Carvalho Paulista / BA'),
+('6502', '3', 'Stio de Teixeira, 35
+Vila So Rafael
+56244-305 Moreira de Minas / ES'),
+('6503', '3', 'Jardim Giovanna Nunes, 5
+Guarani
+37801087 Carvalho do Sul / MA'),
+('6504', '5', 'Ncleo de Dias, 91
+Prado
+57892279 Mendes da Praia / PI'),
+('6505', '4', 'Vila Silva, 14
+Maraj
+37888-293 Cunha Paulista / GO'),
+('6506', '2', 'Colnia Rezende, 653
+Vila Jardim Leblon
+31428-473 Nogueira / MA'),
+('6507', '2', 'Campo de Silveira, 92
+Santa Tereza
+14841330 Ferreira / CE'),
+('6508', '3', 'Praa Maria Julia Duarte
+Vitoria Da Conquista
+33479-905 da Conceio das Flores / ES'),
+('6509', '2', 'Via Otvio Lima, 94
+Camargos
+35792120 Pinto do Norte / RJ'),
+('6510', '4', 'Trecho Mendes, 8
+Conjunto Jardim Filadlfia
+57459-324 da Mota dos Dourados / AM'),
+('6511', '2', 'Ncleo Nogueira, 125
+Vila Inestan
+09782213 Correia / AC'),
+('6512', '4', 'Jardim de Duarte, 95
+Dom Cabral
+65374-600 Correia do Amparo / PI'),
+('6513', '1', 'Conjunto Vinicius Castro, 72
+Horto Florestal
+74578149 Fernandes / RO'),
+('6514', '4', 'Stio da Rosa, 657
+Itapoa
+69000703 Rodrigues do Oeste / MA'),
+('6515', '3', 'Ptio Ana Jlia Barros
+Vila Mantiqueira
+42293661 Azevedo das Pedras / RO'),
+('6516', '4', 'Via de Jesus, 14
+Serrano
+00589-523 Ribeiro / SC'),
+('6517', '1', 'rea Monteiro, 618
+Vila Jardim Montanhes
+51269-130 Barros do Norte / AL'),
+('6518', '4', 'Largo de Rezende, 4
+Beija Flor
+95148279 da Costa dos Dourados / SE'),
+('6519', '3', 'Fazenda da Costa, 98
+Pirineus
+06821-864 Peixoto / MT'),
+('6520', '2', 'Setor Pires
+Vila Pilar
+76128855 Teixeira / DF'),
+('6521', '3', 'Estrada Leonardo da Paz, 21
+Pindorama
+06859-109 Ferreira / CE'),
+('6522', '3', 'Vereda Teixeira, 48
+Pindura Saia
+39879710 Martins / MG'),
+('6523', '2', 'Condomnio de da Luz, 22
+Grota
+79084894 da Cruz do Oeste / DF'),
+('6524', '2', 'Ladeira de Gonalves, 6
+Luxemburgo
+84269650 da Costa de Novaes / MS'),
+('6525', '5', 'Jardim Bryan Arago, 8
+Itapoa
+71179-099 Ribeiro / TO'),
+('6526', '2', 'Campo Oliveira, 65
+Madri
+56439-182 Cardoso / AM'),
+('6527', '3', 'Praa Novaes, 103
+Esperana
+77862459 Mendes da Praia / TO'),
+('6528', '1', 'Aeroporto de da Mata, 49
+Vila Fumec
+92861-663 Martins Grande / PA'),
+('6529', '1', 'Vereda de Sales
+Goiania
+59870852 Peixoto / RO'),
+('6530', '3', 'Viela de Santos
+So Cristvo
+46377-454 Arago do Campo / RS'),
+('6531', '1', 'Travessa Lavnia Arago, 854
+Antonio Ribeiro De Abreu 1 Seo
+47871324 Silveira Grande / RJ'),
+('6532', '2', 'Esplanada Nascimento, 452
+Vila Aeroporto
+19622-011 Arajo / MG'),
+('6533', '2', 'Vila de da Mata, 34
+Universo
+12994-160 Ribeiro Alegre / AC'),
+('6534', '1', 'Vereda de Fogaa, 85
+Mirtes
+42679639 Correia de Peixoto / BA'),
+('6535', '4', 'Vila Raul Fernandes
+Das Industrias I
+28841587 Freitas das Flores / DF'),
+('6536', '3', 'Lagoa de Fogaa, 11
+Vila Copasa
+34000288 Ferreira do Sul / SE'),
+('6537', '3', 'Jardim Porto, 989
+Nova Gameleira
+77237128 da Cunha do Galho / AL'),
+('6538', '1', 'Lagoa de Souza
+Jaragu
+88106-331 Dias do Amparo / BA'),
+('6539', '5', 'Vila Maria Vitria Pinto, 2
+Alpio De Melo
+97175-860 Alves de Lopes / DF'),
+('6540', '5', 'Trecho Teixeira, 416
+Alpio De Melo
+39099628 da Cunha / MG'),
+('6541', '5', 'Fazenda de Cardoso, 49
+Teixeira Dias
+22443-887 Costela / PR'),
+('6542', '4', 'Feira Jesus, 309
+Lagoinha Leblon
+32949-778 da Luz Grande / RR'),
+('6543', '4', 'Lagoa Caldeira, 4
+Vila Copacabana
+64156-442 Pereira das Pedras / DF'),
+('6544', '4', 'Esplanada de Barros, 66
+Vila Santa Monica 2 Seo
+65139527 Moraes / RR'),
+('6545', '2', 'Praa Cavalcanti, 91
+Pongelupe
+12231-654 Rodrigues do Amparo / RN'),
+('6546', '2', 'Travessa Santos, 334
+Dom Joaquim
+06499-600 Fernandes / RO'),
+('6547', '4', 'Vereda da Costa, 75
+Vila Bandeirantes
+62568922 Campos de Minas / MT'),
+('6548', '4', 'Ladeira de Costa, 13
+Bonfim
+00508221 Porto / RR'),
+('6549', '2', 'Alameda de Barros, 4
+Vitoria
+82978-116 Arago / PI'),
+('6550', '2', 'Quadra Martins, 5
+Vila Nova Paraso
+84160487 da Mota / BA'),
+('6551', '3', 'Esplanada Luigi Arajo, 284
+Vila Mangueiras
+82412-812 Cardoso Alegre / BA'),
+('6552', '3', 'Passarela de Fogaa
+Mangabeiras
+26808-202 Porto de Ramos / AP'),
+('6553', '5', 'Ncleo de Sales, 90
+Santa Rita
+61456381 Moraes de Moura / ES'),
+('6554', '1', 'Estao Luiz Fernando Barros, 36
+Pirineus
+14130447 Castro / AM'),
+('6555', '4', 'Trecho de Ferreira, 88
+Santa Lcia
+19706-886 Rodrigues de da Conceio / SE'),
+('6556', '1', 'Alameda Maria Fernanda Moura, 98
+Vila So Francisco
+54493788 Lopes de Ribeiro / GO'),
+('6557', '2', 'Conjunto Moura
+Luxemburgo
+17306-125 Dias / RS'),
+('6558', '5', 'Praa Cardoso, 83
+Tupi B
+82426-031 Nogueira / MT'),
+('6559', '5', 'Feira de Rocha, 93
+Joo Paulo Ii
+94173-086 da Cruz / MG'),
+('6560', '1', 'Estrada Isaac Rezende, 9
+So Marcos
+60054-852 Freitas / RS'),
+('6561', '3', 'Campo Santos, 1
+Vila So Geraldo
+01802689 Rodrigues / DF'),
+('6562', '1', 'Vale de Lima, 795
+Vila Santa Monica 1 Seo
+15275-274 Cardoso do Oeste / CE'),
+('6563', '5', 'Distrito de Teixeira, 555
+Universitrio
+94061-774 Gonalves / PA'),
+('6564', '5', 'Lagoa Viana, 35
+Santa Isabel
+00686159 Nascimento da Serra / RO'),
+('6565', '3', 'Recanto Camila Pereira, 49
+So Geraldo
+64004816 Almeida / PB'),
+('6566', '4', 'Vereda Correia, 61
+Jaragu
+11695470 Jesus de Rocha / BA'),
+('6567', '2', 'Colnia Bernardo Nascimento, 94
+Cu Azul
+15848881 da Rosa da Mata / PE'),
+('6568', '2', 'Parque Luiz Fernando Rocha, 96
+Santa Helena
+96899046 da Luz de da Rocha / MT'),
+('6569', '5', 'Recanto de Silva, 37
+Ambrosina
+95833599 Jesus / DF'),
+('6570', '2', 'Distrito de Nunes, 72
+Vila Nova Gameleira 3 Seo
+41818398 da Mota Paulista / PE'),
+('6571', '2', 'Trevo de Pinto, 679
+Vila Independencia 3 Seo
+22383591 Silveira de Azevedo / PA'),
+('6572', '4', 'Largo Teixeira, 642
+Vila Madre Gertrudes 3 Seo
+72831-959 Gomes do Galho / RJ'),
+('6573', '2', 'Praia de Carvalho, 628
+Santa Amelia
+72575-078 Gomes / MT'),
+('6574', '3', 'Vereda de Moreira, 14
+Pindorama
+22873814 Cardoso / PE'),
+('6575', '3', 'Recanto Lvia da Paz
+Nova Floresta
+08035-667 Sales de Peixoto / CE'),
+('6576', '1', 'Alameda de Arajo
+Vila Independencia 1 Seo
+17168651 Sales / RJ'),
+('6577', '1', 'Esplanada Evelyn Vieira, 45
+Paraso
+04447-193 Monteiro das Flores / GO'),
+('6578', '5', 'Residencial de Duarte
+Grotinha
+06789267 Lopes / RJ'),
+('6579', '3', 'Lago Las Silveira, 57
+Santa Rita De Cssia
+66983920 Silva Alegre / CE'),
+('6580', '4', 'Setor da Costa, 10
+Nova Gameleira
+97994540 Sales das Pedras / TO'),
+('6581', '4', 'Vila Almeida, 13
+Vila Nossa Senhora Do Rosrio
+12297-816 Arago de Gois / SE'),
+('6582', '3', 'Viela Arago, 28
+So Geraldo
+99817490 da Rosa / PI'),
+('6583', '5', 'Largo Campos, 212
+So Paulo
+44222885 Cunha / RR'),
+('6584', '5', 'Jardim de Pereira, 7
+Nova Granada
+59514481 Barbosa Grande / PE'),
+('6585', '4', 'Fazenda de Castro, 277
+Serra
+09132-806 Costela / ES'),
+('6586', '3', 'Largo de Pinto, 41
+Granja De Freitas
+86848838 da Conceio da Prata / SC'),
+('6587', '1', 'Ptio de Moraes, 521
+Pilar
+88058924 Arajo / AM'),
+('6588', '3', 'Estrada de Barbosa, 965
+Cruzeiro
+00544559 Pereira / PR'),
+('6589', '5', 'Passarela Clarice das Neves, 3
+Jardim Dos Comerciarios
+03559-468 Lopes / MS'),
+('6590', '2', 'Viela Bruno Nunes, 52
+So Francisco
+41295-940 Moraes / RR'),
+('6591', '2', 'Ladeira de Mendes, 52
+So Cristvo
+37353242 Cunha / MT'),
+('6592', '1', 'Conjunto Ana Sophia Freitas
+Fazendinha
+98854822 Porto / MS'),
+('6593', '3', 'Morro Cardoso, 201
+Vista Alegre
+14546-730 Oliveira das Pedras / MS'),
+('6594', '3', 'Rodovia Juliana Ramos
+Vila Copacabana
+99871-089 Monteiro / BA'),
+('6595', '3', 'Chcara de Silva, 63
+Serra Do Curral
+64917-125 Mendes / DF'),
+('6596', '3', 'Vereda Correia, 10
+Floramar
+78320-671 Moura dos Dourados / GO'),
+('6597', '4', 'Vila de Fernandes, 8
+So Francisco
+10489-872 Pereira de Cunha / PE'),
+('6598', '2', 'Fazenda Cardoso, 37
+Buraco Quente
+93921477 da Rosa das Flores / PE'),
+('6599', '2', 'Rua Mendes
+Conjunto Minas Caixa
+48364-382 Pinto / DF'),
+('6600', '3', 'Ptio Fernando Mendes, 41
+Barreiro
+86361-390 Vieira / AP'),
+('6601', '4', 'Passarela de Farias, 77
+Novo Aaro Reis
+22549904 Oliveira de Sales / AM'),
+('6602', '5', 'Aeroporto da Cunha, 75
+Madre Gertrudes
+22281741 Moura / RN'),
+('6603', '1', 'Chcara Carvalho, 71
+Parque So Jos
+43086961 Silveira de Gois / PE'),
+('6604', '5', 'Praa Ana Carolina Duarte, 743
+Santa Isabel
+40801360 Dias / AC'),
+('6605', '1', 'Aeroporto de Martins
+Alto Das Antenas
+19335751 Duarte do Campo / CE'),
+('6606', '1', 'Feira Bencio Rocha
+Araguaia
+78601-829 Cunha / PA'),
+('6607', '1', 'Viela de Farias, 4
+Conjunto So Francisco De Assis
+49588244 Nascimento / SE'),
+('6608', '2', 'Conjunto Enzo Porto, 13
+Marieta 3 Seo
+81532979 Gomes do Sul / PR'),
+('6609', '1', 'Lagoa Moura, 2
+Beira Linha
+78308354 Pereira da Serra / MA'),
+('6610', '2', 'Ladeira Anthony Castro, 214
+Conjunto Floramar
+48164715 da Cruz / RR'),
+('6611', '3', 'Rua de Teixeira, 725
+Santa Terezinha
+58067836 Farias do Norte / GO'),
+('6612', '1', 'Condomnio Ana Jlia Almeida
+Novo Tupi
+67729-483 Barbosa Alegre / MA'),
+('6613', '1', 'Vereda Manuela da Cruz, 29
+Vila Santo Antnio Barroquinha
+63661-407 Pinto / PR'),
+('6614', '1', 'Praia de das Neves, 81
+Esperana
+51303-931 Almeida de Rezende / DF'),
+('6615', '5', 'Vereda Alexia Caldeira, 6
+Vila De S
+30987743 Moreira / MS'),
+('6616', '3', 'Campo das Neves, 281
+Vila Inestan
+83062795 Caldeira de Freitas / MG'),
+('6617', '4', 'Parque Ana Luiza Rocha, 224
+Vila Satlite
+26206238 da Luz / PR'),
+('6618', '1', 'Lago Stella Cardoso, 24
+Aparecida
+89113576 Pinto / AL'),
+('6619', '3', 'rea de Lima, 43
+Alpes
+63518781 Lopes / CE'),
+('6620', '1', 'rea Maria Alice Farias, 2
+Monte So Jos
+10466252 Oliveira de Azevedo / TO'),
+('6621', '5', 'Parque Fernandes
+pia
+32353039 Novaes / AM'),
+('6622', '5', 'Estao Barros, 899
+Aparecida
+96228-648 Cardoso Paulista / MG'),
+('6623', '1', 'Chcara Rafael Moura, 3
+Vila Piratininga
+55969-634 Moura / RS'),
+('6624', '3', 'Setor Yuri Pinto, 27
+Comiteco
+97315-368 Rodrigues / GO'),
+('6625', '3', 'Ladeira Yago Barbosa, 32
+So Jorge 3 Seo
+18665-683 Santos / MA'),
+('6626', '3', 'Ptio Maria Clara Arago, 503
+Conjunto Capito Eduardo
+11981031 Silva / RR'),
+('6627', '4', 'Recanto Carvalho, 24
+Joo Alfredo
+24379634 Ramos / ES'),
+('6628', '3', 'Avenida de Caldeira, 68
+So Luiz
+21312983 Farias / AP'),
+('6629', '3', 'Feira Vieira, 6
+Manacas
+02449247 Moreira / MS'),
+('6630', '1', 'Fazenda Maysa da Rosa
+Vila Madre Gertrudes 1 Seo
+82027-216 Fernandes do Sul / AL'),
+('6631', '1', 'Viaduto da Cruz
+Salgado Filho
+73291-626 Melo / MA'),
+('6632', '3', 'Ncleo Ferreira, 80
+Castanheira
+93008-205 da Cunha / MT'),
+('6633', '2', 'Aeroporto Almeida, 79
+Cu Azul
+69923-062 Farias Paulista / RN'),
+('6634', '1', 'Recanto Cardoso, 54
+Leonina
+27197-288 Porto das Flores / DF'),
+('6635', '5', 'Condomnio de das Neves
+Dom Cabral
+88531-635 Martins / PB'),
+('6636', '5', 'Rua Valentina da Mota, 340
+Oeste
+59484-314 Pires dos Dourados / PA'),
+('6637', '2', 'Campo de Ferreira
+So Pedro
+62538-638 Barros de Mendes / RO'),
+('6638', '3', 'Ncleo de Souza, 4
+Nazare
+90798165 Teixeira / MT'),
+('6639', '2', 'Praa Viana, 26
+Santana Do Cafezal
+47585793 Pereira de da Luz / PB'),
+('6640', '2', 'Avenida de Fogaa
+So Jorge 1 Seo
+10151701 da Cunha da Serra / DF'),
+('6641', '4', 'Esplanada Fernandes
+Tres Marias
+42726174 Mendes de Minas / RR'),
+('6642', '5', 'Travessa Catarina Rodrigues, 78
+Santa Maria
+29939-620 Arajo do Sul / TO'),
+('6643', '4', 'Recanto Mendes
+Juliana
+47680-400 Barros de Gois / TO'),
+('6644', '5', 'Loteamento Marina Silveira, 42
+Apolonia
+80381-189 Peixoto / AP'),
+('6645', '3', 'Feira Lopes, 4
+Engenho Nogueira
+03828-765 Gonalves / RR'),
+('6646', '2', 'Alameda de Barbosa, 2
+Madre Gertrudes
+77189-606 da Luz / ES'),
+('6647', '5', 'Favela Brbara Pereira, 6
+Diamante
+32416180 das Neves / TO'),
+('6648', '3', 'Parque de Almeida, 18
+Vila Independencia 1 Seo
+84415382 da Paz de Minas / MA'),
+('6649', '4', 'Avenida de da Costa, 1
+Hava
+05301803 Souza / TO'),
+('6650', '1', 'Rua de Ribeiro, 26
+Santa Rosa
+35596606 da Rosa do Oeste / MT'),
+('6651', '2', 'Aeroporto de Pereira, 696
+Vila Jardim So Jos
+77482-438 Rodrigues dos Dourados / PI'),
+('6652', '5', 'Alameda Moura, 8
+Vila Nova Cachoeirinha 2 Seo
+85504915 Caldeira de Minas / RO'),
+('6653', '4', 'Favela Luiza Arajo, 48
+Delta
+92341339 Duarte da Serra / PE'),
+('6654', '5', 'rea Helosa Rezende, 8
+Camponesa 1 Seo
+90737-487 Dias / MT'),
+('6655', '2', 'Recanto de Dias, 64
+Liberdade
+22921-186 Silva de Minas / PE'),
+('6656', '1', 'Rua Joo Gabriel Silva, 32
+Santa Amelia
+13363-619 Farias / CE'),
+('6657', '1', 'Feira Moraes, 199
+Camargos
+62195044 da Rocha de Teixeira / PE'),
+('6658', '5', 'Estao de Souza, 49
+Vila So Geraldo
+47147-761 da Rosa da Prata / AM'),
+('6659', '1', 'Esplanada Ferreira, 643
+Vila Nova
+67353474 Ramos Alegre / AL'),
+('6660', '2', 'Passarela Bryan Nogueira, 58
+Jardim Montanhs
+76157-352 Barbosa / RJ'),
+('6661', '3', 'Largo de Almeida, 2
+Castelo
+01067-146 Peixoto / RO'),
+('6662', '5', 'Vila Daniela Gonalves, 39
+Vila Betnia
+83832-057 Azevedo / AC'),
+('6663', '4', 'Alameda de Dias, 756
+Dona Clara
+39951-071 Pereira / CE'),
+('6664', '4', 'Alameda de Pires, 41
+Alta Tenso 1 Seo
+77329125 Farias / AL'),
+('6665', '5', 'Praia de Arajo, 34
+Conjunto Califrnia Ii
+44002-893 Gomes de da Rosa / RR'),
+('6666', '5', 'Esplanada de Nogueira, 369
+So Benedito
+81155-699 Pereira / MG'),
+('6667', '5', 'Viaduto Julia Vieira, 75
+Lagoinha
+22756-772 Rodrigues / TO'),
+('6668', '1', 'Condomnio Vieira, 403
+Vila Engenho Nogueira
+41251-126 Gonalves / AL'),
+('6669', '1', 'Morro Sarah Rocha, 60
+Vera Cruz
+69426-362 Freitas de Minas / RR'),
+('6670', '4', 'Distrito Luiz Miguel Peixoto, 93
+Zilah Sposito
+31259820 Correia de Castro / MA'),
+('6671', '4', 'Aeroporto Nunes
+Miramar
+44222-836 Porto de Fogaa / ES'),
+('6672', '2', 'Recanto de Campos, 3
+Vila Madre Gertrudes 4 Seo
+36299-838 Peixoto das Pedras / PR'),
+('6673', '1', 'Lago Oliveira, 79
+lvaro Camargos
+68068-464 das Neves da Serra / MT'),
+('6674', '3', 'Distrito Vitor Gabriel Ferreira, 25
+Antonio Ribeiro De Abreu 1 Seo
+73480-972 Cardoso / PE'),
+('6675', '1', 'Jardim Nicolas Cavalcanti, 66
+Silveira
+66755626 da Mota Paulista / GO'),
+('6676', '3', 'Ladeira de Rocha, 62
+Buritis
+23364480 da Cruz / PR'),
+('6677', '5', 'Ncleo Isabella Ferreira, 91
+Goiania
+02583-099 Melo das Pedras / DF'),
+('6678', '2', 'Feira de Azevedo, 31
+Manacas
+75681278 Moura da Praia / TO'),
+('6679', '5', 'rea Lorena Alves
+Vila Califrnia
+38567-155 Santos / PB'),
+('6680', '1', 'Conjunto Cunha, 199
+Guarani
+78254-460 Vieira de Jesus / AP'),
+('6681', '5', 'Rua Lopes
+Morro Dos Macacos
+05689853 da Conceio Grande / TO'),
+('6682', '5', 'Ncleo de Cardoso, 66
+Vila Paris
+56831-639 Almeida das Pedras / TO'),
+('6683', '3', 'Rodovia Maria Ceclia Martins
+Acaiaca
+08392210 da Rocha Grande / PR'),
+('6684', '1', 'Loteamento Esther Ferreira, 5
+Novo Aaro Reis
+24981-536 Rodrigues do Galho / DF'),
+('6685', '4', 'Praia da Paz, 1
+Buritis
+73437-716 da Costa Paulista / SE'),
+('6686', '3', 'Ncleo Agatha Rezende, 82
+Jardim Amrica
+27429-420 das Neves da Mata / SP'),
+('6687', '3', 'Viela Thomas Farias, 71
+Baleia
+44412970 da Paz das Flores / PI'),
+('6688', '1', 'Colnia Ana Julia Costela, 370
+Anchieta
+77164-905 Gonalves do Sul / RN'),
+('6689', '3', 'Vereda Sarah Azevedo, 9
+Palmeiras
+38088-877 Porto / MT'),
+('6690', '2', 'Lagoa de Gomes
+Lajedo
+77063-773 Nascimento / AL'),
+('6691', '3', 'Trecho Henrique da Rocha, 26
+Minas Caixa
+59364-575 Nogueira de Gois / RS'),
+('6692', '3', 'rea de Vieira
+Alta Tenso 1 Seo
+00376-735 Castro / MA'),
+('6693', '4', 'Trevo de Mendes, 255
+Boa Unio 2 Seo
+50858-164 das Neves / AM'),
+('6694', '4', 'Ptio Ana Lvia Correia
+Acaba Mundo
+91390353 Moreira / AL'),
+('6695', '2', 'Parque Barros
+Vila Puc
+79441-750 Nunes / RS'),
+('6696', '5', 'Passarela Freitas, 2
+Santa Monica
+50718-631 Alves / SE'),
+('6697', '1', 'Vereda Maria Sophia Dias
+Vila Betnia
+30632823 da Conceio dos Dourados / RR'),
+('6698', '5', 'Campo de Martins, 700
+Santa Lcia
+42928054 Pereira / PI'),
+('6699', '1', 'Viela da Mata, 57
+Novo Glria
+24354-686 Alves / PR'),
+('6700', '3', 'Aeroporto Anthony da Conceio, 82
+Barro Preto
+82267-004 Ferreira / SE'),
+('6701', '4', 'Alameda da Cruz, 71
+Tres Marias
+85803-551 Barbosa / BA'),
+('6702', '2', 'Avenida Moura, 44
+Joo Pinheiro
+88412240 Martins / BA'),
+('6703', '4', 'Recanto Lucas Gabriel Oliveira
+Vila Real 2 Seo
+65442492 da Rocha / CE'),
+('6704', '4', 'Estao Thales Moreira, 57
+Universitrio
+74233169 Pinto / BA'),
+('6705', '1', 'Campo Sales, 59
+Grotinha
+52543-860 Cardoso de Freitas / RO'),
+('6706', '1', 'Rodovia Brbara Martins, 76
+Graa
+19145-766 Cardoso das Flores / RN'),
+('6707', '3', 'Setor de Correia, 156
+Alpes
+48167-600 da Conceio / ES'),
+('6708', '1', 'Stio da Luz, 10
+Nova Gameleira
+00310002 Ramos / PE'),
+('6709', '3', 'Viaduto Fogaa, 728
+Boa Esperana
+27358-864 Novaes Grande / BA'),
+('6710', '5', 'Fazenda Bruno Duarte, 31
+So Gonalo
+84762273 da Luz / ES'),
+('6711', '2', 'Praa Moreira, 212
+Marmiteiros
+58117-435 da Cruz / AC'),
+('6712', '4', 'Avenida Castro, 7
+Sion
+73597299 Farias Alegre / SP'),
+('6713', '3', 'Stio Rafaela Freitas, 7
+Maraj
+30341647 Oliveira / RS'),
+('6714', '5', 'Trecho Danilo Silva, 10
+Comiteco
+17826739 Fogaa / RJ'),
+('6715', '2', 'Vale Melissa Farias, 754
+Vila Coqueiral
+80699-763 Teixeira / PE'),
+('6716', '2', 'Esplanada Fogaa, 88
+Nova Gameleira
+89612098 Rodrigues / RR'),
+('6717', '3', 'Ptio Cardoso, 83
+Aaro Reis
+29823453 Sales do Galho / PR'),
+('6718', '5', 'Passarela de da Conceio, 5
+So Pedro
+94371371 Ramos / MG'),
+('6719', '4', 'Travessa Melo, 865
+Miramar
+55185048 Arajo / PI'),
+('6720', '4', 'Recanto Cunha, 8
+Distrito Industrial Do Jatoba
+67556-582 Alves / MG'),
+('6721', '4', 'Aeroporto Melo, 7
+Chcara Leonina
+18739-136 Ferreira / RJ'),
+('6722', '2', 'Vila Freitas, 74
+Bernadete
+75748446 Lopes / ES'),
+('6723', '5', 'Aeroporto Bruno Melo, 4
+Jardim Felicidade
+94049338 Nunes / GO'),
+('6724', '5', 'Praia de Fernandes, 912
+Minas Caixa
+31068057 das Neves da Serra / BA'),
+('6725', '2', 'Recanto Caio Costa
+Solar Do Barreiro
+55353276 Rocha das Flores / MT'),
+('6726', '1', 'Aeroporto Enzo Gabriel da Costa, 25
+Marilandia
+22709-662 da Paz / SE'),
+('6727', '2', 'Lago Viana, 31
+Alpio De Melo
+04703560 Viana / AP'),
+('6728', '1', 'Lagoa de Martins
+Salgado Filho
+73021-209 Santos do Sul / BA'),
+('6729', '1', 'Via Ana Nascimento, 37
+Vila Ecolgica
+25423398 Gonalves / AL'),
+('6730', '3', 'Conjunto Dias, 8
+Santa Lcia
+81288045 Ramos / TO'),
+('6731', '2', 'Avenida de Vieira, 4
+Apolonia
+50903523 Arago / AL'),
+('6732', '4', 'Lagoa de da Cruz
+Novo Aaro Reis
+26470-245 Pereira das Flores / MS'),
+('6733', '1', 'Chcara de Silva, 8
+Miramar
+98602560 Cunha da Praia / RR'),
+('6734', '4', 'Travessa de Costela, 93
+Baro Homem De Melo 1 Seo
+75484086 Fogaa / AC'),
+('6735', '4', 'Quadra Pires, 16
+Cachoeirinha
+90161357 Gonalves dos Dourados / PR'),
+('6736', '5', 'Quadra Erick Moura, 5
+Centro
+16129891 da Cruz Verde / GO'),
+('6737', '4', 'Morro Luigi Barros, 79
+Carmo
+93075-674 Ribeiro de Gois / PE'),
+('6738', '4', 'Ptio de Campos, 144
+Santa Tereza
+26994646 Monteiro / RS'),
+('6739', '5', 'Colnia Murilo da Paz, 984
+Sport Club
+84856-510 das Neves / AL'),
+('6740', '1', 'Largo Santos, 22
+Mirtes
+25313247 Azevedo do Campo / MS'),
+('6741', '2', 'Chcara Maria Sophia Freitas, 708
+So Cristvo
+56542-774 Farias do Galho / DF'),
+('6742', '4', 'Ladeira Ramos, 903
+Manacas
+01393743 Martins / PE'),
+('6743', '4', 'Via de Farias, 4
+Embabas
+27857-410 Mendes da Praia / TO'),
+('6744', '2', 'Esplanada Campos, 42
+Cruzeiro
+86429852 Nascimento de Nogueira / MG'),
+('6745', '4', 'Rodovia de Lima
+Vila Madre Gertrudes 1 Seo
+26976462 Arago / PI'),
+('6746', '5', 'Loteamento Cunha, 6
+Lourdes
+48548-282 da Cunha Paulista / SC'),
+('6747', '1', 'Rodovia Felipe Moraes, 20
+Renascena
+99602889 Souza das Flores / RN'),
+('6748', '2', 'Stio Sales, 18
+Vila Ecolgica
+10285-677 Teixeira dos Dourados / AL'),
+('6749', '1', 'Largo de Nogueira, 41
+Nova Cachoeirinha
+96686361 Dias / AC'),
+('6750', '1', 'Esplanada Dias, 1
+Vila Fumec
+58438-447 Fernandes / ES'),
+('6751', '1', 'Praa da Cruz, 845
+Conjunto Paulo Vi
+09074-493 Arajo Verde / RR'),
+('6752', '4', 'Quadra da Costa, 52
+Vila Novo So Lucas
+98261-783 Souza / ES'),
+('6753', '4', 'Favela Valentina Moreira, 91
+Lagoa
+98058-742 Freitas / ES'),
+('6754', '2', 'Estao de Melo, 6
+Rio Branco
+19592-437 Moura dos Dourados / RR'),
+('6755', '2', 'Alameda Erick Cardoso, 19
+Vila Nova Cachoeirinha 2 Seo
+31249083 Moura / TO'),
+('6756', '5', 'Ladeira Mendes, 268
+Pindorama
+87213324 Pinto / MT'),
+('6757', '1', 'Via de Rodrigues
+Vila Da Paz
+76131024 Lopes / MA'),
+('6758', '1', 'Conjunto Bernardo da Rocha, 74
+So Bento
+34798-869 Pires / MA'),
+('6759', '2', 'Estrada Isabel Cardoso, 32
+Lagoa
+37493539 Cardoso de Viana / MA'),
+('6760', '1', 'Travessa de Barbosa, 39
+Joo Alfredo
+25912-071 Silva Alegre / PB'),
+('6761', '3', 'Trecho Isabel Viana, 26
+Barreiro
+20740-935 Silveira da Mata / SE'),
+('6762', '5', 'Aeroporto Ryan Novaes, 7
+Nova Cintra
+82376326 Nascimento / RO'),
+('6763', '1', 'Setor da Costa, 78
+Buritis
+37828392 Vieira / MA'),
+('6764', '4', 'Praa Freitas
+Palmares
+63034-589 Moura do Amparo / ES'),
+('6765', '2', 'Rodovia Souza, 8
+So Marcos
+16634-587 Azevedo da Serra / PB'),
+('6766', '5', 'Lago Rafael da Rosa, 75
+Vila Aeroporto
+64333-617 Fogaa dos Dourados / SP'),
+('6767', '2', 'Recanto Souza, 20
+Vila Nova Dos Milionarios
+77955-333 da Costa / PB'),
+('6768', '3', 'Estao de da Paz, 80
+Jardim Felicidade
+95698-320 Pinto / MA'),
+('6769', '3', 'Passarela Maria Sophia Nascimento, 61
+Vila Jardim So Jos
+58538032 Costela da Mata / MS'),
+('6770', '3', 'Vila Enrico da Rosa, 728
+Vila Satlite
+87256036 Cardoso de da Rosa / PR'),
+('6771', '4', 'Alameda de Lima, 154
+Flamengo
+28949-637 Ferreira / DF'),
+('6772', '5', 'Lago de Mendes, 93
+Ventosa
+05317-602 Teixeira de Gomes / MS'),
+('6773', '4', 'Travessa Manuela Duarte
+Cardoso
+10988513 Martins de Gois / RN'),
+('6774', '5', 'Ptio Moura
+Vila Piratininga Venda Nova
+49411149 Costela / RJ'),
+('6775', '1', 'Favela de da Paz, 776
+Vila Nova Cachoeirinha 3 Seo
+80453131 Nascimento Grande / PR'),
+('6776', '3', 'Loteamento Lvia Costa, 13
+Tupi A
+83468-142 Nascimento de Minas / MS'),
+('6777', '4', 'Estrada de da Conceio, 90
+Graa
+14914915 da Luz / MA'),
+('6778', '1', 'Vale da Cruz, 54
+Bandeirantes
+96022-910 Souza das Pedras / AL'),
+('6779', '2', 'Estrada de Alves, 29
+Vale Do Jatoba
+18011882 Cardoso de Cavalcanti / SE'),
+('6780', '4', 'Setor de Lima, 78
+Grota
+63081805 Santos Paulista / MS'),
+('6781', '5', 'Avenida Marcelo Lima, 3
+Canaa
+91207374 Jesus / PI'),
+('6782', '5', 'rea de da Conceio, 83
+Buraco Quente
+54134886 Castro da Praia / SE'),
+('6783', '5', 'Favela Maria Clara Almeida
+Vila So Francisco
+23764-526 Peixoto das Flores / MT'),
+('6784', '5', 'Morro Julia Moraes, 242
+Vila Atila De Paiva
+62569-719 Campos de Caldeira / RS'),
+('6785', '5', 'Ladeira da Cunha, 35
+Nova Sua
+64923221 Dias do Amparo / PA'),
+('6786', '4', 'Praa Fernanda Barbosa, 26
+Vila Nova Gameleira 2 Seo
+66144213 Ribeiro / MG'),
+('6787', '2', 'Via Ribeiro, 986
+Ferno Dias
+91681-853 Teixeira / BA'),
+('6788', '5', 'Travessa de Jesus
+Conjunto Minas Caixa
+28423146 Castro do Amparo / DF'),
+('6789', '5', 'Lagoa Pereira, 6
+Vila Oeste
+96646502 Farias Paulista / MS'),
+('6790', '2', 'Jardim Santos, 15
+Vila Suzana Primeira Seo
+79709-318 Duarte / RR'),
+('6791', '4', 'Aeroporto Vieira, 45
+Vila Piratininga
+38002549 da Mata / PR'),
+('6792', '1', 'Lagoa Viana
+Antonio Ribeiro De Abreu 1 Seo
+65807190 Cavalcanti / SC'),
+('6793', '5', 'Travessa Freitas
+Tnel De Ibirit
+09887-275 das Neves / AP'),
+('6794', '4', 'Trevo Farias, 386
+Marieta 2 Seo
+78990-246 Almeida de Nunes / AC'),
+('6795', '2', 'Via Farias, 25
+Joo Paulo Ii
+82565-170 Arajo das Flores / AP'),
+('6796', '4', 'Ladeira Azevedo, 38
+Nova Esperana
+87390-053 Pereira / MT'),
+('6797', '4', 'Parque de Silveira, 83
+Minas Brasil
+87959-879 Almeida Verde / PI'),
+('6798', '2', 'Vereda Davi da Luz, 58
+Nova Floresta
+87621498 Barbosa / BA'),
+('6799', '5', 'Chcara Silva, 52
+Teixeira Dias
+14371108 Moraes do Norte / MS'),
+('6800', '5', 'Ladeira de Gonalves, 50
+Fazendinha
+63722037 Moreira / PE'),
+('6801', '1', 'Travessa Costela, 59
+Vila Piratininga
+16850780 da Rocha de Gois / DF'),
+('6802', '2', 'Avenida Costela
+Jardim So Jos
+79161-237 Barbosa / MT'),
+('6803', '5', 'Avenida de Peixoto, 85
+Barro Preto
+89229791 da Rocha da Praia / PB'),
+('6804', '2', 'Trecho de da Luz
+Santa Sofia
+32651-533 Nogueira das Flores / MT'),
+('6805', '2', 'Stio da Mota, 9
+Bernadete
+35176024 Jesus / PE'),
+('6806', '2', 'Condomnio de Almeida, 62
+Conjunto Celso Machado
+51361860 Costa / PB'),
+('6807', '2', 'Chcara Freitas, 29
+Ouro Minas
+67402-704 Campos de Costela / SE'),
+('6808', '1', 'Via Francisco Viana, 6
+Delta
+50100-054 Lopes / RJ'),
+('6809', '2', 'Recanto Nogueira, 93
+Baro Homem De Melo 3 Seo
+00963-853 Rocha / GO'),
+('6810', '5', 'Vila da Paz, 8
+Santa Terezinha
+76517508 Arago de Silva / SP'),
+('6811', '4', 'Passarela Enzo Lopes, 64
+Dom Bosco
+44600665 Sales / PI'),
+('6812', '3', 'Campo Costa, 69
+Sion
+20820-079 Arajo de Rodrigues / AL'),
+('6813', '3', 'Loteamento Mariane Caldeira, 43
+Maria Virgnia
+21507-029 Barbosa da Serra / PB'),
+('6814', '2', 'Praia de da Rocha, 7
+Leonina
+93124-739 Fogaa de das Neves / RO'),
+('6815', '1', 'Ptio de Lima, 5
+Jardinpolis
+49054-175 da Rocha de Minas / MG'),
+('6816', '4', 'Stio Sales, 42
+Vila Da Luz
+20181744 Sales de Rodrigues / PR'),
+('6817', '4', 'Feira Caroline Costa, 95
+So Jorge 3 Seo
+09299709 Peixoto do Oeste / RO'),
+('6818', '4', 'Recanto Monteiro, 31
+Leonina
+54546-851 Oliveira / RN'),
+('6819', '1', 'Rua Caldeira, 21
+Boa Esperana
+09005-575 Ribeiro do Amparo / PA'),
+('6820', '5', 'Condomnio Pires, 97
+Senhor Dos Passos
+18290774 Vieira / RN'),
+('6821', '1', 'Largo Cau Mendes, 62
+Joo Pinheiro
+96524-516 Ramos Alegre / MS'),
+('6822', '2', 'Trevo de Costa, 1
+Pilar
+29926-875 Correia de Teixeira / DF'),
+('6823', '3', 'Rodovia de Rocha, 7
+Santa Helena
+91188968 Campos / PE'),
+('6824', '4', 'Morro de Nunes, 272
+Cardoso
+40978-619 da Costa / GO'),
+('6825', '1', 'Favela Las Lopes
+Independncia
+76286-670 Monteiro / RJ'),
+('6826', '4', 'Residencial de da Cruz
+Trevo
+75513871 da Rocha / RN'),
+('6827', '2', 'Recanto Monteiro, 56
+Vila Calafate
+24811335 Peixoto de Peixoto / TO'),
+('6828', '2', 'Ladeira de Alves, 238
+Andiroba
+85818-953 Ramos de Moura / CE'),
+('6829', '4', 'Vereda de Sales, 58
+Mangabeiras
+43842882 Teixeira das Flores / CE'),
+('6830', '1', 'rea de Ribeiro, 221
+Canad
+75783298 Rocha / SC'),
+('6831', '5', 'Viaduto da Paz, 815
+Jatob
+33469-432 da Paz de Dias / BA'),
+('6832', '2', 'Trevo Maysa Dias, 787
+Cidade Nova
+77847207 Barros / SC'),
+('6833', '2', 'Via de Azevedo, 7
+Marieta 3 Seo
+83281769 Ferreira / PI'),
+('6834', '3', 'Largo de das Neves
+Canaa
+39735793 Cavalcanti / RO'),
+('6835', '1', 'Viaduto Martins, 8
+Santa Monica
+17141854 Novaes do Sul / PR'),
+('6836', '1', 'Viela de Silveira, 85
+Caiara - Adelaide
+71692-963 Rocha de Minas / AM'),
+('6837', '2', 'Feira de da Cunha
+Pindorama
+71151-429 Silveira / CE'),
+('6838', '2', 'Passarela de Silva, 55
+Cidade Nova
+82599-148 Novaes do Galho / AM'),
+('6839', '2', 'Loteamento Maria Luiza Barros, 12
+Vista Alegre
+05198067 Alves de da Cruz / PR'),
+('6840', '4', 'Estao Silveira, 47
+Tupi A
+78317617 Sales / SE'),
+('6841', '1', 'Residencial Barbosa, 47
+Vila Madre Gertrudes 2 Seo
+64476-144 Fernandes Grande / RO'),
+('6842', '5', 'Jardim da Conceio
+Maria Helena
+18868-658 Teixeira / MT'),
+('6843', '4', 'Feira de Arago, 41
+Funcionrios
+72290-907 Jesus de da Cruz / RS'),
+('6844', '4', 'Loteamento Ferreira, 63
+Vila Paquet
+36308181 Correia da Praia / PE'),
+('6845', '4', 'Largo de Cardoso, 30
+Conjunto Lagoa
+31869557 Viana / AC'),
+('6846', '1', 'Trevo Cau Martins, 84
+Vila Fumec
+51938863 Martins / RN'),
+('6847', '4', 'Rodovia Amanda Moraes, 81
+Vera Cruz
+60136-169 Rodrigues do Sul / AP'),
+('6848', '1', 'Lago Felipe Cardoso, 8
+Buritis
+49899212 Alves / MS'),
+('6849', '3', 'Estao Pedro Henrique Moraes, 9
+Conjunto Novo Dom Bosco
+26082-585 da Mota de Oliveira / PR'),
+('6850', '5', 'Residencial Kaique Gonalves, 31
+Vila Olhos 
+68998966 da Cruz do Oeste / AP'),
+('6851', '1', 'Via Alves, 60
+Camargos
+57141804 da Luz / SC'),
+('6852', '3', 'Feira Yago Santos, 76
+Cachoeirinha
+46061814 Freitas / RR'),
+('6853', '1', 'Ncleo Fernandes, 37
+Vila Nova Gameleira 1 Seo
+12003-026 da Paz da Serra / PB'),
+('6854', '1', 'Via Correia, 8
+So Sebastio
+51202-706 Azevedo / DF'),
+('6855', '1', 'Estao Luiz Henrique da Cunha, 4
+Baro Homem De Melo 3 Seo
+80473-518 da Cunha / MT'),
+('6856', '1', 'Ncleo de Arajo, 5
+Jardim Montanhs
+11522190 Campos do Amparo / BA'),
+('6857', '1', 'Condomnio de Pinto, 7
+Trevo
+39126500 Pires Paulista / AC'),
+('6858', '5', 'Estao Miguel Cavalcanti, 736
+Conjunto Califrnia I
+75209176 Rezende / PA'),
+('6859', '2', 'Campo da Mata, 22
+Glria
+91588-802 Lopes de Freitas / PB'),
+('6860', '5', 'rea Francisco Nogueira, 16
+Independncia
+03233812 Caldeira do Amparo / PE'),
+('6861', '2', 'Passarela de Alves, 1
+Goiania
+35494108 Mendes / DF'),
+('6862', '4', 'Vila Almeida
+Vila Mantiqueira
+57418108 Ribeiro / RO'),
+('6863', '1', 'Rodovia de Monteiro, 30
+Vila Fumec
+19881396 Peixoto do Oeste / AP'),
+('6864', '5', 'Rua de Azevedo, 323
+Funcionrios
+95542-046 Peixoto da Mata / PA'),
+('6865', '2', 'Conjunto Isabelly Novaes, 8
+Bairro Das Indstrias Ii
+67929649 Ramos do Galho / RJ'),
+('6866', '5', 'Via de Cardoso, 45
+Frei Leopoldo
+09096-655 da Conceio de Gois / RO'),
+('6867', '4', 'Vereda Arajo
+Vila Copasa
+02318-202 Souza / SE'),
+('6868', '2', 'Estao Davi Santos, 7
+Sagrada Famlia
+69008386 da Cunha da Prata / BA'),
+('6869', '5', 'Setor Nascimento, 254
+Nossa Senhora Do Rosrio
+10985753 Fernandes Verde / PI'),
+('6870', '5', 'Estrada de da Luz, 91
+So Paulo
+91565-141 Duarte / PA'),
+('6871', '4', 'Travessa Thiago Moura, 56
+Conjunto Santa Maria
+88974-313 Fernandes de da Mata / RJ'),
+('6872', '5', 'Trecho de Castro, 936
+Vila Suzana Primeira Seo
+22022-432 da Mata do Galho / BA'),
+('6873', '5', 'Setor Isabelly Rodrigues, 14
+Santa Margarida
+86824266 Pinto / MA'),
+('6874', '2', 'Conjunto de da Mota, 35
+Barreiro
+41602119 Fogaa / AL'),
+('6875', '3', 'Ptio Almeida, 80
+Vila Atila De Paiva
+49608428 Azevedo / AC'),
+('6876', '5', 'Via Julia Cardoso, 65
+Marieta 3 Seo
+85297492 Pereira da Serra / SC'),
+('6877', '4', 'Campo Almeida, 5
+Vila Da Luz
+36920-520 Ferreira / PE'),
+('6878', '3', 'Estao Alcia Pereira, 626
+Vila Calafate
+93526-013 Arago / MG'),
+('6879', '4', 'Parque Milena Dias
+Vila Independencia 2 Seo
+38799-362 Ribeiro das Pedras / RR'),
+('6880', '5', 'Condomnio de Cardoso, 10
+Santa Ins
+96368703 Gonalves / SP'),
+('6881', '4', 'Alameda Luiz Henrique Teixeira
+Vila Puc
+49368-289 Freitas / RJ'),
+('6882', '3', 'Conjunto de Campos, 73
+Floresta
+54301-480 Vieira / AC'),
+('6883', '3', 'Travessa Ana Teixeira, 57
+Novo Ouro Preto
+66067-009 Viana do Campo / AP'),
+('6884', '5', 'Parque Yago Nogueira, 45
+Saudade
+28436-861 da Cunha / PE'),
+('6885', '3', 'Vale Ribeiro
+So Gabriel
+23788-974 Costela / AM'),
+('6886', '4', 'Fazenda de Monteiro, 7
+Boa Unio 2 Seo
+91362-614 Jesus / PA'),
+('6887', '4', 'Ncleo Maria Vitria Costela, 22
+Conjunto Califrnia I
+33277370 Souza da Praia / ES'),
+('6888', '2', 'Trevo Arajo, 83
+Vila Dos Anjos
+17787-946 Monteiro do Norte / AC'),
+('6889', '3', 'Vereda Jlia Barbosa, 113
+Marieta 1 Seo
+35058177 Moura de Martins / CE'),
+('6890', '1', 'Distrito Leonardo Rocha, 758
+Hava
+21472823 Jesus / TO'),
+('6891', '2', 'Travessa das Neves, 76
+Vila Pinho
+68527230 Barros / SP'),
+('6892', '5', 'Via Pedro Miguel Cavalcanti, 25
+Vila Copacabana
+39810118 Peixoto dos Dourados / SC'),
+('6893', '3', 'Estrada Peixoto, 75
+Conjunto Providencia
+94264-804 Rezende de da Conceio / SE'),
+('6894', '4', 'Esplanada Alana Ribeiro, 67
+So Paulo
+78922-287 Souza / ES'),
+('6895', '4', 'Praia Davi Lucca Farias, 44
+Ademar Maldonado
+38365735 Lopes / PI'),
+('6896', '3', 'Distrito de Sales
+Tupi A
+69178808 Viana de Jesus / AM'),
+('6897', '5', 'Vila Ana Vitria da Costa, 83
+Luxemburgo
+37222004 Vieira / MT'),
+('6898', '4', 'Vereda Letcia Silva
+Vila Nova Gameleira 2 Seo
+32757-226 Pinto / SP'),
+('6899', '1', 'Morro de Ribeiro, 85
+Paquet
+27790519 da Rocha / MA'),
+('6900', '4', 'Praia de Moura
+Santa Sofia
+88438-264 Silva / RS'),
+('6901', '4', 'Stio Bruno Caldeira, 619
+So Vicente
+45938-365 Rocha / AM'),
+('6902', '3', 'Ladeira de Azevedo, 72
+Santa Ins
+78597-858 da Luz do Sul / RJ'),
+('6903', '5', 'Setor de Sales, 33
+Ambrosina
+06752376 Viana / AC'),
+('6904', '5', 'Rodovia Enzo Gabriel Farias, 81
+Vila Paris
+03529899 Alves do Amparo / PR'),
+('6905', '3', 'Colnia de da Paz, 7
+Vitoria
+03859865 da Paz / SP'),
+('6906', '5', 'Ptio Souza, 828
+Acaba Mundo
+94172-144 da Mota da Prata / PA'),
+('6907', '3', 'Trecho Pietra Lima, 982
+Vila Formosa
+36711-956 da Luz / GO'),
+('6908', '1', 'Fazenda de da Rosa, 45
+Santa Maria
+71179-385 Moura Grande / RS'),
+('6909', '5', 'Ncleo Vitor da Rosa
+Santa Ins
+76191-552 Cunha / PA'),
+('6910', '3', 'Loteamento Oliveira
+Vila So Paulo
+74585403 Barros / PR'),
+('6911', '3', 'Morro de da Cruz, 93
+Jardim Alvorada
+21535707 Pires do Sul / SE'),
+('6912', '5', 'Avenida Letcia Nunes
+Alto Das Antenas
+62694511 da Paz de Carvalho / PA'),
+('6913', '5', 'Ptio Caldeira, 64
+Novo Das Industrias
+73746-905 Castro de Cunha / RN'),
+('6914', '3', 'Viaduto de Carvalho, 37
+Vila Maloca
+59475153 Cardoso / MG'),
+('6915', '4', 'Trecho Lorena Jesus, 61
+Nova Vista
+47817-815 Moura Alegre / PB'),
+('6916', '3', 'Passarela Moraes, 15
+Morro Dos Macacos
+01734-364 Monteiro de Lopes / PI'),
+('6917', '3', 'Viela de Duarte
+Vila Madre Gertrudes 2 Seo
+75415843 Arago do Amparo / PE'),
+('6918', '1', 'Setor Leandro Alves, 72
+Vila Cemig
+12780992 Cardoso / PA'),
+('6919', '2', 'Favela de Barros, 64
+Liberdade
+05321-745 da Mota / GO'),
+('6920', '4', 'Alameda Carolina Melo, 76
+Novo Ouro Preto
+92088-083 Correia de Minas / MG'),
+('6921', '2', 'Trevo Lavnia da Rosa, 8
+Vila Nova Gameleira 1 Seo
+25666494 Oliveira / MT'),
+('6922', '3', 'Trevo Luiz Fernando da Conceio, 265
+Pongelupe
+61887-103 Arajo de Pereira / AC'),
+('6923', '5', 'rea Matheus Sales, 27
+Distrito Industrial Do Jatoba
+19002-925 Correia / PI'),
+('6924', '5', 'Alameda de Barros, 190
+Flavio De Oliveira
+29924-407 da Costa da Prata / AC'),
+('6925', '4', 'Via Juan Ferreira
+Gameleira
+54365-324 da Cunha de Viana / MA'),
+('6926', '4', 'Trecho Teixeira, 79
+Novo Das Industrias
+28600-896 da Rosa / RS'),
+('6927', '4', 'Feira Silveira, 943
+Paquet
+32846-746 Cunha / SE'),
+('6928', '5', 'Campo de Silva, 8
+Beija Flor
+84595-671 Castro do Campo / AL'),
+('6929', '4', 'Campo Rezende, 7
+Calafate
+01359-577 das Neves / RJ'),
+('6930', '3', 'Distrito de Lopes, 26
+Serra
+55009-586 da Mota / SP'),
+('6931', '3', 'Estrada Raquel da Paz, 8
+So Salvador
+78632443 Moura das Pedras / PB'),
+('6932', '5', 'Ladeira Benjamin Novaes, 925
+Baleia
+26515825 Lima / PB'),
+('6933', '4', 'Esplanada Maria Eduarda Souza, 8
+Embabas
+49110135 Nogueira das Flores / MG'),
+('6934', '1', 'Viela de Martins, 17
+Lagoa
+16182419 Costa dos Dourados / RJ'),
+('6935', '5', 'Viela de Dias, 4
+Santa Lcia
+09481139 Ramos / SC'),
+('6936', '5', 'Lagoa Carvalho, 1
+Serra Do Curral
+31125243 Costa / DF'),
+('6937', '3', 'Distrito de Gonalves, 84
+Apolonia
+19775-469 da Cunha de Minas / MT'),
+('6938', '2', 'Estrada Ana Alves, 88
+Vila Copacabana
+23258390 Pires Verde / PI'),
+('6939', '3', 'Estao Vieira
+Acaba Mundo
+05562827 Alves do Campo / CE'),
+('6940', '3', 'Conjunto de Rocha, 69
+Vila Maloca
+28237-629 Arajo de Moura / SP'),
+('6941', '3', 'Morro Vitria Cardoso, 104
+Vila Coqueiral
+86432345 Azevedo de Oliveira / SP'),
+('6942', '4', 'Travessa de Fogaa, 345
+Vale Do Jatoba
+05208346 Castro / MA'),
+('6943', '2', 'Stio de Lima, 3
+Boa Esperana
+23137-697 Duarte / AP'),
+('6944', '3', 'Distrito Emilly Azevedo
+Horto Florestal
+54844-837 Cavalcanti das Pedras / BA'),
+('6945', '3', 'Quadra Barbosa
+Lagoinha Leblon
+44740236 da Rosa de Gois / PR'),
+('6946', '5', 'Vila da Cunha, 3
+Santa Efignia
+61487-885 Gomes / MS'),
+('6947', '4', 'Trevo de Costela, 87
+Minas Brasil
+56860-582 Peixoto / AM'),
+('6948', '5', 'Vila de Ramos, 363
+Vila Sesc
+65518-725 Pires de Dias / AM'),
+('6949', '5', 'Alameda de Cardoso, 67
+Camargos
+64071-886 Costa do Amparo / RR'),
+('6950', '4', 'Ptio Julia Lopes, 96
+Vila So Gabriel
+44155886 Pinto das Pedras / AM'),
+('6951', '5', 'Chcara Paulo Caldeira, 1
+Olhos 
+11278685 Rezende / BA'),
+('6952', '3', 'Passarela Gabriela Mendes, 995
+Pilar
+15574-029 Novaes de Rodrigues / AL'),
+('6953', '2', 'Praa Ramos, 67
+Outro
+28176174 Monteiro da Praia / AP'),
+('6954', '1', 'rea Luiz Fernando Freitas
+Carlos Prates
+01324-624 Nascimento / PR'),
+('6955', '2', 'Fazenda de Melo, 76
+Maria Virgnia
+16049039 Pires do Sul / RJ'),
+('6956', '2', 'Praa de Cardoso, 2
+Vila Santa Monica 1 Seo
+76584-877 Monteiro / RS'),
+('6957', '2', 'Quadra Castro, 41
+So Vicente
+97250-560 Teixeira / PA'),
+('6958', '5', 'Largo Laura Arago, 58
+Santana Do Cafezal
+77992992 Nascimento / PB'),
+('6959', '5', 'Trecho de Castro, 89
+Baro Homem De Melo 1 Seo
+53342-953 Almeida / MS'),
+('6960', '2', 'Chcara Pires, 2
+Fazendinha
+70471-761 Caldeira das Flores / TO'),
+('6961', '1', 'Feira Viana, 437
+Varzea Da Palma
+37309-281 Martins / RO'),
+('6962', '1', 'Rua Barros, 35
+Indai
+23866-766 da Mota / CE'),
+('6963', '3', 'Feira de da Rocha, 27
+Engenho Nogueira
+45058958 Rezende Grande / RO'),
+('6964', '1', 'Ladeira de Jesus, 25
+Satelite
+71688726 Silveira da Serra / RN'),
+('6965', '3', 'Estrada Campos, 749
+Jardim Montanhs
+02932159 Gonalves / AP'),
+('6966', '2', 'Aeroporto Arajo, 3
+Vale Do Jatoba
+54226-295 Souza de da Rocha / GO'),
+('6967', '5', 'Favela Sales, 341
+Concrdia
+16419-686 Nogueira / PB'),
+('6968', '3', 'Campo de Lima, 67
+Monte So Jos
+58160270 Peixoto / PR'),
+('6969', '3', 'Favela de Mendes, 380
+Alto Barroca
+12211-989 da Rocha / AC'),
+('6970', '5', 'Via da Cunha, 9
+Vila Mangueiras
+73865-720 Moraes / RN'),
+('6971', '1', 'Rodovia Caldeira, 2
+So Salvador
+49626-033 Carvalho Alegre / AP'),
+('6972', '1', 'Praia Novaes, 482
+Chcara Leonina
+30090-015 Pires / MA'),
+('6973', '2', 'Rua Jesus
+Bom Jesus
+50706-349 Peixoto / MG'),
+('6974', '5', 'Viela Nunes, 13
+Alto Dos Pinheiros
+50110-306 da Costa de Oliveira / SE'),
+('6975', '2', 'Stio de Costela, 7
+Dom Silverio
+24085012 Ribeiro / RJ'),
+('6976', '2', 'Vila Moreira, 32
+Nossa Senhora Do Rosrio
+20334-060 Fogaa / ES'),
+('6977', '2', 'Esplanada Pires, 8
+Vila Nossa Senhora Do Rosrio
+22572240 da Rocha de Gois / GO'),
+('6978', '3', 'Parque Ferreira, 58
+Lorena
+37784617 Correia / AP'),
+('6979', '5', 'Favela Rafael Cunha, 89
+Tupi A
+69194361 Santos de Rezende / PE'),
+('6980', '3', 'Viela Alana Campos, 996
+Vila Independencia 2 Seo
+68065577 Costela das Flores / PA'),
+('6981', '1', 'Lagoa Cau Fogaa, 41
+Boa Unio 1 Seo
+36901-972 Mendes de da Rocha / MT'),
+('6982', '4', 'Residencial de Ribeiro
+Nova Sua
+60650-320 Cardoso do Norte / MT'),
+('6983', '4', 'Aeroporto Diogo Fogaa, 47
+Conjunto Santa Maria
+08194943 Arajo de Teixeira / BA'),
+('6984', '3', 'Esplanada Letcia Fogaa, 96
+Palmares
+67408-500 Pinto / SP'),
+('6985', '4', 'Lagoa de da Cunha, 70
+Barro Preto
+09595179 Cardoso de Arago / AP'),
+('6986', '2', 'Esplanada de Gomes, 62
+Maria Goretti
+32612-458 Pereira / DF'),
+('6987', '1', 'Travessa de Oliveira, 76
+Varzea Da Palma
+73795504 da Luz do Galho / PB'),
+('6988', '3', 'Vila de Correia
+Vila Santa Monica 2 Seo
+18234-673 Nascimento do Campo / AP'),
+('6989', '2', 'Lago Santos, 32
+Vila Da ria
+61954878 Peixoto / AP'),
+('6990', '4', 'Conjunto de Azevedo
+Santa Margarida
+75576-539 Arago / TO'),
+('6991', '5', 'Esplanada de Rocha, 6
+Vila Nova
+42134-151 Santos / RJ'),
+('6992', '5', 'Recanto de Oliveira, 58
+Vila Copasa
+30341264 Correia da Prata / BA'),
+('6993', '4', 'Vale Gustavo Silveira, 13
+Vila Nova Cachoeirinha 1 Seo
+51322-953 Arago / MS'),
+('6994', '4', 'Praa Leonardo Lopes
+Vila Formosa
+48789187 da Mota de Carvalho / PI'),
+('6995', '2', 'Morro Ana Luiza Arago, 92
+Custodinha
+51844-890 Azevedo / GO'),
+('6996', '2', 'Condomnio de da Mota, 237
+Pongelupe
+18910-840 Rezende / MA'),
+('6997', '2', 'Largo Moraes, 849
+Laranjeiras
+02990989 Santos das Pedras / AM'),
+('6998', '4', 'Distrito Ana Jlia da Rocha, 6
+Serrano
+88295-917 Peixoto do Amparo / MA'),
+('6999', '2', 'Colnia Teixeira, 393
+Miramar
+65305-283 Freitas / GO'),
+('7000', '3', 'Stio Lima, 799
+Nossa Senhora Da Conceio
+03900377 Gomes de Minas / SC'),
+('7001', '5', 'Jardim Arajo, 67
+Vila Maria
+34254-643 Santos Verde / PA'),
+('7002', '2', 'rea Maria Vitria da Paz, 95
+Conjunto So Francisco De Assis
+28587-722 Santos Verde / SC'),
+('7003', '4', 'Lagoa Henrique Ferreira, 238
+Parque So Pedro
+37455-320 da Mata de Azevedo / RO'),
+('7004', '5', 'Campo de Barros
+Vila Canto Do Sabi
+68768053 Arago / MT'),
+('7005', '3', 'Chcara de Nascimento, 98
+Floresta
+48754401 Farias / SP'),
+('7006', '2', 'Parque de Souza, 24
+Santa Rita
+74787788 Fernandes / MA'),
+('7007', '3', 'Praa de Arajo, 801
+Conjunto Celso Machado
+49240120 Gonalves da Praia / ES'),
+('7008', '4', 'Recanto Rafael Pires, 884
+Santa Efignia
+39435-227 Nascimento / BA'),
+('7009', '2', 'Distrito da Paz
+Frei Leopoldo
+25027-402 Cardoso / RJ'),
+('7010', '5', 'Aeroporto Clara Porto, 66
+Santa Monica
+70848-546 Moraes / AC'),
+('7011', '1', 'Praa Gabriel da Cruz, 63
+Apolonia
+91077635 da Rosa / MT'),
+('7012', '3', 'Avenida Campos
+Tiradentes
+38865-099 da Mota / AP'),
+('7013', '2', 'Estao Melo, 74
+Candelaria
+56142-353 Correia / AL'),
+('7014', '2', 'Colnia da Rocha, 6
+Funcionrios
+95499458 Fogaa Grande / MA'),
+('7015', '4', 'Loteamento Bruno Castro, 31
+So Salvador
+42178304 Campos de Correia / RR'),
+('7016', '4', 'Fazenda Mendes, 26
+Pompia
+73357139 Moraes das Pedras / AM'),
+('7017', '4', 'Estrada de Rezende, 13
+Pindura Saia
+25223-613 Gomes / MA'),
+('7018', '2', 'Rua de Cardoso, 15
+Paquet
+93962-885 Barros Alegre / RS'),
+('7019', '5', 'Vereda de Moura, 59
+Conjunto Novo Dom Bosco
+08527-778 Carvalho Grande / AL'),
+('7020', '5', 'Residencial de Gomes, 15
+Vila Coqueiral
+28179-639 Costa do Sul / MT'),
+('7021', '3', 'Esplanada de Pinto, 257
+Mantiqueira
+58994-827 Correia Verde / SP'),
+('7022', '2', 'Avenida Azevedo, 717
+Jardim Amrica
+73776803 Novaes Grande / TO'),
+('7023', '5', 'Favela de da Luz, 103
+Vila Copacabana
+66631296 Porto / RR'),
+('7024', '4', 'Praa Almeida, 23
+Santo Agostinho
+83609259 Peixoto / RO'),
+('7025', '2', 'Estrada de Barbosa, 696
+Vila Jardim Alvorada
+58788-053 da Luz / MT'),
+('7026', '1', 'Feira Joo Vitor Moraes, 99
+Cinquentenrio
+59134-454 Fogaa Paulista / PB'),
+('7027', '3', 'Morro de Mendes, 397
+Santana Do Cafezal
+21000-058 Correia / PI'),
+('7028', '4', 'Feira Joo da Rocha, 3
+Indai
+84235-190 Silveira / GO'),
+('7029', '3', 'Passarela Cardoso, 67
+Vila Minaslandia
+60024-058 Cunha da Serra / CE'),
+('7030', '2', 'Loteamento de Fogaa, 98
+Monte Azul
+15196-590 da Cunha de Jesus / SE'),
+('7031', '4', 'Quadra Nascimento, 659
+Monsenhor Messias
+00560507 Cavalcanti Verde / ES'),
+('7032', '3', 'Distrito de Arago
+Vila Jardim Leblon
+16627-527 Peixoto / PR'),
+('7033', '4', 'Trecho de Cardoso, 97
+Mirante
+33155979 Duarte / RJ'),
+('7034', '4', 'Viaduto Vitor Gabriel Campos, 32
+Santa Isabel
+74261-239 Barros / TO'),
+('7035', '5', 'Trevo Daniel Dias, 3
+So Lucas
+13030-843 Carvalho das Pedras / PI'),
+('7036', '3', 'Feira de das Neves
+Solimoes
+50684880 Novaes de Fogaa / SE'),
+('7037', '2', 'Feira Santos, 93
+Conjunto Providencia
+33172-508 Silva Alegre / PA'),
+('7038', '1', 'Loteamento Enrico Nunes, 53
+Vila Nova Gameleira 3 Seo
+32490-664 da Luz de Arago / PB'),
+('7039', '4', 'Alameda Costa, 322
+Vila Engenho Nogueira
+29437-713 Caldeira / PB'),
+('7040', '2', 'Morro de Rezende, 44
+Vila Novo So Lucas
+09460123 Vieira / AM'),
+('7041', '3', 'Estrada Cau Lopes, 3
+Nossa Senhora Da Aparecida
+09899-552 Silva da Praia / PE'),
+('7042', '4', 'Stio Silva, 55
+Baro Homem De Melo 1 Seo
+62044-921 Correia do Amparo / GO'),
+('7043', '1', 'Aeroporto de Novaes, 78
+Estrela Do Oriente
+16239200 Duarte / MG'),
+('7044', '1', 'Setor da Mota, 52
+Oeste
+46180212 Dias / TO'),
+('7045', '5', 'Rodovia de Lima, 23
+Leticia
+78300185 da Cunha / PB'),
+('7046', '5', 'Vila Ana Julia Campos, 888
+Carlos Prates
+69035-849 Costa / TO'),
+('7047', '4', 'Viela de da Costa
+Vila So Rafael
+50230-527 da Cunha da Mata / ES'),
+('7048', '2', 'Esplanada Pinto, 72
+Ribeiro De Abreu
+81662-196 Souza / BA'),
+('7049', '3', 'Vila Brbara Alves, 66
+Grotinha
+91319-313 Pereira / PA'),
+('7050', '1', 'Ladeira de Nunes, 37
+Maria Goretti
+85896263 Moreira / PR'),
+('7051', '2', 'Alameda de Ferreira, 72
+Aaro Reis
+24165-731 Viana / SE'),
+('7052', '2', 'Morro Gabriela Pereira, 9
+Paraso
+57517-214 Lima / MG'),
+('7053', '4', 'Ncleo de Pires, 95
+Vila Betnia
+82579-122 da Rocha da Mata / MS'),
+('7054', '2', 'Chcara de Ferreira, 664
+Goiania
+75513265 da Paz / PE'),
+('7055', '2', 'Aeroporto Bruno Rezende, 91
+Vila Madre Gertrudes 4 Seo
+47148339 Dias das Pedras / BA'),
+('7056', '4', 'Favela Nathan Barros, 16
+Barro Preto
+85996-257 Cunha da Prata / GO'),
+('7057', '2', 'Praa de Moreira, 583
+Serra Do Curral
+44011-852 Costela de Rocha / PA'),
+('7058', '1', 'Rua Marcela Cavalcanti, 6
+Jardim Do Vale
+34042-016 Martins / MT'),
+('7059', '2', 'Trecho Freitas, 81
+Buraco Quente
+87992284 Novaes / MS'),
+('7060', '3', 'Chcara Gonalves, 621
+Serra
+27425-194 Moura / PB'),
+('7061', '2', 'Alameda de da Conceio, 595
+Alto Barroca
+63374789 Castro Paulista / GO'),
+('7062', '5', 'Praia de Rocha, 60
+Paraso
+49114-018 Rocha / GO'),
+('7063', '2', 'Alameda de Freitas, 956
+Sagrada Famlia
+35198158 Pereira das Flores / RJ'),
+('7064', '4', 'Lagoa de Arago, 82
+Vila Pilar
+71381012 Gomes / RJ'),
+('7065', '3', 'Distrito de Vieira, 777
+Camargos
+77295333 Correia da Praia / AP'),
+('7066', '2', 'rea Gabriel Melo
+So Pedro
+41803684 da Mota / SE'),
+('7067', '1', 'Alameda de Rezende, 265
+Vila Batik
+24056-492 Moura do Campo / AP'),
+('7068', '5', 'Condomnio Clarice Oliveira, 9
+Parque So Jos
+49740-555 Rodrigues / MG'),
+('7069', '3', 'Trevo Castro, 8
+Araguaia
+40572-802 Ribeiro / PB'),
+('7070', '3', 'Ncleo Maria Sophia Souza, 53
+Itaipu
+26690784 Silveira / AP'),
+('7071', '5', 'Lago de Novaes, 9
+Santa Terezinha
+99124-165 da Costa / PE'),
+('7072', '5', 'Ptio Marcos Vinicius Pinto, 14
+Fazendinha
+77742355 Melo Grande / GO'),
+('7073', '2', 'Lagoa de da Luz, 1
+Santa Lcia
+87925612 Sales / BA'),
+('7074', '2', 'Viaduto Vitria Arajo, 25
+Santa Margarida
+73105297 Vieira / DF'),
+('7075', '4', 'Quadra Bernardo Farias, 7
+Itatiaia
+05299-854 Porto do Norte / GO'),
+('7076', '3', 'Travessa de Silva, 43
+Primeiro De Maio
+91955-281 da Luz / MS'),
+('7077', '4', 'Praa Beatriz Cunha
+Graja
+80707739 Lima de Rodrigues / SP'),
+('7078', '1', 'Jardim de da Cunha, 53
+Minaslandia
+06719883 da Paz / MT'),
+('7079', '5', 'Feira Daniel Teixeira, 70
+Conjunto Novo Dom Bosco
+63392586 das Neves / RS'),
+('7080', '3', 'Passarela de Vieira, 60
+Conjunto Jardim Filadlfia
+86576558 Teixeira / ES'),
+('7081', '4', 'Viela Letcia da Rosa, 5
+Vila Betnia
+26382511 da Mota / AL'),
+('7082', '2', 'Vila Maria Ceclia Campos, 948
+Lajedo
+46721-968 Jesus do Norte / RR'),
+('7083', '5', 'Vila Luiz Miguel Cardoso, 28
+Apolonia
+73056238 Fernandes / DF'),
+('7084', '3', 'Colnia de Barros, 299
+Vila Primeiro De Maio
+80499240 Pinto / PE'),
+('7085', '5', 'Stio de Ribeiro, 21
+Nova Pampulha
+06105785 Ribeiro de Nogueira / SE'),
+('7086', '5', 'Avenida Luiz Otvio Moraes, 66
+Mala E Cuia
+99508617 Novaes / GO'),
+('7087', '5', 'Avenida de da Mota, 26
+Santa Monica
+18814469 Azevedo de Fogaa / ES'),
+('7088', '1', 'Fazenda de Farias, 2
+Vila Antena
+82350-447 Costa das Flores / MG'),
+('7089', '1', 'Rua Isis Fernandes, 991
+Sagrada Famlia
+76831-718 Nogueira do Sul / PA'),
+('7090', '5', 'Ladeira da Luz
+Novo Tupi
+05221271 Jesus / DF'),
+('7091', '2', 'Ptio Ferreira
+Independncia
+46015589 Nogueira de Rodrigues / SC'),
+('7092', '2', 'Vila de Ribeiro, 41
+Oeste
+89946-272 Fernandes / RN'),
+('7093', '5', 'Ladeira de Viana, 910
+Zilah Sposito
+07182478 Gomes das Pedras / RO'),
+('7094', '3', 'Vereda Pedro Novaes, 98
+Vila Antena Montanhs
+97925-245 Novaes / MS'),
+('7095', '4', 'Trecho Freitas, 68
+Lagoinha Leblon
+14010298 Cardoso dos Dourados / CE'),
+('7096', '4', 'Chcara de Almeida
+Mangueiras
+80006-434 da Paz da Praia / RR'),
+('7097', '2', 'Viela Carlos Eduardo Nascimento, 516
+Baro Homem De Melo 1 Seo
+15506113 Cavalcanti / RO'),
+('7098', '2', 'Condomnio da Rocha, 5
+Vila Rica
+39049-830 Castro / RJ'),
+('7099', '5', 'Stio da Mata
+So Gabriel
+69066-081 Oliveira das Pedras / GO'),
+('7100', '5', 'Travessa Juliana Arago
+Santo Andr
+48427013 Viana de Gois / RR'),
+('7101', '4', 'Avenida Joo Vitor da Mota, 4
+Jardim Leblon
+33072785 Melo de Porto / BA'),
+('7102', '3', 'Conjunto Joo Gabriel da Cunha, 878
+Vila Coqueiral
+64545-282 Barbosa / MG'),
+('7103', '1', 'Feira de Mendes, 13
+Araguaia
+99133874 Silva / RO'),
+('7104', '5', 'Trecho de Melo
+Jaqueline
+24034-768 Alves / RN'),
+('7105', '4', 'Conjunto Caroline das Neves, 92
+Vila So Gabriel Jacui
+92848-808 Lopes / MA'),
+('7106', '2', 'Estao Martins, 82
+Alto Das Antenas
+65579814 Nunes / PA'),
+('7107', '3', 'Esplanada Marcela Barbosa, 725
+Conjunto Taquaril
+67168714 Farias / RO'),
+('7108', '5', 'Passarela Pires, 95
+Acaba Mundo
+15741325 Moraes Alegre / AL'),
+('7109', '2', 'Chcara de Lopes, 78
+Pousada Santo Antonio
+49840190 Gonalves / PA'),
+('7110', '1', 'Trecho Pinto, 59
+Santa Tereza
+66059-455 Costa da Prata / MG'),
+('7111', '4', 'Conjunto Gustavo Mendes
+So Damio
+20596576 Pereira Paulista / PB'),
+('7112', '3', 'Esplanada de Pereira, 56
+Conjunto Novo Dom Bosco
+97068-803 Arago / AL'),
+('7113', '2', 'Praia Raquel Costa, 537
+Baleia
+81383-012 Arajo / MT'),
+('7114', '5', 'Lago Fernando Barbosa, 11
+Petropolis
+98545-128 Nogueira / RS'),
+('7115', '3', 'Viela Ana Lvia Ramos, 44
+Vila Das Oliveiras
+33169692 Duarte / BA'),
+('7116', '3', 'Estrada Ana Jlia Arajo
+Vila Nova Gameleira 2 Seo
+39633962 Campos do Norte / ES'),
+('7117', '3', 'Estao Martins, 63
+Vila Independencia 1 Seo
+69041125 da Luz / PE'),
+('7118', '1', 'Jardim Marcelo da Cruz, 774
+Beira Linha
+73322-719 Moura / PI'),
+('7119', '5', 'Largo de Dias, 43
+Marieta 3 Seo
+86397987 Nascimento / PI'),
+('7120', '2', 'Esplanada de das Neves, 90
+Marmiteiros
+05273-822 Cavalcanti / DF'),
+('7121', '3', 'Morro de da Luz, 6
+Virgnia
+34444142 Moraes da Mata / AL'),
+('7122', '5', 'Praa Silva, 92
+Alta Tenso 2 Seo
+44619-852 Carvalho / AM'),
+('7123', '5', 'Estao Stephany Arago, 47
+Vila De S
+32495-236 Caldeira de Moura / CE'),
+('7124', '4', 'Rodovia de Oliveira, 82
+Conjunto Califrnia I
+26857473 Farias Paulista / PA'),
+('7125', '1', 'Setor Cavalcanti, 5
+Dona Clara
+08668428 Barros das Flores / RS'),
+('7126', '4', 'Viaduto Costela, 13
+Goiania
+15051-315 Pinto do Oeste / ES'),
+('7127', '4', 'Alameda de Barros
+Dona Clara
+18126149 Souza dos Dourados / MG'),
+('7128', '2', 'Avenida de Moreira
+Jonas Veiga
+44170517 Novaes de Nascimento / PB'),
+('7129', '3', 'Morro de das Neves, 99
+Sion
+48150275 Gomes do Sul / PR'),
+('7130', '4', 'Alameda de Rezende, 64
+Leonina
+67235618 Teixeira de Minas / SE'),
+('7131', '1', 'Ncleo Joo Miguel Melo, 96
+Cinquentenrio
+31576-208 das Neves de da Cruz / MA'),
+('7132', '4', 'Condomnio de Vieira, 336
+Jardim Do Vale
+18678415 da Paz da Praia / ES'),
+('7133', '1', 'Condomnio Carvalho, 33
+Anchieta
+36104-562 Pereira de Moreira / PB'),
+('7134', '4', 'Vereda Marcelo Cardoso
+Outro
+36178823 Barros / RS'),
+('7135', '3', 'Chcara Jesus, 87
+Vila Da Amizade
+52971-383 da Mata Alegre / AL'),
+('7136', '1', 'Residencial de Teixeira, 52
+Nova Cachoeirinha
+49291-858 Peixoto / SP'),
+('7137', '4', 'Conjunto Joo Felipe da Conceio, 19
+Vale Do Jatoba
+61204-036 Duarte / RS'),
+('7138', '1', 'Stio de Lopes, 8
+Vila Nova Cachoeirinha 3 Seo
+77852-934 Martins / RO'),
+('7139', '5', 'Rodovia Campos, 94
+Ferno Dias
+11498-377 Sales / MT'),
+('7140', '3', 'Lagoa Ana Carolina Almeida, 23
+Santo Antnio
+08348-809 Gonalves da Serra / TO'),
+('7141', '5', 'Feira de Vieira, 3
+Vila Betnia
+06261-199 Caldeira / PR'),
+('7142', '1', 'Condomnio Lopes, 33
+Taquaril
+45473-108 Nunes / RJ'),
+('7143', '4', 'Esplanada de Silva, 41
+Vila Nova Gameleira 2 Seo
+85994-425 Costela / RJ'),
+('7144', '5', 'Travessa Porto, 5
+Nossa Senhora Do Rosrio
+33705012 Alves Verde / AM'),
+('7145', '2', 'Campo de Fogaa, 495
+Estoril
+65880-561 Azevedo / PB'),
+('7146', '1', 'Avenida de Teixeira, 272
+Confisco
+41430-371 Costa de Lima / AP'),
+('7147', '3', 'Largo de Pires, 15
+Inconfidncia
+94807560 Oliveira de Sales / MS'),
+('7148', '1', 'Aeroporto de Caldeira, 18
+Vila Paraso
+29343173 Santos da Prata / RN'),
+('7149', '3', 'Quadra Correia, 1
+Conjunto Taquaril
+97410782 Ramos do Sul / RS'),
+('7150', '1', 'Favela Luana Cardoso, 442
+Leonina
+67892908 Dias / TO'),
+('7151', '3', 'Viela de da Costa, 49
+Novo Tupi
+93898-230 Moura / RS'),
+('7152', '4', 'Quadra Augusto Mendes, 412
+Minaslandia
+94916-083 Vieira / AP'),
+('7153', '1', 'Largo Vitor da Rosa, 78
+Vista Do Sol
+22316894 Jesus de Pinto / PE'),
+('7154', '1', 'Condomnio das Neves, 285
+Vale Do Jatoba
+94840794 Ribeiro / RJ'),
+('7155', '4', 'Ncleo de Lopes, 14
+Vila Aeroporto
+90583730 Moura / DF'),
+('7156', '1', 'Viela Sophia da Mota
+Pirineus
+73345-857 Castro / RN'),
+('7157', '5', 'Viela de Vieira, 15
+Cdi Jatoba
+93621-542 Pires dos Dourados / SC'),
+('7158', '1', 'Vale Beatriz Caldeira, 21
+Lorena
+67185-102 da Mata de Moura / CE'),
+('7159', '2', 'Viela Olivia Azevedo, 57
+Universitrio
+55273004 Arago da Serra / SC'),
+('7160', '3', 'Praia Bruno Melo
+Urca
+84411912 Costela do Oeste / AL'),
+('7161', '2', 'Condomnio Antnio da Paz, 14
+Itaipu
+30128139 Porto / MA'),
+('7162', '4', 'Loteamento de da Rocha, 459
+So Jorge 1 Seo
+78573-435 Jesus / PR'),
+('7163', '4', 'Vale Gustavo Costela, 42
+Bonfim
+50985726 Silveira das Flores / SC'),
+('7164', '1', 'Ladeira Thiago Silva, 423
+Castanheira
+76529833 da Luz do Campo / MT'),
+('7165', '4', 'rea Juan Costela, 16
+Cardoso
+87317632 Sales Alegre / SE'),
+('7166', '2', 'Esplanada de da Cruz, 3
+Baro Homem De Melo 1 Seo
+69352733 Pereira / AM'),
+('7167', '3', 'Fazenda de Cardoso, 1
+Mariano De Abreu
+44539-264 Farias de Almeida / PR'),
+('7168', '4', 'Estrada Thales Lopes
+So Jorge 2 Seo
+08366306 da Rocha / DF'),
+('7169', '4', 'rea de Jesus, 987
+Boa Unio 2 Seo
+21783-178 Barbosa de Silva / RR'),
+('7170', '5', 'Morro de Pinto, 58
+Venda Nova
+62112443 Novaes / PR'),
+('7171', '1', 'Feira Cavalcanti
+Vila Nova Paraso
+32690-461 Rodrigues / RO'),
+('7172', '4', 'Aeroporto de Nascimento, 38
+Bairro Das Indstrias Ii
+66264-904 Barbosa / AL'),
+('7173', '5', 'Largo de Costela, 3
+Capito Eduardo
+51583734 Porto de Farias / AP'),
+('7174', '5', 'Lago Brbara Jesus, 89
+Fazendinha
+44941526 Fogaa / RJ'),
+('7175', '2', 'Recanto de Almeida, 70
+Pindura Saia
+70210-838 Correia / SP'),
+('7176', '3', 'Colnia Pereira, 35
+Eymard
+61960-507 Cunha / BA'),
+('7177', '3', 'Viela de Pereira, 212
+Castelo
+69499-690 Rezende do Galho / CE'),
+('7178', '5', 'Residencial de da Luz, 87
+Caetano Furquim
+40256153 Vieira da Prata / RR'),
+('7179', '3', 'Vale Kamilly Gonalves, 90
+Vila Primeiro De Maio
+82195-658 Rodrigues do Sul / MS'),
+('7180', '3', 'Campo Rafaela Martins, 94
+Suzana
+34739-488 da Costa do Oeste / SC'),
+('7181', '3', 'Viaduto Davi Luiz Moraes
+Boa Viagem
+78288147 da Luz das Flores / RS'),
+('7182', '1', 'Recanto Cau Campos, 13
+Unio
+94066666 Martins do Norte / AC'),
+('7183', '2', 'Quadra da Mota, 210
+Vila Sesc
+44697-697 Monteiro do Amparo / MA'),
+('7184', '4', 'Setor Erick Alves, 9
+Conjunto Celso Machado
+70177-342 Carvalho das Pedras / SC'),
+('7185', '1', 'Morro de Nunes, 484
+Jaragu
+49769-684 Lopes das Flores / DF'),
+('7186', '4', 'Avenida Helosa Castro, 53
+Maria Virgnia
+69228898 Viana / RS'),
+('7187', '2', 'Recanto Emanuel Cavalcanti
+Betnia
+50058-742 Freitas Paulista / AC'),
+('7188', '5', 'Vila de Farias
+Palmares
+49988823 Viana do Oeste / MG'),
+('7189', '1', 'Favela de Nunes, 94
+Bela Vitoria
+25728-000 Costa de Cardoso / SP'),
+('7190', '3', 'Ladeira Nunes
+Boa Viagem
+94618-549 Arajo Verde / DF'),
+('7191', '2', 'Aeroporto Diego Pires, 5
+Engenho Nogueira
+58761-635 Rezende / CE'),
+('7192', '3', 'rea de Alves, 40
+Joo Pinheiro
+23564157 Mendes de Porto / PE'),
+('7193', '2', 'Conjunto Sales, 51
+Belmonte
+39427-064 Jesus de da Paz / RO'),
+('7194', '3', 'Conjunto de Arajo, 296
+Vila Piratininga
+67851040 da Luz de Gois / GO'),
+('7195', '3', 'Praa Emanuelly da Mota, 57
+Vila Fumec
+99315-284 Cardoso do Campo / AP'),
+('7196', '5', 'Ladeira Moreira, 7
+Vila Nova
+22581-074 Pires / ES'),
+('7197', '5', 'Ptio Rocha, 86
+Jardim Vitoria
+56316104 Lopes de Fernandes / PI'),
+('7198', '3', 'Setor Cunha, 552
+Maria Helena
+27456861 Barbosa de Porto / GO'),
+('7199', '2', 'Trecho Viana
+Tres Marias
+13371-173 Pires / CE'),
+('7200', '5', 'Estao de Almeida, 665
+Satelite
+30391-340 Oliveira de Pereira / MA'),
+('7201', '2', 'Distrito Luigi da Cruz, 8
+Nova Sua
+31394-043 Arajo Verde / GO'),
+('7202', '5', 'Lagoa Kamilly Pinto, 61
+Serra
+63114-110 Souza / SE'),
+('7203', '1', 'Avenida Nascimento, 9
+Vila Mangueiras
+97028-013 Cardoso de Farias / BA'),
+('7204', '2', 'Rua de Dias, 9
+So Jorge 3 Seo
+44737-088 Pereira / MT'),
+('7205', '3', 'Campo Giovanna Moraes, 891
+Madri
+69182430 Jesus da Praia / MA'),
+('7206', '4', 'Setor Dias, 61
+Capito Eduardo
+95046-025 Melo do Oeste / MG'),
+('7207', '2', 'Morro de Moura, 8
+Jaqueline
+82593-713 Cardoso / PI'),
+('7208', '5', 'Trevo Martins, 13
+Jardim Guanabara
+45231250 da Mata / RO'),
+('7209', '5', 'rea Valentina Arajo
+Vila Nova Paraso
+86251680 Ribeiro de Gois / ES'),
+('7210', '2', 'Feira de Campos, 41
+Conjunto Bonsucesso
+96550-257 Fogaa / SC'),
+('7211', '2', 'Aeroporto de Ribeiro, 5
+Vila So Rafael
+39058-772 Vieira da Mata / AL'),
+('7212', '5', 'Setor de Freitas, 40
+Vila Santa Monica 1 Seo
+98312471 Caldeira / RN'),
+('7213', '4', 'Travessa de Barbosa, 309
+Vila Da Luz
+27106851 Sales Paulista / MG'),
+('7214', '2', 'Conjunto Thiago Novaes, 96
+Vila Aeroporto
+97715-946 Nunes do Campo / AP'),
+('7215', '2', 'Stio Bruno Nunes, 59
+pia
+20915934 Ferreira / BA'),
+('7216', '5', 'Vale Vieira
+Vila Aeroporto Jaragu
+49429210 Nogueira da Prata / GO'),
+('7217', '3', 'rea Caldeira, 77
+Joo Paulo Ii
+76356-164 Mendes / MA'),
+('7218', '3', 'Ladeira Barbosa, 6
+Alpio De Melo
+24168317 Souza / MT'),
+('7219', '4', 'Rua Arajo, 6
+Vila Real 1 Seo
+32370-666 Barbosa Alegre / PR'),
+('7220', '4', 'Recanto Levi Caldeira, 241
+Caiara - Adelaide
+08544461 Mendes Verde / AP'),
+('7221', '2', 'Campo de Duarte, 7
+Olhos 
+61191-697 Cavalcanti / SC'),
+('7222', '3', 'Parque de Rezende, 7
+Cdi Jatoba
+32185-943 Nogueira da Prata / AC'),
+('7223', '5', 'Recanto Azevedo, 52
+Gutierrez
+08883922 Dias / MG'),
+('7224', '4', 'Jardim Lucca Moura
+Floresta
+42614-711 da Paz do Galho / PB'),
+('7225', '5', 'Ladeira Ana Lvia Martins, 9
+Maria Helena
+63022-034 da Cruz de Gois / RS'),
+('7226', '1', 'Morro Davi Lucca Oliveira, 25
+Vila Madre Gertrudes 4 Seo
+35855663 Dias da Praia / RJ'),
+('7227', '1', 'Quadra Eloah da Luz, 90
+So Cristvo
+26602536 Carvalho do Amparo / AC'),
+('7228', '2', 'Chcara de Duarte, 6
+Vila Ouro Minas
+81873414 Oliveira do Norte / CE'),
+('7229', '1', 'Travessa Vinicius Ferreira
+Jardim Felicidade
+71504419 Rocha do Galho / SE'),
+('7230', '3', 'Setor de Moura, 9
+Pongelupe
+12713-387 Jesus / AC'),
+('7231', '1', 'Quadra de Freitas
+Urca
+21542967 Ribeiro / PR'),
+('7232', '3', 'Condomnio Benjamin Gomes
+Vila Canto Do Sabi
+42259-611 Carvalho das Pedras / MT'),
+('7233', '3', 'Quadra Barbosa, 72
+Vila Vista Alegre
+47455644 Peixoto / AL'),
+('7234', '2', 'Lago de Barbosa, 79
+Leticia
+78072-578 Carvalho / BA'),
+('7235', '1', 'Largo de Nascimento, 370
+Lagoinha
+25721-007 Lopes de Minas / CE'),
+('7236', '2', 'Distrito Ana Beatriz Pires, 65
+Corao Eucarstico
+47999-092 Lopes / PI'),
+('7237', '4', 'Ptio de Nascimento, 56
+Novo Santa Cecilia
+60920-532 Barbosa da Prata / RJ'),
+('7238', '5', 'Distrito Gabrielly Ramos, 894
+Teixeira Dias
+64145588 da Conceio / PB'),
+('7239', '2', 'Estrada Kamilly Cunha, 8
+Beija Flor
+06007-148 Oliveira dos Dourados / AP'),
+('7240', '3', 'Chcara Ana Clara da Mota, 8
+Camargos
+84377-455 Ribeiro / AP'),
+('7241', '3', 'Loteamento Oliveira, 8
+Lagoa
+31811225 das Neves / RO'),
+('7242', '5', 'Lagoa Monteiro, 63
+So Gonalo
+31215-237 Pires / PE'),
+('7243', '3', 'Recanto de Jesus, 83
+So Bento
+41260-688 Cardoso / AL'),
+('7244', '2', 'Trevo Diego Mendes, 46
+Floresta
+97526293 Lopes / PI'),
+('7245', '3', 'Trecho Vitria Cardoso, 2
+Jaragu
+60825-335 Pires do Amparo / RO'),
+('7246', '3', 'Vereda Francisco da Mota, 55
+Vila Madre Gertrudes 2 Seo
+08622-327 Mendes / GO'),
+('7247', '1', 'Parque Cardoso, 144
+Minas Caixa
+55947-390 Pires / RO'),
+('7248', '2', 'Setor Martins, 21
+Bonfim
+97538-922 Cunha / GO'),
+('7249', '3', 'Lagoa da Mota, 21
+Vila Santo Antnio
+26541-888 Farias / PR'),
+('7250', '2', 'Loteamento Luiz Otvio Teixeira, 5
+Ventosa
+33728379 Vieira Alegre / AL'),
+('7251', '5', 'Parque Vinicius Rocha, 51
+Providencia
+82243-682 Arajo do Oeste / RR'),
+('7252', '2', 'Travessa Marcela Melo, 15
+So Bernardo
+50044-848 Viana do Sul / DF'),
+('7253', '4', 'Trecho Joo Guilherme Castro
+Tiradentes
+89827022 Costela / SC'),
+('7254', '2', 'Viaduto Brbara Peixoto, 84
+Vila So Paulo
+81213-402 da Mota de das Neves / MS'),
+('7255', '5', 'Setor Barbosa, 268
+Boa Vista
+02428-053 Souza / PI'),
+('7256', '3', 'Loteamento de Jesus
+Leticia
+47626835 das Neves dos Dourados / SE'),
+('7257', '4', 'Travessa da Luz, 8
+Serra Verde
+15741221 Fernandes / PA'),
+('7258', '5', 'Stio Ana Luiza Arajo, 37
+Vila Paraso
+01857548 Cavalcanti do Oeste / DF'),
+('7259', '5', 'Loteamento de Cunha
+Serra Verde
+85686-179 Melo / MS'),
+('7260', '2', 'Estao de Pinto, 76
+So Joo Batista
+40638-572 Caldeira / CE'),
+('7261', '2', 'Conjunto de Porto, 13
+Acaba Mundo
+35701-466 Barbosa / MT'),
+('7262', '4', 'Aeroporto Pinto, 15
+Sagrada Famlia
+33349-201 Gonalves da Serra / RO'),
+('7263', '5', 'Rodovia de Barbosa, 681
+Novo Ouro Preto
+08688-954 Ribeiro de Barbosa / GO'),
+('7264', '5', 'Distrito de da Conceio, 66
+Laranjeiras
+45478895 Azevedo das Flores / CE'),
+('7265', '4', 'Morro Nina Peixoto, 35
+Vila Coqueiral
+91795-519 da Cruz do Sul / PI'),
+('7266', '5', 'Quadra Nicolas Moreira, 9
+Novo Glria
+08489576 Peixoto da Mata / MG'),
+('7267', '3', 'Trecho Moreira, 694
+Frei Leopoldo
+40103-852 da Cunha de da Luz / PE'),
+('7268', '4', 'Ladeira Calebe Nunes, 31
+Pindura Saia
+95483845 Duarte / MA'),
+('7269', '4', 'Praa de Ramos, 78
+Castelo
+15854193 da Mata / SE'),
+('7270', '2', 'Chcara Barbosa, 172
+Pirineus
+88544965 Melo / RJ'),
+('7271', '2', 'Ncleo Clara Castro, 31
+Apolonia
+84247-635 Pires / RJ'),
+('7272', '5', 'Viaduto Ana Lvia da Cunha, 4
+Grota
+96223-795 Oliveira de Caldeira / AP'),
+('7273', '3', 'Viela de Sales, 92
+Santa Cruz
+58955-896 da Luz Grande / TO'),
+('7274', '1', 'Aeroporto Agatha Gomes, 64
+Alto Barroca
+81148075 Peixoto Paulista / AM'),
+('7275', '5', 'Colnia Nina Pinto, 1
+Vila Santa Monica 2 Seo
+38180016 Rocha da Praia / SP'),
+('7276', '3', 'Via Thales Arago, 54
+So Luiz
+00606129 Rezende / AP'),
+('7277', '3', 'Trevo de Barbosa, 55
+Embabas
+11360-776 Gonalves / SP'),
+('7278', '4', 'Travessa Juliana Arajo, 6
+Ipiranga
+03399-518 Oliveira / TO'),
+('7279', '5', 'rea Samuel Cavalcanti, 3
+Vila Hava
+91419796 Porto / MT'),
+('7280', '2', 'Trevo de Monteiro
+Planalto
+63835-991 Monteiro de Arago / MS'),
+('7281', '4', 'Vereda de Silveira, 971
+Vila Novo So Lucas
+17986-605 Gonalves / RS'),
+('7282', '5', 'rea Bernardo Correia, 80
+Boa Unio 1 Seo
+93568444 das Neves / TO'),
+('7283', '2', 'Jardim da Mata
+Vila Real 1 Seo
+41527295 Pires / PB'),
+('7284', '3', 'Avenida Kevin Ribeiro, 4
+Esplanada
+87109-834 da Luz / RR'),
+('7285', '2', 'Stio Correia, 73
+Petropolis
+93785905 Gomes / MS'),
+('7286', '4', 'Esplanada Arago, 23
+Piratininga
+74246520 Alves de Campos / RO'),
+('7287', '3', 'Jardim de Vieira, 385
+Mirante
+95259-335 Freitas / SC'),
+('7288', '2', 'Loteamento Ana Laura Ramos, 89
+Nova Gameleira
+59192-833 Arajo do Norte / AL'),
+('7289', '2', 'Largo de da Mata
+So Jorge 1 Seo
+63467788 Ferreira de Gois / DF'),
+('7290', '2', 'Ptio Pedro Farias, 487
+Vila Bandeirantes
+02757082 Rocha / SE'),
+('7291', '4', 'Estao de da Mota, 343
+Jardinpolis
+06635155 Caldeira do Amparo / MG'),
+('7292', '4', 'Rua de Gonalves, 363
+Vale Do Jatoba
+19643995 Ferreira dos Dourados / AM'),
+('7293', '2', 'Largo Castro
+Campo Alegre
+48120285 Costela da Mata / MG'),
+('7294', '1', 'Morro Joo Gabriel da Conceio
+So Luiz
+35460-563 Costa do Sul / PA'),
+('7295', '4', 'rea Gonalves, 325
+Vila Pinho
+11532-883 Costela / RR'),
+('7296', '3', 'Vila de Silveira, 7
+Vila Da Luz
+73403781 da Rocha do Galho / BA'),
+('7297', '1', 'Campo Noah Monteiro, 3
+Canad
+25313833 Porto / RR'),
+('7298', '5', 'Praia de Cardoso, 80
+Nossa Senhora Da Aparecida
+03122-019 Almeida / RO'),
+('7299', '2', 'Aeroporto Ryan Novaes, 88
+So Luiz
+06261401 Campos das Pedras / RJ'),
+('7300', '5', 'Travessa Santos, 97
+Vale Do Jatoba
+37550451 Oliveira / MT'),
+('7301', '1', 'Fazenda Catarina Teixeira, 805
+Jardim Amrica
+50439-431 Moreira / MS'),
+('7302', '2', 'Vila Peixoto, 3
+Vila Fumec
+20444798 Souza dos Dourados / DF'),
+('7303', '4', 'Praa de Ribeiro, 7
+Guarani
+34227272 Cavalcanti das Pedras / RR'),
+('7304', '4', 'Stio de Correia, 21
+Vila Real 2 Seo
+21317-889 Lima do Amparo / MS'),
+('7305', '3', 'Alameda Yago Teixeira, 46
+Frei Leopoldo
+13454-340 Farias do Campo / RJ'),
+('7306', '3', 'Ncleo de Duarte, 95
+Leonina
+49110398 Pinto da Praia / RS'),
+('7307', '4', 'Lagoa Luiz Henrique Moura, 45
+So Francisco
+40554153 Lopes de Barros / RN'),
+('7308', '3', 'Vereda Maria Fernanda Gomes, 19
+Vila Sesc
+14798-072 Viana / PB'),
+('7309', '1', 'Residencial Freitas, 543
+Ipe
+95866140 Rezende / AC'),
+('7310', '3', 'Avenida Lavnia Nogueira, 10
+Atila De Paiva
+85408-702 Jesus / SP'),
+('7311', '4', 'Conjunto de Costa, 49
+So Francisco Das Chagas
+82892403 Costa de Minas / PB'),
+('7312', '4', 'Parque de Correia
+Flavio De Oliveira
+27004291 Arajo Alegre / AM'),
+('7313', '2', 'Travessa Cardoso, 29
+Vila Paquet
+82735-299 Carvalho Verde / PR'),
+('7314', '2', 'Setor Ramos, 78
+Santa Helena
+36837552 Farias do Amparo / MG'),
+('7315', '3', 'Avenida da Mota, 80
+Jardim Montanhs
+88494924 Jesus / RR'),
+('7316', '3', 'Rua Ramos, 3
+Hava
+55595-922 Arajo / PR'),
+('7317', '1', 'Praa Arago, 956
+Confisco
+47266286 Mendes do Sul / CE'),
+('7318', '3', 'Favela de Rodrigues, 69
+Vila Antena Montanhs
+56612578 Fogaa / SP'),
+('7319', '5', 'Ptio de Azevedo, 32
+Trevo
+99184-412 Duarte / CE'),
+('7320', '3', 'Viaduto de Teixeira, 361
+Varzea Da Palma
+65038045 Sales / GO'),
+('7321', '4', 'Distrito Eduarda Martins, 90
+Mangabeiras
+48871066 Rezende Paulista / AP'),
+('7322', '3', 'Fazenda Brbara Costa, 4
+Joo Pinheiro
+10355-991 Novaes / PA'),
+('7323', '3', 'Lagoa Souza, 194
+Jatob
+97475767 Moreira / AP'),
+('7324', '3', 'Condomnio Calebe da Rocha
+Coqueiros
+71865226 Fernandes da Praia / AP'),
+('7325', '4', 'Viela Pires, 53
+Tirol
+22580-148 Martins Grande / PR'),
+('7326', '1', 'Trecho de Cardoso, 41
+Nossa Senhora Da Conceio
+04051544 Arajo / MA'),
+('7327', '5', 'Distrito de Barbosa, 90
+Tupi A
+91122866 Mendes Alegre / AL'),
+('7328', '3', 'Chcara Olivia Santos, 95
+Jardim Do Vale
+90587-084 Melo dos Dourados / ES'),
+('7329', '1', 'Avenida Martins, 18
+Santana Do Cafezal
+51799-587 Melo Grande / SE'),
+('7330', '4', 'Feira Pereira, 58
+So Bento
+33254-225 Ribeiro / RO'),
+('7331', '1', 'Trecho Peixoto, 3
+Acaiaca
+54717541 Carvalho / RS'),
+('7332', '2', 'Viela de Pires, 81
+Joo Paulo Ii
+18591-371 Farias / TO'),
+('7333', '3', 'Alameda Pinto, 51
+Vila Mantiqueira
+01762-677 Moraes de da Mota / RS'),
+('7334', '1', 'Lago de Azevedo, 7
+Vila Nova Cachoeirinha 2 Seo
+05669614 Barros / AC'),
+('7335', '1', 'Residencial Pinto, 73
+Santa Cruz
+65575584 Cavalcanti / AC'),
+('7336', '1', 'Feira Raquel Porto, 91
+Jardim Guanabara
+41214-144 Santos da Mata / RO'),
+('7337', '3', 'Campo de Alves, 35
+Calafate
+18725-318 Duarte de Minas / PR'),
+('7338', '2', 'Residencial Nascimento, 8
+So Bento
+35039838 Cardoso de Campos / SE'),
+('7339', '1', 'Ptio Bernardo Cunha, 27
+Vila Rica
+29801491 Costa / RR'),
+('7340', '3', 'Favela Mariana Melo, 8
+Calafate
+55456-714 Sales Alegre / RS'),
+('7341', '2', 'Vila Evelyn Rodrigues, 7
+Guarat
+05765404 Gonalves da Serra / RJ'),
+('7342', '4', 'Lago Novaes, 242
+Flavio Marques Lisboa
+07336-829 Nunes do Norte / PR'),
+('7343', '2', 'Ladeira de Novaes, 9
+Europa
+02065-538 Costa do Sul / RO'),
+('7344', '2', 'Rodovia Novaes
+Satelite
+31032328 Alves das Flores / RN'),
+('7345', '5', 'Ptio Vieira, 42
+Marola
+66781-771 Nogueira / SE'),
+('7346', '5', 'Ncleo de Nunes, 1
+Providencia
+01949-585 Pinto do Oeste / TO'),
+('7347', '1', 'Largo Clara Cavalcanti, 71
+Conjunto Califrnia I
+28779-513 Nunes / RJ'),
+('7348', '5', 'Rodovia de Ferreira, 228
+Camargos
+26175-932 Lopes de Minas / AC'),
+('7349', '4', 'Ptio da Costa, 149
+Baleia
+67826825 Freitas das Pedras / GO'),
+('7350', '5', 'Feira Lorena Viana, 499
+Palmeiras
+83149706 Cardoso do Amparo / PA'),
+('7351', '5', 'Condomnio Gonalves, 28
+Joo Pinheiro
+09982-810 Martins do Campo / BA'),
+('7352', '2', 'rea Rocha, 12
+Vila Betnia
+56253741 da Luz / RJ'),
+('7353', '2', 'Ladeira de Costela, 774
+Vila Bandeirantes
+55295979 Teixeira da Praia / AM'),
+('7354', '3', 'Avenida Marcos Vinicius Cardoso, 71
+Casa Branca
+20137508 Correia / MT'),
+('7355', '1', 'Ladeira Costa, 27
+Vila Ecolgica
+33931-338 Cardoso / PI'),
+('7356', '2', 'Setor Gonalves, 60
+Olaria
+24847-962 Souza / TO'),
+('7357', '1', 'Trevo de Monteiro
+Castanheira
+90735665 Cardoso da Serra / RJ'),
+('7358', '2', 'Setor de Castro
+Vila So Francisco
+37436-272 Viana / MG'),
+('7359', '1', 'Estao Fernando Ferreira, 9
+Flamengo
+39677086 Cunha da Prata / AM'),
+('7360', '5', 'Rua Rocha, 71
+Solimoes
+63088788 Ramos de Campos / MT'),
+('7361', '3', 'Distrito de Mendes
+Vila Paquet
+02579367 Santos / AP'),
+('7362', '2', 'Estrada Rodrigues, 93
+Europa
+30836-527 Cardoso de Minas / AL'),
+('7363', '2', 'Viaduto de Viana, 83
+Oeste
+57173282 da Costa do Sul / GO'),
+('7364', '2', 'Viaduto Kamilly das Neves, 7
+Jaragu
+71720-360 Nunes Grande / RR'),
+('7365', '2', 'Estrada de Cardoso
+Cnego Pinheiro 2 Seo
+47176161 Moraes / SP'),
+('7366', '3', 'Estao Mendes, 36
+So Francisco Das Chagas
+39781405 Nascimento / BA'),
+('7367', '4', 'Ncleo Barbosa, 35
+Leonina
+24119-462 das Neves do Amparo / PA'),
+('7368', '3', 'Jardim de Alves, 49
+Vila Paraso
+14812-740 Moura / GO'),
+('7369', '3', 'Distrito Peixoto, 23
+Laranjeiras
+39901698 Freitas / MG'),
+('7370', '2', 'Vereda Ribeiro, 5
+Tirol
+51745-273 Porto das Flores / SC'),
+('7371', '4', 'Lago de Arajo, 30
+Leticia
+90571024 da Conceio / AL'),
+('7372', '4', 'Lago Fernandes, 96
+Ouro Preto
+49216-935 Vieira / SC'),
+('7373', '4', 'Viela de Farias, 54
+Maria Goretti
+49606163 Farias da Mata / SE'),
+('7374', '2', 'Aeroporto de Fogaa, 582
+Horto
+27354192 Costela de Ferreira / RN'),
+('7375', '5', 'Viaduto Ramos, 5
+Luxemburgo
+37379-877 Novaes / RN'),
+('7376', '4', 'Estrada Maria Ceclia Cunha, 318
+Aeroporto
+65448423 Martins / AC'),
+('7377', '1', 'rea Maria Eduarda Vieira, 99
+Vila Jardim So Jos
+02816011 Dias / AC'),
+('7378', '4', 'Viaduto Moura, 62
+Marieta 1 Seo
+75039722 das Neves Grande / SC'),
+('7379', '2', 'Vereda de Pinto, 59
+Paraso
+80043473 Teixeira da Prata / MG'),
+('7380', '5', 'Setor Caio Gomes, 90
+Aguas Claras
+29722-254 Rezende do Campo / PR'),
+('7381', '1', 'Rodovia da Luz, 99
+Caetano Furquim
+72551619 Costela das Flores / SC'),
+('7382', '3', 'Favela da Paz, 110
+Jaragu
+25167-491 Moura da Serra / AL'),
+('7383', '2', 'rea de da Mata, 4
+Guarani
+54736-888 Novaes da Mata / SE'),
+('7384', '2', 'Vila Augusto Oliveira
+Engenho Nogueira
+21046996 Pires / MG'),
+('7385', '1', 'Campo de Mendes, 90
+So Tomaz
+48556-671 Fogaa das Flores / BA'),
+('7386', '2', 'Vereda de Costa, 211
+Santo Antnio
+20189-188 Melo da Serra / AM'),
+('7387', '4', 'Avenida de Ramos, 38
+Oeste
+05787680 Santos / GO'),
+('7388', '5', 'rea Diogo Gomes, 96
+Vila Real 2 Seo
+68548-957 Nascimento / BA'),
+('7389', '2', 'Praa Alves, 2
+So Geraldo
+22802234 Azevedo das Pedras / RJ'),
+('7390', '5', 'Fazenda Almeida, 411
+So Joo Batista
+60168351 Caldeira Verde / RO'),
+('7391', '2', 'Morro Martins, 9
+Vila Da ria
+71456-459 Caldeira / MS'),
+('7392', '4', 'Loteamento Dias, 302
+Granja Werneck
+06113343 Martins / RJ'),
+('7393', '2', 'Ptio Eloah da Rosa, 78
+Padre Eustquio
+99832-412 da Mata / AL'),
+('7394', '3', 'Favela Gabriela da Cunha, 3
+Santo Antnio
+10534-025 Castro / SE'),
+('7395', '4', 'Trecho de Campos
+Antonio Ribeiro De Abreu 1 Seo
+89303-435 Cunha / PB'),
+('7396', '1', 'Rua de Oliveira, 8
+Nova Cintra
+54502-025 Cunha / PR'),
+('7397', '3', 'Avenida Davi Lucas Rocha, 80
+Vila Jardim So Jos
+77770738 Ramos / PB'),
+('7398', '3', 'Alameda de Porto
+Monte Azul
+46959174 Martins das Pedras / RN'),
+('7399', '1', 'Avenida de Caldeira, 54
+Paulo Vi
+42090-157 Barros / MS'),
+('7400', '3', 'Esplanada de Arago, 18
+Conjunto Serra Verde
+67226-804 Fogaa das Flores / PR'),
+('7401', '1', 'Loteamento Yuri Gonalves, 9
+So Jorge 1 Seo
+94983091 Lima da Serra / MA'),
+('7402', '1', 'Chcara de Caldeira, 85
+So Marcos
+41813663 Peixoto / DF'),
+('7403', '5', 'Conjunto da Conceio, 91
+Baro Homem De Melo 2 Seo
+48189-338 Cunha de Lopes / RO'),
+('7404', '2', 'Parque de da Cruz
+Vila Independencia 3 Seo
+30398272 Nascimento / RJ'),
+('7405', '5', 'Lagoa Emilly Cunha, 19
+Canad
+95606-528 Fernandes de Minas / RR'),
+('7406', '3', 'Estrada de Dias
+Paquet
+90886-514 Moraes do Sul / SC'),
+('7407', '4', 'Stio de da Cunha, 1
+Vila Nossa Senhora Do Rosrio
+38093-495 Lopes de da Mata / RO'),
+('7408', '1', 'Avenida de Cavalcanti, 420
+Graja
+49929-792 Silveira / GO'),
+('7409', '4', 'Via de da Rocha, 51
+Vila Maria
+07583-208 Costa das Flores / PB'),
+('7410', '2', 'Trecho Correia, 54
+Jardim Atlntico
+02941165 Costela do Sul / MS'),
+('7411', '2', 'Favela Vieira, 35
+Vila Independencia 2 Seo
+20508783 Peixoto da Serra / RO'),
+('7412', '3', 'Passarela Moraes, 223
+Maria Goretti
+51514-245 Dias / SP'),
+('7413', '2', 'Setor Joo Caldeira, 72
+Vila Santo Antnio Barroquinha
+81887-685 Jesus / PE'),
+('7414', '2', 'Lago Maria Alice Fogaa, 34
+So Vicente
+87065-836 Melo / DF'),
+('7415', '2', 'Passarela Joo Vitor Rodrigues, 51
+Esperana
+28575-194 da Conceio / RS'),
+('7416', '2', 'Aeroporto Cardoso, 5
+Flamengo
+23649-015 Pereira de Nogueira / RO'),
+('7417', '2', 'Viela de Campos
+Santa Terezinha
+28635757 Peixoto de Gois / PA'),
+('7418', '1', 'Conjunto de Arago, 400
+Graja
+16824-249 Lopes do Amparo / ES'),
+('7419', '3', 'Praia Monteiro, 349
+Vila Aeroporto Jaragu
+46922-023 Peixoto do Norte / CE'),
+('7420', '5', 'Vereda Danilo da Paz, 12
+Cruzeiro
+65441779 Pereira / PA'),
+('7421', '4', 'Estao de da Cunha, 76
+Mala E Cuia
+16350-412 Farias / RN'),
+('7422', '5', 'Travessa Maria Ceclia Campos, 451
+Olhos 
+29136-201 Monteiro Verde / PE'),
+('7423', '4', 'Avenida Farias, 93
+Satelite
+17915-754 Campos / RR'),
+('7424', '4', 'Favela da Rocha, 7
+Vila Antena Montanhs
+45208-224 Novaes de Martins / RR'),
+('7425', '5', 'Parque de Ferreira, 773
+So Jos
+80220-979 da Costa / RN'),
+('7426', '1', 'Vale Giovanna Farias, 4
+Buritis
+55381-263 das Neves / AL'),
+('7427', '4', 'Ncleo Isabelly Caldeira, 10
+Canad
+78315091 Cunha / MG'),
+('7428', '3', 'Stio de Fernandes
+Vila Tirol
+31889607 da Paz / SP'),
+('7429', '3', 'Vereda Lorenzo Azevedo, 1
+Vila Mangueiras
+53365224 Moraes Grande / SC'),
+('7430', '4', 'Setor de Santos, 346
+Santa Cruz
+68033-602 da Conceio de Peixoto / TO'),
+('7431', '3', 'Estao da Paz
+Vila Madre Gertrudes 3 Seo
+51640-052 Pires Paulista / MT'),
+('7432', '5', 'Alameda Mirella Rezende, 88
+Bairro Das Indstrias Ii
+03021-661 Almeida Paulista / TO'),
+('7433', '1', 'Alameda Bruna Oliveira, 26
+Lorena
+81489-050 Moraes Verde / AP'),
+('7434', '3', 'Vereda Guilherme Peixoto
+Sport Club
+41226861 Lima / PB'),
+('7435', '2', 'Ncleo Lorenzo da Mota, 5
+pia
+82935671 Souza / MS'),
+('7436', '2', 'Via Pires, 75
+Taquaril
+48592650 Nogueira / PE'),
+('7437', '1', 'Parque Novaes, 2
+Vila Primeiro De Maio
+60276-351 Porto Verde / CE'),
+('7438', '3', 'Parque de da Mota
+Nova Cachoeirinha
+51227-267 Gomes / TO'),
+('7439', '4', 'Vila de Cardoso, 39
+Bom Jesus
+81095990 Cardoso / PA'),
+('7440', '5', 'Esplanada de da Conceio, 98
+Madre Gertrudes
+96866-141 Ribeiro / TO'),
+('7441', '4', 'Ncleo de Castro, 77
+Bela Vitoria
+69264346 Souza / RN'),
+('7442', '3', 'Largo Benjamin Ferreira, 37
+Embabas
+76810621 Mendes de Pinto / TO'),
+('7443', '4', 'Parque Theo Pires
+Marmiteiros
+15705-422 Barbosa / SE'),
+('7444', '2', 'Quadra de Duarte, 5
+Acaba Mundo
+68962-351 Duarte / ES'),
+('7445', '1', 'Viaduto Jlia Moreira, 9
+Vila Nova Paraso
+37280-694 Souza de Arajo / PE'),
+('7446', '4', 'Alameda Joo Miguel Barbosa, 309
+Camponesa 1 Seo
+76601-117 da Luz do Galho / PI'),
+('7447', '1', 'Esplanada Monteiro
+Mirtes
+98964663 Pereira das Flores / SP'),
+('7448', '4', 'Setor Ferreira, 932
+Conjunto Novo Dom Bosco
+11539504 da Cruz do Sul / DF'),
+('7449', '1', 'Campo Oliveira, 54
+Vila So Gabriel
+02970-063 Sales de Monteiro / TO'),
+('7450', '3', 'Estao Pereira, 31
+Satelite
+83587350 Cavalcanti do Amparo / MS'),
+('7451', '2', 'Favela Calebe da Mota, 22
+Itapoa
+26833-758 Nascimento do Campo / PA'),
+('7452', '1', 'Ptio de Nascimento, 5
+Baro Homem De Melo 2 Seo
+39128-371 da Cunha Verde / PR'),
+('7453', '4', 'Trecho das Neves
+Antonio Ribeiro De Abreu 1 Seo
+26308966 Martins Verde / AP'),
+('7454', '2', 'Quadra Rodrigues, 363
+Novo Ouro Preto
+75377400 Cavalcanti / DF'),
+('7455', '4', 'Ladeira Jesus, 35
+Vila Santa Monica 2 Seo
+74433-108 Gonalves de Gois / AM'),
+('7456', '4', 'Rua Nunes, 84
+Guarani
+70542503 Oliveira / PI'),
+('7457', '2', 'Rodovia Gabriel Porto, 65
+Aeroporto
+37163258 da Rosa / RS'),
+('7458', '4', 'Campo Lavnia Fernandes, 472
+Estrela Do Oriente
+65401314 Pereira / PE'),
+('7459', '2', 'Trevo Marcelo Nogueira, 61
+Vila Santo Antnio Barroquinha
+55485894 Carvalho do Amparo / AM'),
+('7460', '2', 'Jardim Lopes, 72
+Novo Tupi
+22215071 Barros / BA'),
+('7461', '5', 'Travessa de Carvalho
+Santo Antnio
+54767-325 Costa / RJ'),
+('7462', '1', 'Ncleo Peixoto, 61
+Goiania
+26103368 Cardoso de Moraes / PE'),
+('7463', '4', 'Vereda Eduarda Ferreira, 632
+Jardim Dos Comerciarios
+55016750 Oliveira do Campo / AL'),
+('7464', '1', 'Via Porto, 1
+Bernadete
+61680329 Duarte do Norte / PR'),
+('7465', '5', 'Largo Eloah Silveira, 90
+Milionario
+36875858 Pereira da Praia / SE'),
+('7466', '2', 'Condomnio de Martins, 91
+Sport Club
+69680481 Castro de Ramos / AC'),
+('7467', '1', 'Conjunto Viana, 2
+Nova Floresta
+44279183 Nascimento / PR'),
+('7468', '2', 'Setor da Conceio, 71
+Vila Mantiqueira
+41584-040 Ferreira de da Rocha / RS'),
+('7469', '3', 'Largo de Costa
+Santana Do Cafezal
+21448628 Moreira do Galho / BA'),
+('7470', '2', 'Stio Luiz Fernando da Mata, 80
+Esperana
+73324-019 Cardoso do Campo / AC'),
+('7471', '1', 'Via Las Duarte, 69
+So Jorge 3 Seo
+48102-431 Pereira / AM'),
+('7472', '3', 'Campo Peixoto, 124
+Baro Homem De Melo 2 Seo
+12451-598 Lopes de Costa / MS'),
+('7473', '1', 'Colnia de Castro, 4
+So Vicente
+21989284 Viana / SP'),
+('7474', '1', 'Chcara Costela
+Bacurau
+83268735 Santos de Barbosa / PR'),
+('7475', '5', 'Rua de Moreira, 10
+Embabas
+79820052 Pinto / BA'),
+('7476', '2', 'Trecho Cau Correia
+Marilandia
+25439206 Pires / SP'),
+('7477', '1', 'Favela de Sales, 78
+Vila So Gabriel
+81049774 Lima / RS'),
+('7478', '4', 'Conjunto Kaique Nunes, 41
+So Jorge 1 Seo
+28390849 Santos das Pedras / RS'),
+('7479', '4', 'Morro das Neves, 52
+Pedreira Padro Lopes
+31888-006 Rezende de Minas / MA'),
+('7480', '5', 'Passarela Davi Lucas Moura, 2
+Santa Helena
+43031-233 da Conceio das Pedras / ES'),
+('7481', '4', 'Lago Yago Melo
+Vila Nova Gameleira 2 Seo
+66231475 Rocha de Gois / RS'),
+('7482', '5', 'Campo de Viana, 6
+Tiradentes
+02708-519 Peixoto / RJ'),
+('7483', '1', 'Alameda Francisco da Mata, 59
+Vila Do Pombal
+54753959 da Paz de Gois / RS'),
+('7484', '3', 'Loteamento Sophie Farias, 262
+Marieta 3 Seo
+56349814 Costa Alegre / AC'),
+('7485', '4', 'Avenida Castro, 24
+Conjunto Jardim Filadlfia
+97590-535 da Cunha / MA'),
+('7486', '1', 'Estrada de da Rocha, 811
+Santa Lcia
+64093-291 Duarte Paulista / BA'),
+('7487', '3', 'rea Pinto, 7
+Copacabana
+09053097 Pinto / PE'),
+('7488', '4', 'Ncleo Ana Sophia Gonalves, 50
+Mirtes
+83318-417 Lopes de Viana / CE'),
+('7489', '5', 'Loteamento Moura, 894
+Jaragu
+29378758 Barros / GO'),
+('7490', '1', 'Lago de da Conceio, 1
+Alto Caiaras
+54932-110 Gomes Alegre / PB'),
+('7491', '4', 'Favela Caldeira
+Miramar
+27450-114 Lopes / AP'),
+('7492', '4', 'Favela de Fernandes, 54
+Vila Copasa
+54174-547 Nogueira de Cardoso / TO'),
+('7493', '2', 'Estrada de Pereira, 65
+Biquinhas
+51331986 da Rosa de Lopes / PE'),
+('7494', '5', 'Condomnio Moura, 11
+Olaria
+49404-053 Cunha Paulista / AL'),
+('7495', '2', 'Esplanada Cardoso, 60
+Vila Primeiro De Maio
+56180210 Cavalcanti da Praia / RN'),
+('7496', '4', 'Distrito de Azevedo, 8
+Vila Coqueiral
+42611429 Silva Alegre / ES'),
+('7497', '3', 'rea Viana, 51
+Floramar
+01985-145 Almeida do Galho / GO'),
+('7498', '3', 'Viaduto Moreira, 75
+Nova Pampulha
+27261-732 Cavalcanti / BA'),
+('7499', '1', 'Estao de da Luz, 99
+Atila De Paiva
+06825277 Vieira Alegre / RR'),
+('7500', '1', 'Campo Gomes
+Bacurau
+15435442 Nascimento / SP'),
+('7501', '5', 'rea de Peixoto, 596
+Concrdia
+33698-859 Souza de Minas / AL'),
+('7502', '2', 'Setor Maria Alice Rodrigues
+Marieta 1 Seo
+73924804 Caldeira / AC'),
+('7503', '1', 'Morro Joo Miguel Pinto, 2
+Santo Antnio
+58509120 Ramos Paulista / SC'),
+('7504', '2', 'Travessa Arago, 84
+Horto Florestal
+64953818 Sales / MS'),
+('7505', '4', 'Largo de Nascimento, 712
+Nossa Senhora Da Aparecida
+15598-044 Oliveira / AP'),
+('7506', '1', 'Esplanada de Cardoso, 68
+Vila Das Oliveiras
+21081629 Correia do Oeste / RN'),
+('7507', '1', 'Recanto Sophia Pinto, 81
+Vila De S
+60472-640 Souza dos Dourados / MG'),
+('7508', '5', 'Largo Cardoso, 75
+Lorena
+20461-947 Lima / SP'),
+('7509', '3', 'Viela Nicolas Moura, 4
+So Jorge 1 Seo
+98135510 Rodrigues / RN'),
+('7510', '4', 'Viaduto de Castro, 87
+Jardim Leblon
+25703-148 Ramos do Sul / AC'),
+('7511', '5', 'Avenida Francisco Vieira, 16
+Vila Jardim Montanhes
+36261311 Oliveira das Pedras / PE'),
+('7512', '3', 'Via Renan Lopes, 77
+So Francisco Das Chagas
+06371737 Silveira / AP'),
+('7513', '4', 'Aeroporto de Martins, 7
+Carmo
+79975039 Cardoso / BA'),
+('7514', '4', 'Recanto de Vieira
+Vila Suzana Segunda Seo
+63924-521 Oliveira do Galho / RR'),
+('7515', '2', 'Parque de da Costa, 5
+Vera Cruz
+71079832 das Neves / AL'),
+('7516', '3', 'Esplanada Samuel Sales, 235
+Taquaril
+84055-273 Rodrigues de Rocha / DF'),
+('7517', '4', 'Travessa de Azevedo, 354
+Manacas
+84304924 da Mota de Minas / PB'),
+('7518', '1', 'Lago de Cavalcanti, 7
+Nova Cachoeirinha
+35727-667 Melo / GO'),
+('7519', '1', 'Feira de Moreira, 2
+Vera Cruz
+21772689 Pinto / RN'),
+('7520', '3', 'Trevo de da Costa, 94
+Vila Ouro Minas
+47372011 Rodrigues / RN'),
+('7521', '1', 'Lagoa Daniela Gomes, 887
+Marmiteiros
+85122193 da Cunha / MS'),
+('7522', '2', 'Parque Lorena Moreira, 88
+Piratininga
+68458729 Silva da Serra / RR'),
+('7523', '2', 'Travessa de da Mota, 12
+Independncia
+39859-432 Rodrigues de Martins / PB'),
+('7524', '2', 'Fazenda de Fogaa, 4
+Palmeiras
+27495578 Campos Paulista / PE'),
+('7525', '5', 'Trevo Castro, 7
+Alpes
+04128-183 Viana / AP'),
+('7526', '1', 'Estao Maria Ceclia das Neves, 912
+Pompia
+35016785 Melo / SP'),
+('7527', '5', 'Rua Almeida
+Novo Aaro Reis
+62407-902 Duarte de Barbosa / SE'),
+('7528', '5', 'Rua de Costa, 39
+Jardim Vitoria
+84368-501 Costela / PB'),
+('7529', '4', 'Stio de Souza
+Baleia
+92709-180 Nunes / RR'),
+('7530', '3', 'Chcara de da Cunha
+Camponesa 2 Seo
+83093-897 Oliveira / GO'),
+('7531', '5', 'Estrada Mendes, 3
+Nova America
+13786758 Oliveira do Sul / PR'),
+('7532', '4', 'Conjunto de Jesus, 95
+Canaa
+51289153 Teixeira / PB'),
+('7533', '3', 'rea Caroline das Neves
+Coqueiros
+81885-074 da Cruz / PI'),
+('7534', '3', 'Loteamento de Moura, 22
+So Damio
+25436-742 Viana / PA'),
+('7535', '2', 'rea Pires, 4
+Vila Sesc
+24044-270 Rodrigues / BA'),
+('7536', '2', 'Fazenda de Lopes, 94
+Vila Primeiro De Maio
+65183669 Vieira do Galho / RN'),
+('7537', '3', 'Setor de Arago
+Jatob
+80725725 da Cunha Grande / RS'),
+('7538', '1', 'Jardim Costa, 94
+Mariano De Abreu
+46969-338 Teixeira / RO'),
+('7539', '3', 'Feira Kamilly Monteiro, 84
+Aaro Reis
+03484519 Dias da Mata / RR'),
+('7540', '1', 'Morro da Cunha, 46
+Monte Azul
+32478-877 Lima / ES'),
+('7541', '1', 'Vereda Mendes, 22
+Ouro Preto
+18306187 da Cunha / MT'),
+('7542', '2', 'Aeroporto Barbosa, 388
+Cachoeirinha
+07286-479 Porto / AP'),
+('7543', '5', 'Viaduto Novaes, 744
+Juliana
+68650-693 Pires / PI'),
+('7544', '2', 'Praia de da Luz, 935
+Conjunto So Francisco De Assis
+06713382 Oliveira dos Dourados / MT'),
+('7545', '2', 'Vale de Rezende, 31
+Jardim Leblon
+60877715 Nogueira / RR'),
+('7546', '4', 'Condomnio Helosa Pinto, 20
+Confisco
+89828-635 Arajo / AP'),
+('7547', '3', 'Praa de Lima, 73
+Taquaril
+83392048 da Cruz de da Rosa / CE'),
+('7548', '5', 'Residencial da Luz, 94
+Acaiaca
+47457-289 Caldeira de Fogaa / SE'),
+('7549', '3', 'Rodovia Viana
+Vila Santa Monica 1 Seo
+09439-028 Caldeira / MA'),
+('7550', '1', 'Campo Rodrigo Novaes, 7
+So Jorge 2 Seo
+00619062 Cardoso / SC'),
+('7551', '4', 'Recanto Amanda Nunes, 67
+Vila Aeroporto
+55366-157 Souza / GO'),
+('7552', '1', 'Parque Leandro Duarte, 65
+Maria Helena
+05133-122 Moura de da Cunha / GO'),
+('7553', '2', 'Ladeira Jesus, 44
+Beija Flor
+15425-246 Teixeira Alegre / MG'),
+('7554', '1', 'Recanto Clara Gomes
+Vila Ecolgica
+26998913 Nunes do Campo / PR'),
+('7555', '4', 'Travessa de Oliveira, 342
+Comiteco
+16600637 Castro da Serra / RJ'),
+('7556', '1', 'Quadra de Peixoto, 313
+Nova Esperana
+30745-702 Ribeiro de Castro / AL'),
+('7557', '1', 'Condomnio de Teixeira
+Estrela Do Oriente
+41646165 Nascimento / PR'),
+('7558', '3', 'Esplanada Stella Jesus, 35
+Graa
+83649414 Teixeira de Nascimento / TO'),
+('7559', '4', 'Trevo de Azevedo, 74
+Boa Unio 2 Seo
+35940471 Silveira / RR'),
+('7560', '2', 'Vila Azevedo, 96
+Vila Vista Alegre
+45501672 Duarte / DF'),
+('7561', '4', 'Campo de Silveira, 21
+Padre Eustquio
+13045889 Cardoso / AC'),
+('7562', '5', 'Condomnio Maria Clara Moraes, 59
+Milionario
+32041-174 Pereira do Galho / PI'),
+('7563', '3', 'Rua Ferreira, 27
+Bela Vitoria
+46458-310 Cardoso do Oeste / AM'),
+('7564', '5', 'Recanto Silva, 6
+Carmo
+70518159 Freitas Paulista / RN'),
+('7565', '2', 'Campo Nicole Ramos
+Marola
+69948063 Martins / SE'),
+('7566', '5', 'Fazenda de Silva, 3
+Grota
+46740-647 das Neves Alegre / MG'),
+('7567', '5', 'Chcara Maria Fernandes, 77
+So Luiz
+43709232 da Mota / SE'),
+('7568', '5', 'Colnia Enrico Almeida, 49
+Maria Tereza
+84764-827 Correia / MS'),
+('7569', '2', 'Vila Pereira, 82
+Mantiqueira
+50489-306 Monteiro / AL'),
+('7570', '2', 'Morro Ribeiro, 966
+So Lucas
+99636-595 Lopes do Campo / GO'),
+('7571', '2', 'Lago Isabel Souza, 49
+Paulo Vi
+08098-414 Cunha / PA'),
+('7572', '3', 'rea Silveira, 86
+Buritis
+26046-316 Porto / DF'),
+('7573', '5', 'Vereda Rafael Barbosa, 831
+Vila Betnia
+51171-139 Almeida / RS'),
+('7574', '2', 'Lago de Ferreira, 88
+Copacabana
+76628091 Oliveira / BA'),
+('7575', '2', 'Via Correia, 3
+Nossa Senhora Aparecida
+35623051 Moura / PA'),
+('7576', '4', 'Ncleo Eloah Souza, 7
+So Jos
+57469738 Silveira de Novaes / BA'),
+('7577', '2', 'Estao Levi Cardoso, 415
+Bairro Das Indstrias Ii
+32289618 da Cruz do Oeste / SC'),
+('7578', '2', 'Viaduto Lima
+Venda Nova
+09146606 Pereira do Norte / MS'),
+('7579', '3', 'Loteamento Costela, 94
+Mineiro
+37719-673 Moraes / AP'),
+('7580', '2', 'Chcara Campos
+Betnia
+63229-496 Correia das Flores / AM'),
+('7581', '5', 'Estrada de Novaes, 3
+Comiteco
+64411-005 Cardoso / GO'),
+('7582', '3', 'Viela Cardoso, 16
+Liberdade
+72779-304 Moraes Grande / PI'),
+('7583', '2', 'Chcara de Arago, 24
+Leticia
+83865-398 da Cruz / PE'),
+('7584', '1', 'Residencial de Arajo, 90
+Vila Nossa Senhora Do Rosrio
+01816588 Silva / MT'),
+('7585', '2', 'Lago Danilo Cardoso, 506
+Vila Rica
+50441-953 Peixoto / MT'),
+('7586', '3', 'Alameda de Moraes, 82
+Copacabana
+72000-270 Sales / RR'),
+('7587', '1', 'Trevo de Martins
+Jonas Veiga
+55499-090 Azevedo / MA'),
+('7588', '2', 'Stio Renan Martins, 381
+Vila So Gabriel
+63886839 Azevedo de Vieira / RR'),
+('7589', '3', 'Stio Rodrigues, 25
+Bela Vitoria
+19807-946 Cavalcanti de Souza / MG'),
+('7590', '2', 'Colnia Alves
+Senhor Dos Passos
+10623-227 Silva do Oeste / RR'),
+('7591', '3', 'Viela Novaes, 8
+Pongelupe
+55119049 da Rocha de Teixeira / GO'),
+('7592', '2', 'Vila de Nascimento, 61
+So Benedito
+84930294 Moreira / BA'),
+('7593', '5', 'Viela de Pires, 62
+Vila Olhos 
+81413906 Dias de Teixeira / RO'),
+('7594', '2', 'Distrito Rezende, 15
+Vila Nova Cachoeirinha 1 Seo
+82494-622 Arajo / PE'),
+('7595', '3', 'Praia de Silveira, 74
+Vila Calafate
+00140950 Martins / DF'),
+('7596', '2', 'Rua Peixoto
+Vila Engenho Nogueira
+65524-472 Moraes de da Cunha / SC'),
+('7597', '3', 'Ptio Cau da Mota
+Vila Bandeirantes
+56105-950 Silva / PB'),
+('7598', '1', 'Loteamento Pedro Miguel da Luz, 76
+Vila Independencia 3 Seo
+23012652 Monteiro das Flores / MT'),
+('7599', '5', 'Campo de Nascimento, 42
+Vila Suzana Segunda Seo
+51499473 Freitas / PE'),
+('7600', '3', 'Vila Mait Ferreira, 596
+Granja Werneck
+65890-169 Nascimento de Peixoto / CE'),
+('7601', '2', 'Vila Beatriz da Luz, 53
+Planalto
+49509-795 Viana das Pedras / ES'),
+('7602', '3', 'Loteamento de Rezende, 61
+Califrnia
+33138-516 Barros / MS'),
+('7603', '5', 'Ptio de Jesus, 95
+So Jorge 2 Seo
+99264-945 Carvalho do Campo / MA'),
+('7604', '5', 'Campo Diego Viana
+Cidade Jardim Taquaril
+71185258 Farias das Flores / AM'),
+('7605', '5', 'Passarela Nascimento, 12
+Monte Azul
+62133-693 Fogaa de Gois / MT'),
+('7606', '2', 'Avenida Monteiro, 18
+Olhos 
+24028-070 Lopes / BA'),
+('7607', '4', 'Vereda de Martins
+Paulo Vi
+12780389 Oliveira / MA'),
+('7608', '1', 'Conjunto Bernardo Azevedo, 78
+Jardim So Jos
+30817-360 Lima do Norte / CE'),
+('7609', '3', 'Rua de Caldeira
+Vila So Rafael
+22356-139 Arajo / MT'),
+('7610', '2', 'Rodovia Miguel da Mata, 716
+Camponesa 1 Seo
+35036947 Campos / SE'),
+('7611', '1', 'Estrada de Fogaa, 85
+Vila Santo Antnio
+78918045 Correia / GO'),
+('7612', '5', 'Jardim de Melo, 207
+Vila Copasa
+45162815 Gonalves / MG'),
+('7613', '4', 'Travessa Cardoso, 99
+So Jorge 1 Seo
+76326682 Ramos das Pedras / PR'),
+('7614', '1', 'Vereda Souza, 41
+Teixeira Dias
+98897996 Nunes das Flores / CE'),
+('7615', '5', 'Residencial Caldeira, 111
+Tnel De Ibirit
+80080725 Silveira / ES'),
+('7616', '3', 'Esplanada Breno Rodrigues, 49
+Vila Das Oliveiras
+83108-325 Oliveira / MS'),
+('7617', '5', 'Via de Silveira, 67
+Jardim Alvorada
+00675871 Oliveira / SC'),
+('7618', '5', 'Lago Rafael Novaes, 9
+Conjunto Celso Machado
+71045-000 Duarte / RS'),
+('7619', '4', 'Esplanada Augusto Nunes, 6
+Santa Sofia
+97658-780 Silva / PA'),
+('7620', '2', 'Lagoa Ana Sophia Castro
+Vila Trinta E Um De Maro
+27858-382 Cavalcanti / SE'),
+('7621', '2', 'Feira Novaes, 932
+So Damio
+70430704 Caldeira da Prata / PR'),
+('7622', '5', 'Praa Cunha, 48
+Calafate
+23298-292 Gomes de Costela / PB'),
+('7623', '5', 'Ncleo de da Conceio
+So Jorge 2 Seo
+24729648 Cardoso / CE'),
+('7624', '2', 'Loteamento Luiza Pires, 31
+Confisco
+48687-289 Barbosa Alegre / AL'),
+('7625', '2', 'Morro Stella Alves
+Monsenhor Messias
+15106-521 Barros do Norte / SC'),
+('7626', '4', 'Morro Dias, 56
+Vila Independencia 3 Seo
+68702-788 Farias / ES'),
+('7627', '5', 'Vereda Farias, 98
+Castelo
+92560562 da Rosa do Campo / RN'),
+('7628', '1', 'Lago de da Rosa, 82
+Sport Club
+71982767 Lima de Santos / GO'),
+('7629', '5', 'Campo de Rodrigues, 72
+Jaqueline
+97676-968 Farias da Praia / SC'),
+('7630', '5', 'Viaduto Joaquim Dias, 748
+Primeiro De Maio
+88436-346 Oliveira / GO'),
+('7631', '4', 'Praa de Ramos, 12
+Nossa Senhora Aparecida
+41183628 da Mota / BA'),
+('7632', '1', 'Passarela Juliana Moura
+Jaragu
+77496846 Sales / MG'),
+('7633', '4', 'Condomnio de Dias
+Vila Trinta E Um De Maro
+92083198 Alves da Mata / MT'),
+('7634', '3', 'Praa de Barros, 92
+Liberdade
+26926-166 Correia do Amparo / SP'),
+('7635', '5', 'Praa Nunes, 32
+Guarat
+19782-292 Martins Verde / ES'),
+('7636', '1', 'rea Sophia Nogueira, 214
+Novo Tupi
+41960669 Almeida da Prata / RO'),
+('7637', '4', 'Estao Rezende, 78
+Vila So Paulo
+81568164 Cunha / RJ'),
+('7638', '2', 'Distrito Fernanda Cavalcanti, 47
+Floresta
+66617-616 Moura de Farias / RO'),
+('7639', '3', 'Via Rafaela da Luz
+Itaipu
+32296076 Lima / AM'),
+('7640', '4', 'Via Martins, 72
+Belvedere
+75292841 Sales / MA'),
+('7641', '3', 'Ncleo Farias, 47
+Canaa
+55826-737 Costa / BA'),
+('7642', '5', 'rea de Arago, 1
+Brasil Industrial
+70742779 Pinto de Ribeiro / AL'),
+('7643', '4', 'Travessa Thomas Almeida
+Biquinhas
+54109526 Moura das Pedras / TO'),
+('7644', '5', 'rea Ryan da Luz
+Embabas
+45897222 Dias / PB'),
+('7645', '3', 'Favela Gonalves, 93
+Coqueiros
+21537-410 Pereira de da Rocha / AP'),
+('7646', '1', 'Jardim Vieira, 16
+Santa Rita
+63007-605 Peixoto de Gonalves / PI'),
+('7647', '5', 'Rua Mait Farias, 69
+Belvedere
+15541-430 Moura / CE'),
+('7648', '4', 'Condomnio Alice Monteiro, 3
+Jardim Vitoria
+51979292 das Neves de Souza / SP'),
+('7649', '3', 'Praa Maria Eduarda Ferreira, 5
+Alpio De Melo
+70305-255 Gomes / AL'),
+('7650', '4', 'Loteamento Ana Carolina da Luz, 63
+Conjunto Providencia
+84972282 da Cruz do Galho / AM'),
+('7651', '5', 'Ladeira de Moreira
+Nossa Senhora Da Conceio
+49454-276 Castro de Minas / RN'),
+('7652', '3', 'Via Rafael da Conceio, 86
+Conjunto Califrnia Ii
+64035548 Moreira / BA'),
+('7653', '3', 'Jardim de Novaes, 52
+Vila Paquet
+87026897 Pereira / PE'),
+('7654', '3', 'Aeroporto de Almeida, 3
+Vila Batik
+60901-037 Silveira / GO'),
+('7655', '3', 'Trevo de Ramos, 79
+Solar Do Barreiro
+73700419 Rocha / AP'),
+('7656', '4', 'Loteamento de Campos, 7
+Cu Azul
+88855206 Nogueira da Prata / PI'),
+('7657', '2', 'Alameda de Arago, 8
+Centro
+04177739 Pires Grande / DF'),
+('7658', '2', 'Colnia Duarte, 981
+Jaqueline
+13168028 Martins da Serra / RS'),
+('7659', '4', 'Stio Paulo Pereira, 9
+So Vicente
+12818-675 Fogaa do Galho / MA'),
+('7660', '1', 'rea de Castro, 137
+Aparecida
+78354661 Castro / RR'),
+('7661', '4', 'Viaduto de Carvalho, 325
+Monsenhor Messias
+21782308 Alves / BA'),
+('7662', '2', 'Setor Barbosa
+So Joo
+19826-571 Gonalves / RN'),
+('7663', '2', 'Favela de Costela, 61
+Mineiro
+14402677 Arago / SP'),
+('7664', '5', 'Distrito de Melo, 7
+Bandeirantes
+69600-767 da Cunha da Prata / MS'),
+('7665', '2', 'Loteamento da Rocha
+Mangabeiras
+23975-021 Castro Grande / DF'),
+('7666', '1', 'Vila Ana da Cruz, 81
+Grotinha
+85044-905 Novaes de Pires / AM'),
+('7667', '1', 'Lago Duarte, 529
+Vila Pinho
+84765808 Pires / RO'),
+('7668', '3', 'rea Ribeiro
+Lourdes
+76705021 Melo de da Paz / PE'),
+('7669', '5', 'Condomnio Bernardo Carvalho, 11
+Camponesa 2 Seo
+50341-605 Fernandes do Norte / SE'),
+('7670', '2', 'Estao de Costa, 56
+Teixeira Dias
+43840339 Viana de Barros / AC'),
+('7671', '3', 'Estrada de Santos, 2
+Lagoinha Leblon
+04951312 Pinto de Nascimento / SP'),
+('7672', '2', 'Lagoa de Pinto, 434
+Santa Cruz
+72577-599 da Luz / PE'),
+('7673', '3', 'Colnia Caldeira
+So Joo
+64461-417 Freitas / MT'),
+('7674', '1', 'Estao de da Rosa, 4
+Vila Copacabana
+67710637 Cardoso da Prata / SP'),
+('7675', '2', 'Parque das Neves, 4
+Vila Pilar
+05345-950 Cardoso / RO'),
+('7676', '5', 'Favela de Silva, 9
+Conjunto Lagoa
+11354164 Nascimento do Oeste / AL'),
+('7677', '3', 'rea de da Conceio, 74
+Vila Piratininga Venda Nova
+57440-190 Nunes / RS'),
+('7678', '1', 'Distrito Arthur Costa, 1
+Joo Paulo Ii
+38134154 Cavalcanti das Pedras / RN'),
+('7679', '2', 'Feira de da Cruz
+Paquet
+27527178 Porto / PR'),
+('7680', '4', 'Distrito Isabel Alves, 66
+Cabana Do Pai Toms
+13605-598 Viana Paulista / SC'),
+('7681', '3', 'Passarela Santos, 67
+Satelite
+63800229 da Mota da Praia / BA'),
+('7682', '5', 'Recanto de da Cruz
+Eymard
+64883-442 Nascimento da Serra / PA'),
+('7683', '2', 'Ncleo Costela, 97
+Cachoeirinha
+14686-628 Teixeira / RJ'),
+('7684', '4', 'Praia Lavnia Santos
+Virgnia
+02879191 Silva Grande / MS'),
+('7685', '5', 'Chcara de Caldeira, 41
+Urca
+42029204 Cunha / MG'),
+('7686', '5', 'Morro Melissa Arago, 70
+Vila Nova Dos Milionarios
+44729254 Gomes / PA'),
+('7687', '1', 'Trecho Eduarda Ferreira, 969
+Corao Eucarstico
+86324373 Fogaa do Oeste / SP'),
+('7688', '2', 'Recanto de Rodrigues, 94
+Solar Do Barreiro
+31579-723 Porto / AL'),
+('7689', '4', 'Estao de Dias, 4
+Corumbiara
+12972-694 Pereira de Minas / AL'),
+('7690', '2', 'Trecho Cavalcanti, 28
+Vila Inestan
+45540430 Souza / MT'),
+('7691', '5', 'Via Santos, 90
+Vila Nova Cachoeirinha 3 Seo
+10237103 Ferreira / AL'),
+('7692', '1', 'Conjunto de Porto, 91
+Pantanal
+47996318 Duarte Paulista / AL'),
+('7693', '5', 'Quadra da Rosa, 23
+Jaragu
+64876-960 Gomes da Prata / AC'),
+('7694', '2', 'Ladeira da Paz, 1
+Leticia
+02392-545 Lima do Galho / SP'),
+('7695', '1', 'Vereda Nathan Ramos, 958
+Esperana
+20331-255 Campos das Flores / PA'),
+('7696', '1', 'Feira Clara Nogueira, 189
+Vila Jardim Alvorada
+63310302 da Cunha de Arajo / PB'),
+('7697', '2', 'Distrito Mendes, 1
+Diamante
+21633511 da Luz das Flores / MG'),
+('7698', '3', 'Trecho Murilo Moreira, 96
+Concrdia
+27254770 das Neves / AL'),
+('7699', '4', 'Viela Mendes, 6
+Esplanada
+54630531 Jesus de Martins / SC'),
+('7700', '2', 'Lagoa Pereira, 945
+Jardim Atlntico
+18043-441 Moreira de Moreira / MA'),
+('7701', '5', 'Parque de Pires
+Cruzeiro
+48167191 da Rocha das Flores / PR'),
+('7702', '2', 'Trevo Pietro da Rosa, 85
+Nossa Senhora Aparecida
+45817332 Arago Paulista / RN'),
+('7703', '1', 'Vereda Camila Rezende, 41
+So Gabriel
+93551-844 Ferreira / PA'),
+('7704', '2', 'Recanto Vitria Correia, 44
+Vila Da Paz
+51745212 Arago / SE'),
+('7705', '2', 'Alameda de Silveira, 34
+So Joo
+92115-110 Arago Paulista / GO'),
+('7706', '4', 'Estao Eduarda Silva, 23
+Maria Helena
+14029566 Costela / RR'),
+('7707', '3', 'Ladeira Eduarda Dias, 557
+Conjunto Minas Caixa
+16894-406 Barbosa do Norte / GO'),
+('7708', '1', 'Lago Stephany Fernandes, 9
+Tupi B
+56411065 da Paz / AM'),
+('7709', '1', 'Favela Ana Jlia Dias, 48
+Engenho Nogueira
+24995948 Porto de Carvalho / AM'),
+('7710', '2', 'Jardim Emanuella da Cruz, 67
+Maria Tereza
+94660933 Viana / SP'),
+('7711', '3', 'Passarela Gabriel Martins, 939
+Vila Madre Gertrudes 2 Seo
+11262-333 Gomes do Galho / PR'),
+('7712', '5', 'Travessa de Cavalcanti, 6
+Beija Flor
+47652-373 Azevedo / PI'),
+('7713', '1', 'Jardim Moreira, 359
+So Benedito
+30361-296 Mendes / SE'),
+('7714', '4', 'Trecho de Silva, 55
+Belmonte
+52786911 Campos / MS'),
+('7715', '1', 'Condomnio de Moura, 55
+Delta
+02456-809 Castro / CE'),
+('7716', '5', 'Quadra Moraes, 736
+Zilah Sposito
+80302298 Moreira de Novaes / SP'),
+('7717', '4', 'Chcara Pedro Miguel Martins, 997
+So Luiz
+65218-849 Vieira das Pedras / ES'),
+('7718', '4', 'Alameda de Peixoto, 746
+Santa Efignia
+66946266 Duarte / TO'),
+('7719', '1', 'Esplanada Peixoto, 40
+Tnel De Ibirit
+96615-328 Rezende / AL'),
+('7720', '2', 'Ptio de Caldeira, 27
+Tres Marias
+95007714 Costela / DF'),
+('7721', '4', 'Via de da Costa, 84
+Pongelupe
+44283891 Alves / TO'),
+('7722', '4', 'Lago Viana
+Brasil Industrial
+69430105 Melo do Oeste / MT'),
+('7723', '3', 'Rua Cavalcanti, 850
+Planalto
+33230-661 Lima de Gois / MT'),
+('7724', '2', 'Travessa Ana Ramos
+Bernadete
+36647202 Rezende dos Dourados / RR'),
+('7725', '2', 'Ncleo de da Costa, 592
+Baleia
+39897-676 Moraes Verde / RN'),
+('7726', '1', 'Ladeira Silva, 773
+Ventosa
+17238-839 Alves / RO'),
+('7727', '5', 'Fazenda da Cunha, 7
+Ribeiro De Abreu
+46793-127 Gomes / MS'),
+('7728', '1', 'Morro Pinto, 81
+Oeste
+07203-121 Dias / MT'),
+('7729', '4', 'Praa Rezende, 3
+So Benedito
+15609-053 Moreira do Norte / ES'),
+('7730', '4', 'Feira Correia, 95
+Vila So Rafael
+29836-181 da Paz / AL'),
+('7731', '4', 'Viela de Melo, 28
+Belvedere
+64708401 Rodrigues / TO'),
+('7732', '5', 'Jardim Silva, 66
+Embabas
+45718234 da Conceio Grande / MG'),
+('7733', '5', 'Conjunto de Farias, 45
+Vila Real 1 Seo
+74141094 Rocha / MS'),
+('7734', '1', 'Via Nogueira
+Santa Branca
+46682-332 Arago / RR'),
+('7735', '2', 'Recanto Luiz Otvio Pinto, 26
+Vila Ipiranga
+41618-960 Moraes Paulista / SE'),
+('7736', '5', 'Via Cardoso, 619
+Nova Cachoeirinha
+25565474 Gonalves do Galho / AM'),
+('7737', '1', 'Trevo Joo Vitor Lima, 23
+Vila Jardim So Jos
+57708453 Fernandes de Minas / MT'),
+('7738', '5', 'Praa Souza
+Palmeiras
+92900794 Peixoto de Gois / RN'),
+('7739', '4', 'Favela Leandro Arago, 3
+Campo Alegre
+49720-352 Azevedo / RJ'),
+('7740', '3', 'Fazenda de Campos
+Lindia
+02569-327 Oliveira do Sul / TO'),
+('7741', '1', 'Recanto de Pereira, 14
+Camponesa 2 Seo
+95440581 Barbosa de Cunha / PE'),
+('7742', '3', 'Estrada da Rosa, 70
+Dom Cabral
+07591-119 Viana / RO'),
+('7743', '3', 'Largo da Luz
+Jardim Alvorada
+77793645 Gonalves Grande / RJ'),
+('7744', '2', 'Alameda Isaac Arago, 863
+Vila Atila De Paiva
+20524-354 Cardoso Grande / PA'),
+('7745', '3', 'Campo de Rezende, 9
+Andiroba
+33632-970 Almeida Verde / RO'),
+('7746', '5', 'Parque da Costa
+Piratininga
+61335804 Cavalcanti das Flores / MG'),
+('7747', '1', 'Morro de Cavalcanti, 3
+Minaslandia
+58452455 da Rocha de Melo / MS'),
+('7748', '5', 'Rua da Mota, 105
+Nova America
+83859-169 Viana / BA'),
+('7749', '3', 'Favela de Rezende, 860
+Vila Independencia 1 Seo
+73401-766 Cardoso / PE'),
+('7750', '2', 'Estrada da Rosa, 543
+Vitoria Da Conquista
+12096048 Mendes / ES'),
+('7751', '3', 'rea Novaes, 30
+Grota
+25398103 Correia / SP'),
+('7752', '4', 'Largo Maria Alice da Mota, 45
+So Tomaz
+85017468 Ribeiro / SP'),
+('7753', '5', 'Loteamento de Porto, 70
+Joo Paulo Ii
+99884427 Mendes de Gomes / MT'),
+('7754', '3', 'Trevo Sarah Costa, 6
+Vila Santo Antnio Barroquinha
+09511-126 Duarte das Pedras / DF'),
+('7755', '1', 'Distrito de Fogaa, 30
+Anchieta
+97666-927 Jesus / SP'),
+('7756', '5', 'Parque Porto
+Granja Werneck
+21427620 da Cunha Alegre / PA'),
+('7757', '4', 'Loteamento Nascimento, 931
+So Vicente
+50826-874 Fogaa / SC'),
+('7758', '4', 'Praa Bernardo Gonalves, 81
+Heliopolis
+47683064 Rodrigues de da Cunha / TO'),
+('7759', '4', 'Alameda Maria Fernanda Costela, 6
+Serra Verde
+64016247 Jesus / AC'),
+('7760', '4', 'Trecho Gustavo Pereira, 89
+Alto Das Antenas
+75701729 da Cruz da Prata / PR'),
+('7761', '1', 'Vale da Cunha, 57
+Mariano De Abreu
+99695839 Novaes / MG'),
+('7762', '1', 'Vereda Lopes, 90
+Barreiro
+45788920 Nunes / TO'),
+('7763', '2', 'Vale de Correia, 88
+Xodo-Marize
+97129413 Oliveira / PE'),
+('7764', '4', 'Rua de da Rocha, 331
+Conjunto Providencia
+60045-455 Alves / CE'),
+('7765', '3', 'Morro Marcos Vinicius Moura, 46
+Xodo-Marize
+86460-861 Arajo / SP'),
+('7766', '2', 'Fazenda Theo Azevedo
+Vila So Francisco
+44823047 Farias das Pedras / PI'),
+('7767', '4', 'Rodovia de Almeida, 505
+Baro Homem De Melo 1 Seo
+35206-490 Cunha / SC'),
+('7768', '1', 'Lago Sabrina Gonalves, 88
+So Francisco Das Chagas
+33230864 Silva / MS'),
+('7769', '1', 'Passarela Andr Azevedo, 991
+Santo Antnio
+86868-116 Correia / SC'),
+('7770', '4', 'Estrada de da Cruz, 31
+Varzea Da Palma
+28631684 Pinto / SC'),
+('7771', '3', 'Trecho de da Cruz, 4
+Vila Santa Monica 2 Seo
+65670-191 Cavalcanti / BA'),
+('7772', '3', 'Conjunto Cardoso, 2
+Baleia
+62199-640 da Costa do Sul / CE'),
+('7773', '1', 'Trecho Rebeca da Rocha, 169
+Leonina
+73789-838 Costela / SP'),
+('7774', '2', 'Lagoa de das Neves, 85
+Suzana
+30688-042 Cardoso do Galho / RS'),
+('7775', '4', 'Lagoa de Cardoso, 54
+Marieta 2 Seo
+54205086 Vieira Alegre / RS'),
+('7776', '5', 'Estrada de Barbosa, 47
+Vila Nova Cachoeirinha 1 Seo
+89210-572 da Costa / ES'),
+('7777', '5', 'Via de Rocha, 50
+Pilar
+26492072 Pereira de Alves / RN'),
+('7778', '5', 'Estao Barros, 25
+Vila Boa Vista
+50031904 Duarte do Oeste / RS'),
+('7779', '4', 'Vila Barbosa, 28
+Saudade
+43487-083 Ribeiro / SE'),
+('7780', '5', 'Loteamento de Vieira, 293
+So Jos
+05117114 da Luz / PI'),
+('7781', '1', 'rea Rodrigues, 776
+Vila Madre Gertrudes 4 Seo
+91950781 Freitas do Galho / SE'),
+('7782', '3', 'Alameda de Cardoso
+Conjunto Lagoa
+57139872 Cunha de Sales / RR'),
+('7783', '2', 'Morro de Alves, 54
+Itatiaia
+35077846 Ribeiro de Gomes / MS'),
+('7784', '4', 'Jardim Pereira, 4
+Vila Suzana Primeira Seo
+39253-816 Rodrigues de da Costa / DF'),
+('7785', '5', 'Rua Melissa Ribeiro, 70
+Bela Vitoria
+49902245 Campos / MA'),
+('7786', '1', 'Campo Carvalho, 835
+Vila Minaslandia
+62216399 Rodrigues / CE'),
+('7787', '3', 'Loteamento de Nascimento, 72
+Ferno Dias
+78577-785 Santos Paulista / PB'),
+('7788', '4', 'Vale Andr Carvalho, 896
+So Tomaz
+41212500 Souza da Praia / MA'),
+('7789', '3', 'Feira Freitas, 19
+Vera Cruz
+91757-416 Freitas / MA'),
+('7790', '1', 'Via de Fernandes, 72
+Vila Piratininga Venda Nova
+91583-432 Moreira / AM'),
+('7791', '3', 'Recanto Campos, 19
+Maria Virgnia
+55771-795 Castro / MT'),
+('7792', '5', 'Setor Cavalcanti, 514
+So Francisco Das Chagas
+59963986 Barros / PB'),
+('7793', '1', 'Loteamento Campos
+Santa Rita
+92590-640 Costa / PB'),
+('7794', '2', 'Trecho de Fernandes, 6
+Horto
+90715593 Lopes / AL'),
+('7795', '4', 'Vale Moreira, 872
+Vila Vista Alegre
+72229-078 Viana / MG'),
+('7796', '5', 'Travessa Fernandes, 20
+Campo Alegre
+54873494 Dias / RJ'),
+('7797', '2', 'Favela Santos, 462
+Belvedere
+50105-625 Ribeiro / SP'),
+('7798', '5', 'Conjunto Fogaa, 153
+Tupi A
+95796153 Souza / AM'),
+('7799', '2', 'Avenida Evelyn Mendes, 68
+Canad
+30033456 Freitas / RN'),
+('7800', '4', 'Largo Pires
+Liberdade
+09958-708 Silveira / SC'),
+('7801', '4', 'Fazenda de Cardoso, 49
+Tres Marias
+27230-701 Cunha de Dias / BA'),
+('7802', '1', 'Rua Jesus, 32
+Estrela Do Oriente
+94304668 Cardoso / AC'),
+('7803', '2', 'Ladeira de Rezende, 752
+Hava
+88572-963 Moraes de Azevedo / GO'),
+('7804', '3', 'Esplanada de da Conceio, 4
+Cruzeiro
+28996-935 Monteiro da Praia / AL'),
+('7805', '2', 'Stio Lima, 66
+Vila Maloca
+28210769 Pires / DF'),
+('7806', '3', 'Recanto Silva, 44
+Vila Petropolis
+84951809 Ramos / RO'),
+('7807', '3', 'Fazenda da Rosa, 43
+Paquet
+18038-816 Correia / BA'),
+('7808', '5', 'Passarela Souza
+Conjunto Paulo Vi
+48212-655 da Mota / AP'),
+('7809', '4', 'Campo da Costa
+Granja De Freitas
+77036878 Moreira / AM'),
+('7810', '5', 'Alameda de da Rosa, 1
+Corao De Jesus
+63744085 Teixeira / CE'),
+('7811', '4', 'Estrada Juan Cunha, 590
+Itaipu
+70871256 da Cruz / MS'),
+('7812', '2', 'Favela de Pires
+Grota
+74125161 Monteiro da Prata / RO'),
+('7813', '5', 'Campo Yasmin da Rocha, 39
+Suzana
+17720-362 Cavalcanti / MG'),
+('7814', '3', 'Parque Nascimento, 77
+Goiania
+21622-177 Cavalcanti de Correia / PB'),
+('7815', '5', 'Esplanada de Correia, 53
+Vila Batik
+51154293 Cunha / RN'),
+('7816', '2', 'Aeroporto Brbara Rodrigues, 77
+Vila Da ria
+35429-785 Sales de Alves / MG'),
+('7817', '1', 'Loteamento Juan da Cunha, 70
+Lajedo
+85637208 das Neves de Cardoso / PE'),
+('7818', '1', 'Lago Almeida, 58
+Vitoria
+14673-343 Viana de Moura / AM'),
+('7819', '1', 'Avenida Duarte, 5
+Maria Virgnia
+79589396 Azevedo de Sales / PA'),
+('7820', '1', 'Viela Ribeiro, 92
+Conjunto Taquaril
+20521895 das Neves / MS'),
+('7821', '5', 'Distrito de Teixeira, 40
+Carlos Prates
+42521-379 Peixoto do Amparo / SC'),
+('7822', '5', 'Ptio de Carvalho, 7
+Bonfim
+96170-700 da Cruz do Oeste / RO'),
+('7823', '1', 'Stio Joo Vitor Costa, 71
+Conjunto Taquaril
+65224-481 Pereira / BA'),
+('7824', '3', 'Setor Arthur Sales, 89
+Pompia
+56669105 da Mota / MS'),
+('7825', '3', 'Aeroporto Luigi Moraes
+Santa Rita
+75444-617 Ribeiro / GO'),
+('7826', '2', 'Parque de Martins
+Paraso
+44135-377 Barbosa / PI'),
+('7827', '1', 'Lagoa Castro, 482
+Vila Antena
+05535327 da Cunha / SE'),
+('7828', '3', 'Quadra Nicolas Lopes, 75
+Jaragu
+29699-207 Duarte de Nunes / RS'),
+('7829', '2', 'Passarela Gomes, 90
+Liberdade
+98526-111 Santos / MS'),
+('7830', '3', 'Trevo de Pires, 640
+Santa Lcia
+38700564 Teixeira / ES'),
+('7831', '5', 'Loteamento de Moreira, 75
+Conjunto Serra Verde
+54993-040 Rodrigues de Dias / MS'),
+('7832', '4', 'Lagoa Joo Gabriel Peixoto, 11
+Jardim Guanabara
+20847035 Duarte / RO'),
+('7833', '3', 'Viaduto Moura, 43
+Ambrosina
+69383-474 das Neves do Norte / AL'),
+('7834', '4', 'Viaduto Costa, 6
+Novo Das Industrias
+15351-974 Campos da Mata / SE'),
+('7835', '1', 'Rodovia Kaique Alves, 9
+Jardinpolis
+56893799 Ramos do Sul / AP'),
+('7836', '3', 'rea Nascimento, 29
+Canad
+81984564 Gonalves / PE'),
+('7837', '2', 'Lago de da Costa, 93
+Beira Linha
+12577-080 Alves / SC'),
+('7838', '5', 'Morro de da Mata, 25
+Boa Unio 2 Seo
+20508200 da Rocha / MG'),
+('7839', '2', 'Aeroporto de Campos, 6
+Pirineus
+22751-621 Sales / AC'),
+('7840', '5', 'Praia Eduarda Gomes, 714
+Vila So Dimas
+33700923 Cardoso / TO'),
+('7841', '3', 'Vale Ana Vitria Dias, 79
+Boa Esperana
+61843-074 Santos da Mata / SP'),
+('7842', '1', 'Ncleo Fernando Vieira
+Conjunto Santa Maria
+50929-502 Nascimento do Oeste / SP'),
+('7843', '1', 'Morro Luana Jesus, 527
+Ipiranga
+49288550 Cavalcanti / RO'),
+('7844', '4', 'Estao Carvalho
+Vila Canto Do Sabi
+35438-902 Pereira da Praia / AP'),
+('7845', '3', 'Largo Barros, 74
+Vila Madre Gertrudes 4 Seo
+58715461 Lopes Verde / AM'),
+('7846', '5', 'Conjunto da Conceio, 657
+Atila De Paiva
+95236267 Sales de Nogueira / PR'),
+('7847', '4', 'Ncleo de Moura, 150
+Vila Califrnia
+01438146 Ribeiro de Rocha / ES'),
+('7848', '5', 'Lago de Novaes, 19
+Vila Petropolis
+20481762 da Mata / AM'),
+('7849', '1', 'Alameda da Luz, 4
+Estrela
+76579304 Farias de Peixoto / AL'),
+('7850', '1', 'Lago Cunha, 38
+Conjunto Lagoa
+09793-537 Peixoto de Gois / AC'),
+('7851', '2', 'Trevo Fernandes, 85
+Maria Goretti
+72396-585 da Mata das Pedras / PA'),
+('7852', '1', 'Rua de Lima, 56
+Vila Mantiqueira
+09235596 Cunha / SC'),
+('7853', '3', 'Viela de Melo, 38
+Vila Da ria
+28942-255 Moura / CE'),
+('7854', '2', 'Morro Enrico Costa, 516
+Vila Coqueiral
+59401048 da Luz / MA'),
+('7855', '2', 'Rodovia da Paz, 77
+Maraj
+68526-553 Porto do Amparo / SE'),
+('7856', '3', 'Ncleo Davi Nunes, 49
+Cidade Jardim
+32567821 Pires / SP'),
+('7857', '1', 'Residencial Murilo Rocha
+Corumbiara
+76083-347 Fernandes / SP'),
+('7858', '2', 'Largo Evelyn Rodrigues, 224
+Urca
+90727552 Cardoso / RJ'),
+('7859', '1', 'Jardim de Martins, 4
+Piratininga
+83574-989 Cardoso da Praia / SE'),
+('7860', '1', 'Estao de Souza, 825
+Vila Maria
+96408-238 Silveira / AP'),
+('7861', '1', 'Feira Freitas, 2
+Jardim Felicidade
+30692-190 Costela / ES'),
+('7862', '4', 'Lagoa da Rocha, 614
+Luxemburgo
+75130-618 da Costa / RR'),
+('7863', '4', 'Aeroporto de Lima, 49
+Satelite
+97171496 Cardoso / AP'),
+('7864', '5', 'Campo Sofia Arajo, 919
+Vila So Rafael
+16697677 da Luz / CE'),
+('7865', '2', 'Praia Levi Nogueira
+Ademar Maldonado
+60996-797 da Cunha / RO'),
+('7866', '2', 'Recanto de Dias, 96
+Tirol
+96821218 Viana / TO'),
+('7867', '4', 'Avenida Moreira, 9
+Savassi
+23278-616 Souza / MT'),
+('7868', '4', 'Largo de Cardoso
+Nossa Senhora Da Conceio
+52458-026 Rezende Alegre / RN'),
+('7869', '2', 'Chcara Pinto, 896
+Frei Leopoldo
+64842856 Castro / CE'),
+('7870', '4', 'Ptio Luiz Gustavo Silveira, 44
+Centro
+98781-226 Melo das Pedras / PI'),
+('7871', '3', 'Praa de da Mata, 37
+Acaba Mundo
+59681-982 Pinto Paulista / MA'),
+('7872', '4', 'rea de Gonalves
+Conjunto Jatoba
+12553-175 Rezende do Sul / RO'),
+('7873', '4', 'Fazenda Nascimento
+Jardim Felicidade
+83810-600 Campos / DF'),
+('7874', '2', 'Vila de da Paz
+Lourdes
+42882-881 Santos dos Dourados / PA'),
+('7875', '3', 'Passarela de da Luz, 14
+Lourdes
+38657-034 Ramos / MG'),
+('7876', '3', 'Lagoa de Porto, 926
+Piratininga
+88152279 Melo de Nunes / RO'),
+('7877', '3', 'Trevo de Ribeiro, 932
+Vila Do Pombal
+58999-354 Costela Alegre / AC'),
+('7878', '2', 'Esplanada Isabella Fogaa, 41
+Vila Califrnia
+95060867 da Cunha / RR'),
+('7879', '5', 'Jardim Joaquim Silva, 341
+Lourdes
+42156458 Mendes Alegre / SC'),
+('7880', '2', 'Largo Correia, 750
+Anchieta
+83291-606 Moreira da Serra / PA'),
+('7881', '2', 'Colnia de Castro, 87
+Lorena
+05722923 Silveira Verde / AM'),
+('7882', '3', 'Ptio Cunha, 131
+Itapoa
+61339-133 Rodrigues / CE'),
+('7883', '1', 'Colnia de Fogaa, 74
+Flavio Marques Lisboa
+05840-012 Cavalcanti das Flores / BA'),
+('7884', '2', 'Estrada de Moreira
+Bernadete
+42559-816 Pinto de Correia / RJ'),
+('7885', '5', 'Recanto Gustavo Mendes, 29
+Jardim Atlntico
+56941-982 Costa do Campo / MT'),
+('7886', '1', 'Feira de Arago, 9
+Cruzeiro
+72380-301 da Cunha / AC'),
+('7887', '5', 'Recanto Vitor Lopes, 2
+Nova Gameleira
+32151-494 Peixoto da Serra / CE'),
+('7888', '1', 'Residencial de Nogueira, 21
+Vila Vista Alegre
+84249315 Porto / PR'),
+('7889', '2', 'Ptio Kaique Caldeira, 9
+Europa
+11356-995 Campos / AL'),
+('7890', '5', 'Ncleo de Souza, 91
+Pirineus
+22545-370 Duarte das Flores / TO'),
+('7891', '2', 'Praia Freitas, 63
+Caiara - Adelaide
+28433-272 Campos de Moraes / ES'),
+('7892', '1', 'Parque Vitria Ribeiro, 853
+Ipiranga
+72687-129 da Rocha / RJ'),
+('7893', '1', 'Ladeira Ian Almeida
+Taquaril
+98618-877 Moreira da Praia / SE'),
+('7894', '5', 'Alameda de Vieira, 698
+So Marcos
+79186092 Gomes / AC'),
+('7895', '4', 'Avenida de da Mata, 1
+Vila Copasa
+27309-534 Barros / SC'),
+('7896', '3', 'Recanto Fernandes, 143
+Vila Mangueiras
+63613-371 Rezende de Pinto / TO'),
+('7897', '4', 'Colnia Moura, 34
+Minas Caixa
+28004792 Silva de Moreira / AL'),
+('7898', '5', 'Viela Freitas, 3
+Vila Sumar
+10307-471 Silva / CE'),
+('7899', '4', 'Lagoa de Gonalves, 65
+Jonas Veiga
+90500002 Martins do Galho / AM'),
+('7900', '3', 'Praa Pereira, 92
+Alta Tenso 1 Seo
+19117-370 Freitas da Mata / SC'),
+('7901', '3', 'Quadra Mait Carvalho, 3
+Vila Pinho
+92236-368 da Mata de da Luz / RR'),
+('7902', '2', 'Colnia Maria Ceclia Rocha, 819
+Vila Copacabana
+05008431 Lima / DF'),
+('7903', '2', 'Esplanada Nascimento, 43
+Conjunto Capito Eduardo
+52688-999 Dias das Flores / GO'),
+('7904', '2', 'Parque de Sales, 54
+Parque So Pedro
+71604753 Oliveira / PA'),
+('7905', '3', 'Praa Ana Luiza Moreira, 40
+Vila Nova Dos Milionarios
+82942739 Moreira / RJ'),
+('7906', '4', 'Viela Gabrielly Souza, 45
+Indai
+28426-294 Rocha de Gois / SC'),
+('7907', '2', 'Estao Nogueira
+Sagrada Famlia
+07809993 Lima Paulista / PB'),
+('7908', '2', 'Fazenda Camila Teixeira, 76
+Manacas
+40663998 da Cruz / MT'),
+('7909', '3', 'Vale de Jesus, 94
+Brasil Industrial
+23410769 Almeida / PA'),
+('7910', '3', 'Favela Maria Vitria Castro, 1
+Buraco Quente
+12111-766 Nogueira / SP'),
+('7911', '4', 'Esplanada Moura
+Santo Agostinho
+56655-825 Vieira de da Mota / RR'),
+('7912', '5', 'Conjunto de Souza, 83
+Independncia
+58762316 Pires do Amparo / AM'),
+('7913', '2', 'Stio Ana Jlia Gonalves, 93
+lvaro Camargos
+96820-232 da Rocha de Nascimento / SP'),
+('7914', '2', 'Condomnio Gabriela da Cunha, 585
+Anchieta
+80267442 Castro da Mata / PE'),
+('7915', '2', 'Fazenda Catarina Gonalves, 8
+Outro
+86456-654 da Rosa Alegre / PI'),
+('7916', '4', 'Feira da Paz, 212
+So Salvador
+92717-142 Castro de Moreira / DF'),
+('7917', '4', 'Estrada Theo Novaes, 282
+Castelo
+74538-026 da Cruz da Mata / RN'),
+('7918', '3', 'Avenida Cunha, 42
+Bandeirantes
+11115-012 Campos / RR'),
+('7919', '1', 'Lago Sarah Fernandes
+Beira Linha
+08648-133 Oliveira da Mata / AC'),
+('7920', '5', 'Lago de Moreira
+Indai
+37279-530 Novaes da Serra / GO'),
+('7921', '1', 'Estrada de Porto, 35
+Betnia
+86424776 Melo / RR'),
+('7922', '5', 'Campo Theo Souza, 1
+Santa Rita
+57439-389 Correia das Flores / DF'),
+('7923', '5', 'Viela Vinicius Costela, 606
+So Joo
+19269049 Ramos da Prata / AC'),
+('7924', '3', 'Largo de Farias, 22
+Cnego Pinheiro 1 Seo
+96733-029 Santos / PR'),
+('7925', '5', 'Setor Maria Ferreira, 32
+Vista Do Sol
+01816-920 Moura / PE'),
+('7926', '2', 'Fazenda Oliveira, 80
+Jardim Montanhs
+85038-167 Fogaa / RR'),
+('7927', '3', 'Stio Giovanna Campos, 39
+So Gonalo
+08161-988 Cardoso / AP'),
+('7928', '3', 'Estao de Silveira, 15
+Cu Azul
+30694752 Nunes / PR'),
+('7929', '4', 'Estao Kamilly Fogaa, 993
+Minas Caixa
+20119285 Azevedo de Costela / PR'),
+('7930', '2', 'Praia de Lima, 78
+Paquet
+91320-118 Cunha / CE'),
+('7931', '2', 'Viaduto de Costela, 51
+Vila Tirol
+35352-388 Correia / GO'),
+('7932', '1', 'Feira de da Rocha, 99
+Olaria
+09038-670 Almeida do Oeste / MA'),
+('7933', '2', 'Condomnio Maria Luiza das Neves
+Paulo Vi
+34653728 da Cunha / GO'),
+('7934', '2', 'Conjunto de das Neves
+Grotinha
+85649-814 Castro / BA'),
+('7935', '4', 'Ladeira de Freitas, 52
+Frei Leopoldo
+32882790 Souza de Lopes / RR'),
+('7936', '3', 'Campo Cardoso, 25
+Santa Lcia
+97965185 Silva / PB'),
+('7937', '4', 'Rodovia Cunha
+Vila Formosa
+05083-264 Santos / PI'),
+('7938', '4', 'Residencial Farias, 1
+So Damio
+86090356 Arago da Mata / SC'),
+('7939', '4', 'Viaduto de Almeida, 92
+Penha
+52201-948 da Rocha / ES'),
+('7940', '4', 'Feira de Oliveira, 24
+Taquaril
+55785-184 Rodrigues das Pedras / SP'),
+('7941', '4', 'Ptio de Arago, 290
+Aaro Reis
+49428933 Freitas dos Dourados / SE'),
+('7942', '5', 'Passarela de Peixoto, 66
+Vila Formosa
+97914-853 Teixeira / MS'),
+('7943', '3', 'Esplanada Moreira, 122
+Vila Das Oliveiras
+79238765 Duarte do Oeste / RO'),
+('7944', '2', 'Vereda Lucas Gabriel da Paz, 452
+Canaa
+35230776 Costela Grande / CE'),
+('7945', '2', 'Rodovia Bernardo Arago, 11
+Vila Puc
+18957-402 Oliveira do Sul / MA'),
+('7946', '3', 'Rua Almeida, 9
+Sion
+22916-589 da Cunha de Gois / AL'),
+('7947', '4', 'Alameda Elisa Ribeiro, 706
+Araguaia
+61102811 da Rocha Alegre / BA'),
+('7948', '4', 'Morro de Melo, 16
+Garas
+55661069 Correia / MT'),
+('7949', '1', 'Quadra Rezende, 76
+Candelaria
+03785-011 da Mota da Serra / RO'),
+('7950', '5', 'Via Pires, 741
+Rio Branco
+97993332 Moreira Grande / PI'),
+('7951', '2', 'Quadra Monteiro, 483
+Nossa Senhora Da Aparecida
+98664317 Pinto da Mata / TO'),
+('7952', '4', 'Condomnio Guilherme Cunha, 37
+Ferno Dias
+62264-844 Freitas / PE'),
+('7953', '4', 'Recanto Rocha, 250
+Piratininga
+33698021 Carvalho da Mata / MT'),
+('7954', '3', 'Lago de Viana
+Saudade
+27031823 Vieira do Norte / RR'),
+('7955', '1', 'Recanto Moraes, 3
+Santa Maria
+40061-451 Santos de Gomes / CE'),
+('7956', '2', 'Estrada Erick Fogaa
+Vila Da Amizade
+29764010 Nogueira / PI'),
+('7957', '1', 'Vereda Stephany Barbosa
+Araguaia
+41905744 da Paz das Pedras / MA'),
+('7958', '4', 'Colnia Campos, 19
+Vila Boa Vista
+82661647 Costela Paulista / CE'),
+('7959', '4', 'Praia Maria Fernanda Silveira, 547
+Bela Vitoria
+17876-141 da Rocha de da Mata / SE'),
+('7960', '1', 'Aeroporto Novaes, 61
+Vila Madre Gertrudes 1 Seo
+47247-103 Arajo / MT'),
+('7961', '3', 'Favela Luana Lima, 1
+Vila Minaslandia
+88792-806 Rodrigues / PI'),
+('7962', '1', 'Parque de Almeida
+Vila Da ria
+94471-176 Cardoso do Norte / PR'),
+('7963', '3', 'Trevo Vinicius Azevedo
+Gutierrez
+36055459 Lima de Carvalho / PR'),
+('7964', '5', 'Praa Costa, 8
+So Lucas
+28745-536 Ribeiro dos Dourados / SP'),
+('7965', '3', 'Ladeira de Caldeira, 409
+Santa Isabel
+77281-301 Castro / RO'),
+('7966', '2', 'Lago de Castro, 62
+Renascena
+18161-307 Alves das Flores / BA'),
+('7967', '1', 'Setor Alice Martins
+Cachoeirinha
+59646516 Cavalcanti da Praia / AM'),
+('7968', '5', 'Setor de Correia, 1
+Anchieta
+89692924 Oliveira / PA'),
+('7969', '5', 'Viaduto Mait Santos, 8
+Sport Club
+70058479 Mendes das Pedras / PI'),
+('7970', '5', 'Stio Peixoto, 24
+Vila Barragem Santa Lcia
+31640601 Barros do Norte / TO'),
+('7971', '1', 'Conjunto de Souza
+Corumbiara
+16500809 Correia dos Dourados / MA'),
+('7972', '2', 'Campo Monteiro, 545
+Bonsucesso
+95901208 Campos do Oeste / ES'),
+('7973', '3', 'Setor de Porto, 34
+Horto Florestal
+60702793 Correia / PE'),
+('7974', '2', 'Recanto Lima, 47
+Conjunto Califrnia Ii
+51901-449 Lopes / MS'),
+('7975', '2', 'Ncleo Cavalcanti, 570
+Leonina
+79196-570 Silveira / TO'),
+('7976', '5', 'Lago Barros, 64
+Silveira
+22988-003 da Conceio de Santos / BA'),
+('7977', '5', 'Campo de Novaes, 28
+Anchieta
+80085838 Souza / TO'),
+('7978', '1', 'Parque Benjamin Azevedo, 91
+Dona Clara
+38694-588 Teixeira / ES'),
+('7979', '3', 'Colnia de da Cunha, 74
+Prado
+10330876 Castro / TO'),
+('7980', '5', 'Feira Ian Gomes, 41
+Pedreira Padro Lopes
+29252641 Carvalho / SE'),
+('7981', '5', 'Vila de Costa
+Cnego Pinheiro 2 Seo
+16528-918 Rezende / DF'),
+('7982', '2', 'Fazenda Ana Martins, 52
+Vila Bandeirantes
+66192211 Peixoto / BA'),
+('7983', '4', 'Esplanada de Mendes, 64
+Jardim Felicidade
+29452-055 Novaes / MT'),
+('7984', '3', 'Stio da Paz, 19
+Alpio De Melo
+62310-988 Ribeiro / BA'),
+('7985', '1', 'Ptio Maria Eduarda Caldeira
+Conjunto Paulo Vi
+14863298 da Rocha da Praia / MS'),
+('7986', '3', 'Alameda de da Rocha
+Cachoeirinha
+38891-153 Arajo / RS'),
+('7987', '3', 'Trecho de Arago, 229
+Floramar
+70414-637 da Rocha Paulista / SP'),
+('7988', '2', 'Travessa de Oliveira
+Fazendinha
+16700-473 Pinto / MG'),
+('7989', '4', 'Campo de Ribeiro, 4
+Vila Suzana Primeira Seo
+06614706 Cardoso da Mata / RS'),
+('7990', '2', 'Viela de Caldeira, 84
+Parque So Jos
+76549562 Costela do Amparo / PA'),
+('7991', '4', 'Trevo Porto, 3
+Vila Mantiqueira
+50943779 Barbosa / SE'),
+('7992', '1', 'Vale de Barros, 33
+Penha
+11777277 Novaes do Galho / MG'),
+('7993', '3', 'Residencial Barbosa, 32
+Das Industrias I
+65666-683 Carvalho da Serra / ES'),
+('7994', '1', 'Lagoa de Cavalcanti, 41
+Santa Monica
+49886456 Jesus das Pedras / BA'),
+('7995', '4', 'Ncleo Luiz Henrique Peixoto, 97
+Novo Aaro Reis
+41330-269 Lima do Galho / TO'),
+('7996', '1', 'Morro de Fogaa, 30
+Floresta
+71557-336 Cardoso de Viana / ES'),
+('7997', '4', 'Campo Jlia da Luz, 205
+So Jos
+89408-084 Gomes do Galho / MG'),
+('7998', '5', 'Via Jesus, 93
+Vila Suzana Segunda Seo
+75739251 da Luz das Pedras / AM'),
+('7999', '1', 'Fazenda Samuel Barros
+Conjunto Lagoa
+82230-467 Peixoto / RS'),
+('8000', '1', 'Feira Ribeiro
+Ventosa
+51331-077 Melo / PE'),
+('8001', '3', 'Passarela Anthony Moreira, 57
+Santa Cecilia
+13135622 Viana do Campo / AM'),
+('8002', '5', 'Trevo Luiz Gustavo Alves
+Garas
+23276135 da Mata / PE'),
+('8003', '3', 'Rua Nogueira, 5
+Vila Paris
+85162-786 Peixoto / PR'),
+('8004', '3', 'Aeroporto de Carvalho
+Alpio De Melo
+37972-557 Freitas de Gois / RN'),
+('8005', '1', 'Ncleo de Peixoto
+Santa Helena
+42445176 Monteiro do Sul / RR'),
+('8006', '3', 'Esplanada Souza, 50
+Mariquinhas
+13609346 Mendes / PA'),
+('8007', '5', 'Largo Kaique Oliveira, 29
+Satelite
+38456336 Costa / PE'),
+('8008', '1', 'Morro Davi Lucas Castro, 854
+Pousada Santo Antonio
+36897-099 Pereira da Mata / SC'),
+('8009', '1', 'Vale Sales, 95
+Vila Petropolis
+15819-770 Novaes / PE'),
+('8010', '3', 'Aeroporto de Arajo, 616
+Gutierrez
+12466-058 da Cunha de Ramos / AM'),
+('8011', '1', 'Estao Teixeira, 4
+Alpio De Melo
+51654655 Pereira / AL'),
+('8012', '5', 'Travessa Vitria Porto, 703
+Heliopolis
+00773862 Teixeira / AL'),
+('8013', '3', 'Passarela Santos, 405
+Vila So Gabriel Jacui
+98810-380 Gomes de da Cunha / SP'),
+('8014', '4', 'Colnia Eduarda da Cunha, 80
+Barroca
+61399251 Farias de Pires / CE'),
+('8015', '2', 'Vereda de Campos, 97
+Nossa Senhora Aparecida
+03639534 Fogaa dos Dourados / MT'),
+('8016', '5', 'Alameda Moraes, 60
+Vista Alegre
+48147-025 Barbosa de Minas / RO'),
+('8017', '3', 'Feira da Rocha, 7
+Ouro Minas
+75682085 Cardoso do Campo / MT'),
+('8018', '1', 'Via de Arajo, 59
+Vila Esplanada
+77898638 Barbosa / PR'),
+('8019', '3', 'Distrito Freitas, 9
+Vila Tirol
+70491-770 Duarte / SE'),
+('8020', '1', 'Praa Jesus, 64
+Vila Puc
+77143-214 Duarte / BA'),
+('8021', '5', 'Rua de Costela, 822
+Corumbiara
+02784910 Sales / AC'),
+('8022', '2', 'Praia Elisa Martins, 92
+Belmonte
+91531-023 Novaes / AC'),
+('8023', '3', 'Vereda de da Costa, 51
+Planalto
+68931194 Farias / PI'),
+('8024', '4', 'Via Moraes, 25
+Embabas
+76039-144 Silveira / PE'),
+('8025', '5', 'Avenida de Rezende, 75
+So Gonalo
+92317307 da Cruz / AL'),
+('8026', '3', 'Estao Vitor Pinto, 5
+Vila Formosa
+55461860 Nogueira de Gois / SE'),
+('8027', '4', 'Stio Ferreira, 792
+Vila Rica
+45377973 Dias Grande / AP'),
+('8028', '2', 'Estao de Costa, 8
+Alta Tenso 2 Seo
+37631-886 Martins / CE'),
+('8029', '2', 'Ncleo Cavalcanti, 348
+Cnego Pinheiro 2 Seo
+87395-350 Mendes / RO'),
+('8030', '1', 'Recanto Luiz Otvio Lopes
+Vila Piratininga Venda Nova
+99709566 da Mota de Teixeira / PI'),
+('8031', '1', 'Recanto Nascimento
+Santana Do Cafezal
+07229746 Lima da Mata / RR'),
+('8032', '3', 'Viaduto de Nogueira, 18
+Betnia
+65536506 Peixoto / AC'),
+('8033', '1', 'Praia de Ribeiro, 5
+Alta Tenso 2 Seo
+74395927 da Mota / RO'),
+('8034', '5', 'Largo Fernandes, 79
+Pantanal
+37354859 Rezende / TO'),
+('8035', '4', 'Aeroporto Carvalho, 3
+So Jorge 1 Seo
+78138214 Duarte / MS'),
+('8036', '4', 'Trecho Ana Julia Duarte, 16
+Tirol
+32115-161 Costa / RS'),
+('8037', '2', 'Trevo Fogaa, 2
+Vila Engenho Nogueira
+10340828 Souza do Oeste / AC'),
+('8038', '5', 'Passarela Mariane Monteiro, 88
+Vila So Joo Batista
+73262059 da Cunha / PE'),
+('8039', '2', 'Lagoa Cunha
+Cdi Jatoba
+81037678 Cardoso de Minas / RJ'),
+('8040', '1', 'Rodovia de Rodrigues, 757
+Trevo
+61342-481 Gonalves / RN'),
+('8041', '5', 'Rodovia Joo Gabriel Ramos, 86
+Vila Nova Paraso
+42306237 Nogueira de Jesus / ES'),
+('8042', '5', 'Aeroporto Bryan da Mota, 44
+So Salvador
+01778056 Moura / BA'),
+('8043', '3', 'Avenida Arago, 515
+So Joo Batista
+37718-956 Alves / PA'),
+('8044', '4', 'Loteamento Ana Beatriz da Mata
+Vila Mantiqueira
+22410-691 Sales / RS'),
+('8045', '3', 'Vale de Ribeiro, 2
+Vila Piratininga Venda Nova
+46739-237 Rocha do Sul / DF'),
+('8046', '4', 'Aeroporto Catarina Lopes, 27
+Vila Vista Alegre
+06705-678 Ferreira / AL'),
+('8047', '1', 'Residencial de Porto, 32
+Santa Amelia
+81418-194 Freitas / SE'),
+('8048', '1', 'Chcara Stella Cavalcanti, 8
+Ambrosina
+59866850 da Mata / MT'),
+('8049', '4', 'Rodovia Joo Lucas Alves, 71
+Virgnia
+67025376 Gomes / RR'),
+('8050', '5', 'Avenida Marcelo da Paz, 28
+Cardoso
+52929717 Arago / GO'),
+('8051', '2', 'Ptio Juan Santos, 84
+Milionario
+86534263 Cardoso / PR'),
+('8052', '4', 'Chcara de da Conceio, 51
+Juliana
+87046832 Silva da Prata / PB'),
+('8053', '1', 'Condomnio Monteiro, 51
+Vila Oeste
+74919153 da Conceio da Mata / RO'),
+('8054', '4', 'Jardim Stephany Mendes, 8
+Vila Maria
+77311-085 Almeida da Praia / MA'),
+('8055', '1', 'Estrada Lopes, 281
+Aparecida
+48115-376 Caldeira / TO'),
+('8056', '1', 'Jardim Ana Sophia da Rosa, 15
+Alpes
+80973-370 da Rocha do Amparo / AM'),
+('8057', '2', 'Ncleo de Ferreira, 915
+Dom Silverio
+70336795 Fogaa / RO'),
+('8058', '1', 'Jardim Freitas, 756
+Floramar
+19426707 Novaes de Ferreira / PI'),
+('8059', '2', 'Favela de Peixoto, 81
+Alpes
+62266-923 Almeida / TO'),
+('8060', '4', 'rea Cavalcanti, 69
+Vila So Joo Batista
+20466-793 Moura / PI'),
+('8061', '4', 'Feira Juliana Gonalves
+Lourdes
+99164094 da Cruz do Campo / BA'),
+('8062', '4', 'Travessa de Silva, 42
+Marieta 3 Seo
+43362467 Arajo de Nogueira / PB'),
+('8063', '5', 'Condomnio Anthony Moraes, 69
+Pousada Santo Antonio
+56214604 Alves da Praia / PR'),
+('8064', '3', 'Estrada de Cavalcanti, 424
+Floramar
+93913-871 Gomes / DF'),
+('8065', '2', 'Ncleo de Arago
+Pousada Santo Antonio
+71462795 Cavalcanti de Cunha / PB'),
+('8066', '4', 'Trevo da Paz, 1
+Nova Pampulha
+56025-920 da Rocha de Minas / RJ'),
+('8067', '4', 'Morro de Silva, 80
+Graja
+75260418 Vieira / SC'),
+('8068', '3', 'Recanto Kevin Cunha, 61
+Parque So Pedro
+78533-733 Azevedo / RJ'),
+('8069', '4', 'Morro Barbosa, 606
+Vila So Dimas
+28184-460 da Costa da Prata / AP'),
+('8070', '5', 'Stio da Cunha, 94
+Esperana
+61866-237 Campos do Campo / MA'),
+('8071', '5', 'Parque Rezende, 5
+Cenaculo
+18807-151 Porto de Gois / RO'),
+('8072', '4', 'Loteamento Gonalves, 51
+Ferno Dias
+50209-840 Cavalcanti do Sul / BA'),
+('8073', '4', 'Residencial de Souza, 94
+Vila Esplanada
+28975000 Pinto Grande / RN'),
+('8074', '3', 'Morro Luiz Otvio Monteiro, 958
+Manacas
+69635-205 Pires / AL'),
+('8075', '4', 'Residencial da Paz, 14
+Belmonte
+09140719 Cavalcanti / MG'),
+('8076', '1', 'Passarela de Martins, 89
+Santa Rosa
+44632861 Farias de Arago / MA'),
+('8077', '5', 'Via da Cruz, 76
+Vila Batik
+77149-500 Rocha / RR'),
+('8078', '5', 'Favela Rocha, 99
+Vila Paris
+35104-583 da Mota Paulista / PB'),
+('8079', '1', 'Estao Marina Caldeira, 75
+Paulo Vi
+22610966 Souza Paulista / CE'),
+('8080', '2', 'Praa de Sales, 710
+Vila Engenho Nogueira
+54057196 Arajo / MG'),
+('8081', '1', 'Residencial da Mota, 2
+Vila Canto Do Sabi
+08959-680 Barros das Flores / PA'),
+('8082', '2', 'Lagoa de Oliveira
+Providencia
+76606-341 Ramos das Pedras / AP'),
+('8083', '1', 'Viaduto Arthur Vieira, 26
+Olaria
+30543969 Pinto / MT'),
+('8084', '3', 'Morro Moura, 224
+Vila Cemig
+23406-819 da Paz Paulista / SE'),
+('8085', '4', 'Rua Evelyn da Conceio, 25
+Conjunto Jatoba
+04609858 Silva / AP'),
+('8086', '4', 'Ncleo de Carvalho, 73
+Bela Vitoria
+03769-035 Monteiro das Flores / DF'),
+('8087', '3', 'Rua Alice Nogueira, 6
+Bernadete
+22384448 Pereira / SE'),
+('8088', '3', 'Conjunto Lopes
+Vila Da Luz
+73332-741 Pereira do Norte / CE'),
+('8089', '5', 'Favela de Pires, 28
+Maria Tereza
+09700-507 Nogueira / RN'),
+('8090', '2', 'Trecho Luigi Barbosa, 751
+Buritis
+35095-323 Cavalcanti / GO'),
+('8091', '5', 'Stio de Dias
+Conjunto Bonsucesso
+96205785 Porto Grande / AC'),
+('8092', '4', 'Jardim Carolina Ribeiro, 79
+Conjunto Serra Verde
+86198420 Fogaa / MT'),
+('8093', '5', 'Alameda de Correia, 4
+Minas Caixa
+08353-563 Gonalves da Mata / SP'),
+('8094', '3', 'Alameda de Duarte, 749
+So Jorge 3 Seo
+77077-578 Gonalves / SE'),
+('8095', '5', 'Campo de Barros, 8
+Paulo Vi
+81462540 Vieira das Flores / PI'),
+('8096', '5', 'Ladeira Gonalves, 8
+Xodo-Marize
+36225262 Moura / RR'),
+('8097', '4', 'Feira Moraes, 8
+Graa
+49123-833 Correia Alegre / AC'),
+('8098', '2', 'Recanto de Fogaa, 56
+Colgio Batista
+75634518 Jesus / PA'),
+('8099', '3', 'Quadra Monteiro, 50
+Saudade
+60566799 da Mota de Vieira / MG'),
+('8100', '5', 'Trevo Azevedo, 87
+Mirtes
+89070173 Souza Alegre / MS'),
+('8101', '3', 'Rua de Cardoso, 81
+Flavio Marques Lisboa
+85341409 Silveira do Sul / PR'),
+('8102', '1', 'Alameda Peixoto, 32
+Solimoes
+38328-656 Farias / ES'),
+('8103', '3', 'Chcara Maria Julia Arajo, 6
+Canaa
+29210529 Costa / BA'),
+('8104', '5', 'Esplanada Pereira, 12
+Sion
+80258846 Barros do Norte / PR'),
+('8105', '1', 'rea de Martins
+Monte So Jos
+29731778 Souza / MS'),
+('8106', '1', 'Morro de Campos, 11
+Suzana
+61554152 Silveira do Norte / PA'),
+('8107', '5', 'Residencial Paulo da Mata
+Palmeiras
+70906068 Arajo / PI'),
+('8108', '3', 'Condomnio Nogueira, 20
+So Pedro
+74698425 Moreira / AL'),
+('8109', '4', 'Viela de Alves, 718
+Araguaia
+48327826 Ribeiro de Rodrigues / ES'),
+('8110', '1', 'Estrada da Cunha, 63
+Camargos
+01350-493 Pereira do Sul / RR'),
+('8111', '4', 'Distrito de Nogueira, 21
+Castelo
+96584-870 da Luz / ES'),
+('8112', '5', 'Praa de Cardoso
+Vila So Dimas
+74328-304 Castro da Praia / SP'),
+('8113', '5', 'Ptio Santos, 4
+Tirol
+54082-447 Jesus / RR'),
+('8114', '2', 'Ladeira Sophie Oliveira, 63
+Vila Madre Gertrudes 1 Seo
+09474381 Fogaa / RS'),
+('8115', '1', 'Loteamento Olivia Alves, 30
+Piratininga
+86861-400 da Rocha da Mata / RN'),
+('8116', '1', 'Ptio de Costa, 616
+So Gonalo
+89686505 da Rocha / PA'),
+('8117', '2', 'Setor das Neves, 547
+Vila Rica
+15814745 Oliveira / MG'),
+('8118', '1', 'Vila Lucas Correia, 62
+Beija Flor
+56703-231 da Mata / PA'),
+('8119', '3', 'Ncleo de Rocha, 16
+Lagoinha Leblon
+30690-209 Cunha das Pedras / AL'),
+('8120', '3', 'Residencial Barros, 69
+So Gonalo
+72335-393 Silva Alegre / ES'),
+('8121', '5', 'Praia Farias, 95
+Santa Monica
+04281-402 Farias da Serra / CE'),
+('8122', '3', 'Quadra Rezende, 773
+Castelo
+83268112 da Costa / CE'),
+('8123', '2', 'rea de Moura, 9
+Dona Clara
+06302013 Nascimento / PI'),
+('8124', '2', 'Viela de Nogueira, 49
+Vila Sesc
+32110-983 Cunha / MG'),
+('8125', '2', 'Vila de Nascimento, 69
+Vila Independencia 3 Seo
+95687-084 Fernandes / ES'),
+('8126', '1', 'Campo Ana Laura Viana, 56
+Esperana
+40974-048 Moraes / AL'),
+('8127', '4', 'Residencial Fogaa, 1
+Guarat
+76445230 Sales / RJ'),
+('8128', '1', 'Stio de Silva, 90
+Vila De S
+78236837 Arajo Verde / AC'),
+('8129', '5', 'Trecho Pires, 92
+Boa Esperana
+80633859 Rodrigues / TO'),
+('8130', '2', 'Estao Esther da Rocha, 37
+Cinquentenrio
+85857-404 Oliveira do Oeste / SP'),
+('8131', '4', 'Parque Luiz Miguel Sales, 3
+Mala E Cuia
+14919-076 Peixoto / AC'),
+('8132', '5', 'Esplanada de da Paz, 47
+So Bento
+30469-919 da Rosa / MT'),
+('8133', '3', 'Chcara de Lopes, 68
+Boa Unio 2 Seo
+75892126 Santos / PR'),
+('8134', '2', 'Rua de Ramos, 77
+So Luiz
+58472134 Silveira de Minas / RR'),
+('8135', '1', 'Estrada Carvalho, 43
+Jardim So Jos
+69292-217 Teixeira de Gois / MG'),
+('8136', '4', 'Ncleo Rezende
+Marieta 3 Seo
+16788517 Martins / PR'),
+('8137', '5', 'Vereda Eduardo da Costa, 96
+Pongelupe
+76712599 Alves do Oeste / SE'),
+('8138', '3', 'Via de Rodrigues, 6
+So Jorge 2 Seo
+08107-904 Nogueira / MA'),
+('8139', '1', 'Rua Pinto
+Joo Paulo Ii
+09883-548 Melo dos Dourados / RN'),
+('8140', '3', 'Campo da Mota, 891
+Serrano
+48670622 Nascimento / RJ'),
+('8141', '1', 'Jardim de Duarte, 4
+Buraco Quente
+83529-199 da Rocha / MS'),
+('8142', '4', 'Vale de da Costa, 10
+Corao Eucarstico
+00947746 Fogaa de Freitas / BA'),
+('8143', '1', 'Ncleo Silveira
+Das Industrias I
+48005-210 Campos da Mata / MG'),
+('8144', '4', 'Aeroporto Fernandes, 10
+Conjunto Santa Maria
+62561-646 Moreira das Pedras / DF'),
+('8145', '1', 'Avenida Gomes, 13
+Campo Alegre
+61099366 da Rosa Grande / MG'),
+('8146', '3', 'Vereda Enzo Gabriel Moura, 7
+Centro
+67728675 Barbosa da Mata / MG'),
+('8147', '3', 'Chcara Monteiro, 29
+Monte So Jos
+75885699 da Mota / PE'),
+('8148', '2', 'Morro Melissa Sales, 240
+Vila Nova Cachoeirinha 3 Seo
+25919651 Costela Grande / MS'),
+('8149', '4', 'Aeroporto Ferreira, 84
+Bom Jesus
+96606-310 Fernandes / AP'),
+('8150', '3', 'Vila Maria Clara Ribeiro, 374
+Itapoa
+59868383 Teixeira / SE'),
+('8151', '2', 'Vila da Cunha, 15
+Padre Eustquio
+38280889 Almeida / RR'),
+('8152', '1', 'Trevo de Pires, 4
+Betnia
+58448563 Souza / SC'),
+('8153', '4', 'Lagoa Caio Correia
+So Benedito
+39151446 Cavalcanti de Minas / MA'),
+('8154', '2', 'Distrito Luiz Gustavo Santos, 36
+Parque So Pedro
+12668275 Correia / SC'),
+('8155', '2', 'Praia Carlos Eduardo Pinto, 90
+Vila Inestan
+46660-444 Viana da Praia / SC'),
+('8156', '3', 'Travessa Nascimento, 85
+Tirol
+65875-498 Moura de Arajo / SP'),
+('8157', '3', 'Vereda de Rezende
+Mangabeiras
+66410-678 Arago / MT'),
+('8158', '1', 'Loteamento Arago, 86
+Hava
+48429164 Caldeira de Costa / SC'),
+('8159', '1', 'Quadra Kevin Lima, 84
+Estoril
+61061001 Novaes / PA'),
+('8160', '2', 'Via Rafaela Oliveira, 26
+Maria Virgnia
+82972-358 Cunha de Moreira / RJ'),
+('8161', '4', 'Praia de da Mata, 1
+Vila So Joo Batista
+32115-127 Cavalcanti de Arago / SC'),
+('8162', '4', 'Residencial de da Paz, 63
+Castanheira
+78772-495 Pires de Azevedo / RO'),
+('8163', '5', 'Ptio Ferreira, 76
+Dom Bosco
+32496081 Castro / MS'),
+('8164', '5', 'Praia Diego Rezende, 7
+Jardim Vitoria
+40449745 Gomes de Gois / ES'),
+('8165', '3', 'Aeroporto Fernandes, 814
+Buraco Quente
+13788603 Costa / PB'),
+('8166', '5', 'Viela da Costa, 745
+Estoril
+42571-364 Costela do Campo / AP'),
+('8167', '5', 'Residencial de Dias, 64
+Novo Tupi
+12563-949 Lopes / RJ'),
+('8168', '3', 'Via da Conceio, 9
+Brasil Industrial
+73893833 Duarte de Santos / SP'),
+('8169', '5', 'Recanto Nascimento, 28
+Jardim Atlntico
+22480156 Jesus das Flores / SP'),
+('8170', '2', 'Alameda Ana Carolina Cardoso, 68
+Conjunto Celso Machado
+74854146 Gomes / RR'),
+('8171', '5', 'Largo Lvia Monteiro
+Chcara Leonina
+54315-111 Ferreira do Campo / MT'),
+('8172', '2', 'Trecho Alana Costa, 78
+Vila Santo Antnio
+64088398 Melo / MT'),
+('8173', '1', 'Passarela Luiz Gustavo Santos, 64
+Pongelupe
+16075-845 Barbosa / SC'),
+('8174', '3', 'Estrada Joo Pedro Castro, 18
+Xodo-Marize
+84685579 Azevedo / PA'),
+('8175', '5', 'Loteamento de Pires, 80
+So Vicente
+80429078 Jesus / SE'),
+('8176', '1', 'Quadra Emilly Sales, 286
+Conjunto Bonsucesso
+12293-475 Costela / RN'),
+('8177', '1', 'Fazenda Barbosa, 863
+Alto Caiaras
+75568-976 Santos / RR'),
+('8178', '2', 'Feira Luiz Gustavo Fogaa
+Estrela
+16878-357 Costa de Minas / AP'),
+('8179', '1', 'Ladeira Costa, 62
+Taquaril
+38987869 da Mota dos Dourados / RR'),
+('8180', '2', 'Residencial de Costa, 32
+Planalto
+06720596 Costela / MG'),
+('8181', '1', 'Favela Pedro Almeida, 13
+Biquinhas
+20933-032 Cardoso / PI'),
+('8182', '4', 'rea Raquel Lima, 26
+Novo Santa Cecilia
+04394673 Gonalves / RS'),
+('8183', '1', 'Avenida da Luz, 11
+Calafate
+01832-237 das Neves / RO'),
+('8184', '2', 'Lago Cunha, 644
+Providencia
+07513-197 da Conceio / AP'),
+('8185', '5', 'Rodovia de da Cruz, 22
+Nova Vista
+14407-696 Peixoto de Minas / PB'),
+('8186', '4', 'Vila Jesus, 91
+Mirtes
+95338546 da Paz da Prata / PA'),
+('8187', '2', 'Residencial Freitas, 56
+Varzea Da Palma
+30677053 Peixoto das Flores / RO'),
+('8188', '2', 'Recanto Jesus, 83
+Santo Andr
+79374-905 Ramos do Amparo / PA'),
+('8189', '2', 'Jardim Pietro Pires, 16
+Alpes
+27537260 Santos / RO'),
+('8190', '3', 'Distrito Ferreira, 26
+Vila Ecolgica
+09126-115 Arago / PA'),
+('8191', '3', 'Largo de da Rocha, 15
+Calafate
+77525-337 Silveira Verde / CE'),
+('8192', '1', 'Lagoa de Santos, 313
+Estrela Do Oriente
+44253-688 Monteiro / MG'),
+('8193', '5', 'Distrito Moraes
+Nova Esperana
+22918-637 Mendes dos Dourados / AC'),
+('8194', '4', 'Quadra de Nogueira, 64
+Vila Tirol
+79868-717 Nunes / ES'),
+('8195', '2', 'Estao de Sales, 31
+Embabas
+82111-105 Pereira do Sul / RR'),
+('8196', '4', 'Quadra Nicolas Souza, 75
+Novo Glria
+82779-955 da Luz / AL'),
+('8197', '3', 'Viaduto de Pinto, 93
+Primeiro De Maio
+08338036 Arago de da Rosa / RN'),
+('8198', '5', 'Feira Diego Novaes
+Mineiro
+81086-507 Ramos / CE'),
+('8199', '4', 'Chcara de Azevedo, 56
+Apolonia
+96939-714 Alves do Norte / AL'),
+('8200', '2', 'Esplanada Mendes, 49
+Aparecida
+57186-742 Ferreira de Rodrigues / AM'),
+('8201', '2', 'Campo Joo Lucas da Conceio, 96
+Vila Bandeirantes
+67932916 Carvalho Grande / PB'),
+('8202', '1', 'Conjunto de Jesus, 62
+Petropolis
+31997-197 Lopes / PB'),
+('8203', '4', 'Rua Yago Pinto, 20
+Baro Homem De Melo 2 Seo
+94457-747 Barbosa da Prata / PB'),
+('8204', '5', 'Avenida de Pereira, 85
+So Pedro
+11731432 Lopes Alegre / AM'),
+('8205', '3', 'Esplanada Correia, 26
+Betnia
+03814-060 Rocha Alegre / PB'),
+('8206', '3', 'Praia Ramos, 6
+Conjunto Lagoa
+19561299 Barbosa / ES'),
+('8207', '3', 'Estao de Peixoto, 22
+Vila Do Pombal
+64855-779 Castro / TO'),
+('8208', '5', 'Passarela Isabella da Rosa, 3
+Universo
+84081-337 Arajo da Praia / SE'),
+('8209', '4', 'Recanto Brbara da Rocha, 75
+Jaqueline
+03371-612 Lima de Sales / RN'),
+('8210', '5', 'Distrito Vicente Santos, 197
+Conjunto Jatoba
+74024-812 Ribeiro das Pedras / SE'),
+('8211', '4', 'Lagoa de Dias, 96
+So Bento
+70620-700 Monteiro / RJ'),
+('8212', '1', 'Rodovia de Barros, 85
+Piraja
+48154-614 Pires / DF'),
+('8213', '3', 'Largo de Silva
+Copacabana
+72144-499 das Neves do Campo / AL'),
+('8214', '1', 'Trevo Luna Campos, 33
+Cidade Nova
+34162091 Ferreira da Mata / MS'),
+('8215', '5', 'Viaduto de Cardoso
+Santo Agostinho
+47901-745 Lopes do Campo / SC'),
+('8216', '5', 'Aeroporto Nogueira, 439
+Vila Real 1 Seo
+87530-000 Cardoso da Praia / AC'),
+('8217', '4', 'Stio de Melo, 83
+So Pedro
+95210-924 Santos / RS'),
+('8218', '1', 'Parque Fogaa
+Santo Agostinho
+25835-527 Pereira de Moraes / AP'),
+('8219', '4', 'Passarela Silveira, 564
+So Jorge 1 Seo
+50238-638 Viana Paulista / DF'),
+('8220', '1', 'Campo Fernando Peixoto, 2
+Primeiro De Maio
+77462-258 Farias / GO'),
+('8221', '1', 'Ncleo Cardoso, 609
+Leticia
+01313-539 Moura / RJ'),
+('8222', '4', 'Rodovia Sabrina Novaes, 63
+Vila Tirol
+72801988 Castro / PA'),
+('8223', '5', 'Ladeira Almeida, 44
+Tirol
+52382199 Porto do Amparo / CE'),
+('8224', '3', 'Conjunto Fernandes, 1
+Branas
+18495-311 Silva / SP'),
+('8225', '5', 'Favela Ferreira, 48
+Xodo-Marize
+16666334 Pinto / RO'),
+('8226', '3', 'Trecho Ferreira, 7
+So Paulo
+27063733 Moraes Grande / AP'),
+('8227', '4', 'Distrito Alves, 162
+Mirtes
+34962417 Peixoto da Prata / AP'),
+('8228', '3', 'Conjunto Mait Carvalho, 28
+Maria Virgnia
+34524-194 Fernandes / TO'),
+('8229', '2', 'Largo Bernardo da Mata, 819
+Vila Madre Gertrudes 2 Seo
+29605-678 Lima Alegre / GO'),
+('8230', '2', 'Loteamento Porto, 67
+Aparecida
+20813-804 Gomes / ES'),
+('8231', '2', 'Ptio Pinto, 83
+Vila So Geraldo
+35937983 Peixoto de Cunha / RS'),
+('8232', '2', 'Estrada Caldeira, 8
+Conjunto Califrnia Ii
+38530-122 Cavalcanti de Nascimento / AP'),
+('8233', '3', 'rea Guilherme das Neves, 81
+Carmo
+37283721 da Luz / BA'),
+('8234', '2', 'Passarela de da Cruz, 64
+Guarat
+14831510 Nunes Paulista / PI'),
+('8235', '1', 'Aeroporto Vitria Novaes, 82
+Nazare
+87634-069 Viana / RJ'),
+('8236', '1', 'Largo Davi Lucas Cardoso, 59
+Jaqueline
+34172-787 Almeida / PR'),
+('8237', '5', 'Trevo da Mata, 21
+Urca
+44313853 Moraes / RN'),
+('8238', '2', 'Lago Luigi da Cruz, 53
+Dona Clara
+13872-270 Caldeira Verde / AL'),
+('8239', '2', 'Stio Helosa Rocha, 67
+Santa Branca
+80832412 Ramos / SP'),
+('8240', '1', 'Residencial da Luz, 34
+Baro Homem De Melo 1 Seo
+19445312 Campos / MA'),
+('8241', '1', 'Conjunto Caio Rezende
+Vila Santo Antnio Barroquinha
+28410-245 Porto de Lima / AC'),
+('8242', '3', 'Residencial Maria Sophia Cunha, 22
+Serra
+42919726 Nunes / MS'),
+('8243', '4', 'Viaduto da Luz
+Vila Ipiranga
+29124952 Lopes da Serra / DF'),
+('8244', '2', 'Largo de Alves, 56
+Distrito Industrial Do Jatoba
+98697-456 da Mata / CE'),
+('8245', '3', 'Passarela Ana Lvia Alves, 76
+Alta Tenso 1 Seo
+74038581 Pinto de Barros / GO'),
+('8246', '2', 'Esplanada de Vieira, 91
+Boa Unio 1 Seo
+06132-270 das Neves do Oeste / MS'),
+('8247', '2', 'Stio Rezende, 87
+Gutierrez
+26439190 Alves da Mata / RR'),
+('8248', '2', 'Recanto de Ferreira, 91
+Ferno Dias
+12145-569 Martins / RJ'),
+('8249', '2', 'Vale Fernandes, 5
+Boa Esperana
+27410953 Lima / PA'),
+('8250', '5', 'Rodovia Arago, 7
+Vila Mantiqueira
+16542-684 Ramos / PI'),
+('8251', '1', 'Aeroporto Ryan da Cunha, 34
+Jardim Vitoria
+84897359 Fernandes / AP'),
+('8252', '1', 'Trecho de da Mota, 886
+Vila So Francisco
+32166-280 Souza do Galho / GO'),
+('8253', '2', 'Fazenda Catarina Silveira, 7
+Vila Batik
+97668814 Peixoto / RS'),
+('8254', '1', 'Ncleo de Arajo, 999
+Aparecida 7 Seo
+09177-422 Oliveira de Gois / PE'),
+('8255', '5', 'Via Carlos Eduardo Nogueira, 65
+Vila Antena Montanhs
+41857112 Cunha das Flores / AM'),
+('8256', '3', 'Viaduto da Paz, 84
+Conjunto Serra Verde
+60478900 Arajo Alegre / RJ'),
+('8257', '2', 'Loteamento Lima, 51
+Hava
+37024-927 Rocha do Amparo / ES'),
+('8258', '1', 'Praa Ana das Neves, 582
+Bonfim
+83788-614 Cavalcanti do Norte / ES'),
+('8259', '4', 'Vila Monteiro, 7
+Monte So Jos
+97255-732 Fernandes / TO'),
+('8260', '1', 'Parque Lima, 37
+Vila Aeroporto Jaragu
+04981-745 Moraes da Serra / AC'),
+('8261', '3', 'Trevo de Costela, 90
+Santa Ins
+13247195 Gonalves de Cunha / BA'),
+('8262', '3', 'Distrito de Costela, 334
+Rio Branco
+40462724 das Neves da Serra / DF'),
+('8263', '5', 'Parque de Barbosa
+Monsenhor Messias
+05405880 Martins de Pinto / MT'),
+('8264', '2', 'Viaduto de Freitas, 2
+Joo Pinheiro
+91091-222 Pinto Paulista / SC'),
+('8265', '4', 'Loteamento Cardoso, 78
+Unio
+90638729 Dias Alegre / TO'),
+('8266', '5', 'Estrada de Cardoso, 80
+Estoril
+75691317 Gomes de da Rocha / RJ'),
+('8267', '1', 'Recanto Joo Castro, 6
+Vila Trinta E Um De Maro
+66291864 Fogaa Paulista / MG'),
+('8268', '3', 'Loteamento Elisa da Cunha, 83
+Sagrada Famlia
+95858079 Barbosa / RJ'),
+('8269', '1', 'Rodovia Pedro Miguel Alves, 1
+Minas Brasil
+37631208 da Cunha de Peixoto / AP'),
+('8270', '3', 'Feira Rafaela Barbosa, 24
+Andiroba
+85323296 Cardoso / PE'),
+('8271', '5', 'Chcara de da Rocha, 54
+Madre Gertrudes
+66515255 Carvalho da Serra / RO'),
+('8272', '5', 'Loteamento Ana Carolina Arago, 42
+Leonina
+90712501 Alves / RR'),
+('8273', '1', 'Lago Vitor Hugo Castro, 26
+Novo Das Industrias
+98794-089 Costa / AC'),
+('8274', '3', 'Feira Lara Barbosa, 55
+Xodo-Marize
+56588443 Fernandes / PR'),
+('8275', '2', 'Residencial Francisco Gonalves, 5
+Gutierrez
+59437-113 da Cruz / AC'),
+('8276', '4', 'Residencial de da Costa, 8
+Guarani
+41428066 da Paz do Amparo / DF'),
+('8277', '2', 'Recanto Lorena Sales, 26
+Milionario
+68170-729 Freitas do Norte / MG'),
+('8278', '1', 'Ladeira Barbosa, 58
+Monte So Jos
+77542168 Fogaa / GO'),
+('8279', '1', 'Ladeira de Duarte, 80
+Ermelinda
+13746706 Fernandes / MA'),
+('8280', '5', 'rea Joo Felipe Ribeiro, 96
+Vila Betnia
+00725-984 Vieira / MS'),
+('8281', '3', 'Chcara de Cardoso, 92
+Horto
+08100630 Gomes / AP'),
+('8282', '2', 'Quadra Rezende, 63
+So Marcos
+59461321 Melo / PR'),
+('8283', '1', 'Feira de Cunha
+Vila Da Paz
+20405-279 Sales das Pedras / CE'),
+('8284', '5', 'Condomnio de da Costa, 1
+Vila Da ria
+91654753 Pires Paulista / RJ'),
+('8285', '4', 'Lago de da Mota, 25
+Tupi A
+04503-228 Cardoso / PA'),
+('8286', '1', 'Praia Davi Lucas Cardoso, 979
+Grota
+26728-921 da Luz / PR'),
+('8287', '1', 'Distrito de Silveira, 33
+Belmonte
+79486-855 Ramos do Campo / RS'),
+('8288', '3', 'Chcara Renan Barbosa, 68
+Das Industrias I
+33653342 Mendes / RR'),
+('8289', '3', 'Parque Costa, 99
+Caetano Furquim
+32713219 Vieira do Campo / TO'),
+('8290', '3', 'Residencial Helosa Costa
+Varzea Da Palma
+77881551 Lima / RR'),
+('8291', '3', 'Feira Duarte, 32
+Itatiaia
+74932-817 Cavalcanti de da Costa / GO'),
+('8292', '2', 'Conjunto de Azevedo, 7
+Boa Esperana
+45522-583 Azevedo de Cardoso / PA'),
+('8293', '2', 'Favela Pinto, 82
+Estrela Do Oriente
+96922-842 Alves da Mata / RS'),
+('8294', '1', 'Quadra Rocha, 52
+Distrito Industrial Do Jatoba
+43152021 Caldeira / SE'),
+('8295', '3', 'Alameda Gabrielly Oliveira, 65
+Maria Tereza
+40957905 da Cruz / AL'),
+('8296', '5', 'Viaduto Jlia Cardoso, 835
+Maraj
+25139322 Freitas de Cardoso / ES'),
+('8297', '5', 'Ncleo Gomes, 147
+Vila Jardim Alvorada
+47774732 Moreira / AL'),
+('8298', '4', 'Rodovia de Freitas, 514
+Alpio De Melo
+20013774 Gonalves / DF'),
+('8299', '5', 'Travessa da Rocha, 31
+Mala E Cuia
+29205-773 da Luz / RS'),
+('8300', '4', 'Rua Olivia Santos, 157
+So Joo Batista
+40441025 Fernandes Paulista / AL'),
+('8301', '4', 'Ptio Bruna Barros, 276
+Serra Do Curral
+66156901 Teixeira / TO'),
+('8302', '5', 'Favela de Lopes, 68
+Morro Dos Macacos
+42069253 Peixoto / PE'),
+('8303', '1', 'Vereda de Fernandes, 2
+Flavio De Oliveira
+15801-219 da Mota das Flores / MG'),
+('8304', '3', 'Esplanada de Rodrigues, 26
+So Jos
+31633817 Fernandes Alegre / CE'),
+('8305', '1', 'Setor Joo Fogaa, 72
+Maria Helena
+96714-969 Ribeiro / RN'),
+('8306', '1', 'Loteamento da Costa
+Maraj
+19866169 Ramos / MA'),
+('8307', '3', 'Vila Melissa Gonalves
+So Luiz
+03254-581 Silveira / AL'),
+('8308', '4', 'Loteamento Moreira, 522
+Aguas Claras
+91408089 das Neves do Galho / RJ'),
+('8309', '4', 'Distrito Almeida, 85
+Flamengo
+53620144 Sales / MA'),
+('8310', '3', 'Vale de Nogueira, 22
+Parque So Pedro
+58763-466 Cavalcanti de Gois / RJ'),
+('8311', '4', 'Aeroporto de Sales
+Buritis
+87378-858 Cavalcanti do Campo / MA'),
+('8312', '5', 'Ptio de Gomes, 25
+Vila Da ria
+14338165 Moraes / MT'),
+('8313', '4', 'Via Gabriel Santos, 71
+Vila Santa Monica 2 Seo
+34119-278 da Luz / RO'),
+('8314', '1', 'Jardim de Novaes, 58
+Custodinha
+89302631 Cardoso de Duarte / ES'),
+('8315', '5', 'Colnia de Freitas, 8
+Santa Maria
+58234849 Souza / SC'),
+('8316', '2', 'Praia Arago, 98
+Lagoa
+46992578 Carvalho / DF'),
+('8317', '3', 'Lago Lara Barbosa, 837
+Novo Das Industrias
+40599759 Nogueira do Galho / MT'),
+('8318', '4', 'Conjunto da Rocha, 76
+Brasil Industrial
+84615982 Freitas de Gois / AM'),
+('8319', '1', 'Morro Raquel Sales, 5
+Ventosa
+51125858 Almeida / PE'),
+('8320', '2', 'Estrada Nascimento
+Zilah Sposito
+55891-691 Lopes de Teixeira / TO'),
+('8321', '2', 'Esplanada Gomes
+Vila So Francisco
+13678-618 Cardoso das Flores / MS'),
+('8322', '3', 'Feira Davi Rezende, 65
+Salgado Filho
+46483-464 Ferreira de Martins / GO'),
+('8323', '1', 'Esplanada Kamilly da Costa, 17
+Savassi
+88003-138 Jesus de Porto / CE'),
+('8324', '3', 'Vila de das Neves, 82
+Itatiaia
+01845-581 Mendes do Amparo / MG'),
+('8325', '5', 'Rua Maysa da Luz, 51
+Buraco Quente
+35827611 Martins / AM'),
+('8326', '1', 'Ncleo Gabriela Mendes
+Parque So Pedro
+04442473 Alves de Teixeira / PI'),
+('8327', '2', 'Viela de Moura, 6
+Goiania
+20259-447 Rocha da Mata / PR'),
+('8328', '5', 'Residencial Azevedo, 15
+Marieta 2 Seo
+83512-049 Monteiro dos Dourados / RJ'),
+('8329', '5', 'Morro Bencio Rezende, 8
+Mineiro
+35075678 Vieira da Mata / SC'),
+('8330', '1', 'Fazenda de Cavalcanti, 34
+Santa Monica
+30979-890 Moura do Galho / MT'),
+('8331', '4', 'Estrada de Ramos, 76
+Cardoso
+04707352 Pinto do Amparo / RJ'),
+('8332', '3', 'Parque Rafaela Ribeiro
+Baro Homem De Melo 2 Seo
+21918590 Rodrigues / SC'),
+('8333', '2', 'Vale de Campos, 48
+Boa Unio 2 Seo
+20913-841 Rocha / AP'),
+('8334', '3', 'Rua de Cardoso
+Baro Homem De Melo 1 Seo
+66138-161 Cardoso / RS'),
+('8335', '3', 'Morro Maria Ceclia Nunes, 8
+Tiradentes
+20479711 Barros / DF'),
+('8336', '3', 'Esplanada de Lima, 36
+Vila Sesc
+06119-923 Lima / AM'),
+('8337', '1', 'Rua Juliana Moreira, 559
+So Benedito
+31879018 Cardoso do Sul / CE'),
+('8338', '3', 'Recanto Gabriela Ferreira, 53
+Santa Lcia
+92489972 Nogueira / RN'),
+('8339', '4', 'Vereda Manuela da Mata, 93
+Vila Nova Gameleira 1 Seo
+70630974 Viana / AM'),
+('8340', '4', 'Vila Sales, 88
+Santa Isabel
+38991-351 Costela Verde / PA'),
+('8341', '2', 'Stio da Cunha, 277
+Vila Rica
+49606467 Arago / MG'),
+('8342', '4', 'Favela Pedro Lucas Martins, 3
+Buraco Quente
+48801-328 Fernandes / ES'),
+('8343', '3', 'Lago Sophia Lopes, 67
+Dom Cabral
+39500-683 Peixoto das Flores / PB'),
+('8344', '4', 'Estao de Freitas, 31
+Jardim Do Vale
+45116-110 da Paz / MT'),
+('8345', '5', 'Praa Luiz Henrique Cardoso, 5
+Novo Ouro Preto
+57408435 Gonalves / AP'),
+('8346', '4', 'Stio Levi Correia, 38
+Beija Flor
+49870062 Fogaa / AL'),
+('8347', '2', 'Estao Letcia Viana, 87
+Vila Canto Do Sabi
+00959328 Porto de Carvalho / RO'),
+('8348', '4', 'Trevo Maria Sophia Gomes, 326
+Bom Jesus
+52243-760 Nunes de da Rocha / RN'),
+('8349', '5', 'Lago Farias, 2
+Conjunto Santa Maria
+34919894 Costa Verde / AL'),
+('8350', '5', 'Jardim de Sales, 38
+Piraja
+89875351 Pereira / RJ'),
+('8351', '5', 'Rua Fogaa, 86
+Marilandia
+56363294 Carvalho do Campo / RN'),
+('8352', '1', 'Recanto de Nascimento, 5
+Vila Pinho
+28790258 Duarte de Gois / RS'),
+('8353', '1', 'Campo Andr Barros, 53
+Jardim Dos Comerciarios
+86627088 Arajo Paulista / MT'),
+('8354', '1', 'Condomnio Nicole Sales, 11
+Antonio Ribeiro De Abreu 1 Seo
+09896-224 Almeida de Lima / MA'),
+('8355', '1', 'Quadra de Martins, 20
+Pedreira Padro Lopes
+94448518 Cunha do Amparo / AP'),
+('8356', '3', 'Vila da Cruz, 45
+Buritis
+40565038 Souza do Amparo / RS'),
+('8357', '2', 'Vereda Mirella Campos, 96
+Alto Caiaras
+25845-831 Nogueira / MT'),
+('8358', '1', 'Estrada Breno Alves, 35
+Bairro Das Indstrias Ii
+00131-791 Ribeiro / SC'),
+('8359', '5', 'Vereda Maysa Costela, 738
+Vila Pinho
+20349319 da Cunha / AL'),
+('8360', '5', 'Trecho Arago, 383
+Vila Unio
+83075-034 Fernandes da Praia / DF'),
+('8361', '5', 'Esplanada de Sales, 32
+So Vicente
+82532333 Campos de Santos / TO'),
+('8362', '1', 'Feira Maria Alice Sales, 57
+Castanheira
+89795-499 Sales / AL'),
+('8363', '4', 'Praa Joo Guilherme Nascimento, 80
+So Vicente
+08110-941 Martins Paulista / AP'),
+('8364', '4', 'Aeroporto Martins, 5
+Vila Das Oliveiras
+76861877 Pires Grande / MS'),
+('8365', '4', 'Praa Cau Novaes, 26
+Vila Jardim Leblon
+49545-248 Gomes / ES'),
+('8366', '2', 'Quadra Alice Peixoto, 72
+Vila So Geraldo
+05020243 Lopes de Minas / RO'),
+('8367', '1', 'Viaduto de Correia
+Ouro Minas
+12131763 Lima / RR'),
+('8368', '5', 'Morro de Moreira, 85
+Vila Pinho
+91984-055 Nunes / BA'),
+('8369', '2', 'Praia Marcela da Mota, 23
+Santana Do Cafezal
+22114-575 Freitas do Norte / RO'),
+('8370', '1', 'Campo Carolina Carvalho, 2
+Capito Eduardo
+66765591 da Mota / CE'),
+('8371', '2', 'Alameda Igor Arajo, 28
+Vila Aeroporto
+16056-585 Rocha / RS'),
+('8372', '4', 'Praia Maria Ceclia Melo, 839
+Mirante
+30517-458 Novaes / MA'),
+('8373', '3', 'Conjunto Brbara da Mata
+Vila Rica
+82484333 Costa / AM'),
+('8374', '1', 'Condomnio de da Cunha, 36
+Biquinhas
+43044769 Ferreira do Norte / RO'),
+('8375', '5', 'Esplanada Peixoto
+Baleia
+82797858 Ribeiro de Vieira / MG'),
+('8376', '1', 'Trecho de Freitas, 79
+Cdi Jatoba
+64879-134 da Luz da Mata / PB'),
+('8377', '2', 'Fazenda Barros, 90
+Nossa Senhora De Ftima
+93856-451 da Luz / RR'),
+('8378', '2', 'Avenida de Monteiro
+Ernesto Nascimento
+88995552 Ribeiro do Norte / MS'),
+('8379', '1', 'Vila Costela, 14
+Teixeira Dias
+68130-256 Teixeira / RS'),
+('8380', '1', 'Alameda Luiz Fernando Farias, 3
+Independncia
+59640610 Moraes / PE'),
+('8381', '1', 'Praia de Arago, 17
+Vila Formosa
+34970423 das Neves da Praia / TO'),
+('8382', '3', 'Estrada de Martins, 36
+So Joo Batista
+38836292 Pinto / PI'),
+('8383', '5', 'Aeroporto de Jesus, 2
+Buritis
+19398-956 Cardoso / TO'),
+('8384', '3', 'Colnia Gustavo Rezende, 97
+Unio
+21624962 Cavalcanti / PR'),
+('8385', '2', 'Passarela Felipe Gonalves, 74
+Nova America
+85265893 Silva da Prata / MA'),
+('8386', '2', 'Estrada Rocha, 990
+Santa Lcia
+89558097 Sales / GO'),
+('8387', '4', 'Trecho Silva, 216
+Mirante
+80881475 Rezende do Galho / SP'),
+('8388', '1', 'Avenida Gonalves, 97
+Mantiqueira
+95049-838 Nascimento / SE'),
+('8389', '4', 'Ncleo de Melo, 204
+Vila Ecolgica
+27372-276 da Rocha / SC'),
+('8390', '1', 'Viaduto Rezende, 911
+Unidas
+54758-023 da Cruz do Oeste / MS'),
+('8391', '2', 'Estao de da Conceio, 4
+Comiteco
+04046-029 Jesus / SE'),
+('8392', '1', 'Estrada Bryan da Rosa, 70
+Solimoes
+38424676 Gomes / PA'),
+('8393', '5', 'Lagoa de Fogaa
+pia
+34510-065 Silva do Amparo / AP'),
+('8394', '1', 'Estao de Nascimento, 49
+Vila Cemig
+28216-736 Castro / PR'),
+('8395', '3', 'Jardim Heitor Novaes, 577
+Solar Do Barreiro
+93557-457 Nascimento / RO'),
+('8396', '2', 'Distrito de Moura
+Vila Tirol
+89201-946 Sales do Campo / DF'),
+('8397', '5', 'Ladeira de Sales, 366
+Juliana
+08908-816 Jesus de Cardoso / RS'),
+('8398', '4', 'Fazenda de Nascimento, 98
+Conjunto Floramar
+96907074 Correia / RO'),
+('8399', '1', 'Estrada Maria Fernanda da Cunha, 86
+Nazare
+02627-538 Campos da Praia / SP'),
+('8400', '3', 'Morro Marcelo Lopes, 25
+Savassi
+62275-807 Teixeira / PA'),
+('8401', '4', 'Parque de Nogueira, 20
+Olaria
+31076-358 da Mata de Dias / RS'),
+('8402', '5', 'Loteamento Pires, 9
+Glria
+99876154 da Rosa do Sul / CE'),
+('8403', '1', 'Feira Ferreira, 824
+Campo Alegre
+84025-364 da Paz / TO'),
+('8404', '1', 'Trecho Clara Lima, 33
+Vila Engenho Nogueira
+74939624 Viana / AL'),
+('8405', '4', 'Largo de Costa, 678
+Corao Eucarstico
+57695-606 Lopes de Gois / ES'),
+('8406', '4', 'Stio Davi Luiz Oliveira, 30
+Caetano Furquim
+46426-548 Cardoso Alegre / DF'),
+('8407', '5', 'Recanto Monteiro, 147
+Vila Puc
+03668725 Moura / RR'),
+('8408', '4', 'Loteamento Lucas Gabriel Nunes, 485
+Anchieta
+24679-553 Mendes da Serra / AM'),
+('8409', '3', 'Morro Caldeira, 52
+Santo Andr
+80784-169 da Cruz do Campo / RS'),
+('8410', '5', 'Ncleo de Santos, 1
+Ademar Maldonado
+27837741 Carvalho das Pedras / TO'),
+('8411', '2', 'Aeroporto de Lima, 558
+Vila Piratininga Venda Nova
+67021-035 Barbosa de Gois / SP'),
+('8412', '4', 'Alameda Mait Carvalho
+So Salvador
+66335-427 Santos / CE'),
+('8413', '5', 'Alameda Gabriel Farias, 97
+Ventosa
+85088-388 Cunha das Flores / AC'),
+('8414', '1', 'Vila de Viana, 247
+Parque So Jos
+98791448 da Paz / CE'),
+('8415', '4', 'Largo de Campos, 35
+Hava
+47171417 Rezende / CE'),
+('8416', '5', 'Fazenda da Mata, 94
+Nova America
+13237-920 Viana do Norte / CE'),
+('8417', '2', 'Passarela Gomes, 40
+Penha
+76510-386 Carvalho Verde / PI'),
+('8418', '5', 'Condomnio Gabrielly Correia, 28
+Morro Dos Macacos
+87865-767 Campos / GO'),
+('8419', '3', 'Largo de Moura, 4
+Vila Nova Gameleira 2 Seo
+66008938 Castro das Pedras / RJ'),
+('8420', '1', 'Vale Andr Castro, 87
+Luxemburgo
+05248-483 Cavalcanti de Fogaa / BA'),
+('8421', '4', 'Trecho Oliveira, 775
+Olaria
+37673941 Santos do Amparo / ES'),
+('8422', '2', 'Vale Fogaa, 5
+So Tomaz
+14623252 Arajo / TO'),
+('8423', '1', 'Estrada Souza, 12
+Nova America
+51845-697 Correia do Sul / RN'),
+('8424', '1', 'Feira Lucas Gabriel Gomes
+Ambrosina
+47791-133 Souza / BA'),
+('8425', '2', 'Passarela Thales Carvalho, 6
+Jardim Felicidade
+73134488 Barbosa de Nascimento / RR'),
+('8426', '4', 'Praia Sales, 736
+Vila Dos Anjos
+60027841 da Cruz / TO'),
+('8427', '3', 'Viela da Rocha, 313
+Santa Cruz
+60971203 da Luz / RS'),
+('8428', '5', 'Setor Vitor Hugo Barros, 13
+Palmeiras
+83450157 Barros / ES'),
+('8429', '1', 'Morro Fogaa, 56
+Miramar
+41257-035 Nogueira de Minas / SP'),
+('8430', '1', 'Vereda Luiz Otvio Azevedo, 92
+Aguas Claras
+23056-142 das Neves de Pires / SP'),
+('8431', '3', 'Chcara de Nogueira, 3
+Alto Das Antenas
+25261-864 Vieira / PI'),
+('8432', '2', 'Favela Rodrigo Fernandes, 86
+Nossa Senhora Da Aparecida
+20122599 Teixeira / PI'),
+('8433', '5', 'Esplanada Pereira, 7
+Vila Calafate
+83862-156 Caldeira / GO'),
+('8434', '2', 'Conjunto de Peixoto, 73
+Vila Nossa Senhora Do Rosrio
+08097-980 Lima de Pinto / AM'),
+('8435', '4', 'Stio de Carvalho, 9
+Leticia
+85258961 Pereira do Sul / CE'),
+('8436', '4', 'rea Cardoso, 80
+So Paulo
+30465819 Teixeira / AC'),
+('8437', '3', 'Morro Farias, 86
+Vila Maria
+81986699 Lima / RJ'),
+('8438', '1', 'Chcara de Moura, 11
+Castelo
+33224237 Barros da Serra / MT'),
+('8439', '2', 'Ptio de Rocha, 30
+Vila Nova Cachoeirinha 1 Seo
+52126486 Lopes / RN'),
+('8440', '4', 'Fazenda de da Paz, 68
+Jardim Amrica
+10465866 Arago de Minas / AM'),
+('8441', '5', 'Praa Carvalho, 910
+Centro
+63154373 Silveira Verde / PA'),
+('8442', '2', 'Estao de da Luz, 85
+Mangabeiras
+82907084 Novaes / MG'),
+('8443', '4', 'Ncleo Yago Fogaa, 430
+Conjunto Novo Dom Bosco
+98921876 Fogaa / AM'),
+('8444', '2', 'Recanto Barros, 109
+Pongelupe
+74361-865 Rodrigues do Norte / PA'),
+('8445', '1', 'Vereda Freitas, 3
+Jaragu
+34840-235 Rocha / RO'),
+('8446', '3', 'Morro de Ferreira
+Vista Alegre
+34143631 Costela Alegre / PE'),
+('8447', '2', 'Quadra Nicolas Duarte
+So Salvador
+47683047 Cunha Alegre / DF'),
+('8448', '2', 'Ptio Gonalves, 31
+Vila Olhos 
+45009184 Vieira do Amparo / GO'),
+('8449', '3', 'Vale de Lopes, 3
+Madre Gertrudes
+23940456 da Cruz Paulista / AM'),
+('8450', '2', 'Conjunto de Nogueira
+Baro Homem De Melo 1 Seo
+75691-649 Cunha do Norte / MA'),
+('8451', '5', 'Alameda de Ferreira, 4
+So Joo
+00048-175 da Mata / RR'),
+('8452', '2', 'Setor da Paz, 26
+Granja De Freitas
+14867561 Farias / MS'),
+('8453', '2', 'Lago de Lima, 68
+Dom Joaquim
+97655980 Pereira / RO'),
+('8454', '1', 'Via Olivia Ferreira, 29
+Marmiteiros
+65059-832 Lima da Praia / MS'),
+('8455', '2', 'Chcara Davi Lucca Caldeira
+Baleia
+12565825 Castro de Correia / SP'),
+('8456', '2', 'Distrito Gomes, 31
+Vila Primeiro De Maio
+07519763 Melo / MS'),
+('8457', '5', 'Campo Cau da Cunha, 74
+Nossa Senhora Da Conceio
+57400631 Sales da Prata / BA'),
+('8458', '3', 'Estrada Bryan Fernandes, 286
+Lagoa
+88387484 Barbosa / AP'),
+('8459', '4', 'Ladeira Larissa da Conceio, 49
+Nossa Senhora De Ftima
+13085-728 Correia das Pedras / RO'),
+('8460', '2', 'Esplanada de Pinto, 60
+Conjunto Paulo Vi
+42580-014 Gonalves de Nunes / RO'),
+('8461', '4', 'Parque de Duarte, 37
+Vila Nova Dos Milionarios
+48749108 Rocha de Silveira / MT'),
+('8462', '3', 'Vereda Sarah Almeida, 204
+Cidade Nova
+00660-372 da Mata dos Dourados / SP'),
+('8463', '4', 'Praa Bruno Jesus, 1
+Alto Barroca
+94164-740 Rocha de Cunha / AL'),
+('8464', '2', 'Jardim Martins
+Vila Madre Gertrudes 4 Seo
+01038194 Sales / AC'),
+('8465', '1', 'Stio Melo, 80
+Jardim Leblon
+52998406 da Rocha / RN'),
+('8466', '5', 'Praia Arajo, 1
+Mineiro
+31571929 Martins / PR'),
+('8467', '3', 'Via de Barros
+Vila Jardim Leblon
+50381-617 Fernandes / RO'),
+('8468', '5', 'Stio Luiz Gustavo Cavalcanti, 19
+Tiradentes
+60872-837 Dias do Oeste / RN'),
+('8469', '3', 'Quadra de Caldeira, 33
+Estrela
+96898-007 da Conceio de Minas / RJ'),
+('8470', '2', 'Viaduto Catarina Ramos, 5
+Sport Club
+79952904 Cunha do Sul / RJ'),
+('8471', '4', 'Estao de Silveira, 37
+Vila Paquet
+38560-882 Campos / RS'),
+('8472', '4', 'Esplanada Jlia da Mata, 29
+Zilah Sposito
+87569-153 Pinto / PA'),
+('8473', '3', 'Via Kamilly da Luz, 37
+Alto Caiaras
+86937528 Correia / RJ'),
+('8474', '2', 'Praa Fogaa, 96
+Sport Club
+57026-849 Pires / SC'),
+('8475', '5', 'Quadra Correia
+Itaipu
+57560-506 da Cruz de Peixoto / TO'),
+('8476', '3', 'Ladeira Moura
+Conjunto Santa Maria
+14623226 Nogueira / TO'),
+('8477', '5', 'Distrito Pietra Barros, 26
+Santana Do Cafezal
+36070278 Duarte Verde / PB'),
+('8478', '3', 'Lago de Rodrigues, 45
+So Pedro
+30273480 da Cunha / TO'),
+('8479', '1', 'Distrito Vitor Cavalcanti, 2
+Diamante
+50655-387 Azevedo Paulista / PR'),
+('8480', '3', 'Rodovia Kamilly Nunes
+Heliopolis
+89146475 da Costa do Campo / RO'),
+('8481', '4', 'Passarela de Rezende, 70
+Santa Cecilia
+38303133 da Rosa da Praia / BA'),
+('8482', '5', 'Lagoa de Pinto, 50
+Vila Santo Antnio
+13513728 Rezende / RJ'),
+('8483', '2', 'Condomnio de da Costa, 64
+Santa Monica
+12661-087 Cunha / PI'),
+('8484', '4', 'Conjunto da Paz, 52
+Delta
+76358577 Ramos / BA'),
+('8485', '1', 'Residencial de Fogaa, 46
+Urca
+97655-178 Freitas de Minas / AL'),
+('8486', '3', 'Trecho Milena das Neves, 12
+Pindura Saia
+57863-616 Dias / AL'),
+('8487', '1', 'Rua Gomes
+Santa Margarida
+16300952 Costa / AM'),
+('8488', '3', 'Lago de Azevedo
+Alta Tenso 2 Seo
+13455-177 Pinto das Flores / ES'),
+('8489', '2', 'Conjunto Luiz Felipe Novaes, 9
+Novo Aaro Reis
+90040-896 da Paz do Campo / PI'),
+('8490', '1', 'Ncleo de Arajo
+Vila Suzana Primeira Seo
+31810-600 das Neves / MG'),
+('8491', '4', 'Estao Enzo Santos, 83
+Conjunto Jardim Filadlfia
+99308-943 Azevedo / MS'),
+('8492', '5', 'Rua Ferreira
+Zilah Sposito
+63138192 da Mota de Sales / GO'),
+('8493', '2', 'Vereda Matheus Nunes, 51
+Leticia
+59477-223 da Mata de Moraes / PA'),
+('8494', '2', 'Largo Ribeiro, 93
+Piraja
+76202966 das Neves / AM'),
+('8495', '1', 'Alameda de Barbosa
+Vila Aeroporto
+13418-009 Nascimento / SC'),
+('8496', '4', 'Ladeira de Viana
+Bela Vitoria
+83920851 Lopes Alegre / RJ'),
+('8497', '5', 'Rodovia Farias, 95
+Apolonia
+66743405 Cunha da Mata / SE'),
+('8498', '2', 'Esplanada Yago Souza
+Grota
+86378977 Peixoto Paulista / TO'),
+('8499', '1', 'Vereda Agatha Fernandes
+Olhos 
+69566512 Mendes / RJ'),
+('8500', '1', 'Campo Maria Eduarda da Rocha
+Liberdade
+46628-954 Porto / RJ'),
+('8501', '3', 'Ncleo Freitas, 4
+Jardim So Jos
+41186929 Lima / RS'),
+('8502', '2', 'Aeroporto da Rocha, 21
+Barroca
+58401-595 Rocha do Amparo / ES'),
+('8503', '3', 'Ladeira da Paz, 5
+Camponesa 2 Seo
+63094076 da Luz / BA'),
+('8504', '5', 'Ptio Nascimento, 61
+So Jorge 3 Seo
+72152025 Pereira dos Dourados / PA'),
+('8505', '1', 'Viaduto de Alves
+So Luiz
+40509438 Pereira Grande / RN'),
+('8506', '1', 'Rua de Monteiro, 27
+Cinquentenrio
+36861-261 Ramos do Oeste / AC'),
+('8507', '5', 'Alameda de Teixeira, 925
+So Sebastio
+77353-512 Ferreira / PR'),
+('8508', '2', 'Quadra de Souza, 81
+Tupi A
+57731-330 Porto / AC'),
+('8509', '5', 'Estrada Oliveira, 933
+Santa Branca
+19871-107 Martins de Freitas / PE'),
+('8510', '4', 'Quadra Rocha, 11
+Santa Cecilia
+06201486 Rocha de Costa / RN'),
+('8511', '1', 'Residencial de Melo, 513
+Conjunto Santa Maria
+46547-988 Vieira / PB'),
+('8512', '3', 'Lago de Duarte, 5
+So Joo Batista
+52084-185 Santos da Prata / AP'),
+('8513', '4', 'Jardim de Silveira, 54
+Vista Alegre
+22720277 da Mata / DF'),
+('8514', '1', 'Ladeira de Peixoto
+Parque So Jos
+83455-989 da Costa de Gois / PI'),
+('8515', '4', 'Travessa Felipe Santos, 34
+Vila Santa Rosa
+59815681 Fernandes do Norte / PR'),
+('8516', '1', 'Conjunto Paulo Fogaa
+Vila Inestan
+16859125 da Conceio de Mendes / PB'),
+('8517', '1', 'Aeroporto de Sales, 482
+Corao De Jesus
+72303918 Lima dos Dourados / SC'),
+('8518', '4', 'Viaduto de Castro, 56
+Conjunto Floramar
+84855-380 da Paz / RN'),
+('8519', '1', 'Trecho de Cardoso, 7
+Vila Minaslandia
+60183-038 Pires / GO'),
+('8520', '1', 'Vereda Arajo, 99
+So Bernardo
+76584-393 Cardoso Grande / SP'),
+('8521', '4', 'Ptio Enrico Moreira, 40
+Jardim Leblon
+98922991 Pinto de Moura / RJ'),
+('8522', '2', 'Avenida Bruno Martins, 24
+Nossa Senhora Da Conceio
+35687930 Costela / ES'),
+('8523', '3', 'Loteamento Oliveira, 599
+Confisco
+94955187 da Cunha / BA'),
+('8524', '1', 'Estrada de da Rocha, 57
+Caetano Furquim
+91464-578 Cardoso do Galho / BA'),
+('8525', '3', 'Colnia Martins
+Vitoria Da Conquista
+58352-852 Martins da Serra / GO'),
+('8526', '2', 'Quadra Viana, 40
+Nova Pampulha
+98099-504 da Mata / MA'),
+('8527', '5', 'Condomnio de Lima
+Trevo
+24169-285 Barbosa Verde / AL'),
+('8528', '1', 'Esplanada Marcela Alves, 3
+Novo Santa Cecilia
+77641-549 Nascimento / ES'),
+('8529', '4', 'Feira Pires, 89
+Santa Efignia
+15153-917 Barbosa / GO'),
+('8530', '1', 'Setor da Cruz, 790
+Pindura Saia
+70805-782 Pires / PR'),
+('8531', '4', 'rea Maria Eduarda da Cunha, 193
+Vila Coqueiral
+64805-100 Souza / TO'),
+('8532', '2', 'Estao de Oliveira, 97
+Marieta 3 Seo
+70823-545 Mendes das Pedras / PE'),
+('8533', '1', 'Praa de Correia, 10
+Glria
+22782-863 Azevedo / AM'),
+('8534', '3', 'Condomnio Gustavo Henrique da Cunha, 99
+Europa
+48049979 Souza dos Dourados / PI'),
+('8535', '5', 'Distrito de Ramos, 12
+Vila Do Pombal
+65337-129 Costela das Pedras / PA'),
+('8536', '1', 'Lagoa de Moura, 98
+Marilandia
+51644926 da Rocha / RN'),
+('8537', '5', 'Estrada Helena Farias, 42
+Nova Vista
+75127-892 Melo de Gomes / DF'),
+('8538', '1', 'Colnia Barbosa, 63
+Alto Barroca
+17468-652 Barbosa / ES'),
+('8539', '4', 'Viaduto Mariane Nunes
+Vila Cloris
+97790-422 Nunes Grande / SC'),
+('8540', '2', 'Condomnio Ana Lvia Castro, 373
+Delta
+26261-456 Martins da Serra / GO'),
+('8541', '2', 'Largo de Castro
+Leticia
+22574979 Vieira / AP'),
+('8542', '1', 'Vale de Martins, 267
+Conjunto Capito Eduardo
+24513-980 Correia de Alves / SP'),
+('8543', '3', 'Rua da Costa
+Vila Nova Gameleira 3 Seo
+57252-915 da Rosa das Flores / DF'),
+('8544', '4', 'Ncleo de Costa, 54
+Flamengo
+93421169 Silveira Grande / GO'),
+('8545', '1', 'Trecho de Monteiro, 74
+Vista Do Sol
+87530955 Freitas de Minas / MA'),
+('8546', '3', 'Ladeira de Ferreira, 51
+Coqueiros
+53574763 Viana / PE'),
+('8547', '3', 'Rua Lucas Gabriel Dias, 48
+Bonsucesso
+13853967 Moreira / RO'),
+('8548', '1', 'Residencial de Jesus, 43
+Alto Das Antenas
+65558-944 Moura da Prata / BA'),
+('8549', '3', 'Rodovia Melissa Lima, 400
+Vila Das Oliveiras
+27583-711 Rodrigues / RN'),
+('8550', '2', 'Avenida Lima, 632
+So Bernardo
+56661-563 Barbosa do Norte / SP'),
+('8551', '1', 'Aeroporto Barbosa, 65
+Tupi B
+69379-328 da Cruz / TO'),
+('8552', '2', 'Viela Davi Gomes, 44
+Monsenhor Messias
+24618784 da Luz das Flores / PI'),
+('8553', '4', 'Rodovia de Rezende, 19
+Vila So Rafael
+37955808 Farias / SP'),
+('8554', '5', 'Trevo Gustavo Porto, 86
+Belvedere
+40422329 Vieira / RN'),
+('8555', '1', 'Viaduto Cavalcanti
+Vila Suzana Primeira Seo
+13716-835 Alves / GO'),
+('8556', '3', 'Aeroporto Breno Fogaa
+Taquaril
+28608188 Teixeira / GO'),
+('8557', '2', 'Residencial de Fogaa, 3
+Ipiranga
+29059-351 Ramos / SE'),
+('8558', '3', 'Vila de Fernandes, 51
+Atila De Paiva
+35263846 Jesus / AL'),
+('8559', '5', 'Avenida Costela, 247
+Vila Do Pombal
+86805-543 Azevedo / SE'),
+('8560', '2', 'Estrada Raquel Silveira, 71
+Novo Ouro Preto
+36597476 Monteiro do Amparo / BA'),
+('8561', '4', 'Quadra de Cavalcanti, 951
+Ipiranga
+83635598 Farias / PE'),
+('8562', '5', 'Praia de Melo, 101
+lvaro Camargos
+75400-937 Lopes / ES'),
+('8563', '5', 'Quadra Barros, 15
+Palmeiras
+73815066 Silveira / PA'),
+('8564', '5', 'Rua de da Rosa, 8
+Conjunto Jatoba
+82948-669 Arajo / GO'),
+('8565', '5', 'Passarela Lima, 14
+Vila Da Amizade
+29325308 Lima / ES'),
+('8566', '3', 'Lagoa Enzo Gabriel Nascimento
+Biquinhas
+76407351 Martins do Oeste / PI'),
+('8567', '1', 'Praia Pietra da Mota, 22
+Novo Aaro Reis
+28186924 Cardoso Verde / AL'),
+('8568', '3', 'Feira Paulo Freitas, 37
+Jardim Dos Comerciarios
+57317-035 da Luz de Azevedo / CE'),
+('8569', '1', 'Jardim Thales Ramos
+Vila Maloca
+87822667 Dias de Moura / PR'),
+('8570', '1', 'Loteamento de Peixoto, 27
+Buritis
+25006250 Nunes das Pedras / GO'),
+('8571', '4', 'Chcara de Mendes, 56
+Bacurau
+81892536 Cunha / PB'),
+('8572', '4', 'Alameda Pinto, 7
+Vila So Paulo
+04408-262 Ferreira / SE'),
+('8573', '2', 'Residencial Sophie Barbosa, 741
+Baro Homem De Melo 3 Seo
+89017-954 Nunes da Serra / SE'),
+('8574', '3', 'Jardim da Costa, 2
+Vila Esplanada
+59656-942 Vieira de Minas / RS'),
+('8575', '4', 'Trevo Teixeira, 353
+Betnia
+23359-219 Freitas / RJ'),
+('8576', '4', 'Estao Ana Julia Farias, 88
+Mirtes
+00971913 da Cruz / BA'),
+('8577', '2', 'Largo Jesus, 7
+Madri
+52633-655 Costa dos Dourados / RN'),
+('8578', '4', 'Conjunto da Luz, 17
+Alpes
+12054-238 Martins Paulista / TO'),
+('8579', '5', 'Travessa Arago, 2
+Cnego Pinheiro 2 Seo
+03728126 Oliveira / GO'),
+('8580', '4', 'Lago de Arajo, 80
+Alto Dos Pinheiros
+05779240 Costa / MT'),
+('8581', '3', 'Esplanada da Mota, 623
+Gameleira
+82997173 Novaes / AP'),
+('8582', '1', 'Rodovia de Lima, 913
+Santa Rita
+82099-395 Costela / PR'),
+('8583', '2', 'Fazenda Ferreira, 54
+Tirol
+32857553 da Mota / SE'),
+('8584', '2', 'Vereda Alice Castro, 38
+Inconfidncia
+33784446 da Cruz do Campo / TO'),
+('8585', '2', 'Vale de Rocha
+Mala E Cuia
+97932181 da Costa Grande / SC'),
+('8586', '2', 'Campo de Correia, 24
+Capito Eduardo
+17289-954 da Cruz da Prata / RS'),
+('8587', '3', 'Avenida Bernardo Souza
+Itatiaia
+59832162 Dias / MS'),
+('8588', '4', 'Praa Joo Vitor Costa, 30
+Mantiqueira
+58079-209 da Mota da Praia / PR'),
+('8589', '1', 'Colnia Sofia da Conceio
+Lorena
+85173233 Silveira / SP'),
+('8590', '3', 'Vale de Fernandes, 8
+Engenho Nogueira
+45421269 da Mota / PB'),
+('8591', '5', 'Distrito Valentina Moreira, 24
+Vila Nova Gameleira 3 Seo
+17412127 Silveira Alegre / DF'),
+('8592', '3', 'Condomnio Ribeiro, 545
+Boa Unio 2 Seo
+76441226 Martins / GO'),
+('8593', '4', 'Avenida de da Cruz, 44
+Primeiro De Maio
+89891484 Cardoso / SP'),
+('8594', '3', 'Lago Sarah da Cruz, 97
+Penha
+03582194 Fernandes / DF'),
+('8595', '2', 'Morro da Mota, 74
+Vila Da Paz
+91809753 Novaes / GO'),
+('8596', '3', 'Stio de Cardoso, 81
+Zilah Sposito
+28302-241 da Cunha das Flores / AM'),
+('8597', '1', 'Viela Pietra Barbosa, 92
+Vila Nossa Senhora Do Rosrio
+37817-267 Cavalcanti / RO'),
+('8598', '5', 'Esplanada Nascimento, 957
+Maria Tereza
+49969-366 Ramos Grande / MS'),
+('8599', '5', 'Condomnio de Nunes, 10
+Minas Brasil
+63232931 Cavalcanti / PR'),
+('8600', '3', 'Rua Cardoso, 6
+Barreiro
+64290619 Nunes do Oeste / MT'),
+('8601', '3', 'Estrada de Vieira, 73
+Funcionrios
+29065-533 da Costa de Almeida / GO'),
+('8602', '3', 'Aeroporto de da Rocha, 73
+Solimoes
+79984-252 Monteiro dos Dourados / ES'),
+('8603', '5', 'Jardim de da Cunha, 68
+Mirante
+25367485 Ferreira da Prata / RO'),
+('8604', '1', 'Fazenda da Paz, 25
+Vila Madre Gertrudes 2 Seo
+14147-229 da Costa da Mata / TO'),
+('8605', '2', 'Trecho de Silveira, 3
+Unidas
+67737-667 da Cruz / RO'),
+('8606', '3', 'Favela de Campos, 1
+Xodo-Marize
+66122725 Santos / SE'),
+('8607', '1', 'Praia Yasmin da Costa, 95
+Nossa Senhora Da Conceio
+51419-272 Lopes / PB'),
+('8608', '2', 'Travessa Correia, 9
+Horto Florestal
+36418-365 da Luz do Amparo / MS'),
+('8609', '5', 'Travessa Joo Miguel Rodrigues, 48
+Pousada Santo Antonio
+37034674 Almeida de Peixoto / MG'),
+('8610', '3', 'Aeroporto Marcelo da Costa, 676
+Alpio De Melo
+24908-079 Cavalcanti / PE'),
+('8611', '1', 'Praa Ana Sophia Barros
+Distrito Industrial Do Jatoba
+21815-220 Lopes / AM'),
+('8612', '2', 'Recanto Nunes, 39
+Itaipu
+56544746 Cardoso de da Costa / PI'),
+('8613', '1', 'Quadra Costa, 853
+Universo
+39322-655 Alves / PA'),
+('8614', '2', 'Trevo da Cruz, 57
+Vila Ecolgica
+30552473 da Cruz Grande / BA'),
+('8615', '2', 'Loteamento Melo, 24
+Vila Maloca
+82425156 Barbosa de Farias / PI'),
+('8616', '2', 'Recanto Alves
+Ipe
+63534-930 Oliveira / PA'),
+('8617', '4', 'Aeroporto de Barbosa
+Acaba Mundo
+58260690 da Cruz da Prata / DF'),
+('8618', '4', 'Fazenda Otvio Barros, 2
+Hava
+55743-740 Costa do Oeste / AP'),
+('8619', '1', 'Praia Elisa Lopes
+Milionario
+81184952 da Costa / PB'),
+('8620', '5', 'Recanto de da Conceio, 623
+Piraja
+07025921 Viana / RR'),
+('8621', '4', 'Conjunto de Pinto, 85
+Camponesa 2 Seo
+94560492 Sales do Campo / SC'),
+('8622', '5', 'Loteamento Arajo, 72
+Boa Unio 1 Seo
+54562710 da Luz de Gois / BA'),
+('8623', '3', 'Esplanada de Costela, 731
+Nova Vista
+57841-578 Ribeiro de da Cunha / TO'),
+('8624', '3', 'Residencial de Campos, 32
+Vila Mangueiras
+51311733 Sales / MA'),
+('8625', '3', 'Via Lorenzo Rezende, 48
+Capito Eduardo
+46411-121 da Paz do Sul / GO'),
+('8626', '2', 'Vale de Campos, 12
+So Joo Batista
+63497218 Duarte Grande / PR'),
+('8627', '1', 'Trevo de Martins
+Lorena
+66434-138 Monteiro / DF'),
+('8628', '5', 'Alameda Cavalcanti, 42
+Corao Eucarstico
+27144541 Costela do Galho / PI'),
+('8629', '5', 'Campo Souza, 407
+Vila Inestan
+89265863 Lopes das Flores / RR'),
+('8630', '5', 'Lago Fernanda Fernandes, 389
+Lagoa
+25611451 Alves de Minas / SP'),
+('8631', '2', 'Praa Porto, 9
+So Paulo
+66775711 Mendes de Almeida / DF'),
+('8632', '5', 'Estao Alice Monteiro, 93
+Alto Caiaras
+29973-785 Moura / PI'),
+('8633', '2', 'Distrito de da Cunha, 1
+Carlos Prates
+98420455 Gonalves / PA'),
+('8634', '1', 'Quadra de Castro, 916
+Floramar
+86018008 Caldeira da Mata / MG'),
+('8635', '4', 'Recanto Theo Arajo, 109
+Esplanada
+95600-370 Lopes / BA'),
+('8636', '3', 'Ptio Bryan Fernandes
+Serrano
+68202-606 Lopes / PE'),
+('8637', '1', 'Estao Maria Vitria Silveira, 95
+Jaqueline
+62649788 Moreira Paulista / PI'),
+('8638', '4', 'Distrito de Fernandes, 93
+Miramar
+51529-235 Pires / RN'),
+('8639', '2', 'Colnia Jesus, 20
+Santa Rita
+34587610 Alves de Duarte / PR'),
+('8640', '5', 'Setor da Luz, 69
+Mirtes
+15631-959 Costela / SP'),
+('8641', '2', 'Passarela Sarah Campos, 4
+Ernesto Nascimento
+02158-319 Peixoto do Amparo / RS'),
+('8642', '2', 'Rodovia Valentina Moura, 97
+Lajedo
+52026109 Lima Verde / GO'),
+('8643', '3', 'Viaduto de Martins, 84
+Lorena
+14919-532 Nunes / AM'),
+('8644', '1', 'Favela Joo Felipe Duarte
+Atila De Paiva
+83074214 da Paz dos Dourados / RO'),
+('8645', '4', 'Chcara Caroline Azevedo, 5
+Mariano De Abreu
+37845-719 Nunes / GO'),
+('8646', '2', 'Campo da Rosa, 296
+Acaba Mundo
+07960799 Duarte / SE'),
+('8647', '3', 'Setor Barros, 5
+Barro Preto
+70758386 Oliveira / CE'),
+('8648', '1', 'Condomnio de da Cruz, 40
+Vila Petropolis
+71758-316 Silva da Prata / PE'),
+('8649', '4', 'Avenida de Melo, 165
+lvaro Camargos
+22809-631 da Costa de Fogaa / GO'),
+('8650', '4', 'Estao de Nogueira, 4
+Corao De Jesus
+51509-529 Gomes / TO'),
+('8651', '2', 'Ptio Pires
+Copacabana
+84568320 Pinto do Amparo / PE'),
+('8652', '5', 'Recanto Martins, 368
+Vila So Gabriel Jacui
+17288-633 Castro / MA'),
+('8653', '3', 'Vila Cunha, 27
+Indai
+96099723 Cardoso das Pedras / BA'),
+('8654', '5', 'Jardim Kevin Pinto, 76
+So Marcos
+73099-955 Arago de Gois / PB'),
+('8655', '3', 'Viaduto de Arajo, 183
+Bonfim
+00886-451 Barros / AC'),
+('8656', '2', 'Praia Augusto Farias, 2
+Vila Formosa
+84836-319 Castro de Moura / MT'),
+('8657', '4', 'Ncleo Ana Lvia Duarte, 17
+Grotinha
+37775450 Caldeira dos Dourados / SE'),
+('8658', '5', 'Recanto de Jesus, 71
+Novo Aaro Reis
+89657-301 Vieira / PB'),
+('8659', '4', 'rea Ferreira, 4
+Esplanada
+54609-912 Pires / AP'),
+('8660', '3', 'Aeroporto Dias, 384
+Mangabeiras
+58116-426 Fernandes de Freitas / RN'),
+('8661', '1', 'Trevo de Gonalves
+Vila So Geraldo
+97476282 Teixeira de Moraes / RR'),
+('8662', '4', 'Residencial Joaquim Rezende, 497
+Nova Sua
+34233490 Pires da Mata / PA'),
+('8663', '5', 'Aeroporto Ana Vitria Rezende
+Jaqueline
+50065-783 Cunha da Prata / MG'),
+('8664', '4', 'Rua Fernandes, 39
+Buritis
+09880-193 da Conceio / SP'),
+('8665', '5', 'Rua de Jesus, 20
+Nossa Senhora Do Rosrio
+32039911 Correia / RS'),
+('8666', '5', 'Loteamento de Souza, 34
+Caiara - Adelaide
+76732-489 Correia do Norte / PE'),
+('8667', '3', 'Travessa de Arago, 8
+Glria
+28079-740 Santos de Souza / RO'),
+('8668', '1', 'Vale de Moreira, 74
+Vila Madre Gertrudes 2 Seo
+40744-708 Peixoto do Campo / RJ'),
+('8669', '3', 'Fazenda de Martins, 38
+Madre Gertrudes
+65953673 Rodrigues / BA'),
+('8670', '2', 'Travessa Cavalcanti, 72
+Santa Helena
+02289633 Alves da Serra / BA'),
+('8671', '1', 'Rua de Ramos, 4
+Conjunto Celso Machado
+72933775 Ribeiro / AM'),
+('8672', '4', 'Viaduto Lima, 95
+Das Industrias I
+81925889 Caldeira / SC'),
+('8673', '2', 'Lagoa Ana Clara Cardoso, 53
+Solar Do Barreiro
+74339-323 Duarte das Flores / CE'),
+('8674', '1', 'Parque Gustavo Henrique Jesus, 7
+Vila Puc
+15769408 Silveira Verde / PI'),
+('8675', '1', 'Morro Peixoto, 32
+Milionario
+19769021 Ferreira do Campo / ES'),
+('8676', '4', 'Fazenda Eloah Lopes, 93
+Urca
+20171090 Cardoso / GO'),
+('8677', '4', 'Avenida Helosa Campos, 7
+Vila Suzana Primeira Seo
+15464004 Moura das Flores / AM'),
+('8678', '3', 'Estao Arajo, 1
+Vila Fumec
+59145-570 Nascimento do Norte / PB'),
+('8679', '4', 'Quadra Lopes, 62
+Floresta
+18788-996 Nogueira / CE'),
+('8680', '5', 'Rua de Alves, 88
+Dona Clara
+76340-507 Cunha de Gois / MS'),
+('8681', '2', 'Residencial de da Costa, 86
+Parque So Jos
+01065315 Azevedo / MT'),
+('8682', '5', 'Travessa Monteiro, 62
+Vila Mangueiras
+52510-964 Peixoto de Rocha / PA'),
+('8683', '4', 'Loteamento Maysa Moura, 13
+Conjunto Novo Dom Bosco
+12585-679 Santos da Praia / DF'),
+('8684', '3', 'Favela das Neves, 44
+Pirineus
+20526753 Carvalho / MG'),
+('8685', '4', 'Avenida de Rezende, 20
+Itapoa
+70542-474 Caldeira / PB'),
+('8686', '5', 'Condomnio Lucas Costela, 24
+Marmiteiros
+81971-147 Azevedo da Praia / AP'),
+('8687', '4', 'Loteamento das Neves, 41
+Lindia
+22318759 Rezende / MA'),
+('8688', '4', 'Parque de Dias, 29
+Vila Tirol
+74561-394 da Rocha / AM'),
+('8689', '4', 'Feira Pereira, 9
+Santa Cecilia
+79507822 Correia Alegre / RS'),
+('8690', '1', 'Jardim de Campos, 1
+Conjunto Floramar
+88861-842 Almeida / MA'),
+('8691', '5', 'Viela de Ramos, 15
+Serra
+22440211 Nogueira / AL'),
+('8692', '1', 'Recanto Mendes
+Camponesa 1 Seo
+89887-748 Almeida do Campo / RN'),
+('8693', '4', 'Colnia Teixeira, 3
+Gameleira
+78777186 Martins / SC'),
+('8694', '3', 'Trecho de Moreira
+Paulo Vi
+32245533 Porto / RJ'),
+('8695', '5', 'Estao de Moreira, 6
+Floresta
+99708-753 Caldeira do Sul / CE'),
+('8696', '2', 'Passarela da Costa, 72
+Maraj
+26101618 Pires / MS'),
+('8697', '1', 'Travessa Letcia Duarte
+Dom Joaquim
+54799-680 Moraes / PA'),
+('8698', '5', 'Vale de Rocha, 89
+So Gonalo
+61307914 da Cruz de Gois / MG'),
+('8699', '5', 'Campo Cardoso
+Alto Das Antenas
+45626-286 Cavalcanti de Porto / AC'),
+('8700', '1', 'Jardim Fogaa
+Brasil Industrial
+41219590 Cardoso / ES'),
+('8701', '2', 'Chcara Noah da Cunha, 16
+Vila So Gabriel
+20250137 Ramos / MT'),
+('8702', '5', 'Alameda Evelyn Barros
+Santa Terezinha
+55889-815 Nascimento / PB'),
+('8703', '5', 'Ncleo de Porto, 871
+Cu Azul
+62254-399 da Mota de das Neves / BA'),
+('8704', '2', 'Largo Dias, 34
+Milionario
+27330-930 Rodrigues / MT'),
+('8705', '1', 'Vale Marcelo Souza, 23
+Alto Caiaras
+93494330 Arajo da Prata / DF'),
+('8706', '2', 'Largo de Pereira, 96
+Floresta
+07995971 Carvalho / SE'),
+('8707', '5', 'Rodovia Martins
+Joo Pinheiro
+19021-850 Barbosa / PA'),
+('8708', '1', 'Travessa Pinto
+Conjunto Jatoba
+09931-871 Barros do Oeste / AM'),
+('8709', '4', 'Fazenda da Costa, 277
+Vila Piratininga Venda Nova
+03983531 Azevedo de Farias / RR'),
+('8710', '5', 'Passarela de Cavalcanti
+Vista Do Sol
+40225-645 Mendes do Galho / GO'),
+('8711', '1', 'Campo Raquel Cardoso
+Pompia
+74791-028 Ferreira / ES'),
+('8712', '2', 'Parque Levi Arajo, 959
+Mangabeiras
+71956145 Farias / AC'),
+('8713', '5', 'Ncleo Martins, 15
+Baro Homem De Melo 1 Seo
+37247035 Azevedo / PA'),
+('8714', '1', 'Esplanada Maria Fernanda Peixoto, 86
+Santo Agostinho
+00881283 Azevedo / RO'),
+('8715', '5', 'Loteamento de da Paz, 64
+Oeste
+31155-488 Rodrigues de Gois / PR'),
+('8716', '4', 'Trecho Bruna Moura, 16
+Pompia
+49152-791 Campos / PB'),
+('8717', '5', 'Vale Alves, 98
+Santa Rita De Cssia
+61338-982 Martins / MA'),
+('8718', '2', 'Lagoa Joana da Mota, 6
+Cidade Jardim Taquaril
+54480789 Rocha / AL'),
+('8719', '4', 'Avenida de Azevedo, 63
+Maria Helena
+30966-405 Gonalves / AP'),
+('8720', '4', 'Alameda da Luz, 527
+Conjunto Capito Eduardo
+45470910 Dias / PR'),
+('8721', '1', 'Setor de Almeida, 1
+Jardinpolis
+23539-735 Correia de Minas / SP'),
+('8722', '5', 'Estrada Augusto Alves, 24
+Marilandia
+09193458 Lopes / PR'),
+('8723', '1', 'Chcara de Jesus, 7
+Nossa Senhora Do Rosrio
+19141359 Nascimento Grande / PA'),
+('8724', '2', 'Condomnio Francisco Porto, 37
+Pongelupe
+91726818 Melo do Amparo / PI'),
+('8725', '2', 'Trecho de Barbosa, 31
+Beija Flor
+53950006 Castro do Galho / SE'),
+('8726', '1', 'Ncleo da Cunha
+Lindia
+41834557 da Cruz dos Dourados / ES'),
+('8727', '2', 'Ptio de Santos, 197
+Heliopolis
+45527-172 Almeida / AC'),
+('8728', '4', 'Morro Gomes, 89
+Laranjeiras
+98222-629 Dias do Sul / SE'),
+('8729', '3', 'Distrito de da Mata, 98
+Fazendinha
+69189-629 Nogueira / AC'),
+('8730', '1', 'Residencial Vinicius Rezende, 83
+Vila Bandeirantes
+20802765 Duarte do Galho / PE'),
+('8731', '2', 'Trevo Guilherme Peixoto, 13
+Estoril
+79608-865 da Paz / DF'),
+('8732', '3', 'Viela da Cunha
+Pantanal
+37043241 Jesus de Correia / RN'),
+('8733', '5', 'Ladeira Oliveira
+Vila Copacabana
+25323098 Barbosa / ES'),
+('8734', '1', 'Chcara da Cunha, 6
+Conjunto So Francisco De Assis
+28158534 Gonalves / RN'),
+('8735', '5', 'Vale Ana Julia da Conceio, 21
+Cruzeiro
+63305376 Silveira / AM'),
+('8736', '1', 'Viaduto de da Cruz, 94
+So Geraldo
+71100-919 Barros de Ramos / PI'),
+('8737', '4', 'Chcara de Viana, 22
+Vila Inestan
+13389-151 Nogueira do Sul / AL'),
+('8738', '2', 'Jardim Alana Ferreira, 358
+Vila Paris
+90185-373 Cardoso do Sul / RO'),
+('8739', '3', 'Quadra de Silva
+Camargos
+09448-564 Vieira das Flores / AM'),
+('8740', '2', 'Praia de Gomes, 58
+Nova Floresta
+66445-996 Jesus das Pedras / ES'),
+('8741', '1', 'Setor Porto, 1
+Vila Vista Alegre
+83029657 Fogaa / RN'),
+('8742', '5', 'Lago Dias, 79
+Caetano Furquim
+26753083 Nascimento das Pedras / AL'),
+('8743', '4', 'Morro de Cavalcanti
+Universitrio
+75549-414 Cunha das Pedras / CE'),
+('8744', '4', 'Chcara Joo Pedro Ribeiro, 16
+Nova Gameleira
+38911-665 Freitas / SE'),
+('8745', '3', 'Condomnio Francisco da Rocha
+Biquinhas
+98679-089 Lopes do Campo / RR'),
+('8746', '1', 'Ladeira Vieira, 5
+Vila Nova Gameleira 3 Seo
+42890-803 da Cruz / SP'),
+('8747', '2', 'Praia Isabel Cardoso
+Nova Gameleira
+69010954 Caldeira / RO'),
+('8748', '5', 'Praia Peixoto
+Conjunto Floramar
+40125039 da Conceio da Mata / BA'),
+('8749', '3', 'Viaduto Gomes, 665
+Boa Vista
+98439-232 da Mata de Caldeira / MA'),
+('8750', '3', 'Ladeira de Nunes, 92
+Santa Cecilia
+55654-042 Melo / AC'),
+('8751', '2', 'Vereda Sabrina Peixoto, 55
+Minas Caixa
+71733-687 Silva / TO'),
+('8752', '4', 'Estrada Viana, 369
+So Bernardo
+86295-328 Jesus / PA'),
+('8753', '3', 'Stio Rezende, 3
+Vila Suzana Primeira Seo
+92427824 Farias de Rodrigues / AM'),
+('8754', '1', 'Ncleo Costa, 2
+Trevo
+33785-894 Moura / MG'),
+('8755', '1', 'Travessa Davi Lucca Rocha, 55
+Santana Do Cafezal
+89625502 Almeida / AM'),
+('8756', '4', 'Campo Cardoso
+Novo Santa Cecilia
+96723-733 Pires / SP'),
+('8757', '4', 'Largo de Porto
+Vila Petropolis
+83727410 Viana do Campo / MS'),
+('8758', '1', 'Chcara de Santos, 82
+Lourdes
+79177283 Costela / SE'),
+('8759', '2', 'Setor Sales, 9
+Graja
+39110-219 Alves / TO'),
+('8760', '4', 'Recanto Isabella Arajo, 96
+Santa Margarida
+08521-674 Santos / AL'),
+('8761', '3', 'Stio Milena Pereira, 7
+Bairro Das Indstrias Ii
+91831-437 Alves / RS'),
+('8762', '4', 'Condomnio de Nascimento, 33
+Conjunto Providencia
+00665-797 Porto de Minas / PE'),
+('8763', '1', 'Chcara de Gonalves, 69
+Vila Das Oliveiras
+45584-145 Duarte / GO'),
+('8764', '5', 'Colnia Arajo, 8
+Vila So Dimas
+38404-426 Correia / AP'),
+('8765', '2', 'Rua Nogueira, 95
+Vila Do Pombal
+40648280 Jesus de Gois / MA'),
+('8766', '4', 'Ncleo da Mota, 29
+Jardim Guanabara
+00382-453 Carvalho de Viana / AM'),
+('8767', '3', 'Conjunto de Viana, 54
+Granja De Freitas
+11833-930 Alves / MA'),
+('8768', '4', 'Loteamento de Pires
+Primeiro De Maio
+60675080 Moraes da Prata / RN'),
+('8769', '3', 'Colnia Souza
+Vila Do Pombal
+67134623 da Conceio Grande / RR'),
+('8770', '3', 'Rodovia Maria Alice Porto, 192
+Califrnia
+10077-698 da Rocha / MS'),
+('8771', '1', 'Largo Danilo da Conceio, 6
+Nossa Senhora Do Rosrio
+66491190 Oliveira / AP'),
+('8772', '5', 'Loteamento de da Conceio, 39
+Branas
+61308-882 Lopes de Santos / PB'),
+('8773', '3', 'Trevo Caio Moreira, 749
+Vila De S
+71090-795 Castro do Campo / AL'),
+('8774', '5', 'Trecho de Costela, 697
+Santa Cecilia
+94822-534 Teixeira / PB'),
+('8775', '2', 'Morro de da Cunha, 731
+Nova Granada
+72980-886 Mendes da Prata / TO'),
+('8776', '5', 'Residencial Leandro Rodrigues, 34
+Califrnia
+36545170 Almeida / MG'),
+('8777', '1', 'Largo Ana Vitria Arago, 74
+Conjunto Taquaril
+52483-973 Rocha / PE'),
+('8778', '5', 'Aeroporto Jesus, 66
+Vila Suzana Primeira Seo
+54251-842 Cardoso / MG'),
+('8779', '5', 'Viaduto da Conceio, 563
+Vila Santo Antnio Barroquinha
+53241028 Vieira / RO'),
+('8780', '4', 'Setor de Duarte, 7
+Monte So Jos
+12477525 Martins de Carvalho / PR'),
+('8781', '3', 'Via de Rodrigues
+Novo Glria
+35189-705 Castro de da Cruz / SC'),
+('8782', '5', 'Setor de da Costa, 5
+Vila Santo Antnio
+96379452 Pires / BA'),
+('8783', '4', 'Feira de Nogueira, 37
+Bandeirantes
+66122-307 Oliveira / SP'),
+('8784', '5', 'Residencial Costela, 74
+Palmeiras
+15974-504 Moreira do Sul / AC'),
+('8785', '4', 'Viela de Nogueira, 39
+Graa
+10574044 Rezende / PR'),
+('8786', '3', 'Distrito Lara da Rosa, 977
+Vila Paris
+90170-414 Nunes / ES'),
+('8787', '4', 'Aeroporto Enzo Gabriel Porto, 42
+Vale Do Jatoba
+03536-432 Freitas / RS'),
+('8788', '3', 'Lagoa Vinicius Campos, 386
+Vila Calafate
+24066003 Melo de Correia / RO'),
+('8789', '1', 'Recanto Laura Freitas, 852
+Ouro Minas
+92170216 Alves / ES'),
+('8790', '3', 'Setor Farias, 602
+Aparecida 7 Seo
+48726100 Gomes / ES'),
+('8791', '4', 'Parque Ramos, 30
+Prado
+34840182 Cardoso de Martins / RS'),
+('8792', '4', 'Via Fernanda Gomes, 90
+Santa Sofia
+49847213 Souza / GO'),
+('8793', '5', 'Trevo de Porto, 1
+Serra
+67234-869 Sales de Dias / ES'),
+('8794', '3', 'Jardim Azevedo, 721
+Vila Madre Gertrudes 4 Seo
+55108922 Porto das Pedras / RN'),
+('8795', '1', 'Trevo de Pires, 770
+Santa Maria
+40586-574 Silva dos Dourados / AC'),
+('8796', '3', 'Alameda Cardoso, 440
+Dom Cabral
+16351-392 Melo da Serra / RO'),
+('8797', '2', 'Conjunto Luna Barros, 58
+Chcara Leonina
+59144-618 Rocha / PR'),
+('8798', '4', 'Alameda de da Mata, 8
+Pirineus
+16284-897 Azevedo / MT'),
+('8799', '3', 'Esplanada de Cavalcanti, 8
+Alto Barroca
+18450-550 da Cunha / PA'),
+('8800', '5', 'Lagoa de Gomes, 254
+Conjunto Paulo Vi
+82817-631 da Mata / SE'),
+('8801', '4', 'Passarela de Santos, 74
+Nova Floresta
+36905-961 da Costa do Campo / BA'),
+('8802', '3', 'Setor Duarte
+Granja Werneck
+41294268 da Cruz de Minas / MT'),
+('8803', '4', 'Esplanada Noah da Cruz
+Marilandia
+68861-974 Silva do Norte / RN'),
+('8804', '4', 'Estao Ribeiro, 363
+Vila Mangueiras
+84962715 da Cruz de Silva / GO'),
+('8805', '3', 'Lagoa Alcia Oliveira, 894
+Boa Vista
+74919098 Costa / MG'),
+('8806', '3', 'Feira de Nunes
+Conjunto Taquaril
+08815-976 Pinto da Praia / AP'),
+('8807', '4', 'Largo de Cunha, 9
+Vila Paris
+91396647 da Cruz / MG'),
+('8808', '2', 'Estrada de Arajo, 22
+Conjunto Paulo Vi
+19716-022 da Rocha / AP'),
+('8809', '3', 'Feira Calebe Barros, 63
+Venda Nova
+73843877 Almeida / MG'),
+('8810', '2', 'Rua Mait da Rocha, 4
+Vila Coqueiral
+39092-828 Nogueira / MA'),
+('8811', '5', 'Rua Ferreira, 74
+Aaro Reis
+36024-353 Correia / SP'),
+('8812', '2', 'Setor de Castro, 4
+Confisco
+15485348 Cunha das Flores / RN'),
+('8813', '4', 'Passarela de Costela, 43
+Leticia
+44191263 da Mata de Monteiro / AP'),
+('8814', '2', 'Loteamento de Gonalves, 56
+Jardim Vitoria
+97490-906 da Costa Grande / RJ'),
+('8815', '3', 'Morro Jlia Pereira, 784
+Conjunto Jatoba
+38258800 Pinto do Oeste / SC'),
+('8816', '5', 'Feira de Peixoto, 554
+Unio
+57953763 da Rosa / RR'),
+('8817', '1', 'Condomnio Arajo, 89
+Itapoa
+86976-198 Nogueira / PI'),
+('8818', '3', 'Loteamento Breno Dias, 28
+Colgio Batista
+38044-481 Peixoto da Prata / SC'),
+('8819', '3', 'Esplanada de Freitas, 975
+Vila Maria
+55849-592 da Rocha / AM'),
+('8820', '4', 'Campo Lavnia Gomes, 619
+Vila Puc
+73512-186 Gonalves / SP'),
+('8821', '3', 'Morro Sophie Ramos, 19
+Cnego Pinheiro 1 Seo
+76873-683 Melo / CE'),
+('8822', '5', 'Avenida de da Cruz, 2
+Fazendinha
+00084-501 da Rosa / TO'),
+('8823', '5', 'Ladeira Gabriel Gonalves, 59
+Buraco Quente
+65393878 Pinto / TO'),
+('8824', '3', 'Loteamento Nina Duarte, 361
+Nova Cintra
+64977081 Silveira / AC'),
+('8825', '2', 'Conjunto Rodrigues, 35
+Vila Da ria
+96345-838 da Mota / MG'),
+('8826', '4', 'Passarela de Arajo, 90
+Cnego Pinheiro 2 Seo
+45110649 da Paz de da Luz / PE'),
+('8827', '3', 'Viaduto de Rezende, 9
+Bandeirantes
+74882-975 Cunha de Nunes / AP'),
+('8828', '3', 'Passarela de Arago, 8
+Andiroba
+65956-699 Jesus / ES'),
+('8829', '3', 'Vereda de Barros, 599
+Sagrada Famlia
+47935567 Sales de das Neves / GO'),
+('8830', '5', 'Vila Pedro Lucas da Mota, 19
+Jaragu
+08327-066 Pinto / PI'),
+('8831', '1', 'Condomnio Fernanda Barbosa, 20
+Vila Nossa Senhora Do Rosrio
+79427-462 Jesus / AL'),
+('8832', '4', 'Estao de Freitas
+Vila Petropolis
+33141882 da Mata / RJ'),
+('8833', '2', 'Condomnio Martins, 912
+Diamante
+77697966 Rezende / BA'),
+('8834', '5', 'Campo de Melo, 62
+Vila Sesc
+58696324 Costela do Galho / RJ'),
+('8835', '4', 'Parque de Souza, 98
+Milionario
+33058539 Mendes / PB'),
+('8836', '4', 'Condomnio Natlia Cavalcanti, 5
+Jaqueline
+10389296 Arajo dos Dourados / DF'),
+('8837', '3', 'Praa de Barbosa, 81
+Independncia
+32660-508 Rocha / PB'),
+('8838', '1', 'Chcara de Sales, 2
+Novo Aaro Reis
+56081-113 da Cunha / PR'),
+('8839', '2', 'Colnia Barbosa, 455
+Marilandia
+86062-811 Costela do Oeste / DF'),
+('8840', '3', 'Conjunto Freitas, 273
+Juliana
+82627473 Melo Paulista / RN'),
+('8841', '1', 'Feira Nathan Pereira, 541
+Mariano De Abreu
+42458907 Ramos / PR'),
+('8842', '2', 'Viela Daniel Almeida, 63
+Vila Nova Dos Milionarios
+71304-413 Gonalves / RS'),
+('8843', '1', 'Parque Eloah Nunes, 21
+Maria Goretti
+10447617 da Cruz / AP'),
+('8844', '1', 'Jardim de Almeida, 5
+Mirante
+06325-786 Costa do Campo / TO'),
+('8845', '4', 'Vale Martins, 408
+Cidade Jardim Taquaril
+73521047 Azevedo do Amparo / PA'),
+('8846', '3', 'Esplanada Maria Sophia da Costa
+Graa
+62382080 da Conceio do Galho / RS'),
+('8847', '3', 'rea de Teixeira, 954
+Oeste
+80315-790 Barros de da Rosa / CE'),
+('8848', '5', 'Estao Freitas, 34
+Conjunto Novo Dom Bosco
+25614-972 Peixoto / AM'),
+('8849', '5', 'Praa de Melo, 613
+Goiania
+74177504 Moreira do Oeste / BA'),
+('8850', '4', 'Trecho Porto
+Minas Brasil
+96096-420 Ribeiro de da Costa / SP'),
+('8851', '1', 'Setor Miguel das Neves, 98
+So Cristvo
+33067754 Santos Alegre / SP'),
+('8852', '5', 'Chcara de Monteiro, 88
+Marieta 3 Seo
+92637-228 Teixeira do Amparo / RN'),
+('8853', '3', 'Estrada de Pinto, 4
+So Luiz
+67033758 Silva / AL'),
+('8854', '2', 'Alameda Maria Vitria Rocha, 52
+Vila Independencia 1 Seo
+86488-726 Pires / BA'),
+('8855', '4', 'Morro Joo Lucas Viana, 219
+Vila Ipiranga
+84199448 Costa de Gois / BA'),
+('8856', '2', 'Vale Nascimento, 55
+Ventosa
+22816-535 das Neves de Gois / SP'),
+('8857', '3', 'Loteamento Alves, 246
+Conjunto Taquaril
+64805-421 Silveira de Pereira / SE'),
+('8858', '2', 'Morro de Pereira
+Branas
+06006542 Correia de Ferreira / RN'),
+('8859', '1', 'Praa Arthur da Rosa, 437
+Vila Bandeirantes
+97544-829 Cunha / PR'),
+('8860', '5', 'Aeroporto de Arago, 349
+Lagoa
+89676257 Nascimento / ES'),
+('8861', '1', 'Lago de Pereira, 74
+Jardim Montanhs
+93071264 Caldeira / RS'),
+('8862', '1', 'Estao Nunes, 597
+Nova Cachoeirinha
+83200164 Moura das Pedras / TO'),
+('8863', '1', 'Via de Porto, 39
+Vila Unio
+46134-108 das Neves do Galho / SE'),
+('8864', '3', 'Ladeira de Arajo
+Vila Atila De Paiva
+00705-523 da Luz da Serra / PR'),
+('8865', '4', 'Feira de Porto, 2
+Jardim Guanabara
+55284488 Azevedo / AL'),
+('8866', '5', 'Jardim Emanuel Caldeira, 9
+Santa Rosa
+87793317 Alves / PA'),
+('8867', '1', 'Conjunto Mendes, 913
+Conjunto Celso Machado
+33362-258 Fernandes de Minas / AM'),
+('8868', '5', 'Fazenda de Gomes, 3
+Vila Nova Gameleira 3 Seo
+42616-708 da Paz de Minas / ES'),
+('8869', '1', 'Trevo Campos, 51
+Buraco Quente
+46891-404 Melo / PR'),
+('8870', '2', 'Aeroporto Nascimento, 673
+Sion
+80266-302 Caldeira do Galho / RR'),
+('8871', '5', 'Praia Kevin Azevedo, 78
+Vila Mantiqueira
+57680683 Duarte da Praia / SE'),
+('8872', '2', 'Praia de Oliveira, 71
+Minas Caixa
+97991-397 Moreira / BA'),
+('8873', '5', 'Residencial de Nogueira, 496
+Alpio De Melo
+74851-463 Jesus / RR'),
+('8874', '1', 'Largo de Lopes, 74
+Acaba Mundo
+10510-137 Rezende das Flores / MA'),
+('8875', '1', 'Recanto de Gomes, 30
+Santo Antnio
+80307237 Campos / TO'),
+('8876', '2', 'Ncleo Fernandes, 58
+Estrela Do Oriente
+98412598 Gonalves / RN'),
+('8877', '2', 'Favela Samuel Correia, 6
+Santo Antnio
+97109896 Lima de Moreira / GO'),
+('8878', '3', 'Conjunto de Jesus, 91
+Jardim Do Vale
+81888799 Costa Verde / BA'),
+('8879', '5', 'Passarela Souza, 55
+Confisco
+22526390 Mendes / PE'),
+('8880', '2', 'Lagoa Sarah das Neves, 68
+So Francisco Das Chagas
+45263-855 Azevedo das Flores / RO'),
+('8881', '4', 'Setor de Rodrigues
+Joo Pinheiro
+57748331 Nogueira / PR'),
+('8882', '4', 'Vila Vieira, 7
+Cenaculo
+21388608 Moraes / PI'),
+('8883', '1', 'Residencial Vieira, 59
+Santa Margarida
+56908599 Castro / TO'),
+('8884', '5', 'Praia de Jesus
+Brasil Industrial
+56279071 Barbosa de Ramos / TO'),
+('8885', '4', 'Chcara Mirella Gomes
+Vila Engenho Nogueira
+30492-944 Lopes Verde / MS'),
+('8886', '2', 'Ncleo de da Mota, 57
+Santa Rosa
+86415309 Fogaa / RN'),
+('8887', '4', 'Aeroporto Ana Beatriz Rodrigues, 765
+Vila Boa Vista
+70202-131 Costela de Almeida / AM'),
+('8888', '4', 'Recanto Oliveira
+Sion
+38758726 Rocha de Ribeiro / RJ'),
+('8889', '4', 'Viaduto de da Cunha, 61
+Vila Real 1 Seo
+11985-399 Fernandes de da Mata / TO'),
+('8890', '5', 'Rua Dias, 65
+Cidade Jardim Taquaril
+37279-743 Silva / RO'),
+('8891', '1', 'Recanto de Teixeira, 1
+Serra
+94972060 Rezende Grande / DF'),
+('8892', '1', 'Recanto de Santos, 69
+Flamengo
+82776-130 Dias de da Cruz / AL'),
+('8893', '1', 'Residencial Fernandes, 90
+Solar Do Barreiro
+88565760 Souza do Campo / TO'),
+('8894', '3', 'Passarela Peixoto, 7
+Nova Sua
+22125-152 Barbosa / AC'),
+('8895', '4', 'Via Maria Vitria Campos, 16
+Leonina
+13790787 Barbosa / TO'),
+('8896', '5', 'Recanto de Rocha, 312
+Marola
+87104-441 da Conceio / BA'),
+('8897', '1', 'Residencial Pedro Miguel Jesus, 24
+Vila Novo So Lucas
+52510435 Moura / MS'),
+('8898', '2', 'Condomnio de Vieira, 24
+Bonsucesso
+10534-425 Barbosa / RN'),
+('8899', '4', 'Vale Ferreira
+Vila Da Paz
+46688060 Nogueira / RN'),
+('8900', '3', 'Recanto Mirella da Cruz, 27
+Vila Ipiranga
+33822164 Cunha do Galho / PE'),
+('8901', '5', 'Campo Lucca Almeida, 9
+Pindura Saia
+68690-844 Martins / RO'),
+('8902', '4', 'Praia Maria Eduarda Cardoso, 78
+Coqueiros
+52545956 da Rosa das Flores / AL'),
+('8903', '5', 'Condomnio Maria Fernanda da Conceio, 419
+Boa Unio 2 Seo
+27572939 Cardoso / AL'),
+('8904', '5', 'Colnia Ramos, 9
+Ipiranga
+77014-433 Nunes / RO'),
+('8905', '3', 'Aeroporto de da Rocha, 737
+Nova Pampulha
+29238287 Freitas / TO'),
+('8906', '4', 'Feira de Souza, 48
+Camponesa 2 Seo
+62171-184 Castro do Sul / RS'),
+('8907', '4', 'Vila de Jesus, 7
+Flamengo
+04621-817 Arajo / BA'),
+('8908', '4', 'Viela Maysa Alves, 28
+Renascena
+53826172 Monteiro da Praia / GO'),
+('8909', '1', 'Via de Ribeiro, 68
+Marieta 3 Seo
+00092503 Barros / SE'),
+('8910', '5', 'Trecho Isabella Arajo, 2
+Fazendinha
+93266653 Correia da Prata / BA'),
+('8911', '3', 'Lago Isabel das Neves, 75
+Santana Do Cafezal
+60211098 Cunha das Pedras / AM'),
+('8912', '2', 'Morro Luiza Moura, 48
+Granja De Freitas
+40074135 da Cunha / RS'),
+('8913', '3', 'Esplanada Caio da Luz, 44
+Frei Leopoldo
+50531-931 da Paz / PR'),
+('8914', '5', 'Distrito da Mota, 51
+So Tomaz
+71524329 Mendes / PR'),
+('8915', '4', 'Estao Cardoso, 50
+Cnego Pinheiro 2 Seo
+99353558 Correia da Prata / RR'),
+('8916', '4', 'Vale de Silveira, 154
+Guarat
+31348529 da Mata / TO'),
+('8917', '1', 'Fazenda de Silva
+Vila Sumar
+08926-230 Cunha / RJ'),
+('8918', '1', 'Loteamento Arajo, 7
+Sagrada Famlia
+86713-300 Fernandes / RJ'),
+('8919', '2', 'Chcara Luiz Otvio da Rocha, 15
+Miramar
+67846-797 Viana Alegre / AP'),
+('8920', '1', 'Conjunto de da Rocha, 33
+Cachoeirinha
+64768567 da Mata / ES'),
+('8921', '5', 'Quadra de da Mota
+Floramar
+64219-812 Moraes / AL'),
+('8922', '3', 'Loteamento Juan Freitas, 50
+Mirante
+83929-978 Duarte / MA'),
+('8923', '4', 'Recanto de Monteiro, 40
+Joo Paulo Ii
+25869011 Barros / MS'),
+('8924', '5', 'Rua Vitor Hugo Nogueira, 45
+Dom Joaquim
+44779-867 Lopes das Pedras / MT'),
+('8925', '1', 'Aeroporto Felipe Pereira, 6
+Baro Homem De Melo 3 Seo
+60176-104 Ribeiro do Campo / CE'),
+('8926', '1', 'Condomnio Sales
+Vila Betnia
+61805930 Barbosa de da Luz / PB'),
+('8927', '1', 'Trecho Agatha Farias, 93
+Vila Pilar
+22889-424 Barbosa / PI'),
+('8928', '4', 'Alameda Nunes, 30
+Barroca
+47069-507 Lopes de Gois / PI'),
+('8929', '2', 'Favela Otvio Vieira, 64
+Maria Helena
+21058011 Nogueira / GO'),
+('8930', '4', 'Setor Azevedo, 44
+Grotinha
+91444-593 Sales / CE'),
+('8931', '4', 'Praa de das Neves, 9
+Baro Homem De Melo 2 Seo
+54372-018 Costa / PA'),
+('8932', '4', 'Via da Mata, 4
+Vila Cloris
+69257738 da Conceio de Gois / PE'),
+('8933', '5', 'Ptio da Luz, 9
+Baro Homem De Melo 3 Seo
+64864983 Cardoso / SP'),
+('8934', '2', 'Rodovia Ferreira
+Alto Caiaras
+52185139 Melo de Gonalves / ES'),
+('8935', '5', 'Largo Pinto
+Nossa Senhora Aparecida
+41180617 Jesus Alegre / RS'),
+('8936', '4', 'Avenida de Ribeiro, 9
+Esplanada
+32642021 Caldeira das Pedras / CE'),
+('8937', '4', 'Rua Ana Carolina da Mata, 94
+Camponesa 2 Seo
+79673155 Campos / TO'),
+('8938', '4', 'Stio de Fogaa, 46
+Mala E Cuia
+19980-856 Carvalho / AM'),
+('8939', '3', 'Estao Mendes, 77
+So Joo Batista
+78586-385 Campos das Pedras / MG'),
+('8940', '5', 'Morro Juliana Lopes, 94
+Conjunto Novo Dom Bosco
+68413164 Rezende / TO'),
+('8941', '4', 'Feira Arajo, 34
+Castanheira
+71039-287 Jesus / PA'),
+('8942', '3', 'Recanto Nogueira, 25
+Vila Barragem Santa Lcia
+34536-302 Ramos / AM'),
+('8943', '2', 'rea Thales Martins, 64
+Vila Sesc
+05522-031 Porto do Amparo / MG'),
+('8944', '1', 'Recanto de Viana, 68
+Vila Independencia 3 Seo
+52807761 Barbosa / AC'),
+('8945', '2', 'Ptio da Mata, 455
+Maria Virgnia
+45057446 Sales de Gois / AC'),
+('8946', '1', 'Quadra de Porto, 69
+Vila Nova
+17638871 Costa / GO'),
+('8947', '4', 'Trecho Juan Viana, 20
+Vila Califrnia
+61472-527 Gomes / BA'),
+('8948', '1', 'Morro de Rodrigues, 96
+Primeiro De Maio
+59531-224 Rezende da Praia / TO'),
+('8949', '3', 'Ncleo de das Neves, 28
+Jaqueline
+03740737 da Cruz / RO'),
+('8950', '2', 'Stio Caldeira, 6
+Lourdes
+59060-774 Monteiro / RO'),
+('8951', '4', 'Setor Rebeca Melo, 52
+Belmonte
+70637-099 Lima Alegre / AC'),
+('8952', '2', 'Jardim Marcelo Souza, 4
+Vila Atila De Paiva
+77323940 Pires / RS'),
+('8953', '5', 'Viaduto de Cardoso, 165
+Caiaras
+61245666 Gonalves / MA'),
+('8954', '5', 'Alameda de Lopes, 853
+Nossa Senhora Aparecida
+58553-371 da Cunha da Mata / MT'),
+('8955', '1', 'Parque Eduardo Castro, 56
+Jardim Vitoria
+75701-982 Souza / RR'),
+('8956', '5', 'Trevo Castro
+Madre Gertrudes
+57331794 da Mata dos Dourados / RN'),
+('8957', '1', 'Lagoa de Silva, 88
+Novo Das Industrias
+62671059 Santos Verde / PA'),
+('8958', '3', 'Avenida de Rocha, 27
+Delta
+40496242 Nunes / MG'),
+('8959', '3', 'Setor Davi Lucas Pires
+Marieta 2 Seo
+50328-846 da Luz / PI'),
+('8960', '2', 'Stio Fernandes, 148
+Grota
+13283383 Cunha / TO'),
+('8961', '5', 'Largo de Lopes, 39
+Baro Homem De Melo 2 Seo
+36349989 Nascimento / PA'),
+('8962', '1', 'Esplanada Teixeira, 746
+Cidade Jardim
+18322292 Melo da Prata / AM'),
+('8963', '5', 'Residencial Duarte, 59
+Vila Nova Dos Milionarios
+81591-953 Cardoso do Galho / PI'),
+('8964', '1', 'Jardim de Moraes, 49
+Nova Cachoeirinha
+52910-161 Moraes de da Paz / RN'),
+('8965', '4', 'Recanto Rezende, 14
+Flavio De Oliveira
+72756723 Moreira / SP'),
+('8966', '3', 'Recanto de da Luz, 68
+Vila Nova Cachoeirinha 2 Seo
+74205672 Costa Grande / AP'),
+('8967', '4', 'Morro de Campos, 46
+Vila Engenho Nogueira
+40823748 da Rocha do Campo / RO'),
+('8968', '1', 'Feira de Cunha, 64
+Santo Antnio
+82992038 Costa de Almeida / AM'),
+('8969', '3', 'Avenida Azevedo, 712
+Pirineus
+14244-184 Novaes / SC'),
+('8970', '2', 'Feira de Campos, 95
+Nova Gameleira
+26846133 Ribeiro / CE'),
+('8971', '3', 'Ncleo Azevedo
+Cardoso
+31127143 Mendes / MA'),
+('8972', '3', 'Morro Ferreira, 553
+Pedreira Padro Lopes
+54309736 Souza das Pedras / GO'),
+('8973', '2', 'Vereda Fogaa, 670
+Vila Minaslandia
+81885-443 da Costa Paulista / MA'),
+('8974', '3', 'Largo da Cruz, 9
+Padre Eustquio
+50765513 Ferreira de Cardoso / SC'),
+('8975', '1', 'Viaduto de Duarte, 587
+Vera Cruz
+88837544 Novaes / BA'),
+('8976', '1', 'Viaduto de Gonalves, 8
+Guarani
+70116287 Arago de Gois / MG'),
+('8977', '1', 'Ncleo Theo Ramos
+Betnia
+88180982 Lima de Nogueira / MA'),
+('8978', '3', 'Trevo de Almeida, 746
+Alpes
+37361-036 da Rosa / BA'),
+('8979', '3', 'Favela Joo Pedro Barros, 41
+Solimoes
+33872493 das Neves de Minas / SC'),
+('8980', '5', 'Colnia Cardoso
+Camponesa 2 Seo
+03355-736 Porto / PA'),
+('8981', '4', 'Fazenda de Cardoso, 463
+Goiania
+64749020 Nogueira / RO'),
+('8982', '4', 'Feira de da Cruz, 82
+Vila So Rafael
+16599-085 Fernandes Verde / MA'),
+('8983', '5', 'Vale Caio Dias, 65
+Leonina
+73906-787 Alves / MS'),
+('8984', '3', 'Campo Correia, 9
+Vila Calafate
+18694-569 da Luz / CE'),
+('8985', '1', 'Aeroporto Pereira, 63
+Dom Silverio
+86292-054 Costa / DF'),
+('8986', '3', 'Vale Arago
+Conjunto Lagoa
+88614246 da Rocha da Praia / RR'),
+('8987', '2', 'Rodovia Mariana da Conceio, 5
+Vila Independencia 3 Seo
+62528821 Nogueira / RS'),
+('8988', '4', 'Stio Rocha, 10
+Concrdia
+74257-719 Rodrigues dos Dourados / AP'),
+('8989', '1', 'Recanto Dias, 42
+Corao Eucarstico
+24230298 Silveira das Pedras / RJ'),
+('8990', '3', 'Estrada Davi Viana, 3
+Outro
+18183-511 Dias Grande / MT'),
+('8991', '1', 'Loteamento Clarice Silveira, 543
+Flamengo
+15638650 da Conceio de Nascimento / PA'),
+('8992', '3', 'Setor Francisco Freitas, 35
+Vila Formosa
+85981895 Nunes Verde / AP'),
+('8993', '1', 'Lagoa Ana Carolina Pereira, 20
+Vila Independencia 2 Seo
+22086912 da Mata / RN'),
+('8994', '2', 'Recanto Antnio Peixoto, 3
+Vila Cloris
+92821561 Oliveira Grande / RR'),
+('8995', '3', 'Setor Gustavo Henrique Gonalves, 84
+So Francisco Das Chagas
+13533540 Pereira / MG'),
+('8996', '1', 'Loteamento de Ferreira
+Lindia
+30090-172 da Cunha Paulista / RR'),
+('8997', '4', 'Ptio Campos, 28
+Vila Paris
+86838164 Lima da Prata / PB'),
+('8998', '5', 'Feira Nunes, 31
+pia
+31491393 Cardoso / MS'),
+('8999', '5', 'Favela Thiago Mendes, 786
+Aaro Reis
+75385-405 Rocha / AL'),
+('9000', '3', 'Ptio de Costela, 28
+Nossa Senhora Aparecida
+62244442 Novaes da Serra / BA'),
+('9001', '5', 'Trevo de Rocha, 89
+Cnego Pinheiro 1 Seo
+03931881 Ferreira das Flores / AP'),
+('9002', '5', 'Aeroporto de Lopes, 2
+Laranjeiras
+55818462 Nunes do Galho / PB'),
+('9003', '2', 'Vereda Ana das Neves, 8
+Eymard
+81799061 Almeida / SP'),
+('9004', '5', 'Lagoa Lvia Correia
+Itaipu
+80737-981 Novaes do Sul / MG'),
+('9005', '1', 'Residencial Renan Fernandes, 247
+Ipe
+94658424 Moraes / RN'),
+('9006', '5', 'Estrada Nina da Cruz, 680
+Vila Puc
+78986450 Melo da Praia / SE'),
+('9007', '4', 'Recanto de Arago, 89
+Vila Madre Gertrudes 2 Seo
+24367222 Barros / MS'),
+('9008', '4', 'Estrada Alana da Luz
+Vila Oeste
+63057-062 Barros / MT'),
+('9009', '1', 'Ncleo Oliveira
+Santa Ins
+65331-860 Arago / ES'),
+('9010', '4', 'Conjunto Nogueira, 64
+Vila Da ria
+03252714 Arajo / RR'),
+('9011', '1', 'Praa de Rocha, 86
+Ventosa
+67006-262 Rodrigues de Minas / MS'),
+('9012', '3', 'Setor da Cruz, 94
+Vila Santo Antnio
+37627266 da Conceio Paulista / DF'),
+('9013', '3', 'rea da Paz, 95
+Santa Rita
+54776-688 Vieira do Galho / RR'),
+('9014', '3', 'Jardim Arajo
+Mangueiras
+67477116 Pinto / AP'),
+('9015', '3', 'Morro Bruno Caldeira, 982
+Palmares
+16495649 Campos Grande / RN'),
+('9016', '1', 'Vale de Moraes
+Vila Puc
+90108723 da Cunha do Campo / PA'),
+('9017', '2', 'rea de da Mota, 86
+Vera Cruz
+01866542 Barbosa Verde / SE'),
+('9018', '2', 'Ncleo Amanda Moraes, 92
+Santo Andr
+28180426 Azevedo / MT'),
+('9019', '4', 'Feira de Barbosa
+Vila Independencia 3 Seo
+00535623 Jesus do Amparo / MS'),
+('9020', '4', 'Feira de Gonalves, 12
+Jardim Felicidade
+12547421 Campos Paulista / RO'),
+('9021', '4', 'Quadra de Fogaa, 3
+Engenho Nogueira
+40050854 Porto / RJ'),
+('9022', '3', 'Trevo de Rocha, 99
+Jardim Atlntico
+22261-778 Caldeira / DF'),
+('9023', '5', 'Stio de Viana, 55
+Joo Paulo Ii
+20938057 Lopes / AC'),
+('9024', '1', 'rea Joo Lucas Cardoso, 84
+Horto Florestal
+12336075 Cardoso Grande / BA'),
+('9025', '1', 'Condomnio Cardoso, 79
+Santa Rita
+79040620 Teixeira / AC'),
+('9026', '5', 'Praa Castro, 2
+Vila Nova
+56642651 Silveira / TO'),
+('9027', '4', 'Praa de Lima, 160
+Cnego Pinheiro 2 Seo
+53173433 Silveira / SE'),
+('9028', '1', 'Lago Cardoso, 37
+lvaro Camargos
+52269-686 Monteiro do Oeste / AC'),
+('9029', '1', 'Vila Arago, 83
+Urca
+51487-163 Costela / CE'),
+('9030', '1', 'Rodovia Brenda Lima, 508
+Rio Branco
+49708123 Gonalves / ES'),
+('9031', '3', 'Passarela de Santos, 63
+Vila Independencia 3 Seo
+44223496 Rocha / RO'),
+('9032', '3', 'Ptio Campos, 42
+Ermelinda
+10629-489 Pinto / BA'),
+('9033', '1', 'Trevo Cunha, 60
+Cnego Pinheiro 1 Seo
+33160939 da Cruz do Norte / TO'),
+('9034', '3', 'Aeroporto da Rocha, 35
+Jardinpolis
+25145215 Almeida Verde / RJ'),
+('9035', '1', 'Feira Duarte, 371
+Santa Isabel
+62293826 Dias / MG'),
+('9036', '5', 'Feira Cavalcanti
+lvaro Camargos
+18669442 Ferreira Alegre / SC'),
+('9037', '1', 'Campo de Mendes, 78
+Vila Atila De Paiva
+84786582 Almeida / MA'),
+('9038', '4', 'Morro Benjamin Cardoso, 25
+Ventosa
+01151-906 Vieira / BA'),
+('9039', '2', 'Ptio de Oliveira, 1
+Mineiro
+62378-157 da Rocha das Pedras / PA'),
+('9040', '4', 'Via da Mota, 564
+Aguas Claras
+90435-763 da Costa / SP'),
+('9041', '4', 'Ptio de Cardoso
+Dom Silverio
+97288013 Ribeiro Paulista / AC'),
+('9042', '2', 'Vereda Helosa Peixoto, 29
+Conjunto So Francisco De Assis
+87068-509 Moraes / MT'),
+('9043', '3', 'Campo de Monteiro, 53
+Ouro Minas
+72479023 Pires dos Dourados / CE'),
+('9044', '3', 'Rua de Duarte, 636
+Acaba Mundo
+45719-196 Cavalcanti Grande / MT'),
+('9045', '4', 'Fazenda Juliana Mendes, 85
+Santana Do Cafezal
+58772946 Almeida / CE'),
+('9046', '3', 'Trecho de Caldeira, 404
+Nossa Senhora Do Rosrio
+34925-088 Monteiro / PB'),
+('9047', '5', 'Chcara Joana das Neves, 53
+Vila Jardim Alvorada
+93160-023 da Mata / RJ'),
+('9048', '2', 'Praa Moraes, 33
+Ferno Dias
+23905825 Costela de Ribeiro / RN'),
+('9049', '1', 'Ptio Joaquim da Conceio
+Jardim So Jos
+43209-131 Carvalho do Oeste / AM'),
+('9050', '3', 'Ptio Manuela Barros, 511
+Vila Novo So Lucas
+93676314 da Rosa Verde / RN'),
+('9051', '3', 'Trevo Emilly da Luz, 13
+So Paulo
+74312-656 Duarte / AP'),
+('9052', '1', 'Travessa de Nogueira, 37
+Alta Tenso 1 Seo
+93657-776 Carvalho do Campo / CE'),
+('9053', '1', 'Colnia Gomes, 87
+So Joo Batista
+43066-674 Viana / PE'),
+('9054', '1', 'Lagoa Isabella Alves
+Piratininga
+23879-624 Teixeira / DF'),
+('9055', '1', 'Distrito Carvalho, 36
+Nova Floresta
+08122-572 Sales de Gois / RR'),
+('9056', '2', 'Alameda de Souza, 263
+Universo
+44348176 Costela / PE'),
+('9057', '4', 'rea de Novaes, 7
+Vila Paris
+01508-873 Moraes de Rocha / SC'),
+('9058', '4', 'Aeroporto Moraes
+Vila Paquet
+82054223 da Conceio Verde / SP'),
+('9059', '2', 'Condomnio Moura
+So Jorge 2 Seo
+41921-326 Azevedo de Gois / DF'),
+('9060', '5', 'Viela de Barros, 99
+Jardim So Jos
+76023-931 Nunes Paulista / MG'),
+('9061', '5', 'Ptio Vieira, 9
+Vila Nova Cachoeirinha 3 Seo
+42849969 Moura das Flores / SE'),
+('9062', '2', 'Condomnio Maria Luiza Pires, 73
+Vila Paraso
+62345747 Pinto / RN'),
+('9063', '5', 'Ncleo Peixoto, 14
+Maria Helena
+98908762 da Paz do Amparo / MT'),
+('9064', '3', 'Feira Ana Carolina Pinto, 386
+Vila Nossa Senhora Do Rosrio
+87107-857 Cunha / PA'),
+('9065', '3', 'Vereda de Mendes
+Vila Da ria
+35103-828 Lopes / PB'),
+('9066', '5', 'Condomnio Sophia Barros, 33
+Conjunto Serra Verde
+59784-609 Gomes / SE'),
+('9067', '1', 'Loteamento Fogaa
+So Damio
+14741-698 Lima Alegre / RN'),
+('9068', '3', 'Estrada de Freitas, 86
+Pindorama
+92656-000 Barros / AC'),
+('9069', '3', 'Morro Pires, 69
+Conjunto Bonsucesso
+39082373 Silveira / ES'),
+('9070', '2', 'Jardim Peixoto, 9
+Castelo
+28560473 Campos / RN'),
+('9071', '1', 'Travessa de Carvalho, 89
+Alpes
+23750-597 Monteiro de Moura / MA'),
+('9072', '3', 'Condomnio Almeida, 86
+Cnego Pinheiro 2 Seo
+63745041 Arajo de Cunha / SE'),
+('9073', '1', 'Fazenda Ana Lvia Caldeira, 91
+Planalto
+19365-207 Nascimento de Cunha / SP'),
+('9074', '2', 'Conjunto Igor Barros, 98
+Nossa Senhora Da Aparecida
+37891497 Carvalho / PE'),
+('9075', '1', 'Lago Enzo Cavalcanti, 241
+Vila Canto Do Sabi
+67220-331 Silva das Flores / MS'),
+('9076', '3', 'Fazenda Arajo, 82
+Atila De Paiva
+25972-260 Cardoso de Santos / AC'),
+('9077', '4', 'Quadra Agatha da Mata, 3
+Tupi B
+20202377 Cardoso / MG'),
+('9078', '3', 'Ladeira Pires, 85
+Inconfidncia
+25723612 Cunha / AP'),
+('9079', '4', 'Favela Ribeiro, 65
+Conjunto Minas Caixa
+24297500 Martins / SE'),
+('9080', '3', 'Quadra Esther Silva
+Vila Nova Cachoeirinha 1 Seo
+49218340 Moraes de Viana / MA'),
+('9081', '2', 'Jardim de Farias, 33
+Granja Werneck
+19517847 Silveira / GO'),
+('9082', '1', 'Ncleo Ana Jlia da Mata, 34
+Granja Werneck
+90295-996 da Rosa da Serra / PE'),
+('9083', '2', 'Conjunto Carvalho, 64
+So Salvador
+00533-449 Vieira / RR'),
+('9084', '1', 'Largo de Pinto, 5
+Solar Do Barreiro
+35963-834 da Mata / AL'),
+('9085', '5', 'Estrada Caroline Caldeira, 23
+Mineiro
+24457525 Nunes / MG'),
+('9086', '3', 'Largo de Castro, 325
+Baro Homem De Melo 3 Seo
+69581853 Moraes / RR'),
+('9087', '5', 'Distrito de Cardoso, 65
+Primeiro De Maio
+92068-450 Rezende do Amparo / AC'),
+('9088', '1', 'Ptio de Dias, 2
+Minaslandia
+35279895 Farias / PB'),
+('9089', '1', 'Ladeira Gabriel Castro, 50
+Mirtes
+34231006 Gonalves do Amparo / SC'),
+('9090', '1', 'Campo Cardoso, 88
+Vila Da Paz
+79208-901 Pires das Pedras / RN'),
+('9091', '4', 'rea Lucca Vieira, 38
+Silveira
+44438-966 Dias de Duarte / RS'),
+('9092', '2', 'Vila Barbosa, 84
+Belmonte
+62570914 Jesus de Minas / ES'),
+('9093', '2', 'Favela de Melo, 2
+Corao De Jesus
+76985103 Viana / RO'),
+('9094', '3', 'Stio Daniela Duarte, 77
+Aaro Reis
+64753-034 Alves de da Conceio / AL'),
+('9095', '2', 'Stio de Gomes
+Vila Independencia 1 Seo
+46800-343 Silva de Pereira / AL'),
+('9096', '1', 'Praia de Rocha, 33
+Palmeiras
+44968-976 Duarte Paulista / SE'),
+('9097', '1', 'Passarela da Paz, 98
+Santa Terezinha
+42522-744 Mendes do Oeste / SC'),
+('9098', '1', 'Passarela Cardoso, 93
+Carlos Prates
+91082308 Alves / RO'),
+('9099', '2', 'Praia Lorena Lima, 91
+Corao Eucarstico
+47072952 Cardoso Verde / RO'),
+('9100', '5', 'Vila de Nogueira, 48
+Ouro Preto
+77101972 Castro / ES'),
+('9101', '1', 'Conjunto Sophie Carvalho, 17
+Caetano Furquim
+24747-618 Souza da Prata / PA'),
+('9102', '4', 'Viaduto Caroline Dias
+Liberdade
+94038217 Almeida / SE'),
+('9103', '2', 'Jardim de Sales, 46
+Vila Nova Paraso
+75194-342 Fogaa / PA'),
+('9104', '3', 'Lagoa Novaes
+Novo Aaro Reis
+92288866 Moreira / RN'),
+('9105', '3', 'Setor de Nunes, 20
+Marieta 3 Seo
+05255568 da Costa / CE'),
+('9106', '4', 'Campo de Vieira, 6
+Salgado Filho
+17327553 Pinto dos Dourados / MG'),
+('9107', '3', 'Estrada Rocha, 30
+Vila Jardim Montanhes
+49303-490 Freitas da Praia / AC'),
+('9108', '2', 'Praa de Ramos, 37
+Serra Do Curral
+78115421 Fernandes / MG'),
+('9109', '5', 'Aeroporto Rodrigues
+Jardim Felicidade
+60291-939 Santos / AM'),
+('9110', '3', 'Conjunto de da Cunha, 11
+Lourdes
+33522307 Teixeira / GO'),
+('9111', '2', 'Vila Freitas, 9
+Caetano Furquim
+46086618 Peixoto do Oeste / AL'),
+('9112', '3', 'Largo de Gonalves, 48
+Vila Coqueiral
+15190-857 Santos de da Luz / DF'),
+('9113', '3', 'Campo Fogaa, 7
+Vera Cruz
+06777867 Farias / RJ'),
+('9114', '2', 'Ptio Helena da Cruz, 21
+Copacabana
+23463-063 Nascimento Grande / BA'),
+('9115', '2', 'Setor Santos, 385
+Bom Jesus
+25642-912 Arago Verde / MA'),
+('9116', '2', 'Viela Luiz Gustavo Souza, 1
+Vila Antena Montanhs
+91686478 Moraes da Praia / TO'),
+('9117', '1', 'Viela de Nunes
+Rio Branco
+86322544 Carvalho do Amparo / SP'),
+('9118', '4', 'Praia Brenda Almeida
+Europa
+92454-488 Duarte / PE'),
+('9119', '4', 'Residencial de Moreira, 68
+Morro Dos Macacos
+45729082 Pereira / SE'),
+('9120', '1', 'Rodovia Maysa Souza, 87
+Jardim Dos Comerciarios
+53901-336 da Luz / RR'),
+('9121', '4', 'Residencial Moreira, 21
+Canaa
+04808-164 Novaes de Oliveira / RR'),
+('9122', '5', 'Avenida Santos, 321
+Vila Oeste
+38891-872 Fernandes de Arago / AC'),
+('9123', '2', 'rea Juliana da Mota, 72
+So Luiz
+10924295 Souza / SP'),
+('9124', '2', 'Recanto Cau Campos, 33
+Conjunto Taquaril
+70646406 Nunes da Mata / RS'),
+('9125', '1', 'Largo Rodrigues, 25
+Piraja
+95815287 Novaes / DF'),
+('9126', '5', 'Setor de Novaes, 28
+Santa Isabel
+32446-662 Ribeiro / SC'),
+('9127', '1', 'Travessa de Pereira, 176
+Conjunto Califrnia I
+53507-444 Peixoto / AP'),
+('9128', '5', 'Loteamento de Dias, 106
+Castelo
+02085-535 da Cruz / MG'),
+('9129', '2', 'Quadra Augusto Pires, 20
+Ernesto Nascimento
+99793400 Cunha de Peixoto / RS'),
+('9130', '4', 'Largo Raul Moura, 90
+Vila Nossa Senhora Do Rosrio
+25770347 Moreira / BA'),
+('9131', '1', 'Ptio de Martins, 815
+Jardim Atlntico
+01502359 Rocha do Campo / TO'),
+('9132', '5', 'Conjunto de Mendes, 725
+Cidade Jardim
+12410064 Ramos de da Cunha / PE'),
+('9133', '3', 'Vereda Barbosa, 886
+Bom Jesus
+20981-293 Dias dos Dourados / AL'),
+('9134', '4', 'Aeroporto Cardoso, 95
+Antonio Ribeiro De Abreu 1 Seo
+39557-793 Caldeira da Serra / PB'),
+('9135', '2', 'Vila Ramos, 58
+Cachoeirinha
+81599-344 Pires do Sul / BA'),
+('9136', '2', 'Travessa Fogaa, 213
+Nossa Senhora Da Conceio
+07044-078 Cavalcanti das Flores / AM'),
+('9137', '5', 'Morro Pinto, 8
+So Jos
+66865590 Pinto / TO'),
+('9138', '2', 'Largo Las da Costa, 62
+Paraso
+74332646 Ramos / PR'),
+('9139', '5', 'Lago de Jesus, 3
+Conjunto Lagoa
+70784308 Nogueira / PB'),
+('9140', '1', 'Estao de Teixeira, 8
+Aparecida
+33840760 Fogaa do Oeste / AC'),
+('9141', '4', 'Avenida de Dias, 70
+Camargos
+20251-645 Castro do Norte / MS'),
+('9142', '5', 'Viaduto Luiza da Cruz, 71
+Guarani
+29977-428 Freitas Alegre / TO'),
+('9143', '4', 'Via de Costa, 3
+Delta
+69721-256 Duarte / PR'),
+('9144', '3', 'Estrada Costa, 224
+Ernesto Nascimento
+54466-662 Cavalcanti / PE'),
+('9145', '5', 'Quadra de Porto, 88
+So Damio
+72756-742 Azevedo da Mata / SP'),
+('9146', '3', 'Favela Maria Alice Rezende, 79
+Nova Sua
+34617-170 da Paz / AM'),
+('9147', '1', 'Travessa Lavnia Costela, 12
+Pousada Santo Antonio
+59538611 Gonalves de Santos / MT'),
+('9148', '2', 'Condomnio Cunha, 29
+Castanheira
+16353983 Barbosa de Carvalho / RO'),
+('9149', '3', 'Alameda da Paz, 238
+Aparecida
+86352431 Vieira de Gois / DF'),
+('9150', '5', 'Favela Alves
+Vila So Dimas
+61257180 Silva / PB'),
+('9151', '4', 'Vila Ana Beatriz Farias, 2
+Ouro Preto
+44274-903 da Mota Alegre / RR'),
+('9152', '5', 'Stio Ana Sophia Cardoso
+So Tomaz
+76603-058 Gomes de Melo / PB'),
+('9153', '4', 'Viela de da Rosa, 333
+Aparecida 7 Seo
+92279911 da Cunha de Minas / RS'),
+('9154', '3', 'Ladeira Matheus Souza
+Sagrada Famlia
+08784-828 Rodrigues / RN'),
+('9155', '2', 'Parque Nascimento, 316
+Jardim Dos Comerciarios
+90536710 Moraes / PE'),
+('9156', '2', 'Rua Fernandes, 54
+Joo Pinheiro
+87406-714 Melo / MA'),
+('9157', '4', 'Via Farias, 13
+So Paulo
+92143-568 Correia / RN'),
+('9158', '5', 'Avenida da Paz, 7
+Conjunto Celso Machado
+11713278 Pereira / SC'),
+('9159', '5', 'Estrada Sophia da Cruz, 70
+Brasil Industrial
+06400786 Nascimento / SC'),
+('9160', '3', 'Feira de Cunha, 729
+So Joo Batista
+42720026 Freitas / BA'),
+('9161', '1', 'Vila de Nogueira, 50
+Taquaril
+80269-626 Costa do Norte / ES'),
+('9162', '1', 'Rua Andr Farias, 593
+Floramar
+19564037 Costela de Sales / BA'),
+('9163', '2', 'Vale de Sales, 76
+Vila Calafate
+78999-579 Cavalcanti Paulista / PE'),
+('9164', '2', 'Trevo Laura Rezende, 6
+Joo Paulo Ii
+69487878 Almeida / PR'),
+('9165', '5', 'Quadra de Rezende, 65
+So Tomaz
+58402821 Mendes / SP'),
+('9166', '4', 'Condomnio Vieira, 84
+Cnego Pinheiro 1 Seo
+18026761 Ribeiro / SE'),
+('9167', '4', 'Colnia Rocha, 1
+Vila Nova Cachoeirinha 1 Seo
+18874-383 Duarte / AM'),
+('9168', '2', 'Fazenda Lara da Rocha, 31
+Vila Paquet
+26504-108 Silveira / SP'),
+('9169', '3', 'Estrada de Nascimento
+Vila Tirol
+96505618 Barbosa das Flores / RO'),
+('9170', '3', 'Condomnio de Moraes, 13
+Novo Tupi
+71486538 Nunes / AL'),
+('9171', '2', 'Alameda Rebeca Moura, 41
+Mineiro
+10273-918 Nunes do Amparo / PR'),
+('9172', '5', 'Loteamento de Freitas
+Conjunto Serra Verde
+87221084 Cavalcanti / DF'),
+('9173', '2', 'Lagoa Moreira, 488
+Vila Madre Gertrudes 4 Seo
+91104-264 da Luz Paulista / RR'),
+('9174', '4', 'Ncleo Rocha, 85
+Vila Trinta E Um De Maro
+75077-969 Correia da Serra / DF'),
+('9175', '5', 'Esplanada Matheus Ramos, 76
+So Pedro
+73765619 Viana / SC'),
+('9176', '1', 'Viaduto Juan Caldeira, 96
+Ribeiro De Abreu
+43458874 Arajo / MT'),
+('9177', '2', 'rea Fernandes, 542
+Vitoria
+05161-947 Arago / RJ'),
+('9178', '2', 'Distrito de Ramos, 61
+Vista Alegre
+86893759 Pereira / AP'),
+('9179', '3', 'Estrada de Cardoso, 4
+Maria Goretti
+82605-372 Azevedo da Serra / DF'),
+('9180', '5', 'Campo da Paz, 658
+Capito Eduardo
+09036054 Alves / ES'),
+('9181', '2', 'Conjunto Porto, 57
+Vila Dos Anjos
+24915665 Martins Verde / PB'),
+('9182', '4', 'Lagoa Costela, 825
+Vila Da ria
+22663-675 Moraes / DF'),
+('9183', '1', 'Largo Cau Sales
+Nova Granada
+53368466 Costela / RJ'),
+('9184', '2', 'Ladeira Ceclia Correia, 59
+Vila Pilar
+61820298 da Cruz / SP'),
+('9185', '4', 'Lago Helena Dias
+Cruzeiro
+94336-606 Sales de Gois / RO'),
+('9186', '3', 'Jardim Vitor Hugo Peixoto, 43
+So Geraldo
+86761992 Nascimento dos Dourados / TO'),
+('9187', '2', 'Jardim Ribeiro, 5
+Gameleira
+34638-947 Caldeira / RO'),
+('9188', '3', 'Campo Almeida, 79
+Tnel De Ibirit
+08982-865 Castro / RN'),
+('9189', '4', 'Setor Caio Pinto, 36
+Joo Pinheiro
+45267338 Jesus / MG'),
+('9190', '4', 'Chcara Freitas, 663
+Baro Homem De Melo 2 Seo
+24394-246 Cardoso de Nogueira / MG'),
+('9191', '3', 'Setor Leandro Gomes, 13
+Vila Oeste
+21904-036 Mendes do Amparo / AM'),
+('9192', '1', 'Avenida de Rezende, 62
+Calafate
+17019-979 Barbosa / AC'),
+('9193', '1', 'Lagoa Silveira, 55
+Santa Efignia
+96505-973 Azevedo / RN'),
+('9194', '5', 'Via Ana Vitria Viana, 13
+Jardim Do Vale
+53023177 Rezende / PB'),
+('9195', '1', 'Praia Yasmin Freitas, 4
+Vila Do Pombal
+39617032 Cunha / AM'),
+('9196', '3', 'Praa Cardoso, 413
+Vila Inestan
+49403275 da Cunha / PB'),
+('9197', '1', 'Vereda Costa, 88
+Vila Mangueiras
+18877-046 Duarte dos Dourados / MA'),
+('9198', '1', 'Avenida Ana Clara da Rocha, 27
+Serra
+49889879 Caldeira de Azevedo / RO'),
+('9199', '1', 'Stio Mendes, 46
+Santa Monica
+62464-271 Peixoto de Peixoto / BA'),
+('9200', '2', 'Trevo Peixoto, 37
+Olaria
+98406-325 Rocha / RJ'),
+('9201', '1', 'Distrito Farias, 59
+Nossa Senhora Da Aparecida
+90966-686 Rocha / PB'),
+('9202', '2', 'Largo de Pereira, 18
+Confisco
+09427438 Novaes do Galho / PR'),
+('9203', '4', 'Viela Ceclia Porto
+Pirineus
+38225-792 Rocha / RN'),
+('9204', '5', 'Travessa de da Paz, 8
+Unidas
+47823-834 Fogaa / RS'),
+('9205', '4', 'Distrito Juan Moraes, 15
+Aguas Claras
+74547624 Dias / PE'),
+('9206', '5', 'Rodovia Alves, 89
+Padre Eustquio
+57256008 Rocha de Rocha / AM'),
+('9207', '3', 'Ptio de Barros
+Vila Sumar
+09626176 Arajo de Gois / DF'),
+('9208', '3', 'Alameda Vieira, 89
+Jardim Alvorada
+48839893 Pires dos Dourados / DF'),
+('9209', '4', 'Ptio Joo Guilherme Fogaa, 89
+Vila Copasa
+62413-784 Novaes do Amparo / SE'),
+('9210', '1', 'Estrada Pinto, 74
+Pantanal
+37336739 Pereira de Moura / MA'),
+('9211', '2', 'Vale Ramos, 397
+Vila Maria
+81075694 Arago dos Dourados / ES'),
+('9212', '3', 'Residencial Rafael Campos, 95
+Custodinha
+09341-682 Lima / AP'),
+('9213', '3', 'Recanto Natlia Carvalho, 83
+So Gonalo
+32763047 Ramos / PI'),
+('9214', '1', 'Residencial de Rezende, 175
+Baro Homem De Melo 3 Seo
+79936726 Costa / DF'),
+('9215', '2', 'Morro de Jesus
+Vila Copasa
+93848583 Rodrigues / AL'),
+('9216', '2', 'Rodovia Nunes, 264
+Das Industrias I
+12814857 Ramos do Sul / RN'),
+('9217', '4', 'Estrada de Nunes, 49
+Grotinha
+57570588 Cardoso / AL'),
+('9218', '4', 'Favela Nunes, 11
+Maria Tereza
+94129-374 Costa / RR'),
+('9219', '2', 'Alameda Ryan Oliveira, 8
+Lourdes
+00051957 Lopes do Campo / RJ'),
+('9220', '4', 'Ladeira Rocha, 156
+Vila Minaslandia
+69216305 da Costa / PB'),
+('9221', '5', 'Trevo Duarte, 64
+Inconfidncia
+98119119 Fernandes do Galho / TO'),
+('9222', '2', 'Ladeira de Pires, 16
+Cenaculo
+88920099 da Luz / MA'),
+('9223', '4', 'Fazenda de Caldeira, 99
+Vila Da Paz
+14879-660 Costa de Santos / SE'),
+('9224', '4', 'Avenida de Cunha, 16
+Boa Esperana
+74254-169 Silva de Cardoso / MS'),
+('9225', '5', 'Rodovia Vieira, 57
+So Tomaz
+83777984 Barros / RS'),
+('9226', '2', 'Campo de Jesus, 93
+Vila Aeroporto
+38308251 Santos / SP'),
+('9227', '2', 'Ncleo Ribeiro, 93
+Cardoso
+76174470 Campos do Galho / GO'),
+('9228', '2', 'Stio Bruna Correia, 57
+Cachoeirinha
+07127963 da Luz de Costa / MA'),
+('9229', '5', 'Chcara Augusto Souza, 8
+Conjunto So Francisco De Assis
+29515411 Almeida / PE'),
+('9230', '5', 'rea Carolina Cardoso, 51
+Estrela Do Oriente
+85406-186 Campos da Serra / DF'),
+('9231', '1', 'Trecho Teixeira, 92
+Vila Paraso
+95839374 Alves do Sul / PE'),
+('9232', '2', 'Alameda de Campos, 4
+Vila Santa Monica 1 Seo
+31951-020 Mendes das Flores / RR'),
+('9233', '3', 'Alameda Moraes, 93
+Vila Santo Antnio Barroquinha
+81927-076 Cardoso de da Mota / PB'),
+('9234', '2', 'Ncleo Maria Vitria Cunha, 23
+Jatob
+77648367 Santos Alegre / RO'),
+('9235', '3', 'Vereda de Correia, 58
+Horto
+44298-121 Lima do Campo / RJ'),
+('9236', '2', 'Recanto da Mata, 30
+Alpio De Melo
+91386-615 Azevedo do Sul / BA'),
+('9237', '4', 'Rua Sophie Peixoto, 60
+Conjunto So Francisco De Assis
+18753664 Campos das Flores / MA'),
+('9238', '4', 'Lagoa Arago, 95
+Baleia
+56656931 Cardoso / ES'),
+('9239', '1', 'Loteamento Ian Pereira, 801
+Ambrosina
+76247-960 Moraes dos Dourados / SE'),
+('9240', '3', 'Estrada Sales, 52
+Vila Atila De Paiva
+31650-786 Ferreira / RJ'),
+('9241', '5', 'Estao Brbara Jesus, 26
+Vila Pinho
+64368303 Cunha / RS'),
+('9242', '4', 'Esplanada Pietro Almeida, 86
+Santa Terezinha
+20412-086 Porto / GO'),
+('9243', '3', 'Trevo da Costa, 21
+Chcara Leonina
+40548403 Gomes / MG'),
+('9244', '2', 'Avenida Breno Correia, 33
+Alto Vera Cruz
+50116-105 Caldeira / AL'),
+('9245', '3', 'Lagoa Moura, 72
+Jardinpolis
+50646-248 Costela / AL'),
+('9246', '2', 'Loteamento Felipe Nunes, 69
+Novo So Lucas
+87622-107 da Mota de Arajo / RR'),
+('9247', '5', 'Conjunto de Silveira, 88
+Aparecida 7 Seo
+31613930 Souza Paulista / ES'),
+('9248', '4', 'Vereda de da Mata, 986
+Vila Boa Vista
+37453994 Arajo / DF'),
+('9249', '5', 'Largo Barros, 51
+Castanheira
+09163-056 Mendes de Oliveira / AL'),
+('9250', '3', 'Estao Ana Luiza Santos
+Santa Sofia
+95813705 Pinto / ES'),
+('9251', '4', 'Largo Lucas Gomes, 34
+Santa Tereza
+75256664 Castro / ES'),
+('9252', '2', 'Conjunto Cardoso, 9
+Comiteco
+65450581 da Rocha do Norte / RN'),
+('9253', '1', 'Condomnio de Lopes, 12
+Candelaria
+73077307 Peixoto de Souza / PE'),
+('9254', '4', 'Parque Teixeira, 2
+Monsenhor Messias
+17284620 Rodrigues / PE'),
+('9255', '1', 'Esplanada Correia, 228
+Vila Unio
+43131-497 Barbosa / PB'),
+('9256', '4', 'Favela de das Neves, 9
+Estrela Do Oriente
+06435-912 Caldeira de Peixoto / PR'),
+('9257', '4', 'Estrada Sales, 5
+Pirineus
+30024720 Costa do Norte / RJ'),
+('9258', '3', 'Vale Costela, 18
+Maria Virgnia
+91403849 Dias / SC'),
+('9259', '4', 'Jardim Gonalves, 59
+Vila Pinho
+68853656 Arajo dos Dourados / CE'),
+('9260', '1', 'Ladeira Viana, 9
+So Damio
+92797416 Cardoso / PR'),
+('9261', '1', 'Lago Daniela Barros, 88
+So Luiz
+32126609 Dias / RN'),
+('9262', '2', 'Jardim Ana Sophia Ramos, 20
+Vila Jardim Leblon
+46988703 da Cruz dos Dourados / SE'),
+('9263', '5', 'Alameda Joo Miguel Pires, 56
+Jaqueline
+57832038 Sales / MT'),
+('9264', '2', 'Estao Davi Lucca Silva
+Universo
+48659635 Pires dos Dourados / ES'),
+('9265', '1', 'Feira de Rezende, 4
+Venda Nova
+62764-786 Mendes Verde / AM'),
+('9266', '4', 'Ladeira Davi Luiz Dias, 10
+Chcara Leonina
+34287282 da Costa / PR'),
+('9267', '4', 'Loteamento de Moraes, 41
+Gameleira
+22531387 da Costa / SE'),
+('9268', '3', 'Distrito de Rodrigues, 819
+Vila Madre Gertrudes 4 Seo
+36878-537 da Conceio / SP'),
+('9269', '2', 'Vila Vicente Ferreira, 326
+Suzana
+77712-547 Jesus / PB'),
+('9270', '2', 'Vereda Arajo, 22
+Nova Sua
+42026667 Moreira / DF'),
+('9271', '3', 'Colnia Bencio Melo, 8
+Anchieta
+20078771 Oliveira / CE'),
+('9272', '1', 'Stio Ferreira, 49
+Lagoa
+74123-722 Cunha / ES'),
+('9273', '2', 'Feira de Fernandes, 27
+Buritis
+86400-204 Pires de Campos / MT'),
+('9274', '1', 'Feira Nogueira, 96
+Estoril
+36797-597 Ferreira / MG'),
+('9275', '2', 'Travessa de Monteiro, 43
+Santa Rita De Cssia
+03090837 Silva da Serra / GO'),
+('9276', '5', 'Largo de Pires, 2
+Mangabeiras
+88022-831 Azevedo de Jesus / PI'),
+('9277', '4', 'Rodovia da Rocha, 30
+Vila Jardim Leblon
+44946189 Oliveira do Amparo / MG'),
+('9278', '3', 'Morro Nunes, 73
+Tupi A
+01705-698 Castro da Prata / SE'),
+('9279', '4', 'Rua de da Rocha, 84
+Serrano
+99716-756 Barbosa de Souza / BA'),
+('9280', '4', 'Rodovia Correia, 39
+Corao Eucarstico
+27496402 Freitas do Sul / AP'),
+('9281', '4', 'Ptio da Costa
+Santa Isabel
+91913952 Gomes de Ferreira / GO'),
+('9282', '1', 'Trecho de Novaes, 33
+Vila Canto Do Sabi
+20869-828 Moraes / RN'),
+('9283', '2', 'Largo de Azevedo, 787
+Maria Tereza
+70043-061 Freitas / AL'),
+('9284', '3', 'Praia Davi Correia, 17
+Joo Pinheiro
+66020-568 Moreira / AL'),
+('9285', '3', 'Alameda de das Neves, 88
+Tirol
+70143-540 Oliveira / MS'),
+('9286', '5', 'Viela de Mendes, 734
+Granja De Freitas
+18343075 Nascimento / PA'),
+('9287', '2', 'Morro de Farias, 56
+Petropolis
+33590-652 Azevedo / PA'),
+('9288', '1', 'Largo de Sales, 1
+Conjunto Novo Dom Bosco
+24816-327 Moura do Campo / RS'),
+('9289', '1', 'Esplanada Mariane da Mota, 54
+Nova Vista
+85732654 Dias / DF'),
+('9290', '3', 'Recanto Maria Fernanda Sales, 289
+Antonio Ribeiro De Abreu 1 Seo
+30686207 da Cunha / PA'),
+('9291', '1', 'Chcara Gabrielly Gomes, 64
+Estrela Do Oriente
+48920-541 Nunes de Gois / AC'),
+('9292', '2', 'Lago Igor Melo
+Sagrada Famlia
+58200-683 Costela / AC'),
+('9293', '1', 'Ladeira Ryan Fernandes, 58
+Funcionrios
+21361-348 Fernandes / PA'),
+('9294', '3', 'Setor de Ferreira, 783
+Santa Rosa
+20230-106 Pinto de Carvalho / BA'),
+('9295', '2', 'Stio Fogaa, 72
+Unidas
+13092-074 Arago / SC'),
+('9296', '3', 'Lagoa de da Mota, 2
+Zilah Sposito
+33907489 Rezende de Correia / SP'),
+('9297', '1', 'Avenida de Silva
+Teixeira Dias
+33435-691 Moura Grande / RS'),
+('9298', '1', 'Via Luana da Mata, 45
+Santa Maria
+48942-955 Ramos de Costela / RO'),
+('9299', '3', 'Chcara Helosa da Mata, 22
+Conjunto Santa Maria
+45006-170 Oliveira / SC'),
+('9300', '4', 'Vereda Murilo Cavalcanti, 49
+Olhos 
+36066-547 Peixoto da Serra / PB'),
+('9301', '5', 'Conjunto Leonardo Ramos
+Vila So Gabriel Jacui
+55147-699 Castro Alegre / RN'),
+('9302', '2', 'Recanto de Jesus, 40
+Vila Nova
+35094-238 Costela / RR'),
+('9303', '3', 'Passarela Marcela Farias, 50
+Milionario
+96725778 Viana das Pedras / MS'),
+('9304', '3', 'Morro Bernardo Vieira, 9
+Planalto
+47965560 da Mata / BA'),
+('9305', '5', 'Vale Giovanna Ferreira, 16
+Guarani
+66681161 Rezende de Arajo / MG'),
+('9306', '1', 'Travessa Murilo Gonalves, 300
+Lagoinha
+32926-044 Melo / PI'),
+('9307', '1', 'Lago de Santos, 51
+Jardim Dos Comerciarios
+58474788 Oliveira / PA'),
+('9308', '1', 'Distrito de Silveira
+Vila So Rafael
+90775167 Silva / ES'),
+('9309', '5', 'Feira Julia da Paz, 74
+Nova Gameleira
+86821-656 Moraes de Arago / SC'),
+('9310', '2', 'Rua Rafaela da Paz, 22
+Conjunto Paulo Vi
+60146-383 da Mata / RN'),
+('9311', '3', 'Campo de Ramos
+Embabas
+15725-085 Pires / PA'),
+('9312', '1', 'rea de Peixoto, 99
+Alto Barroca
+29309-348 Sales / AP'),
+('9313', '4', 'Favela de Jesus, 1
+Jaragu
+57730819 Ramos do Norte / AP'),
+('9314', '3', 'Trecho Barbosa, 885
+Nova Floresta
+71303971 Melo / RN'),
+('9315', '1', 'Ncleo Evelyn Pires
+Vila Do Pombal
+33971345 Nogueira da Praia / DF'),
+('9316', '4', 'Campo Peixoto, 5
+Vila Pinho
+08373849 da Cunha / DF'),
+('9317', '4', 'Viaduto Moraes, 2
+Vila Santo Antnio Barroquinha
+27986-202 Rezende / RS'),
+('9318', '4', 'rea Gonalves, 26
+Vila Pinho
+31858-711 Nascimento de das Neves / BA'),
+('9319', '1', 'Loteamento Vinicius Nascimento, 90
+Alta Tenso 1 Seo
+64723675 Pinto do Oeste / SE'),
+('9320', '3', 'Jardim Esther Novaes, 86
+Novo So Lucas
+16643-249 Lima / DF'),
+('9321', '4', 'Campo Alice Arajo, 4
+Vila Paraso
+26116621 Martins da Praia / MS'),
+('9322', '1', 'Estrada Danilo Nogueira, 75
+Ipe
+29158331 da Paz / BA'),
+('9323', '2', 'Stio Campos, 36
+Vila Das Oliveiras
+85650-047 Carvalho / SP'),
+('9324', '3', 'Viela de Vieira, 79
+Dom Joaquim
+46399-371 Pinto / AC'),
+('9325', '4', 'Quadra Caldeira, 55
+Marieta 1 Seo
+65199-565 da Luz / RO'),
+('9326', '2', 'Rodovia Breno Gonalves, 38
+Mineiro
+58517-779 Silva de Minas / TO'),
+('9327', '1', 'Estao Erick Rodrigues
+Santa Isabel
+94007-326 da Luz / MA'),
+('9328', '5', 'Distrito Luiz Otvio Martins, 46
+Vila Independencia 3 Seo
+05506-843 Cardoso / RR'),
+('9329', '3', 'Setor Davi Lucas Teixeira, 45
+Santa Tereza
+16120-406 Alves / SP'),
+('9330', '2', 'rea Freitas, 51
+Paquet
+88977018 Sales das Pedras / CE'),
+('9331', '2', 'Loteamento Maria Fernanda Ribeiro, 72
+Jardim Vitoria
+91229-236 Peixoto / PB'),
+('9332', '1', 'Setor de Dias, 84
+Aguas Claras
+72280962 Nunes / SC'),
+('9333', '2', 'Avenida Bruna Souza, 35
+Comiteco
+48525-482 Fogaa / PI'),
+('9334', '5', 'Rua de Moura, 88
+Calafate
+85038377 da Paz de da Paz / CE'),
+('9335', '3', 'Distrito Santos, 15
+Milionario
+91845-772 Duarte / AL'),
+('9336', '1', 'Vila Vitria Farias, 601
+Guarani
+90672748 da Luz Alegre / MG'),
+('9337', '5', 'Rua de Almeida, 9
+Conjunto Minas Caixa
+34708-444 Nunes dos Dourados / RN'),
+('9338', '5', 'Jardim Joo Guilherme Cunha, 7
+Santa Terezinha
+98250-645 Teixeira Paulista / BA'),
+('9339', '5', 'Praia Alexandre Farias, 23
+Vila Olhos 
+71112-720 Freitas / MT'),
+('9340', '5', 'rea Caroline Ramos, 82
+Cardoso
+82751422 Pereira / AC'),
+('9341', '4', 'Colnia Ana Beatriz da Mota, 63
+Jardim Leblon
+18681-301 Peixoto / MT'),
+('9342', '1', 'Ncleo de Arago, 596
+Novo Aaro Reis
+36656674 Barbosa / AL'),
+('9343', '4', 'Vereda Correia, 32
+Vila Madre Gertrudes 1 Seo
+51140633 Vieira / RR'),
+('9344', '2', 'Vereda Ferreira, 51
+So Joo
+45059-808 Moura / MG'),
+('9345', '4', 'Viela Carvalho, 30
+Etelvina Carneiro
+58386164 Nogueira dos Dourados / TO'),
+('9346', '2', 'Esplanada Nina Carvalho, 47
+Vila So Dimas
+96349531 Cunha do Sul / AL'),
+('9347', '1', 'Praia Francisco Martins, 9
+Cnego Pinheiro 2 Seo
+34657-108 da Rosa do Galho / SP'),
+('9348', '1', 'Residencial Ferreira, 176
+Calafate
+44123-778 Oliveira da Serra / TO'),
+('9349', '1', 'Chcara Sophia Gonalves, 4
+Vila Independencia 1 Seo
+65637-875 Caldeira / MT'),
+('9350', '5', 'Travessa de Barros
+Jonas Veiga
+60863-024 da Costa / AM'),
+('9351', '1', 'Setor Luiz Fernando Cardoso, 23
+Santo Andr
+50769675 Nascimento da Praia / PE'),
+('9352', '5', 'Loteamento Milena Farias, 44
+Hava
+21439478 Cavalcanti / MA'),
+('9353', '2', 'Praia Vitor Silva, 3
+Santa Rosa
+73142-826 Santos do Oeste / AM'),
+('9354', '1', 'Ptio Rocha, 558
+Marieta 2 Seo
+83219-978 Silveira / CE'),
+('9355', '4', 'Rodovia Gustavo Henrique Silveira, 3
+Custodinha
+19747768 Nunes Grande / MG'),
+('9356', '4', 'Vereda de Correia, 535
+Vila Engenho Nogueira
+73069412 Sales / PI'),
+('9357', '2', 'Ptio de Azevedo
+Madre Gertrudes
+54897480 Moraes / AM'),
+('9358', '3', 'Lagoa de Rocha, 64
+Vila Nova Gameleira 2 Seo
+77475608 Ramos de Minas / PB'),
+('9359', '5', 'Stio de Ferreira, 35
+Goiania
+99075-104 Teixeira / AP'),
+('9360', '4', 'Morro Leonardo Souza
+So Joo Batista
+78405-346 Silva / ES'),
+('9361', '3', 'Parque de Arajo, 647
+Ipiranga
+10405-346 Gomes do Amparo / PB'),
+('9362', '5', 'Vale da Costa
+Lindia
+27387-505 da Costa / RR'),
+('9363', '4', 'Avenida Samuel da Rosa, 39
+Nova Cintra
+78142-955 das Neves / PE'),
+('9364', '5', 'Alameda Caldeira
+Tnel De Ibirit
+25088472 Costela / PR'),
+('9365', '2', 'Rodovia Lorena Silva
+So Paulo
+97342-800 Pinto / RO'),
+('9366', '5', 'Estrada Pedro Lucas Dias, 917
+Minaslandia
+07854-906 Ferreira da Serra / SE'),
+('9367', '5', 'Aeroporto Alves, 7
+Cardoso
+80897469 Freitas / PI'),
+('9368', '2', 'Estrada Carvalho, 79
+Novo Aaro Reis
+81927780 Alves do Galho / TO'),
+('9369', '2', 'Campo Isabella Barbosa, 67
+Itatiaia
+51353711 Pires / PB'),
+('9370', '5', 'Parque de Viana, 27
+So Marcos
+90278216 Freitas de Minas / AL'),
+('9371', '4', 'Viaduto Souza
+Vila Nova Paraso
+88810-765 Pereira / AL'),
+('9372', '2', 'Stio de Viana, 555
+Palmares
+67904176 da Conceio / CE'),
+('9373', '1', 'Praa da Mota, 42
+Serrano
+66049431 Silva / MT'),
+('9374', '2', 'Recanto Sofia Pinto, 77
+Cinquentenrio
+92348-919 Farias das Flores / AP'),
+('9375', '2', 'Distrito Samuel Martins, 223
+Vila Independencia 1 Seo
+32975-503 Mendes do Oeste / RN'),
+('9376', '1', 'Trevo Rodrigues, 456
+Vila Minaslandia
+62623-658 Rezende / SP'),
+('9377', '3', 'Lago de Ramos, 51
+Santa Efignia
+11179002 Dias / RN'),
+('9378', '4', 'rea de Pinto, 58
+Grota
+17444065 Duarte dos Dourados / BA'),
+('9379', '2', 'rea Silva, 61
+Acaba Mundo
+16303230 Cunha Verde / MS'),
+('9380', '4', 'Passarela Gomes, 7
+Vila Santa Monica 1 Seo
+72790-554 Barbosa / SP'),
+('9381', '3', 'Trevo Costela, 58
+Embabas
+57481-181 Lima do Sul / PI'),
+('9382', '1', 'Vale da Mata, 3
+Aaro Reis
+17549479 Fogaa / AL'),
+('9383', '3', 'Favela Cunha, 6
+Beija Flor
+00791272 Oliveira / AP'),
+('9384', '5', 'Fazenda Ana Clara Pires, 3
+Suzana
+20790-691 da Cunha / TO'),
+('9385', '5', 'Jardim Ferreira, 84
+Corao De Jesus
+44829-746 Moreira de Costa / RR'),
+('9386', '4', 'Setor de Freitas
+Vila Independencia 1 Seo
+23532496 Fogaa de Gois / PE'),
+('9387', '4', 'Loteamento Guilherme Caldeira, 423
+Engenho Nogueira
+46073636 Viana / MT'),
+('9388', '4', 'Chcara Eloah Caldeira, 72
+Graa
+15299727 Porto dos Dourados / GO'),
+('9389', '3', 'Rua de da Conceio, 87
+Lourdes
+14872250 Monteiro / CE'),
+('9390', '4', 'Trevo Laura Nascimento, 4
+Vila Paquet
+98219-319 Nunes / AL'),
+('9391', '2', 'Estao Dias, 10
+Conjunto Novo Dom Bosco
+39171-585 Cardoso / PI'),
+('9392', '1', 'Trevo Ana Laura Peixoto, 46
+Corao Eucarstico
+47049452 Dias do Sul / RJ'),
+('9393', '2', 'Ptio Luiz Gustavo Sales, 7
+Vila Copacabana
+70374576 das Neves / AL'),
+('9394', '2', 'Parque Jesus, 2
+Lagoa
+52087-945 Peixoto de Lopes / SE'),
+('9395', '3', 'Aeroporto Vieira
+Camponesa 2 Seo
+29552530 Freitas da Praia / PE'),
+('9396', '1', 'Quadra de Ribeiro
+Cinquentenrio
+72696-505 das Neves / MG'),
+('9397', '3', 'Trecho de Carvalho, 42
+Vila Antena
+73831-680 Ramos de Nunes / SP'),
+('9398', '4', 'Favela Novaes, 47
+Conjunto Serra Verde
+91085644 Pinto da Praia / GO'),
+('9399', '2', 'Vila Lopes, 19
+Satelite
+81841-117 Freitas / TO'),
+('9400', '1', 'Aeroporto Samuel Porto, 34
+Granja Werneck
+94009-077 Arago do Amparo / MT'),
+('9401', '3', 'Residencial da Conceio
+Lagoa
+15186357 Lima / MG'),
+('9402', '3', 'Fazenda Martins, 98
+Vila Suzana Primeira Seo
+90464-333 Carvalho / SP'),
+('9403', '4', 'Ladeira de Porto
+Vila Suzana Segunda Seo
+83472799 da Mota / SC'),
+('9404', '4', 'Via Enzo Sales
+Vila Jardim Alvorada
+35975095 Dias do Galho / RO'),
+('9405', '1', 'Loteamento de Nunes, 44
+Vila Nova Gameleira 1 Seo
+98295920 Farias / SP'),
+('9406', '4', 'Estrada Ferreira, 5
+lvaro Camargos
+29482-860 Rezende / TO'),
+('9407', '2', 'Praa de Correia
+Cnego Pinheiro 1 Seo
+76253-844 Correia do Sul / CE'),
+('9408', '2', 'Conjunto Danilo Cavalcanti, 25
+Santa Rita
+83015501 Viana de da Rocha / AM'),
+('9409', '2', 'Trecho Arajo, 94
+Serra Do Curral
+61819-157 Castro do Amparo / AP'),
+('9410', '1', 'Estrada das Neves, 55
+Betnia
+57799-679 Costela dos Dourados / CE'),
+('9411', '2', 'Avenida Melo, 751
+Ademar Maldonado
+31523508 Correia de Gois / GO'),
+('9412', '2', 'Recanto Fernanda Almeida, 50
+Conjunto Providencia
+01204356 da Cruz do Campo / RR'),
+('9413', '2', 'Loteamento Raul das Neves, 9
+Belvedere
+16975817 Vieira de da Mota / RO'),
+('9414', '2', 'Ncleo de Martins, 69
+Cachoeirinha
+71002300 Ramos / RJ'),
+('9415', '5', 'Ladeira de Silva, 2
+So Joo
+33851-197 Silva Verde / SP'),
+('9416', '2', 'Condomnio de Freitas, 36
+Vila Nova Gameleira 1 Seo
+73804-709 Almeida / MG'),
+('9417', '1', 'Residencial da Paz, 50
+Mirtes
+65566-178 da Cunha de Melo / RN'),
+('9418', '2', 'Campo Gomes
+Carmo
+62521879 Rezende / RS'),
+('9419', '2', 'Estao Mirella Nunes, 48
+Serra
+24956721 Oliveira / MG'),
+('9420', '5', 'Rua de Nogueira
+Vila Oeste
+16098185 Azevedo Alegre / RR'),
+('9421', '4', 'Aeroporto Cavalcanti, 93
+Canaa
+51345-699 Teixeira de Gois / AM'),
+('9422', '1', 'Largo Pinto, 101
+Mariquinhas
+35070-098 Rocha Verde / RS'),
+('9423', '1', 'Rua de Cunha, 22
+Baro Homem De Melo 1 Seo
+59868-010 Novaes / PR'),
+('9424', '5', 'Loteamento Pereira, 79
+Vila Novo So Lucas
+68498-490 Rodrigues da Mata / RR'),
+('9425', '1', 'Trecho Ana Clara Barbosa, 89
+Ermelinda
+43955999 Almeida de Correia / RS'),
+('9426', '1', 'Ladeira da Conceio, 12
+Vila Suzana Segunda Seo
+89813070 Vieira das Flores / RR'),
+('9427', '2', 'Travessa Arajo, 80
+Candelaria
+58786492 Correia das Flores / BA'),
+('9428', '1', 'Travessa de Rodrigues, 39
+Vila Sesc
+07248-716 Gonalves / TO'),
+('9429', '4', 'Condomnio de Fernandes, 1
+Branas
+42689317 Santos Paulista / MG'),
+('9430', '2', 'Largo de Porto, 6
+Vila Engenho Nogueira
+45904-001 das Neves da Serra / MA'),
+('9431', '3', 'Favela de Pinto, 839
+Joo Alfredo
+34783-984 Arago / DF'),
+('9432', '5', 'Residencial Joaquim Caldeira, 926
+Dom Cabral
+69497-171 Martins das Flores / GO'),
+('9433', '3', 'Trecho Isaac Barros, 77
+Vila Betnia
+21170-617 da Paz de Campos / RR'),
+('9434', '3', 'Avenida Gomes, 642
+So Gonalo
+41443271 Cardoso Paulista / PB'),
+('9435', '1', 'Estao Vieira, 18
+Joo Alfredo
+51365-097 Moura / RJ'),
+('9436', '3', 'Ptio Fogaa, 1
+So Tomaz
+67382969 da Cunha / SP'),
+('9437', '2', 'Condomnio Thales da Rocha
+Minas Caixa
+31301868 Cavalcanti da Praia / CE'),
+('9438', '3', 'Lagoa da Cruz, 96
+Castanheira
+05807657 Vieira / RJ'),
+('9439', '3', 'Ladeira Maria Ceclia Viana, 60
+Cdi Jatoba
+44562597 Costa / PB'),
+('9440', '5', 'Aeroporto Rezende, 9
+Itatiaia
+04956-317 da Mota / ES'),
+('9441', '4', 'Praa Evelyn Correia, 7
+Bom Jesus
+40301276 Vieira do Oeste / SE'),
+('9442', '2', 'Trecho Fernanda Peixoto, 54
+Jardim Leblon
+38632129 Barbosa / SP'),
+('9443', '1', 'Loteamento Ramos, 26
+Nova Granada
+07935-687 Pires de Sales / AC'),
+('9444', '1', 'Largo Lima, 3
+Vila Nova Dos Milionarios
+68155427 Fernandes de Ramos / PI'),
+('9445', '2', 'Passarela de da Costa, 6
+Nossa Senhora Da Conceio
+01402063 Cardoso do Amparo / CE'),
+('9446', '5', 'Praa Costela, 8
+Ernesto Nascimento
+78477063 Costa da Praia / AL'),
+('9447', '3', 'Praia Porto, 84
+Flamengo
+30550-376 Barros / SP'),
+('9448', '5', 'Vila de Carvalho, 284
+Granja Werneck
+25019-965 Castro de Gomes / MG'),
+('9449', '3', 'Estrada de Cardoso, 4
+Dona Clara
+00660699 Santos / AM'),
+('9450', '2', 'Alameda Santos, 12
+Jaragu
+30844-883 Melo das Pedras / SP'),
+('9451', '5', 'Morro Ribeiro, 61
+Penha
+01362260 Campos de Novaes / MS'),
+('9452', '5', 'Fazenda Mariana Dias, 957
+So Benedito
+49605-529 Moreira de Gois / PR'),
+('9453', '4', 'Recanto de Costa, 1
+Joo Paulo Ii
+54335-354 Ferreira / MA'),
+('9454', '2', 'Lagoa de Costa, 79
+Etelvina Carneiro
+65012-689 Gomes de da Mata / RN'),
+('9455', '2', 'Morro Enrico Gomes, 7
+Minas Caixa
+74200025 da Rosa / MA'),
+('9456', '2', 'Alameda Arago
+Mangabeiras
+08471-125 da Mata / SE'),
+('9457', '1', 'Vereda Cavalcanti, 6
+Vila Atila De Paiva
+68103-816 Nascimento / SP'),
+('9458', '4', 'Residencial Dias, 31
+Vila Ipiranga
+59480957 Costa da Mata / RJ'),
+('9459', '1', 'Fazenda Ramos, 6
+Jardim Leblon
+42978-110 Barbosa / AP'),
+('9460', '2', 'Setor de da Cunha
+Jardim Atlntico
+94964-599 Lopes / AM'),
+('9461', '2', 'Praa Costa, 963
+So Francisco Das Chagas
+50627160 da Paz das Pedras / AP'),
+('9462', '3', 'Setor de Almeida, 9
+Tiradentes
+50004390 Farias da Mata / MA'),
+('9463', '2', 'Ncleo Letcia Correia, 6
+Vila Inestan
+76721513 Vieira do Oeste / MA'),
+('9464', '3', 'Viaduto de Costela, 777
+Conjunto Bonsucesso
+62529-933 da Paz da Prata / CE'),
+('9465', '2', 'Stio Lavnia Cunha, 670
+Araguaia
+63646-871 Costela de Nogueira / GO'),
+('9466', '2', 'Aeroporto de Silva, 490
+Santa Rita De Cssia
+93204-801 Arago de Minas / DF'),
+('9467', '5', 'Estrada Ana Lvia Sales, 70
+Engenho Nogueira
+08621677 Carvalho de Cardoso / RR'),
+('9468', '5', 'Condomnio de Alves
+Pedreira Padro Lopes
+52503-066 Duarte / AP'),
+('9469', '4', 'Ladeira Santos, 4
+Vila Tirol
+24500103 da Paz de Rocha / MT'),
+('9470', '5', 'Chcara Heitor Santos, 22
+Vila Da Paz
+84454-607 Mendes / MS'),
+('9471', '3', 'Fazenda de Pereira
+Boa Unio 1 Seo
+57115988 Ramos de Castro / AM'),
+('9472', '1', 'Lago de Vieira, 91
+Ernesto Nascimento
+05920241 da Cunha / AP'),
+('9473', '5', 'Vereda de Ribeiro, 92
+Padre Eustquio
+25996-642 Costa / PR'),
+('9474', '5', 'Largo Gonalves, 7
+Mirtes
+45757-946 Ramos / PE'),
+('9475', '2', 'Estao Peixoto, 256
+Renascena
+67728174 Barros / ES'),
+('9476', '5', 'Distrito de Vieira, 41
+Nossa Senhora Aparecida
+71876715 Nunes do Galho / AP'),
+('9477', '1', 'Trecho Lima
+Conjunto Santa Maria
+25017598 Monteiro / AC'),
+('9478', '3', 'Distrito Rezende
+Vila Nova Gameleira 2 Seo
+73546311 Farias / AP'),
+('9479', '4', 'Setor Bianca Nascimento, 5
+Cinquentenrio
+90137444 Cardoso de Minas / BA'),
+('9480', '4', 'Rodovia Gustavo Henrique Nogueira, 419
+Indai
+27761-174 Farias / RO'),
+('9481', '1', 'Residencial Alana Moraes, 94
+Vila Pinho
+55061-979 da Rosa / PI'),
+('9482', '5', 'Passarela de Costa, 84
+Comiteco
+84686141 Porto do Oeste / AM'),
+('9483', '4', 'Quadra Lucas Gabriel Peixoto, 813
+So Jorge 3 Seo
+88805899 da Mata do Sul / RO'),
+('9484', '1', 'Lago Carvalho, 500
+Paulo Vi
+61853-561 Gomes de Gois / SP'),
+('9485', '3', 'Ncleo Silva, 60
+So Vicente
+49128-443 Cavalcanti / CE'),
+('9486', '3', 'Lago de Rodrigues
+Vila Nova
+33610-854 das Neves do Campo / DF'),
+('9487', '1', 'Condomnio Monteiro
+So Marcos
+31945440 Barbosa de Moura / AP'),
+('9488', '4', 'Vereda Lima
+Tres Marias
+30920812 Farias / TO'),
+('9489', '4', 'Distrito Joo Lucas Fogaa, 43
+Madri
+39567-535 da Mata de Silva / PB'),
+('9490', '2', 'Via Barbosa, 48
+Fazendinha
+46525-920 Moura / RS'),
+('9491', '4', 'Chcara da Mata, 63
+Boa Unio 2 Seo
+31229-181 Teixeira da Prata / AL'),
+('9492', '4', 'Stio Ana Clara Ferreira, 84
+Vila Dos Anjos
+27599419 Nogueira de Gomes / MS'),
+('9493', '4', 'Viela Gabrielly Azevedo, 18
+So Francisco
+90374384 Alves / GO'),
+('9494', '1', 'Largo Olivia Moura, 87
+Santo Andr
+66889372 da Paz / MG'),
+('9495', '2', 'Vereda Arajo
+Embabas
+05319-572 Costa de Minas / MG'),
+('9496', '2', 'Trevo de da Luz, 66
+Novo Tupi
+83378-020 Ferreira / RN'),
+('9497', '4', 'Trecho Campos, 2
+Vila Santa Rosa
+49427380 Cavalcanti / PE'),
+('9498', '5', 'Vereda Diogo Cunha, 9
+Acaiaca
+77946363 Rocha do Galho / RS'),
+('9499', '3', 'Favela de Silva, 7
+Biquinhas
+42256222 Duarte Paulista / RR'),
+('9500', '3', 'Setor Lima, 49
+Cdi Jatoba
+20487638 Carvalho / GO'),
+('9501', '2', 'Lago Oliveira
+Lorena
+27725380 Barbosa do Norte / BA'),
+('9502', '3', 'Rodovia de Duarte
+Novo Santa Cecilia
+28950551 Cavalcanti Verde / MT'),
+('9503', '1', 'Parque Moraes, 80
+Vila Calafate
+80221-055 Freitas / TO'),
+('9504', '5', 'Ncleo Silveira, 44
+Vila Nossa Senhora Do Rosrio
+65208915 Alves de Silva / MA'),
+('9505', '5', 'Trecho Costa, 78
+Minas Brasil
+08529952 Cavalcanti / MG'),
+('9506', '3', 'Estao Pedro Miguel Costa, 40
+So Marcos
+35593-031 Porto do Amparo / RN'),
+('9507', '3', 'Chcara de Rocha
+Piraja
+01141444 da Mota / MS'),
+('9508', '1', 'Distrito de Santos, 1
+Madri
+87018-693 Oliveira de Gois / TO'),
+('9509', '5', 'Parque Souza, 2
+Vila Calafate
+54159-008 Cardoso de Dias / AC'),
+('9510', '4', 'Viela de Fernandes, 2
+Nova Vista
+33922913 Oliveira / BA'),
+('9511', '2', 'Aeroporto Alana Costela, 4
+Vila Novo So Lucas
+74133999 Martins das Pedras / AC'),
+('9512', '4', 'Alameda de Nascimento, 5
+Ademar Maldonado
+15453-031 Oliveira Grande / PB'),
+('9513', '2', 'Rua Ana Beatriz da Conceio, 9
+Guarani
+89078-485 Santos / MA'),
+('9514', '3', 'Loteamento Lima, 57
+Vila Paris
+51164-289 Costela da Serra / RN'),
+('9515', '2', 'Campo de da Paz, 93
+Marmiteiros
+05617-575 da Mota da Prata / AL'),
+('9516', '1', 'Ptio Anthony Vieira
+Canad
+52916264 da Paz dos Dourados / BA'),
+('9517', '1', 'Via de Jesus, 491
+Vila Antena
+90119-708 Barros de Gois / MS'),
+('9518', '5', 'Ptio de Rezende, 51
+Itaipu
+80639-915 Alves de Nascimento / BA'),
+('9519', '2', 'Rua Cau Barbosa, 40
+Savassi
+68664-437 da Cunha / RO'),
+('9520', '1', 'Conjunto Maria Julia Costela, 59
+Vila Jardim Leblon
+95429-145 Peixoto / CE'),
+('9521', '4', 'Vale Raquel Almeida, 31
+Independncia
+82245-861 da Rocha / RJ'),
+('9522', '4', 'Vale da Paz, 4
+Pantanal
+60486197 Lima / MA'),
+('9523', '3', 'Lago Ana Carolina Lopes, 6
+Paulo Vi
+90859-943 Barbosa / MG'),
+('9524', '2', 'Trecho da Cruz, 26
+Mariquinhas
+85387911 da Rosa / SC'),
+('9525', '4', 'Campo Dias, 42
+So Jos
+09462-323 Nascimento de Ramos / PB'),
+('9526', '4', 'Ladeira Pires, 64
+Cruzeiro
+43240-184 Gonalves / RN'),
+('9527', '3', 'Largo Joana Duarte, 65
+Milionario
+11514122 Arajo / BA'),
+('9528', '4', 'Jardim Enrico Azevedo, 7
+Dom Silverio
+29161-161 da Paz / PR'),
+('9529', '3', 'Rodovia Pereira, 4
+Granja De Freitas
+83135162 Caldeira da Mata / BA'),
+('9530', '4', 'Campo Moura
+Vila Paquet
+08485539 Rodrigues de Pereira / MG'),
+('9531', '5', 'Estrada de Mendes, 20
+Floresta
+74898-426 Nunes / SP'),
+('9532', '2', 'rea de Cardoso, 87
+Vila Fumec
+69464379 Viana da Serra / PI'),
+('9533', '4', 'Aeroporto de da Mota, 58
+Nova Pampulha
+20417-061 Duarte / SC'),
+('9534', '4', 'Recanto de Oliveira, 55
+Diamante
+95089-823 Nascimento de da Mata / AL'),
+('9535', '5', 'Trecho Enrico Campos, 71
+Calafate
+74108-642 Mendes / MT'),
+('9536', '4', 'Trevo Isabella Silveira, 4
+Graja
+61156-681 Pinto / AM'),
+('9537', '1', 'Trevo Gustavo Oliveira, 265
+Anchieta
+06564371 Freitas da Mata / AC'),
+('9538', '2', 'Campo Ana Carolina Ferreira, 70
+Itatiaia
+46332643 Nascimento Grande / GO'),
+('9539', '1', 'Quadra de Novaes, 30
+Vila Da Luz
+31078-309 Moraes das Pedras / PB'),
+('9540', '1', 'Praia Nathan da Cunha, 7
+Conjunto Taquaril
+98270-213 Moura do Amparo / PB'),
+('9541', '1', 'Jardim Emanuella Nogueira
+Satelite
+02637-417 Pinto / DF'),
+('9542', '5', 'Passarela de Freitas, 64
+Nossa Senhora Da Conceio
+39269-956 Nunes das Flores / PA'),
+('9543', '1', 'Ncleo Raul Gomes, 883
+Caiaras
+84438-994 Costa / PE'),
+('9544', '4', 'Viaduto de Campos, 636
+Olaria
+68511820 Pinto / RR'),
+('9545', '3', 'Quadra de Lima
+Nazare
+22162-740 Cardoso do Sul / RR'),
+('9546', '4', 'Esplanada de da Mota, 736
+Baleia
+04949-307 Vieira / PE'),
+('9547', '1', 'Feira Calebe Barros, 31
+Mariquinhas
+62157-999 Arago / PI'),
+('9548', '1', 'Passarela Lvia Moraes, 80
+Madre Gertrudes
+71462891 Sales das Flores / RR'),
+('9549', '1', 'Rodovia Maria Alice Alves, 6
+Vila Jardim Alvorada
+49250-319 da Paz do Galho / AC'),
+('9550', '2', 'Estao Campos, 19
+Baro Homem De Melo 3 Seo
+04704-088 Barbosa / MT'),
+('9551', '3', 'Largo Campos
+Glria
+60237-346 da Mota / SP'),
+('9552', '4', 'Lago de Cunha, 28
+Outro
+41169-346 Farias de Barros / RR'),
+('9553', '1', 'Vila de Silveira
+Santa Lcia
+94510502 Fernandes do Oeste / PI'),
+('9554', '1', 'Travessa de Pereira, 6
+Serra Verde
+04961991 da Cruz Verde / PA'),
+('9555', '5', 'Fazenda de Cardoso, 53
+Floresta
+63154-628 Fogaa / SE'),
+('9556', '5', 'Viela Peixoto, 82
+Esperana
+63973747 da Paz dos Dourados / ES'),
+('9557', '2', 'Loteamento de Ramos, 68
+Vila Unio
+09961798 Campos do Sul / SP'),
+('9558', '3', 'Chcara Bianca Gonalves, 71
+So Marcos
+14834-493 Nogueira / MG'),
+('9559', '5', 'Estao de da Mota, 98
+Concrdia
+68419-298 Rezende da Mata / DF'),
+('9560', '3', 'Loteamento de Fogaa, 38
+Vila Maloca
+85420-805 Mendes do Campo / MT'),
+('9561', '3', 'Viela Santos
+Vila Nova Gameleira 2 Seo
+66294919 Cardoso / MS'),
+('9562', '3', 'Ncleo Bruna Ribeiro
+Vila Madre Gertrudes 1 Seo
+99270-300 Porto / PE'),
+('9563', '5', 'Passarela Diego da Costa, 247
+Mangabeiras
+62350651 Ferreira do Sul / SC'),
+('9564', '3', 'Quadra de Nascimento, 84
+Cachoeirinha
+88641606 Costa da Mata / CE'),
+('9565', '2', 'Vale Martins, 77
+Vista Alegre
+29046790 Azevedo da Prata / AP'),
+('9566', '4', 'Viela Lima, 4
+Conjunto Novo Dom Bosco
+67712186 Moraes / PE'),
+('9567', '3', 'Avenida Vitor Moreira, 2
+Centro
+11334342 Moraes do Campo / SC'),
+('9568', '4', 'Stio Fernandes, 331
+Alta Tenso 1 Seo
+47190-727 Cardoso do Campo / TO'),
+('9569', '2', 'Stio Emanuella Moura, 802
+Alto Barroca
+94136378 das Neves / RR'),
+('9570', '5', 'Setor de Lopes, 294
+Cardoso
+39119619 Souza / TO'),
+('9571', '4', 'Conjunto de Ribeiro, 6
+Embabas
+46070431 Caldeira de Ramos / PR'),
+('9572', '1', 'Praia de Cavalcanti, 54
+Pedreira Padro Lopes
+77548937 Campos de Lopes / RN'),
+('9573', '3', 'Jardim Porto, 69
+Vera Cruz
+72874-055 da Mata de Minas / MT'),
+('9574', '1', 'Condomnio Helena da Rocha, 3
+Alto Caiaras
+06889155 Cunha Verde / AL'),
+('9575', '3', 'Campo de Cunha, 56
+Vila Jardim Leblon
+42381955 Dias / DF'),
+('9576', '3', 'rea Joo Guilherme da Mota, 80
+Joo Alfredo
+05976-590 Nascimento Alegre / PI'),
+('9577', '2', 'rea Vieira, 17
+Padre Eustquio
+22888-266 Nogueira / TO'),
+('9578', '1', 'Passarela Maysa Nunes, 14
+Custodinha
+65719-082 Teixeira dos Dourados / PB'),
+('9579', '4', 'Aeroporto Fernandes, 34
+Baro Homem De Melo 1 Seo
+72887482 Viana / RJ'),
+('9580', '3', 'Fazenda de Almeida, 22
+Antonio Ribeiro De Abreu 1 Seo
+71347-426 da Cruz de Gonalves / PA'),
+('9581', '5', 'Rodovia de Farias, 5
+So Cristvo
+30200413 Souza de Gois / PE'),
+('9582', '5', 'Condomnio Fernandes, 27
+Aparecida 7 Seo
+49780795 Nunes / PB'),
+('9583', '2', 'Trevo Luiz Henrique Castro, 39
+Vila Nova
+39575091 Cardoso de Gois / AP'),
+('9584', '2', 'Colnia Castro, 447
+Vila Paris
+52007287 Viana / GO'),
+('9585', '2', 'Praa de da Mota
+So Pedro
+91406631 Cunha do Oeste / BA'),
+('9586', '2', 'Estao Viana, 10
+Vila Engenho Nogueira
+21423-248 Gomes / AP'),
+('9587', '5', 'Colnia Caio Cunha, 2
+Betnia
+06393-353 Martins das Pedras / AC'),
+('9588', '3', 'Colnia de Moraes, 20
+Belmonte
+21122465 Oliveira / PR'),
+('9589', '5', 'Lagoa Raul Rezende, 28
+Serra Do Curral
+30633-734 Barros / SP'),
+('9590', '4', 'Trecho de Arago, 92
+Corao De Jesus
+23165-110 Cardoso / CE'),
+('9591', '2', 'Largo Joo Pedro da Cruz, 8
+Alto Vera Cruz
+77848-847 Nascimento do Amparo / GO'),
+('9592', '5', 'Esplanada Correia
+Vila Paquet
+23423497 Teixeira das Pedras / GO'),
+('9593', '5', 'Distrito de Rezende, 469
+Conjunto Santa Maria
+04930-944 Silva do Amparo / PR'),
+('9594', '1', 'Campo Ribeiro, 3
+Manacas
+94417599 das Neves da Prata / BA'),
+('9595', '4', 'Colnia Juan Gomes
+Gameleira
+37490-340 da Mota / GO'),
+('9596', '1', 'Colnia Catarina Mendes
+Cdi Jatoba
+08898541 Souza / RJ'),
+('9597', '3', 'Lago Igor Jesus, 746
+Ermelinda
+90437945 da Mota de da Paz / BA'),
+('9598', '4', 'Ncleo de da Paz, 59
+Goiania
+42956-829 Correia do Sul / AL'),
+('9599', '5', 'Condomnio de Fernandes, 14
+Mangueiras
+42388-849 da Paz / GO'),
+('9600', '3', 'Estrada da Cunha, 59
+Baro Homem De Melo 1 Seo
+67416909 Campos Verde / RS'),
+('9601', '2', 'Chcara Laura Novaes, 6
+Baro Homem De Melo 1 Seo
+15192000 Ferreira / DF'),
+('9602', '4', 'Lago de da Costa, 94
+Cruzeiro
+38875946 da Costa das Flores / AP'),
+('9603', '5', 'Lagoa Vinicius da Costa
+Coqueiros
+90703-725 Almeida Paulista / BA'),
+('9604', '2', 'Aeroporto de Freitas, 972
+Conjunto Califrnia Ii
+42543026 Rocha / SP'),
+('9605', '4', 'Avenida Cunha, 56
+Vila Paris
+85501493 Correia do Norte / PA'),
+('9606', '3', 'Lago Teixeira, 60
+Jardim So Jos
+80050-580 Nunes / RR'),
+('9607', '5', 'Vereda Pietro Pereira, 4
+So Bento
+92937-768 Freitas / RS'),
+('9608', '1', 'Trevo de Cavalcanti, 289
+Ambrosina
+43574028 Monteiro / CE'),
+('9609', '5', 'Quadra de Carvalho, 76
+Juliana
+85853875 Monteiro de Cunha / MG'),
+('9610', '2', 'Ptio Rodrigo Arago, 61
+Santa Rita De Cssia
+04761-250 Cavalcanti / RN'),
+('9611', '2', 'Morro Nina Ramos, 568
+Laranjeiras
+99051-476 Ribeiro Grande / MS'),
+('9612', '2', 'Quadra de da Mota, 2
+Acaba Mundo
+21497-835 Costa / SE'),
+('9613', '1', 'Ncleo Nascimento, 28
+Acaba Mundo
+96039-902 da Mata / BA'),
+('9614', '3', 'Morro Pinto, 6
+Salgado Filho
+31991166 Carvalho de Pires / BA'),
+('9615', '5', 'Esplanada de Ribeiro
+Glria
+36084586 Cardoso de Rezende / MT'),
+('9616', '4', 'Praia da Rosa, 933
+Casa Branca
+60852421 Fernandes Paulista / MS'),
+('9617', '1', 'Via Gonalves, 49
+Cidade Jardim Taquaril
+25183-888 da Luz / AC'),
+('9618', '5', 'Favela Silva, 93
+Itaipu
+46701569 da Costa / AP'),
+('9619', '5', 'Recanto Lorenzo Santos, 54
+Araguaia
+35023-610 Novaes / ES'),
+('9620', '4', 'Estrada da Rocha, 35
+Cinquentenrio
+16582907 Carvalho / MT'),
+('9621', '2', 'Avenida Sabrina Gonalves, 64
+Itapoa
+93513526 Santos Verde / PR'),
+('9622', '1', 'Alameda Freitas, 581
+Antonio Ribeiro De Abreu 1 Seo
+73014029 Rodrigues do Amparo / BA'),
+('9623', '3', 'Viaduto Melo
+Vila Santo Antnio
+96584-398 Lopes / BA'),
+('9624', '4', 'Rodovia Henrique da Rocha, 62
+Tiradentes
+96222285 da Conceio / ES'),
+('9625', '2', 'rea Nogueira, 48
+Conjunto Jardim Filadlfia
+59224-299 Souza da Prata / SE'),
+('9626', '2', 'Largo Farias
+So Pedro
+33377209 Barbosa / AM'),
+('9627', '5', 'Estao de Duarte, 97
+Estrela
+92772-344 da Cunha / MS'),
+('9628', '2', 'Vila Ferreira, 5
+Cabana Do Pai Toms
+75239041 Peixoto da Prata / RS'),
+('9629', '5', 'Stio Stephany da Luz, 723
+Vila Das Oliveiras
+25592-383 Alves do Campo / ES'),
+('9630', '1', 'Condomnio das Neves, 88
+Suzana
+24868133 Arajo das Flores / AC'),
+('9631', '4', 'Colnia Mirella Castro, 111
+Penha
+74170-070 Teixeira de Minas / AP'),
+('9632', '4', 'Colnia Silveira, 39
+Barro Preto
+28035079 Silva / AP'),
+('9633', '4', 'Vale Freitas, 47
+Novo Santa Cecilia
+96794-907 Monteiro de Ferreira / MA'),
+('9634', '2', 'Rodovia Lopes, 13
+Serra
+88246-855 Jesus / MG'),
+('9635', '4', 'Largo Novaes, 60
+Jardim Atlntico
+76444-147 da Luz da Prata / AC'),
+('9636', '4', 'Parque de Peixoto, 343
+So Lucas
+14718213 Ribeiro / BA'),
+('9637', '3', 'Parque Luigi Cardoso
+Santa Rita De Cssia
+36320-927 Arago da Praia / RS'),
+('9638', '5', 'Favela Barros, 846
+Padre Eustquio
+13392846 Fernandes / AM'),
+('9639', '1', 'Campo Vitria Pereira, 84
+Sagrada Famlia
+57937980 Porto / SC'),
+('9640', '3', 'Residencial Isabelly da Cruz, 4
+Tupi B
+91246-705 Arajo de da Mata / ES'),
+('9641', '5', 'rea Monteiro, 43
+Apolonia
+41887474 Moura / PR'),
+('9642', '1', 'Colnia Lopes
+Graja
+51546295 Porto / BA'),
+('9643', '5', 'Alameda Sofia Duarte, 76
+Baro Homem De Melo 3 Seo
+20540-779 da Rosa das Flores / RS'),
+('9644', '5', 'Passarela de Ribeiro, 48
+Cachoeirinha
+94127992 Almeida / PI'),
+('9645', '5', 'Lago Lopes, 80
+Minaslandia
+37605-486 Pereira / PI'),
+('9646', '5', 'Lago Enzo Arajo, 9
+Primeiro De Maio
+91510-033 Correia de Oliveira / DF'),
+('9647', '1', 'Morro Pires
+Sport Club
+82819057 Alves de Caldeira / SP'),
+('9648', '5', 'Vereda Alice Souza, 84
+Vila Mantiqueira
+23566-262 Azevedo / MS'),
+('9649', '2', 'Ptio Ceclia da Rosa, 1
+Vila Mangueiras
+17089-227 Fernandes do Campo / PB'),
+('9650', '4', 'Quadra Monteiro, 64
+Mariano De Abreu
+06978677 Gonalves / GO'),
+('9651', '4', 'Campo Oliveira, 3
+Cachoeirinha
+41506-720 Fogaa / RN'),
+('9652', '1', 'rea Maysa da Mota, 6
+Silveira
+82855362 Cardoso / SC'),
+('9653', '2', 'Parque Caroline Costa
+Providencia
+86740301 Silveira / RN'),
+('9654', '4', 'Residencial Luiza Cavalcanti, 286
+Vila Formosa
+81127937 Nogueira do Campo / PR'),
+('9655', '5', 'Favela de Souza, 95
+Marieta 1 Seo
+63125-296 Martins / AM'),
+('9656', '1', 'Conjunto de Gomes, 907
+Mariano De Abreu
+32215-686 Ribeiro / RO'),
+('9657', '5', 'Trecho de Pereira, 16
+Unidas
+91406-986 Pereira / MT'),
+('9658', '5', 'Avenida Pietra da Conceio, 92
+Aguas Claras
+12528-730 Moraes / RS'),
+('9659', '4', 'Chcara de Moraes, 78
+So Gabriel
+20238525 Cardoso do Oeste / MA'),
+('9660', '2', 'Recanto de Cardoso
+Vila Nova Gameleira 1 Seo
+40225574 Dias Paulista / PB'),
+('9661', '1', 'Alameda de Cardoso, 72
+Trevo
+29298153 Pereira de Peixoto / RN'),
+('9662', '1', 'Avenida de Castro, 14
+Mangueiras
+70780-114 Moraes do Galho / RJ'),
+('9663', '4', 'Travessa de Moraes, 39
+Vila Barragem Santa Lcia
+93992-554 Castro / MS'),
+('9664', '2', 'Colnia Emilly Pinto, 91
+Xangri-L
+99156-412 da Costa de Mendes / RJ'),
+('9665', '3', 'Travessa Oliveira, 427
+Morro Dos Macacos
+76982795 Caldeira / MA'),
+('9666', '2', 'Distrito Rodrigues, 2
+Vila Suzana Segunda Seo
+09079790 Rodrigues de Rocha / AM'),
+('9667', '5', 'Setor da Paz
+Boa Viagem
+58953826 Campos / PA'),
+('9668', '2', 'Favela de Carvalho, 4
+Corumbiara
+31080360 Cardoso / RS'),
+('9669', '2', 'Viela de Barros, 13
+Cidade Jardim Taquaril
+57501-246 Gonalves / MA'),
+('9670', '3', 'Colnia Antnio Pinto, 146
+Nova America
+95465962 Pires / PB'),
+('9671', '4', 'Chcara Ana Laura Arago, 80
+Mineiro
+33402-618 Monteiro / SE'),
+('9672', '1', 'Largo da Costa, 940
+Boa Unio 1 Seo
+44901701 Azevedo / AC'),
+('9673', '3', 'Passarela de Santos, 45
+Custodinha
+54313512 Ramos / CE'),
+('9674', '5', 'Loteamento Porto, 532
+Aguas Claras
+18467-246 Arago de Mendes / PI'),
+('9675', '2', 'Fazenda de Dias, 5
+Vila Hava
+48544258 Souza / PB'),
+('9676', '5', 'Jardim de Novaes, 1
+Pilar
+88257130 Correia / SC'),
+('9677', '5', 'Praia Manuela Sales, 9
+Conjunto Providencia
+31299-847 Pinto das Pedras / RN'),
+('9678', '5', 'Vereda da Paz, 530
+Vila Madre Gertrudes 3 Seo
+58118-328 Freitas / RN'),
+('9679', '5', 'Conjunto Vieira, 199
+Mirante
+72938-008 das Neves / GO'),
+('9680', '2', 'Stio Jesus, 6
+Glria
+65082-969 Ribeiro / CE'),
+('9681', '3', 'Ncleo de Jesus, 577
+Nova Gameleira
+82684-318 Sales Alegre / MA'),
+('9682', '2', 'Lago Gustavo Henrique Ferreira, 37
+Maravilha
+62291-040 Castro / SE'),
+('9683', '3', 'Jardim Camila Lima, 107
+Vila Puc
+71112-952 Silveira / CE'),
+('9684', '1', 'Recanto de Moura, 87
+Nova Gameleira
+28405965 Rezende de Barros / SE'),
+('9685', '5', 'Morro de Caldeira, 89
+Santo Antnio
+50179-033 Peixoto de Minas / MT'),
+('9686', '3', 'Setor de Barros, 41
+Heliopolis
+00431985 Duarte de Minas / AC'),
+('9687', '1', 'Via Luana Farias, 434
+Vila Ipiranga
+25816-813 Freitas / AM'),
+('9688', '3', 'Estao Monteiro, 978
+Vila Madre Gertrudes 4 Seo
+88251677 Cardoso / RO'),
+('9689', '1', 'Parque de Nogueira, 68
+Santa Sofia
+79364-641 da Rosa / RR'),
+('9690', '1', 'Trevo Cardoso
+Ademar Maldonado
+35567510 Duarte do Sul / PI'),
+('9691', '4', 'Conjunto Carvalho, 71
+Canad
+39712-765 Lopes de Novaes / SC'),
+('9692', '4', 'Passarela Pedro Miguel Arajo, 9
+Vila Nova Gameleira 2 Seo
+70960-262 Ribeiro do Norte / MS'),
+('9693', '3', 'Largo Isabel Ferreira, 1
+Vila Esplanada
+66980-848 das Neves de Cardoso / PA'),
+('9694', '3', 'Estao de Silva, 1
+Vila Calafate
+47210923 da Mata do Sul / AP'),
+('9695', '3', 'Colnia Thomas Carvalho
+Vila Das Oliveiras
+85113-086 da Cruz do Oeste / PI'),
+('9696', '3', 'Trevo Fernando Melo, 99
+Vitoria
+87852-294 Campos / GO'),
+('9697', '5', 'Rodovia Vitor Gabriel Azevedo, 78
+Coqueiros
+34932199 Nunes Verde / PI'),
+('9698', '1', 'Rodovia da Paz, 265
+Vila Copacabana
+16263058 Lima da Serra / SP'),
+('9699', '3', 'Praia de Rodrigues, 74
+Guarani
+37626-331 da Cruz / MG'),
+('9700', '5', 'Vila de Martins
+Bernadete
+44862-387 Peixoto de Gois / AM'),
+('9701', '5', 'Aeroporto Vitria Cardoso, 65
+Mangueiras
+17926-696 Arago / PR'),
+('9702', '2', 'Condomnio Eduarda Pires, 55
+Vila Pilar
+76284-218 Teixeira da Praia / GO'),
+('9703', '2', 'Lagoa Joaquim Moura, 2
+Trevo
+47938230 Rezende da Serra / AM'),
+('9704', '3', 'Quadra de Campos, 9
+Pousada Santo Antonio
+17691658 Souza do Amparo / AL'),
+('9705', '2', 'Morro de Ribeiro, 974
+Vila Dos Anjos
+17028266 Nunes de Pires / GO'),
+('9706', '1', 'Passarela Sophia Farias, 41
+Alto Caiaras
+61717622 Costela / PR'),
+('9707', '1', 'Praa Pires
+Jardim Alvorada
+97678-172 Souza / RN'),
+('9708', '4', 'Parque Pedro Lucas Alves, 26
+So Lucas
+16015252 Monteiro / PI'),
+('9709', '2', 'Avenida de Moura, 9
+Vila Mantiqueira
+64562305 Souza / TO'),
+('9710', '4', 'Quadra Correia, 833
+Bairro Das Indstrias Ii
+51951-979 Pereira / GO'),
+('9711', '3', 'Campo Igor Carvalho, 98
+Vila So Joo Batista
+05458580 Caldeira / BA'),
+('9712', '2', 'Campo de da Mata
+Marmiteiros
+24540-632 Peixoto do Norte / CE'),
+('9713', '1', 'rea Mariane Souza, 43
+Vila Piratininga
+14990408 Sales de Costa / SE'),
+('9714', '1', 'Esplanada Monteiro, 1
+Betnia
+71793480 das Neves do Sul / BA'),
+('9715', '1', 'Distrito Vitor Rocha, 2
+Vila Nova Cachoeirinha 3 Seo
+70048-484 da Luz / SP'),
+('9716', '3', 'Esplanada Barbosa, 75
+Leonina
+59503-523 Castro da Praia / MG'),
+('9717', '3', 'Viela Silveira, 98
+Vila Minaslandia
+31360-739 Martins / AC'),
+('9718', '5', 'Largo Alves, 71
+Candelaria
+18652598 Moura / GO'),
+('9719', '2', 'Ladeira Calebe Costela, 12
+Renascena
+93016-497 Caldeira da Mata / GO'),
+('9720', '2', 'Via de da Costa, 46
+So Sebastio
+28351-881 Viana Alegre / RR'),
+('9721', '5', 'Ladeira de Gonalves, 242
+Cdi Jatoba
+14099-126 Arago da Praia / AP'),
+('9722', '4', 'Quadra Juliana da Mota, 7
+Santa Rita De Cssia
+87192-560 Moreira da Prata / MA'),
+('9723', '5', 'Morro Moraes, 13
+Centro
+01585-669 Castro / AL'),
+('9724', '5', 'Alameda de Gomes, 6
+So Joo
+00149-383 Melo / RS'),
+('9725', '5', 'Esplanada de Sales, 27
+Parque So Pedro
+57412761 Moura / PR'),
+('9726', '3', 'Rua da Rosa, 72
+Santana Do Cafezal
+57506-648 Caldeira / RS'),
+('9727', '4', 'Estao Raquel Cardoso
+Vila So Joo Batista
+31175-862 das Neves / AP'),
+('9728', '1', 'Aeroporto Isadora Cunha
+Juliana
+62486844 Cunha da Serra / ES'),
+('9729', '2', 'Alameda Nunes
+Lagoinha Leblon
+93315-355 Ramos do Campo / PA'),
+('9730', '4', 'Trecho Cunha
+So Gonalo
+37829-198 Moraes / PA'),
+('9731', '2', 'Residencial de Nascimento, 58
+Carlos Prates
+23336-719 Jesus / PA'),
+('9732', '5', 'Ncleo Nicole Arajo, 95
+Xodo-Marize
+30110-525 das Neves / RJ'),
+('9733', '1', 'Jardim de Viana, 9
+Esplanada
+94052-606 Costa do Campo / MA'),
+('9734', '2', 'Travessa de Castro, 8
+Lourdes
+08014439 Jesus dos Dourados / AL'),
+('9735', '2', 'Rodovia Mendes, 68
+Vila Santo Antnio
+77273-431 Moreira do Norte / TO'),
+('9736', '3', 'Jardim de Caldeira, 162
+So Bento
+66657-059 Fogaa / PB'),
+('9737', '5', 'Ncleo Isabelly Mendes, 665
+Cu Azul
+63895-188 Gomes do Norte / AP'),
+('9738', '4', 'Condomnio Cardoso, 2
+Santa Rosa
+45205-777 das Neves da Mata / SE'),
+('9739', '2', 'Quadra de Monteiro, 96
+Mineiro
+72535245 Pinto de Moraes / PE'),
+('9740', '3', 'Travessa de Arajo, 94
+Granja De Freitas
+67017244 Almeida / MT'),
+('9741', '2', 'Travessa Luiz Henrique Pinto, 184
+Nossa Senhora Da Conceio
+70408903 Lima das Pedras / MT'),
+('9742', '4', 'Estao Cardoso
+So Lucas
+74705-310 Pires / PR'),
+('9743', '1', 'rea Maria Moraes, 4
+Caiara - Adelaide
+50003619 Rocha / MG'),
+('9744', '3', 'Passarela da Rosa, 2
+Jatob
+63594030 das Neves das Pedras / PA'),
+('9745', '1', 'Praa Alexandre da Costa, 77
+Solimoes
+94867371 da Rosa / RR'),
+('9746', '1', 'Chcara Luiz Otvio Caldeira, 2
+Vila So Geraldo
+64164-247 Lopes de das Neves / RO'),
+('9747', '5', 'Condomnio de Lima, 12
+Paulo Vi
+57038899 Moreira / TO'),
+('9748', '4', 'Ptio Correia, 31
+Santa Rosa
+61573-386 Souza / BA'),
+('9749', '3', 'Largo de Fernandes, 81
+Tres Marias
+45918-438 Pereira de das Neves / BA'),
+('9750', '4', 'Alameda Martins, 55
+So Joo Batista
+77082-913 Carvalho do Galho / MT'),
+('9751', '4', 'Passarela Emanuelly Caldeira, 8
+Vila Madre Gertrudes 2 Seo
+17220-595 Azevedo / SC'),
+('9752', '4', 'Rodovia de Pinto, 5
+Carlos Prates
+49320048 Porto / GO'),
+('9753', '4', 'Conjunto de Almeida, 493
+Castanheira
+88381265 Duarte do Campo / PA'),
+('9754', '1', 'Morro de Pinto, 1
+Pindorama
+97201-741 Caldeira / PE'),
+('9755', '5', 'rea de Pinto
+Guarani
+34387-677 da Paz do Oeste / RR'),
+('9756', '5', 'Parque Sales
+Silveira
+40421634 Cunha de Almeida / MA'),
+('9757', '3', 'Campo Sophie Ribeiro, 86
+Vila Piratininga Venda Nova
+89140821 Porto / TO'),
+('9758', '2', 'Vale Cavalcanti
+Vila Independencia 2 Seo
+13093976 Arajo / SE'),
+('9759', '1', 'Conjunto de Caldeira
+Vila Santa Monica 2 Seo
+48424-282 da Cruz / PR'),
+('9760', '3', 'Feira de Silveira, 25
+Monte Azul
+71325559 Jesus / SC'),
+('9761', '4', 'Feira Castro, 46
+So Pedro
+26577095 Moraes / RR'),
+('9762', '4', 'Trecho Lopes, 3
+Vila Vista Alegre
+15400334 Lopes / MS'),
+('9763', '3', 'Recanto Antnio Farias
+Santa Tereza
+83851109 Ribeiro do Campo / PB'),
+('9764', '5', 'Aeroporto Campos, 69
+Vila Pinho
+85853517 da Rosa / RO'),
+('9765', '1', 'Distrito Pires, 47
+Frei Leopoldo
+23105216 Cunha de Rezende / RS'),
+('9766', '4', 'Ncleo de Alves
+Vila Betnia
+74994-831 Caldeira / MT'),
+('9767', '1', 'Lago Ramos, 2
+Flavio Marques Lisboa
+16870-716 Pires / PI'),
+('9768', '4', 'Lagoa de da Mata, 99
+Silveira
+69894-928 Pires / PR'),
+('9769', '3', 'Via Murilo Barbosa, 82
+Copacabana
+42678681 Oliveira / DF'),
+('9770', '1', 'Conjunto Cau Barros, 46
+Nova Gameleira
+19350615 Pinto Paulista / AP'),
+('9771', '3', 'Morro Stephany Nogueira
+So Luiz
+98210-646 Souza do Campo / BA'),
+('9772', '5', 'Favela Maria Luiza Fernandes, 8
+Sagrada Famlia
+73213-130 Fogaa / RO'),
+('9773', '3', 'Ncleo de Rezende, 96
+Flavio Marques Lisboa
+61534477 Correia de Martins / PB'),
+('9774', '5', 'Aeroporto de Pinto
+Branas
+13339-694 Oliveira / PI'),
+('9775', '4', 'Chcara Nogueira, 83
+Conjunto Bonsucesso
+84117300 Costa / GO'),
+('9776', '3', 'Stio de Pereira, 589
+Paquet
+01169-961 Duarte / RS'),
+('9777', '3', 'Estao Ribeiro, 37
+Vila Satlite
+12216-590 Novaes do Oeste / MT'),
+('9778', '2', 'Distrito Moreira, 475
+Mariquinhas
+39966911 Cavalcanti / RO'),
+('9779', '5', 'Condomnio Gabrielly Ferreira, 85
+Dom Bosco
+60400-842 Sales / TO'),
+('9780', '5', 'Parque Azevedo, 17
+Vila Antena
+18152934 Peixoto / SP'),
+('9781', '5', 'Vale Emanuelly Campos
+So Marcos
+89129-396 Melo / RO'),
+('9782', '1', 'Lago de Arajo, 26
+Vila Nova Gameleira 1 Seo
+61609245 Rocha / MG'),
+('9783', '4', 'Ncleo Davi Almeida, 6
+Marmiteiros
+77518-875 Silva / AL'),
+('9784', '5', 'Rodovia Arthur Porto, 966
+Jardinpolis
+54658536 Pires / DF'),
+('9785', '1', 'Viela de Pires
+Lorena
+09975-634 Melo / PR'),
+('9786', '5', 'Praa Campos, 27
+So Jorge 1 Seo
+89095049 Correia / AL'),
+('9787', '5', 'Largo de Dias, 9
+Vila Engenho Nogueira
+55550254 da Rosa do Amparo / RS'),
+('9788', '4', 'Conjunto Nunes, 11
+Santa Isabel
+82980-375 Novaes / MA'),
+('9789', '2', 'Viela Ana Julia da Rosa, 15
+Jardim Do Vale
+27425728 da Conceio das Flores / MT'),
+('9790', '5', 'Setor de Gomes, 826
+Conjunto Capito Eduardo
+81988986 Monteiro da Prata / MA'),
+('9791', '2', 'Rua Lorena da Rocha, 5
+Minaslandia
+70025-005 Novaes do Galho / PR'),
+('9792', '3', 'Travessa Castro, 56
+Santa Terezinha
+14831835 Barros / TO'),
+('9793', '4', 'Praia Novaes, 24
+Independncia
+44820775 da Luz Paulista / MT'),
+('9794', '3', 'Praa Melo, 3
+Vila Oeste
+39442122 da Cunha de Arago / ES'),
+('9795', '1', 'Travessa Lvia da Costa, 472
+Leticia
+47835-433 Correia de Cavalcanti / AP'),
+('9796', '4', 'Vila Samuel Ferreira, 96
+Santa Rita De Cssia
+64175460 Ferreira da Mata / TO'),
+('9797', '4', 'Ptio de Souza
+Universitrio
+66488-943 Pereira / PB'),
+('9798', '3', 'Morro Renan Melo, 1
+So Salvador
+40201225 Melo / PE'),
+('9799', '1', 'Loteamento de Cardoso
+Parque So Jos
+67775892 Mendes / AM'),
+('9800', '2', 'Travessa de Souza, 2
+Dona Clara
+24171004 Martins do Sul / RS'),
+('9801', '3', 'Lago Barbosa, 55
+Unidas
+22430-848 Dias da Serra / RO'),
+('9802', '1', 'Trevo Ribeiro, 91
+Ipe
+81512690 Cardoso / MT'),
+('9803', '3', 'Largo Davi Luiz da Rocha, 73
+Marola
+63024561 Cardoso / DF'),
+('9804', '1', 'Lagoa Ramos, 37
+Marmiteiros
+80923815 da Mota / PE'),
+('9805', '1', 'Praia da Conceio, 24
+Caiaras
+27499-899 Azevedo da Serra / RS'),
+('9806', '1', 'Trevo Mait Rocha
+Urca
+16923-044 da Cruz / MT'),
+('9807', '4', 'Distrito Bruno Duarte
+Flavio De Oliveira
+45024-294 Jesus de Santos / PI'),
+('9808', '4', 'Residencial de Lima
+Leticia
+39276-086 da Conceio de Pinto / SP'),
+('9809', '2', 'Largo Oliveira, 559
+Buraco Quente
+31247-555 Vieira / SE'),
+('9810', '1', 'Esplanada Anthony Gonalves, 67
+Primeiro De Maio
+24139-425 Alves / RJ'),
+('9811', '5', 'Avenida Pereira, 2
+Mala E Cuia
+48684-589 Pereira / AM'),
+('9812', '4', 'Esplanada de Gonalves, 9
+Vila So Joo Batista
+88331-644 da Cruz de da Cunha / RR'),
+('9813', '5', 'Praia de Cavalcanti, 30
+Boa Esperana
+87515-322 Moreira Verde / PA'),
+('9814', '2', 'Vereda de Cavalcanti, 71
+Camponesa 1 Seo
+84672-022 Lopes / MS'),
+('9815', '1', 'Setor de Ribeiro
+Santa Helena
+70355-869 Moraes Verde / MS'),
+('9816', '4', 'Travessa Costa, 86
+Nossa Senhora Da Aparecida
+78040886 Farias do Oeste / SC'),
+('9817', '3', 'Ladeira Moraes, 51
+Funcionrios
+68108-814 Ramos dos Dourados / TO'),
+('9818', '2', 'Praa de Lopes, 34
+Andiroba
+13498-414 Barros de Martins / MT'),
+('9819', '3', 'Praia Ian Vieira, 2
+Pompia
+19536-101 da Rosa / MT'),
+('9820', '3', 'Recanto Alves
+Vila Madre Gertrudes 2 Seo
+10188-475 Pires da Serra / BA'),
+('9821', '4', 'Praa Freitas, 60
+Delta
+43511603 Viana do Amparo / MG'),
+('9822', '2', 'rea Rocha, 669
+Pindura Saia
+53226857 Lopes do Galho / MS'),
+('9823', '3', 'Esplanada Peixoto, 6
+Olaria
+35837944 Almeida da Mata / AM'),
+('9824', '1', 'Travessa Alves, 696
+Campo Alegre
+71872243 da Mata Grande / DF'),
+('9825', '3', 'Morro Carlos Eduardo da Cunha
+Comiteco
+92058-159 Fernandes / AC'),
+('9826', '5', 'Vale Joana Viana
+Pindorama
+69486-479 Gonalves / DF'),
+('9827', '4', 'Feira da Rosa
+Nova Cintra
+32921141 Viana das Pedras / SC'),
+('9828', '5', 'Jardim Azevedo, 20
+Alto Vera Cruz
+66926-150 Dias das Flores / AL'),
+('9829', '4', 'Alameda Lima, 7
+Sion
+56637494 Silva da Serra / SP'),
+('9830', '1', 'Favela Moraes, 65
+Capito Eduardo
+28759-043 Cavalcanti Verde / MT'),
+('9831', '5', 'Residencial Augusto das Neves, 82
+Vila Da Paz
+22753819 Arago / RJ'),
+('9832', '1', 'Travessa Bruna Castro, 51
+Santa Ins
+79699382 Ferreira / CE'),
+('9833', '3', 'Stio Isis Arago, 509
+Vila Madre Gertrudes 4 Seo
+14193861 Moura / RN'),
+('9834', '2', 'Jardim Vieira, 399
+Alto Caiaras
+98840134 Oliveira do Oeste / MS'),
+('9835', '5', 'Stio de Gomes, 842
+Conjunto Bonsucesso
+38805045 Pereira / PI'),
+('9836', '4', 'Condomnio de Monteiro, 65
+Paquet
+98059-598 da Cruz / SE'),
+('9837', '3', 'Campo Davi Lucca Lopes, 33
+Zilah Sposito
+91248-041 Gonalves / SE'),
+('9838', '5', 'Trecho Luiz Otvio Martins, 59
+Vila Nova Gameleira 3 Seo
+48160937 Martins / PB'),
+('9839', '1', 'Largo de da Luz, 94
+Mineiro
+90149475 Barbosa Verde / RJ'),
+('9840', '2', 'Ncleo de Moura, 46
+Olaria
+10279-157 Cardoso / PA'),
+('9841', '5', 'Via de Novaes, 632
+So Bernardo
+09301352 Barros da Serra / MG'),
+('9842', '4', 'Rua de Nogueira, 5
+Glria
+61096878 Fernandes da Mata / AL'),
+('9843', '2', 'Aeroporto de Caldeira, 9
+Santana Do Cafezal
+36099070 Gomes / PE'),
+('9844', '5', 'Estao Almeida, 665
+Castanheira
+13948531 Mendes Alegre / RR'),
+('9845', '2', 'Trecho Natlia Lopes, 8
+Branas
+15593-385 Ribeiro / ES'),
+('9846', '2', 'Avenida Arajo, 60
+Serra Verde
+45603577 Peixoto da Mata / MA'),
+('9847', '5', 'Ncleo de Costela, 36
+Bonsucesso
+37052-795 Moraes / GO'),
+('9848', '3', 'Viela Eduardo da Cruz, 389
+Nova Sua
+72575-242 Oliveira de Minas / CE'),
+('9849', '2', 'Praa Souza, 4
+Conjunto Bonsucesso
+63060-510 Nascimento da Prata / RJ'),
+('9850', '3', 'Trevo de Nogueira, 3
+Beija Flor
+12242251 da Costa / MT'),
+('9851', '1', 'Colnia Correia, 1
+Santa Efignia
+70731-401 Carvalho da Praia / DF'),
+('9852', '1', 'Rodovia Kamilly Almeida, 212
+Santa Efignia
+94672-325 da Paz do Sul / SP'),
+('9853', '4', 'Fazenda Julia Castro, 469
+Sport Club
+38278246 Sales / SP'),
+('9854', '2', 'Trecho de da Cruz, 6
+Custodinha
+05964280 Dias / PR'),
+('9855', '5', 'Trecho de Fernandes, 24
+Vila Mangueiras
+60259-823 Castro / RJ'),
+('9856', '4', 'Praa Melissa da Mota, 576
+Vila So Dimas
+65661-562 Arago / PR'),
+('9857', '1', 'rea de Nogueira, 740
+Funcionrios
+99055606 Jesus Paulista / RR'),
+('9858', '2', 'Lago de Campos, 98
+Nova America
+12493338 Santos de Cunha / MS'),
+('9859', '3', 'Travessa Isabelly Novaes, 824
+Vila Sesc
+33780-270 Correia / PB'),
+('9860', '1', 'Jardim Monteiro, 48
+Senhor Dos Passos
+58980-842 Oliveira / BA'),
+('9861', '2', 'Ncleo Augusto Fogaa, 5
+Jardinpolis
+17663-529 Pereira Paulista / TO'),
+('9862', '4', 'Largo Luana Lopes
+Vila Ouro Minas
+95923-045 Vieira / PE'),
+('9863', '5', 'Travessa de Rodrigues, 90
+Vila Jardim Montanhes
+97568447 Monteiro da Mata / ES'),
+('9864', '5', 'Vila Nascimento
+Vila Sesc
+22595-078 Ramos da Prata / MA'),
+('9865', '3', 'Ncleo Elisa Cardoso, 93
+Vila Formosa
+29254-848 da Paz / RR'),
+('9866', '1', 'Lago de Costela, 86
+Antonio Ribeiro De Abreu 1 Seo
+70769257 Pereira da Mata / PI'),
+('9867', '1', 'Recanto de Santos
+Leonina
+37965-509 Azevedo / RS'),
+('9868', '1', 'Feira de da Mata, 94
+Floramar
+85858413 Gomes / AP'),
+('9869', '4', 'Rodovia Almeida, 782
+Cidade Jardim Taquaril
+72130-199 da Mota das Pedras / PA'),
+('9870', '5', 'Setor Azevedo, 36
+Nova Pampulha
+51906-277 Lima Paulista / MA'),
+('9871', '2', 'Condomnio da Cunha, 221
+Boa Viagem
+91614940 Rodrigues de Gonalves / AL'),
+('9872', '3', 'Jardim Alves
+Conjunto Capito Eduardo
+67445-509 Campos do Oeste / AL'),
+('9873', '2', 'rea Viana, 265
+Novo Aaro Reis
+33686-561 da Rocha / AC'),
+('9874', '5', 'Estrada Moraes, 50
+Vila Suzana Segunda Seo
+68689762 Ribeiro / MA'),
+('9875', '4', 'Campo Barros
+Coqueiros
+20225-978 Costela de Moreira / PI'),
+('9876', '2', 'Via Olivia Jesus
+So Lucas
+06245-093 Ramos da Serra / PR'),
+('9877', '1', 'Viaduto Pires, 93
+Guarat
+87341-941 Cardoso de Minas / MA'),
+('9878', '5', 'Avenida Gabrielly Moraes, 474
+Marilandia
+41745-505 Campos Paulista / ES'),
+('9879', '4', 'Trevo Gomes, 987
+Alta Tenso 1 Seo
+55292-526 Dias do Sul / RR'),
+('9880', '2', 'Jardim Barbosa, 55
+Minas Brasil
+38325763 da Conceio de da Rocha / PB'),
+('9881', '2', 'Lago Alves, 9
+Belmonte
+42566-757 Campos Alegre / PE'),
+('9882', '1', 'Fazenda Marcos Vinicius Gomes, 60
+Camponesa 2 Seo
+98588-179 Gonalves / MS'),
+('9883', '5', 'Trecho de da Cruz, 92
+Virgnia
+39605-883 Pereira / SC'),
+('9884', '4', 'Loteamento Carlos Eduardo Alves, 931
+Estoril
+00175072 Ferreira / AC'),
+('9885', '4', 'Conjunto de Moura, 66
+Vitoria Da Conquista
+55509-402 Cavalcanti / MG'),
+('9886', '2', 'Recanto de Gonalves
+Unio
+45978242 Arago / SC'),
+('9887', '3', 'Passarela Barros, 969
+Frei Leopoldo
+67835-477 Sales de Dias / PI'),
+('9888', '3', 'Quadra de Porto, 405
+Tnel De Ibirit
+09361124 Arajo de Gois / RR'),
+('9889', '4', 'Aeroporto Caio da Conceio, 62
+Vila Batik
+08361-235 Lopes Grande / GO'),
+('9890', '5', 'Setor Sabrina Cardoso, 6
+Ouro Minas
+19964-609 Farias / RJ'),
+('9891', '1', 'Condomnio Daniel da Costa, 51
+Jaragu
+12926043 Gonalves dos Dourados / SP'),
+('9892', '2', 'Condomnio de Teixeira, 66
+Vila Rica
+35040052 Peixoto Alegre / MS'),
+('9893', '2', 'rea Antnio Fernandes, 861
+Santa Rosa
+94101-586 Silveira da Mata / SP'),
+('9894', '5', 'Travessa de da Conceio, 30
+Vila Independencia 1 Seo
+26771-700 Fernandes / MA'),
+('9895', '4', 'Ncleo Mirella Almeida, 753
+So Bernardo
+17041-573 da Cunha / MG'),
+('9896', '4', 'rea Peixoto, 34
+Indai
+81294-921 Duarte do Galho / AL'),
+('9897', '1', 'Colnia Nina da Mata, 16
+Trevo
+39706-936 Viana / AP'),
+('9898', '2', 'Ptio Joaquim Duarte, 382
+Barroca
+20022-563 Monteiro de da Rocha / ES'),
+('9899', '4', 'Viaduto Azevedo, 99
+Itatiaia
+34972-915 Teixeira / AC'),
+('9900', '5', 'Alameda de das Neves, 34
+Sion
+14985873 Castro do Norte / SE'),
+('9901', '3', 'Passarela de Carvalho
+Santa Monica
+94841265 Porto Grande / CE'),
+('9902', '4', 'Aeroporto da Mata
+Bom Jesus
+60194-864 Jesus / AM'),
+('9903', '4', 'Favela de Barros, 2
+Petropolis
+19288635 Nunes de Minas / RJ'),
+('9904', '1', 'Aeroporto Miguel Rocha, 23
+Aparecida 7 Seo
+45365-021 Mendes do Norte / AM'),
+('9905', '5', 'Colnia da Rocha, 299
+Planalto
+53879-399 Viana da Serra / TO'),
+('9906', '1', 'Trecho da Mata
+Lorena
+82290265 Cardoso do Amparo / PB'),
+('9907', '4', 'Ladeira Sophie Souza
+Liberdade
+28839-761 Teixeira / MG'),
+('9908', '3', 'Ncleo de Silva, 60
+Conjunto Jardim Filadlfia
+67875-582 Campos do Amparo / MT'),
+('9909', '2', 'Estrada Samuel Moraes
+Vila Aeroporto
+10915-532 Novaes Verde / MA'),
+('9910', '4', 'rea de Barbosa, 539
+Ventosa
+08107723 Caldeira / AC'),
+('9911', '2', 'rea Olivia Costela, 524
+Outro
+95441623 Rodrigues / MG'),
+('9912', '2', 'Estao Brbara Ferreira, 13
+Pedreira Padro Lopes
+10051446 Pinto Paulista / SC'),
+('9913', '1', 'Rua Vieira, 80
+So Salvador
+92562-252 Pereira / MS'),
+('9914', '1', 'Avenida de Nunes, 72
+Parque So Pedro
+82077-305 Lima / MG'),
+('9915', '1', 'Campo de Vieira, 5
+Vila Coqueiral
+16101-373 Lopes / SC'),
+('9916', '3', 'Aeroporto da Luz, 90
+Vila Nova Gameleira 3 Seo
+65990-400 Monteiro / BA'),
+('9917', '1', 'Esplanada Ribeiro, 123
+Milionario
+70737-540 Carvalho de Campos / MT'),
+('9918', '1', 'Trevo Erick Nunes, 4
+Serra Verde
+69464763 da Rosa / RN'),
+('9919', '4', 'Alameda Moraes, 91
+Vila Nova Cachoeirinha 3 Seo
+06185-417 Barbosa do Norte / SC'),
+('9920', '4', 'Favela Nathan Ramos, 37
+Ferno Dias
+55121-100 Porto da Mata / PI'),
+('9921', '5', 'Parque Lorena Nascimento, 94
+Cardoso
+23451-306 Moraes / CE'),
+('9922', '3', 'Via Carvalho, 78
+Conjunto Providencia
+37530-510 Rezende Grande / AL'),
+('9923', '5', 'Chcara Maria Ceclia Freitas, 8
+Tirol
+17967724 Dias das Flores / AP'),
+('9924', '1', 'Ncleo Moraes, 71
+Alpio De Melo
+46256053 Moura do Campo / RN'),
+('9925', '5', 'Recanto da Luz, 31
+Vila Sesc
+60077-363 Azevedo / AP'),
+('9926', '3', 'Fazenda Carolina Duarte, 7
+So Benedito
+84781551 da Rocha / MT'),
+('9927', '3', 'Viela de Cardoso, 62
+Caiara - Adelaide
+22420-676 Vieira / MG'),
+('9928', '3', 'Viela Duarte, 41
+Jardim Alvorada
+93005-540 Fogaa de Gomes / TO'),
+('9929', '2', 'Ladeira Gomes, 32
+Maria Virgnia
+67027820 Santos de Almeida / MS'),
+('9930', '1', 'Stio Barros, 5
+So Geraldo
+37551869 Cavalcanti / RS'),
+('9931', '1', 'Rua Kamilly Nunes, 7
+Liberdade
+77082-636 Moura dos Dourados / PR'),
+('9932', '2', 'Vereda de Pinto, 87
+Vila Piratininga
+61459-470 Nogueira de Fogaa / RN'),
+('9933', '4', 'Distrito Mendes, 25
+Vila Minaslandia
+31960203 Costela / DF'),
+('9934', '2', 'Colnia Cardoso
+Conjunto Jardim Filadlfia
+85776-192 Nascimento das Flores / PB'),
+('9935', '5', 'Avenida Campos
+Ouro Minas
+61820-191 Gonalves da Mata / RR'),
+('9936', '4', 'Passarela de Barbosa
+Pantanal
+48337557 Melo / GO'),
+('9937', '3', 'Estao de Freitas, 465
+Serra Do Curral
+32716-148 Lopes de Pires / SP'),
+('9938', '2', 'Stio de Gonalves, 13
+Virgnia
+04409-310 Jesus / AL'),
+('9939', '5', 'Via Campos, 686
+So Sebastio
+33485402 Ferreira / AL'),
+('9940', '2', 'Conjunto Valentina da Mota
+Vila Nova Paraso
+72950095 Lopes do Norte / PA'),
+('9941', '2', 'Aeroporto de Caldeira
+Satelite
+20556-884 Ribeiro Verde / TO'),
+('9942', '3', 'Morro Cardoso, 527
+Mangabeiras
+39397-928 Duarte da Serra / MG'),
+('9943', '5', 'Rua das Neves, 57
+Alto Dos Pinheiros
+17930239 Jesus / SP'),
+('9944', '5', 'Lagoa de da Cunha, 20
+Joo Pinheiro
+67682827 Fernandes de Fogaa / GO'),
+('9945', '3', 'Quadra de Silveira
+Petropolis
+11985220 Pereira / RJ'),
+('9946', '1', 'Ptio Nogueira, 58
+Marieta 2 Seo
+44849816 Sales de Correia / RN'),
+('9947', '5', 'Favela Lopes, 9
+Lorena
+38497-556 Lopes / AP'),
+('9948', '5', 'Avenida Natlia Campos, 9
+Vila Nova
+73399437 Azevedo da Praia / TO'),
+('9949', '5', 'Conjunto Giovanna Cunha
+Lagoa
+81917982 Nascimento / PB'),
+('9950', '4', 'Trecho Santos, 215
+Jardim Leblon
+83673197 da Paz / PE'),
+('9951', '2', 'Feira Alexandre Lopes
+Ademar Maldonado
+56408-852 Castro / MG'),
+('9952', '4', 'Passarela de Gonalves, 75
+Jardinpolis
+46892427 Oliveira / SP'),
+('9953', '3', 'Recanto de Costela, 69
+Santo Antnio
+42061653 da Rosa / BA'),
+('9954', '4', 'Feira Vitor Hugo Peixoto
+Nossa Senhora Da Conceio
+25696183 Novaes / CE'),
+('9955', '1', 'Esplanada Caldeira, 85
+Vila Independencia 3 Seo
+53671-404 Farias / RN'),
+('9956', '3', 'rea Leandro Cardoso, 5
+Pompia
+75599070 da Mata dos Dourados / PR'),
+('9957', '1', 'Viela Paulo Peixoto
+Nossa Senhora Aparecida
+72945914 Teixeira Alegre / MG'),
+('9958', '1', 'Ladeira de Barros
+Jardim Felicidade
+53336288 Oliveira do Norte / PB'),
+('9959', '2', 'Residencial Nogueira, 489
+Jardim Guanabara
+02636-909 Jesus da Praia / MA'),
+('9960', '2', 'Praia Nogueira, 66
+Gutierrez
+88106541 Ramos de Gois / SP'),
+('9961', '2', 'Condomnio Barros, 67
+Caiaras
+53320845 Gonalves / MS'),
+('9962', '2', 'Aeroporto Sophie Arago, 74
+Jatob
+72747-979 Freitas de Minas / SE'),
+('9963', '1', 'Trecho Campos
+Baro Homem De Melo 1 Seo
+08653-860 Moura / PE'),
+('9964', '1', 'Lago Arajo, 1
+Lajedo
+49339-297 Fogaa Paulista / RS'),
+('9965', '3', 'Travessa de da Costa, 67
+Conjunto Novo Dom Bosco
+66802489 Mendes / MA'),
+('9966', '3', 'Lago Luiz Fernando Rocha, 84
+So Gabriel
+71934697 Silva / RN'),
+('9967', '4', 'Esplanada de Sales
+Vila So Rafael
+66454-381 Nogueira / RO'),
+('9968', '2', 'Praia Castro, 953
+Vila Pinho
+27132-091 Porto do Amparo / PA'),
+('9969', '5', 'Lagoa de Costela, 89
+Vila Inestan
+71606-785 da Costa / MS'),
+('9970', '3', 'Esplanada Julia Freitas, 100
+Jaqueline
+69698729 Nascimento / AL'),
+('9971', '3', 'Trecho Alexandre Silveira, 38
+Vila Formosa
+96430657 da Costa das Pedras / PR'),
+('9972', '5', 'Largo Cardoso
+Vila Independencia 1 Seo
+96506035 da Costa / AL'),
+('9973', '2', 'Vale Francisco da Rosa
+Joo Pinheiro
+36990-196 Monteiro / RS'),
+('9974', '2', 'Conjunto Barbosa, 34
+Nova Esperana
+47832819 Dias Grande / GO'),
+('9975', '3', 'Condomnio Cunha, 634
+Goiania
+49189366 Cunha / DF'),
+('9976', '5', 'Distrito de Fogaa, 431
+So Bernardo
+58729-739 Oliveira / SE'),
+('9977', '2', 'Loteamento de Cunha, 71
+Vila Canto Do Sabi
+31162-819 Lima de Cavalcanti / RO'),
+('9978', '5', 'Lagoa de da Mota, 91
+Andiroba
+65934-173 Pires / SC'),
+('9979', '4', 'Alameda Thomas Pires
+Fazendinha
+01729296 Ramos de Pires / RJ'),
+('9980', '2', 'Campo de Sales
+Urca
+38902-616 Vieira de Vieira / RR'),
+('9981', '3', 'Parque Cavalcanti, 59
+Vila Minaslandia
+86159-990 da Paz de Minas / GO'),
+('9982', '5', 'Vereda Gomes, 604
+Coqueiros
+55263002 Cardoso da Prata / RO'),
+('9983', '3', 'Viaduto Oliveira, 51
+Cabana Do Pai Toms
+75830-081 Gonalves do Sul / RO'),
+('9984', '3', 'Favela de Duarte, 16
+Embabas
+66809652 Gomes / MA'),
+('9985', '5', 'Stio de Freitas, 499
+Pongelupe
+79539-595 Viana / DF'),
+('9986', '1', 'Stio de da Rocha, 282
+Marieta 1 Seo
+17922554 da Rosa da Serra / SC'),
+('9987', '5', 'Alameda da Rosa, 84
+Jardim Vitoria
+84873977 Martins / RJ'),
+('9988', '2', 'Vale Fogaa
+Vila Sesc
+56158-840 Barros / PA'),
+('9989', '3', 'Residencial Carvalho, 70
+Marieta 3 Seo
+84660093 Pereira de Gois / PB'),
+('9990', '5', 'Quadra de Farias
+Confisco
+42104-149 Cardoso / PE'),
+('9991', '2', 'Lagoa Fogaa, 12
+Lagoinha Leblon
+31264654 Azevedo / CE'),
+('9992', '4', 'Distrito Vitor Hugo Jesus, 26
+Itatiaia
+82451-061 da Costa da Serra / MT'),
+('9993', '3', 'Ncleo Souza, 19
+Vila Rica
+42366491 Cardoso de Minas / TO'),
+('9994', '1', 'Condomnio Milena Ramos, 76
+Pompia
+48557288 Santos do Galho / MG'),
+('9995', '3', 'Distrito Lucca Carvalho, 74
+Olhos 
+02356919 da Luz Verde / AL'),
+('9996', '2', 'Praia Ferreira, 9
+Bairro Das Indstrias Ii
+04014318 Farias de Teixeira / PR'),
+('9997', '5', 'Jardim Dias, 90
+Morro Dos Macacos
+33979402 Cavalcanti / MA'),
+('9998', '1', 'Aeroporto de Castro, 1
+Baro Homem De Melo 1 Seo
+17819-193 Azevedo / AP'),
+('9999', '1', 'Condomnio Pinto, 93
+Coqueiros
+55763429 Gomes Alegre / MT'),
+('10000', '5', 'Jardim de Rocha, 79
+Jardim Atlntico
+31370-847 Moreira de Pinto / CE'),
+('10001', '5', 'Favela Viana
+Santa Sofia
+89530574 Teixeira / PI'),
+('10002', '4', 'Largo Rodrigues, 88
+Camponesa 2 Seo
+68812-296 Fogaa Verde / PA'),
+('10003', '1', 'Via Vieira, 46
+Calafate
+50917523 Melo do Amparo / DF'),
+('10004', '1', 'Vereda Sabrina Viana, 98
+Vila Tirol
+89052-228 Costa do Amparo / RJ'),
+('10005', '4', 'Passarela Gonalves, 86
+So Gonalo
+67297-926 Rezende do Campo / DF'),
+('10006', '2', 'Jardim Cardoso, 96
+Brasil Industrial
+75126755 Porto / AC'),
+('10007', '2', 'Condomnio Arajo, 5
+Fazendinha
+37330-795 Nascimento de Minas / PI'),
+('10008', '4', 'Recanto de Gonalves, 6
+Piraja
+72962238 Vieira Verde / SC'),
+('10009', '2', 'Setor Viana, 67
+Vila Da ria
+08998008 Ramos de Moura / RO'),
+('10010', '4', 'Vereda Alana Pinto, 95
+Lindia
+08666686 Moura / AM'),
+('10011', '4', 'Largo Fernandes
+Vila Nova Cachoeirinha 3 Seo
+47819-138 Azevedo do Campo / BA'),
+('10012', '4', 'Chcara Cardoso, 86
+Alto Vera Cruz
+51946000 Teixeira / AP'),
+('10013', '1', 'Trevo de da Mata, 7
+Palmares
+38171-617 Campos de Gois / SP'),
+('10014', '3', 'Residencial de Cardoso, 41
+Vila Real 2 Seo
+44392-255 Rezende do Norte / PB'),
+('10015', '5', 'Esplanada da Mata, 14
+Santa Margarida
+26970-818 Pires / MT'),
+('10016', '1', 'Loteamento de Campos, 85
+Vila Formosa
+45139883 Melo / PE'),
+('10017', '4', 'Jardim de Porto, 366
+Olaria
+50205926 Rocha dos Dourados / MA'),
+('10018', '3', 'Rua Valentina Cavalcanti, 57
+Hava
+62934547 Jesus / RJ'),
+('10019', '3', 'Quadra de Teixeira, 203
+Paulo Vi
+46701-626 Freitas / RO'),
+('10020', '1', 'Rua Azevedo, 27
+Serra Verde
+14764060 Lopes / AL'),
+('10021', '2', 'Ptio Farias, 81
+Olaria
+35099817 Campos do Galho / CE'),
+('10022', '3', 'Praa Pereira, 97
+Vila Puc
+09130-841 Nunes do Galho / RS'),
+('10023', '1', 'Feira Rodrigues, 787
+Maria Helena
+36304-648 Souza das Pedras / PE'),
+('10024', '2', 'Distrito Rafael da Costa
+Aeroporto
+84906810 Moraes / MS'),
+('10025', '2', 'Condomnio da Costa, 7
+Funcionrios
+59735-775 Rocha das Pedras / SC'),
+('10026', '2', 'Parque Mendes, 43
+Capito Eduardo
+28379140 Fernandes de Moreira / MA'),
+('10027', '1', 'Esplanada Caroline Teixeira, 29
+Providencia
+01788-161 da Rocha da Serra / MG'),
+('10028', '2', 'Condomnio Gustavo Jesus, 59
+Corao De Jesus
+63775344 Silveira Grande / MS'),
+('10029', '3', 'Stio de Almeida
+Caiara - Adelaide
+65829529 Ribeiro / SP'),
+('10030', '1', 'Distrito Nascimento, 29
+Vila Da Paz
+26918446 Nascimento / AP'),
+('10031', '2', 'Avenida de Freitas, 7
+Vila Madre Gertrudes 3 Seo
+34877-026 Sales Alegre / MA'),
+('10032', '4', 'Vila de Duarte, 38
+Ademar Maldonado
+89362452 Melo / SE'),
+('10033', '4', 'Vale Souza
+Conjunto Providencia
+65096-340 Fogaa / PA'),
+('10034', '3', 'Distrito de da Luz, 33
+Ermelinda
+95557-875 Lopes de Cardoso / GO'),
+('10035', '5', 'Rodovia Giovanna Oliveira, 935
+Vila Antena Montanhs
+83748-014 Sales do Norte / SE'),
+('10036', '3', 'Recanto Pietra da Mota, 785
+Vila Dos Anjos
+46307795 Sales Verde / MG'),
+('10037', '5', 'Avenida de Fernandes, 37
+Acaba Mundo
+00288-924 da Mota da Praia / SE'),
+('10038', '4', 'Chcara Eloah Freitas, 13
+Santa Ins
+04132-206 Silveira / AL'),
+('10039', '1', 'Ladeira Duarte, 16
+Alpio De Melo
+13306994 da Paz de Minas / RR'),
+('10040', '2', 'Parque de Fernandes, 869
+Parque So Pedro
+58672-312 Fernandes / ES'),
+('10041', '4', 'Feira de Moreira, 402
+Vila So Rafael
+00355-730 Moraes do Oeste / AC'),
+('10042', '3', 'Rodovia Cunha, 87
+Camponesa 2 Seo
+04381447 Cardoso / PB'),
+('10043', '1', 'Praa de Pereira, 48
+Carmo
+35529697 Caldeira / RS'),
+('10044', '2', 'Esplanada Renan Peixoto
+Vila Boa Vista
+73184-755 Azevedo / RR'),
+('10045', '4', 'Fazenda Caldeira, 23
+So Luiz
+58674929 Sales do Sul / MS'),
+('10046', '4', 'Jardim Nogueira, 96
+Vila Batik
+57029-614 Pinto de Rodrigues / RS'),
+('10047', '3', 'Distrito Rodrigues, 13
+Pousada Santo Antonio
+29521247 Martins / RN'),
+('10048', '5', 'Via de da Costa, 49
+Betnia
+08829-621 Pires Grande / SP'),
+('10049', '5', 'rea de Nascimento, 19
+Horto Florestal
+85525-292 Ramos / GO'),
+('10050', '5', 'Alameda Farias, 7
+Ernesto Nascimento
+00543-926 Cunha / CE'),
+('10051', '1', 'Viaduto Enzo Pinto, 54
+Vila Satlite
+85982-639 Correia / RN'),
+('10052', '1', 'Setor da Mota, 615
+Madre Gertrudes
+84075595 Pires / SC'),
+('10053', '5', 'Stio Yuri Silva, 86
+Engenho Nogueira
+30112011 Costela das Pedras / MS'),
+('10054', '4', 'Chcara Martins, 86
+Caiara - Adelaide
+61043-856 Ramos / AP'),
+('10055', '2', 'Condomnio Valentina da Rocha, 55
+Santa Rosa
+71986-645 Fernandes / ES'),
+('10056', '5', 'Residencial de Viana, 9
+Monte Azul
+61385480 da Cruz de da Rosa / AM'),
+('10057', '1', 'Praa Castro, 315
+Pongelupe
+17771547 Moura / PI'),
+('10058', '2', 'Avenida Melo, 347
+Vila So Francisco
+86134026 Jesus / GO'),
+('10059', '5', 'Alameda de Sales, 16
+Pindura Saia
+82819110 Castro / ES'),
+('10060', '1', 'Viaduto da Cunha, 53
+Cdi Jatoba
+93704213 Santos das Pedras / CE'),
+('10061', '5', 'Distrito de Mendes, 46
+So Paulo
+04552-284 da Mota Verde / SC'),
+('10062', '4', 'Lago de da Mata, 7
+Cdi Jatoba
+06705322 Arago / SP'),
+('10063', '2', 'Esplanada das Neves, 35
+Vila Maria
+05526-609 da Mota Grande / MG'),
+('10064', '2', 'Fazenda Clara da Rosa
+Vila So Geraldo
+85571262 Cardoso Alegre / PE'),
+('10065', '1', 'Avenida de Moraes, 6
+lvaro Camargos
+07789-815 das Neves / BA'),
+('10066', '3', 'Fazenda de Rocha, 7
+So Jorge 1 Seo
+00816-673 Rezende / AM'),
+('10067', '1', 'Distrito Joo Miguel da Cruz, 28
+Baro Homem De Melo 3 Seo
+13615-842 Fernandes Alegre / RR'),
+('10068', '3', 'Recanto Luiz Felipe Lima, 8
+Vila Aeroporto
+23966984 Costela / RR'),
+('10069', '1', 'Loteamento de Moura, 272
+Vila Ouro Minas
+91222629 Novaes / PA'),
+('10070', '2', 'Praa de Rodrigues
+Copacabana
+68447-647 Cunha / RS'),
+('10071', '5', 'Rodovia de Lopes, 98
+Conjunto Califrnia Ii
+23460768 Moura / PB'),
+('10072', '3', 'Estao Ana Jlia Almeida, 851
+Canaa
+99416-898 Rocha / PI'),
+('10073', '3', 'Ptio Juliana Fernandes, 9
+Indai
+92042611 Santos de da Costa / MS'),
+('10074', '3', 'Conjunto da Mota, 7
+Inconfidncia
+60897309 Dias / RS'),
+('10075', '3', 'Praia Souza
+Novo Glria
+09162500 Ferreira / TO'),
+('10076', '2', 'Morro Luiza da Rocha, 97
+Pedreira Padro Lopes
+89213514 Freitas Alegre / RR'),
+('10077', '3', 'Feira Luiza Jesus, 409
+Vila So Francisco
+59558095 Sales dos Dourados / TO'),
+('10078', '5', 'Conjunto de Peixoto, 12
+Vila Barragem Santa Lcia
+47100036 Martins / ES'),
+('10079', '4', 'Lago Caldeira, 94
+Betnia
+99674-538 Teixeira / SE'),
+('10080', '5', 'Residencial de Moraes, 42
+Capito Eduardo
+63866-282 Moraes do Oeste / ES');
