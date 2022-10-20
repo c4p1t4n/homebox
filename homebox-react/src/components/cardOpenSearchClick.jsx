@@ -2,7 +2,7 @@ function cardOpenSearchClick(props) {
 
     return (
         <>
-            <details className="cardSearchOpenDivServicesOpen">
+            <details open className="cardSearchOpenDivServicesOpen">
                 <summary className="summaryCardSearchOpen">
                     <div className="nameServiceSearchCardOpen">
                         <p>Serviço</p>
