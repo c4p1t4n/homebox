@@ -133,7 +133,7 @@ class relatorioProvider extends Component {
                                             <div className="visitsYourProfileBut">
                                                 {/* <p id="indice">13%</p> */}
                                                 <div className="indiceDiv2">
-                                                    <p id="indice2">{geraVisitas}</p>
+                                                    <p id="indice2">{geraVisitas()}</p>
                                                     <p>nessa semana</p>
                                                 </div>
                                             </div>
