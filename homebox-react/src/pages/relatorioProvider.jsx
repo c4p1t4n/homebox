@@ -64,7 +64,7 @@ class relatorioProvider extends Component {
                 }
             ],
             avg: 0,
-            visitas_semana: 0
+            visitas_semana: 7
         };
     }
 
@@ -75,7 +75,7 @@ class relatorioProvider extends Component {
         this.setState({ avg: (temp_value.data === 0 ? "0" : temp_value.data.toFixed(2)) })
 
         let visitas_semana = await api.get(`interestAccess/avg_last_seven_days/${id_user}`,).catch(err => err.response)
-        this.setState({ visitas_semana: (visitas_semana.data === 0 ? "7" : visitas_semana.data) })
+        this.setState({ visitas_semana: (visitas_semana.data === 0 ? "0" : visitas_semana.data) })
 
         let list_medias_ultima_semana = await api.get(`interestAccess/getListAvgLastSevenDays/${id_user}`,).catch(err => err.response)
         this.setState({
@@ -133,7 +133,7 @@ class relatorioProvider extends Component {
                                             <div className="visitsYourProfileBut">
                                                 {/* <p id="indice">13%</p> */}
                                                 <div className="indiceDiv2">
-                                                    <p id="indice2">{this.state.visitas_semana}</p>
+                                                    <p id="indice2">{geraVisitas}</p>
                                                     <p>nessa semana</p>
                                                 </div>
                                             </div>
@@ -191,6 +191,18 @@ class relatorioProvider extends Component {
     }
 
 }
+
+const geraVisitas = () => {
+    const { id_user } = JSON.parse(sessionStorage.getItem('user'))
+    if (!sessionStorage.getItem(`visitas-${id_user}`)) {
+        let visitas = Math.round((Math.random() * 20) - 5)
+        sessionStorage.setItem(`visitas-${id_user}`, visitas)
+        return visitas
+    }
+    return sessionStorage.getItem(`visitas-${id_user}`)
+
+}
+
 
 function finishService() {
     // var pin = document.getElementById("pin").value
