@@ -111,7 +111,7 @@ public class ChatController {
             ChatHasMsg chm = dbRepositoryChatHasMsg.findTop1ByChatIdChatOrderBySendDateDesc(chat.getChat().getIdChat());
             if (chm == null){
                 chatsPerUser.add(new ChatsPerUser(chat.getId(), chat.getUser(), chat.getChat(), new Msg("Olá, prazer em te conhecer", chat.getUser()),
-                        LocalDateTime.now(), 'n'));
+                        LocalDateTime.of(2022, 10, 20, 10, 0, 0), 'n'));
 
             }
             else{
