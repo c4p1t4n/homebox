@@ -1,7 +1,6 @@
 package school.sptech.server.request;
 
 import school.sptech.server.model.Scheduling;
-import school.sptech.server.model.User;
 
 import javax.persistence.Column;
 import javax.persistence.ManyToOne;

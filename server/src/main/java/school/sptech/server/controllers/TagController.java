@@ -1,6 +1,5 @@
 package school.sptech.server.controllers;
 
-import io.swagger.v3.oas.annotations.tags.Tags;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -8,9 +7,6 @@ import school.sptech.server.model.*;
 import school.sptech.server.repository.*;
 import school.sptech.server.service.UserService;
 
-import javax.validation.Valid;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 
 import static org.springframework.http.ResponseEntity.status;
@@ -52,7 +48,7 @@ public class TagController {
 
 
     @PostMapping("/{id}")
-    public ResponseEntity postTag(@PathVariable  Integer id,@RequestBody String descricao){
+    public ResponseEntity<Void> postTag(@PathVariable  Integer id,@RequestBody String descricao){
 
         tagRepository.save(new Tag(id,descricao));
 
@@ -66,7 +62,7 @@ public class TagController {
 
 
     @PostMapping("/user/{idUser}")
-    public ResponseEntity postUserHasTag(@RequestBody Tag tag ,@PathVariable Integer idUser){
+    public ResponseEntity<String> postUserHasTag(@RequestBody Tag tag ,@PathVariable Integer idUser){
         List<Tag> listTag = tagRepository.findAll();
 
         if(!dbServiceUser.existsById(idUser)){
@@ -93,7 +89,7 @@ public class TagController {
 
 
     @PostMapping("/category/{idCategory}")
-    public ResponseEntity postCategoryHasTag(@RequestBody Tag tag,@PathVariable Integer idCategory){
+    public ResponseEntity<String> postCategoryHasTag(@RequestBody Tag tag,@PathVariable Integer idCategory){
         List<Tag> listTag= tagRepository.findAll();
 
         if(!categoryRepository.existsById(idCategory)){
@@ -116,7 +112,7 @@ public class TagController {
 
 
     @PostMapping("/service/{idService}")
-    public ResponseEntity postServiceHasTag(@RequestBody Tag tag,@PathVariable  Integer idService){
+    public ResponseEntity<String> postServiceHasTag(@RequestBody Tag tag,@PathVariable  Integer idService){
         List<Tag> listTag= tagRepository.findAll();
 
         if(!serviceRepository.existsById(idService)){
@@ -145,14 +141,14 @@ public class TagController {
 
 
     @GetMapping
-    public ResponseEntity getAllTags(){
+    public ResponseEntity<List<Tag>> getAllTags(){
       List<Tag> tags = tagRepository.findAll();
 
         return tags.isEmpty() ? status(204).build() : status(200).body(tags);
     }
 
     @GetMapping("/user")
-    public ResponseEntity getAllUserHasTags(){
+    public ResponseEntity<List<UserHasTag>> getAllUserHasTags(){
         List<UserHasTag> userHasTags = userHasTag.findAll();
 
         return userHasTags.isEmpty() ? status(204).build() : status(200).body(userHasTags);
@@ -160,19 +156,18 @@ public class TagController {
 
 
     @GetMapping("/service")
-    public ResponseEntity getAllServiceHasTags(){
+    public ResponseEntity<List<ServiceHasTag>> getAllServiceHasTags(){
         List<ServiceHasTag> serviceHasTags = serviceHasTagRepository.findAll();
 
         return serviceHasTags.isEmpty() ? status(204).build() : status(200).body(serviceHasTags);
     }
 
     @GetMapping("/category")
-    public ResponseEntity getAllCategoryHasTags(){
+    public ResponseEntity<List<CategoryHasTag>> getAllCategoryHasTags(){
         List<CategoryHasTag> categoryHasTags = categoryHasTagRepository.findAll();
 
         return categoryHasTags.isEmpty() ? status(204).build() : status(200).body(categoryHasTags);
     }
-
 
 
 

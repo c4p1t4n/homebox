@@ -48,7 +48,7 @@ public class InterestAcess {
     InterestAccessRepository interestAccessRepository;
 
     @PostMapping("/interestAcess/{user_id}/{tag_id}")
-    public ResponseEntity postInterestAcess(@PathVariable Integer user_id, @PathVariable Integer tag_id){
+    public ResponseEntity<String> postInterestAcess(@PathVariable Integer user_id, @PathVariable Integer tag_id){
 
         if(userRepository.existsById(user_id) && tagRepository.existsById(tag_id)) {
             User userInterestAcess = userRepository.getById(user_id);
@@ -60,7 +60,7 @@ public class InterestAcess {
     }
 
     @PostMapping("/user/{idInterestAcess}")
-    public ResponseEntity postInterestAcess(@RequestBody Tag tag ,@PathVariable Integer idInterestAcess){
+    public ResponseEntity<String> postInterestAcess(@RequestBody Tag tag ,@PathVariable Integer idInterestAcess){
         List<Tag> listTag = tagRepository.findAll();
 
         if(!interestAccessRepository.existsById(idInterestAcess)){
@@ -85,12 +85,12 @@ public class InterestAcess {
     }
 
     @GetMapping("/avg_last_seven_days/{id_user}")
-    public  ResponseEntity AvgLastSevenDays(@PathVariable Integer id_user){
+    public  ResponseEntity<Integer> AvgLastSevenDays(@PathVariable Integer id_user){
        return ResponseEntity.status(200).body(interestAccessRepository.countIntestAcess(id_user,LocalDate.now().minusDays(7)));
     }
 
     @GetMapping("/getListAvgLastSevenDays/{id_user}")
-    public  ResponseEntity ListAvgLastSevenDays(@PathVariable Integer id_user){
+    public  ResponseEntity<List<Double>> ListAvgLastSevenDays(@PathVariable Integer id_user){
 
 
         return ResponseEntity.status(200).body(ratingRepository.getAvgRatingForWorkerLastSevenDays(id_user,LocalDate.now().minusDays(7)));

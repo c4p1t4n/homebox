@@ -9,7 +9,7 @@ import school.sptech.server.client.DistanceRecommendationClient;
 import school.sptech.server.model.Category;
 import school.sptech.server.model.User;
 //import school.sptech.server.service.ExportTxt;
-import school.sptech.server.service.FilaObj;
+// import school.sptech.server.service.FilaObj;
 import school.sptech.server.request.DistRecommendRequest;
 import school.sptech.server.request.DistRequest;
 import school.sptech.server.request.LoginRequest;
@@ -51,8 +51,8 @@ public class UserController {
     @Autowired
     private RatingRepository dbRepositoryRating;
 
-    @Autowired
-    private CategoryRepository categoryRepository;
+    // @Autowired
+    // private CategoryRepository categoryRepository;
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/customer")
@@ -104,7 +104,7 @@ public class UserController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PatchMapping("/att/email/{idUser}/{email}")
-    public ResponseEntity attEmail(@PathVariable Integer idUser,
+    public ResponseEntity<Void> attEmail(@PathVariable Integer idUser,
             @PathVariable String email) {
 
         if (!dbServiceUser.existsById(idUser)) {
@@ -313,11 +313,12 @@ public class UserController {
 
         DistRequest distRequest = new DistRequest(cep1, cep2);
 
-        ResponseEntity<DistResponse> dist = distClient.getDist(distRequest);
-        if (Objects.isNull(dist.getBody())) {
-            return status(400).build();
+        DistResponse dist = distClient.getDist(distRequest).getBody();
+        
+        if (Objects.nonNull(dist)) {
+            return status(200).body(dist.getDistance());
         }
-        return status(200).body(dist.getBody().getDistance());
+        return status(400).build();
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -330,17 +331,23 @@ public class UserController {
 
         List<UsersDistance> usersDistance = distRecommendationClient.getDist(new DistRecommendRequest(id, 3)).getBody();
 
-        List<UserSearchQueryResult> users = usersDistance.stream()
-                .map((user) -> new UserSearchQueryResult(
-                    dbServiceUser.findById(user.getId_worker()).get(),
-                    dbRepositoryRating.getAvgWorker(dbServiceUser.findById(user.getId_worker()).get().getId()),
-                    user.getDistance(),
-                    getWorkerCategories(dbServiceUser.findById(user.getId_worker()).get().getId()).getBody().get(0))
-                )
-                .collect(Collectors.toList());
+        if (usersDistance != null){
+            List<UserSearchQueryResult> users = usersDistance.stream()
+                    .map((user) -> new UserSearchQueryResult(
+                        dbServiceUser.findById(user.getId_worker()).get(),
+                        dbRepositoryRating.getAvgWorker(dbServiceUser.findById(user.getId_worker()).get().getId()),
+                        user.getDistance(),
+                        getWorkerCategories(dbServiceUser.findById(user.getId_worker()).get().getId()).getBody().get(0))
+                    )
+                    .collect(Collectors.toList());
 
-        return status(200).body(users);
+            return status(200).body(users);
+        }
+
+        return status(502).build();
     }
+
+
 
     // @PatchMapping(value = "/report", consumes = "text/txt; charset: utf-8")
     // public ResponseEntity<Object> importUsers(@RequestBody byte[] report) throws

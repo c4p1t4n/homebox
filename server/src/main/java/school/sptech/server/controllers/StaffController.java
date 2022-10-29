@@ -17,15 +17,11 @@ import java.util.Date;
 import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import javax.persistence.criteria.CriteriaBuilder;
-
 @RestController
 @RequestMapping("/staff")
 public class StaffController {
     @Autowired
     private SchedulingRepository dbRepositoryScheduling;
-    @Autowired
-    private SchedulingStatusRepository dbRepositorySchedulingStatus;
     @Autowired
     private StaffRepository dbRepositoryStaff;
     @Autowired

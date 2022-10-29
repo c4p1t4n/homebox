@@ -114,9 +114,12 @@ class CategoryControllerTest {
 
         ResponseEntity<List<Category>> response = categoryController.getCategoryByName(filter);
 
+        List<Category> body = response.getBody();
+
         assertEquals(200, response.getStatusCodeValue());
-        assertEquals(mockList.size(), response.getBody().size());
-        assertEquals(category1, response.getBody().get(0));
+        assertNotNull(body);
+        assertEquals(mockList.size(), body.size());
+        assertEquals(category1, body.get(0));
     }
 
     @Test
