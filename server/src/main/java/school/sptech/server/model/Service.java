@@ -31,7 +31,19 @@ public class Service {
     @Column(name = "reference_price")
     private Double referencePrice;
 
+    @Column(name = "deleted")
+    private Character deleted;
+
     public Service() {
+    }
+
+    public Service(User worker, Category category, String name, String description, Double referencePrice, Character deleted) {
+        this.worker = worker;
+        this.category = category;
+        this.name = name;
+        this.description = description;
+        this.referencePrice = referencePrice;
+        this.deleted = deleted;
     }
 
     public Service(User worker, Category category, String name, String description, Double referencePrice) {
@@ -40,6 +52,7 @@ public class Service {
         this.name = name;
         this.description = description;
         this.referencePrice = referencePrice;
+        this.deleted = null;
     }
 
     public Integer getIdService() {
@@ -51,13 +64,14 @@ public class Service {
     }
 
     public Service(Integer idService, User worker, Category category, String name, String description,
-            Double referencePrice) {
+            Double referencePrice, Character deleted) {
         this.idService = idService;
         this.worker = worker;
         this.category = category;
         this.name = name;
         this.description = description;
         this.referencePrice = referencePrice;
+        this.deleted = deleted;
     }
 
     public User getWorker() {
@@ -98,6 +112,14 @@ public class Service {
 
     public void setReferencePrice(Double referencePrice) {
         this.referencePrice = referencePrice;
+    }
+
+    public Character getDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(Character deleted) {
+        this.deleted = deleted;
     }
 
 }
