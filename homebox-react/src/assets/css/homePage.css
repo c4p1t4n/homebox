@@ -210,7 +210,7 @@ body {
 #loadingDivHome {
     position: absolute;
     left: 46.5%;
-    top: 118%;
+    top: 100%;
 }
 
 #loadingDivHome img {
