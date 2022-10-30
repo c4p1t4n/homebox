@@ -16,7 +16,6 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
-import school.sptech.server.service.HashTable;
 import school.sptech.server.service.PilhaLigada;
 import school.sptech.server.service.PilhaObj;
 

@@ -103,6 +103,7 @@ CREATE TABLE service (
     name VARCHAR(100) NOT NULL,
     description TEXT,
     reference_price DECIMAL(7, 2),
+    deleted CHAR(1),
     FOREIGN KEY(category_id_category) REFERENCES category(id_category),
     FOREIGN KEY(worker_id_user) REFERENCES user(id_user)
 );
@@ -262,7 +263,7 @@ VALUES (
         'Feminino',
         'bruna@gmail.com',
         SHA2("ExSenha1", 256),
-        '12345678900',  
+        '12345678900',
         NULL,
         'customer',
         "https://images.unsplash.com/photo-1546961333-449e0af7b5db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
@@ -23179,7 +23180,7 @@ Urca
 Alto Dos Pinheiros
 10371143 Novaes de Gois / AM'),
 ('489', '4', 'Esplanada Monteiro, 9
-Vila Olhos 
+Vila Olhos
 57167908 Almeida / PA'),
 ('490', '4', 'Alameda Azevedo, 87
 Baleia
@@ -23521,7 +23522,7 @@ So Salvador
 Vila Pilar
 67324077 Pereira / SP'),
 ('603', '5', 'Rua de Ribeiro, 6
-Olhos 
+Olhos
 51282-272 Campos / ES'),
 ('604', '1', 'Rua Silva, 78
 Coqueiros
@@ -24043,7 +24044,7 @@ Heliopolis
 So Bernardo
 88545-718 Rodrigues das Flores / ES'),
 ('777', '2', 'Trevo de Pires, 61
-Vila Olhos 
+Vila Olhos
 24586-857 Moura / GO'),
 ('778', '1', 'Rodovia Maria Julia Ribeiro, 41
 Renascena
@@ -25264,7 +25265,7 @@ Independncia
 Vila Nossa Senhora Do Rosrio
 83305619 Rocha / RJ'),
 ('1184', '5', 'Quadra Fogaa, 156
-Olhos 
+Olhos
 60487-004 Mendes de Barros / MG'),
 ('1185', '3', 'Campo da Paz, 523
 Vila Novo So Lucas
@@ -25981,7 +25982,7 @@ Salgado Filho
 Vila Satlite
 47481886 da Rosa / RJ'),
 ('1423', '1', 'Ladeira Pedro Lucas Nogueira, 70
-Olhos 
+Olhos
 07044992 Pereira / RN'),
 ('1424', '4', 'Residencial Felipe Viana, 6
 Ouro Minas
@@ -26038,7 +26039,7 @@ Vista Do Sol
 Vila Formosa
 51668-574 da Mota / RO'),
 ('1442', '1', 'Alameda Stephany Silveira, 469
-Vila Olhos 
+Vila Olhos
 19701320 Caldeira de Minas / DF'),
 ('1443', '3', 'Stio de Barbosa, 87
 Conjunto Califrnia Ii
@@ -26107,7 +26108,7 @@ Paulo Vi
 Alpio De Melo
 68799-390 Correia / MA'),
 ('1465', '5', 'Travessa Mendes, 87
-Olhos 
+Olhos
 31532-576 Gonalves / RJ'),
 ('1466', '1', 'Favela Pires, 6
 Casa Branca
@@ -26863,7 +26864,7 @@ Universo
 Vila Nova Cachoeirinha 3 Seo
 39503-567 Barbosa / SE'),
 ('1717', '1', 'Condomnio Renan Almeida, 2
-Olhos 
+Olhos
 30913-525 da Luz / BA'),
 ('1718', '3', 'Fazenda Souza, 6
 So Benedito
@@ -27211,7 +27212,7 @@ Santa Cruz
 Cnego Pinheiro 1 Seo
 48627750 Melo / SC'),
 ('1833', '5', 'Viaduto Luna Nunes, 32
-Olhos 
+Olhos
 13788028 da Luz / PI'),
 ('1834', '5', 'Fazenda da Paz, 2
 Vila Nova Cachoeirinha 1 Seo
@@ -28135,7 +28136,7 @@ Vila So Gabriel Jacui
 So Joo Batista
 83863913 Lima das Flores / PA'),
 ('2141', '3', 'Via Rodrigues, 12
-Olhos 
+Olhos
 84572861 Lima / MA'),
 ('2142', '3', 'Aeroporto Marcela Monteiro, 26
 Alto Das Antenas
@@ -28312,7 +28313,7 @@ Palmares
 Vila Mantiqueira
 37045-119 Costa da Praia / SC'),
 ('2200', '5', 'Setor Thales da Conceio, 39
-Olhos 
+Olhos
 22587-195 Ribeiro de Gois / PI'),
 ('2201', '1', 'Setor das Neves
 Pongelupe
@@ -28807,7 +28808,7 @@ Caiaras
 Vila Ecolgica
 42628-704 Souza / MA'),
 ('2365', '1', 'Condomnio Arago, 7
-Vila Olhos 
+Vila Olhos
 60665853 Pereira das Pedras / ES'),
 ('2366', '3', 'Rodovia Vitor Gabriel da Rosa, 91
 Vila Vista Alegre
@@ -29839,7 +29840,7 @@ So Francisco Das Chagas
 Zilah Sposito
 19601877 das Neves / MS'),
 ('2709', '3', 'Ladeira de Souza, 66
-Olhos 
+Olhos
 84501208 Costa Alegre / MT'),
 ('2710', '1', 'Residencial Luiz Felipe Sales
 Pantanal
@@ -30637,7 +30638,7 @@ Bacurau
 Unidas
 43226076 Correia / SP'),
 ('2975', '2', 'Recanto Thomas Moraes, 693
-Vila Olhos 
+Vila Olhos
 05399733 Correia / PR'),
 ('2976', '5', 'Distrito de Vieira, 3
 Jardim Vitoria
@@ -30703,7 +30704,7 @@ So Gabriel
 Itaipu
 33372071 Pinto / RS'),
 ('2997', '4', 'Trevo Joana Correia, 83
-Vila Olhos 
+Vila Olhos
 05926-576 Melo do Oeste / RN'),
 ('2998', '4', 'Lagoa de Cunha, 46
 Branas
@@ -31078,7 +31079,7 @@ Jardim Do Vale
 lvaro Camargos
 22819-986 Cardoso da Mata / AP'),
 ('3122', '3', 'Estrada de da Rocha, 918
-Vila Olhos 
+Vila Olhos
 16703-266 Monteiro da Serra / MG'),
 ('3123', '4', 'Viela de das Neves, 553
 Santa Maria
@@ -32548,7 +32549,7 @@ Piratininga
 Tupi B
 08358-165 Ramos da Praia / AL'),
 ('3612', '2', 'Praia Silveira, 831
-Vila Olhos 
+Vila Olhos
 26278-970 Nunes da Mata / AP'),
 ('3613', '3', 'Via Manuela Arajo, 49
 Dom Silverio
@@ -34156,7 +34157,7 @@ Fazendinha
 Santa Rosa
 64839-084 Teixeira / GO'),
 ('4148', '5', 'Colnia Cardoso, 227
-Olhos 
+Olhos
 24045-176 Jesus / GO'),
 ('4149', '3', 'Estao Costela, 805
 Alto Dos Pinheiros
@@ -35443,7 +35444,7 @@ Zilah Sposito
 Jaqueline
 00834-041 Nascimento / AP'),
 ('4577', '3', 'Avenida de Silva, 72
-Vila Olhos 
+Vila Olhos
 62345-914 Vieira / PE'),
 ('4578', '2', 'Rodovia Vitria Silveira, 69
 Nova Granada
@@ -36292,7 +36293,7 @@ Luxemburgo
 Vila Nova Cachoeirinha 1 Seo
 49604477 Nascimento do Galho / MT'),
 ('4860', '2', 'Travessa de Duarte, 82
-Vila Olhos 
+Vila Olhos
 03464494 Fernandes / AM'),
 ('4861', '3', 'Vereda Brbara Lopes, 36
 Vera Cruz
@@ -36703,7 +36704,7 @@ Vila Santa Monica 1 Seo
 Inconfidncia
 73053153 Rodrigues dos Dourados / RR'),
 ('4997', '2', 'Colnia de Rodrigues, 174
-Vila Olhos 
+Vila Olhos
 41657-924 da Cruz Paulista / RR'),
 ('4998', '2', 'Rodovia de Correia, 73
 Vila Ecolgica
@@ -38335,7 +38336,7 @@ Lajedo
 Vila So Dimas
 83279-442 Pires / CE'),
 ('5541', '4', 'Passarela Nogueira, 777
-Vila Olhos 
+Vila Olhos
 93974-293 Silveira dos Dourados / SP'),
 ('5542', '2', 'Avenida da Mata, 61
 Vila Coqueiral
@@ -38743,7 +38744,7 @@ Vila Aeroporto Jaragu
 Santa Efignia
 51310297 Santos / MS'),
 ('5677', '5', 'Feira Castro, 4
-Vila Olhos 
+Vila Olhos
 23504723 Arago / RS'),
 ('5678', '5', 'Avenida Silva, 71
 Novo Ouro Preto
@@ -39067,7 +39068,7 @@ Varzea Da Palma
 Granja Werneck
 76406702 Vieira / TO'),
 ('5785', '3', 'Morro Joo Lucas da Cunha, 795
-Vila Olhos 
+Vila Olhos
 18269121 Lopes / PA'),
 ('5786', '4', 'Lago de da Paz
 Vila Da ria
@@ -40087,7 +40088,7 @@ Salgado Filho
 Colgio Batista
 06173-054 Teixeira / MA'),
 ('6125', '1', 'Estrada de Castro, 2
-Vila Olhos 
+Vila Olhos
 24405-550 Arago dos Dourados / PE'),
 ('6126', '1', 'Fazenda Barbosa, 42
 Mantiqueira
@@ -41179,7 +41180,7 @@ Cdi Jatoba
 Vera Cruz
 97909842 Cardoso / PR'),
 ('6489', '4', 'Rodovia Vieira, 7
-Vila Olhos 
+Vila Olhos
 19503109 Almeida do Norte / PE'),
 ('6490', '3', 'Fazenda Dias, 65
 Chcara Leonina
@@ -42262,7 +42263,7 @@ Buritis
 Conjunto Novo Dom Bosco
 26082-585 da Mota de Oliveira / PR'),
 ('6850', '5', 'Residencial Kaique Gonalves, 31
-Vila Olhos 
+Vila Olhos
 68998966 da Cruz do Oeste / AP'),
 ('6851', '1', 'Via Alves, 60
 Camargos
@@ -42565,7 +42566,7 @@ Camargos
 Vila So Gabriel
 44155886 Pinto das Pedras / AM'),
 ('6951', '5', 'Chcara Paulo Caldeira, 1
-Olhos 
+Olhos
 11278685 Rezende / BA'),
 ('6952', '3', 'Passarela Gabriela Mendes, 995
 Pilar
@@ -43375,7 +43376,7 @@ Vila Real 1 Seo
 Caiara - Adelaide
 08544461 Mendes Verde / AP'),
 ('7221', '2', 'Campo de Duarte, 7
-Olhos 
+Olhos
 61191-697 Cavalcanti / SC'),
 ('7222', '3', 'Parque de Rezende, 7
 Cdi Jatoba
@@ -43978,7 +43979,7 @@ Cruzeiro
 Mala E Cuia
 16350-412 Farias / RN'),
 ('7422', '5', 'Travessa Maria Ceclia Campos, 451
-Olhos 
+Olhos
 29136-201 Monteiro Verde / PE'),
 ('7423', '4', 'Avenida Farias, 93
 Satelite
@@ -44491,7 +44492,7 @@ Pongelupe
 So Benedito
 84930294 Moreira / BA'),
 ('7593', '5', 'Viela de Pires, 62
-Vila Olhos 
+Vila Olhos
 81413906 Dias de Teixeira / RO'),
 ('7594', '2', 'Distrito Rezende, 15
 Vila Nova Cachoeirinha 1 Seo
@@ -44530,7 +44531,7 @@ Cidade Jardim Taquaril
 Monte Azul
 62133-693 Fogaa de Gois / MT'),
 ('7606', '2', 'Avenida Monteiro, 18
-Olhos 
+Olhos
 24028-070 Lopes / BA'),
 ('7607', '4', 'Vereda de Martins
 Paulo Vi
@@ -47056,7 +47057,7 @@ Vista Alegre
 So Salvador
 47683047 Cunha Alegre / DF'),
 ('8448', '2', 'Ptio Gonalves, 31
-Vila Olhos 
+Vila Olhos
 45009184 Vieira do Amparo / GO'),
 ('8449', '3', 'Vale de Lopes, 3
 Madre Gertrudes
@@ -47209,7 +47210,7 @@ Apolonia
 Grota
 86378977 Peixoto Paulista / TO'),
 ('8499', '1', 'Vereda Agatha Fernandes
-Olhos 
+Olhos
 69566512 Mendes / RJ'),
 ('8500', '1', 'Campo Maria Eduarda da Rocha
 Liberdade
@@ -49612,7 +49613,7 @@ Santa Maria
 Conjunto Santa Maria
 45006-170 Oliveira / SC'),
 ('9300', '4', 'Vereda Murilo Cavalcanti, 49
-Olhos 
+Olhos
 36066-547 Peixoto da Serra / PB'),
 ('9301', '5', 'Conjunto Leonardo Ramos
 Vila So Gabriel Jacui
@@ -49729,7 +49730,7 @@ Conjunto Minas Caixa
 Santa Terezinha
 98250-645 Teixeira Paulista / BA'),
 ('9339', '5', 'Praia Alexandre Farias, 23
-Vila Olhos 
+Vila Olhos
 71112-720 Freitas / MT'),
 ('9340', '5', 'rea Caroline Ramos, 82
 Cardoso
@@ -51697,7 +51698,7 @@ Vila Rica
 Pompia
 48557288 Santos do Galho / MG'),
 ('9995', '3', 'Distrito Lucca Carvalho, 74
-Olhos 
+Olhos
 02356919 da Luz Verde / AL'),
 ('9996', '2', 'Praia Ferreira, 9
 Bairro Das Indstrias Ii

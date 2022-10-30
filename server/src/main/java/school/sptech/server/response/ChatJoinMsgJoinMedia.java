@@ -1,8 +1,5 @@
 package school.sptech.server.response;
 
-import school.sptech.server.model.Chat;
-import school.sptech.server.model.User;
-
 import java.time.LocalDateTime;
 
 public class ChatJoinMsgJoinMedia {

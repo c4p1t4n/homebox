@@ -38,12 +38,15 @@ public class ServicesStatusRecent {
     @Column(name = "status")
     private String  status;
 
+    @Column(name = "deleted")
+    private Character deleted;
+
     public ServicesStatusRecent() {
     }
 
     public ServicesStatusRecent(Integer workerId, Integer customerId, Integer idScheduling,
                                 String nameService, String serviceDescription, String address,
-                                Double price, LocalDate date, String status) {
+                                Double price, LocalDate date, String status, Character deleted) {
         this.workerId = workerId;
         this.customerId = customerId;
         this.idScheduling = idScheduling;
@@ -53,6 +56,7 @@ public class ServicesStatusRecent {
         this.price = price;
         this.date = date;
         this.status = status;
+        this.deleted = deleted;
     }
 
     public Integer getWorkerId() {
@@ -125,5 +129,13 @@ public class ServicesStatusRecent {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public Character getDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(Character deleted) {
+        this.deleted = deleted;
     }
 }

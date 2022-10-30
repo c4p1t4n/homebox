@@ -53,17 +53,17 @@ public class SchedulingController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/{id}")
-    public ResponseEntity getId(@PathVariable Integer id) {
+    public ResponseEntity<Scheduling> getId(@PathVariable Integer id) {
         Scheduling scheduling = dbRepositoryScheduling.findById(id).get();
 
-        return status(200).build();
+        return status(200).body(scheduling);
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping
     public ResponseEntity<Object> create(@RequestBody SchedulingCreationRequest schedulingBody) {
         Optional<User> userOptional = dbRepositoryUser.findById(schedulingBody.getFkUser());
-        Optional<Service> serviceOptional = dbRepositoryService.findById(schedulingBody.getFkService());
+        Optional<Service> serviceOptional = dbRepositoryService.findByIdServiceAndDeletedNull(schedulingBody.getFkService());
         if (!userOptional.isPresent()) {
             return status(404).body("Usuario inexistente");
         }
@@ -79,15 +79,14 @@ public class SchedulingController {
 
         Scheduling scheduling = dbRepositoryScheduling.save(new Scheduling(customer, service));
 
-        SchedulingStatus schedulingStatus = dbRepositorySchedulingStatus
-                .save(new SchedulingStatus("scheduled", LocalDate.now(), scheduling));
+        dbRepositorySchedulingStatus.save(new SchedulingStatus("scheduled", LocalDate.now(), scheduling));
 
         return status(201).body(scheduling);
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PatchMapping("/status/{id}/{status}")
-    public ResponseEntity updateStatus(@PathVariable Integer id,
+    public ResponseEntity<String> updateStatus(@PathVariable Integer id,
                                        @PathVariable String status) {
         Optional<Scheduling> schedulingOptional = dbRepositoryScheduling.findById(id);
 
@@ -102,8 +101,7 @@ public class SchedulingController {
             return status(400).body("Agendamento ja possui o status: " + status);
         }
 
-        SchedulingStatus schedulingStatus = dbRepositorySchedulingStatus
-                .save(new SchedulingStatus(status, LocalDate.now(), scheduling));
+        dbRepositorySchedulingStatus.save(new SchedulingStatus(status, LocalDate.now(), scheduling));
 
         return status(201).build();
     }

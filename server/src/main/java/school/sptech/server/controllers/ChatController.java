@@ -31,9 +31,6 @@ public class ChatController {
     @Autowired
     private UserRepository dbUserRepository;
 
-    @Autowired
-    private ChatsRepository dbChatsRepository;
-
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/{idCustomer}/{idWorker}")
     public ResponseEntity<Void> postChat(@PathVariable Integer idCustomer, @PathVariable Integer idWorker) {
@@ -268,7 +265,7 @@ public class ChatController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping(value = "/msg/auto/{idUser}")
-    public ResponseEntity getAutoMsg(@PathVariable Integer idUser) {
+    public ResponseEntity<Msg> getAutoMsg(@PathVariable Integer idUser) {
         if (!dbRepositoryUser.existsById(idUser)) {
             return ResponseEntity.status(404).build();
         }
@@ -279,8 +276,7 @@ public class ChatController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PatchMapping(value = "/att/msg/{idUser}/{message}")
-    public ResponseEntity updateAutoMsg(@PathVariable Integer idUser,
-                                        @PathVariable String message) {
+    public ResponseEntity<Void> updateAutoMsg(@PathVariable Integer idUser, @PathVariable String message) {
         if (!dbRepositoryUser.existsById(idUser)) {
             return ResponseEntity.status(404).build();
         }

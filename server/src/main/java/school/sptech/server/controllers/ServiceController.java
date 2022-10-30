@@ -36,9 +36,6 @@ public class ServiceController {
     private CategoryRepository dbRepositoryCategory;
 
     @Autowired
-    private ServicesSchedulingRepository dbRepositoryServicesScheduling;
-
-    @Autowired
     private ServicesStatusRecentRepository dbRepositoryServicesStatusRecent;
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -76,7 +73,7 @@ public class ServiceController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PatchMapping("/update/{idService}")
-    public ResponseEntity updateService(@PathVariable int idService,
+    public ResponseEntity<Void> updateService(@PathVariable int idService,
                                         @RequestBody ServiceCreationRequest serviceRequest){
 
         if(!dbRepositoryService.existsByidService(idService)){
@@ -97,12 +94,17 @@ public class ServiceController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @DeleteMapping("/delete/{idService}")
-    public ResponseEntity delete(@PathVariable Integer idService){
+    public ResponseEntity<Service> delete(@PathVariable Integer idService){
         if (!dbRepositoryService.existsById(idService)){
             return status(404).build();
         }
-        dbRepositoryService.deleteById(idService);
-        return status(200).build();
+        Service service = dbRepositoryService.findById(idService).get();
+
+        service.setDeleted('y');
+
+        service = dbRepositoryService.save(service);
+
+        return status(200).body(service);
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -116,7 +118,7 @@ public class ServiceController {
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/getServicesOfWorker/{idWorker}")
     public ResponseEntity<List<Service>> getServicesOfWorker(@PathVariable Integer idWorker) {
-        List<Service> listServices = dbRepositoryService.findByWorkerId(idWorker);
+        List<Service> listServices = dbRepositoryService.findByWorkerIdAndDeletedNull(idWorker);
 
         if (listServices.isEmpty()) {
             return ResponseEntity.status(204).build();
@@ -207,7 +209,7 @@ public class ServiceController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/list/{id}")
-    public ResponseEntity listServicesScheduled(@PathVariable Integer id) {
+    public ResponseEntity<List<ServicesStatusRecent>> listServicesScheduled(@PathVariable Integer id) {
 
         List<ServicesStatusRecent> services = dbRepositoryServicesStatusRecent.findByWorkerIdAndStatus(id,"scheduled");
 
@@ -221,7 +223,7 @@ public class ServiceController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/list/client/{id}")
-    public ResponseEntity listServicesScheduledClient(@PathVariable Integer id) {
+    public ResponseEntity<List<ServicesStatusRecent>> listServicesScheduledClient(@PathVariable Integer id) {
 
         List<ServicesStatusRecent> services = dbRepositoryServicesStatusRecent.findByCustomerIdAndStatusOrStatus(id,"scheduled","done");
 
