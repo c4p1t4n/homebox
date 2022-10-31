@@ -298,7 +298,7 @@ const upload = (file, name) => {
         .get('/')
         .then(({status, data: {AccessKeyId: accessKeyId, SecretAccessKey: secretAccessKey, Token: sessionToken}}) => {
 
-            const target = { Bucket: "homebox-files", Key: name, Body: file, ACL: 'public-read' }
+            const target = { Bucket: "imagens-homebox", Key: name, Body: file, ACL: 'public-read' }
             const cred = {
                 accessKeyId,
                 secretAccessKey,

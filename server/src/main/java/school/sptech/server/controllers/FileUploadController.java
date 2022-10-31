@@ -49,7 +49,7 @@ public class FileUploadController {
             response.setFileName(fileName);
             response.setSize(size);
             response.setDownloadUri("/downloadFile/" + filecode);
-            Media media = new Media(multipartFile.getContentType(), String.format("https://homebox-files.s3.amazonaws.com/%s", multipartFile.getOriginalFilename()));
+            Media media = new Media(multipartFile.getContentType(), String.format("https://imagens-homebox.s3.amazonaws.com/%s", multipartFile.getOriginalFilename()));
             dbMidiaRepository.save(media);
 
             Msg newMsg = new Msg("",dbUserRepository.getById(idUsuario));
