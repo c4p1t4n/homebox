@@ -203,8 +203,8 @@ details {
     padding: 1%;
     border-radius: 10px 10px 0px 0px;
     background: rgba(10, 57, 105, 0.13);
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 45% 45%;
 }
 
 .summaryCardSearchOpen:hover {

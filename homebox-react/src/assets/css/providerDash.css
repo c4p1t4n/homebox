@@ -115,7 +115,7 @@
 .servicesInProgressOverflow {
     background-color: whitesmoke;
     width: 97%;
-    box-shadow: 5px 5px 2px #72717173;
+    /* box-shadow: 5px 5px 2px #72717173; */
 
     border-radius: 15px;
     display: flex;
@@ -136,7 +136,6 @@
     margin-top: 15px;
     margin-bottom: 15px;
     background-color: whitesmoke;
-    box-shadow: 5px 5px 2px #aaaaaa92;
     padding: 1%;
     border-radius: 8px;
     border-bottom: black 1px solid;
@@ -144,9 +143,9 @@
 }
 
 .cardServiceInProgressProvider summary {
-    display: flex;
+    display: grid;
     width: 100%;
-    justify-content: space-between;
+    grid-template-columns: 40% 40% 40%;
     border-radius: 8px;
     align-items: center;
     height: 50px;
@@ -154,7 +153,7 @@
 
 .cardServiceInProgressProvider:hover {
     cursor: pointer;
-    box-shadow: 5px 5px 2px #727171be;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     color: #0A3969;
 }
 
@@ -180,9 +179,9 @@
 }
 
 .descriptionServiceInProgress {
-    display: flex;
-    width: 59%;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 40% 30%;
+    width: 100%;
 }
 
 .clientServiceInProgress,

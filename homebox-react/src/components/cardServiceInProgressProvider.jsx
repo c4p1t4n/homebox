@@ -24,7 +24,7 @@ function CardServiceInProgressProvider(props) {
 
     return (
         <>
-            <details open className="cardServiceInProgressProvider">
+            <details className="cardServiceInProgressProvider">
                 <summary>
                     <div className="nameServiceInProgressProvider">
                         <p>Serviço</p>
@@ -38,6 +38,7 @@ function CardServiceInProgressProvider(props) {
                         <button onClick={openEndServiceDiv}>Finalizar Serviço</button>
                     </div>
                 </summary>
+                <br />
                 <div className="descriptionServiceInProgress">
                     <div className="clientServiceInProgress">
                         <p>Cliente</p>

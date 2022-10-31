@@ -96,11 +96,11 @@ class relatorioProvider extends Component {
                     id: "basic-bar"
                 },
                 // xaxis: {
-                    // categories: [...Array(7)].map((_, i) => {
-                    //     const d = new Date()
-                    //     d.setDate(d.getDate() - i)
-                    //     return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
-                    // }).reverse()
+                // categories: [...Array(7)].map((_, i) => {
+                //     const d = new Date()
+                //     d.setDate(d.getDate() - i)
+                //     return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
+                // }).reverse()
                 // },
             }
         })

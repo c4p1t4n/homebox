@@ -4,7 +4,7 @@ function cardLastServiceHistory(props) {
         const data = {
             idService: props.id
         }
-        sessionStorage.setItem("service", JSON.stringify({...data}))
+        sessionStorage.setItem("service", JSON.stringify({ ...data }))
 
         document.getElementById("endServiceDivClient").style.display = "flex"
     }
@@ -16,17 +16,17 @@ function cardLastServiceHistory(props) {
                     <p>Nome do Serviço</p>
                     <p>: {props.service}</p>
                 </div>
-                <div className="priceServiceHistory">
+                <div className="dateServiceHistory">
                     <p>Preço pago</p>
                     <p>: R$ {props.price}</p>
                 </div>
                 <div className="dateServiceHistory">
                     <p>Data do serviço</p>
-                    <p>:{props.date}</p>
+                    <p>: {props.date}</p>
                 </div>
                 <div className="cardLastServiceButton">
                     {
-                     props.type==='scheduled' ? <button onClick={openEndServiceDivClient}>Finalizar Serviço</button> : 'Finalizado'
+                        props.type === 'scheduled' ? <button onClick={openEndServiceDivClient}>Finalizar Serviço</button> : 'Finalizado'
                     }
                 </div>
             </div>
