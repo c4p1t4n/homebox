@@ -76,7 +76,7 @@ class relatorioProvider extends Component {
         this.setState({
             series: [
                 {
-                    data: list_medias_ultima_semana.data.slice(1,8),
+                    data: list_medias_ultima_semana.data,
                 }
             ]
 
