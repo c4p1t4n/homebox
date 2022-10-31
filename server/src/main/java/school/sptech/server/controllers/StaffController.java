@@ -132,19 +132,19 @@ public class StaffController {
         System.out.println(list_ceps);
         System.out.println(valores_do_cep);
         for (Integer i = 0; i < list_ceps.size(); i++) {
-               if(Integer.parseInt(list_ceps.get(i).substring(0, 4)) >= 1000 && Integer.parseInt(list_ceps.get(i).substring(0, 4)) < 2000){
+               if(Integer.parseInt(list_ceps.get(i).substring(1, 5)) >= 1000 && Integer.parseInt(list_ceps.get(i).substring(1, 5)) < 2000){
                     centro+= valores_do_cep.get(i);
-               }else if(Integer.parseInt(list_ceps.get(i).substring(0, 4)) >= 2000 && Integer.parseInt(list_ceps.get(i).substring(0, 4)) < 3000){
+               }else if(Integer.parseInt(list_ceps.get(i).substring(1, 5)) >= 2000 && Integer.parseInt(list_ceps.get(i).substring(1, 5)) < 3000){
                     zona_norte+= valores_do_cep.get(i);
-               }else if((Integer.parseInt(list_ceps.get(i).substring(0, 4)) >= 3000 && Integer.parseInt(list_ceps.get(i).substring(0, 4)) < 4000)
-                        || (Integer.parseInt(list_ceps.get(i).substring(0, 4)) >= 8000 && Integer.parseInt(list_ceps.get(i).substring(0, 4)) < 8500)){
+               }else if((Integer.parseInt(list_ceps.get(i).substring(1, 5)) >= 3000 && Integer.parseInt(list_ceps.get(i).substring(1, 5)) < 4000)
+                        || (Integer.parseInt(list_ceps.get(i).substring(1, 5)) >= 8000 && Integer.parseInt(list_ceps.get(i).substring(1, 5)) < 8500)){
                     zona_leste+= valores_do_cep.get(i);
-               }else if(Integer.parseInt(list_ceps.get(i).substring(0, 4)) >= 5000 && Integer.parseInt(list_ceps.get(i).substring(0, 4)) < 5900){
+               }else if(Integer.parseInt(list_ceps.get(i).substring(1, 5)) >= 5000 && Integer.parseInt(list_ceps.get(i).substring(1, 5)) < 5900){
                     zona_oeste+= valores_do_cep.get(i);
-               }else if(Integer.parseInt(list_ceps.get(i).substring(0, 4)) >= 4000 && Integer.parseInt(list_ceps.get(i).substring(0, 4)) < 5000){
+               }else if(Integer.parseInt(list_ceps.get(i).substring(1, 5)) >= 4000 && Integer.parseInt(list_ceps.get(i).substring(1, 5)) < 5000){
                     zona_sul+= valores_do_cep.get(i);
                }else{
-                   centro+= valores_do_cep.get(i);
+                   zona_oeste+= valores_do_cep.get(i);
                }
         }
         list_count_per_region.add(centro);
