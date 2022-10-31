@@ -93,7 +93,7 @@ public class InterestAcess {
     public  ResponseEntity<List<Double>> ListAvgLastSevenDays(@PathVariable Integer id_user){
 
 
-        return ResponseEntity.status(200).body(ratingRepository.getAvgRatingForWorkerLastSevenDays(id_user,LocalDate.now().minusDays(7)));
+        return ResponseEntity.status(200).body(ratingRepository.getAvgRatingForWorkerLastSevenDays(id_user,LocalDate.now().minusDays(6)));
     }
 
 

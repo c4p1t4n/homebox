@@ -148,13 +148,13 @@ function Staff() {
         datasets: [
             {
                 label: 'Agendamentos',
-                data: services,
+                data: services.slice(0,services.length),
                 borderColor: 'rgb(255, 99, 132)',
                 backgroundColor: 'rgba(255, 99, 132, 0.5)',
             },
             {
                 label: 'Serviços finalizados',
-                data: servicesDone,
+                data: servicesDone.slice(0,services.length),
                 borderColor: 'rgb(53, 162, 235)',
                 backgroundColor: 'rgba(53, 162, 235, 0.5)',
             },

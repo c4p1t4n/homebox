@@ -30,7 +30,7 @@ class relatorioProvider extends Component {
                     id: "basic-bar"
                 },
                 xaxis: {
-                    categories: [...Array(8)].map((_, i) => {
+                    categories: [...Array(7)].map((_, i) => {
                         const d = new Date()
                         d.setDate(d.getDate() - i)
                         return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
@@ -147,7 +147,7 @@ class relatorioProvider extends Component {
                                             <div className="visitsYourProfileBut">
                                                 {/* <p id="indice">+10</p> */}
                                                 <div className="indiceDiv2">
-                                                    <p id="indice2">{this.state.avg.toFixed(2)}</p>
+                                                    <p id="indice2">{this.state.avg}</p>
                                                     <DynamicStars
                                                         rating={this.state.avg}
                                                     />
