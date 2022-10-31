@@ -30,25 +30,6 @@ function cardLastServiceHistory(props) {
                     }
                 </div>
             </div>
-            {/* <div className="cardLastService">
-                <div className="nameServiceHistory">
-                    <p>Nome do Serviço</p>
-                    <p>: {props.service}</p>
-                </div>
-                <div className="priceServiceHistory">
-                    <p>Preço pago</p>
-                    <p>: R$ {props.price}</p>
-                </div>
-                <div className="dateServiceHistory">
-                    <p>Data do serviço</p>
-                    <p>:{props.date}</p>
-                </div>
-                <div className="cardLastServiceButton">
-                    {
-                     props.type==='scheduled' ? <button onClick={openEndServiceDivClient}>Finalizar Serviço</button> : 'Finalizado'
-                    }
-                </div>
-            </div> */}
         </>
     )
 }

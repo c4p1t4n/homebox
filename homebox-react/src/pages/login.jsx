@@ -57,10 +57,6 @@ function Login() {
                                 Ou <p id="register">cadastre-se</p> aqui
                             </p>
                         </a>
-                        <br />
-                        <p onClick={openDivForgotPassword} id="password">
-                            Esqueceu sua senha ?
-                        </p>
                     </div>
                 </div>
             </body>

@@ -14,20 +14,21 @@ import viaCep from "../api2"
 function ProfileClient() {
     const [bairro, setBairro] = useState([])
     useEffect(() => {
-        viaCep.get(JSON.parse(sessionStorage.getItem("user")).cep+`/json`
+        viaCep.get(JSON.parse(sessionStorage.getItem("user")).cep + `/json`
         ).then(({ status, data }) => {
             if (status === 200) {
                 console.log(data)
                 setBairro(data)
             }
-        })}, [])
-    
-    function compare( a, b ) {
-        if ( a.status < b.status ){
-          return -1;
+        })
+    }, [])
+
+    function compare(a, b) {
+        if (a.status < b.status) {
+            return -1;
         }
-        if ( a.status > b.status ){
-          return 1;
+        if (a.status > b.status) {
+            return 1;
         }
         return 0;
     }
@@ -53,9 +54,10 @@ function ProfileClient() {
                 console.log(data)
                 setWorker(data)
             }
-        })}, [])
+        })
+    }, [])
 
-    
+
     api.get(`/users/` + JSON.parse(sessionStorage.getItem("user")).id_user
     ).then(({ status, data }) => {
         if (status === 200) {
@@ -65,21 +67,21 @@ function ProfileClient() {
             )
         }
     })
-    
-    
+
+
     return (
         <>
             <Header />
             <ProfileClientComp
                 nome={nome}
                 email={email}
-                image = {img}
-                />
+                image={img}
+            />
             <div className="divDashboardClint">
                 <h4 className="dashH4">Moradores de(a) Vila Madalena também contrataram</h4>
                 <div id="loadingDivHome">
                     <img src={iconLoading} alt="Carregando a pagina" />
-                </div>    
+                </div>
                 <div className="dashboard">
                     {worker.map(item => (
                         <FrequentSearchCardDistance
@@ -98,17 +100,17 @@ function ProfileClient() {
             <div className="historyOfServiceClientDiv">
                 <h3>Historico de Serviços</h3>
                 <div className="historyOfServiceClientDivOverflow">
-                    {services.map(item =>(
-                        <CardLastServiceHistory 
-                            id = {item.idScheduling}
-                            service = {item.nameService}
-                            price = {item.price}
-                            date = {item.date}
-                            client = {item.customerId}
-                            local = {item.address}
-                            type = {item.status}
+                    {services.map(item => (
+                        <CardLastServiceHistory
+                            id={item.idScheduling}
+                            service={item.nameService}
+                            price={item.price}
+                            date={item.date}
+                            client={item.customerId}
+                            local={item.address}
+                            type={item.status}
                         />
-                ))}
+                    ))}
                 </div>
             </div>
             <div id="endServiceDivClient" className="endServiceDiv">
@@ -121,16 +123,46 @@ function ProfileClient() {
                     </div>
                 </div>
             </div>
+            <div id="ratingForProviderDiv" className="ratingForProviderDiv">
+                <div className="ratingForProvider">
+                    <h4>Nos deixe uma nota de avaliação sobre o serviço de XXXXXXX</h4>
+                    <div className="sumaryRating">
+                        <p>1 - Pessimo</p>
+                        <p>2 - Ruim</p>
+                        <p>3 - Médio</p>
+                        <p>4 - Bom</p>
+                        <p>5 - Excelente</p>
+                    </div>
+                    <div className="inputNote">
+                        Digite aqui:
+                        <input required type="number" maxLength={3} />
+                    </div>
+                    <div className="endServiceDivInButton">
+                        <button onClick={saveNote}>Salvar nota</button>
+                        <button onClick={closeRatingForProviderDiv}>Sair</button>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
 
 export default ProfileClient
 
-function finishService(){
+function saveNote() {
+    // codigo de salvar nota aqui Eduzinho ou leo nao sei quem vai fazer
+    document.getElementById("ratingForProviderDiv").style.display = "none"
+}
+
+function closeRatingForProviderDiv() {
+    document.getElementById("ratingForProviderDiv").style.display = "none"
+}
+
+
+function finishService() {
     // var pin = document.getElementById("pin").value
     var id = JSON.parse(sessionStorage.getItem("service")).idService
-    
+
     api.patch(`/schedulings/status/${id}/done`
     ).then(({ status, data }) => {
         if (status === 201) {
@@ -138,6 +170,7 @@ function finishService(){
             closeendServiceDiv()
         }
     })
+    document.getElementById("ratingForProviderDiv").style.display = "flex"
 }
 
 
@@ -147,5 +180,5 @@ function closeendServiceDiv() {
 
 const nome = JSON.parse(sessionStorage.getItem("user"))?.name?.split(" ")?.[0] ?? ""
 const email = JSON.parse(sessionStorage.getItem("user"))?.email
-const img =  JSON.parse(sessionStorage.getItem("user"))?.picture
+const img = JSON.parse(sessionStorage.getItem("user"))?.picture
 
