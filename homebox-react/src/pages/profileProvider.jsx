@@ -320,5 +320,5 @@ const upload = (file, name) => {
             } catch (e) {
                 console.log(e);
             }
-        })
+        }).catch(err => console.log(err))
 }
