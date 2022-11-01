@@ -4,9 +4,10 @@
 /* Início página de Login */
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-body{
+body {
     zoom: 100%;
 }
+
 /* Início página de Login */
 
 .login_body {
@@ -190,18 +191,19 @@ body{
 }
 
 .register_body img {
-    height: 100px;
+    height: 90px;
     float: right;
 }
 
 .register_div {
     display: flex;
     background-color: white;
-    width: 500px;
+    width: 42%;
     border-radius: 30px 0px 0px 30px;
     flex-direction: column;
-    height: 620px;
+    height: 80vh;
     overflow: auto;
+    border: #0A3969 solid 1px;
     align-items: center;
     margin: auto;
     position: relative;
@@ -243,7 +245,7 @@ body{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: lighter;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .div_input p {
@@ -270,7 +272,7 @@ body{
 }
 
 .div_input input::placeholder {
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .button_register {
