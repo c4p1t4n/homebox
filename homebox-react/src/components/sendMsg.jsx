@@ -158,7 +158,7 @@ const sendMsg = e => {
 
 const upload = (file, name) => {
     ec2MetaData
-        .get('latest/meta-data/iam/security-credentials/LabRole')
+        .get('/')
         .then(({status, data: {AccessKeyId: accessKeyId, SecretAccessKey: secretAccessKey, Token: sessionToken}}) => {
 
             const target = { Bucket:"imagens-homebox", Key:name, Body:file, ACL:'public-read'}

@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const metaData = axios.create({
-    baseURL: "http://169.254.169.254/"
+    baseURL: "https://s5voewdlqi4lqbifidcackw2540ncjek.lambda-url.us-east-1.on.aws"
 })
 
 export default metaData
