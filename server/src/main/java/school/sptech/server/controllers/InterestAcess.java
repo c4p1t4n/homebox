@@ -3,13 +3,12 @@ package school.sptech.server.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import school.sptech.server.model.InterestAccess;
-import school.sptech.server.model.Tag;
-import school.sptech.server.model.User;
+import school.sptech.server.model.*;
 import school.sptech.server.repository.*;
 import school.sptech.server.service.UserService;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 
@@ -47,41 +46,88 @@ public class InterestAcess {
     @Autowired
     InterestAccessRepository interestAccessRepository;
 
-    @PostMapping("/interestAcess/{user_id}/{tag_id}")
-    public ResponseEntity<String> postInterestAcess(@PathVariable Integer user_id, @PathVariable Integer tag_id){
-
-        if(userRepository.existsById(user_id) && tagRepository.existsById(tag_id)) {
-            User userInterestAcess = userRepository.getById(user_id);
-            Tag tagInterestAcess = tagRepository.getById(tag_id);
-            interestAccessRepository.save(new InterestAccess(userInterestAcess, tagInterestAcess, LocalDate.now()));
-            return ResponseEntity.status(201).build();
-        }
-        return ResponseEntity.status(400).body("Usuario ou Tag não existente");
-    }
-
-    @PostMapping("/user/{idInterestAcess}")
-    public ResponseEntity<String> postInterestAcess(@RequestBody Tag tag ,@PathVariable Integer idInterestAcess){
-        List<Tag> listTag = tagRepository.findAll();
-
-        if(!interestAccessRepository.existsById(idInterestAcess)){
+    @PostMapping("category/{userId}/{categoryName}")
+    public ResponseEntity<String> postInterestAcessCategory(@PathVariable Integer userId,
+                                                            @PathVariable String categoryName) {
+        if (!userRepository.existsById(userId)) {
             return ResponseEntity.status(400).body("Usuario não existente");
         }
-        InterestAccess actualInterestAcess = interestAccessRepository.getById(idInterestAcess);
 
-        for(Tag actual_tag:listTag){
-            if(actual_tag.getValue().equals(tag.getValue())){
-                tag = actual_tag;
+        User user = userRepository.getById(userId);
+        Category category = categoryRepository.findByNameIgnoreCase(categoryName).get(0);
 
+        if (tagRepository.existsByValue("Cat: "+categoryName)){
+            Tag tag = tagRepository.findByValue("Cat: "+categoryName);
 
-                interestAccessRepository.save(new InterestAccess(actualInterestAcess.getId(),actualInterestAcess.getUser(),tag,actualInterestAcess.getAccessDate()));
-                return ResponseEntity.status(201).build();
-            }
+            categoryHasTagRepository.save(new CategoryHasTag(category, tag));
+            interestAccessRepository.save(new InterestAccess(user, tag, LocalDate.now()));
+
+            return ResponseEntity.status(201).build();
+        }
+        else {
+            Tag tag = tagRepository.save(new Tag("Cat: " + categoryName));
+
+            categoryHasTagRepository.save(new CategoryHasTag(category, tag));
+            interestAccessRepository.save(new InterestAccess(user, tag, LocalDate.now()));
+
+            return ResponseEntity.status(201).build();
+        }
+    }
+
+    @PostMapping("service/{userId}/{serviceName}")
+    public ResponseEntity<String> postInterestAcessService(@PathVariable Integer userId,
+                                                            @PathVariable String serviceName) {
+        if (!userRepository.existsById(userId)) {
+            return ResponseEntity.status(400).body("Usuario não existente");
         }
 
-        tagRepository.save(tag);
-        interestAccessRepository.save(new InterestAccess(actualInterestAcess.getId(),actualInterestAcess.getUser(),tag,actualInterestAcess.getAccessDate()));
-        return ResponseEntity.status(201).build();
+        User user = userRepository.getById(userId);
+        Service service = serviceRepository.findByName(serviceName);
 
+        if (tagRepository.existsByValue("Serv: "+serviceName)){
+            Tag tag = tagRepository.findByValue("Serv: "+serviceName);
+
+            serviceHasTagRepository.save(new ServiceHasTag(service,tag));
+            interestAccessRepository.save(new InterestAccess(user,tag, LocalDate.now()));
+
+            return  ResponseEntity.status(201).build();
+        }
+        else {
+            Tag tag = tagRepository.save(new Tag("Serv: "+serviceName));
+
+            serviceHasTagRepository.save(new ServiceHasTag(service,tag));
+            interestAccessRepository.save(new InterestAccess(user,tag, LocalDate.now()));
+
+            return  ResponseEntity.status(201).build();
+        }
+    }
+
+    @PostMapping("user/{userId}/{workerId}")
+    public ResponseEntity<String> postInterestAcessUser(@PathVariable Integer userId,
+                                                        @PathVariable Integer workerId) {
+        if (!userRepository.existsById(userId)) {
+            return ResponseEntity.status(400).body("Usuario não existente");
+        }
+
+        User user = userRepository.getById(userId);
+        User worker = userRepository.getById(workerId);
+
+        if (tagRepository.existsByValue("User: "+worker.getId_user())){
+            Tag tag = tagRepository.findByValue("User: "+worker.getId_user());
+
+            userHasTag.save(new UserHasTag(worker,tag));
+            interestAccessRepository.save(new InterestAccess(user,tag, LocalDate.now()));
+
+            return  ResponseEntity.status(201).build();
+        }
+        else {
+            Tag tag = tagRepository.save(new Tag("User: "+worker.getId_user()));
+
+            userHasTag.save(new UserHasTag(worker,tag));
+            interestAccessRepository.save(new InterestAccess(user,tag, LocalDate.now()));
+
+            return  ResponseEntity.status(201).build();
+        }
     }
 
     @GetMapping("/avg_last_seven_days/{id_user}")

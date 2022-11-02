@@ -2,7 +2,7 @@ function cardOpenSearchClick(props) {
 
     return (
         <>
-            <details className="cardSearchOpenDivServicesOpen">
+            <details className="cardSearchOpenDivServicesOpen" onClick={interest}>
                 <summary className="summaryCardSearchOpen">
                     <div className="nameServiceSearchCardOpen">
                         <p>Serviço</p>
@@ -20,3 +20,7 @@ function cardOpenSearchClick(props) {
 }
 
 export default cardOpenSearchClick
+
+function interest(){
+    api.post(`/interestAccess/service/${JSON.parse(sessionStorage.getItem("user")).id_user}/${props.nameService}`)
+}

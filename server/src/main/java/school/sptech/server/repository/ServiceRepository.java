@@ -30,5 +30,7 @@ public interface ServiceRepository extends JpaRepository<Service, Integer> {
     boolean existsByidService(Integer idService);
     Service findByidService(Integer idService);
 
+    Service findByName(String name);
+
     Optional<Service> findByIdServiceAndDeletedNull(Integer id);
 }

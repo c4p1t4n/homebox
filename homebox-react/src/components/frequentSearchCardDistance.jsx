@@ -20,6 +20,7 @@ function FrequentSearchCard(props) {
             category={props.category}
             rating={props.rating ?? 0.0}
         />))
+        api.post(`/interestAccess/user/${JSON.parse(sessionStorage.getItem("user")).id_user}/${props.id_user}`)
     }
 
 

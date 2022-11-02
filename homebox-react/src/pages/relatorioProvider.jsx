@@ -9,8 +9,6 @@ import React, { Component } from "react"
 import api from "../api"
 
 
-
-
 class relatorioProvider extends Component {
 
     constructor(props) {
@@ -64,15 +62,7 @@ class relatorioProvider extends Component {
         let visitas_semana = await api.get(`interestAccess/avg_last_seven_days/${id_user}`,).catch(err => err.response)
         this.setState({ visitas_semana: (visitas_semana.data === 0 ? "0" : visitas_semana.data) })
 
-
-
-
-
-
-
         let list_medias_ultima_semana = await api.get(`interestAccess/getListAvgLastSevenDays/${id_user}`,).catch(err => err.response)
-
-
         this.setState({
             series: [
                 {
@@ -111,7 +101,6 @@ class relatorioProvider extends Component {
 
         return (
             <>
-
                 <div className="divBodyProfileProvider">
                     <MenuLeftProvider />
                     <div className="divRightProfileProvider">
@@ -223,4 +212,3 @@ function closeendServiceDiv() {
 }
 
 export default relatorioProvider
-
