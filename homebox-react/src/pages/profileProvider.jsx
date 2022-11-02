@@ -3,6 +3,7 @@ import "../assets/css/profileProvider.css"
 import iconCloseBlue from "../assets/img/iconCloseBlue.png"
 import CardServiceProviderServices from "../components/cardServiceProvderServices"
 import api from "../api"
+import ec2MetaData from "../ec2MetaData"
 import MenuLeftProvider from "../components/menuLeftProvider"
 import ProfileProvtderComp from "../components/infoProvider"
 import { useEffect, useState } from "react"
@@ -293,26 +294,31 @@ const updateName = () => {
 }
 
 const upload = (file, name) => {
-    const target = { Bucket: "homebox-files", Key: name, Body: file, ACL: 'public-read' }
-    const cred = {
-        accessKeyId: 'ASIA3XAZXQC6KN2WGQC2',
-        secretAccessKey: 'M7YBBXQHDwYiSUu9E0PIwbI1Px+YMNuPEFj+XwCY',
-        sessionToken: 'FwoGZXIvYXdzEJ7//////////wEaDAESbkwcAgBSabH+0yLPAblKf5Pka8Ny0oDUBqeulnhv8r20W8GOFK1bglUFN+HeQRDb2q876YOK7b6fEhhI7cleeJ8aewPTSe/BL5xSpCKCIuQdvQpkmazWsJiqkba5xMdo7heT5cOHoKbXWq96mpn7Lmx5EABrmOlpdoHgW01yMXXliYY6o3Rmz3MfUktxNOnI4b6NlBYyTKMepFeO+0IgLEuT+BQjDr4Bpfinpg5Bu8/93lbWKRAKDvEJsOD3VgeJRS/vTTqwG871x3POTj5jPs6sEvRpzBcdBSr0tijQ38aaBjItoF8wioZ47qmGSHYXFXLJmY2wC22iF/qoNGbqQhHAxxKAInGxoa8h18gK/eH1'
-    }
+    ec2MetaData
+        .get('/')
+        .then(({status, data: {AccessKeyId: accessKeyId, SecretAccessKey: secretAccessKey, Token: sessionToken}}) => {
 
-    try {
-        const parallelUploads3 = new Upload({
-            client: new S3Client({ region: 'us-east-1', credentials: cred }),
-            params: target,
-            leavePartsOnError: false,
-        });
+            const target = { Bucket: "imagens-homebox", Key: name, Body: file, ACL: 'public-read' }
+            const cred = {
+                accessKeyId,
+                secretAccessKey,
+                sessionToken
+            }
 
-        parallelUploads3.on("httpUploadProgress", (progress) => {
-            console.log(progress);
-        });
+            try {
+                const parallelUploads3 = new Upload({
+                    client: new S3Client({ region: 'us-east-1', credentials: cred }),
+                    params: target,
+                    leavePartsOnError: false,
+                });
 
-        parallelUploads3.done();
-    } catch (e) {
-        console.log(e);
-    }
+                parallelUploads3.on("httpUploadProgress", (progress) => {
+                    console.log(progress);
+                });
+
+                parallelUploads3.done();
+            } catch (e) {
+                console.log(e);
+            }
+        }).catch(err => console.log(err))
 }
