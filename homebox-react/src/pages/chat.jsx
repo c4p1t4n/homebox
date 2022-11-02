@@ -98,7 +98,7 @@ function Chat() {
             }
         }
     }
-    
+
     let services = []
     services.push(<option value="0">Selecione</option>)
     var serviceInfoObj = JSON.parse(sessionStorage.getItem("servicesInfo"));
@@ -106,7 +106,7 @@ function Chat() {
     for (let i = 0; i < serviceInfo.length; i++) {
         services.push(<option value={serviceInfo[i][1].idService}>
             {serviceInfo[i][1].name}
-            </option>)
+        </option>)
     }
 
     return (
@@ -172,22 +172,22 @@ function Chat() {
             <div id="modalCloseBusinessDiv" className="modalCloseBusinessDiv">
                 <div className="openModalCloseBusiness" action="">
                     <label htmlFor="Service">
-                    <label htmlFor="categoryService">Serviço:</label><br></br>
-                        <select name="categories" id="select_categories">
+                        <label htmlFor="categoryService">Serviço:</label><br></br>
+                        <select required name="categories" id="select_categories">
                             {services}
                         </select>
                     </label>
                     <label htmlFor="Address">
                         <p>Endereço</p>
-                        <input id="adress" type="text" placeholder="Endereço"/>
+                        <input required id="adress" type="text" placeholder="Endereço" />
                     </label>
                     <label htmlFor="ValueOfService">
                         <p>Valor do serviço</p>
-                        <input id="serviceValue" type="number" placeholder="Valor R$" />
+                        <input required id="serviceValue" type="number" placeholder="Valor R$" />
                     </label>
                     <label htmlFor="dateOfService">
                         <p>Data do serviço</p>
-                        <input id="serviceDate" type="date" placeholder="Data do serviço" />
+                        <input required id="serviceDate" type="date" placeholder="Data do serviço" />
                     </label>
                     <label htmlFor="" className="buttonsCloseBusiness">
                         <button onClick={closeBusinessFunction}>Fechar negócio?</button>
@@ -212,7 +212,7 @@ function closeBusinessFunction() {
             api.post("/schedulings/accomplish/" + data.idScheduling, {
                 price: document.getElementById("serviceValue").value,
                 description: document.getElementById("adress").value,
-                serviceDate: document.getElementById("serviceDate").value 
+                serviceDate: document.getElementById("serviceDate").value
             }
             ).then(({ status, data }) => {
                 if (status === 201) {
@@ -235,19 +235,19 @@ function openCloseBusinessDivImgWithText() {
     document.getElementById("closeBusinessDivImg").style.display = document.getElementById("closeBusinessDivImg").style.display === "none" ? "flex" : "none"
 }
 
-function getListService(){    
+function getListService() {
     var idWorker = JSON.parse(sessionStorage.getItem("chatInfo"))
-    api.get(`services/getServicesOfWorker/`+ idWorker[0].userId)
+    api.get(`services/getServicesOfWorker/` + idWorker[0].userId)
         .then(({ status, data }) => {
             if (status === 200) {
                 sessionStorage.setItem("servicesInfo", JSON.stringify({ ...data }))
                 openModalCloseBusinessDiv()
             }
-            else{
+            else {
                 const info = {
-                    
+
                 }
-                sessionStorage.setItem("servicesInfo", JSON.stringify({...info}))
+                sessionStorage.setItem("servicesInfo", JSON.stringify({ ...info }))
             }
         })
 }

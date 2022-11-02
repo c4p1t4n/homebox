@@ -83,7 +83,7 @@ public class UserController {
         }
 
         User user = dbServiceUser.findById(idUser).get();
-        user.setPicture("https://homebox-files.s3.amazonaws.com/" + picture);
+        user.setPicture("https://imagens-homebox.s3.amazonaws.com/" + picture);
         dbServiceUser.saveUser(user);
         return status(200).build();
     }
