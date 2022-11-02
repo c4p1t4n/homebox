@@ -1,7 +1,7 @@
 import { DynamicStar } from 'react-dynamic-star';
 import { useState } from "react"
 import CardSearchOpenClick from "../components/cardSearchOpenClick"
-
+import api from "../api"
 
 function FrequentSearchCard(props) {
     const styleRating = {

@@ -121,7 +121,6 @@ class relatorioProvider extends Component {
                                                 <img src={questionMark} alt="Informações sobre visitas ao seu perfil" />
                                             </div>
                                             <div className="visitsYourProfileBut">
-                                                {/* <p id="indice">13%</p> */}
                                                 <div className="indiceDiv2">
                                                     <p id="indice2">{geraVisitas()}</p>
                                                     <p>nessa semana</p>
@@ -184,13 +183,14 @@ class relatorioProvider extends Component {
 
 const geraVisitas = () => {
     const { id_user } = JSON.parse(sessionStorage.getItem('user'))
-    if (!localStorage.getItem(`visitas-${id_user}`)) {
-        let visitas = Math.round((Math.random() * 20) + 5)
-        localStorage.setItem(`visitas-${id_user}`, visitas)
-        return visitas
-    }
+    api.get(`/interestAccess/visits/` + JSON.parse(sessionStorage.getItem("user")).id_user
+    ).then(({ status, data }) => {
+        if (status === 200) {
+            localStorage.setItem(`visitas-${id_user}`, data)
+            return data
+        }
+    })
     return localStorage.getItem(`visitas-${id_user}`)
-
 }
 
 

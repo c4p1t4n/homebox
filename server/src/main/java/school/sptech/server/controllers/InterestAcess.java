@@ -142,6 +142,11 @@ public class InterestAcess {
         return ResponseEntity.status(200).body(ratingRepository.getAvgRatingForWorkerLastSevenDays(id_user,LocalDate.now().minusDays(6)));
     }
 
+    @GetMapping("/visits/{id}")
+    public  ResponseEntity Visits(@PathVariable Integer id){
+        Tag tag = tagRepository.findByValue("User: " + id);
 
+        return ResponseEntity.status(200).body(userHasTag.countByTag(tag));
+    }
 
 }

@@ -1,4 +1,10 @@
+import api from "../api"
+
 function cardOpenSearchClick(props) {
+
+    function interest(){
+        api.post(`/interestAccess/service/${JSON.parse(sessionStorage.getItem("user")).id_user}/${props.nameService}`)
+    }
 
     return (
         <>
@@ -20,7 +26,3 @@ function cardOpenSearchClick(props) {
 }
 
 export default cardOpenSearchClick
-
-function interest(){
-    api.post(`/interestAccess/service/${JSON.parse(sessionStorage.getItem("user")).id_user}/${props.nameService}`)
-}
