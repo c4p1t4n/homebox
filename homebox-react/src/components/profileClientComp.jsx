@@ -91,7 +91,7 @@ const onChange = e => {
             .then((response) => {
                 console.log(response.status)
             })
-    }, 690);
+    }, 1000);
 
     upload(state.file, fileName)
 }
