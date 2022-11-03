@@ -9,8 +9,6 @@ import React, { Component } from "react"
 import api from "../api"
 
 
-
-
 class relatorioProvider extends Component {
 
     constructor(props) {
@@ -64,15 +62,7 @@ class relatorioProvider extends Component {
         let visitas_semana = await api.get(`interestAccess/avg_last_seven_days/${id_user}`,).catch(err => err.response)
         this.setState({ visitas_semana: (visitas_semana.data === 0 ? "0" : visitas_semana.data) })
 
-
-
-
-
-
-
         let list_medias_ultima_semana = await api.get(`interestAccess/getListAvgLastSevenDays/${id_user}`,).catch(err => err.response)
-
-
         this.setState({
             series: [
                 {
@@ -111,7 +101,6 @@ class relatorioProvider extends Component {
 
         return (
             <>
-
                 <div className="divBodyProfileProvider">
                     <MenuLeftProvider />
                     <div className="divRightProfileProvider">
@@ -132,7 +121,6 @@ class relatorioProvider extends Component {
                                                 <img src={questionMark} alt="Informações sobre visitas ao seu perfil" />
                                             </div>
                                             <div className="visitsYourProfileBut">
-                                                {/* <p id="indice">13%</p> */}
                                                 <div className="indiceDiv2">
                                                     <p id="indice2">{geraVisitas()}</p>
                                                     <p>nessa semana</p>
@@ -195,13 +183,14 @@ class relatorioProvider extends Component {
 
 const geraVisitas = () => {
     const { id_user } = JSON.parse(sessionStorage.getItem('user'))
-    if (!localStorage.getItem(`visitas-${id_user}`)) {
-        let visitas = Math.round((Math.random() * 20) + 5)
-        localStorage.setItem(`visitas-${id_user}`, visitas)
-        return visitas
-    }
+    api.get(`/interestAccess/visits/` + JSON.parse(sessionStorage.getItem("user")).id_user
+    ).then(({ status, data }) => {
+        if (status === 200) {
+            localStorage.setItem(`visitas-${id_user}`, data)
+            return data
+        }
+    })
     return localStorage.getItem(`visitas-${id_user}`)
-
 }
 
 
@@ -223,4 +212,3 @@ function closeendServiceDiv() {
 }
 
 export default relatorioProvider
-

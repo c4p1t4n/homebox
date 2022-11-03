@@ -1,8 +1,14 @@
+import api from "../api"
+
 function cardOpenSearchClick(props) {
+
+    function interest(){
+        api.post(`/interestAccess/service/${JSON.parse(sessionStorage.getItem("user")).id_user}/${props.nameService}`)
+    }
 
     return (
         <>
-            <details className="cardSearchOpenDivServicesOpen">
+            <details className="cardSearchOpenDivServicesOpen" onClick={interest}>
                 <summary className="summaryCardSearchOpen">
                     <div className="nameServiceSearchCardOpen">
                         <p>Serviço</p>

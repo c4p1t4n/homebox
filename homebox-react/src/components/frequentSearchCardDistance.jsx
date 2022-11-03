@@ -1,7 +1,7 @@
 import { DynamicStar } from 'react-dynamic-star';
 import { useState } from "react"
 import CardSearchOpenClick from "../components/cardSearchOpenClick"
-
+import api from "../api"
 
 function FrequentSearchCard(props) {
     const styleRating = {
@@ -20,6 +20,7 @@ function FrequentSearchCard(props) {
             category={props.category}
             rating={props.rating ?? 0.0}
         />))
+        api.post(`/interestAccess/user/${JSON.parse(sessionStorage.getItem("user")).id_user}/${props.id_user}`)
     }
 
 
