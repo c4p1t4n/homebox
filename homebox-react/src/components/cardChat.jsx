@@ -32,5 +32,8 @@ function setChat(value){
         }
     })
 
-    document.getElementById("closeBusinessDiv").style.display = 'flex'
+    if(JSON.parse(sessionStorage.getItem("user")).type==="customer"){
+        document.getElementById("closeBusinessDiv").style.display = 'flex'
+    }
+
 }

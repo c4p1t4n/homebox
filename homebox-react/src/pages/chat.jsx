@@ -104,7 +104,7 @@ function Chat() {
     var serviceInfoObj = JSON.parse(sessionStorage.getItem("servicesInfo"));
     var serviceInfo = Object.keys(serviceInfoObj).map(key => [String(key), serviceInfoObj[key]]);
     for (let i = 0; i < serviceInfo.length; i++) {
-        services.push(<option value={serviceInfo[i][1].idService}>
+        services.push(<option value={serviceInfo[i][1].idService+":"+serviceInfo[i][1].name}>
             {serviceInfo[i][1].name}
         </option>)
     }
@@ -181,10 +181,6 @@ function Chat() {
                         <p>Endereço</p>
                         <input required id="adress" type="text" placeholder="Endereço" />
                     </label>
-                    <label htmlFor="ValueOfService">
-                        <p>Valor do serviço</p>
-                        <input required id="serviceValue" type="number" placeholder="Valor R$" />
-                    </label>
                     <label htmlFor="dateOfService">
                         <p>Data do serviço</p>
                         <input required id="serviceDate" type="date" placeholder="Data do serviço" />
@@ -202,20 +198,42 @@ function Chat() {
 export default Chat
 
 function closeBusinessFunction() {
+    let user = JSON.parse(sessionStorage.getItem("user")).id_user;
+    let chat = JSON.parse(sessionStorage.getItem("chat")).idChat;
 
+    let drt = document.getElementById("select_categories").value
+    
+    let service = drt.substring(2)
+    let desc = document.getElementById("adress").value
+    let sd = document.getElementById("serviceDate").value
+
+    
+    alert(m)
     api.post("/schedulings", {
         fkUser: JSON.parse(sessionStorage.getItem("user")).id_user,
-        fkService: document.getElementById("select_categories").value
+        fkService:  Array.from(drt)[0]
     }
     ).then(({ status, data }) => {
         if (status === 201) {
             api.post("/schedulings/accomplish/" + data.idScheduling, {
-                price: document.getElementById("serviceValue").value,
-                description: document.getElementById("adress").value,
-                serviceDate: document.getElementById("serviceDate").value
+                description: desc,
+                serviceDate: sd
             }
             ).then(({ status, data }) => {
                 if (status === 201) {
+                    var m = `/!!/${data.id}/!!/Olá, eu gotaria de fechar o serviço /!!/${service}/!!/, em /!!/${desc}/!!/ no dia /!!/${sd}/!!/`
+                    
+
+                    let msg = {
+                        message: document.getElementById("inputMsg").value,
+                        id: user
+                    };
+                    console.log(msg);
+                
+                    api.post('chat/msg/' + chat + '/' + user, msg)
+                        .then((response) => {
+                            console.log(response.status)
+                        });
                     alert("Pedido de serviço enviado!!!")
                 }
             })
