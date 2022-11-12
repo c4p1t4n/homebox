@@ -8,6 +8,7 @@ import CardAudioRight from "../components/cardAudioRight";
 import CardAudioLeft from "../components/cardAudioLeft";
 import CardImgRight from "../components/cardImgRight";
 import CardImgLeft from "../components/cardImgLeft";
+import CardChatService from "../components/cardChatService";
 
 import VLibras from "@djpfs/react-vlibras"
 import api from "../api"
@@ -73,7 +74,17 @@ function Chat() {
     for (var i in info) {
         if (info[i].userId === JSON.parse(sessionStorage.getItem("user")).id_user) {
             if (info[i].message !== "") {
-                list.push(<CardChatMsgRight text={info[i].message} />)
+                if(info[i].message.includes("/!!/")){
+                    var message_array = info[i].message.split('/!!/')
+                    var message = ""
+                    for(let i = 2; i <  message_array.length; i++){
+                        message+= message_array[i]
+                    }      
+                    list.push(<CardChatMsgRight text={message} />)
+                }
+                else{
+                    list.push(<CardChatMsgRight text={info[i].message} />)
+                }
             }
             else {
                 if (info[i].type === "image/png" || info[i].type === "image/jpeg") {
@@ -86,7 +97,23 @@ function Chat() {
         }
         else {
             if (info[i].message !== "") {
-                list.push(<CardChatMsgLeft text={info[i].message} />)
+                if(info[i].message.includes("/!!/")){
+                    var message_array = info[i].message.split('/!!/')
+             
+                    var message = ""
+                    for(let i = 2; i < message_array.length; i++){
+                        message+=message_array[i]
+                    }      
+                    list.push(<CardChatService text={message}
+                                               id ={ message_array[1]}
+                                               service ={ message_array[3]}
+                                               adress ={ message_array[5]}
+                                               date ={ message_array[7]}/>)
+            
+                }
+                else{
+                    list.push(<CardChatMsgLeft text={info[i].message} />)
+                }
             }
             else {
                 if (info[i].type === "image/png" || info[i].type === "image/jpeg") {
@@ -181,6 +208,10 @@ function Chat() {
                         <p>Endereço</p>
                         <input required id="adress" type="text" placeholder="Endereço" />
                     </label>
+                    {/* <label htmlFor="ValueOfService">
+                        <p>Valor do serviço</p>
+                        <input required id="serviceValue" type="number" placeholder="Valor R$" />
+                    </label> */}
                     <label htmlFor="dateOfService">
                         <p>Data do serviço</p>
                         <input required id="serviceDate" type="date" placeholder="Data do serviço" />
@@ -207,25 +238,21 @@ function closeBusinessFunction() {
     let desc = document.getElementById("adress").value
     let sd = document.getElementById("serviceDate").value
 
-    
-    alert(m)
     api.post("/schedulings", {
-        fkUser: JSON.parse(sessionStorage.getItem("user")).id_user,
+        fkUser: user,
         fkService:  Array.from(drt)[0]
     }
     ).then(({ status, data }) => {
         if (status === 201) {
             api.post("/schedulings/accomplish/" + data.idScheduling, {
                 description: desc,
+                price: '0.0',
                 serviceDate: sd
             }
             ).then(({ status, data }) => {
-                if (status === 201) {
-                    var m = `/!!/${data.id}/!!/Olá, eu gotaria de fechar o serviço /!!/${service}/!!/, em /!!/${desc}/!!/ no dia /!!/${sd}/!!/`
-                    
-
+                if (status === 201) {                  
                     let msg = {
-                        message: document.getElementById("inputMsg").value,
+                        message: `/!!/${data.id}/!!/Olá, eu gotaria de fechar o serviço /!!/${service}/!!/, em /!!/${desc}/!!/ no dia /!!/${sd}/!!/`,
                         id: user
                     };
                     console.log(msg);
@@ -234,6 +261,7 @@ function closeBusinessFunction() {
                         .then((response) => {
                             console.log(response.status)
                         });
+
                     alert("Pedido de serviço enviado!!!")
                 }
             })
