@@ -23,7 +23,7 @@ function cardChatService(props) {
         <>
             <div className="cardChatMsgLeft" key={props.index}>
                 <p>{props.text}</p>
-                <button onClick={openModalCloseBusinessDiv}>Fechar Negocio?</button>
+                <button onClick={openModalCloseBusinessDiv}>Fechar Negócio ?</button>
             </div>
 
             <div id="modalCloseBusinessDiv" className="modalCloseBusinessDiv">
