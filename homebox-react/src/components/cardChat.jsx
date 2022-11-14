@@ -1,6 +1,13 @@
 import api from "../api"
 
 function CardChat(props) {
+    var message_array = props.lastMessage.split('/!!/')
+    var message = ""
+    for(let i = 2; i <  message_array.length; i++){
+        message+= message_array[i]
+    }
+
+
     return (
         <>
             <div className="cardsChat" key={props.index} onClick={() => setChat(props.index)}>
@@ -8,7 +15,7 @@ function CardChat(props) {
                     <img src={props.img} alt="Foto do Jose" />
                     <div className="nameP">
                     <p>{props.name}</p>
-                    <p className="lastMsg" id={props.index}>{props.lastMessage}</p>
+                    <p className="lastMsg" id={props.index}>{message}</p>
                     </div>
                     <p className="timestamp">{`${props.lastMessageHour.split('T')[0]}\n${props.lastMessageHour.split('T')[1]}`}</p>
                 </div>
@@ -32,5 +39,8 @@ function setChat(value){
         }
     })
 
-    document.getElementById("closeBusinessDiv").style.display = 'flex'
+    if(JSON.parse(sessionStorage.getItem("user")).type==="customer"){
+        document.getElementById("closeBusinessDiv").style.display = 'flex'
+    }
+
 }
