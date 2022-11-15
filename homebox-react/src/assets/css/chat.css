@@ -106,9 +106,9 @@
 }
 
 .cardChat {
-    display: flex;
+    display: grid;
+    grid-template-columns: 110px auto auto;
     align-items: center;
-    justify-content: space-between;
     padding: 1% 5% 1% 5%;
     background: rgba(10, 57, 105, 0.5);
     border-radius: 13px;
