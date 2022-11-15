@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import school.sptech.server.client.CalcDistClient;
 import school.sptech.server.client.DistanceRecommendationClient;
+import school.sptech.server.client.DistanceRecommendationPutClient;
 import school.sptech.server.model.Category;
 import school.sptech.server.model.User;
 //import school.sptech.server.service.ExportTxt;
@@ -44,6 +45,8 @@ public class UserController {
     @Autowired
     private CalcDistClient distClient;
     @Autowired
+    private DistanceRecommendationPutClient distPutClient;
+    @Autowired
     private DistanceRecommendationClient distRecommendationClient;
 
     @Autowired
@@ -69,6 +72,8 @@ public class UserController {
         newUser.setAuthenticated('n');
         newUser.setPicture("https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png");
         User user = dbServiceUser.saveUser(newUser);
+
+        distPutClient.putDist(new UserIdRequest(user.getId_user()));
 
         return status(201).body(user);
 
@@ -314,7 +319,7 @@ public class UserController {
         DistRequest distRequest = new DistRequest(cep1, cep2);
 
         DistResponse dist = distClient.getDist(distRequest).getBody();
-        
+
         if (Objects.nonNull(dist)) {
             return status(200).body(dist.getDistance());
         }
