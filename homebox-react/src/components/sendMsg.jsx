@@ -145,7 +145,6 @@ const sendMsg = e => {
         message: document.getElementById("inputMsg").value,
         id: user
     };
-    console.log(msg);
     document.getElementById("inputMsg").value = "";
 
     api.post('chat/msg/' + chat + '/' + user, msg)

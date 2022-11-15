@@ -106,9 +106,9 @@
 }
 
 .cardChat {
-    display: flex;
+    display: grid;
+    grid-template-columns: 110px auto auto;
     align-items: center;
-    justify-content: space-between;
     padding: 1% 5% 1% 5%;
     background: rgba(10, 57, 105, 0.5);
     border-radius: 13px;
@@ -213,6 +213,22 @@
     width: 50%;
     margin-bottom: 4%;
     border-radius: 70px 15px;
+}
+
+.cardChatMsgLeft button {
+    font-size: 1.2rem;
+    border-radius: 20px;
+    margin-top: 20px;
+    border: none;
+    padding: 1%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.cardChatMsgLeft button:hover {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.22rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 .cardChatMsgRight {
@@ -357,10 +373,11 @@
 }
 
 .modalCloseBusinessDiv {
-    position: absolute;
+    position: fixed;
     background-color: #000000af;
     width: 100vw;
     height: 100vh;
+    left: 0px;
     display: none;
     align-items: center;
     justify-content: center;
