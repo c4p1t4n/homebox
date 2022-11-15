@@ -11,4 +11,5 @@ public interface AccomplishedServiceRepository extends JpaRepository<Accomplishe
 
     Optional<AccomplishedService> findBySchedulingIdScheduling(Integer id);
 
+    Optional<AccomplishedService> findById(Integer id);
 }
