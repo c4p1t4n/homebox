@@ -19,6 +19,8 @@ SELECT
     scheduling_status.service_status AS status,
     service.description AS service_description,
     accomplished_service.description AS address,
+    accomplished_service.id_accomplished_service AS id_accomplished_service,
+    service.id_service AS id_service,
     ROW_NUMBER() OVER (ORDER BY accomplished_service.service_date ) AS id
 FROM
     service
