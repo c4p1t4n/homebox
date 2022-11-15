@@ -13,7 +13,7 @@ def lambda_handler(event, context):
         dataset=True,
     )
 
-    df = df[df['id_customer'] == user_id]
+    df = df[df['id_customer'] == user_id].drop_duplicates(['id_customer', 'id_worker'], keep='last')
 
     print(df)
 
