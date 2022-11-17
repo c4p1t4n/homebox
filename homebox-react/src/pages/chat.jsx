@@ -208,10 +208,6 @@ function Chat() {
                         <p>Endereço</p>
                         <input required id="adress" type="text" placeholder="Endereço" />
                     </label>
-                    {/* <label htmlFor="ValueOfService">
-                        <p>Valor do serviço</p>
-                        <input required id="serviceValue" type="number" placeholder="Valor R$" />
-                    </label> */}
                     <label htmlFor="dateOfService">
                         <p>Data do serviço</p>
                         <input required id="serviceDate" type="date" placeholder="Data do serviço" />
