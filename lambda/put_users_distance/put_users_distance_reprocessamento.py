@@ -53,7 +53,7 @@ def lambda_handler(event, context):
             print(f'{url = }')
 
             # distance = requests.get(url).json()
-            distance = requests.post(url, data=json.dumps({'cep1': row['worker_cep'], 'cep2': row['customer_cep']})).json()
+            distance = requests.post(url, data=json.dumps({'cep1': row['worker_cep'], 'cep2': row['customer_cep']}), headers={"Content-Type": "application/json", "Accept": "application/json"}).json()
 
             print(f'{distance = }')
 
@@ -66,7 +66,7 @@ def lambda_handler(event, context):
             df_final = df_final.append(row)
 
 
-    df_final['knn_distance'] = df_final['distance'] - 3.72 * df_final['worker_rating']
+    df_final['knn_distance'] = df_final['distance'] - 3.72 * df_final['worker_rating'].fillna(0)
 
     df_final = df_final.sort_values(by='knn_distance', ascending=True)
 

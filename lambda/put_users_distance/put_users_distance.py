@@ -48,7 +48,7 @@ def lambda_handler(event, context):
 
         try:
             # distance = requests.get(url).json()
-            distance = requests.post(url, data=json.dumps({'cep1': row['worker_cep'], 'cep2': row['customer_cep']})).json()
+            distance = requests.post(url=url, data=json.dumps({'cep1': row['worker_cep'], 'cep2': row['customer_cep']}), headers={"Content-Type": "application/json", "Accept": "application/json"}).json()
 
             print(f'{distance = }')
 
@@ -64,7 +64,7 @@ def lambda_handler(event, context):
             print(f'Erro ao calcular a distancia \n{e = }')
             continue
 
-    df_final['knn_distance'] = df_final['distance'] - 3.72 * df_final['worker_rating']
+    df_final['knn_distance'] = df_final['distance'] - 3.72 * df_final['worker_rating'].fillna(0)
 
     df_final = df_final.sort_values(by='knn_distance', ascending=True)
 
@@ -85,4 +85,4 @@ def lambda_handler(event, context):
 
 
 if __name__ == '__main__':
-    lambda_handler({'body': '{"user_id": 4}'}, {})
+    lambda_handler({'body': '{"id": 4}'}, {})
