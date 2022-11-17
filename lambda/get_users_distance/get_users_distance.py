@@ -9,13 +9,11 @@ def lambda_handler(event, context):
     qtd_workers = body['qtd']
 
     df = wr.s3.read_parquet(
-        path=f's3://distancia/',
+        path='s3://distancia/',
         dataset=True,
     )
 
-    df = df[df['id_customer'] == user_id]
-
-    df: pd.DataFrame = df.sort_values(by='distance', ascending=True)[:qtd_workers]
+    df = df[df['id_customer'] == user_id].drop_duplicates(['id_customer', 'id_worker'], keep='last')
 
     print(df)
 
