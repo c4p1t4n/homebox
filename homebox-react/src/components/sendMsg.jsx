@@ -65,7 +65,7 @@ class SendMsg extends Component {
                     console.log(response.status)
                 })
             sessionStorage.setItem("sendMsg", true)
-        }, 620);
+        }, 1200);
     };
 
     render() {
@@ -129,7 +129,7 @@ const onChange = e => {
                 console.log(response.status)
             })
         sessionStorage.setItem("sendMsg", true)
-    }, 620);
+    }, 1200);
 
 }
 
