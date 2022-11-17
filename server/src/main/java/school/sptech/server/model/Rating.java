@@ -1,6 +1,7 @@
 package school.sptech.server.model;
 
 import java.io.Serializable;
+import java.util.Optional;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -37,6 +38,14 @@ public class Rating implements Serializable {
         this.accomplishedService = accomplishedService;
         this.rating = rating;
         this.description = description;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getId() {
+        return id;
     }
 
     public AccomplishedService getAccomplishedService() {
