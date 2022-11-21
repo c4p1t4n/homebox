@@ -30,6 +30,8 @@ public class ChatController {
     private UserService dbRepositoryUser;
     @Autowired
     private UserRepository dbUserRepository;
+    @Autowired
+    private ChatsRepository dbChatsRepository;
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/{idCustomer}/{idWorker}")
@@ -40,9 +42,8 @@ public class ChatController {
         if (!dbUserService.existsById(idWorker)) {
             return ResponseEntity.status(404).build();
         }
-        System.out.println(idCustomer + " " + idWorker);
 
-        // if(!dbChatsRepository.existsByUserIdAndUserId2(idWorker,idCustomer)){
+         if(!dbChatsRepository.existsByUserIdAndUserId2(idWorker,idCustomer)){
             LocalDate today = LocalDate.now();
             Chat newChat = dbRepositoryChat.save(new Chat(today));
 
@@ -63,8 +64,8 @@ public class ChatController {
             dbRepositoryUserHasChat.save(WorkerChatAccess);
 
             return ResponseEntity.status(201).build();
-        // }
-        // return ResponseEntity.status(400).build();
+         }
+         return ResponseEntity.status(404).build();
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
