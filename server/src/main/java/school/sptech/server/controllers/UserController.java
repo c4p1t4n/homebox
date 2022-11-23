@@ -6,10 +6,15 @@ import org.springframework.web.bind.annotation.*;
 
 import school.sptech.server.client.CalcDistClient;
 import school.sptech.server.client.DistanceRecommendationClient;
+import school.sptech.server.model.AccomplishedService;
+import school.sptech.server.client.DistanceRecommendationPutClient;
 import school.sptech.server.model.Category;
+import school.sptech.server.model.Rating;
 import school.sptech.server.model.User;
 //import school.sptech.server.service.ExportTxt;
 // import school.sptech.server.service.FilaObj;
+import school.sptech.server.repository.AccomplishedServiceRepository;
+import school.sptech.server.repository.ServicesSchedulingRepository;
 import school.sptech.server.request.DistRecommendRequest;
 import school.sptech.server.request.DistRequest;
 import school.sptech.server.request.LoginRequest;
@@ -26,8 +31,10 @@ import static org.springframework.http.ResponseEntity.status;
 
 import java.io.*;
 import java.security.NoSuchAlgorithmException;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -40,9 +47,14 @@ public class UserController {
     private UserService dbServiceUser;
 
     @Autowired
+    private ServicesSchedulingRepository dbServiceScheduling;
+
+    @Autowired
     private CategoryRepository dbRepositoryCategory;
     @Autowired
     private CalcDistClient distClient;
+    @Autowired
+    private DistanceRecommendationPutClient distPutClient;
     @Autowired
     private DistanceRecommendationClient distRecommendationClient;
 
@@ -50,6 +62,8 @@ public class UserController {
     private ServiceRepository dbRepositoryService;
     @Autowired
     private RatingRepository dbRepositoryRating;
+    @Autowired
+    private AccomplishedServiceRepository dbRepositoryAccomplishedService;
 
     // @Autowired
     // private CategoryRepository categoryRepository;
@@ -69,6 +83,8 @@ public class UserController {
         newUser.setAuthenticated('n');
         newUser.setPicture("https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png");
         User user = dbServiceUser.saveUser(newUser);
+
+        distPutClient.putDist(new UserIdRequest(user.getId_user()));
 
         return status(201).body(user);
 
@@ -314,7 +330,7 @@ public class UserController {
         DistRequest distRequest = new DistRequest(cep1, cep2);
 
         DistResponse dist = distClient.getDist(distRequest).getBody();
-        
+
         if (Objects.nonNull(dist)) {
             return status(200).body(dist.getDistance());
         }
@@ -347,6 +363,26 @@ public class UserController {
         return status(502).build();
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @PostMapping("/save-note/{idUser}/{valueRating}/{date}")
+    public  ResponseEntity<Rating> saveNote(@PathVariable Integer idUser, @PathVariable Integer valueRating, @PathVariable String date){
+        System.out.println(date);
+        LocalDate service_date = LocalDate.parse(date);
+        Integer idAccomplishedService =  dbServiceScheduling.findIdAccomplishedService(idUser,service_date,service_date.plusDays(1)).get(0);
+
+       Optional<AccomplishedService> accomplishedService  =   dbRepositoryAccomplishedService.findById(idAccomplishedService);
+       if(accomplishedService.isPresent()){
+           try {
+               Rating rating = dbRepositoryRating.save(new Rating(accomplishedService.get(), valueRating, " "));
+               return status(201).body(rating);
+           }catch(Exception e){
+               System.out.println(e);
+               return status(418).build();
+           }
+
+       }
+        return ResponseEntity.status(400).build();
+    }
 
 
     // @PatchMapping(value = "/report", consumes = "text/txt; charset: utf-8")

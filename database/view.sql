@@ -5,6 +5,7 @@ DROP VIEW IF EXISTS avg_rating;
 DROP VIEW IF EXISTS services_scheduling;
 DROP VIEW IF EXISTS services_status_recent;
 DROP VIEW IF EXISTS avg_rating_history;
+DROP VIEW IF EXISTS users_rating;
 
 
 CREATE VIEW
@@ -19,6 +20,8 @@ SELECT
     scheduling_status.service_status AS status,
     service.description AS service_description,
     accomplished_service.description AS address,
+    accomplished_service.id_accomplished_service AS id_accomplished_service,
+    service.id_service AS id_service,
     ROW_NUMBER() OVER (ORDER BY accomplished_service.service_date ) AS id
 FROM
     service
@@ -137,3 +140,20 @@ SELECT uhc.*, user_has_chat.user_id_user AS id2
 FROM user_has_chat uhc
 JOIN user_has_chat ON user_has_chat.chat_id_chat = uhc.chat_id_chat
 GROUP BY(uhc.chat_id_chat);
+
+CREATE VIEW
+    users_rating
+AS
+SELECT
+    user.*,
+    CASE
+        WHEN user.type = 'customer' THEN NULL
+        ELSE avg_rating.rating
+    END
+    AS rating
+FROM
+    user
+LEFT JOIN
+    avg_rating
+ON
+    user.id_user = avg_rating.worker_id

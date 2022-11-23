@@ -45,29 +45,13 @@ public class TagController {
     InterestAccessRepository interestAccessRepository;
 
 
-
-
-    @PostMapping("/{id}")
-    public ResponseEntity<Void> postTag(@PathVariable  Integer id,@RequestBody String descricao){
-
-        tagRepository.save(new Tag(id,descricao));
-
-        return ResponseEntity.status(201).build();
-
-    }
-
-
-
-
-
-
     @PostMapping("/user/{idUser}")
     public ResponseEntity<String> postUserHasTag(@RequestBody Tag tag ,@PathVariable Integer idUser){
-        List<Tag> listTag = tagRepository.findAll();
-
         if(!dbServiceUser.existsById(idUser)){
             return ResponseEntity.status(400).body("Usuario não existente");
         }
+
+        List<Tag> listTag = tagRepository.findAll();
 
         for(Tag actual_tag:listTag){
             if(actual_tag.getValue().equals(tag.getValue())){
@@ -83,18 +67,14 @@ public class TagController {
 
     }
 
-
-
-
-
-
     @PostMapping("/category/{idCategory}")
     public ResponseEntity<String> postCategoryHasTag(@RequestBody Tag tag,@PathVariable Integer idCategory){
-        List<Tag> listTag= tagRepository.findAll();
 
         if(!categoryRepository.existsById(idCategory)){
             return ResponseEntity.status(400).body("Usuario não existente");
         }
+
+        List<Tag> listTag= tagRepository.findAll();
 
         for(Tag actual_tag:listTag){
             if(actual_tag.getValue().equals(tag.getValue())){
@@ -132,14 +112,6 @@ public class TagController {
         return ResponseEntity.status(201).build();
     }
 
-
-
-
-
-
-
-
-
     @GetMapping
     public ResponseEntity<List<Tag>> getAllTags(){
       List<Tag> tags = tagRepository.findAll();
@@ -168,8 +140,4 @@ public class TagController {
 
         return categoryHasTags.isEmpty() ? status(204).build() : status(200).body(categoryHasTags);
     }
-
-
-
-
 }

@@ -12,7 +12,7 @@ function menuLeftProvider() {
 
             <div className="divLeftProfileProvider">
                 <img src={logoHomebox} alt="logo homebox" className="logoProfileProvider" />
-                <p className="welcomeProvider">Seja bem vindo(a), {nome}</p>
+                <p id="nameProviderMenu" className="welcomeProvider">Seja bem vindo(a), {nome}</p>
                 <a href="/profile/provider" className="tagAprofileProvider"><p>Meu Perfil</p></a>
                 <a href="/profile/provider/relatorio" className="tagAprofileProvider"><p>Relatorios</p></a>
                 <a href="/chat" className="tagAprofileProvider"><p>Meu Chat</p></a>

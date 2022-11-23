@@ -265,7 +265,7 @@ const onChange = e => {
             .then((response) => {
                 console.log(response.status)
             })
-    }, 690);
+    }, 1000);
 
 }
 
@@ -291,6 +291,8 @@ const updateName = () => {
 
     alert("Nome Alterado!!!!\n" + newName)
     document.getElementById("openDivAlterNameProvider").style.display = "none"
+
+    document.getElementById("nameProviderMenu").innerHTML=`Seja bem vindo(a), ${newName}`
 }
 
 const upload = (file, name) => {

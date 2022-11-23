@@ -22,7 +22,7 @@ function cardLastServiceHistory(props) {
                 </div>
                 <div className="dateServiceHistory">
                     <p>Data do serviço</p>
-                    <p>: {props.date}</p>
+                    <p id={props.id}>: {props.date}</p>
                 </div>
                 <div className="cardLastServiceButton">
                     {

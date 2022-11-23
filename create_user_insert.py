@@ -7,7 +7,7 @@ faker = Faker(locale='pt-br')
 
 
 ceps = gerador_endereco.get_list_ceps_bairros(municipio='são paulo', loops=10)[0][:100]
-insert_sql = f'INSERT INTO user(name, gender, email, password, cpf, type, birth_date, cep, authenticated) VALUES\n'
+insert_sql = f'INSERT INTO user(name, gender, email, password, cpf, type, birth_date, cep, authenticated, picture) VALUES\n'
 for cep in ceps:
     cep = cep.replace('-', '')
     gender = random.choice(['Masculino', 'Feminino'])
@@ -18,7 +18,8 @@ for cep in ceps:
     cpf = faker.cpf().replace(".", "").replace("-", "")
     birth_date = faker.date()
     authenticated = 'n'
-    insert_sql += f"('{name}', '{gender}', '{email}', SHA2('{password}', 256), '{cpf}', '{type}', '{birth_date}', '{cep}', '{authenticated}'),\n"
+    picture = 'https://s3.amazonaws.com/homebox.com/assets/img/profileIcon.png'
+    insert_sql += f"('{name}', '{gender}', '{email}', SHA2('{password}', 256), '{cpf}', '{type}', '{birth_date}', '{cep}', '{authenticated}', '{picture}'),\n"
 
 insert_sql = f'{insert_sql[:-2]};'
 

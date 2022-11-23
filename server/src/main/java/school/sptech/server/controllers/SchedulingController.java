@@ -131,6 +131,33 @@ public class SchedulingController {
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @PatchMapping("/accomplish/{id}/{price}")
+    public ResponseEntity attAccomplish(@PathVariable Integer id,
+                                        @PathVariable Double price){
+        if(!dbRepositoryAccomplishedService.existsById(id)){
+            return status(404).build();
+        }
+        AccomplishedService accomplishedService = dbRepositoryAccomplishedService.findById(id).get();
+        accomplishedService.setPrice(price);
+
+        dbRepositoryAccomplishedService.save(accomplishedService);
+
+        return status(201).build();
+    }
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @GetMapping("/accomplish/{id}")
+    public ResponseEntity getAccomplishPrice(@PathVariable Integer id){
+        if(!dbRepositoryAccomplishedService.existsById(id)){
+            return status(404).build();
+        }
+
+        AccomplishedService a = dbRepositoryAccomplishedService.findById(id).get();
+
+        return status(200).body(a.getPrice());
+    }
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/rating/{id}")
     public ResponseEntity<Object> rateScheduling(@PathVariable Integer id,
             @RequestBody RatingCreationRequest ratingInfo) {

@@ -21,35 +21,34 @@ def lambda_handler(event, context):
         password='Homebox265@',
     )
 
-    df = pd.read_sql(sql='select id_user, name, type, cep from user', con=db_connection)
+    df = pd.read_sql(sql=f"select id_user, name, TYPE as type, cep, rating from users_rating where id_user = {json.loads(event['body'])['id']} or type = 'worker'", con=db_connection)
 
+    customer = df[df['id_user'] == json.loads(event['body'])['id']].to_dict('records')[0]
     df_worker = df[df['type'] == 'worker']
-    df_customer = df[df['type'] == 'customer']
 
-    # print(df_worker.head())
-    # print(df_customer.head())
+    df_final = pd.DataFrame(data=[], columns=['id_customer', 'customer_name', 'customer_cep', 'id_worker', 'worker_name', 'worker_cep', 'worker_rating', 'distance'])
 
-    df_final = pd.DataFrame(data=[], columns=['id_customer', 'customer_name', 'customer_cep', 'id_worker', 'worker_name', 'worker_cep', 'distance'])
+    df_worker['customer_cep'] = customer['cep']
+    df_worker['customer_name'] = customer['name']
+    df_worker['id_customer'] = customer['id_user']
+    df_worker['worker_cep'] = df_worker['cep']
+    df_worker['worker_name'] = df_worker['name']
+    df_worker['id_worker'] = df_worker['id_user']
+    df_worker['worker_rating'] = df_worker['rating']
 
-    for _, customer in df_customer.iterrows():
-        df_customer_1 = df_worker.copy(deep=True)
+    df_worker = df_worker[['id_customer', 'customer_name', 'customer_cep', 'id_worker', 'worker_name', 'worker_cep', 'worker_rating']]
 
-        df_customer_1['customer_cep'] = customer['cep']
-        df_customer_1['customer_name'] = customer['name']
-        df_customer_1['id_customer'] = customer['id_user']
-        df_customer_1['worker_cep'] = df_customer_1['cep']
-        df_customer_1['worker_name'] = df_customer_1['name']
-        df_customer_1['id_worker'] = df_customer_1['id_user']
+    url = 'https://qu56ty27df2dwnnx6k4ktjrkmm0senfu.lambda-url.us-east-1.on.aws'
 
-        df_customer_1 = df_customer_1[['id_customer', 'customer_name', 'customer_cep', 'id_worker', 'worker_name', 'worker_cep']]
+    for _, row in df_worker.iterrows():
 
-        for _, row in df_customer_1.iterrows():
+        # url = f'https://distancep.herokuapp.com/distance/{row["worker_cep"]}/{row["customer_cep"]}'
 
-            url = f'https://distancep.herokuapp.com/distance/{row["worker_cep"]}/{row["customer_cep"]}'
+        print(f'{url = }')
 
-            print(f'{url = }')
-
-            distance = requests.get(url).json()
+        try:
+            # distance = requests.get(url).json()
+            distance = requests.post(url=url, data=json.dumps({'cep1': row['worker_cep'], 'cep2': row['customer_cep']}), headers={"Content-Type": "application/json", "Accept": "application/json"}).json()
 
             print(f'{distance = }')
 
@@ -61,11 +60,19 @@ def lambda_handler(event, context):
 
             df_final = df_final.append(row)
 
+        except Exception as e:
+            print(f'Erro ao calcular a distancia \n{e = }')
+            continue
+
+    df_final['knn_distance'] = df_final['distance'] - 3.72 * df_final['worker_rating'].fillna(0)
+
+    df_final = df_final.sort_values(by='knn_distance', ascending=True)
+
     wr.s3.to_parquet(
         df=df_final,
-        path=f's3://distancia/',
         dataset=True,
-        mode='append'
+        mode='append',
+        path='s3://distancia/'
     )
 
 
@@ -78,4 +85,4 @@ def lambda_handler(event, context):
 
 
 if __name__ == '__main__':
-    lambda_handler({}, {})
+    lambda_handler({'body': '{"id": 4}'}, {})

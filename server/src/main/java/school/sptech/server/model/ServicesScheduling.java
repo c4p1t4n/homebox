@@ -20,6 +20,11 @@ public class ServicesScheduling implements Serializable {
     @Column(name = "customer_id")
     private Integer customerId;
 
+    @Column(name = "id_service")
+    private Integer idService;
+
+    @Column(name = "id_accomplished_service")
+    private Integer idAccomplishedService;
     @Column(name = "name_service")
     private String nameService;
 
@@ -41,9 +46,12 @@ public class ServicesScheduling implements Serializable {
     public ServicesScheduling() {
     }
 
-    public ServicesScheduling(Integer id, Integer workerId, Integer customerId, String nameService,
+    public ServicesScheduling(Integer idAccomplishedService,Integer idService,Integer id, Integer workerId, Integer customerId, String nameService,
                               String serviceDescription, String address, Double price, LocalDate date,
                               String status) {
+
+        this.idAccomplishedService = idAccomplishedService;
+        this.idService = idService;
         this.id = id;
         this.workerId = workerId;
         this.customerId = customerId;
@@ -121,6 +129,22 @@ public class ServicesScheduling implements Serializable {
 
     public String getStatus() {
         return status;
+    }
+
+    public Integer getIdService() {
+        return idService;
+    }
+
+    public void setIdService(Integer idService) {
+        this.idService = idService;
+    }
+
+    public Integer getIdAccomplishedService() {
+        return idAccomplishedService;
+    }
+
+    public void setIdAccomplishedService(Integer idAccomplishedService) {
+        this.idAccomplishedService = idAccomplishedService;
     }
 
     public void setStatus(String status) {

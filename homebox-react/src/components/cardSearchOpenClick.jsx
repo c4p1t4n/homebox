@@ -38,10 +38,14 @@ function cardSearchOpenClick(props) {
         document.getElementById(props.name + props.id_user).innerHTML = ""
     };
 
+    function interest(){
+        api.post(`/interestAccess/user/${JSON.parse(sessionStorage.getItem("user")).id_user}/${ props.id_user}`)
+    }
+
     return (
         <>
 
-            <div id="cardSearchOpenID" className="cardSearchOpen">
+            <div id="cardSearchOpenID" className="cardSearchOpen" onClick={interest}>
                 <div className="cardSearchOpenDiv">
                     <div className="cardSearchOpenDivIconClose">
                         <img onClick={close} src={iconCloseBlue} alt="Icone de fechar" />

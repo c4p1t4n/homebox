@@ -1,0 +1,91 @@
+import json
+import pymysql
+import requests
+import pandas as pd
+import awswrangler as wr
+
+def lambda_handler(event, context):
+    # body = json.loads(event['body'])
+
+    # db_connection = pymysql.connect(
+    #     user='homebox',
+    #     host='localhost',
+    #     database='homebox',
+    #     password='Homebox265@',
+    # )
+
+    db_connection = pymysql.connect(
+        host='54.198.76.123',
+        user='homebox',
+        database='homebox',
+        password='Homebox265@',
+    )
+
+    df = pd.read_sql(sql='select id_user, name, TYPE as type, cep, rating from users_rating', con=db_connection)
+
+    df_worker = df[df['type'] == 'worker']
+    df_customer = df[df['type'] == 'customer']
+
+    # print(df_worker.head())
+    # print(df_customer.head())
+
+    df_final = pd.DataFrame(data=[], columns=['id_customer', 'customer_name', 'customer_cep', 'id_worker', 'worker_name', 'worker_cep', 'worker_rating', 'distance'])
+
+    for _, customer in df_customer.iterrows():
+        df_customer_1 = df_worker.copy(deep=True)
+
+        df_customer_1['customer_cep'] = customer['cep']
+        df_customer_1['customer_name'] = customer['name']
+        df_customer_1['id_customer'] = customer['id_user']
+        df_customer_1['worker_cep'] = df_customer_1['cep']
+        df_customer_1['worker_name'] = df_customer_1['name']
+        df_customer_1['id_worker'] = df_customer_1['id_user']
+        df_customer_1['worker_rating'] = df_customer_1['rating']
+
+        df_customer_1 = df_customer_1[['id_customer', 'customer_name', 'customer_cep', 'id_worker', 'worker_name', 'worker_cep', 'worker_rating']]
+
+        url = 'https://qu56ty27df2dwnnx6k4ktjrkmm0senfu.lambda-url.us-east-1.on.aws'
+
+        for _, row in df_customer_1.iterrows():
+
+            # url = f'https://distancep.herokuapp.com/distance/{row["worker_cep"]}/{row["customer_cep"]}'
+
+            print(f'{url = }')
+
+            # distance = requests.get(url).json()
+            distance = requests.post(url, data=json.dumps({'cep1': row['worker_cep'], 'cep2': row['customer_cep']}), headers={"Content-Type": "application/json", "Accept": "application/json"}).json()
+
+            print(f'{distance = }')
+
+            distance = distance['distance']
+
+            row['distance'] = distance
+
+            print(row)
+
+            df_final = df_final.append(row)
+
+
+    df_final['knn_distance'] = df_final['distance'] - 3.72 * df_final['worker_rating'].fillna(0)
+
+    df_final = df_final.sort_values(by='knn_distance', ascending=True)
+
+
+    wr.s3.to_parquet(
+        df=df_final,
+        dataset=False,
+        mode='append',
+        path='s3://distancia/',
+    )
+
+
+    return {
+        'statusCode': 200
+    }
+
+
+# Layer necessário: arn:aws:lambda:us-east-1:336392948345:layer:AWSSDKPandas-Python38:1
+
+
+if __name__ == '__main__':
+    lambda_handler({}, {})

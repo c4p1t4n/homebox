@@ -178,7 +178,7 @@ body {
 }
 
 .register_body {
-    font-size: 24px;
+    font-size: 1rem;
     background-image: url("../img/painting.jpg");
     background-size: cover;
     height: inherit;
@@ -235,7 +235,9 @@ body {
     color: #0a3969;
     margin: 5% 0% 0% 0%;
 }
-
+.register_body input{
+    font-size: 1.2rem;
+}
 .div_input {
     font-weight: 200;
     display: flex;
@@ -245,12 +247,13 @@ body {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: lighter;
-    font-size: 24px;
+    font-size: 1rem;
 }
 
 .div_input p {
     font-weight: lighter;
     margin: 10% 0% 2% 0%;
+    font-size: 1rem;
 }
 
 .div_input select {
@@ -258,6 +261,7 @@ body {
     border-radius: 10px;
     font-weight: bold;
     height: 40px;
+    font-size: 1.2rem;
     border: none;
     padding: 2%;
 }
@@ -272,7 +276,7 @@ body {
 }
 
 .div_input input::placeholder {
-    font-size: 20px;
+    font-size: 1.3rem;
 }
 
 .button_register {

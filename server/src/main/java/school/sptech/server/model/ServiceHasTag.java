@@ -1,13 +1,9 @@
 package school.sptech.server.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "service_has_tag")
 public class ServiceHasTag {
     @Id
     @Column(name = "id_service_has_tag")

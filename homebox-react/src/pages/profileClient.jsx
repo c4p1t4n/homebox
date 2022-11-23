@@ -135,7 +135,7 @@ function ProfileClient() {
                     </div>
                     <div className="inputNote">
                         Digite aqui:
-                        <input required type="number" maxLength={3} />
+                        <input id='noteService' required  type="number" maxLength={3} />
                     </div>
                     <div className="endServiceDivInButton">
                         <button onClick={saveNote}>Salvar nota</button>
@@ -150,7 +150,12 @@ function ProfileClient() {
 export default ProfileClient
 
 function saveNote() {
-    // codigo de salvar nota aqui Eduzinho ou leo nao sei quem vai fazer
+    var id_service = JSON.parse(sessionStorage.getItem("service")).idService
+    var nota = document.getElementById("noteService").value
+    let date = document.getElementById(id_service).innerText
+    var id_user = JSON.parse(sessionStorage.getItem("user")).id_user
+    console.log(nota)
+    api.post(`/users/save-note/${id_user}/${nota}/${date.replace(': ','')}`)
     document.getElementById("ratingForProviderDiv").style.display = "none"
 }
 
