@@ -171,7 +171,6 @@ function finishService() {
     api.patch(`/schedulings/status/${id}/done`
     ).then(({ status, data }) => {
         if (status === 201) {
-            alert("Serviço Finalizado!!!")
             closeendServiceDiv()
         }
     })
