@@ -4,7 +4,7 @@ Resources:
   EC2LoadBalancerAZ1:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-00f19e43bb4a97834
+      ImageId: ami-09f0703ad9e1c92a2
       KeyName: ch28082022Publica
       InstanceType: t2.medium
       SubnetId: !Ref SubnetPubAZ1
@@ -23,7 +23,7 @@ Resources:
   EC2FrontEndAZ1:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-00bbce6216fe0771b
+      ImageId: ami-00bfec5d1aed3fa1f
       KeyName: ch28082022Publica
       InstanceType: t2.medium
       SubnetId: !Ref SubnetPubAZ1
@@ -41,7 +41,7 @@ Resources:
   EC2PrivateAZ1:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-0bc5470e63ead1b1d
+      ImageId: ami-07beba960ae6860e6
       KeyName: ch28082022Privada
       InstanceType: t2.medium
       SubnetId: !Ref SubnetPriAZ1
@@ -61,7 +61,7 @@ Resources:
   EC2FrontEndAZ2:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-09544054149edeefc
+      ImageId: ami-01b08baa2e3d2e3ac
       KeyName: ch28082022Publica
       InstanceType: t2.medium
       SubnetId: !Ref SubnetPubAZ2
