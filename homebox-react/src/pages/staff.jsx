@@ -81,7 +81,7 @@ function Staff() {
         ).then(({ status, data }) => {
             
             if (status === 200) {
-                setDays(data[0])
+                setDays(data[0].reverse())
             }
         })
     }, [])
