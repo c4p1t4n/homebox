@@ -19,6 +19,12 @@ Resources:
         - Key: Name
           Value: ec2-pub-lb-az1
 
+  eipNameLoadBalancer:
+    Type: AWS::EC2::EIP
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref EC2LoadBalancerAZ1
+
   # AZ1
   EC2FrontEndAZ1:
     Type: AWS::EC2::Instance
@@ -38,6 +44,13 @@ Resources:
         - Key: Name
           Value: ec2-pub-front-end-az1
 
+  eipNameFrontAz1:
+    Type: AWS::EC2::EIP
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref eipNameFrontAz1
+
+  ##########################################
   EC2PrivateAZ1:
     Type: AWS::EC2::Instance
     Properties:
@@ -55,6 +68,12 @@ Resources:
       Tags:
         - Key: Name
           Value: ec2-priv-back-bd-az1
+
+  eipNameBackEndAz1:
+    Type: AWS::EC2::EIP
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref eipNameBackEndAz1
 
   # AZ2
 
@@ -76,3 +95,8 @@ Resources:
         - Key: Name
           Value: ec2-pub-front-end-az2
 
+  eipNameFrontEndAz2:
+    Type: AWS::EC2::EIP
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref eipNameFrontEndAz2
