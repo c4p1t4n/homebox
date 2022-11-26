@@ -1,0 +1,22 @@
+name: ${self:service}-get-users-distance
+handler: src/get_users_distance/get_users_distance.lambda_handler
+description: Lambda consumir dados do s3 como JSON ao invés de Parquet
+timeout: 600
+memorySize: 5120
+runtime: python3.8
+role: arn:aws:iam::${aws:accountId}:role/LabRole
+layers:
+  - arn:aws:lambda:us-east-1:336392948345:layer:AWSSDKPandas-Python38:1
+package:
+  patterns:
+    - src/get_users_distance/get_users_distance.py
+tags:
+  Responsavel_Financeiro: "HOMEBOX"
+  Schedule: "ON-DEMAND"
+  Environment_Type: "HOMEBOX_LAMBDA"
+  Monitoring: "NAO"
+  Migrar: "NAO"
+  Cost_Center: "-"
+  Fluxo: "GET-USERS-DISTANCE"
+  Use_Case: "Lambda consumir dados do s3 como JSON ao invés de Parquet"
+  Name: "HOMEBOX-CORE-GET-USERS-DISTANCE"
