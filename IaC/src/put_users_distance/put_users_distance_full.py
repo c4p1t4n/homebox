@@ -1,3 +1,4 @@
+import os
 import json
 import pymysql
 import requests
@@ -15,7 +16,7 @@ def lambda_handler(event, context):
     # )
 
     db_connection = pymysql.connect(
-        host='54.198.76.123',
+        host=os.environ['DB_IP'],
         user='homebox',
         database='homebox',
         password='Homebox265@',
@@ -44,7 +45,7 @@ def lambda_handler(event, context):
 
         df_customer_1 = df_customer_1[['id_customer', 'customer_name', 'customer_cep', 'id_worker', 'worker_name', 'worker_cep', 'worker_rating']]
 
-        url = 'https://qu56ty27df2dwnnx6k4ktjrkmm0senfu.lambda-url.us-east-1.on.aws'
+        url = os.environ['DISTANCE_CALCULATION_URL']
 
         for _, row in df_customer_1.iterrows():
 
