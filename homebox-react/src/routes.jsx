@@ -10,6 +10,7 @@ import ProfileProvider from "./pages/profileProvider"
 import RelatorioProvider from "./pages/relatorioProvider"
 import Staff from "./pages/staff"
 import Chat from "./pages/chat"
+import RelatorioStaff from "./pages/relatorioStaff"
 
 function Router() {
     return (
@@ -64,6 +65,11 @@ function Router() {
                     element={<Staff />}
                     caseSensitive="false"
                 />
+                {<Route
+                    path="/staff/relatorio"
+                    element={< RelatorioStaff />}
+                    caseSensitive="false"
+                />}
                 {<Route
                     path="*"
                     element={< NotFound />}

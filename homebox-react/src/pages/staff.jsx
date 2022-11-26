@@ -17,6 +17,7 @@ import { PolarArea } from 'react-chartjs-2';
 import { Line } from 'react-chartjs-2';
 import React, { useState, useEffect } from 'react';
 import api from "../api"
+import HeaderStaff from "../components/headerStaff";
 
 
 function Staff() {
@@ -24,28 +25,28 @@ function Staff() {
     const [worker, setWorker] = useState(0)
 
     const [costumer, setCostumer] = useState(0)
-    
-    const [avaliacaoMedia,setAvaliacaoMedia] = useState(0)
 
-    const [days,setDays] = useState([])
+    const [avaliacaoMedia, setAvaliacaoMedia] = useState(0)
 
-    const [services,setServices] = useState([])
-    const [servicesDone,setServicesDone] = useState([])
+    const [days, setDays] = useState([])
 
-    const [scheduling,setScheduling] = useState(0)
-    const [chats,setChats] = useState(0)
+    const [services, setServices] = useState([])
+    const [servicesDone, setServicesDone] = useState([])
 
-    const [ceps,setCep] = useState([])
-    const [countCeps,setCountCeps] = useState([])
-    
+    const [scheduling, setScheduling] = useState(0)
+    const [chats, setChats] = useState(0)
 
-  
+    const [ceps, setCep] = useState([])
+    const [countCeps, setCountCeps] = useState([])
+
+
+
 
     useEffect(() => {
         api.get(
             `/staff/ceps`
         ).then(({ status, data }) => {
-            
+
             if (status === 200) {
                 console.log(`data${data}`)
                 setCountCeps(data)
@@ -65,7 +66,7 @@ function Staff() {
         api.get(
             `/staff/scheduling-chat`
         ).then(({ status, data }) => {
-            
+
             if (status === 200) {
                 console.log(data[0])
                 setScheduling(data[0])
@@ -79,7 +80,7 @@ function Staff() {
         api.get(
             `/staff/get-scheduling-last-seven-days`
         ).then(({ status, data }) => {
-            
+
             if (status === 200) {
                 setDays(data[0].reverse())
             }
@@ -91,20 +92,20 @@ function Staff() {
         api.get(
             `/staff/ratio-worker-customer`
         ).then(({ status, data }) => {
-            
+
             if (status === 200) {
                 setWorker(data[0])
                 setCostumer(data[1])
             }
         })
     }, [])
-    
+
 
     useEffect(() => {
         api.get(
             `/staff/get-count-last-seven-days`
         ).then(({ status, data }) => {
-            
+
             if (status === 200) {
                 setServicesDone(data[0])
                 setServices(data[1])
@@ -116,15 +117,15 @@ function Staff() {
         api.get(
             `staff/avg-rating-worker`
         ).then(({ status, data }) => {
-            
+
             if (status === 200) {
                 setAvaliacaoMedia(data)
             }
         })
     }, [])
-    
 
-    
+
+
 
 
 
@@ -148,13 +149,13 @@ function Staff() {
         datasets: [
             {
                 label: 'Agendamentos',
-                data: services.slice(0,services.length),
+                data: services.slice(0, services.length),
                 borderColor: 'rgb(255, 99, 132)',
                 backgroundColor: 'rgba(255, 99, 132, 0.5)',
             },
             {
                 label: 'Serviços finalizados',
-                data: servicesDone.slice(0,services.length),
+                data: servicesDone.slice(0, services.length),
                 borderColor: 'rgb(53, 162, 235)',
                 backgroundColor: 'rgba(53, 162, 235, 0.5)',
             },
@@ -173,11 +174,11 @@ function Staff() {
         Title);
 
     const data = {
-        labels: ['Zona Central', 'Zona Sul', 'Zona Norte',"Zona Leste","Zona Oeste"],
+        labels: ['Zona Central', 'Zona Sul', 'Zona Norte', "Zona Leste", "Zona Oeste"],
         datasets: [
             {
                 label: 'Serviços finalizados por região',
-                data:countCeps ,
+                data: countCeps,
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.5)',
                     'rgba(54, 162, 235, 0.5)',
@@ -192,41 +193,9 @@ function Staff() {
 
 
 
-    function openLogoffStaffDiv() {
-
-        const logoffOpenDiv = document.getElementById("logoffStaffDiv")
-
-        logoffOpenDiv.style.display =
-            logoffOpenDiv.style.display === "flex" ? "none" : "flex"
-    }
-
-
-    function logoffStaff() {
-        sessionStorage.clear()
-        window.location.href = "/login"
-    }
-
     return (
         <>
-            <header>
-                <div className="divHeader">
-                    <div className="containerStaff">
-                        <div className="headerIn">
-                            <div className="logoHomeboxDiv">
-                                <img src={logoHomebox} alt="Icone Homebox" />
-                            </div>
-                            <h4>Administração</h4>
-                            <div onClick={openLogoffStaffDiv} className="nameStaffDiv">
-                                <p>Seja bem vindo(a), {JSON.parse(sessionStorage.getItem("staff")).name.split(' ')[0]}</p>
-                                <img src={iconProfile} alt="Icone de perfil" />
-                            </div>
-                            <div id="logoffStaffDiv" className="logoffStaffDiv">
-                                <p onClick={logoffStaff} >Logoff</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </header>
+            <HeaderStaff />
             <main>
                 <div className="containerStaff">
                     <div className="mainDiv">
@@ -313,10 +282,16 @@ function Staff() {
                             </div>*/}
                         </div>
                     </div>
+                    <div className="testeStaff">
+                        <button onClick={redirect}>Acessar relatório</button>
+                    </div>
                 </div>
             </main>
+
         </>
     )
 }
+
+const redirect = e => window.location.href = "/staff/relatorio"
 
 export default Staff

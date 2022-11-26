@@ -6,6 +6,9 @@
 .containerStaff {
     width: 85%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .headerIn {
@@ -72,7 +75,7 @@ main {
     background: rgba(18, 76, 134, 0.062);
     color: #0A3969;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
 .mainDiv {
@@ -298,4 +301,36 @@ main {
     padding: 1%;
     background: #B9DCAC;
     border-radius: 8px;
+}
+
+.testeStaff {
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+    border-radius: 20px;
+    padding: 1%;
+    width: 14%;
+    margin: 0% 2% 0% 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testeStaff button {
+    font-size: 1.5rem;
+    border-radius: 10px;
+    height: 50px;
+    background-color: #0A3969;
+    color: white;
+}
+
+.testeStaff button:hover {
+    cursor: pointer;
+    background-color: orange;
+    color: black;
+}
+
+
+.containerStaffRelatorio {
+    width: 85%;
+    margin: auto;
 }
