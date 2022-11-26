@@ -9,12 +9,16 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.FluentQuery.FetchableFluentQuery;
 
 import school.sptech.server.model.User;
 
 public interface UserRepository extends JpaRepository<User, Integer> {
 
+
+    @Query(value = "select user.name  from service  join user on worker_id_user=id_user where id_service = ?1",nativeQuery=true)
+    String getNameProvider(Integer id_service);
     boolean existsByEmail(String email);
 
     User findByEmailAndPassword(String email, String password);
