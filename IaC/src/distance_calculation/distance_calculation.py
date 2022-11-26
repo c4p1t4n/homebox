@@ -19,7 +19,7 @@ def lambda_handler(event, context):
     try:
         req = requests.get(f'https://distancep.herokuapp.com/distance/{body["cep1"]}/{body["cep2"]}').json()
         if 'error' in req.keys():
-            raise Exception('Erro na chamada da API de calculo de distancia')
+            raise ValueError('Erro na chamada da API de calculo de distancia')
     except Exception as e:
         print(f'{e = }')
         req = {

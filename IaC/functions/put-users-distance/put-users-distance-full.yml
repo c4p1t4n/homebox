@@ -1,0 +1,25 @@
+name: ${self:service}-put-users-distance-full
+handler: src/put_users_distance/put_users_distance_full.lambda_handler
+description: Lambda para realizar o KNN entre todos os cliente e os prestadores de serviço
+timeout: 600
+memorySize: 5120
+runtime: python3.8
+role: arn:aws:iam::${aws:accountId}:role/LabRole
+layers:
+  - arn:aws:lambda:us-east-1:336392948345:layer:AWSSDKPandas-Python38:1
+package:
+  patterns:
+    - src/put_users_distance/put_users_distance_full.py
+environment:
+  DB_IP: !GetAtt EC2PrivateAZ1.PublicIp
+  DISTANCE_CALCULATION_URL: !GetAtt DistanceCalculationURL.FunctionUrl
+tags:
+  Responsavel_Financeiro: "HOMEBOX"
+  Schedule: "ON-DEMAND"
+  Environment_Type: "HOMEBOX_LAMBDA"
+  Monitoring: "NAO"
+  Migrar: "NAO"
+  Cost_Center: "-"
+  Fluxo: "PUT_USERS_DISTANCE_FULL"
+  Use_Case: "Lambda para realizar o KNN entre todos os cliente e os prestadores de serviço"
+  Name: "HOMEBOX-CORE-PUT-USERS-DISTANCE-FULL"

@@ -1,0 +1,30 @@
+Resources:
+  DistanceCalculationURL:
+    Type: AWS::Lambda::URL
+    Properties:
+    AuthType: NONE
+    TargetFunctionArn: ${self:service}-distance-calculation
+
+  GetCredentialsURL:
+    Type: AWS::Lambda::URL
+    Properties:
+    AuthType: NONE
+    TargetFunctionArn: ${self:service}-get-credentials
+
+  GetUsersDistanceURL:
+    Type: AWS::Lambda::URL
+    Properties:
+    AuthType: NONE
+    TargetFunctionArn: ${self:service}-get-users-distance
+
+  PutUsersDistanceURL:
+    Type: AWS::Lambda::URL
+    Properties:
+    AuthType: NONE
+    TargetFunctionArn: ${self:service}-put-users-distance
+
+  PutUsersDistanceFullURL:
+    Type: AWS::Lambda::URL
+    Properties:
+    AuthType: NONE
+    TargetFunctionArn: ${self:service}-put-users-distance-full

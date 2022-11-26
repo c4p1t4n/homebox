@@ -1,0 +1,22 @@
+name: ${self:service}-distance-calculation
+handler: src/distance_calculation/distance_calculation.lambda_handler
+description: Lambda que calcula a distancia entre dois ceps
+timeout: 600
+memorySize: 5120
+runtime: python3.8
+role: arn:aws:iam::${aws:accountId}:role/LabRole
+layers:
+  - arn:aws:lambda:us-east-1:336392948345:layer:AWSSDKPandas-Python38:1
+package:
+  patterns:
+    - src/distance_calculation/distance_calculation.py
+tags:
+  Responsavel_Financeiro: "HOMEBOX"
+  Schedule: "ON-DEMAND"
+  Environment_Type: "HOMEBOX_LAMBDA"
+  Monitoring: "NAO"
+  Migrar: "NAO"
+  Cost_Center: "-"
+  Fluxo: "CALCULO-DISTANCIA"
+  Use_Case: "Lambda para calcular a distancia entre dois ceps"
+  Name: "HOMEBOX-CORE-DISTANCE-CALCULATION"
