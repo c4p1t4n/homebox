@@ -43,7 +43,7 @@ public class ChatController {
             return ResponseEntity.status(404).build();
         }
 
-         if(!dbChatsRepository.existsByUserIdAndUserId2(idWorker,idCustomer)){
+        //  if(!dbChatsRepository.existsByUserIdAndUserId2(idWorker,idCustomer)){
             LocalDate today = LocalDate.now();
             Chat newChat = dbRepositoryChat.save(new Chat(today));
 
@@ -64,8 +64,8 @@ public class ChatController {
             dbRepositoryUserHasChat.save(WorkerChatAccess);
 
             return ResponseEntity.status(201).build();
-         }
-         return ResponseEntity.status(404).build();
+        //  }
+        //  return ResponseEntity.status(404).build();
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
