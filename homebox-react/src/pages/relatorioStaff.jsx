@@ -1,15 +1,9 @@
 import HeaderStaff from "../components/headerStaff"
-
-
 function RelatorioStaff() {
     return (
         <>
             <HeaderStaff />
-            <main>
-                <div className="containerStaffRelatorio">
-
-                </div>
-            </main>
+            <iframe src="https://imagens-homebox.s3.amazonaws.com/relatorio_staff.html" width="99%" height="99%"></iframe>
         </>
     )
 }
