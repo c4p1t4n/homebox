@@ -805,7 +805,7 @@ INSERT INTO service(worker_id_user,category_id_category,name,description,referen
 ('14', '2', 'Troca de chuveiro', 'Troca de dois chuveiros.', '172.00'),
 ('14', '2', 'Instalacao de luminaria', 'Instalacao de luminaria em 2 comodos.', '149.00'),
 ('9', '2', 'Instalacao eletrica', 'Checkup de todas as instalacoes eletricas do apartamento.', '666.00'),
-('1', '1', 'Troca de cano', 'Troca de cano da pia da cozinha.', '100.00'),
+('1', '1', 'Troca de cano', 'Troca de cano da pia da cozinha e do banheiro.', '180.00'),
 ('2', '4', 'Pintura de parede', 'Pintura de 7 paredes.', '391.00'),
 ('3', '5', 'Limpeza',  'Limpeza pos obra.', '209.00'),
 ('4', '3', 'Montagem de movel', 'Montagem de um armario e uma cama.', '562.00'),
@@ -868,7 +868,7 @@ INSERT INTO service(worker_id_user,category_id_category,name,description,referen
 
 
 INSERT INTO scheduling(customer_id_user, service_id_service) VALUES
-('5', '1'),('6', '2'),('7', '3'),('9', '4'),('11', '5'),('12', '6'),('13', '7'),('18', '8'),('19', '9'),('21', '10'),
+('5', '1'),('5', '2'),('7', '3'),('9', '4'),('11', '5'),('12', '6'),('13', '7'),('18', '8'),('19', '9'),('21', '10'),
 ('23', '11'),('25', '12'),('28', '13'),('32', '14'),('33', '15'),('34', '16'),('35', '17'),('36', '18'),('38', '19'),('40', '20'),
 ('41', '21'),('42', '22'),('44', '23'),('45', '24'),('47', '25'),('52', '26'),('53', '27'),('58', '28'),('60', '29'),('61', '30'),
 ('63', '31'),('64', '32'),('65', '33'),('66', '34'),('69', '35'),('70', '36'),('74', '37'),('76', '38'),('77', '39'),('82', '40'),
