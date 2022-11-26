@@ -13,15 +13,11 @@ import school.sptech.server.model.Rating;
 import school.sptech.server.model.User;
 //import school.sptech.server.service.ExportTxt;
 // import school.sptech.server.service.FilaObj;
-import school.sptech.server.repository.AccomplishedServiceRepository;
-import school.sptech.server.repository.ServicesSchedulingRepository;
+import school.sptech.server.repository.*;
 import school.sptech.server.request.DistRecommendRequest;
 import school.sptech.server.request.DistRequest;
 import school.sptech.server.request.LoginRequest;
 import school.sptech.server.request.UserIdRequest;
-import school.sptech.server.repository.CategoryRepository;
-import school.sptech.server.repository.RatingRepository;
-import school.sptech.server.repository.ServiceRepository;
 import school.sptech.server.response.DistResponse;
 import school.sptech.server.response.UserSearchQueryResult;
 import school.sptech.server.response.UsersDistance;
@@ -45,7 +41,8 @@ public class UserController {
 
     @Autowired
     private UserService dbServiceUser;
-
+    @Autowired
+    private UserRepository dbUserRepository;
     @Autowired
     private ServicesSchedulingRepository dbServiceScheduling;
 
@@ -384,6 +381,18 @@ public class UserController {
         return ResponseEntity.status(400).build();
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @GetMapping("/get-name/{idService}")
+    public  ResponseEntity<String> getNameProvider(@PathVariable Integer idService){
+        try {
+            String nameProvider =  dbUserRepository.getNameProvider(idService);
+            return ResponseEntity.status(200).body(nameProvider);
+        }catch (Exception e){
+            return ResponseEntity.status(400).build();
+        }
+
+
+    }
 
     // @PatchMapping(value = "/report", consumes = "text/txt; charset: utf-8")
     // public ResponseEntity<Object> importUsers(@RequestBody byte[] report) throws

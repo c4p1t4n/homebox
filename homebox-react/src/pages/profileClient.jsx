@@ -32,7 +32,7 @@ function ProfileClient() {
         }
         return 0;
     }
-
+    
     const [services, setServices] = useState([])
     useEffect(() => {
         api.get(`/services/list/client/` + JSON.parse(sessionStorage.getItem("user")).id_user
@@ -125,7 +125,7 @@ function ProfileClient() {
             </div>
             <div id="ratingForProviderDiv" className="ratingForProviderDiv">
                 <div className="ratingForProvider">
-                    <h4>Nos deixe uma nota de avaliação sobre o serviço de XXXXXXX</h4>
+                    <h4 id="comentarioAvaliacao">Nos deixe uma nota de avaliação sobre o serviço de XXXX</h4>
                     <div className="sumaryRating">
                         <p>1 - Pessimo</p>
                         <p>2 - Ruim</p>
@@ -175,6 +175,15 @@ function finishService() {
         }
     })
     document.getElementById("ratingForProviderDiv").style.display = "flex"
+    setNomeProvider()
+}
+function setNomeProvider(){
+    var id = JSON.parse(sessionStorage.getItem("service")).idService
+    api.get(`/users/get-name/${id}/`).then(({ status, data }) => {
+        if (status === 200) {
+            document.getElementById("comentarioAvaliacao").innerText = `Nos deixe uma nota de avaliação sobre o serviço de ${data}`
+        }
+    })
 }
 
 
@@ -184,5 +193,5 @@ function closeendServiceDiv() {
 
 const nome = JSON.parse(sessionStorage.getItem("user"))?.name?.split(" ")?.[0] ?? ""
 const email = JSON.parse(sessionStorage.getItem("user"))?.email
-const img = JSON.parse(sessionStorage.getItem("user"))?.picture
+const img = JSON.parse(sessionStorage.getItem("user"))?.picture 
 
