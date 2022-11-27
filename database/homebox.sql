@@ -817,7 +817,7 @@ INSERT INTO service(worker_id_user,category_id_category,name,description,referen
 ('17', '2', 'Troca de chuveiro', 'Troca de dois chuveiros.', '172.00'),
 ('20', '2', 'Instalacao de luminaria', 'Instalacao de luminaria em 2 comodos.', '149.00'),
 ('22', '2', 'Instalacao eletrica', 'Checkup de todas as instalacoes eletricas do apartamento.', '666.00'),
-('24', '1', 'Troca de cano', 'Troca de cano da pia da cozinha.', '100.00'),
+('24', '1', 'Troca de cano', 'Troca de cano da pia do banheiro.', '100.00'),
 ('26', '4', 'Pintura de parede', 'Pintura de 7 paredes.', '391.00'),
 ('27', '5', 'Limpeza',  'Limpeza pos obra.', '209.00'),
 ('29', '3', 'Montagem de movel', 'Montagem de um armario e uma cama.', '562.00'),
@@ -868,7 +868,7 @@ INSERT INTO service(worker_id_user,category_id_category,name,description,referen
 
 
 INSERT INTO scheduling(customer_id_user, service_id_service) VALUES
-('5', '1'),('5', '2'),('7', '3'),('9', '4'),('11', '5'),('12', '6'),('13', '7'),('18', '8'),('19', '9'),('21', '10'),
+('5', '1'),('5', '2'),('5', '97'),('5', '24'),('5', '1'),('12', '6'),('13', '7'),('18', '8'),('19', '9'),('21', '10'),
 ('23', '11'),('25', '12'),('28', '13'),('32', '14'),('33', '15'),('34', '16'),('35', '17'),('36', '18'),('38', '19'),('40', '20'),
 ('41', '21'),('42', '22'),('44', '23'),('45', '24'),('47', '25'),('52', '26'),('53', '27'),('58', '28'),('60', '29'),('61', '30'),
 ('63', '31'),('64', '32'),('65', '33'),('66', '34'),('69', '35'),('70', '36'),('74', '37'),('76', '38'),('77', '39'),('82', '40'),
@@ -1030,10 +1030,10 @@ INSERT INTO scheduling_status(
         scheduling_id_scheduling
     )
 VALUES ('done', DATE(NOW()), 1),
-    ('done', DATE(NOW())-2, 2),
-    ('scheduled', DATE(NOW())-1, 3),
-    ('scheduled', DATE(NOW())-1, 4),
-    ('scheduled', DATE(NOW())-2, 5),
+    ('done', DATE(NOW())-1, 2),
+    ('done', DATE(NOW())-2, 3),
+    ('done', DATE(NOW())-3, 4),
+    ('done', DATE(NOW())-4, 5),
     ('scheduled', DATE(NOW())-2, 6),
     ('scheduled', DATE(NOW())-3, 7),
     ('scheduled', DATE(NOW())-3, 8),
@@ -1047,7 +1047,7 @@ VALUES ('done', DATE(NOW()), 1),
     ('done', '2022-06-19 11:17:47', 16),
     ('done', '2022-07-12 18:12:47', 17),
     ('done', '2022-07-18 19:17:47', 18),
-    ('done', DATE(NOW())-3, 19),
+    ('done', DATE(NOW())-5, 19),
     ('done', '2022-08-13 12:11:47', 20),
     ('scheduled', DATE(NOW()), 21),
     ('scheduled', DATE(NOW()), 22),
