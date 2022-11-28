@@ -9,32 +9,30 @@ provider:
 package:
   individually: true
   patterns:
-    - '!venv/**'
-    - '!test/**'
-    - '!buildspec.yml'
-    - '!functions/**'
-    - '!README.md'
-    - '!node_modules/**'
-    - '!package-lock.json'
-    - '!package.json'
-    - '!resources.yml'
-    - '!src/**'
-    - '!resources/**'
-    - '!step_functions.yml'
+    - "!venv/**"
+    - "!test/**"
+    - "!buildspec.yml"
+    - "!functions/**"
+    - "!README.md"
+    - "!node_modules/**"
+    - "!package-lock.json"
+    - "!package.json"
+    - "!resources.yml"
+    - "!src/**"
+    - "!resources/**"
+    - "!step_functions.yml"
 
 resources:
   - ${file(resources/infra/vpc.yml)}
   - ${file(resources/infra/subnet.yml)}
   - ${file(resources/infra/internet-gateway.yml)}
-  - ${file(resources/infra/natGateway.yml)}
   - ${file(resources/security/security-group.yml)}
   - ${file(resources/security/key-pair.yml)}
   - ${file(resources/vm/ec2.yml)}
-  - ${file(resources/lambda/url.yml)}
-
-functions:
-  DistanceCalculation: ${file(src/distance_calculation/distance_calculation.yml)}
-  DistanceCalculation: ${file(src/distance_calculation/distance_calculation.yml)}
-  DistanceCalculation: ${file(src/distance_calculation/distance_calculation.yml)}
-  DistanceCalculation: ${file(src/distance_calculation/distance_calculation.yml)}
-  DistanceCalculation: ${file(src/distance_calculation/distance_calculation.yml)}
+  # - ${file(resources/lambda/url.yml)}
+# functions:
+#   DistanceCalculation: ${file(src/distance_calculation/distance_calculation.yml)}
+#   DistanceCalculation: ${file(src/distance_calculation/distance_calculation.yml)}
+#   DistanceCalculation: ${file(src/distance_calculation/distance_calculation.yml)}
+#   DistanceCalculation: ${file(src/distance_calculation/distance_calculation.yml)}
+#   DistanceCalculation: ${file(src/distance_calculation/distance_calculation.yml)}

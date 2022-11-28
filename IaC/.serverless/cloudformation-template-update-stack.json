@@ -136,23 +136,6 @@
         ]
       }
     },
-    "SubnetPriAZ2": {
-      "Type": "AWS::EC2::Subnet",
-      "Properties": {
-        "AvailabilityZone": "us-east-1c",
-        "VpcId": {
-          "Ref": "VPC"
-        },
-        "CidrBlock": "10.0.0.192/26",
-        "MapPublicIpOnLaunch": false,
-        "Tags": [
-          {
-            "Key": "Name",
-            "Value": "sub-az2-pri-homebox"
-          }
-        ]
-      }
-    },
     "IgwHomebox": {
       "Type": "AWS::EC2::InternetGateway",
       "Properties": {
@@ -173,20 +156,6 @@
         "InternetGatewayId": {
           "Ref": "IgwHomebox"
         }
-      }
-    },
-    "NATGatewayEIPLoadBalancer": {
-      "Type": "AWS::EC2::EIP",
-      "Properties": {
-        "InstanceId": {
-          "Ref": "EC2LoadBalancerAZ1"
-        },
-        "Tags": [
-          {
-            "Key": "Name",
-            "Value": "eip-pub-lb-homebox-az1"
-          }
-        ]
       }
     },
     "SecurityGroupLBPub": {
@@ -399,56 +368,6 @@
         ]
       }
     },
-    "SecurityGroupPriAz2": {
-      "Type": "AWS::EC2::SecurityGroup",
-      "Properties": {
-        "GroupName": "sg_pri_homebox_az2",
-        "GroupDescription": "sg_pri_homebox_az2",
-        "VpcId": {
-          "Ref": "VPC"
-        },
-        "SecurityGroupIngress": [
-          {
-            "SourceSecurityGroupId": {
-              "Ref": "SecurityGroupPubAz2"
-            },
-            "IpProtocol": "tcp",
-            "FromPort": 22,
-            "ToPort": 22
-          },
-          {
-            "SourceSecurityGroupId": {
-              "Ref": "SecurityGroupPubAz2"
-            },
-            "IpProtocol": "tcp",
-            "FromPort": 8080,
-            "ToPort": 8080
-          },
-          {
-            "SourceSecurityGroupId": {
-              "Ref": "SecurityGroupPubAz2"
-            },
-            "IpProtocol": "tcp",
-            "FromPort": 80,
-            "ToPort": 80
-          },
-          {
-            "SourceSecurityGroupId": {
-              "Ref": "SecurityGroupPubAz2"
-            },
-            "IpProtocol": "tcp",
-            "FromPort": 443,
-            "ToPort": 443
-          }
-        ],
-        "Tags": [
-          {
-            "Key": "Name",
-            "Value": "sg_pri_homebox_az2"
-          }
-        ]
-      }
-    },
     "KeyPairEC2Pub": {
       "Type": "AWS::EC2::KeyPair",
       "Properties": {
@@ -466,9 +385,9 @@
     "EC2LoadBalancerAZ1": {
       "Type": "AWS::EC2::Instance",
       "Properties": {
-        "ImageId": "ami-08d4ac5b634553e16",
+        "ImageId": "ami-09f0703ad9e1c92a2",
         "KeyName": "ch28082022Publica",
-        "InstanceType": "t2.micro",
+        "InstanceType": "t2.medium",
         "SubnetId": {
           "Ref": "SubnetPubAZ1"
         },
@@ -485,7 +404,7 @@
             "DeviceName": "/dev/sda1",
             "Ebs": {
               "VolumeType": "gp2",
-              "VolumeSize": "8"
+              "VolumeSize": "20"
             }
           }
         ],
@@ -497,12 +416,27 @@
         ]
       }
     },
+    "EipLoadBalancer": {
+      "Type": "AWS::EC2::EIP",
+      "Properties": {
+        "Domain": "vpc",
+        "InstanceId": {
+          "Ref": "EC2LoadBalancerAZ1"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "eip-load-balancer"
+          }
+        ]
+      }
+    },
     "EC2FrontEndAZ1": {
       "Type": "AWS::EC2::Instance",
       "Properties": {
-        "ImageId": "ami-08d4ac5b634553e16",
+        "ImageId": "ami-00bfec5d1aed3fa1f",
         "KeyName": "ch28082022Publica",
-        "InstanceType": "t2.micro",
+        "InstanceType": "t2.medium",
         "SubnetId": {
           "Ref": "SubnetPubAZ1"
         },
@@ -519,7 +453,7 @@
             "DeviceName": "/dev/sda1",
             "Ebs": {
               "VolumeType": "gp2",
-              "VolumeSize": "8"
+              "VolumeSize": "100"
             }
           }
         ],
@@ -531,12 +465,27 @@
         ]
       }
     },
+    "EipFrontEndAz1": {
+      "Type": "AWS::EC2::EIP",
+      "Properties": {
+        "Domain": "vpc",
+        "InstanceId": {
+          "Ref": "EC2FrontEndAZ1"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "eip-front-end-az1"
+          }
+        ]
+      }
+    },
     "EC2PrivateAZ1": {
       "Type": "AWS::EC2::Instance",
       "Properties": {
-        "ImageId": "ami-08d4ac5b634553e16",
+        "ImageId": "ami-07beba960ae6860e6",
         "KeyName": "ch28082022Privada",
-        "InstanceType": "t2.micro",
+        "InstanceType": "t2.medium",
         "SubnetId": {
           "Ref": "SubnetPriAZ1"
         },
@@ -553,7 +502,7 @@
             "DeviceName": "/dev/sda1",
             "Ebs": {
               "VolumeType": "gp2",
-              "VolumeSize": "8"
+              "VolumeSize": "100"
             }
           }
         ],
@@ -565,12 +514,27 @@
         ]
       }
     },
+    "EipPrivateAz1": {
+      "Type": "AWS::EC2::EIP",
+      "Properties": {
+        "Domain": "vpc",
+        "InstanceId": {
+          "Ref": "EC2PrivateAZ1"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "eip-back-end-az1"
+          }
+        ]
+      }
+    },
     "EC2FrontEndAZ2": {
       "Type": "AWS::EC2::Instance",
       "Properties": {
-        "ImageId": "ami-08d4ac5b634553e16",
+        "ImageId": "ami-01b08baa2e3d2e3ac",
         "KeyName": "ch28082022Publica",
-        "InstanceType": "t2.micro",
+        "InstanceType": "t2.medium",
         "SubnetId": {
           "Ref": "SubnetPubAZ2"
         },
@@ -587,7 +551,7 @@
             "DeviceName": "/dev/sda1",
             "Ebs": {
               "VolumeType": "gp2",
-              "VolumeSize": "8"
+              "VolumeSize": "100"
             }
           }
         ],
@@ -599,36 +563,17 @@
         ]
       }
     },
-    "EC2PrivateAZ2": {
-      "Type": "AWS::EC2::Instance",
+    "EipFrontEndAz2": {
+      "Type": "AWS::EC2::EIP",
       "Properties": {
-        "ImageId": "ami-08d4ac5b634553e16",
-        "KeyName": "ch28082022Privada",
-        "InstanceType": "t2.micro",
-        "SubnetId": {
-          "Ref": "SubnetPriAZ2"
+        "Domain": "vpc",
+        "InstanceId": {
+          "Ref": "EC2FrontEndAZ2"
         },
-        "SecurityGroupIds": [
-          {
-            "Fn::GetAtt": [
-              "SecurityGroupPriAz2",
-              "GroupId"
-            ]
-          }
-        ],
-        "BlockDeviceMappings": [
-          {
-            "DeviceName": "/dev/sda1",
-            "Ebs": {
-              "VolumeType": "gp2",
-              "VolumeSize": "8"
-            }
-          }
-        ],
         "Tags": [
           {
             "Key": "Name",
-            "Value": "ec2-priv-back-bd-az2"
+            "Value": "eip-front-end-az2"
           }
         ]
       }
@@ -640,7 +585,7 @@
         "Ref": "ServerlessDeploymentBucket"
       },
       "Export": {
-        "Name": "sls-IaC-Homebox-dev-ServerlessDeploymentBucketName"
+        "Name": "sls-homebox-core-dev-ServerlessDeploymentBucketName"
       }
     }
   }
