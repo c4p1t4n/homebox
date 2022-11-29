@@ -78,7 +78,7 @@ function ProfileClient() {
                 image={img}
             />
             <div className="divDashboardClint">
-                <h4 className="dashH4">Moradores de(a) Vila Madalena também contrataram</h4>
+                <h4 className="dashH4">Recomendações para você</h4>
                 <div id="loadingDivHome">
                     <img src={iconLoading} alt="Carregando a pagina" />
                 </div>
