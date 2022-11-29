@@ -34,7 +34,7 @@ resources:
 
 functions:
   DistanceCalculation: ${file(functions/distance_calculation/distance_calculation.yml)}
-  DistanceCalculation: ${file(functions/get-credentials/get-credentials.yml)}
-  DistanceCalculation: ${file(functions/get-users-distance/get-users-distance.yml)}
-  DistanceCalculation: ${file(functions/put-users-distance/put-users-distance.yml)}
-  DistanceCalculation: ${file(functions/put-users-distance/put-users-distance-full.yml)}
+  GetCredentials: ${file(functions/get-credentials/get-credentials.yml)}
+  GetUsersDistance: ${file(functions/get-users-distance/get-users-distance.yml)}
+  PutUsersDistance: ${file(functions/put-users-distance/put-users-distance.yml)}
+  PutUsersDistance: ${file(functions/put-users-distance/put-users-distance-full.yml)}
