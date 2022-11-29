@@ -30,10 +30,11 @@ resources:
   - ${file(resources/security/key-pair.yml)}
   - ${file(resources/vm/ec2.yml)}
   - ${file(resources/SNS/sns.yml)}
-  # - ${file(resources/lambda/url.yml)}
-# functions:
-#   DistanceCalculation: ${file(src/distance_calculation/distance_calculation.yml)}
-#   DistanceCalculation: ${file(src/distance_calculation/distance_calculation.yml)}
-#   DistanceCalculation: ${file(src/distance_calculation/distance_calculation.yml)}
-#   DistanceCalculation: ${file(src/distance_calculation/distance_calculation.yml)}
-#   DistanceCalculation: ${file(src/distance_calculation/distance_calculation.yml)}
+  - ${file(resources/lambda/url.yml)}
+
+functions:
+  DistanceCalculation: ${file(functions/distance_calculation/distance_calculation.yml)}
+  DistanceCalculation: ${file(functions/get-credentials/get-credentials.yml)}
+  DistanceCalculation: ${file(functions/get-users-distance/get-users-distance.yml)}
+  DistanceCalculation: ${file(functions/put-users-distance/put-users-distance.yml)}
+  DistanceCalculation: ${file(functions/put-users-distance/put-users-distance-full.yml)}
