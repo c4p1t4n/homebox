@@ -29,6 +29,7 @@ resources:
   - ${file(resources/security/security-group.yml)}
   - ${file(resources/security/key-pair.yml)}
   - ${file(resources/vm/ec2.yml)}
+  - ${file(resources/SNS/sns.yml)}
   # - ${file(resources/lambda/url.yml)}
 # functions:
 #   DistanceCalculation: ${file(src/distance_calculation/distance_calculation.yml)}

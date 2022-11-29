@@ -1,0 +1,9 @@
+Resources:
+  snsTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      DisplayName: homebox-monitoria
+      Subscription:
+        - Endpoint: homebox.monitoria@gmail.com
+          Protocol: email
+      TopicName: homebox-monitoria

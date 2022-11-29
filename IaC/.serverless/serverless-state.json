@@ -308,6 +308,38 @@
                   "IpProtocol": "tcp",
                   "FromPort": 443,
                   "ToPort": 443
+                },
+                {
+                  "SourceSecurityGroupId": {
+                    "Ref": "SecurityGroupPubAz2"
+                  },
+                  "IpProtocol": "tcp",
+                  "FromPort": 22,
+                  "ToPort": 22
+                },
+                {
+                  "SourceSecurityGroupId": {
+                    "Ref": "SecurityGroupPubAz2"
+                  },
+                  "IpProtocol": "tcp",
+                  "FromPort": 80,
+                  "ToPort": 80
+                },
+                {
+                  "SourceSecurityGroupId": {
+                    "Ref": "SecurityGroupPubAz2"
+                  },
+                  "IpProtocol": "tcp",
+                  "FromPort": 8080,
+                  "ToPort": 8080
+                },
+                {
+                  "SourceSecurityGroupId": {
+                    "Ref": "SecurityGroupPubAz2"
+                  },
+                  "IpProtocol": "tcp",
+                  "FromPort": 443,
+                  "ToPort": 443
                 }
               ],
               "SecurityGroupEgress": [
@@ -588,6 +620,19 @@
                   "Value": "eip-front-end-az2"
                 }
               ]
+            }
+          },
+          "snsTopic": {
+            "Type": "AWS::SNS::Topic",
+            "Properties": {
+              "DisplayName": "homebox-monitoria",
+              "Subscription": [
+                {
+                  "Endpoint": "homebox.monitoria@gmail.com",
+                  "Protocol": "email"
+                }
+              ],
+              "TopicName": "homebox-monitoria"
             }
           }
         },
@@ -914,6 +959,38 @@
                 "IpProtocol": "tcp",
                 "FromPort": 443,
                 "ToPort": 443
+              },
+              {
+                "SourceSecurityGroupId": {
+                  "Ref": "SecurityGroupPubAz2"
+                },
+                "IpProtocol": "tcp",
+                "FromPort": 22,
+                "ToPort": 22
+              },
+              {
+                "SourceSecurityGroupId": {
+                  "Ref": "SecurityGroupPubAz2"
+                },
+                "IpProtocol": "tcp",
+                "FromPort": 80,
+                "ToPort": 80
+              },
+              {
+                "SourceSecurityGroupId": {
+                  "Ref": "SecurityGroupPubAz2"
+                },
+                "IpProtocol": "tcp",
+                "FromPort": 8080,
+                "ToPort": 8080
+              },
+              {
+                "SourceSecurityGroupId": {
+                  "Ref": "SecurityGroupPubAz2"
+                },
+                "IpProtocol": "tcp",
+                "FromPort": 443,
+                "ToPort": 443
               }
             ],
             "SecurityGroupEgress": [
@@ -1195,6 +1272,19 @@
               }
             ]
           }
+        },
+        "snsTopic": {
+          "Type": "AWS::SNS::Topic",
+          "Properties": {
+            "DisplayName": "homebox-monitoria",
+            "Subscription": [
+              {
+                "Endpoint": "homebox.monitoria@gmail.com",
+                "Protocol": "email"
+              }
+            ],
+            "TopicName": "homebox-monitoria"
+          }
         }
       },
       "Outputs": {}
@@ -1224,7 +1314,7 @@
           "!step_functions.yml"
         ],
         "artifactsS3KeyDirname": "serverless/homebox-core/dev/code-artifacts",
-        "artifactDirectoryName": "serverless/homebox-core/dev/1669668111633-2022-11-28T20:41:51.633Z"
+        "artifactDirectoryName": "serverless/homebox-core/dev/1669678506762-2022-11-28T23:35:06.762Z"
       },
       "resources": {
         "$ref": "$[\"service\"][\"resources\"]"
@@ -1235,7 +1325,7 @@
   },
   "package": {
     "individually": true,
-    "artifactDirectoryName": "serverless/homebox-core/dev/1669668111633-2022-11-28T20:41:51.633Z",
+    "artifactDirectoryName": "serverless/homebox-core/dev/1669678506762-2022-11-28T23:35:06.762Z",
     "artifact": ""
   }
 }

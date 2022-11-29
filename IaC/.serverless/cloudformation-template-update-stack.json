@@ -296,6 +296,38 @@
             "IpProtocol": "tcp",
             "FromPort": 443,
             "ToPort": 443
+          },
+          {
+            "SourceSecurityGroupId": {
+              "Ref": "SecurityGroupPubAz2"
+            },
+            "IpProtocol": "tcp",
+            "FromPort": 22,
+            "ToPort": 22
+          },
+          {
+            "SourceSecurityGroupId": {
+              "Ref": "SecurityGroupPubAz2"
+            },
+            "IpProtocol": "tcp",
+            "FromPort": 80,
+            "ToPort": 80
+          },
+          {
+            "SourceSecurityGroupId": {
+              "Ref": "SecurityGroupPubAz2"
+            },
+            "IpProtocol": "tcp",
+            "FromPort": 8080,
+            "ToPort": 8080
+          },
+          {
+            "SourceSecurityGroupId": {
+              "Ref": "SecurityGroupPubAz2"
+            },
+            "IpProtocol": "tcp",
+            "FromPort": 443,
+            "ToPort": 443
           }
         ],
         "SecurityGroupEgress": [
@@ -576,6 +608,19 @@
             "Value": "eip-front-end-az2"
           }
         ]
+      }
+    },
+    "snsTopic": {
+      "Type": "AWS::SNS::Topic",
+      "Properties": {
+        "DisplayName": "homebox-monitoria",
+        "Subscription": [
+          {
+            "Endpoint": "homebox.monitoria@gmail.com",
+            "Protocol": "email"
+          }
+        ],
+        "TopicName": "homebox-monitoria"
       }
     }
   },
