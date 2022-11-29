@@ -83,9 +83,6 @@ class SendMsg extends Component {
                 <button onClick={getFile}>
                     <img src={paperclip} alt="Icone para anexar foto ou video" />
                 </button>
-                <button onClick={this.condition ? this.start : this.stop}>
-                    <img id="imgMic" src={iconSendMp3} alt="Icone para enviar audio" className="iconMic" />
-                </button>
                 <div className="recorder">
                     <AudioReactRecorder state={recordState} onStop={this.onStop} />
                     <input type="file" onChange={onChange} id="inputFile" />
@@ -129,7 +126,7 @@ const onChange = e => {
                 console.log(response.status)
             })
         sessionStorage.setItem("sendMsg", true)
-    }, 1200);
+    }, 3000);
 
 }
 
