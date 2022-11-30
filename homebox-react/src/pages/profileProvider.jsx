@@ -30,7 +30,7 @@ function profileProvider() {
             referencePrice: document.getElementById("refValueId").value
         }).then((response) => {
             console.log(response.status)
-            window.location.reload()
+            // window.location.reload()
         })
 
         document.getElementById("addServiceDiv").style.display = "none"
@@ -46,7 +46,7 @@ function profileProvider() {
             referencePrice: document.getElementById("editServiceDivRefValueId").value
         }).then((response) => {
             console.log(response.status)
-            window.location.reload()
+            // window.location.reload()
         })
 
         document.getElementById("editServiceDiv").style.display = "none"
@@ -226,7 +226,7 @@ function closeDeleteService() {
 function deleteService() {
     api.delete(`/services/delete/` + JSON.parse(sessionStorage.getItem("service")).idService).then((response) => {
         console.log(response.status)
-        window.location.reload()
+        // window.location.reload()
     })
 
     document.getElementById("deleteServiceProvider").style.display = "none"
