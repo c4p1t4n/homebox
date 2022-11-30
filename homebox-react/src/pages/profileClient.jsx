@@ -125,7 +125,7 @@ function ProfileClient() {
             </div>
             <div id="ratingForProviderDiv" className="ratingForProviderDiv">
                 <div className="ratingForProvider">
-                    <h4 id="comentarioAvaliacao">Nos deixe uma nota de avaliação sobre o serviço de XXXX</h4>
+                    <h4 id="comentarioAvaliacao">Nos deixe uma nota de avaliação sobre o serviço</h4>
                     <div className="sumaryRating">
                         <p>1 - Pessimo</p>
                         <p>2 - Ruim</p>
@@ -181,7 +181,7 @@ function setNomeProvider(){
     var id = JSON.parse(sessionStorage.getItem("service")).idService
     api.get(`/users/get-name/${id}/`).then(({ status, data }) => {
         if (status === 200) {
-            document.getElementById("comentarioAvaliacao").innerText = `Nos deixe uma nota de avaliação sobre o serviço de ${data}`
+            document.getElementById("comentarioAvaliacao").innerText = `Nos deixe uma nota de avaliação sobre o serviço`
         }
     })
 }
