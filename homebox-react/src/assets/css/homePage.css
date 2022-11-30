@@ -128,9 +128,9 @@ body {
     align-items: center;
     background: rgba(10, 57, 105, 0.13);
     border-radius: 15px;
-    width: 270px;
+    width: 280px;
     padding: 2%;
-    margin: 2%;
+    margin: 2% 0% 2% 3%;
     font-size: 20px;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.25);
     height: 355px;
