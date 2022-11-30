@@ -1,6 +1,5 @@
 import api from "../api"
 import ec2MetaData from "../ec2MetaData"
-import AudioReactRecorder, { RecordState } from 'audio-react-recorder'
 import { v4 as uuidv4 } from 'uuid';
 import React, { Component } from 'react'
 
@@ -23,54 +22,7 @@ class SendMsg extends Component {
         this.condition = true
     }
 
-    start = () => {
-        this.condition = false
-        document.getElementById("imgMic").src = iconStopMp3
-        document.getElementById("imgMic").style.height = "35px"
-        this.setState({
-            recordState: RecordState.START
-        });
-    };
-
-    stop = () => {
-        this.condition = true
-        document.getElementById("imgMic").src = iconSendMp3
-        document.getElementById("imgMic").style.height = "40px"
-        this.setState({
-            recordState: RecordState.STOP
-        });
-    };
-
-    onStop = (audioData) => {
-        let user = JSON.parse(sessionStorage.getItem("user")).id_user
-        let chat = JSON.parse(sessionStorage.getItem("chat")).idChat;
-
-        const url = '/upload/uploadFile/' + chat + "/" + user;
-        let fileName = uuidv4() + ".mp3"
-
-        const formData = new FormData();
-        formData.append("file", audioData.blob, fileName);
-        const config = {
-            headers: {
-                'content-type': 'multipart/form-data'
-            }
-        }
-        upload(audioData.blob, fileName)
-
-        document.getElementById(JSON.parse(sessionStorage.getItem("chat")).idChat).innerHTML = "Áudio";
-
-        setTimeout(() => {
-            api.post(url, formData, config)
-                .then((response) => {
-                    console.log(response.status)
-                })
-            sessionStorage.setItem("sendMsg", true)
-        }, 1200);
-    };
-
     render() {
-        const { recordState } = this.state;
-
         return (
             <>
                 <input id="inputMsg" placeholder="Digite aqui ..." type="text" className="msg"
@@ -84,7 +36,6 @@ class SendMsg extends Component {
                     <img src={paperclip} alt="Icone para anexar foto ou video" />
                 </button>
                 <div className="recorder">
-                    <AudioReactRecorder state={recordState} onStop={this.onStop} />
                     <input type="file" onChange={onChange} id="inputFile" />
                 </div>
             </>
