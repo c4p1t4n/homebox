@@ -56,7 +56,7 @@ SELECT
 FROM (
     SELECT
         scheduling_status.*,
-        rank() OVER(PARTITION BY scheduling_id_scheduling ORDER BY status_date DESC)  AS rank_status
+        row_number() OVER(PARTITION BY scheduling_id_scheduling ORDER BY status_date DESC, service_status ASC)  AS rank_status
     FROM
         scheduling_status
 ) tbl
